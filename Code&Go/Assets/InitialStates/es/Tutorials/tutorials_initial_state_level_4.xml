@@ -1,0 +1,42 @@
+<xml>
+    <variables>
+        <variable type="" id="/wU7/JAeulbh?XUW+0F-">Desplazamiento</variable>
+    </variables>
+    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){" x="193" y="-187">
+        <field name="DIRECTION">UP</field>
+        <value name="AMOUNT">
+            <block type="math_number" id="Yk}H}L`Y=abJ%p0!GOMG">
+                <field name="NUM">0</field>
+            </block>
+        </value>
+        <next>
+            <block type="movement_move_laser" id="_}P9LYD}tpR[sVG|hh[q">
+                <field name="DIRECTION">DOWN</field>
+                <value name="AMOUNT">
+                    <block type="math_number" id="SJh%e[?ij`vv{(dktA0`">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <next>
+                    <block type="movement_move_laser" id="yOvvqKbHRRxNU@.Omnwx">
+                        <field name="DIRECTION">LEFT</field>
+                        <value name="AMOUNT">
+                            <block type="math_number" id="TzpLg0H--Ex1b4w@LU1d">
+                                <field name="NUM">0</field>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="movement_laser_change_intensity" id="E!H2Q|*wZCnSI!6G{q#B">
+                                <value name="AMOUNT">
+                                    <block type="math_number" id="C0k042*(_V4qL9c$oc|C">
+                                        <field name="NUM">0</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>
