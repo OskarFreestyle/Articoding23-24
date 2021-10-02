@@ -163,6 +163,10 @@ MonoBehaviour:
     m_Key: conditionals_7
     m_Metadata:
       m_Items: []
+  - m_Id: 48603550971789312
+    m_Key: tutorials_1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
@@ -322,6 +326,10 @@ MonoBehaviour:
           m_TableCodes:
           - en
           - es
+        - m_KeyId: 48603550971789312
+          m_TableCodes:
+          - es
+          - en
         m_TypeString: UnityEngine.TextAsset, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
     00000001:

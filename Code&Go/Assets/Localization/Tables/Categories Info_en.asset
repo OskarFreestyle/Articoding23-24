@@ -25,8 +25,8 @@ MonoBehaviour:
   - m_Id: 1215138451456
     m_Localized: 'Learn how to store and use data.
 
-      Create new variables,
-      use them in your code.'
+      Create new variables, use
+      them in your code.'
     m_Metadata:
       m_Items: []
   - m_Id: 1497658380288
@@ -74,6 +74,16 @@ MonoBehaviour:
 
       You
       will use if, if-else, etc.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49954735318302720
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49955408000778240
+    m_Localized: 'Introduction to the game.
+
+      Learn how the app works.'
     m_Metadata:
       m_Items: []
   references:

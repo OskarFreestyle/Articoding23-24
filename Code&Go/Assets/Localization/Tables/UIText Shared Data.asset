@@ -327,6 +327,10 @@ MonoBehaviour:
     m_Key: simva_demo
     m_Metadata:
       m_Items: []
+  - m_Id: 51386213193416704
+    m_Key: selected_category_tutorials
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
