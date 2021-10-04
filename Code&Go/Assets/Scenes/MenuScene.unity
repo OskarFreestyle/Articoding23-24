@@ -572,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4301428840014341636, guid: 6d153681f563e07418361800acbc0db5, type: 3}
       propertyPath: loadSave
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4301428840014341636, guid: 6d153681f563e07418361800acbc0db5, type: 3}
       propertyPath: category
@@ -11093,8 +11093,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1051489696}
   m_HandleRect: {fileID: 1966084407}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.91731066
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
