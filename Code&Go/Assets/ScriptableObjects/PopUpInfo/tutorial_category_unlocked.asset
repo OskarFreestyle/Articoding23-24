@@ -33,3 +33,10 @@ MonoBehaviour:
       m_KeyId: 382920087961600
       m_Key: 
     m_FallbackState: 0
+  localizedImage:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0

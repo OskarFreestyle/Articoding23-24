@@ -79,7 +79,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1422299963760640
-    m_Localized: TUTORIALS
+    m_Localized: GUIDE
     m_Metadata:
       m_Items: []
   - m_Id: 1422459544444928
@@ -331,6 +331,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9313439508987904
     m_Localized: Demo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51386213193416704
+    m_Localized: Levels - Tutorials
     m_Metadata:
       m_Items: []
   references:
