@@ -50,9 +50,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4046242631680
-    m_Localized: "Esta parte es la vista del c\xF3digo. Aqu\xED debes colocar tarjetas
-      de c\xF3digo para dar comportamiento a los elementos de la escena y poder resolver
-      el nivel.\r "
+    m_Localized: "Aqu\xED ver\xE1s tu c\xF3digo. Este funciona correctamente. Cuando
+      sepas qu\xE9 va a hacer, dale al bot\xF3n del play y comprueba si has acertado."
     m_Metadata:
       m_Items: []
   - m_Id: 5033468547072
@@ -108,9 +107,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217643515904
-    m_Localized: "Voy a ense\xF1arte c\xF3mo funcionan las cosas. A lo largo del
-      juego encontrar\xE1s m\xE1s tarjetas como estas. Algunas te explicar\xE1n cosas
-      muy importantes asi que estate atento."
+    m_Localized: "\xBFEst\xE1s listo para aprender a programar? Voy a ense\xF1arte
+      c\xF3mo funcionan las cosas."
     m_Metadata:
       m_Items: []
   - m_Id: 22053882875904

@@ -49,8 +49,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4046242631680
-    m_Localized: This is the code view. Here you must place code cards to give funcionality
-      to the scene objects and complete the level.
+    m_Localized: 'Here you can see the code. This piece of code works correctly.
+      When you know what it''s going to do, hit the play button and check if you
+      were right. '
     m_Metadata:
       m_Items: []
   - m_Id: 5033468547072
@@ -105,9 +106,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217643515904
-    m_Localized: I'm going to teach you how things work. Throughout the game you
-      will find more popups like this one. Some of them will teach you very important
-      things so pay attention.
+    m_Localized: Are you ready to learn how to code? I'm going to show you how things
+      work.
     m_Metadata:
       m_Items: []
   - m_Id: 22053882875904

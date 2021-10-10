@@ -4251,7 +4251,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1406957992016270421, guid: 30bdd5fddc725438796726c39f29cd83, type: 3}
   m_PrefabInstance: {fileID: 1112091435}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249310112}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84d2b744c7f44acf8e1e88edcb8ecb6d, type: 3}
@@ -4733,31 +4733,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &1249310112 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1303084800989337387, guid: 30bdd5fddc725438796726c39f29cd83, type: 3}
-  m_PrefabInstance: {fileID: 1112091435}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1249310116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249310112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 140
-  info: {fileID: 11400000, guid: 6f4cacd6a66117c47885d9fe2d237bf2, type: 2}
-  highlightObject: 1
-  destroyOnShowed: 1
-  isSaveCheckpoint: 0
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1301297751 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1935694178192948144, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
@@ -5260,26 +5235,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5615152995614949933, guid: a489794761ad7a94680d475b9707ab21, type: 3}
   m_PrefabInstance: {fileID: 5615152996844203880}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1464331590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464331588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 0
-  info: {fileID: 11400000, guid: 666a88da8889bdb46919b413896e05e5, type: 2}
-  highlightObject: 0
-  destroyOnShowed: 1
-  isSaveCheckpoint: 0
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1468243586
 GameObject:
   m_ObjectHideFlags: 0
