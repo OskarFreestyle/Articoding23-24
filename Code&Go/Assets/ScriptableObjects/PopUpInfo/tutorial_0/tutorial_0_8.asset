@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   title: Volver a ver Tutoriales
-  content: "Si pulsas este bot\xF3n puedes volver a leer los tutoriales que ya hayas
-    visto. Utiliza este boton si te quedas atascado o si no te acuerdas de que hace
-    un objeto."
+  content: "Tambi\xE9n puedes consultar el manual si quieres repasar algo de nuevo"
   next: {fileID: 0}
   image: {fileID: 21300000, guid: 41f54c9739f95eb4fbc33ba29b0e2e3e, type: 3}
   localizedTitle:

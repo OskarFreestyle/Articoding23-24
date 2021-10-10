@@ -383,19 +383,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 232223330193408
-    m_Localized: Volver a ver Tutoriales
+    m_Localized: Manual
     m_Metadata:
       m_Items: []
   - m_Id: 232403949506560
-    m_Localized: "Si pulsas este bot\xF3n puedes volver a leer los tutoriales que
-      ya hayas visto. Utiliza este boton si te quedas atascado o si no te acuerdas
-      de que hace un objeto."
+    m_Localized: "Tambi\xE9n puedes consultar el manual si quieres repasar algo de
+      nuevo"
     m_Metadata:
       m_Items: []
   - m_Id: 233012316524544
-    m_Localized: "Al pulsar este bot\xF3n aparecer\xE1n en el tablero flechas que
-      te indicar\xE1n que acciones usar. Si te quedas atascado puedes usar estas
-      pistas, pero si las usas no conseguiras todas las estrellas."
+    m_Localized: Si te quedas atascado en un nivel, prueba a pedir una pista
     m_Metadata:
       m_Items: []
   - m_Id: 375763816808448
@@ -407,7 +404,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 232959606706176
-    m_Localized: Pistas del nivel.
+    m_Localized: Pistas del nivel
     m_Metadata:
       m_Items: []
   - m_Id: 376247898210304
@@ -432,6 +429,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4011286208839680
     m_Localized: Duplicar Tarjetas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51638803722788864
+    m_Localized: Salir del nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51645919841869824
+    m_Localized: "Por \xFAltimo, pulsa este bot\xF3n si quieres volver al men\xFA
+      principal"
     m_Metadata:
       m_Items: []
   references:

@@ -380,19 +380,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 232223330193408
-    m_Localized: Read tutorials again
+    m_Localized: Guide
     m_Metadata:
       m_Items: []
   - m_Id: 232403949506560
-    m_Localized: If you press this button you can read again tutorials that you have
-      already seen. Use this button if you are stuck or if you don't remember what
-      an object does.
+    m_Localized: You can also check the guide if you forgot anything about the game
     m_Metadata:
       m_Items: []
   - m_Id: 233012316524544
-    m_Localized: When you press this button, arrows will appear to indicate which
-      actions cards you should use. If you are stuck, you can use these hints. But
-      if you do it, you will not obtain all the stars.
+    m_Localized: If you are ever stuck, you can use these hints
     m_Metadata:
       m_Items: []
   - m_Id: 375763816808448
@@ -404,7 +400,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 232959606706176
-    m_Localized: Level hints.
+    m_Localized: Level hints
     m_Metadata:
       m_Items: []
   - m_Id: 376247898210304
@@ -429,6 +425,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4011286208839680
     m_Localized: Duplicate cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51638803722788864
+    m_Localized: Exit level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51645919841869824
+    m_Localized: Click here if you want to go back to the main menu
     m_Metadata:
       m_Items: []
   references:
