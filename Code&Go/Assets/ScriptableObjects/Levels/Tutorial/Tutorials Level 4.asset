@@ -33,3 +33,4 @@ MonoBehaviour:
   levelBoard: {fileID: 4900000, guid: f1f215fb70b7e534e9cd74123b12b9d2, type: 3}
   auxLevelBoard: 
   minimosPasos: 8
+  moraleja: "Parece que ya dominas el movimiento del l\xE1ser"

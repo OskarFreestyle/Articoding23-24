@@ -23,4 +23,5 @@ public class LevelData : ScriptableObject
     public string auxLevelBoard;
 
     public int minimosPasos;
+    public string moraleja;
 }

@@ -279,6 +279,7 @@ public class ProgressManager : MonoBehaviour
         data.levelName = "level_created_" + index.ToString();
         data.auxLevelBoard = board;
         data.minimosPasos = 10;
+        data.moraleja = "";
 
         data.levelNameLocalized = createdLevelString;
 
