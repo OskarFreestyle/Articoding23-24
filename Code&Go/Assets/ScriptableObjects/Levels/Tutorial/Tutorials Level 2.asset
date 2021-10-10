@@ -33,3 +33,5 @@ MonoBehaviour:
   levelBoard: {fileID: 4900000, guid: 1baf507ece6c975479d866c32303cb65, type: 3}
   auxLevelBoard: 
   minimosPasos: 3
+  moraleja: "Con los desplegables puedes cambiar la direcci\xF3n en la que se mueve
+    el l\xE1ser"

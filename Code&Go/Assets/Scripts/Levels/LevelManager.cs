@@ -54,6 +54,7 @@ public class LevelManager : MonoBehaviour
     public StarsController starsController;
 
     private int minimosPasos = 0;
+    public Text moraleja;
 
     public StreamRoom streamRoom;
 
@@ -69,6 +70,7 @@ public class LevelManager : MonoBehaviour
             currentLevelIndex = gameManager.GetCurrentLevelIndex();
             currentLevel = currentCategory.levels[currentLevelIndex];
             minimosPasos = currentLevel.minimosPasos;
+            moraleja.text = currentLevel.moraleja;
         }
         else
         {
@@ -76,6 +78,7 @@ public class LevelManager : MonoBehaviour
             currentLevelIndex = defaultLevelIndex;
             currentLevel = currentCategory.levels[currentLevelIndex];
             minimosPasos = currentLevel.minimosPasos;
+            moraleja.text = currentLevel.moraleja;
         }
 
         endPanel.SetActive(false);
