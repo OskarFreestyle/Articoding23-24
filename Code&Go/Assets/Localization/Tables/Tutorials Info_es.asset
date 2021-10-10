@@ -113,43 +113,13 @@ MonoBehaviour:
       muy importantes asi que estate atento."
     m_Metadata:
       m_Items: []
-  - m_Id: 21540206465024
-    m_Localized: Menus del juego
-    m_Metadata:
-      m_Items: []
-  - m_Id: 21637497540608
-    m_Localized: "Estos son los men\xFAs del juego.  El juego tiene tres men\xFAs,
-      el de jugar donde se accede a los niveles. El de tutoriales donde puedes releer
-      los tutoriales desbloqueados. Y el modo creaci\xF3n donde podr\xE1s crear y
-      guardar tus propios tableros."
-    m_Metadata:
-      m_Items: []
   - m_Id: 22053882875904
-    m_Localized: "Men\xFA de Jugar"
+    m_Localized: "Men\xFAs"
     m_Metadata:
       m_Items: []
   - m_Id: 22131901124608
-    m_Localized: "Aqu\xED puedes seleccionar la categor\xEDa de niveles que quieras
-      jugar. Cada uno cuenta con varios niveles. Los ir\xE1s desbloqueando a medida
-      que completes los niveles."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 22867468800000
-    m_Localized: "Men\xFA de Tutoriales"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 22992521973760
-    m_Localized: "En este men\xFA podr\xE1s echarle un vistazo a todo lo que vayas
-      aprendiendo por el camino. Puede ser muy \xFAtil para refrescar la memoria."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23833798692864
-    m_Localized: "Modo de Creaci\xF3n"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23938165559296
-    m_Localized: "Aqu\xED podr\xE1s crear tus propios niveles y ponerte a prueba.
-      Puedes ser todo lo creativo que quieras."
+    m_Localized: Puedes elegir entre jugar los niveles que hay, recordar las cosas
+      que vayas aprendiendo por el camino, o crear tus propios niveles.
     m_Metadata:
       m_Items: []
   - m_Id: 24403393564672

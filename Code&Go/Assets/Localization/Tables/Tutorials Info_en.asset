@@ -110,42 +110,13 @@ MonoBehaviour:
       things so pay attention.
     m_Metadata:
       m_Items: []
-  - m_Id: 21540206465024
-    m_Localized: Game Menus
-    m_Metadata:
-      m_Items: []
-  - m_Id: 21637497540608
-    m_Localized: These are the menus of the game.  The game has three menus, the
-      play menu where you can access the levels. The tutorial menu where you can
-      reread the unlocked tutorials. And the creation mode where you can create and
-      save your own boards.
-    m_Metadata:
-      m_Items: []
   - m_Id: 22053882875904
-    m_Localized: Play menu
+    m_Localized: Menus
     m_Metadata:
       m_Items: []
   - m_Id: 22131901124608
-    m_Localized: Here you can select the category of levels you want to play. Each
-      one has multiple levels. You will be unlocking them as you complete levels.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 22867468800000
-    m_Localized: Tutorials menu
-    m_Metadata:
-      m_Items: []
-  - m_Id: 22992521973760
-    m_Localized: In this menu you can take a look at everything you have learned
-      along the way. It can be very useful to refresh your memory.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23833798692864
-    m_Localized: Build mode
-    m_Metadata:
-      m_Items: []
-  - m_Id: 23938165559296
-    m_Localized: Here you can create your own levels and be tested. Be as creative
-      as you want.
+    m_Localized: You can play the levels you've unlocked, remember the concepts you've
+      learned along the way or create your own levels.
     m_Metadata:
       m_Items: []
   - m_Id: 24403393564672

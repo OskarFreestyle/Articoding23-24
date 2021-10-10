@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: tutorial_intro_1
+  m_Name: PopUpExample
   m_EditorClassIdentifier: 
-  type: 0
-  title: "\xA1Bienvenido a CodePenguin!"
-  content: "Voy a ense\xF1arte c\xF3mo funcionan las cosas."
-  next: {fileID: 11400000, guid: a9f2cccd65ae0a746bddd61a93ad0e6b, type: 2}
+  type: 1
+  title: asdadad
+  content: syadgsudgafdsdfadsfs
+  next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
     m_TableReference:
-      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 51497024521646080
+      m_KeyId: 4033164750848
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
-      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 21217643515904
+      m_KeyId: 15046684672
       m_Key: 
     m_FallbackState: 0
   localizedImage:
