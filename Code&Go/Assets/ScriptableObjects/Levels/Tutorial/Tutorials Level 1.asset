@@ -33,3 +33,4 @@ MonoBehaviour:
   levelBoard: {fileID: 4900000, guid: f4a22a230656ec44c8a5801353134e4c, type: 3}
   auxLevelBoard: 
   minimosPasos: 1
+  moraleja: "Genial, ya sabes ejecutar el programa con el bot\xF3n Play"

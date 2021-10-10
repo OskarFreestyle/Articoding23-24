@@ -33,3 +33,4 @@ MonoBehaviour:
   levelBoard: {fileID: 4900000, guid: b40a5380562451d4ea33ff65efde9053, type: 3}
   auxLevelBoard: 
   minimosPasos: 3
+  moraleja: "Ya ves que con un n\xFAmero distinto a 0 el l\xE1ser se enciende"
