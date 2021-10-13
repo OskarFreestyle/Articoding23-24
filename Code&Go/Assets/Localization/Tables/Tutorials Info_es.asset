@@ -18,33 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 125218508800
-    m_Localized: "\xA1Bienvenido!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 569206558720
-    m_Localized: "\xA1Bienvenido a tu primer nivel! Voy a explicarte los conceptos
-      b\xE1sicos."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1264794128384
-    m_Localized: "Esta es la vista de juego, donde puedes ver el estado inicial del
-      tablero.\r Si arrastras con el raton puedes ver los objetos en 3D."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1813899825152
-    m_Localized: Vista del juego
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2928527724544
-    m_Localized: "Cuando quieras volver a la vista desde arriba pulsa este bot\xF3n,
-      puede ser \xFAtil para ver el sistema de coordenadas original."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3699826675712
-    m_Localized: Resetear vista de juego
-    m_Metadata:
-      m_Items: []
   - m_Id: 3908459745280
     m_Localized: "Vista del c\xF3digo"
     m_Metadata:

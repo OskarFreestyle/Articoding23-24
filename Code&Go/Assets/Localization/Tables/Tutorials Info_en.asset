@@ -18,32 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 125218508800
-    m_Localized: Welcome!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 569206558720
-    m_Localized: Welcome to your first level! I'm going to explain the basics.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1264794128384
-    m_Localized: This is the game view, where you can see the initial state of the
-      board. If you drag with the mouse you can see the objects in 3D.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1813899825152
-    m_Localized: Game view
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2928527724544
-    m_Localized: When you want to return to the top-down view press this button.
-      It can be useful to see the original coordinates system.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3699826675712
-    m_Localized: Reset the game view
-    m_Metadata:
-      m_Items: []
   - m_Id: 3908459745280
     m_Localized: Code view
     m_Metadata:

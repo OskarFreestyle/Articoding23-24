@@ -15,52 +15,28 @@ MonoBehaviour:
   m_TableCollectionName: Tutorials Info
   m_TableCollectionNameGuidString: 683e20d7caf70d24f9b84521e6736e9a
   m_Entries:
-  - m_Id: 125218508800
-    m_Key: tutorial_0_1_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 569206558720
-    m_Key: tutorial_0_1_content
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1264794128384
-    m_Key: tutorials_0_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1813899825152
-    m_Key: tutorial_0_2_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2928527724544
-    m_Key: tutorial_0_2_1_content
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3699826675712
-    m_Key: tutorial_0_2_1_title
-    m_Metadata:
-      m_Items: []
   - m_Id: 3908459745280
-    m_Key: tutorial_0_3_title
+    m_Key: Codigo_titulo
     m_Metadata:
       m_Items: []
   - m_Id: 4046242631680
-    m_Key: tutorial_0_3_content
+    m_Key: Codigo_contenido
     m_Metadata:
       m_Items: []
   - m_Id: 5033468547072
-    m_Key: tutorial_0_4_content
+    m_Key: Tarjetas_contenido
     m_Metadata:
       m_Items: []
   - m_Id: 5518300729344
-    m_Key: tutorial_0_4_title
+    m_Key: Tarjetas_titulo
     m_Metadata:
       m_Items: []
   - m_Id: 6162973642752
-    m_Key: tutorial_0_4_1_title
+    m_Key: EliminarTarjetas_titulo
     m_Metadata:
       m_Items: []
   - m_Id: 6309786865664
-    m_Key: tutorial_0_4_1_content
+    m_Key: EliminarTarjetas_contenido
     m_Metadata:
       m_Items: []
   - m_Id: 7364868231168
