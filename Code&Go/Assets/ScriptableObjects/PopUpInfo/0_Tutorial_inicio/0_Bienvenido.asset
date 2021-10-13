@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: tutorial_intro_1
+  m_Name: 0_Bienvenido
   m_EditorClassIdentifier: 
   type: 0
-  title: "\xA1Bienvenido a CodePenguin!"
+  title: "\xA1Bienvenido a Articoding!"
   content: "Voy a ense\xF1arte c\xF3mo funcionan las cosas."
   next: {fileID: 11400000, guid: a9f2cccd65ae0a746bddd61a93ad0e6b, type: 2}
   image: {fileID: 0}

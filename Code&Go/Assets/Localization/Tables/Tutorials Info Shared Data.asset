@@ -88,19 +88,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21107291377664
-    m_Key: tutorial_intro_1_title
+    m_Key: Bienvenido_titulo
     m_Metadata:
       m_Items: []
   - m_Id: 21217643515904
-    m_Key: tutorial_intro_1_content
+    m_Key: Bienvenido_contenido
     m_Metadata:
       m_Items: []
   - m_Id: 22053882875904
-    m_Key: tutorial_intro_Menus
+    m_Key: Menus_titulo
     m_Metadata:
       m_Items: []
   - m_Id: 22131901124608
-    m_Key: tutorial_intro_Menus_content
+    m_Key: Menus_contenido
     m_Metadata:
       m_Items: []
   - m_Id: 24403393564672
@@ -344,11 +344,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 382661282627584
-    m_Key: category_unlocked_title
+    m_Key: Categorias_titulo
     m_Metadata:
       m_Items: []
   - m_Id: 382920087961600
-    m_Key: category_unlocked_content
+    m_Key: Categorias_contenido
     m_Metadata:
       m_Items: []
   - m_Id: 4010029192708096
