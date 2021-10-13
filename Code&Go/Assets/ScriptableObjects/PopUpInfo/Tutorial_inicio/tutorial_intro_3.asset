@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 0
   title: "Men\xFA de Jugar."
   content: "Aqu\xED puedes seleccionar el mundo que quieras jugar. Cada uno cuenta
-    con varios niveles. Los ir\xE1s desbloqueando a medida que completes los niveles."
+    con varios niveles."
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
@@ -30,5 +30,12 @@ MonoBehaviour:
       m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
       m_KeyId: 22131901124608
+      m_Key: 
+    m_FallbackState: 0
+  localizedImage:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
