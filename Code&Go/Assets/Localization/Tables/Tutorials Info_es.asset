@@ -440,5 +440,13 @@ MonoBehaviour:
       principal"
     m_Metadata:
       m_Items: []
+  - m_Id: 54108031067480064
+    m_Localized: Reiniciar el nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54108398467538944
+    m_Localized: "Pulsa aqu\xED para devolver el nivel a su estado inicial"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

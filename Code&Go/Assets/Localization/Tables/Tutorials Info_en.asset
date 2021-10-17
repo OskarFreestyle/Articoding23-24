@@ -435,5 +435,13 @@ MonoBehaviour:
     m_Localized: Click here if you want to go back to the main menu
     m_Metadata:
       m_Items: []
+  - m_Id: 54108031067480064
+    m_Localized: Restart level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54108398467538944
+    m_Localized: Click here to restart the level to its initial state
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
