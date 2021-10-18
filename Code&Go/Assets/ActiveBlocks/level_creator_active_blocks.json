@@ -94,7 +94,15 @@
                         "maxUses": 100
                     },
                     {
+                        "blockName": "movement_move_laser",
+                        "maxUses": 100
+                    },
+                    {
                         "blockName": "movement_rotate",
+                        "maxUses": 100
+                    },
+                    {
+                        "blockName": "movement_rotate_laser",
                         "maxUses": 100
                     },
                     {

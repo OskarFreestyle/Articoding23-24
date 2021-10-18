@@ -32,4 +32,5 @@ MonoBehaviour:
   allActive: 0
   levelBoard: {fileID: 4900000, guid: 8102280d1705d3c45859d6af8d78ff44, type: 3}
   auxLevelBoard: 
-  minimosPasos: 1
+  minimosPasos: 6
+  moraleja: 

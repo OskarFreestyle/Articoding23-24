@@ -1,7 +1,4 @@
 <xml>
-    <variables>
-        <variable type="" id="/wU7/JAeulbh?XUW+0F-">Desplazamiento</variable>
-    </variables>
     <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){" x="193" y="-187">
         <field name="DIRECTION">UP</field>
         <value name="AMOUNT">

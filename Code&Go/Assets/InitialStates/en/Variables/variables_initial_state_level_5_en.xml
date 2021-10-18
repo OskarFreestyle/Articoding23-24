@@ -1,26 +1,40 @@
 <xml>
     <variables>
-        <variable type="" id="q?iS.)}k]kdOM@W03:gh">Amount</variable>
-        <variable type="" id="c@r8ghRk/:MOmX482+6}">Rotation</variable>
+        <variable type="" id="rnq7bRY/3|0z}(wf)IUs">CantidadMovimiento</variable>
     </variables>
-    <block type="variables_set" id="EOsexFcbk$3QYUdDGGoG" x="66" y="-131">
-        <field name="VAR" id="q?iS.)}k]kdOM@W03:gh" variableType="">Amount</field>
+    <block type="variables_set" id="F~Y=!Q_QT/v5m4{a{%Z[" x="158" y="-222">
+        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">CantidadMovimiento</field>
         <value name="VALUE">
-            <block type="math_number" id="U@B_@rTk}S~U!njKq@%Q">
-                <field name="NUM">0</field>
+            <block type="math_number" id="8`JeWkAG`FG:ToQ:_6sS">
+                <field name="NUM">2</field>
             </block>
         </value>
         <next>
-            <block type="variables_set" id=",pm:31AZeR,{5`m)K!IW">
-                <field name="VAR" id="c@r8ghRk/:MOmX482+6}" variableType="">Rotation</field>
-                <value name="VALUE">
-                    <block type="math_number" id="jscSd3==2q~`(c?$hYy7">
-                        <field name="NUM">0</field>
+            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                <field name="DIRECTION">DOWN</field>
+                <value name="AMOUNT">
+                    <block type="variables_get" id="D2FL-Cv~:2gBu2!?}lla">
+                        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">CantidadMovimiento</field>
                     </block>
                 </value>
                 <next>
-                    <block type="movement_rotate_laser" id="I2-P@8R7VYKnmtJ;]K)S">
-                        <field name="ROTATION">CLOCKWISE</field>
+                    <block type="movement_move_laser" id="/:V|j4,+cFnbR_qiA61:">
+                        <field name="DIRECTION">RIGHT</field>
+                        <value name="AMOUNT">
+                            <block type="variables_get" id="oO?P,FS`B}ZI8UHtf4tF">
+                                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">CantidadMovimiento</field>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="variables_set" id="Yi(eK#~(O2G+NxAepSg/">
+                                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">CantidadMovimiento</field>
+                                <value name="VALUE">
+                                    <block type="math_number" id="%b/QDh@i!n5G.MsQq)m/">
+                                        <field name="NUM">0</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </next>
                     </block>
                 </next>
             </block>
