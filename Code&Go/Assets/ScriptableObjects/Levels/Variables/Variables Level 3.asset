@@ -33,4 +33,4 @@ MonoBehaviour:
   levelBoard: {fileID: 4900000, guid: 78fe70ea841fc1945846b4e89ecd4ffa, type: 3}
   auxLevelBoard: 
   minimosPasos: 4
-  moraleja: 
+  moraleja: Muy bien. Has creado tu primera variable

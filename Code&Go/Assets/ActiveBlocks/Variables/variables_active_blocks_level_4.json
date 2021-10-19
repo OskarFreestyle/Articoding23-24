@@ -27,18 +27,6 @@
                     }                       
                 ]
             }
-        },
-        {
-            "categoryName": "movement",
-            "blocksInfo": {
-                "activate": true,
-                "activeBlocks": [
-                    {
-                        "blockName": "movement_move_laser",
-                        "maxUses": 4
-                    }
-                ]
-            }
         }
     ]
 }
