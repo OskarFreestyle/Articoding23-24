@@ -1,21 +1,42 @@
 <xml>
     <variables>
-        <variable type="" id=";saw6[nb!0fr-)S^huKL">Intensity</variable>
+        <variable type="" id="4Y1jFgEnfT+#?Z*jc9N_">MoveAmount</variable>
     </variables>
-    <block type="variables_set" id="ewYWY.];?izb^z2z.ze5" x="123" y="-150">
-        <field name="VAR" id=";saw6[nb!0fr-)S^huKL" variableType="">Intensity</field>
+    <block type="variables_set" id="/CEqI[yHn.M*M6LdKms9" x="162" y="-157">
+        <field name="VAR" id="4Y1jFgEnfT+#?Z*jc9N_" variableType="">MoveAmount</field>
         <value name="VALUE">
-            <block type="math_number" id="z)I9*?=~:#t;Tg}8U5!B">
-                <field name="NUM">1</field>
+            <block type="math_number" id="Yk}H}L`Y=abJ%p0!GOMG">
+                <field name="NUM">2</field>
             </block>
         </value>
         <next>
-            <block type="movement_laser_change_intensity" id="`|1hs9vX3j!KG_((dMXI">
+            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                <field name="DIRECTION">UP</field>
                 <value name="AMOUNT">
-                    <block type="variables_get" id="H5]2yym$yHm6PMD=HdSy">
-                        <field name="VAR" id=";saw6[nb!0fr-)S^huKL" variableType="">Intensity</field>
+                    <block type="variables_get" id="@lbS`-oysq{_7Y3,NI9$">
+                        <field name="VAR" id="4Y1jFgEnfT+#?Z*jc9N_" variableType="">MoveAmount</field>
                     </block>
                 </value>
+                <next>
+                    <block type="movement_move_laser" id="h1Hu$MFaTNFh62bt8UL2">
+                        <field name="DIRECTION">RIGHT</field>
+                        <value name="AMOUNT">
+                            <block type="variables_get" id="_M!BE2p]8uU3,E`HLJ,)">
+                                <field name="VAR" id="4Y1jFgEnfT+#?Z*jc9N_" variableType="">MoveAmount</field>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="movement_move_laser" id="ioH},,?SGSYQ6IBnCGl.">
+                                <field name="DIRECTION">DOWN</field>
+                                <value name="AMOUNT">
+                                    <block type="variables_get" id="!Lbfq~Nc7h%@uwR*vgk%">
+                                        <field name="VAR" id="4Y1jFgEnfT+#?Z*jc9N_" variableType="">MoveAmount</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </next>
+                    </block>
+                </next>
             </block>
         </next>
     </block>

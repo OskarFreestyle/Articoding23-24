@@ -20,7 +20,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
   levelName: variables_1
-  levelPreview: {fileID: 21300000, guid: f2a93ed28fd794b41bef59be0b655ffe, type: 3}
+  levelPreview: {fileID: 21300000, guid: d9bdf55502e2cc34f9979d9dac7168dd, type: 3}
   initialState:
     m_TableReference:
       m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
@@ -32,4 +32,6 @@ MonoBehaviour:
   allActive: 0
   levelBoard: {fileID: 4900000, guid: 8102280d1705d3c45859d6af8d78ff44, type: 3}
   auxLevelBoard: 
-  minimosPasos: 1
+  minimosPasos: 6
+  moraleja: "Las variables sirven para guardar datos como n\xFAmeros, colores, letras,
+    etc."

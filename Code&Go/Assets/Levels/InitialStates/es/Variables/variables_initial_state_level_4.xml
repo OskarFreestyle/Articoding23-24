@@ -1,13 +1,16 @@
 <xml>
-    <variables>
-        <variable type="" id="8Ead6u42S_DdfLTR#iW-">Desplazamiento</variable>
-    </variables>
-    <block type="variables_set" id="9LRnA~{@,/LnLGWg-CG|" x="201" y="-130">
-        <field name="VAR" id="8Ead6u42S_DdfLTR#iW-" variableType="">Desplazamiento</field>
-        <value name="VALUE">
-            <block type="math_number" id="_/(h1RF.K-D)6}rvi`vi">
-                <field name="NUM">0</field>
+    <variables />
+    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){" x="249" y="-286">
+        <field name="DIRECTION">LEFT</field>
+        <next>
+            <block type="movement_move_laser" id="TZr!p`ZnL|Ee5;|b@|Gv">
+                <field name="DIRECTION">DOWN</field>
+                <next>
+                    <block type="movement_rotate_laser" id="7Oe+g6bqpuQP`l?vH{nr">
+                        <field name="ROTATION">CLOCKWISE</field>
+                    </block>
+                </next>
             </block>
-        </value>
+        </next>
     </block>
 </xml>

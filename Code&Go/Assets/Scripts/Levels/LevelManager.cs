@@ -186,6 +186,12 @@ public class LevelManager : MonoBehaviour
             LoadMainMenu(); // Por ejemplo
     }
 
+    public void RestartLevel()
+    {
+        ResetLevel();
+        LoadInitialBlocks(currentLevel.initialState);
+    }
+
     public void RetryLevel()
     {
         ResetLevel();
@@ -234,7 +240,7 @@ public class LevelManager : MonoBehaviour
         starsController.ReactivateMinimumStepsStar();
     }
 
-    public void ReloadLevel()
+    public void ReloadLevel() //TODO: mirar si se usa en algun sitio (lo dudo)
     {
         LoadLevel(currentLevel);
     }

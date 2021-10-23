@@ -134,10 +134,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115546592563200
-    m_Localized: "\xA1Enhorabuena! Tienes una tarjeta de ACCIONES nueva.\nEsta tarjeta
-      te permite cambiar la intensidad del l\xE1ser. \xDAsala junto con una variable
-      que indique la cantidad de intensidad.\nA medida que avances en el juego conseguir\xE1s
-      m\xE1s tarjetas de acciones"
+    m_Localized: "Esta tarjeta te permite cambiar la intensidad del l\xE1ser. \xDAsala
+      junto con una variable que indique la intensidad"
     m_Metadata:
       m_Items: []
   - m_Id: 115928500719616
@@ -174,10 +172,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139446865022976
-    m_Localized: "Hemos conseguido una nueva trajeta! Con esta tarjeta podr\xE1s
-      girar el l\xE1ser (y otros objetos m\xE1s adelante) en un sentido un m\xFAltiplo
-      de 90 grados. Si usas el + el l\xE1ser girar\xE1 en el sentido de las agujas
-      del reloj, si usas - girar\xE1 en sentido contrario."
+    m_Localized: "Con esta tarjeta podr\xE1s girar el l\xE1ser en un sentido un m\xFAltiplo
+      de 90 grados. Si usas (+) el l\xE1ser girar\xE1 en el sentido de las agujas
+      del reloj, si usas (-) girar\xE1 en sentido antihorario."
     m_Metadata:
       m_Items: []
   - m_Id: 140658565894144
@@ -186,11 +183,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 140721623060480
     m_Localized: Esto es una variable, puedes utilizarla para almacenar un valor.
-      Con esta tarjeta puedes acceder al valor que la variable almacena.
+      Con esta tarjeta puedes acceder al valor que le has dado a la variable.
     m_Metadata:
       m_Items: []
   - m_Id: 141069112758272
-    m_Localized: Con esta tarjeta puedes cambiar el valor almacenado en una variable.
+    m_Localized: Usando esta tarjeta puedes cambiar el valor de una variable.
     m_Metadata:
       m_Items: []
   - m_Id: 141139207966720
@@ -411,6 +408,14 @@ MonoBehaviour:
   - m_Id: 51645919841869824
     m_Localized: "Por \xFAltimo, pulsa este bot\xF3n si quieres volver al men\xFA
       principal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54108031067480064
+    m_Localized: Reiniciar el nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54108398467538944
+    m_Localized: "Pulsa aqu\xED para devolver el nivel a su estado inicial"
     m_Metadata:
       m_Items: []
   references:
