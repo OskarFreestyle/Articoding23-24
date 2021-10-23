@@ -45,28 +45,28 @@ MonoBehaviour:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 3637aa253e4eee84ba601967e08683bd
+  - m_GUID: 9d870b66cafb05043afdf499df74ee3d
     m_Address: variables_initial_state_level_4
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 7e42698edd460954cb5cb1a214fcb951
+  - m_GUID: 3637aa253e4eee84ba601967e08683bd
     m_Address: variables_initial_state_level_5
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: c7039e69b4b5ef046853b9941f8692ca
+  - m_GUID: 7e42698edd460954cb5cb1a214fcb951
     m_Address: variables_initial_state_level_6
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 21040e2be955ea34b81b9e806e8bd4dd
+  - m_GUID: c7039e69b4b5ef046853b9941f8692ca
     m_Address: variables_initial_state_level_7
     m_ReadOnly: 1
     m_SerializedLabels:
@@ -467,6 +467,13 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 0}
   - m_GUID: bb13410eccc573044b56d1de94baad9a
     m_Address: tutorials_initial_state_level_5
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 21040e2be955ea34b81b9e806e8bd4dd
+    m_Address: variables_initial_state_level_8
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

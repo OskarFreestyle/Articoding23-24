@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c8b8cb799550274ba252141012086f5, type: 3}
-  m_Name: Variables Level 6
+  m_Name: Variables Level 8
   m_EditorClassIdentifier: 
   levelNameLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:5488e7fb6d014ee4e8f5dcf0dbc9ce67
     m_TableEntryReference:
-      m_KeyId: 1254476828672
+      m_KeyId: 57531839431716864
       m_Key: 
     m_FallbackState: 0
-  levelName: variables_6
-  levelPreview: {fileID: 21300000, guid: e40aa7329aef0b940ba8989c0ff8459d, type: 3}
+  levelName: variables_8
+  levelPreview: {fileID: 21300000, guid: b05fae029ac36ef4e88f59ab4449d256, type: 3}
   initialState:
     m_TableReference:
       m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
     m_TableEntryReference:
-      m_KeyId: 383616417792
+      m_KeyId: 56239314175668224
       m_Key: 
     m_FallbackState: 0
-  activeBlocks: {fileID: 4900000, guid: 45e4bdacfe612fa4e906fa00b0be5e40, type: 3}
+  activeBlocks: {fileID: 4900000, guid: e66ec3f47c6cd624d92cb0e798851f3f, type: 3}
   allActive: 0
-  levelBoard: {fileID: 4900000, guid: 59b6585d5215b554a99e4962586e9dc5, type: 3}
+  levelBoard: {fileID: 4900000, guid: 59abe7238573c7541a2abed0ff434633, type: 3}
   auxLevelBoard: 
-  minimosPasos: 8
+  minimosPasos: 2
   moraleja: 

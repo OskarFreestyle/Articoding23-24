@@ -1,31 +1,40 @@
 <xml>
     <variables>
-        <variable type="" id="UGcI_Hv@{k(V^#USPMo}">Desplazamiento</variable>
-        <variable type="" id=":,(]MF(VrqQkPA^f,xbU">Giro</variable>
+        <variable type="" id="rnq7bRY/3|0z}(wf)IUs">CantidadMovimiento</variable>
     </variables>
-    <block type="variables_set" id=".;[ND1*DOzZCLf$Ku~D{" x="150" y="-107">
-        <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">Desplazamiento</field>
+    <block type="variables_set" id="F~Y=!Q_QT/v5m4{a{%Z[" x="158" y="-222">
+        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">CantidadMovimiento</field>
         <value name="VALUE">
-            <block type="math_number" id="^NH,z/.43U#%JR2NV?U@">
-                <field name="NUM">0</field>
+            <block type="math_number" id="8`JeWkAG`FG:ToQ:_6sS">
+                <field name="NUM">2</field>
             </block>
         </value>
         <next>
-            <block type="variables_set" id="DP^K(7-5FzhcazBn~jSP">
-                <field name="VAR" id=":,(]MF(VrqQkPA^f,xbU" variableType="">Giro</field>
-                <value name="VALUE">
-                    <block type="math_number" id="j~sj}lcU*#3dbssILwS6">
-                        <field name="NUM">0</field>
+            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                <field name="DIRECTION">DOWN</field>
+                <value name="AMOUNT">
+                    <block type="variables_get" id="D2FL-Cv~:2gBu2!?}lla">
+                        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">CantidadMovimiento</field>
                     </block>
                 </value>
                 <next>
-                    <block type="variables_set" id="+.1]Me8H+Pn2lj{Lv$pR">
-                        <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">Desplazamiento</field>
-                        <value name="VALUE">
-                            <block type="math_number" id="9gD/8Fz@OlXi$F/4a|;]">
-                                <field name="NUM">0</field>
+                    <block type="movement_move_laser" id="/:V|j4,+cFnbR_qiA61:">
+                        <field name="DIRECTION">RIGHT</field>
+                        <value name="AMOUNT">
+                            <block type="variables_get" id="oO?P,FS`B}ZI8UHtf4tF">
+                                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">CantidadMovimiento</field>
                             </block>
                         </value>
+                        <next>
+                            <block type="variables_set" id="Yi(eK#~(O2G+NxAepSg/">
+                                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">CantidadMovimiento</field>
+                                <value name="VALUE">
+                                    <block type="math_number" id="%b/QDh@i!n5G.MsQq)m/">
+                                        <field name="NUM">0</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </next>
                     </block>
                 </next>
             </block>

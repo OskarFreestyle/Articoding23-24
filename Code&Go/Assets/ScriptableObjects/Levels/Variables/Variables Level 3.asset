@@ -28,9 +28,9 @@ MonoBehaviour:
       m_KeyId: 151990173696
       m_Key: 
     m_FallbackState: 0
-  activeBlocks: {fileID: 4900000, guid: a6bd3a0be7ee4c54cb268e30f58c1485, type: 3}
+  activeBlocks: {fileID: 4900000, guid: 68b50613571faee4bb0f901e435f33b5, type: 3}
   allActive: 0
-  levelBoard: {fileID: 4900000, guid: 78fe70ea841fc1945846b4e89ecd4ffa, type: 3}
+  levelBoard: {fileID: 4900000, guid: b68e00a6dc8491d468ecab03e0ae9f25, type: 3}
   auxLevelBoard: 
   minimosPasos: 4
   moraleja: Muy bien. Has creado tu primera variable

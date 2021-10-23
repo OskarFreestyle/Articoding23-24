@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 71444025344
-    m_Localized: "Variables 1 - Introducci\xF3n"
+    m_Localized: Variables 1
     m_Metadata:
       m_Items: []
   - m_Id: 729903616000
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2751654612992
-    m_Localized: "Operadores 1 - Introducci\xF3n"
+    m_Localized: Operadores 1
     m_Metadata:
       m_Items: []
   - m_Id: 2903391948800
@@ -155,15 +155,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 321477024022528
-    m_Localized: "Tipos de Datos 1 - Introducci\xF3n"
+    m_Localized: Tipos de Datos 1
     m_Metadata:
       m_Items: []
   - m_Id: 326974879956992
-    m_Localized: "Condicionales 1 - Introducci\xF3n"
+    m_Localized: Condicionales 1
     m_Metadata:
       m_Items: []
   - m_Id: 327157801943040
-    m_Localized: "Bucles 1 - Introducci\xF3n"
+    m_Localized: Bucles 1
     m_Metadata:
       m_Items: []
   - m_Id: 2152537493164032
@@ -192,6 +192,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 55866087298785280
     m_Localized: Tutorial 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57531839431716864
+    m_Localized: Variables 8
     m_Metadata:
       m_Items: []
   references:
