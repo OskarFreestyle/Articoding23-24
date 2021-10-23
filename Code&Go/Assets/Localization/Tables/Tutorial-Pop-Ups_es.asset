@@ -43,5 +43,23 @@ MonoBehaviour:
     m_Localized: Movimiento
     m_Metadata:
       m_Items: []
+  - m_Id: 3437825667063808
+    m_Localized: Nivel 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438086351446016
+    m_Localized: "Esto parece mucho c\xF3digo, pero no te asustes, con peque\xF1os
+      cambios har\xE1s que funcione"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3439720536170496
+    m_Localized: Nivel 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3439847191568384
+    m_Localized: "Parece que falta una variable, \xBFpor qu\xE9 no pruebas a crear
+      una?"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

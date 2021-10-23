@@ -43,5 +43,23 @@ MonoBehaviour:
     m_Localized: Movement
     m_Metadata:
       m_Items: []
+  - m_Id: 3437825667063808
+    m_Localized: Level 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438086351446016
+    m_Localized: Don't get scared by all this code, just make a few changes and you'll
+      get this working
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3439720536170496
+    m_Localized: Level 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3439847191568384
+    m_Localized: It seems there's a variable missing, why don't you try creating
+      one?
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

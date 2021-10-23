@@ -190,5 +190,9 @@ MonoBehaviour:
     m_Localized: Tutorial 1
     m_Metadata:
       m_Items: []
+  - m_Id: 55866087298785280
+    m_Localized: Tutorial 5
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

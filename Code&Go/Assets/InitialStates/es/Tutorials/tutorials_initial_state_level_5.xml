@@ -1,0 +1,20 @@
+<xml>
+    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){" x="207" y="-279">
+        <field name="DIRECTION">DOWN</field>
+        <value name="AMOUNT">
+            <block type="math_number" id="Yk}H}L`Y=abJ%p0!GOMG">
+                <field name="NUM">3</field>
+            </block>
+        </value>
+        <next>
+            <block type="movement_rotate_laser" id="^^@O,jT5MmD,pY5Bz0E}">
+                <field name="ROTATION">ANTI_CLOCKWISE</field>
+                <value name="AMOUNT">
+                    <block type="math_number" id="e[ho$1@UaG?@J@u:d:d`">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+            </block>
+        </next>
+    </block>
+</xml>

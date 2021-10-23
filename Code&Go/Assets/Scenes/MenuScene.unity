@@ -330,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: allUnlocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: categories.Array.data[5]
@@ -1013,7 +1013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: -19.999939}
   m_SizeDelta: {x: 0, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98581516
@@ -2105,10 +2105,10 @@ RectTransform:
   m_Father: {fileID: 2044693740}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -285}
+  m_SizeDelta: {x: 360, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &215277667
 MonoBehaviour:
@@ -2462,12 +2462,12 @@ MonoBehaviour:
   allTutorials:
   - {fileID: 11400000, guid: ae3dba98c7ae97d458086bf40dcd742c, type: 2}
   - {fileID: 11400000, guid: a211d8400db4b08479465c335223b00f, type: 2}
-  - {fileID: 11400000, guid: 2f444e39ab01c4d49b30656720c98586, type: 2}
-  - {fileID: 11400000, guid: 187e176e24be350469c5dd2eb2d990da, type: 2}
-  - {fileID: 11400000, guid: 6ec85c9df382b324db91c4a8cbe2d65d, type: 2}
-  - {fileID: 11400000, guid: 7cd4ae450e6a71944bb88f7f40e59266, type: 2}
-  - {fileID: 11400000, guid: 5639a5b41caf2944faba1da2868e11a0, type: 2}
-  - {fileID: 11400000, guid: 633dc2f93c4aa8e4bbbf8eadd6b23e95, type: 2}
+  - {fileID: 11400000, guid: 6b6a26a12c9a9be4a8bbc7997b06f3bd, type: 2}
+  - {fileID: 11400000, guid: ae3dba98c7ae97d458086bf40dcd742c, type: 2}
+  - {fileID: 11400000, guid: ae3dba98c7ae97d458086bf40dcd742c, type: 2}
+  - {fileID: 11400000, guid: ae3dba98c7ae97d458086bf40dcd742c, type: 2}
+  - {fileID: 11400000, guid: ae3dba98c7ae97d458086bf40dcd742c, type: 2}
+  - {fileID: 11400000, guid: ae3dba98c7ae97d458086bf40dcd742c, type: 2}
   - {fileID: 11400000, guid: a9f2cccd65ae0a746bddd61a93ad0e6b, type: 2}
   - {fileID: 11400000, guid: cf10fe19b6a77d647ac7579c74eeb9b2, type: 2}
   - {fileID: 11400000, guid: 3b720222c95c4bd4fb727307d400bd32, type: 2}
@@ -3680,7 +3680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: -19.999939}
   m_SizeDelta: {x: 0, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373885807
@@ -5601,10 +5601,10 @@ RectTransform:
   m_Father: {fileID: 2044693740}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -175}
+  m_SizeDelta: {x: 360, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &523313475
 MonoBehaviour:
@@ -11030,7 +11030,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1051489696}
   m_HandleRect: {fileID: 1966084407}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15691,10 +15691,10 @@ RectTransform:
   m_Father: {fileID: 2044693740}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -65}
+  m_SizeDelta: {x: 360, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1461927555
 MonoBehaviour:
@@ -17571,7 +17571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: -19.999939}
   m_SizeDelta: {x: 0, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585159912
@@ -18012,10 +18012,10 @@ RectTransform:
   m_Father: {fileID: 1457078197}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 46.25, y: -30}
+  m_SizeDelta: {x: 185, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1623305847
 MonoBehaviour:
@@ -18332,7 +18332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 70
-  info: {fileID: 11400000, guid: 633dc2f93c4aa8e4bbbf8eadd6b23e95, type: 2}
+  info: {fileID: 0}
   highlightObject: 0
   destroyOnShowed: 1
   isSaveCheckpoint: 1
@@ -23187,7 +23187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 50
-  info: {fileID: 11400000, guid: 7cd4ae450e6a71944bb88f7f40e59266, type: 2}
+  info: {fileID: 0}
   highlightObject: 1
   destroyOnShowed: 1
   isSaveCheckpoint: 0
@@ -23735,10 +23735,10 @@ RectTransform:
   m_Father: {fileID: 2044693740}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -395}
+  m_SizeDelta: {x: 360, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2131191994
 MonoBehaviour:
@@ -24108,10 +24108,10 @@ RectTransform:
   m_Father: {fileID: 1457078197}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 296.25, y: -30}
+  m_SizeDelta: {x: 407.49997, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2146104069
 MonoBehaviour:
@@ -24439,7 +24439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 60
-  info: {fileID: 11400000, guid: 5639a5b41caf2944faba1da2868e11a0, type: 2}
+  info: {fileID: 0}
   highlightObject: 1
   destroyOnShowed: 1
   isSaveCheckpoint: 0

@@ -39,6 +39,26 @@ MonoBehaviour:
     m_Key: MovementTitle
     m_Metadata:
       m_Items: []
+  - m_Id: 3437825667063808
+    m_Key: popup_variables_1_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3438086351446016
+    m_Key: popup_variables_1_content
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3439554383011840
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3439720536170496
+    m_Key: popup_variables_2_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3439847191568384
+    m_Key: popup_variables_2_content
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
