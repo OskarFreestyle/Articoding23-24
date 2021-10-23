@@ -20,7 +20,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
   levelName: variables_2
-  levelPreview: {fileID: 21300000, guid: a4a05ae286a635e4f8e4cbc09beb22ed, type: 3}
+  levelPreview: {fileID: 21300000, guid: bd89071da27ed2f48bff3434b8a48d9c, type: 3}
   initialState:
     m_TableReference:
       m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a

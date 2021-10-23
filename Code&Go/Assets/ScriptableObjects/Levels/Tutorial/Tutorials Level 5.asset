@@ -20,7 +20,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
   levelName: tutorials_5
-  levelPreview: {fileID: 21300000, guid: a3a4fb975bc3d2d4ab95b5666a2bb677, type: 3}
+  levelPreview: {fileID: 21300000, guid: 7aa7fb2758009db45ba052756a1ef26b, type: 3}
   initialState:
     m_TableReference:
       m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
