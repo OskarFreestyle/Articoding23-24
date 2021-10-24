@@ -97,6 +97,12 @@ namespace uAdventure.Simva
         public void setInteractuable(bool state)
         {
         }
+
+        public void ExitGame()
+        {
+            SimvaExtension.Instance.Quit();
+            Application.Quit();
+        }
     }
 }
 
