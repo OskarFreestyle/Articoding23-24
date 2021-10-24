@@ -20,7 +20,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
   levelName: variables_4
-  levelPreview: {fileID: 21300000, guid: ae975fd78895527449bf41990dd95c38, type: 3}
+  levelPreview: {fileID: 21300000, guid: d7acc9e7aa5fd624c9fad21a1c8a038f, type: 3}
   initialState:
     m_TableReference:
       m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
@@ -28,9 +28,9 @@ MonoBehaviour:
       m_KeyId: 160416530432
       m_Key: 
     m_FallbackState: 0
-  activeBlocks: {fileID: 4900000, guid: a6bd3a0be7ee4c54cb268e30f58c1485, type: 3}
+  activeBlocks: {fileID: 4900000, guid: 26190bbbcf4f5f74e97092f639aaced3, type: 3}
   allActive: 0
-  levelBoard: {fileID: 4900000, guid: 78fe70ea841fc1945846b4e89ecd4ffa, type: 3}
+  levelBoard: {fileID: 4900000, guid: 0446cdfc25a48d0478f0ee99d5bb0c6d, type: 3}
   auxLevelBoard: 
   minimosPasos: 4
-  moraleja: Muy bien. Has creado tu primera variable
+  moraleja: 

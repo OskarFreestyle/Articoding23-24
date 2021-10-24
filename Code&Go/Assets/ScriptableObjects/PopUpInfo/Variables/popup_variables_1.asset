@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
   m_Name: popup_variables_1
   m_EditorClassIdentifier: 
-  type: 1
+  type: 0
   title: Nivel 2
   content: "Esto parece mucho c\xF3digo, pero no te asustes, con peque\xF1os cambios
     har\xE1s que funcione"

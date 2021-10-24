@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
   m_Name: popup_variables_2
   m_EditorClassIdentifier: 
-  type: 1
+  type: 0
   title: Nivel 3
   content: "Parece que falta una variable, \xBFpor qu\xE9 no pruebas a crear una?"
   next: {fileID: 0}

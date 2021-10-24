@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Simva/Simva.unity
     guid: fe5416dc15a29394e837da7dffe1d7c1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Simva/_Login.unity
     guid: 6c3e1015122f94e40b09f498487f4c8d
   m_configObjects:

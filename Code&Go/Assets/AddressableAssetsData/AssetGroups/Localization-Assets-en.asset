@@ -52,8 +52,8 @@ MonoBehaviour:
     - Locale-en
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 6c7d67583eff5cd4c9e904d6ec8e8746
-    m_Address: variables_initial_state_level_5_en
+  - m_GUID: a48a2cfe2b2eab14298c330318e26560
+    m_Address: variables_initial_state_level_8_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -67,7 +67,7 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: af041191b5ff20c47a4e81a20886030d
-    m_Address: variables_initial_state_level_7_en
+    m_Address: variables_initial_state_level_6_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
