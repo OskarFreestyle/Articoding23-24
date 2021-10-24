@@ -39,35 +39,35 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: ba789fd92639ae54a98e19d39ae0948f
-    m_Address: variables_initial_state_level_3
+    m_Address: variables_initial_state_level_3_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 554ef3de8e63cf045b988586f0b96b62
+    m_Address: variables_initial_state_level_4_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 6c7d67583eff5cd4c9e904d6ec8e8746
-    m_Address: variables_initial_state_level_4
+    m_Address: variables_initial_state_level_5_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 5e336da69ba1b3648b6f1a949c292478
-    m_Address: variables_initial_state_level_5
+    m_Address: variables_initial_state_level_6_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: af041191b5ff20c47a4e81a20886030d
-    m_Address: variables_initial_state_level_6
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: cf288f7bc360d2b489d415d7e4b3802a
-    m_Address: variables_initial_state_level_7
+    m_Address: variables_initial_state_level_7_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -467,6 +467,13 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 0}
   - m_GUID: bdced8fbe158cc74186952252fe6dd6a
     m_Address: tutorials_initial_state_level_5_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: cf288f7bc360d2b489d415d7e4b3802a
+    m_Address: variables_initial_state_level_8_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

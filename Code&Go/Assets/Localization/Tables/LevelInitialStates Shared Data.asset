@@ -183,6 +183,10 @@ MonoBehaviour:
     m_Key: tutorials_5
     m_Metadata:
       m_Items: []
+  - m_Id: 56239314175668224
+    m_Key: variables_8
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
@@ -359,6 +363,10 @@ MonoBehaviour:
           - en
           - es
         - m_KeyId: 54572151968063488
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 56239314175668224
           m_TableCodes:
           - en
           - es

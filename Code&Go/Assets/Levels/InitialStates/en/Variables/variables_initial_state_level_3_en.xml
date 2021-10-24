@@ -2,10 +2,8 @@
     <variables>
         <variable type="" id="Y1/sKS9%bRPPWOodp|vK">CantidadMovHorizontal</variable>
         <variable type="" id="jwuTPDG4T-NOP!Rp]qnM">CantidadMovVertical</variable>
+        <variable type="" id="o=z,]~V,4AG$IjWC8`hM">CantidadGiro</variable>
     </variables>
-    <block type="movement_rotate_laser" id="0YZLn]oqE^XZaY/_3zH#" x="246" y="-545">
-        <field name="ROTATION">CLOCKWISE</field>
-    </block>
     <block type="variables_set" id="[AHn]l]/C,RLsw[upXZ0" x="186" y="-125">
         <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">CantidadMovVertical</field>
         <value name="VALUE">
@@ -37,6 +35,16 @@
                                         <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">CantidadMovHorizontal</field>
                                     </block>
                                 </value>
+                                <next>
+                                    <block type="variables_set" id="=Y^X?:FD}8?81T08s-{B">
+                                        <field name="VAR" id="o=z,]~V,4AG$IjWC8`hM" variableType="">CantidadGiro</field>
+                                        <next>
+                                            <block type="movement_rotate_laser" id="0YZLn]oqE^XZaY/_3zH#">
+                                                <field name="ROTATION">CLOCKWISE</field>
+                                            </block>
+                                        </next>
+                                    </block>
+                                </next>
                             </block>
                         </next>
                     </block>
