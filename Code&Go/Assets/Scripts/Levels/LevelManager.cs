@@ -54,7 +54,9 @@ public class LevelManager : MonoBehaviour
     public StarsController starsController;
 
     private int minimosPasos = 0;
-    public Text moraleja;
+
+    public LocalizeStringEvent endTextLocalized;
+    //[SerializeField] private LocalizeStringEvent endText;
 
     public StreamRoom streamRoom;
 
@@ -70,7 +72,7 @@ public class LevelManager : MonoBehaviour
             currentLevelIndex = gameManager.GetCurrentLevelIndex();
             currentLevel = currentCategory.levels[currentLevelIndex];
             minimosPasos = currentLevel.minimosPasos;
-            moraleja.text = currentLevel.moraleja;
+            //endTextLocalized.text = currentLevel.endText;
         }
         else
         {
@@ -78,7 +80,7 @@ public class LevelManager : MonoBehaviour
             currentLevelIndex = defaultLevelIndex;
             currentLevel = currentCategory.levels[currentLevelIndex];
             minimosPasos = currentLevel.minimosPasos;
-            moraleja.text = currentLevel.moraleja;
+            //endTextLocalized.text = currentLevel.endText;
         }
 
         endPanel.SetActive(false);
@@ -104,6 +106,9 @@ public class LevelManager : MonoBehaviour
         //levelName.text = currentLevel.levelName;
         levelNameLocalized.StringReference = currentLevel.levelNameLocalized;
         levelNameLocalized.RefreshString();
+
+        endTextLocalized.StringReference = currentLevel.endTextLocalized;
+        endTextLocalized.RefreshString();
     }
 
     private void Update()

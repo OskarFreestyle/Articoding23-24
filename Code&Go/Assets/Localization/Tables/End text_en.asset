@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: End text_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 84c2393b91541f444811c7fc43a5c75a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 22732038144
+    m_Localized: Great, to execute your code press the Play button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119771455488
+    m_Localized: You can choose the direction in which the laser moves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156261900288
+    m_Localized: A number different from 0 turns the laser on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 165569060864
+    m_Localized: It seems that you understand how the movement cards work
+    m_Metadata:
+      m_Items: []
+  - m_Id: 193448599552
+    m_Localized: Now you can rotate objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221579796480
+    m_Localized: Variables store data such as numbers, letters, colors and more
+    m_Metadata:
+      m_Items: []
+  - m_Id: 283781324800
+    m_Localized: Great. You have created your first variable
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

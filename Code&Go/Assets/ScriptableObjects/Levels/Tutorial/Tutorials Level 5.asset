@@ -33,4 +33,10 @@ MonoBehaviour:
   levelBoard: {fileID: 4900000, guid: cd350b81932011a438ab4b1e2d1175e9, type: 3}
   auxLevelBoard: 
   minimosPasos: 4
-  moraleja: "Ya sabes c\xF3mo girar el l\xE1ser"
+  endTextLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:84c2393b91541f444811c7fc43a5c75a
+    m_TableEntryReference:
+      m_KeyId: 193448599552
+      m_Key: 
+    m_FallbackState: 0

@@ -33,4 +33,10 @@ MonoBehaviour:
   levelBoard: {fileID: 4900000, guid: b40a5380562451d4ea33ff65efde9053, type: 3}
   auxLevelBoard: 
   minimosPasos: 3
-  moraleja: "Ya ves que con un n\xFAmero distinto a 0 el l\xE1ser se enciende"
+  endTextLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:84c2393b91541f444811c7fc43a5c75a
+    m_TableEntryReference:
+      m_KeyId: 156261900288
+      m_Key: 
+    m_FallbackState: 0

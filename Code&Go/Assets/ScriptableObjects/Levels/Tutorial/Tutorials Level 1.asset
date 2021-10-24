@@ -33,4 +33,10 @@ MonoBehaviour:
   levelBoard: {fileID: 4900000, guid: f4a22a230656ec44c8a5801353134e4c, type: 3}
   auxLevelBoard: 
   minimosPasos: 1
-  moraleja: "Genial, ya sabes ejecutar el programa con el bot\xF3n Play"
+  endTextLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:84c2393b91541f444811c7fc43a5c75a
+    m_TableEntryReference:
+      m_KeyId: 22732038144
+      m_Key: 
+    m_FallbackState: 0
