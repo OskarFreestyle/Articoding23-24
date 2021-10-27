@@ -465,7 +465,7 @@ MonoBehaviour:
     - Locale-en
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: bdced8fbe158cc74186952252fe6dd6a
+  - m_GUID: fce04955bfaf03e4ba80375cd0b10d1c
     m_Address: tutorials_initial_state_level_5_en
     m_ReadOnly: 1
     m_SerializedLabels:

@@ -23,9 +23,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4046242631680
-    m_Localized: 'Here you can see the code. This piece of code works correctly.
-      When you know what it''s going to do, hit the play button and check if you
-      were right. '
+    m_Localized: 'You will see your code here. This piece of code works correctly.
+      Once you know what it''s going to do, hit the Play button and check if you
+      were right '
     m_Metadata:
       m_Items: []
   - m_Id: 5033468547072
@@ -43,7 +43,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 6309786865664
     m_Localized: If you drag a code card to this panel, the code card will be deleted.
-      Watch out! You will also delete all the code cards attached to it.
+      Watch out! You will also delete all the code cards attached to it
     m_Metadata:
       m_Items: []
   - m_Id: 7364868231168
@@ -90,7 +90,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22131901124608
     m_Localized: You can play the levels you've unlocked, remember the concepts you've
-      learned along the way or create your own levels.
+      learned along the way, create your own levels or check your profile.
     m_Metadata:
       m_Items: []
   - m_Id: 24403393564672
@@ -134,8 +134,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115546592563200
-    m_Localized: This card allows you to change the laser intensity. Use it with
-      a variable that indicates the intensity.
+    m_Localized: 'This card allows you to change the laser intensity. '
     m_Metadata:
       m_Items: []
   - m_Id: 115928500719616
@@ -375,18 +374,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 376247898210304
-    m_Localized: Each category has a number of stars that you can earn. Stars are
-      not necessary to unlock new categories. But getting all the stars is a challenge,
-      only the best can do it.
+    m_Localized: You can earn up to three stars per level, if you solve them like
+      a real programmer. Can you get them all?
     m_Metadata:
       m_Items: []
   - m_Id: 382661282627584
-    m_Localized: New Category unlocked!
+    m_Localized: First level unlocked!
     m_Metadata:
       m_Items: []
   - m_Id: 382920087961600
-    m_Localized: You have unlocked a new category, complete all its levels to unlock
-      the next one.
+    m_Localized: You have these levels unlocked by now. Good luck!
     m_Metadata:
       m_Items: []
   - m_Id: 4010029192708096
@@ -412,6 +409,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 54108398467538944
     m_Localized: Click here to restart the level to its initial state
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57791728913625088
+    m_Localized: More categories!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57791802787901440
+    m_Localized: You can scroll all the way down to see the levels that await you.
     m_Metadata:
       m_Items: []
   references:

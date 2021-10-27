@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 7569387792998684776}
   - component: {fileID: 4497312642027457297}
   - component: {fileID: 1422479842212752651}
-  - component: {fileID: 3532596445826904020}
+  - component: {fileID: 1220538429557504333}
   m_Layer: 5
   m_Name: CategoryCard
   m_TagString: Untagged
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3532596445826904020
+--- !u!114 &1220538429557504333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 400
+  priority: 350
   info: {fileID: 11400000, guid: 6b6a26a12c9a9be4a8bbc7997b06f3bd, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6594708582818587066}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
   m_Name: 

@@ -1,6 +1,6 @@
 <xml>
     <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){" x="207" y="-279">
-        <field name="DIRECTION">LEFT</field>
+        <field name="DIRECTION">RIGHT</field>
         <value name="AMOUNT">
             <block type="math_number" id="Yk}H}L`Y=abJ%p0!GOMG">
                 <field name="NUM">2</field>

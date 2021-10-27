@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 193448599552
-    m_Localized: "Ya sabes c\xF3mo girar objetos"
+    m_Localized: "\xA1Recuerda! (+) gira en sentido horario y (-) en sentido antihorario"
     m_Metadata:
       m_Items: []
   - m_Id: 221579796480

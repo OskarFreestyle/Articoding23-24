@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 193448599552
-    m_Localized: Now you can rotate objects
+    m_Localized: Don't forget! (+) rotates clockwise and (-) anti-clockwise
     m_Metadata:
       m_Items: []
   - m_Id: 221579796480

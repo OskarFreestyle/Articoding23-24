@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   title: "Tarjetas de c\xF3digo."
-  content: "Los bloques de c\xF3digo se encuentran en este desplegable, desde donde
-    puedes arrastrar los bloques hasta la vista de c\xF3digo."
+  content: "Las tarjetas de c\xF3digo se encuentran en este desplegable, desde aqu\xED
+    puedes arrastrar las que tengas disponibles hasta la vista de c\xF3digo"
   next: {fileID: 11400000, guid: 974df938faffd744087fdd11d790813b, type: 2}
   image: {fileID: 0}
   localizedTitle:

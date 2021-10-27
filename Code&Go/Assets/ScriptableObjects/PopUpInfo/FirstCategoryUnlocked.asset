@@ -10,31 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: PopUpExample
+  m_Name: FirstCategoryUnlocked
   m_EditorClassIdentifier: 
-  type: 1
-  title: asdadad
-  content: syadgsudgafdsdfadsfs
+  type: 0
+  title: Niveles desbloqueados
+  content: "Tienes varios niveles por delante. Cuando los termines, \xA1desbloquear\xE1s
+    niveles nuevos!"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
     m_TableReference:
-      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
+      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 4033164750848
+      m_KeyId: 382661282627584
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
-      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
+      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 15046684672
+      m_KeyId: 382920087961600
       m_Key: 
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 706066829672448
       m_Key: 
     m_FallbackState: 0

@@ -15,20 +15,12 @@ MonoBehaviour:
   m_TableCollectionName: Tutorial-Pop-Ups
   m_TableCollectionNameGuidString: a7210f51a0697f647a039bb956365be6
   m_Entries:
-  - m_Id: 15046684672
-    m_Key: Example
-    m_Metadata:
-      m_Items: []
   - m_Id: 1190051590144
     m_Key: TurnedOn
     m_Metadata:
       m_Items: []
   - m_Id: 1374475137024
     m_Key: Movement
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4033164750848
-    m_Key: ExampleTitle
     m_Metadata:
       m_Items: []
   - m_Id: 4171056689152
@@ -45,10 +37,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3438086351446016
     m_Key: popup_variables_1_content
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3439554383011840
-    m_Key: New Entry
     m_Metadata:
       m_Items: []
   - m_Id: 3439720536170496

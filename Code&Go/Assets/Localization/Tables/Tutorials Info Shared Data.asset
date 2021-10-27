@@ -355,6 +355,14 @@ MonoBehaviour:
     m_Key: tutorial_0_11_content
     m_Metadata:
       m_Items: []
+  - m_Id: 57791728913625088
+    m_Key: more_categories_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57791802787901440
+    m_Key: more_categories_content
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

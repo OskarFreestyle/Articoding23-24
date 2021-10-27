@@ -1,10 +1,10 @@
 <xml>
     <variables>
-        <variable type="" id="UGcI_Hv@{k(V^#USPMo}">Desplazamiento</variable>
+        <variable type="" id="UGcI_Hv@{k(V^#USPMo}">Cantidad</variable>
         <variable type="" id=":,(]MF(VrqQkPA^f,xbU">Giro</variable>
     </variables>
     <block type="variables_set" id=".;[ND1*DOzZCLf$Ku~D{" x="150" y="-107">
-        <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">Desplazamiento</field>
+        <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">Cantidad</field>
         <value name="VALUE">
             <block type="math_number" id="^NH,z/.43U#%JR2NV?U@">
                 <field name="NUM">0</field>
@@ -20,7 +20,7 @@
                 </value>
                 <next>
                     <block type="variables_set" id="+.1]Me8H+Pn2lj{Lv$pR">
-                        <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">Desplazamiento</field>
+                        <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">Cantidad</field>
                         <value name="VALUE">
                             <block type="math_number" id="9gD/8Fz@OlXi$F/4a|;]">
                                 <field name="NUM">0</field>

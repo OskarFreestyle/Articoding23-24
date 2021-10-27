@@ -24,12 +24,13 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4046242631680
     m_Localized: "Aqu\xED ver\xE1s tu c\xF3digo. Este funciona correctamente. Cuando
-      sepas qu\xE9 va a hacer, dale al bot\xF3n del play y comprueba si has acertado."
+      sepas qu\xE9 va a hacer, pulsa el bot\xF3n de Ejecutar arriba en el centro
+      y comprueba si has acertado"
     m_Metadata:
       m_Items: []
   - m_Id: 5033468547072
     m_Localized: "Las tarjetas de c\xF3digo se encuentran en este desplegable, desde
-      donde puedes arrastrar las tarjetas hasta la vista de c\xF3digo."
+      aqu\xED puedes arrastrar las que necesites a la vista de c\xF3digo"
     m_Metadata:
       m_Items: []
   - m_Id: 5518300729344
@@ -42,7 +43,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 6309786865664
     m_Localized: "Si arrastras una tarjeta de c\xF3digo a este panel la eliminar\xE1s.
-      \xA1Ten cuidado! Tambi\xE9n eliminar\xE1s las tarjetas que esten conectadas."
+      \xA1Pero ten cuidado! Tambi\xE9n eliminar\xE1s las tarjetas que esten conectadas"
     m_Metadata:
       m_Items: []
   - m_Id: 7364868231168
@@ -90,7 +91,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22131901124608
     m_Localized: Puedes elegir entre jugar los niveles que hay, recordar las cosas
-      que vayas aprendiendo por el camino, o crear tus propios niveles.
+      que vayas aprendiendo por el camino, crear tus propios niveles o consultar
+      tu perfil.
     m_Metadata:
       m_Items: []
   - m_Id: 24403393564672
@@ -134,8 +136,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115546592563200
-    m_Localized: "Esta tarjeta te permite cambiar la intensidad del l\xE1ser. \xDAsala
-      junto con una variable que indique la intensidad"
+    m_Localized: "Esta tarjeta te permite cambiar la intensidad del l\xE1ser."
     m_Metadata:
       m_Items: []
   - m_Id: 115928500719616
@@ -366,7 +367,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 375763816808448
-    m_Localized: Estrellas por categoria
+    m_Localized: "Estrellas por categor\xEDa"
     m_Metadata:
       m_Items: []
   - m_Id: 216012202627072
@@ -378,18 +379,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 376247898210304
-    m_Localized: "Cada categor\xEDa tiene un n\xFAmero de estrellas que puedes conseguir.
-      Las estrellas no son necesarias para desbloquear nuevas categor\xEDas. Pero
-      conseguir todas las estrellas es un desafio, solo los mejores pueden hacerlo."
+    m_Localized: "Puedes ganar tres estrellas por nivel, si resuelves los niveles
+      como un verdadero programador. \xBFConseguir\xE1s todas?"
     m_Metadata:
       m_Items: []
   - m_Id: 382661282627584
-    m_Localized: "\xA1Nueva Categor\xEDa desbloqueada!"
+    m_Localized: "\xA1Primer nivel desbloqueado!"
     m_Metadata:
       m_Items: []
   - m_Id: 382920087961600
-    m_Localized: "Has desbloqueado una nueva categor\xEDa, completa todos sus niveles
-      para desbloquear la siguiente."
+    m_Localized: "Por ahora, tienes estos niveles disponibles. \xA1Buena suerte!"
     m_Metadata:
       m_Items: []
   - m_Id: 4010029192708096
@@ -416,6 +415,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 54108398467538944
     m_Localized: "Pulsa aqu\xED para devolver el nivel a su estado inicial"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57791802787901440
+    m_Localized: Puedes bajar para ver todos los niveles que te esperan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57791728913625088
+    m_Localized: "\xA1M\xE1s categor\xEDas!"
     m_Metadata:
       m_Items: []
   references:

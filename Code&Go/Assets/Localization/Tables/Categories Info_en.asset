@@ -77,13 +77,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49954735318302720
-    m_Localized: Tutorial
+    m_Localized: Introduction
     m_Metadata:
       m_Items: []
   - m_Id: 49955408000778240
-    m_Localized: 'Introduction to the game.
-
-      Learn how the app works.'
+    m_Localized: Start playing and learning how the app works
     m_Metadata:
       m_Items: []
   references:

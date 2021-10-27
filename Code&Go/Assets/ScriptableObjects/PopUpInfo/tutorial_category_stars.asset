@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   title: Estrellas por categoria
-  content: "Cada categor\xEDa tiene un n\xFAmero de estrellas que puedes conseguir.
-    Las estrellas no son necesarias para desbloquear nuevas categor\xEDas. Pero conseguir
-    todas las estrellas es un desafio, solo los mejores pueden hacerlo."
+  content: "Puedes ganar tres estrellas por nivel, si resuelves los niveles como
+    un verdadero programador. \xBFConseguir\xE1s todas?"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:

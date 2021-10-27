@@ -18,10 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 15046684672
-    m_Localized: This is an example of what a pop-up could look like.
-    m_Metadata:
-      m_Items: []
   - m_Id: 1190051590144
     m_Localized: Great! Now you know how to turn the laser on.
     m_Metadata:
@@ -29,10 +25,6 @@ MonoBehaviour:
   - m_Id: 1374475137024
     m_Localized: Remember you can choose the direction and ammount of tiles you will
       move through.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4033164750848
-    m_Localized: Example of a pop-up
     m_Metadata:
       m_Items: []
   - m_Id: 4171056689152
@@ -48,8 +40,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3438086351446016
-    m_Localized: Don't get scared by all this code, just make a few changes and you'll
-      get this working
+    m_Localized: Don't get scared by all this code, you only need to change a few
+      things for it to work as intended
     m_Metadata:
       m_Items: []
   - m_Id: 3439720536170496

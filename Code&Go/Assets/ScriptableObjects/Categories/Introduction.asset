@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2318897db1d40b74dbbfa9d80ce90140, type: 3}
-  m_Name: Tutorial
+  m_Name: Introduction
   m_EditorClassIdentifier: 
   nameIDLocalized:
     m_TableReference:
@@ -26,8 +26,8 @@ MonoBehaviour:
       m_KeyId: 49955408000778240
       m_Key: 
     m_FallbackState: 0
-  name_id: tutorial
-  description: "Introducci\xF3n al juego.\nAprende c\xF3mo funciona la aplicaci\xF3n."
+  name_id: introduction
+  description: "Comienza a jugar y aprende c\xF3mo funciona la aplicaci\xF3n"
   levels:
   - {fileID: 11400000, guid: a67e471a63c69094082cbad2156111e6, type: 2}
   - {fileID: 11400000, guid: fcd0dd4b9c2699a4e84f30e78658f82f, type: 2}
