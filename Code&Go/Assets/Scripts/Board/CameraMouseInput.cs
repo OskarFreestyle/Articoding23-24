@@ -5,7 +5,9 @@ using UnityEngine.EventSystems;
 
 public class CameraMouseInput : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeField] private OrbitCamera _cam;
+    [SerializeField] private CameraZoom zoom;
+    [SerializeField] private OrbitCamera cam;
+
     private Vector3 _prevMousePos;
 
     private bool mousePressed;
@@ -20,7 +22,11 @@ public class CameraMouseInput : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     public void OnPointerUp(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
+        {
             mousePressed = false;
+            cam.Reset();
+            zoom.Reset();
+        }
     }
 
     void Update()
@@ -33,7 +39,7 @@ public class CameraMouseInput : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             // adjust to screen size
             Vector3 moveDelta = mouseDelta * (360f / Screen.height);
 
-            _cam.Move(moveDelta.x, -moveDelta.y);
+            cam.Move(moveDelta.x, -moveDelta.y);
         }
 
         _prevMousePos = Input.mousePosition;

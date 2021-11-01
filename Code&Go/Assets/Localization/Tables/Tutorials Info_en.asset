@@ -171,9 +171,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139446865022976
-    m_Localized: With this code card you can rotate the laser in a direction a multiple
-      of 90 degrees. If you use (+), the laser rotates clockwise. If you use (-),
-      the laser rotates anti-clockwise.
+    m_Localized: With this code card you can rotate the laser a multiple of 90 degrees,
+      in the direction you choose.
     m_Metadata:
       m_Items: []
   - m_Id: 140658565894144

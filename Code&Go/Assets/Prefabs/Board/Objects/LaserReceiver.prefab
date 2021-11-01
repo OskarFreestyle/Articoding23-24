@@ -5225,7 +5225,7 @@ MonoBehaviour:
     m_FallbackState: 0
   argsNamesLocalized: []
   isMovable: 1
-  isRotatable: 1
+  isRotatable: 0
   receiverRenderer: {fileID: 6007330644351893677}
   offMaterial: {fileID: 2100000, guid: d91cefbe4a101b74eb23c5552de35fa6, type: 2}
   onMaterial: {fileID: 2100000, guid: 5095a231456470a4d86fc42de9c646ad, type: 2}

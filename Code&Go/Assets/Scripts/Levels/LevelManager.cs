@@ -193,8 +193,8 @@ public class LevelManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        ResetLevel();
         LoadInitialBlocks(currentLevel.initialState);
+        ActivateLevelBlocks(currentLevel.activeBlocks, currentLevel.allActive);
     }
 
     public void RetryLevel()

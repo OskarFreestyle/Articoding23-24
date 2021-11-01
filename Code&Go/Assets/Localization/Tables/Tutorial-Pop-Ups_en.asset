@@ -45,12 +45,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3439720536170496
-    m_Localized: Level 3
+    m_Localized: Level 4
     m_Metadata:
       m_Items: []
   - m_Id: 3439847191568384
     m_Localized: It seems there's a variable missing, why don't you try creating
       one?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8064916239560704
+    m_Localized: Level 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8064940604272640
+    m_Localized: Oops! There's a missing card! Hurry! Grab it from the left section
+      and put it in the correct place before anyone notices!
     m_Metadata:
       m_Items: []
   references:

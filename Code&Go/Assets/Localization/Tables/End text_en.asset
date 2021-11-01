@@ -23,7 +23,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 119771455488
-    m_Localized: You can choose the direction in which the laser moves
+    m_Localized: You can choose the direction in which the laser moves using the
+      dropdowns
     m_Metadata:
       m_Items: []
   - m_Id: 156261900288
@@ -35,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 193448599552
-    m_Localized: Don't forget! (+) rotates clockwise and (-) anti-clockwise
+    m_Localized: Great! You've learned the basics to start playing.
     m_Metadata:
       m_Items: []
   - m_Id: 221579796480
@@ -43,7 +44,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 283781324800
-    m_Localized: Great. You have created your first variable
+    m_Localized: Perfect. Now you know that the name of a variable doesn't affect
+      its behaviour.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2849116914331648
+    m_Localized: You've created your first variables. Amazing!
     m_Metadata:
       m_Items: []
   references:

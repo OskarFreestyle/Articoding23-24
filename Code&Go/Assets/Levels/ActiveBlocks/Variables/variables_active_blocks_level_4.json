@@ -1,18 +1,6 @@
 {
     "categories": [
         {
-            "categoryName": "math",
-            "blocksInfo": {
-                "activate": true,
-                "activeBlocks": [
-                    {
-                        "blockName": "math_number",
-                        "maxUses": 3
-                    }
-                ]
-            }
-        },
-        {
             "categoryName": "variable",
             "blocksInfo": {
                 "activate": true,

@@ -1,48 +1,42 @@
 <xml>
     <variables>
-        <variable type="" id="Y1/sKS9%bRPPWOodp|vK">HorizontalMoveAmount</variable>
-        <variable type="" id="jwuTPDG4T-NOP!Rp]qnM">VerticalMoveAmount</variable>
-        <variable type="" id="o=z,]~V,4AG$IjWC8`hM">RotateAmount</variable>
+        <variable type="" id="jwuTPDG4T-NOP!Rp]qnM">MovementAmount</variable>
+        <variable type="" id="o=z,]~V,4AG$IjWC8`hM">RotationAmount</variable>
     </variables>
-    <block type="variables_set" id="=Y^X?:FD}8?81T08s-{B" x="168" y="-209">
-        <field name="VAR" id="o=z,]~V,4AG$IjWC8`hM" variableType="">RotateAmount</field>
+    <block type="variables_set" id="=Y^X?:FD}8?81T08s-{B" x="122" y="-126">
+        <field name="VAR" id="o=z,]~V,4AG$IjWC8`hM" variableType="">RotationAmount</field>
+        <value name="VALUE">
+            <block type="math_number" id="%8#Q@c2adiPb*W-JppZ-">
+                <field name="NUM">1</field>
+            </block>
+        </value>
         <next>
             <block type="variables_set" id="[AHn]l]/C,RLsw[upXZ0">
-                <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">VerticalMoveAmount</field>
-                <value name="VALUE">
-                    <block type="math_number" id="b5-^mdY{JCix..Vw3?H7">
-                        <field name="NUM">2</field>
-                    </block>
-                </value>
+                <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">MovementAmount</field>
                 <next>
-                    <block type="variables_set" id="uvtDnG}iB2UJhGTH}f(_">
-                        <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">HorizontalMoveAmount</field>
-                        <value name="VALUE">
-                            <block type="math_number" id="RU2/7LXshN2~3toV$BIg">
-                                <field name="NUM">1</field>
+                    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                        <field name="DIRECTION">UP</field>
+                        <value name="AMOUNT">
+                            <block type="variables_get" id="/OVNo#bRmn2dP4sbX}~I">
+                                <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">MovementAmount</field>
                             </block>
                         </value>
                         <next>
-                            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
-                                <field name="DIRECTION">RIGHT</field>
+                            <block type="movement_move_laser" id="el{@g2cegIlx5HkQm(#$">
+                                <field name="DIRECTION">DOWN</field>
                                 <value name="AMOUNT">
-                                    <block type="variables_get" id="/OVNo#bRmn2dP4sbX}~I">
-                                        <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">VerticalMoveAmount</field>
+                                    <block type="variables_get" id="FMJkYHd*5};FXX/+@ll7">
+                                        <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">MovementAmount</field>
                                     </block>
                                 </value>
                                 <next>
-                                    <block type="movement_move_laser" id="el{@g2cegIlx5HkQm(#$">
-                                        <field name="DIRECTION">DOWN</field>
-                                        <value name="AMOUNT">
-                                            <block type="variables_get" id="FMJkYHd*5};FXX/+@ll7">
-                                                <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">HorizontalMoveAmount</field>
-                                            </block>
-                                        </value>
-                                        <next>
-                                            <block type="movement_rotate_laser" id="0YZLn]oqE^XZaY/_3zH#">
-                                                <field name="ROTATION">CLOCKWISE</field>
-                                            </block>
-                                        </next>
+                                    <block type="movement_rotate_laser" id="0YZLn]oqE^XZaY/_3zH#">
+                                        <field name="ROTATION">CLOCKWISE</field>
+                                    <value name="AMOUNT">
+                                        <block type="variables_get" id="/OVNo#bRmn2dP4sbX}~I">
+                                            <field name="VAR" id="o=z,]~V,4AG$IjWC8`hM" variableType="">RotationAmount</field>
+                                        </block>
+                                    </value>
                                     </block>
                                 </next>
                             </block>

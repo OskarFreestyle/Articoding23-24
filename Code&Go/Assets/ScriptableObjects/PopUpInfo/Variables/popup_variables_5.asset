@@ -10,26 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: popup_variables_1
+  m_Name: popup_variables_5
   m_EditorClassIdentifier: 
   type: 0
-  title: Nivel 2
-  content: "Esto parece mucho c\xF3digo, pero no te asustes, con peque\xF1os cambios
-    har\xE1s que funcione"
+  title: Nivel 5
+  content: "Parece que falta una variable, \xBFpor qu\xE9 no pruebas a crear una?"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 3437825667063808
+      m_KeyId: 3439720536170496
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 3438086351446016
+      m_KeyId: 3439847191568384
       m_Key: 
     m_FallbackState: 0
   localizedImage:

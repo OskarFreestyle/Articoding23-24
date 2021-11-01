@@ -46,7 +46,7 @@ public class BoardCreator : MonoBehaviour
         TrackerAsset.Instance.Completable.Initialized("editor_level", CompletableTracker.Completable.Level);
 
 
-        filePath = Application.dataPath + "/LevelsCreated/";
+        filePath = Application.dataPath + "/Levels/LevelsCreated/";
         rows = board.GetRows();
         columns = board.GetColumns();
         board.SetArgLoader(argumentLoader);

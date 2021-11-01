@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 22732038144
-    m_Localized: "Genial, ya sabes ejecutar el programa con el bot\xF3n Play"
+    m_Localized: "Genial, ya sabes ejecutar el programa con el bot\xF3n de Ejecutar"
     m_Metadata:
       m_Items: []
   - m_Id: 119771455488
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 193448599552
-    m_Localized: "\xA1Recuerda! (+) gira en sentido horario y (-) en sentido antihorario"
+    m_Localized: "\xA1Genial! Ya has aprendido lo b\xE1sico para empezar a jugar."
     m_Metadata:
       m_Items: []
   - m_Id: 221579796480
@@ -45,7 +45,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 283781324800
-    m_Localized: Muy bien. Has creado tu primera variable
+    m_Localized: Perfecto. Ya sabes que el nombre de una variable no cambia su comportamiento.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2849116914331648
+    m_Localized: "Has creado tus primeras variables. \xA1Estupendo!"
     m_Metadata:
       m_Items: []
   references:

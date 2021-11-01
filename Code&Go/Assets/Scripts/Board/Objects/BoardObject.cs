@@ -123,7 +123,7 @@ public class BoardObject : MonoBehaviour
     public void Rotate(int dir)
     {
         Direction newDir = (Direction)((((int)objectDirection + dir) + 8) % 8);
-        SetDirection(newDir);
+        SetDirection(newDir, isRotatable);
     }
 
     public Animator GetAnimator()

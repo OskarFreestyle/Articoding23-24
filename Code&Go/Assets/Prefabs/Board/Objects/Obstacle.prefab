@@ -184,7 +184,7 @@ MonoBehaviour:
     m_FallbackState: 0
   argsNamesLocalized: []
   isMovable: 1
-  isRotatable: 1
+  isRotatable: 0
 --- !u!65 &3462310892575596414
 BoxCollider:
   m_ObjectHideFlags: 0

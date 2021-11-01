@@ -45,12 +45,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3439720536170496
-    m_Localized: Nivel 3
+    m_Localized: Nivel 4
     m_Metadata:
       m_Items: []
   - m_Id: 3439847191568384
     m_Localized: "Parece que falta una variable, \xBFpor qu\xE9 no pruebas a crear
       una?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8064916239560704
+    m_Localized: Nivel 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8064940604272640
+    m_Localized: "\xA1Vaya! \xA1Falta una tarjeta! \xA1R\xE1pido, coje una de la
+      izquierda y ponla en su sitio, antes de que alguien lo vea!"
     m_Metadata:
       m_Items: []
   references:
