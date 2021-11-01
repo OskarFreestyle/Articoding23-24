@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   title: Nivel 3
-  content: "Esto parece mucho c\xF3digo, pero no te asustes, con peque\xF1os cambios
-    har\xE1s que funcione"
+  content: "\xA1Vaya! \xA1Falta una tarjeta! \xA1R\xE1pido, coje una de la izquierda
+    y ponla en su sitio, antes de que alguien lo vea!"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:

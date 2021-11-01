@@ -194,5 +194,9 @@ MonoBehaviour:
     m_Localized: 'Nuevo objeto: el espejo'
     m_Metadata:
       m_Items: []
+  - m_Id: 60904977424408576
+    m_Localized: "A\xF1adir nuevas tarjetas"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

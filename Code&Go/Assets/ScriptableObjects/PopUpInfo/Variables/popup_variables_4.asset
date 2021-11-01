@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: popup_variables_5
+  m_Name: popup_variables_4
   m_EditorClassIdentifier: 
   type: 0
-  title: Nivel 5
+  title: Nivel 4
   content: "Parece que falta una variable, \xBFpor qu\xE9 no pruebas a crear una?"
   next: {fileID: 0}
   image: {fileID: 0}

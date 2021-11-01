@@ -194,5 +194,9 @@ MonoBehaviour:
     m_Localized: 'New object: the mirror'
     m_Metadata:
       m_Items: []
+  - m_Id: 60904977424408576
+    m_Localized: Adding new code cards
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
