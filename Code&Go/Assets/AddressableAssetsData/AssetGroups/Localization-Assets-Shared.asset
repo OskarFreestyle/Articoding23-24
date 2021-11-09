@@ -165,14 +165,6 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 434e911b70c61544fb8062acc942210c
-    m_Address: temario_estrellas
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: a750961d0a8bd71468bf71358113b840
     m_Address: temario_play
     m_ReadOnly: 1
@@ -205,6 +197,14 @@ MonoBehaviour:
     m_Address: End text Shared Data
     m_ReadOnly: 0
     m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 434e911b70c61544fb8062acc942210c
+    m_Address: temario_estrellas
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1

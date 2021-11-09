@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: FirstCategoryUnlocked
+  m_Name: 4_Estrellas
   m_EditorClassIdentifier: 
-  type: 0
-  title: Niveles desbloqueados
-  content: "Tienes varios niveles por delante. Cuando los termines, \xA1desbloquear\xE1s
-    niveles nuevos!"
+  type: 1
+  title: Estrellas por categoria
+  content: "Puedes ganar tres estrellas por nivel, si resuelves los niveles como
+    un verdadero programador. \xBFConseguir\xE1s todas?"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
     m_TableReference:
       m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 382661282627584
+      m_KeyId: 375763816808448
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 382920087961600
+      m_KeyId: 376247898210304
       m_Key: 
     m_FallbackState: 0
   localizedImage:
