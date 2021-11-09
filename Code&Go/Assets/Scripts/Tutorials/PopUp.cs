@@ -13,6 +13,7 @@ public class PopUp : MonoBehaviour
     [SerializeField] private GameObject contentContent;
     [SerializeField] private LocalizeStringEvent titleText;
     [SerializeField] private LocalizeStringEvent contentText;
+    [SerializeField] private LocalizeSpriteEvent contentImage;
     [SerializeField] private Text buttonText;
     [SerializeField] private Button nextButton;
     [Space]
@@ -47,6 +48,10 @@ public class PopUp : MonoBehaviour
         contentText.gameObject.SetActive(!string.IsNullOrEmpty(data.localizedContent.GetLocalizedString().ToString()));
         contentText.StringReference = data.localizedContent;
         contentText.RefreshString();
+
+        // Set image
+        contentImage.gameObject.SetActive(!string.IsNullOrEmpty(data.localizedImage.ToString()));
+        contentImage.AssetReference = data.localizedImage;
 
         // Set action
         nextButton.onClick.RemoveAllListeners();
