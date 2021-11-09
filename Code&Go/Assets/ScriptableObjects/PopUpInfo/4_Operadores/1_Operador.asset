@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
+  m_Name: 1_Operador
+  m_EditorClassIdentifier: 
+  type: 5
+  title: "Operadores num\xE9ricos"
+  content: "Con esta tarjeta puedes hacer operaciones con n\xFAmeros o con variables
+    que almacenen un n\xFAmero. Puede resultar \xFAtil cuando tengas pocas tarjetas
+    de n\xFAmeros."
+  next: {fileID: 0}
+  image: {fileID: 21300000, guid: ea27d9a80cb1fbb4b913df97fccb6ac8, type: 3}
+  localizedTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+    m_TableEntryReference:
+      m_KeyId: 218068925730816
+      m_Key: 
+    m_FallbackState: 0
+  localizedContent:
+    m_TableReference:
+      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+    m_TableEntryReference:
+      m_KeyId: 218012730445824
+      m_Key: 
+    m_FallbackState: 0
+  localizedImage:
+    m_TableReference:
+      m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
+    m_TableEntryReference:
+      m_KeyId: 4336191361024
+      m_Key: 
+    m_FallbackState: 0
