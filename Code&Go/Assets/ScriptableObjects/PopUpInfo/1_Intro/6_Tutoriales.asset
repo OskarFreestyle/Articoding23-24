@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
   m_Name: 6_Tutoriales
   m_EditorClassIdentifier: 
-  type: 1
+  type: 2
   title: Volver a ver Tutoriales
   content: "Tambi\xE9n puedes consultar el manual si quieres repasar algo de nuevo"
   next: {fileID: 0}

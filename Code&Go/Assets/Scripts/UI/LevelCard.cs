@@ -10,6 +10,7 @@ public class LevelCard : MonoBehaviour
 
     [SerializeField] private Text title;
     [SerializeField] private Image[] stars;
+    [SerializeField] private Image lockedImage;
     [SerializeField] private Image cardImage;
 
     [HideInInspector] public Button button;
@@ -36,16 +37,20 @@ public class LevelCard : MonoBehaviour
 
         button = GetComponent<Button>();
         starsColor = stars[0].color;
-        starsColor.a = 0.2f;
+        starsColor.a = 0f;
 
+        lockedImage.enabled = false;
         title.text = numLevel.ToString();
 
         int levelStars = ProgressManager.Instance.GetLevelStars(category, numLevel - 1);
 
         //cambia el color de las estrellas que ha conseguido el jugador en el nivel
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++) {
             if (i >= levelStars)
                 stars[i].color = starsColor;
+            else
+                starsColor.a = 0.2f;
+        }
     }
 
     public void ConfigureLevel(LevelData level, Category category, int numLevel)
@@ -66,5 +71,7 @@ public class LevelCard : MonoBehaviour
     {
         cardImage.color = deactivatedColor;
         button.interactable = false;
+        lockedImage.enabled = true;
+        title.text = "";
     }
 }

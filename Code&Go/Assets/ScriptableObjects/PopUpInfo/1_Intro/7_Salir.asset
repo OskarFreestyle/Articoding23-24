@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
   m_Name: 7_Salir
   m_EditorClassIdentifier: 
-  type: 1
+  type: 2
   title: Salir del nivel
   content: "Por \xFAltimo, pulsa este bot\xF3n si quieres volver al men\xFA principal"
   next: {fileID: 0}
