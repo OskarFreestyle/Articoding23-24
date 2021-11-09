@@ -10,32 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: tutorial_3_negation
+  m_Name: 0_While
   m_EditorClassIdentifier: 
-  type: 5
-  title: "Negaci\xF3n"
-  content: "Esta tarjeta niega el valor de un booleano, es decir devuelve el valor
-    contrario. Si el booleano es verdadero devolver\xE1 falso y viceversa."
+  type: 6
+  title: Repetir mientras que
+  content: "Esta tarjeta permite repetir una instrucci\xF3n mientras que una condici\xF3n
+    se cumpla. Puede ser \xFAtil para no repetir c\xF3digo y para evitar secuencias
+    de instrucciones repetitivas. Pero ten cuidado, no pongas condiciones que siempre
+    sean verdaderas o tendr\xE1s un bucle infinito.\r\n"
   next: {fileID: 0}
-  image: {fileID: 21300000, guid: 7a65d20cea402e1438858f2e7c84bf0b, type: 3}
+  image: {fileID: 21300000, guid: 34beba016d89b98459f4a6983fda9228, type: 3}
   localizedTitle:
     m_TableReference:
       m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 216012202627072
+      m_KeyId: 222928127578112
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 215946574352384
+      m_KeyId: 223015247466496
       m_Key: 
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
       m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 4204725096448
+      m_KeyId: 4951592226816
       m_Key: 
     m_FallbackState: 0
