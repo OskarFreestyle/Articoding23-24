@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
   m_Name: 1_Menus
   m_EditorClassIdentifier: 
-  type: 1
+  type: 0
   title: "Barra de navegaci\xF3n."
   content: "Esta es la barra de navegaci\xF3n. Aqu\xED arriba puedes navegar por
     los distintos men\xFAs."
@@ -34,8 +34,8 @@ MonoBehaviour:
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
-      m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
+      m_TableCollectionName: 
     m_TableEntryReference:
-      m_KeyId: 2974940786720768
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
