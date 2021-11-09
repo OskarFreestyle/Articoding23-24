@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 0
   title: "\xA1Bienvenido a Articoding!"
   content: "Voy a ense\xF1arte c\xF3mo funcionan las cosas."
-  next: {fileID: 11400000, guid: a9f2cccd65ae0a746bddd61a93ad0e6b, type: 2}
+  next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
     m_TableReference:
@@ -33,8 +33,8 @@ MonoBehaviour:
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 61724555445854208
       m_Key: 
     m_FallbackState: 0
