@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: popup_variables_3
+  m_Name: 1_Nivel2
   m_EditorClassIdentifier: 
   type: 0
-  title: Nivel 3
-  content: "\xA1Vaya! \xA1Falta una tarjeta! \xA1R\xE1pido, coje una de la izquierda
-    y ponla en su sitio, antes de que alguien lo vea!"
+  title: Nivel 2
+  content: "Esto parece mucho c\xF3digo, pero no te asustes, con peque\xF1os cambios
+    har\xE1s que funcione"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 8064916239560704
+      m_KeyId: 3437825667063808
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 8064940604272640
+      m_KeyId: 3438086351446016
       m_Key: 
     m_FallbackState: 0
   localizedImage:

@@ -1060,6 +1060,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
 --- !u!1 &234007195 stripped
@@ -8016,6 +8036,22 @@ PrefabInstance:
       propertyPath: allTutorials.Array.data[7]
       value: 
       objectReference: {fileID: 11400000, guid: ae3dba98c7ae97d458086bf40dcd742c, type: 2}
+    - target: {fileID: 841759375814602587, guid: 32484a33b43740a41b605cc751032f70, type: 3}
+      propertyPath: allTutorials.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b720222c95c4bd4fb727307d400bd32, type: 2}
+    - target: {fileID: 841759375814602587, guid: 32484a33b43740a41b605cc751032f70, type: 3}
+      propertyPath: allTutorials.Array.data[9]
+      value: 
+      objectReference: {fileID: 11400000, guid: 37ad5a19c51526c4fa2f56eb658df0de, type: 2}
+    - target: {fileID: 841759375814602587, guid: 32484a33b43740a41b605cc751032f70, type: 3}
+      propertyPath: allTutorials.Array.data[10]
+      value: 
+      objectReference: {fileID: 11400000, guid: 37b3ce52663950440980415e6610e9be, type: 2}
+    - target: {fileID: 841759375814602587, guid: 32484a33b43740a41b605cc751032f70, type: 3}
+      propertyPath: allTutorials.Array.data[11]
+      value: 
+      objectReference: {fileID: 11400000, guid: 11f13378b87243241b4cc8bf699652e5, type: 2}
     - target: {fileID: 3114027487447242642, guid: 32484a33b43740a41b605cc751032f70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
