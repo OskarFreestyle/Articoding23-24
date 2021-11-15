@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class TabManager : MonoBehaviour
 {
-    [SerializeField] private KeyCode leftKeyCode;
-    [SerializeField] private KeyCode rightKeyCode;
+    //[SerializeField] private KeyCode leftKeyCode;
+    //[SerializeField] private KeyCode rightKeyCode;
 
     [SerializeField] private Text leftText;
     [SerializeField] private Text rightText;
@@ -21,7 +21,7 @@ public class TabManager : MonoBehaviour
     void Start()
     {
         ConfigureTabs();
-        ConfigureTexts();
+        //ConfigureTexts();
 
         tabs[tabIndex].Select();
         //panels[tabIndex].SetActive(true);
@@ -29,14 +29,15 @@ public class TabManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(leftKeyCode))
-        {
-            PreviousTab();
-        }
-        else if (Input.GetKeyDown(rightKeyCode))
-        {
-            NextTab();
-        }
+        // Moverse por tabs con teclado
+        //if (Input.GetKeyDown(leftKeyCode))
+        //{
+        //    PreviousTab();
+        //}
+        //else if (Input.GetKeyDown(rightKeyCode))
+        //{
+        //    NextTab();
+        //}
     }
 
     public void PreviousTab()
@@ -97,9 +98,9 @@ public class TabManager : MonoBehaviour
         }
     }
 
-    private void ConfigureTexts()
-    {
-        rightText.text = rightKeyCode.ToString();
-        leftText.text = leftKeyCode.ToString();
-    }
+    //private void ConfigureTexts()
+    //{
+    //    rightText.text = rightKeyCode.ToString();
+    //    leftText.text = leftKeyCode.ToString();
+    //}
 }
