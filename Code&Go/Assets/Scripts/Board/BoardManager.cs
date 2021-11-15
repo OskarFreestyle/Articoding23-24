@@ -72,6 +72,7 @@ public class BoardManager : Listener
         elementPositions = new Dictionary<string, List<Vector2Int>>();
         // If a board already exist, destroy it
         DestroyBoard();
+        DeleteBoardElements();
         // Initialize board
         board = new BoardCell[columns + 2, rows + 2];
         // Instantiate cells
@@ -81,7 +82,7 @@ public class BoardManager : Listener
         else
             GenerateDefaultBoard();
 
-        nReceivers = 0;
+        //nReceivers = 0;
         nReceiversActive = 0;
 
         SetFocusPointOffset(new Vector3(columns / 2.0f + 0.5f, 0.0f, rows / 2.0f + 0.5f));

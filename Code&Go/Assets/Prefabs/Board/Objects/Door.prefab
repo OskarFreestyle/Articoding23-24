@@ -571,7 +571,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
   isMovable: 0
-  isRotatable: 0
+  isRotatable: 1
   objectCollider: {fileID: 3733731375953064989}
 --- !u!114 &-7701360075010967078
 MonoBehaviour:
