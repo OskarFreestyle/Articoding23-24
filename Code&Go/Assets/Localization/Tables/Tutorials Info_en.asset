@@ -134,7 +134,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115546592563200
-    m_Localized: 'This card allows you to change the laser intensity. '
+    m_Localized: This card allows you to change the laser intensity
     m_Metadata:
       m_Items: []
   - m_Id: 115928500719616

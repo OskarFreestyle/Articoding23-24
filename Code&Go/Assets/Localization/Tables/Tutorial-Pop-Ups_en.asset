@@ -62,5 +62,13 @@ MonoBehaviour:
       and put it in the correct place before anyone notices!
     m_Metadata:
       m_Items: []
+  - m_Id: 13071693836533760
+    m_Localized: Level5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13071943355678720
+    m_Localized: This level is also correct
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -41,7 +41,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3438086351446016
     m_Localized: "Esto parece mucho c\xF3digo, pero no te asustes, solo tienes que
-      modificarlo para que funcione correctamente"
+      cambiar un par de cosas para que funcione correctamente"
     m_Metadata:
       m_Items: []
   - m_Id: 3439720536170496
@@ -60,6 +60,14 @@ MonoBehaviour:
   - m_Id: 8064940604272640
     m_Localized: "\xA1Vaya! \xA1Falta una tarjeta! \xA1R\xE1pido, coje una de la
       izquierda y ponla en su sitio, antes de que alguien lo vea!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13071693836533760
+    m_Localized: Nivel5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13071943355678720
+    m_Localized: "Aqu\xED tienes otro nivel resuelto"
     m_Metadata:
       m_Items: []
   references:

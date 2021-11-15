@@ -55,6 +55,14 @@ MonoBehaviour:
     m_Key: popup_variables_3_content
     m_Metadata:
       m_Items: []
+  - m_Id: 13071693836533760
+    m_Key: popup_introduction_5_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13071943355678720
+    m_Key: popup_introduction_5_content
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

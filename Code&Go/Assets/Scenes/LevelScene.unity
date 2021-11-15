@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 115
-  info: {fileID: 11400000, guid: 12f6aa923afa74640944c7c55ef3212f, type: 2}
+  info: {fileID: 0}
   highlightObject: 1
   destroyOnShowed: 1
   isSaveCheckpoint: 0
@@ -2340,8 +2340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 130
-  info: {fileID: 0}
+  priority: 140
+  info: {fileID: 11400000, guid: cc5e98daf00136f40b7942029e15d6d9, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
   isSaveCheckpoint: 0
@@ -2361,7 +2361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tt: {fileID: 575093758}
-  level: {fileID: 11400000, guid: a61c38913552b9040bb284ea195d4ac4, type: 2}
+  level: {fileID: 11400000, guid: 8698cc84718895d459f95101212d5c31, type: 2}
 --- !u!114 &586603504 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5615152996345754776, guid: a489794761ad7a94680d475b9707ab21, type: 3}
@@ -3377,7 +3377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 150
-  info: {fileID: 11400000, guid: b6280e6e9c685ee4fb9d7c02f0ceebf6, type: 2}
+  info: {fileID: 0}
   highlightObject: 1
   destroyOnShowed: 1
   isSaveCheckpoint: 1
@@ -3397,7 +3397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 400
-  info: {fileID: 11400000, guid: d6552d1cd8c5b8d4fb614abb068a4c98, type: 2}
+  info: {fileID: 0}
   highlightObject: 1
   destroyOnShowed: 1
   isSaveCheckpoint: 1
