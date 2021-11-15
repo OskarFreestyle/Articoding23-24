@@ -341,5 +341,9 @@ MonoBehaviour:
     m_Localized: PROFILE
     m_Metadata:
       m_Items: []
+  - m_Id: 67430325425942528
+    m_Localized: QUIT LEVEL?
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

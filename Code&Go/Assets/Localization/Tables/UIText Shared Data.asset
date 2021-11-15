@@ -335,6 +335,10 @@ MonoBehaviour:
     m_Key: profile_tab
     m_Metadata:
       m_Items: []
+  - m_Id: 67430325425942528
+    m_Key: quit_level
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

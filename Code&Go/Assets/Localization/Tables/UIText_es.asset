@@ -341,5 +341,9 @@ MonoBehaviour:
     m_Localized: PERFIL
     m_Metadata:
       m_Items: []
+  - m_Id: 67430325425942528
+    m_Localized: "\xBFSALIR DEL NIVEL?"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

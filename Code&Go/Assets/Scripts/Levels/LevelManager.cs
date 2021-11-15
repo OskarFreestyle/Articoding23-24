@@ -44,6 +44,7 @@ public class LevelManager : MonoBehaviour
 
     public GameObject endPanel;
     public GameObject blackRect;
+    public GameObject exitConfirmationPanel;
 
     public GameObject endPanelMinimized;
     public GameObject debugPanel;
@@ -232,6 +233,12 @@ public class LevelManager : MonoBehaviour
         blackRect.SetActive(false);
         debugPanel.SetActive(false);
         TrackerAsset.Instance.GameObject.Interacted("game_over_panel_minimized_button");
+    }
+
+    public void SetActiveExitConfirmationPanel(bool active)
+    {
+        exitConfirmationPanel.SetActive(active);
+        blackRect.SetActive(active);
     }
 
     public void ResetLevel()
