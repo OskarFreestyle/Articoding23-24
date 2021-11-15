@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priority: 130
+  priority: 150
   info: {fileID: 11400000, guid: 6a0845fe6a0ca6743b86d42542884c13, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
