@@ -7,11 +7,6 @@
                "BlockTypePrefix": "variables"
           },
           {
-               "CategoryName": "PROCEDURE",
-               "ColorHex": "#a64c79",
-               "BlockTypePrefix": "procedures"
-          },
-          {
                "CategoryName": "LOGIC",
                "ColorHex": "#47574d",
                "BlockTypePrefix": "logic"
@@ -45,6 +40,11 @@
                "CategoryName": "COLOR",
                "ColorHex": "#b42695",
                "BlockTypePrefix": "colour"
+          },
+          {
+               "CategoryName": "MOVEMENT",
+               "ColorHex": "#aaaa55",
+               "BlockTypePrefix": "movement"
           }
      ]
 }

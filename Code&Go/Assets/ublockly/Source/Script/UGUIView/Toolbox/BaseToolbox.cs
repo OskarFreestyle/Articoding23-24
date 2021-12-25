@@ -231,12 +231,12 @@ namespace UBlockly.UGUI
             OnPickBlockView();
 
             //articoding
-            string id = GameManager.Instance.GetBlockId(mPickedBlockView.Block);
-            XmlNode dom = Xml.BlockToDomWithXY(mPickedBlockView.Block, false);
+            string id = GameManager.Instance.GetBlockId(newBlockView.Block);
+            XmlNode dom = Xml.BlockToDomWithXY(newBlockView.Block, false);
             string text = UBlockly.Xml.DomToText(dom);
             text = GameManager.Instance.ChangeCodeIDs(text);
 
-            TrackerAsset.Instance.setVar("block_type", mPickedBlockView.Block.Type);
+            TrackerAsset.Instance.setVar("block_type", newBlockView.Block.Type);
             TrackerAsset.Instance.setVar("code", "\r\n" + text);
 
             TrackerAsset.Instance.setVar("action", "create");

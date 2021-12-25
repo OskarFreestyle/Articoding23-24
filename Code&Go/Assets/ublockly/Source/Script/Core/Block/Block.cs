@@ -101,6 +101,8 @@ namespace UBlockly
 
         public string Data = null;    
         
+        public static Dictionary<string, int> blocksAvailable = new Dictionary<string, int>(); //articoding
+
         public Block() {}
 
         /// <summary>
