@@ -25,6 +25,7 @@ namespace UBlockly.UGUI
 {
     public abstract class BaseDialog : MonoBehaviour, IPointerClickHandler
     {
+        [SerializeField] private RectTransform contentRect;
         [SerializeField] private Button m_ButtonOK;
         
         protected Block mBlock;
@@ -48,8 +49,7 @@ namespace UBlockly.UGUI
                 }
                 
                 GameObject.Destroy(this.gameObject);
-            });
-            
+            });            
         }
 
         /// <summary>
@@ -71,6 +71,17 @@ namespace UBlockly.UGUI
 
         public void OnPointerClick(PointerEventData eventData)
         {
+            if (contentRect != null) {
+                if (RectTransformUtility.RectangleContainsScreenPoint(contentRect, eventData.position, null))
+                    return;
+            }
+
+            if (mOnCloseEvent != null)
+            {
+                mOnCloseEvent.Invoke();
+                mOnCloseEvent = null;
+            }
+            
             if (eventData.rawPointerPress == gameObject)
                 GameObject.Destroy(this.gameObject);
         }

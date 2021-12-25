@@ -31,7 +31,7 @@ namespace UBlockly.UGUI
         static void BuildBlockPrefabs()
         {
             Blockly.Dispose();
-            Blockly.Init();
+            Blockly.Init(false); //articoding localize
             Workspace workspace = new Workspace();
 
             var blocks = BlockFactory.Instance.GetAllBlockDefinitions().Keys;
@@ -41,6 +41,7 @@ namespace UBlockly.UGUI
                 Directory.CreateDirectory(BlockResMgr.Get().BlockViewPrefabPath);
             
             BlockResMgr.Get().ClearBlockViewPrefabs();
+            BlockResMgr.Get().LoadBlockTutorials(); //articoding
 
             try
             {
@@ -55,6 +56,7 @@ namespace UBlockly.UGUI
 
                     string path = BlockResMgr.Get().BlockViewPrefabPath + obj.name + ".prefab";
                     GameObject prefab = PrefabUtility.CreatePrefab(path, obj, ReplacePrefabOptions.Default);
+                    BlockResMgr.Get().CreateTutorialTrigger(name, prefab); //articoding
                     BlockResMgr.Get().AddBlockViewPrefab(prefab);
 
                     GameObject.DestroyImmediate(obj);

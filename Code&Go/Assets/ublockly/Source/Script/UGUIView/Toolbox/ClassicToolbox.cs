@@ -16,6 +16,7 @@ limitations under the License.
 
 ****************************************************************************/
 
+using AssetPackage; //articoding
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -102,11 +103,32 @@ namespace UBlockly.UGUI
                     BuildBlockViewsForActiveCategory();
             }
 
+            //articoding
+            //Set Block Count
+            foreach (BlockView bw in mRootList[categoryName].transform.GetComponentsInChildren<BlockView>())
+            {
+                if (Block.blocksAvailable.ContainsKey(bw.BlockType))
+                    if (Block.blocksAvailable[bw.BlockType] > 0)
+                    {
+                        //If the block was disabled we reactivate it
+                        bw.enabled = true;
+                        bw.ChangeBgColor(GetColorOfBlockView(bw));
+                    }
+                    else
+                    {
+                        bw.enabled = false;
+                        bw.ChangeBgColor(Color.gray);
+                    }
+                bw.UpdateCount();
+            }
+
             //resize the background
             LayoutRebuilder.ForceRebuildLayoutImmediate(contentTrans);
             m_BlockScrollList.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, LayoutUtility.GetPreferredWidth(contentTrans));
             
             m_BlockScrollList.GetComponent<ScrollRect>().content = contentTrans;
+        
+            TrackerAsset.Instance.GameObject.Interacted(categoryName.ToLower() + "_button"); //articoding
         }
 
         public void HideBlockCategory()
@@ -129,7 +151,8 @@ namespace UBlockly.UGUI
             var blockTypes = mConfig.GetBlockCategory(mActiveCategory).BlockList;
             foreach (string blockType in blockTypes)
             {
-                NewBlockView(blockType, contentTrans);
+                BlockView block = NewBlockView(blockType, contentTrans);
+                SetBlockCount(block);
             }
         }
 
@@ -155,7 +178,25 @@ namespace UBlockly.UGUI
         public override void FinishCheckBin(BlockView blockView)
         {
             if (CheckBin(blockView))
+            {
                 blockView.Dispose();
+
+                //articoding
+                //Update the blockCounter
+                foreach (GameObject gO in mRootList.Values)
+                {
+                    foreach (BlockView bw in gO.transform.GetComponentsInChildren<BlockView>())
+                    {
+                        if (Block.blocksAvailable.ContainsKey(bw.BlockType) && Block.blocksAvailable[bw.BlockType] > 0)
+                        {
+                            //If the block was disabled we reactivate it
+                            bw.enabled = true;
+                            bw.ChangeBgColor(GetColorOfBlockView(bw));
+                        }
+                        bw.UpdateCount();
+                    }
+                }
+            }
             m_BinArea.gameObject.SetActive(false);
         }
     }

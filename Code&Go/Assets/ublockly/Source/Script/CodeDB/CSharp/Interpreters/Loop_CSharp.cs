@@ -192,7 +192,7 @@ namespace UBlockly
             yield return ctor;
             DataStruct increment = ctor.Data;
                 
-            if (!from.IsNumber || !to.IsNumber|| !increment.IsNumber)
+            if (!from.IsNumber || !to.IsNumber || !increment.IsNumber)
                 throw new Exception("input value \"FROM\", \"TO\", \"BY\" of block controls_for must be number type");
 
             for (float i = from.NumberValue.Value; i <= to.NumberValue.Value; i += increment.NumberValue.Value)
@@ -224,7 +224,7 @@ namespace UBlockly
                 throw new Exception("input value \"LIST\" of block controls_forEach must be LIST type");
 
             string variable0 = CSharp.VariableNames.GetName(block.GetFieldValue("VAR"), Variables.NAME_TYPE);
-            foreach (var e  in arg0.ListValue)
+            foreach (var e in arg0.ListValue)
             {
                 DataStruct data;
                 if (e is bool) data = new DataStruct((bool) e);

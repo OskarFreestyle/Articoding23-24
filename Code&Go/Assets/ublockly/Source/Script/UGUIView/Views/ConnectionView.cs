@@ -248,5 +248,12 @@ namespace UBlockly.UGUI
                     mViewRef.OnConnectStateUpdated(newValue);
             }
         }
+        
+        public override bool CanBeCloned(BlockView block = null) //articoding
+        {
+            if (mConnection.Type == Define.EConnection.NextStatement && mTargetBlockView != null)
+                return mTargetBlockView.CanBeCloned(block);
+            return mSourceBlockView.CanBeCloned(block);
+        }
     }
 }

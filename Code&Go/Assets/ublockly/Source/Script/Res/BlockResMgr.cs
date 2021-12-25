@@ -20,6 +20,7 @@ limitations under the License.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization; //articoding
 
 namespace UBlockly
 {
@@ -64,6 +65,31 @@ namespace UBlockly
         public bool Selected;
     }
     
+    [Serializable]
+    public class BlockTextResLocalized : BlockResParam //articoding
+    {
+        public LocalizedAsset<TextAsset> LocalizedTextFile;
+    }
+
+    [Serializable]
+    public class BlockTutorialTriggerInfo //articoding
+    {
+        public PopUpData Tutorial;
+        public int Priority;
+        public bool Highlight;
+        public bool DestroyOnShow;
+        public bool IsSaveCheckpoint;
+    }
+
+    [Serializable]
+    public class BlockTutorialParam //articoding
+    {
+        public string BlockType;
+        public BlockTutorialTriggerInfo Tutorial;
+        public bool active = true;
+    }
+
+
     /// <summary>
     /// manage all resources. 
     /// This can be customized according to resources management in each project 
@@ -72,9 +98,12 @@ namespace UBlockly
     public class BlockResMgr : ScriptableObject
     {
         [SerializeField] private BlockResLoadType m_LoadType;
+        [SerializeField] private BlockTextResLocalized m_I18nFileLocalized; //articoding
         [SerializeField] private List<BlockTextResWithSelectionParam> m_I18nFiles;
         [SerializeField] private List<BlockTextResParam> m_BlockJsonFiles;
         [SerializeField] private List<BlockTextResWithSelectionParam> m_ToolboxFiles;
+        [SerializeField] private List<BlockTutorialParam> m_BlockTutorials; //articoding
+        private Dictionary<string, BlockTutorialTriggerInfo> m_BlockTutorialsDictionary; //articoding
 
         [SerializeField] public string m_BlockViewPrefabPath;
         [SerializeField] private List<BlockObjectParam> m_BlockViewPrefabs;
@@ -121,48 +150,71 @@ namespace UBlockly
 
         #region I18n Files
 
-        public void LoadI18n()
+        public void LoadFiles() //articoding
         {
-            if (m_I18nFiles == null || m_I18nFiles.Count == 0)
+            var loadingOp = m_I18nFileLocalized.LocalizedTextFile.LoadAssetAsync();
+            if (!loadingOp.IsDone)
+                ;
+
+            TextAsset textAsset = loadingOp.Result;
+
+            if (textAsset != null)
+            {
+                I18n.AddI18nFile(textAsset.text);
+                if (mABUnload != null)
+                    mABUnload(m_I18nFileLocalized.ResName);
+            }
+
+            Debug.Log("Select I18n: " + m_I18nFileLocalized.IndexName);
+        }
+
+        public void LoadI18n(bool localized = true) //articoding
+        {
+            if (m_I18nFileLocalized == null) //articoding
             {
                 Debug.LogError("LoadI18n failed. Please assign i18n files to BlockResSettings.asset.");
                 return;
             }
 
-            var i18nSelected = m_I18nFiles.FindAll(file => file.Selected);
-            if (i18nSelected.Count == 0)
+            if (localized) //articoding
+                LoadFiles();
+            else
             {
-                Debug.LogWarning("Please select an i18n file in BlockResSettings.asset. Default select \'en\'.");
-                i18nSelected.Add(m_I18nFiles.Find(file => file.IndexName == "en"));
-            } 
-            else if (i18nSelected.Count > 1)
-            {
-                Debug.LogWarning("You have selected more than one i18n files in BlockResSettings.asset. The first one will be used.");
-            }
+                var i18nSelected = m_I18nFiles.FindAll(file => file.Selected);
+                if (i18nSelected.Count == 0)
+                {
+                    Debug.LogWarning("Please select an i18n file in BlockResSettings.asset. Default select \'en\'.");
+                    i18nSelected.Add(m_I18nFiles.Find(file => file.IndexName == "en"));
+                } 
+                else if (i18nSelected.Count > 1)
+                {
+                    Debug.LogWarning("You have selected more than one i18n files in BlockResSettings.asset. The first one will be used.");
+                }
 
-            var resParam = i18nSelected[0];
-            TextAsset textAsset = null;
-            switch (m_LoadType)
-            {
-                case BlockResLoadType.Assetbundle:
-                    if (mABSyncLoad != null)
-                        textAsset = mABSyncLoad(resParam.ResName) as TextAsset;
-                    break;
-                case BlockResLoadType.Resources:
-                    textAsset = Resources.Load<TextAsset>(resParam.ResName);
-                    break;
-                case BlockResLoadType.Serialized:
-                    textAsset = resParam.TextFile;
-                    break;
-            }
-            if (textAsset != null)
-            {
-                I18n.AddI18nFile(textAsset.text);
-                if (m_LoadType == BlockResLoadType.Assetbundle && mABUnload != null)
-                    mABUnload(resParam.ResName);
-            }
+                var resParam = i18nSelected[0];
+                TextAsset textAsset = null;
+                switch (m_LoadType)
+                {
+                    case BlockResLoadType.Assetbundle:
+                        if (mABSyncLoad != null)
+                            textAsset = mABSyncLoad(resParam.ResName) as TextAsset;
+                        break;
+                    case BlockResLoadType.Resources:
+                        textAsset = Resources.Load<TextAsset>(resParam.ResName);
+                        break;
+                    case BlockResLoadType.Serialized:
+                        textAsset = resParam.TextFile;
+                        break;
+                }
+                if (textAsset != null)
+                {
+                    I18n.AddI18nFile(textAsset.text);
+                    if (m_LoadType == BlockResLoadType.Assetbundle && mABUnload != null)
+                        mABUnload(resParam.ResName);
+                }
 
-            Debug.Log("Select I18n: " + resParam.IndexName);
+                Debug.Log("Select I18n: " + resParam.IndexName);
+            }
         }
 
         #endregion
@@ -253,6 +305,31 @@ namespace UBlockly
 
         #region Block View Prefabs
         
+        public void LoadBlockTutorials() //articoding
+        {
+            m_BlockTutorialsDictionary = new Dictionary<string, BlockTutorialTriggerInfo>();
+            foreach (BlockTutorialParam bT in m_BlockTutorials)
+            {
+                if (bT.active)
+                    m_BlockTutorialsDictionary[bT.BlockType] = bT.Tutorial;
+            }
+        }
+
+        public void CreateTutorialTrigger(string block, GameObject blockPrefab) //articoding
+        {
+            //Add tutorials to blocks          
+            if (m_BlockTutorialsDictionary.ContainsKey(block))
+            {
+                TutorialTrigger trigger = blockPrefab.AddComponent<TutorialTrigger>();
+                BlockTutorialTriggerInfo triggerInfo = m_BlockTutorialsDictionary[block];
+                trigger.info = triggerInfo.Tutorial;
+                trigger.priority = triggerInfo.Priority;
+                trigger.highlightObject = triggerInfo.Highlight;
+                trigger.destroyOnShowed = triggerInfo.DestroyOnShow;
+                trigger.isSaveCheckpoint = triggerInfo.IsSaveCheckpoint;
+            }
+        }
+
         public GameObject LoadBlockViewPrefab(string blockType)
         {
             if (m_BlockViewPrefabs == null || m_BlockViewPrefabs.Count == 0)

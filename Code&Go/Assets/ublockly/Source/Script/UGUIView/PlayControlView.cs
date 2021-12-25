@@ -110,6 +110,16 @@ namespace UBlockly.UGUI
 
             if (CSharp.Runner.CurStatus == Runner.Status.Stop)
             {
+                //articoding
+                mWorkspaceView.InitIDs();
+                XmlNode dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
+                string text = UBlockly.Xml.DomToText(dom);
+                text = GameManager.Instance.ChangeCodeIDs(text);
+
+                TrackerAsset.Instance.setVar("code", "\r\n" + text);
+                TrackerAsset.Instance.Completable.Progressed(GameManager.Instance.GetCurrentLevelName(), CompletableTracker.Completable.Level, 0f);
+                //articoding
+                
                 CSharp.Runner.Run(mWorkspaceView.Workspace);
                 //            Lua.Runner.Run(mWorkspaceView.Workspace);
             }

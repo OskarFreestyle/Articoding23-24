@@ -16,6 +16,7 @@ limitations under the License.
 
 ****************************************************************************/
 
+using System; //articoding
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -128,7 +129,8 @@ namespace UBlockly.UGUI
             var blockTypes = mConfig.GetBlockCategory(mActiveCategory).BlockList;
             foreach (string blockType in blockTypes)
             {
-                NewBlockView(blockType, contentTrans);
+                BlockView block = NewBlockView(blockType, contentTrans);
+                SetBlockCount(block);
             }
         }
         
@@ -149,7 +151,23 @@ namespace UBlockly.UGUI
         public override void FinishCheckBin(BlockView blockView)
         {
             if (CheckBin(blockView))
+            {
                 blockView.Dispose();
+                
+                //articoding
+                //Update the blockCounter in the Toolbox
+                foreach (GameObject gO in mRootList.Values)
+                    foreach (BlockView bw in gO.transform.GetComponentsInChildren<BlockView>())
+                    {
+                        if (Block.blocksAvailable.ContainsKey(bw.BlockType) && Block.blocksAvailable[bw.BlockType] > 0)
+                        {
+                            //If the block was disabled we reactivate it
+                            bw.enabled = true;
+                            bw.ChangeBgColor(GetColorOfBlockView(bw));
+                        }
+                        bw.UpdateCount();
+                    }
+            }                
             m_BinArea.gameObject.SetActive(false);
         }
     }

@@ -20,6 +20,7 @@ limitations under the License.
 using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using AssetPackage;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
@@ -240,6 +241,7 @@ namespace UBlockly
         /// <returns>VariableModel ,The newly created variable.</returns>
         public VariableModel CreateVariable(string name, string optType = null, string optId = null)
         {
+            if (name == "") return null;
             return this.VariableMap.CreateVariable(name, optType, optId);
         }
 
@@ -341,6 +343,12 @@ namespace UBlockly
                 }
             }
 
+            TrackerAsset.Instance.setVar("variable_name", name);
+            TrackerAsset.Instance.setVar("block_type", "variable");
+            TrackerAsset.Instance.setVar("action", "delete");
+            TrackerAsset.Instance.setVar("level", GameManager.Instance.GetCurrentLevelName().ToLower());
+            TrackerAsset.Instance.GameObject.Interacted("delete_variable");
+
             var workspace = this;
             var variable = workspace.GetVariable(name);
             if (uses.Count > 1)
@@ -385,6 +393,10 @@ namespace UBlockly
             var uses = GetVariableUses(variable.Name);
             foreach (var block in uses)
             {
+                TrackerAsset.Instance.setVar("block_type", block.Type);
+                TrackerAsset.Instance.setVar("action", "remove");
+                TrackerAsset.Instance.GameObject.Interacted(GameManager.Instance.GetBlockId(block));
+
                 block.Dispose(true);
             }
             VariableMap.DeleteVariable(variable);
@@ -398,6 +410,8 @@ namespace UBlockly
         /// <param name="newName">New variable name</param>
         public void RenameVariableInternal(VariableModel variable, string newName)
         {
+            if (newName == "") return;
+            
             var newVariable = this.GetVariable(newName);
             
             // If they are different types, throw an error.

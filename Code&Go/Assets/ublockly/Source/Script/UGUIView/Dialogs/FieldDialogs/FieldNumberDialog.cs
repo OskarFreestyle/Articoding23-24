@@ -82,14 +82,17 @@ namespace UBlockly.UGUI
             {
                 m_LabelNum.text = "-" + m_LabelNum.text;
             }
-            else if (btn == mBtnPoint)
+            else if(m_LabelNum.text.Length <= 5) //articoding
             {
-                if (!m_LabelNum.text.Contains("."))
-                    m_LabelNum.text += ".";
-            }
-            else
-            {
-                m_LabelNum.text += mBtnNums[btn];
+                if (btn == mBtnPoint)
+                {
+                    if (!m_LabelNum.text.Contains("."))
+                        m_LabelNum.text += ".";
+                }
+                else /*if (m_LabelNum.text.Length < 1)*/
+                {
+                    m_LabelNum.text += mBtnNums[btn];
+                }
             }
         }
     }

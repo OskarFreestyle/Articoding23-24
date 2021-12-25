@@ -164,5 +164,12 @@ namespace UBlockly.UGUI
             }
             return nextView;
         }
+        
+        public override bool CanBeCloned(BlockView block = null) //articoding
+        {
+            if (mTargetBlockView != null)
+                return mTargetBlockView.CanBeCloned(block);
+            return mSourceBlockView.CanBeCloned(block);
+        }
     }
 }

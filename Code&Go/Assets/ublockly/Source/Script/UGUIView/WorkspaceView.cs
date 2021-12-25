@@ -17,7 +17,9 @@ limitations under the License.
 ****************************************************************************/
 
 
+using AssetPackage; //articoding
 using System.Collections.Generic;
+using System.Xml; //articoding
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -127,6 +129,7 @@ namespace UBlockly.UGUI
         {
             BlockView view = BlockViewFactory.CreateView(block);
             view.InToolbox = false;
+            view.ActivateCountText(false); //articoding
             view.ViewTransform.SetParent(m_CodingArea, false);
             view.XY = block.XY;
 
@@ -180,6 +183,14 @@ namespace UBlockly.UGUI
             
             BlockViewSettings.Dispose();
             Resources.UnloadUnusedAssets();
+        }
+
+        public void InitIDs() //articoding
+        {
+            foreach (var item in mBlockViews)
+            {
+                item.Value.InitIDs();
+            }
         }
     }
 }

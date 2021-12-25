@@ -20,6 +20,7 @@ limitations under the License.
 
 using System.Collections.Generic;
 using UnityEngine;
+using System; //articoding
 
 namespace UBlockly.UGUI
 {
@@ -99,6 +100,11 @@ namespace UBlockly.UGUI
                     {
                         MsgDialog dialog = DialogFactory.CreateDialog("message") as MsgDialog;
                         dialog.SetMsg(args.Msg);    
+                        Action closeEvent = () => //articoding
+                            {
+                                MessageManager.Instance.SendMessage("", MSG_TYPE.CODE_END);
+                            };
+                            dialog.AddCloseEvent(closeEvent);
                     }
                     Hide();
                     mRunningBlocks.Clear();

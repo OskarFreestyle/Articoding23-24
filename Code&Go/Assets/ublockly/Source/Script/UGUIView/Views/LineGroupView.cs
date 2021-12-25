@@ -175,5 +175,13 @@ namespace UBlockly.UGUI
                 size.x -= conView.Width;
             return size;
         }
+        
+        public override bool CanBeCloned(BlockView block = null) //articoding
+        {
+            bool cloned = true;
+            for (int i = 0; i < Childs.Count && cloned; i++)
+                cloned = Childs[i].CanBeCloned(block);
+            return cloned;
+        }
     }
 }

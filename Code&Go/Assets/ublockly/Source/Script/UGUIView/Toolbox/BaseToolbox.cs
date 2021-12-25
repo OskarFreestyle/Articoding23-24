@@ -16,8 +16,12 @@ limitations under the License.
 
 ****************************************************************************/
 
+using AssetPackage; //articoding
+using Simva; //articoding
 using System;
 using System.Collections.Generic;
+using System.Xml; //articoding
+using uAdventure.Simva; //articoding
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -43,6 +47,86 @@ namespace UBlockly.UGUI
 
         protected Workspace mWorkspace;
         protected ToolboxConfig mConfig;
+
+        //articoding
+        protected bool allActive = false;
+        protected Dictionary<string, CategoryBlocks> activeCategories;
+        protected int nActiveCategories = 0;
+
+        public void SetActiveBlocks(Dictionary<string, CategoryBlocks> activeCategories, Dictionary<string, PopUpData> categoriesTutorials = null)
+        {
+            this.activeCategories = activeCategories;
+            nActiveCategories = activeCategories.Keys.Count;
+            TutorialTrigger trigger = GetComponent<TutorialTrigger>();
+            if (trigger != null) trigger.enabled = nActiveCategories > 0;
+
+            Block.blocksAvailable = new Dictionary<string, int>();
+            int priority = 400;
+            //Activate the category if it's not in the active list
+            foreach (var category in mConfig.BlockCategoryList)
+            {
+                bool active = activeCategories.ContainsKey(category.CategoryName.ToLower());
+                mMenuList[category.CategoryName].gameObject.SetActive(active);
+                if (categoriesTutorials != null && categoriesTutorials.ContainsKey(category.CategoryName))
+                {
+                    TutorialTrigger categoryTrigger = mMenuList[category.CategoryName].gameObject.AddComponent<TutorialTrigger>();
+                    categoryTrigger.isSaveCheckpoint = true;
+                    categoryTrigger.priority = priority++;
+                    categoryTrigger.highlightObject = true;
+                    categoryTrigger.info = categoriesTutorials[category.CategoryName];
+                }
+
+                //Set Block Count
+                if (active)
+                {
+                    mMenuList[category.CategoryName].gameObject.SetActive(true);
+                    List<string> blockTypes = mConfig.GetBlockCategory(category.CategoryName).BlockList;
+                    foreach (string blockType in blockTypes)
+                    {
+                        CategoryBlocks info = activeCategories[category.CategoryName.ToLower()];
+                        if (info.activate == (info.activeBlocks.ContainsKey(blockType)))
+                        {
+                            int value = (info.activeBlocks.ContainsKey(blockType) ? info.activeBlocks[blockType] : Int16.MaxValue);
+                            Block.blocksAvailable[blockType] = value;
+                        }
+                    }
+                }
+            }
+        }
+        
+        public void SetActiveAllBlocks()
+        {
+            allActive = true;
+            nActiveCategories = mConfig.BlockCategoryList.Count;
+            foreach (ToolboxBlockCategory category in mConfig.BlockCategoryList)
+            {
+                mMenuList[category.CategoryName].gameObject.SetActive(true);
+                List<string> blockTypes = mConfig.GetBlockCategory(category.CategoryName).BlockList;
+                foreach (string blockType in blockTypes)
+                    Block.blocksAvailable[blockType] = Int16.MaxValue;
+            }
+        }
+
+        protected void SetBlockCount(BlockView block)
+        {
+            //Deactivate the block if it's not in the active list
+            bool active = false;
+            string blockType = block.BlockType;
+            if (activeCategories != null && mActiveCategory != null && activeCategories.ContainsKey(mActiveCategory.ToLower()))
+            {
+                CategoryBlocks info = activeCategories[mActiveCategory.ToLower()];
+                active = info.activate == (info.activeBlocks.ContainsKey(blockType));
+                int value = (Block.blocksAvailable.ContainsKey(blockType) ? Block.blocksAvailable[blockType] : Int16.MaxValue);
+                if (value <= 0)
+                {
+                    block.enabled = false;
+                    block.ChangeBgColor(Color.grey);
+                }
+            }
+            block.gameObject.SetActive(allActive || active);
+            block.UpdateCount();
+        }
+        //articoding
 
         protected abstract void Build();
         protected virtual void OnPickBlockView(){}
@@ -109,22 +193,55 @@ namespace UBlockly.UGUI
             if (!BlockViewSettings.Get().MaskedInToolbox)
                 maskTrans.SetAsFirstSibling();
             
+            view.ActivateCountText(view.InToolbox); //articoding
+            view.UpdateCount(); //articoding
+
             return view;
         }
 
         protected void PickBlockView(PointerEventData data, BlockView blockView)
         {
+            if (!blockView.enabled) return; //articoding
             // compute the local position of the block view in coding area
             Vector3 localPos = BlocklyUI.WorkspaceView.CodingArea.InverseTransformPoint(blockView.ViewTransform.position);
             
             // clone a new block view for coding area
             BlockView newBlockView = BlocklyUI.WorkspaceView.CloneBlockView(blockView, new Vector2(localPos.x, localPos.y));
+            if (newBlockView.InToolbox) return; //articoding
             newBlockView.OnBeginDrag(data);
+            newBlockView.ActivateCountText(false); //articoding
             
             //change the dragging object as the newly created blockview 
             data.pointerDrag = newBlockView.gameObject;
 
+            //articoding
+            //if the max number of blocks have been used disable the block
+            if (Block.blocksAvailable.ContainsKey(blockView.BlockType) && Block.blocksAvailable[blockView.BlockType] > 0)
+            {
+                Block.blocksAvailable[blockView.BlockType]--;
+                if (Block.blocksAvailable[blockView.BlockType] <= 0)
+                {
+                    blockView.ChangeBgColor(Color.grey);
+                    blockView.enabled = false;
+                }
+            }
+            blockView.UpdateCount();
+            //articoding
+
             OnPickBlockView();
+
+            //articoding
+            string id = GameManager.Instance.GetBlockId(mPickedBlockView.Block);
+            XmlNode dom = Xml.BlockToDomWithXY(mPickedBlockView.Block, false);
+            string text = UBlockly.Xml.DomToText(dom);
+            text = GameManager.Instance.ChangeCodeIDs(text);
+
+            TrackerAsset.Instance.setVar("block_type", mPickedBlockView.Block.Type);
+            TrackerAsset.Instance.setVar("code", "\r\n" + text);
+
+            TrackerAsset.Instance.setVar("action", "create");
+            TrackerAsset.Instance.setVar("level", GameManager.Instance.GetCurrentLevelName().ToLower());
+            TrackerAsset.Instance.GameObject.Interacted(id);
         }
 
         /// <summary>
@@ -209,6 +326,7 @@ namespace UBlockly.UGUI
             block.SetFieldValue("VAR", varName);
             BlockView view = NewBlockView(block, parentObj.transform);
             mVariableGetterViews[varName] = view;
+            SetBlockCount(view); //articoding
         }
 
         protected void DeleteVariableGetterView(string varName)
@@ -238,6 +356,7 @@ namespace UBlockly.UGUI
                     block.SetFieldValue("VAR", varName);
                     BlockView view = NewBlockView(block, parentObj.transform);
                     mVariableHelperViews.Add(view);
+                    SetBlockCount(view); //articoding
                 }
             }
         }
@@ -392,6 +511,7 @@ namespace UBlockly.UGUI
                             mProcedureCallerViews.Remove(updateData.ProcedureInfo.Name);
                             mProcedureCallerViews[updateData.NewProcedureInfo.Name] = view;
                         }
+
                         ((ProcedureMutator) view.Block.Mutator).Mutate(updateData.NewProcedureInfo);
                     }
                     break;
