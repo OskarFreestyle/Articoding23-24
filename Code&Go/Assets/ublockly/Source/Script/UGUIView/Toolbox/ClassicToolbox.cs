@@ -51,7 +51,7 @@ namespace UBlockly.UGUI
                 {
                     images[i].color = category.Color;
                 }
-                menuItem.SetActive(true);
+                menuItem.SetActive(false);
                 
                 Toggle toggle = menuItem.GetComponent<Toggle>();
                 toggle.onValueChanged.AddListener((selected) =>
