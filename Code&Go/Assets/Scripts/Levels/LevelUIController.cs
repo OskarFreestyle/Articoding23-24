@@ -37,6 +37,7 @@ public class LevelUIController : MonoBehaviour
 
     public void Close(RectTransform panel)
     {
+        MessageManager.Instance.SendMessage("SetStart", MSG_TYPE.START);
         if (!panel.gameObject.activeSelf) return;
 
         UnityEvent<float> mEvent = new UnityEvent<float>();

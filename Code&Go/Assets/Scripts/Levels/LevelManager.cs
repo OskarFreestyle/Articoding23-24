@@ -1,12 +1,14 @@
 ﻿using AssetPackage;
 using System.Collections;
 using System.Collections.Generic;
+using UBlockly;
 using UBlockly.UGUI;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 using UnityEngine.Localization.Components;
+using Input = UnityEngine.Input;
 
 public class LevelManager : MonoBehaviour
 {
@@ -213,6 +215,7 @@ public class LevelManager : MonoBehaviour
 
         var levelName = GameManager.Instance.GetCurrentLevelName();
         TrackerAsset.Instance.Completable.Initialized(levelName, CompletableTracker.Completable.Level);
+        boardManager.SetStarted(false);
     }
 
     public void MinimizeEndPanel()
