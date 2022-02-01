@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using AssetPackage;
-using UBlockly;
 
 public class BoardManager : Listener
 {
@@ -12,7 +11,6 @@ public class BoardManager : Listener
     private int columns;
     private int nReceivers = 0;
     private int nReceiversActive = 0;
-    private bool started = false;
 
     [SerializeField] private Transform cellsParent;
     [SerializeField] private Transform elementsParent;
@@ -210,22 +208,6 @@ public class BoardManager : Listener
     private bool IsInBoardBounds(Vector2Int position)
     {
         return IsInBoardBounds(position.x, position.y);
-    }
-
-    public void SetStarted(bool b = true)
-    {
-        started = b;
-    }
-    private void Update()
-    {
-        if (started && CSharp.Runner.CurStatus == Runner.Status.Stop)
-        {
-            if (AllReceiving())
-                completed = true;
-            else
-                LevelFailed();    
-        }
-        
     }
 
     public void SetModifiable(bool modifiable)
@@ -838,9 +820,6 @@ public class BoardManager : Listener
 
             switch (type)
             {
-                case MSG_TYPE.START:
-                    SetStarted();
-                    break;
                 case MSG_TYPE.MOVE_LASER:
                     amount = int.Parse(args[0]);
                     dir = GetDirectionFromString(args[1]);

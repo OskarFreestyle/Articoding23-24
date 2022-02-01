@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UBlockly;
 using UnityEngine;
 
-public enum MSG_TYPE { START, MOVE_LASER, MOVE, ROTATE_LASER, ROTATE, CHANGE_INTENSITY, ACTIVATE_DOOR, CELL_OCCUPIED, CODE_END };
+public enum MSG_TYPE { MOVE_LASER, MOVE, ROTATE_LASER, ROTATE, CHANGE_INTENSITY, ACTIVATE_DOOR, CELL_OCCUPIED, CODE_END };
 
 public class MessageManager : MonoBehaviour
 {

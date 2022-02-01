@@ -189,6 +189,8 @@ namespace UBlockly
                     finishCb?.Invoke();
                 }
                 curStatus = Runner.Status.Stop;
+
+                MessageManager.Instance.SendMessage("", MSG_TYPE.CODE_END); //articoding
             }
         }
 
