@@ -28,7 +28,7 @@
 /[Aa]ssets/[Ss]criptableObjects/**/*.meta
 /[Aa]ssets/[Ss]cripts/**/*.meta
 /[Aa]ssets/[Ss]treamingAssets/**/*.meta
-/[Aa]ssets/[Uu]Blockly/**/*.meta
+/[Aa]ssets/[Uu][Bb]lockly/**/*.meta
 /[Aa]ssets/[Uu]blocklyPrefabs/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
