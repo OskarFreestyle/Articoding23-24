@@ -43,7 +43,19 @@ namespace UBlockly
             
             //start runner from the topmost blocks, exclude the procedure definition blocks
             List<Block> blocks = workspace.GetTopBlocks(true).FindAll(block => !ProcedureDB.IsDefinition(block));
-            if (blocks.Count == 0)
+            
+#region articoding - start block
+            Block startBlock = null;
+            foreach (Block block in blocks)
+            {
+                if (block.Type == "start_start") //articoding: es un poco feo
+                {
+                    startBlock = block;
+                    break;
+                }
+            }
+#endregion
+            if (blocks.Count == 0 || startBlock == null) //articoding - solo ejecuta si existe un bloque start
             {
                 CSharp.Runner.FireUpdate(new RunnerUpdateState(RunnerUpdateState.Stop));
                 return;
@@ -53,60 +65,57 @@ namespace UBlockly
 
             if (workspace.Options.Synchronous)
             {
-                RunSync(blocks);
+                RunSync(startBlock); //articoding
             }
             else
             {
-                RunAsync(blocks);
+                RunAsync(startBlock); //articoding
             }
         }
 
-        private void RunSync(List<Block> topBlocks)
+        private void RunSync(Block topBlock) //articoding
         {
-            foreach (Block block in topBlocks)
-            {
-                CmdRunner runner = CmdRunner.Create(block.Type);
-                mCodeRunners.Add(runner);
-
-                runner.RunMode = RunMode;
-                runner.SetFinishCallback(() =>
-                {
-                    GameObject.Destroy(runner.gameObject);
-                    mCodeRunners.Remove(runner);
-                    if (mCodeRunners.Count == 0)
-                    {
-                        CurStatus = Status.Stop;
-                        CSharp.Runner.FireUpdate(new RunnerUpdateState(RunnerUpdateState.Stop));
-                    }
-                });
-                runner.StartRun(new CmdEnumerator(block));
-            }
-        }
-
-        private void RunAsync(List<Block> topBlocks)
-        {
-            CmdRunner runner = CmdRunner.Create(topBlocks[0].Type);
+            //foreach (Block block in topBlocks)
+            CmdRunner runner = CmdRunner.Create(topBlock.Type);
             mCodeRunners.Add(runner);
 
             runner.RunMode = RunMode;
-            
-            int index = 0;
             runner.SetFinishCallback(() =>
             {
-                index++;
-                if (index < topBlocks.Count)
+                GameObject.Destroy(runner.gameObject);
+                mCodeRunners.Remove(runner);
+                if (mCodeRunners.Count == 0)
                 {
-                    runner.StartRun(new CmdEnumerator(topBlocks[index]));
-                }
-                else
-                {
-                    GameObject.Destroy(runner.gameObject);
-                    mCodeRunners.Clear();
                     CurStatus = Status.Stop;
                     CSharp.Runner.FireUpdate(new RunnerUpdateState(RunnerUpdateState.Stop));
                 }
             });
-            runner.StartRun(new CmdEnumerator(topBlocks[0]));
+            runner.StartRun(new CmdEnumerator(topBlock));
+        }
+
+        private void RunAsync(Block topBlock) //articoding
+        {
+            CmdRunner runner = CmdRunner.Create(topBlock.Type);
+            mCodeRunners.Add(runner);
+
+            runner.RunMode = RunMode;
+            
+            //int index = 0; articoding
+            runner.SetFinishCallback(() =>
+            {
+                //articoding
+                // index++;
+                // if (index < topBlocks.Count)
+                // {
+                //     runner.StartRun(new CmdEnumerator(topBlocks[index]));
+                // }
+                // else
+                GameObject.Destroy(runner.gameObject);
+                mCodeRunners.Clear();
+                CurStatus = Status.Stop;
+                CSharp.Runner.FireUpdate(new RunnerUpdateState(RunnerUpdateState.Stop));
+            });
+            runner.StartRun(new CmdEnumerator(topBlock));
         }
 
         public override void Pause()
