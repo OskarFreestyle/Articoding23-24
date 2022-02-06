@@ -4128,7 +4128,7 @@ PrefabInstance:
     - target: {fileID: 946787307, guid: 30bdd5fddc725438796726c39f29cd83, type: 3}
       propertyPath: m_BtnRun
       value: 
-      objectReference: {fileID: 706796446}
+      objectReference: {fileID: 870346995}
     - target: {fileID: 1297610413772492, guid: 30bdd5fddc725438796726c39f29cd83, type: 3}
       propertyPath: m_Name
       value: Workspace
@@ -4304,17 +4304,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224562327138091018, guid: 30bdd5fddc725438796726c39f29cd83, type: 3}
   m_PrefabInstance: {fileID: 706796444}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &706796446 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114444648929744528, guid: 30bdd5fddc725438796726c39f29cd83, type: 3}
-  m_PrefabInstance: {fileID: 706796444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &717778030
 GameObject:
   m_ObjectHideFlags: 0
@@ -5639,7 +5628,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 870346996}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &870346996
 MonoBehaviour:
   m_ObjectHideFlags: 0
