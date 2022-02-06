@@ -1,0 +1,8 @@
+[
+    {
+        "type": "start_start",
+        "message0": "%{BKY_START}",
+        "args0": [],
+        "nextStatement": null
+    }
+]
