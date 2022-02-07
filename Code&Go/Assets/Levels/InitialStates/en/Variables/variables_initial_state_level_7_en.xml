@@ -3,21 +3,25 @@
         <variable type="" id="UGcI_Hv@{k(V^#USPMo}">A</variable>
         <variable type="" id=":,(]MF(VrqQkPA^f,xbU">B</variable>
     </variables>
-    <block type="variables_set" id=".;[ND1*DOzZCLf$Ku~D{" x="150" y="-128">
-        <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">A</field>
-        <value name="VALUE">
-            <block type="math_number" id="^NH,z/.43U#%JR2NV?U@">
-                <field name="NUM">2</field>
-            </block>
-        </value>
+    <block type="start_start" id="s$B1%BVXq]m(OiR:wzt!" x="264" y="-202">
         <next>
-            <block type="variables_set" id="DP^K(7-5FzhcazBn~jSP">
-                <field name="VAR" id=":,(]MF(VrqQkPA^f,xbU" variableType="">B</field>
+            <block type="variables_set" id=".;[ND1*DOzZCLf$Ku~D{">
+                <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">A</field>
                 <value name="VALUE">
-                    <block type="math_number" id="j~sj}lcU*#3dbssILwS6">
-                        <field name="NUM">0</field>
+                    <block type="math_number" id="^NH,z/.43U#%JR2NV?U@">
+                        <field name="NUM">2</field>
                     </block>
                 </value>
+                <next>
+                    <block type="variables_set" id="DP^K(7-5FzhcazBn~jSP">
+                        <field name="VAR" id=":,(]MF(VrqQkPA^f,xbU" variableType="">B</field>
+                        <value name="VALUE">
+                            <block type="math_number" id="j~sj}lcU*#3dbssILwS6">
+                                <field name="NUM">0</field>
+                            </block>
+                        </value>
+                    </block>
+                </next>
             </block>
         </next>
     </block>

@@ -1,18 +1,23 @@
 <xml>
-    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){" x="207" y="-279">
-        <field name="DIRECTION">RIGHT</field>
-        <value name="AMOUNT">
-            <block type="math_number" id="Yk}H}L`Y=abJ%p0!GOMG">
-                <field name="NUM">2</field>
-            </block>
-        </value>
+    <variables />
+    <block type="start_start" id="kaUBW%xV~%J=|vOC8Mfm" x="219" y="-211">
         <next>
-            <block type="movement_laser_change_intensity" id="Ee|,j$|bchTAUQJ$bl2p">
+            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                <field name="DIRECTION">RIGHT</field>
                 <value name="AMOUNT">
-                    <block type="math_number" id="zCADMF|[}%V:aRdcTBu;">
-                        <field name="NUM">0</field>
+                    <block type="math_number" id="Yk}H}L`Y=abJ%p0!GOMG">
+                        <field name="NUM">2</field>
                     </block>
                 </value>
+                <next>
+                    <block type="movement_laser_change_intensity" id="Ee|,j$|bchTAUQJ$bl2p">
+                        <value name="AMOUNT">
+                            <block type="math_number" id="zCADMF|[}%V:aRdcTBu;">
+                                <field name="NUM">0</field>
+                            </block>
+                        </value>
+                    </block>
+                </next>
             </block>
         </next>
     </block>

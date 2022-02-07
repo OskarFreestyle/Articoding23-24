@@ -1,42 +1,46 @@
 <xml>
     <variables>
-        <variable type="" id="Y1/sKS9%bRPPWOodp|vK">Two</variable>
-        <variable type="" id="jwuTPDG4T-NOP!Rp]qnM">Amount</variable>
+        <variable type="" id="Y1/sKS9%bRPPWOodp|vK">Dos</variable>
+        <variable type="" id="jwuTPDG4T-NOP!Rp]qnM">Cantidad</variable>
     </variables>
-    <block type="variables_set" id="[AHn]l]/C,RLsw[upXZ0" x="186" y="-125">
-        <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">Amount</field>
-        <value name="VALUE">
-            <block type="math_number" id="b5-^mdY{JCix..Vw3?H7">
-                <field name="NUM">2</field>
-            </block>
-        </value>
+    <block type="start_start" id="_}|]vs{tz[FLE76!cNxj" x="210" y="-191">
         <next>
-            <block type="variables_set" id="uvtDnG}iB2UJhGTH}f(_">
-                <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">Two</field>
+            <block type="variables_set" id="[AHn]l]/C,RLsw[upXZ0">
+                <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">Cantidad</field>
                 <value name="VALUE">
-                    <block type="math_number" id="RU2/7LXshN2~3toV$BIg">
-                        <field name="NUM">1</field>
+                    <block type="math_number" id="b5-^mdY{JCix..Vw3?H7">
+                        <field name="NUM">2</field>
                     </block>
                 </value>
                 <next>
-                    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
-                        <field name="DIRECTION">RIGHT</field>
-                        <value name="AMOUNT">
-                            <block type="variables_get" id="/OVNo#bRmn2dP4sbX}~I">
-                                <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">Amount</field>
+                    <block type="variables_set" id="uvtDnG}iB2UJhGTH}f(_">
+                        <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">Dos</field>
+                        <value name="VALUE">
+                            <block type="math_number" id="RU2/7LXshN2~3toV$BIg">
+                                <field name="NUM">1</field>
                             </block>
                         </value>
                         <next>
-                            <block type="movement_move_laser" id="el{@g2cegIlx5HkQm(#$">
-                                <field name="DIRECTION">DOWN</field>
+                            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                                <field name="DIRECTION">RIGHT</field>
                                 <value name="AMOUNT">
-                                    <block type="variables_get" id="FMJkYHd*5};FXX/+@ll7">
-                                        <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">Two</field>
+                                    <block type="variables_get" id="/OVNo#bRmn2dP4sbX}~I">
+                                        <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">Cantidad</field>
                                     </block>
                                 </value>
                                 <next>
-                                    <block type="movement_rotate_laser" id="0YZLn]oqE^XZaY/_3zH#">
-                                        <field name="ROTATION">CLOCKWISE</field>
+                                    <block type="movement_move_laser" id="el{@g2cegIlx5HkQm(#$">
+                                        <field name="DIRECTION">DOWN</field>
+                                        <value name="AMOUNT">
+                                            <block type="variables_get" id="FMJkYHd*5};FXX/+@ll7">
+                                                <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">Dos</field>
+                                            </block>
+                                        </value>
+                                        <next>
+                                            <block type="movement_rotate_laser" id="0YZLn]oqE^XZaY/_3zH#">
+                                                <field name="ROTATION">CLOCKWISE</field>
+                                            </block>
+                                        </next>
                                     </block>
                                 </next>
                             </block>

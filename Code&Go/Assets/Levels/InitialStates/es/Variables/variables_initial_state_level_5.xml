@@ -1,13 +1,17 @@
 <xml>
     <variables />
-    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){" x="249" y="-286">
-        <field name="DIRECTION">LEFT</field>
+    <block type="start_start" id="nqeyFH3cB{%=79F~!_8B" x="234" y="-244">
         <next>
-            <block type="movement_move_laser" id="TZr!p`ZnL|Ee5;|b@|Gv">
-                <field name="DIRECTION">DOWN</field>
+            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                <field name="DIRECTION">LEFT</field>
                 <next>
-                    <block type="movement_rotate_laser" id="7Oe+g6bqpuQP`l?vH{nr">
-                        <field name="ROTATION">CLOCKWISE</field>
+                    <block type="movement_move_laser" id="TZr!p`ZnL|Ee5;|b@|Gv">
+                        <field name="DIRECTION">DOWN</field>
+                        <next>
+                            <block type="movement_rotate_laser" id="7Oe+g6bqpuQP`l?vH{nr">
+                                <field name="ROTATION">CLOCKWISE</field>
+                            </block>
+                        </next>
                     </block>
                 </next>
             </block>
