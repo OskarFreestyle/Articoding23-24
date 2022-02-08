@@ -1,5 +1,17 @@
 {
     "categories": [
+            {
+            "categoryName": "start",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "start_start",
+                        "maxUses": 0
+                    }
+                ]
+            }
+        },
         {
             "categoryName": "math",
             "blocksInfo": {
