@@ -95,4 +95,25 @@ namespace UBlockly
             return cmdtor;
         }
     }
+    
+    // Articoding: added to check that the cards have every input needed. 
+    // Use it every time the input may not be there.
+    public class CheckInput
+    {
+        public static CmdEnumerator IsComplete(Block block, string key)
+        {
+            CmdEnumerator ctor = null;
+            try
+            {
+                ctor = CSharp.Interpreter.ValueReturn(block, key, new DataStruct(0));
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Missing the value: " + key);
+                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+            }
+
+            return ctor;
+        }
+    }
 }

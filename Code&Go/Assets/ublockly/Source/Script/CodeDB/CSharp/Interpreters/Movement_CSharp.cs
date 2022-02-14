@@ -19,6 +19,7 @@ limitations under the License.
 ****************************************************************************/
 
 
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -29,21 +30,20 @@ namespace UBlockly
         public static float instructionWaitTime = 1.5f;   
         public static float logicWaitTime = 0.3f;   
     }
-
+    
     [CodeInterpreter(BlockType = "movement_move_laser")]
     public class Move_Laser_Cmdtor : EnumeratorCmdtor
     {
-        
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "AMOUNT", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.IsComplete(block, "AMOUNT");
 
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
             string dir = block.GetFieldValue("DIRECTION");
 
-            string msg = arg0.ToString() + " " + dir;
+            string msg = arg0 + " " + dir;
             MessageManager.Instance.SendMessage(msg, MSG_TYPE.MOVE_LASER);
 
             yield return new WaitForSeconds(Times.instructionWaitTime);
@@ -55,17 +55,17 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "NAME", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.IsComplete(block, "NAME");
             yield return ctor;
-            DataStruct arg0 = ctor.Data;    
-            
-            ctor = CSharp.Interpreter.ValueReturn(block, "AMOUNT", new DataStruct(0));
+            DataStruct arg0 = ctor.Data;
+
+            ctor = CheckInput.IsComplete(block, "AMOUNT");
             yield return ctor;
             DataStruct arg1 = ctor.Data;
 
             string dir = block.GetFieldValue("DIRECTION");
 
-            string msg = arg0.ToString() +" "+ arg1.ToString() + " " + dir;
+            string msg = arg0 +" "+ arg1 + " " + dir;
             MessageManager.Instance.SendMessage(msg, MSG_TYPE.MOVE);
 
             yield return new WaitForSeconds(Times.instructionWaitTime);
@@ -77,13 +77,13 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "AMOUNT", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.IsComplete(block, "AMOUNT");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
             string rot = block.GetFieldValue("ROTATION");
 
-            string msg = arg0.ToString() + " " + rot;
+            string msg = arg0 + " " + rot;
             MessageManager.Instance.SendMessage(msg, MSG_TYPE.ROTATE_LASER);
 
             yield return new WaitForSeconds(Times.instructionWaitTime);
@@ -95,17 +95,19 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "NAME", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.IsComplete(block, "NAME");
+            
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
-            ctor = CSharp.Interpreter.ValueReturn(block, "AMOUNT", new DataStruct(0));
+            ctor = CheckInput.IsComplete(block, "AMOUNT");
+            
             yield return ctor;
             DataStruct arg1 = ctor.Data;
 
             string rot = block.GetFieldValue("ROTATION");
 
-            string msg = arg0.ToString() + " " + arg1.ToString() + " " + rot;
+            string msg = arg0 + " " + arg1 + " " + rot;
             MessageManager.Instance.SendMessage(msg, MSG_TYPE.ROTATE);
 
             yield return new WaitForSeconds(Times.instructionWaitTime);
@@ -117,12 +119,12 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "AMOUNT", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.IsComplete(block, "AMOUNT");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
             Number amount = arg0.NumberValue;           
 
-            string msg = "1 " + amount.ToString();
+            string msg = "1 " + amount;
             MessageManager.Instance.SendMessage(msg, MSG_TYPE.CHANGE_INTENSITY);
 
             yield return new WaitForSeconds(Times.instructionWaitTime);
@@ -132,14 +134,13 @@ namespace UBlockly
     [CodeInterpreter(BlockType = "movement_activate_door")]
     public class Activate_Door_Cmdtor : EnumeratorCmdtor
     {
-
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "ACTIVE", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.IsComplete(block, "ACTIVE");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
-            ctor = CSharp.Interpreter.ValueReturn(block, "NAME", new DataStruct(0));
+            ctor = CheckInput.IsComplete(block, "NAME");
             yield return ctor;
             DataStruct arg1 = ctor.Data;
 
@@ -153,7 +154,6 @@ namespace UBlockly
     [CodeInterpreter(BlockType = "movement_cells_occupied")]
     public class Cells_Occupied_Cmdor : EnumeratorCmdtor
     {
-
         protected override IEnumerator Execute(Block block)
         {
             string colour = block.GetFieldValue("TYPE");
