@@ -182,6 +182,7 @@ public class LevelTestManager : MonoBehaviour
     {
         ResetLevel();
         gameOverPanel.SetActive(false);
+        endPanel.SetActive(false);
         blackRect.SetActive(false);
         gameOverMinimized.SetActive(false);
         streamRoom.Retry();
