@@ -115,5 +115,20 @@ namespace UBlockly
 
             return ctor;
         }
+        public static CmdEnumerator IsComplete(Block block, string key, DataStruct dataStruct)
+        {
+            CmdEnumerator ctor = null;
+            try
+            {
+                ctor = CSharp.Interpreter.ValueReturn(block, key, dataStruct);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Missing the value: " + key);
+                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+            }
+
+            return ctor;
+        }
     }
 }

@@ -30,8 +30,9 @@ namespace UBlockly
         protected override IEnumerator Execute(Block block)
         {
             Debug.Log(">>>>>> block wait_time start: " + Time.time);
-
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "TIME", new DataStruct(0));
+            
+            CmdEnumerator ctor = CheckInput.IsComplete(block, "TIME");
+            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "TIME", new DataStruct(0));
             yield return ctor;
             DataStruct time = ctor.Data;
             
@@ -61,8 +62,8 @@ namespace UBlockly
         protected override IEnumerator Execute(Block block)
         {
             Debug.Log(">>>>>> block wait_frame start: " + Time.time);
-
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "TIME", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.IsComplete(block, "TIME");
+            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "TIME", new DataStruct(0));
             yield return ctor;
             DataStruct time = ctor.Data;
 
