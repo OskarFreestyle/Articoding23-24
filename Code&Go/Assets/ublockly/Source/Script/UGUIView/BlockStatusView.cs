@@ -44,7 +44,7 @@ namespace UBlockly.UGUI
             {
                 mStatusObj = GameObject.Instantiate(BlockViewSettings.Get().PrefabStatusLight, BlocklyUI.WorkspaceView.CodingArea, false);
                 RectTransform statusRect = mStatusObj.GetComponent<RectTransform>();
-                statusRect.anchorMin = statusRect.anchorMax = new Vector2(0, 1);
+                statusRect.anchorMin = statusRect.anchorMax = new Vector2(-0.13f, 1);
                 statusRect.pivot = 0.5f * Vector2.one;
             }
             if (!mStatusObj.activeInHierarchy)
