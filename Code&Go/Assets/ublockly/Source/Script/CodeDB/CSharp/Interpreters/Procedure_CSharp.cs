@@ -32,7 +32,8 @@ namespace UBlockly
             Block defBlock = block.Workspace.ProcedureDB.GetDefinitionBlock(procedureName);
             yield return CSharp.Interpreter.StatementRun(defBlock, "STACK");
             
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(defBlock, "RETURN");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(defBlock, "RETURN");
+            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(defBlock, "RETURN");
             yield return ctor;
             ReturnData(ctor.Data);
         }

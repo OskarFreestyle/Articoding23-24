@@ -120,7 +120,8 @@ namespace UBlockly
         {
             ResetFlowState();
             
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "TIMES", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "TIMES", new DataStruct(0));
+            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "TIMES", new DataStruct(0));
             yield return ctor;
             DataStruct repeats = ctor.Data;
             
@@ -146,9 +147,12 @@ namespace UBlockly
         {
             ResetFlowState();
             
+            // TODO: por algun motivo, los bucles while funcionan diferente. Check how it goes.
+            //bool until =  CheckInput.TryGetFieldValue(block, "MODE").Equals("UNTIL");
             bool until = block.GetFieldValue("MODE").Equals("UNTIL");
             
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "BOOL", new DataStruct(false));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false));
+            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "BOOL", new DataStruct(false));
             yield return ctor;
             DataStruct arg = ctor.Data;
             
@@ -160,6 +164,7 @@ namespace UBlockly
             {
                 yield return CSharp.Interpreter.StatementRun(block, "DO");
                 
+                ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false));
                 ctor = CSharp.Interpreter.ValueReturn(block, "BOOL", new DataStruct(false));
                 yield return ctor;
                 arg = ctor.Data;
@@ -180,15 +185,18 @@ namespace UBlockly
         {
             ResetFlowState();
             
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "FROM", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "FROM", new DataStruct(0));
+            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "FROM", new DataStruct(0));
             yield return ctor;
             DataStruct from = ctor.Data;
             
-            ctor = CSharp.Interpreter.ValueReturn(block, "TO", new DataStruct(0));
+            ctor = CheckInput.TryValueReturn(block, "TO", new DataStruct(0));
+            //ctor = CSharp.Interpreter.ValueReturn(block, "TO", new DataStruct(0));
             yield return ctor;
             DataStruct to = ctor.Data;
             
-            ctor = CSharp.Interpreter.ValueReturn(block, "BY", new DataStruct(0));
+            ctor = CheckInput.TryValueReturn(block, "BY", new DataStruct(0));
+            //ctor = CSharp.Interpreter.ValueReturn(block, "BY", new DataStruct(0));
             yield return ctor;
             DataStruct increment = ctor.Data;
                 
@@ -214,7 +222,8 @@ namespace UBlockly
         {
             ResetFlowState();
             
-            CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "LIST");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "LIST");
+            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "LIST");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
             

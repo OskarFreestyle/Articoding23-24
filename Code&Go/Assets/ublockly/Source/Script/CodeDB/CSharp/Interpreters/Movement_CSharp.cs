@@ -36,7 +36,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block, "AMOUNT");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
 
             yield return ctor;
             DataStruct arg0 = ctor.Data;
@@ -55,11 +55,11 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block, "NAME");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "NAME", new DataStruct(0));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
-            ctor = CheckInput.IsComplete(block, "AMOUNT");
+            ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
             yield return ctor;
             DataStruct arg1 = ctor.Data;
 
@@ -77,7 +77,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block, "AMOUNT");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
@@ -95,12 +95,12 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block, "NAME");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "NAME", new DataStruct(0));
             
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
-            ctor = CheckInput.IsComplete(block, "AMOUNT");
+            ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
             
             yield return ctor;
             DataStruct arg1 = ctor.Data;
@@ -119,7 +119,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block, "AMOUNT");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
             Number amount = arg0.NumberValue;           
@@ -136,11 +136,11 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block, "ACTIVE");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "ACTIVE", new DataStruct(0));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
-            ctor = CheckInput.IsComplete(block, "NAME");
+            ctor = CheckInput.TryValueReturn(block, "NAME", new DataStruct(0));
             yield return ctor;
             DataStruct arg1 = ctor.Data;
 

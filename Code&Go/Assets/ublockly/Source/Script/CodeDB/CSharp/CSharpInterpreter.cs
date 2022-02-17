@@ -100,12 +100,13 @@ namespace UBlockly
     // Use it every time the input may not be there.
     public class CheckInput
     {
-        public static CmdEnumerator IsComplete(Block block, string key)
+        public static CmdEnumerator TryValueReturn(Block block, string key)
         {
             CmdEnumerator ctor = null;
             try
             {
-                ctor = CSharp.Interpreter.ValueReturn(block, key, new DataStruct(0));
+                ctor = CSharp.Interpreter.ValueReturn(block, key);
+                DataStruct data = ctor.Data;
             }
             catch (Exception e)
             {
@@ -115,7 +116,7 @@ namespace UBlockly
 
             return ctor;
         }
-        public static CmdEnumerator IsComplete(Block block, string key, DataStruct dataStruct)
+        public static CmdEnumerator TryValueReturn(Block block, string key, DataStruct dataStruct)
         {
             CmdEnumerator ctor = null;
             try
@@ -129,6 +130,23 @@ namespace UBlockly
             }
 
             return ctor;
+        }
+
+        public static string TryGetFieldValue(Block block, string key)
+        {
+            string str = null;
+            try
+            {
+                str = block.GetFieldValue(key);
+                if (str == null) throw new Exception();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("Missing the value: " + key);
+                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+            }
+
+            return str;
         }
     }
 }

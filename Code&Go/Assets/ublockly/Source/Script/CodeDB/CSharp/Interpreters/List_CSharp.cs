@@ -49,7 +49,7 @@ namespace UBlockly
             ArrayList resultList=new ArrayList();
             for (int i = 0; i < mutator.ItemCount; i++)
             {
-                resultList.Add(CheckInput.IsComplete(block, "ADD" + i));
+                resultList.Add(CheckInput.TryValueReturn(block, "ADD" + i, new DataStruct(0)));
                 //resultList.Add(CSharp.Interpreter.ValueReturn(block, "ADD" + i, new DataStruct(0)));
             }
             return new DataStruct(resultList);
@@ -61,12 +61,12 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "ITEM");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "ITEM", new DataStruct());
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "ITEM", new DataStruct());
             yield return ctor;
             DataStruct arg0 = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "NUM");
+            ctor = CheckInput.TryValueReturn(block,  "NUM", new DataStruct(0));
             //ctor = CSharp.Interpreter.ValueReturn(block,"NUM",new DataStruct(0));
             yield return ctor;
             DataStruct arg1 = ctor.Data;
@@ -86,7 +86,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "ITEM", new DataStruct(new ArrayList()));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "ITEM", new DataStruct(new ArrayList()));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block,"LIST",new DataStruct(new ArrayList()));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
@@ -101,7 +101,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "VALUE", new DataStruct(new ArrayList()));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "VALUE", new DataStruct(new ArrayList()));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block,"VALUE",new DataStruct(new ArrayList()));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
@@ -115,7 +115,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "VALUE", new DataStruct(new ArrayList()));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "VALUE", new DataStruct(new ArrayList()));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "VALUE", new DataStruct(new ArrayList()));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
@@ -129,12 +129,12 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "VALUE", new DataStruct(""));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "VALUE", new DataStruct(""));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "VALUE", new DataStruct(""));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "FIND", new DataStruct(""));
+            ctor = CheckInput.TryValueReturn(block,  "FIND", new DataStruct(""));
             //ctor = CSharp.Interpreter.ValueReturn(block, "FIND", new DataStruct(""));
             yield return ctor;
             DataStruct arg1 = ctor.Data;
@@ -191,12 +191,12 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "VALUE", new DataStruct(""));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "VALUE", new DataStruct(""));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "VALUE", new DataStruct(""));
             yield return ctor;
             DataStruct argList = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "AT", new DataStruct(1));
+            ctor = CheckInput.TryValueReturn(block,  "AT", new DataStruct(1));
             //ctor = CSharp.Interpreter.ValueReturn(block, "AT", new DataStruct(1));
             yield return ctor;
             DataStruct argAt = ctor.Data;
@@ -262,12 +262,12 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "VALUE", new DataStruct(""));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "VALUE", new DataStruct(""));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "VALUE", new DataStruct(""));
             yield return ctor;
             DataStruct argList = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "AT", new DataStruct(1));
+            ctor = CheckInput.TryValueReturn(block,  "AT", new DataStruct(1));
             //ctor = CSharp.Interpreter.ValueReturn(block, "AT", new DataStruct(1));
             yield return ctor;
             DataStruct argAt = ctor.Data;
@@ -306,17 +306,17 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "LIST", new DataStruct(""));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "LIST", new DataStruct(""));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "LIST", new DataStruct(""));
             yield return ctor;
             DataStruct argList = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "AT", new DataStruct(1));
+            ctor = CheckInput.TryValueReturn(block,  "AT", new DataStruct(1));
             //ctor = CSharp.Interpreter.ValueReturn(block, "AT", new DataStruct(1));
             yield return ctor;
             DataStruct argAt = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "TO", new DataStruct(1));
+            ctor = CheckInput.TryValueReturn(block,  "TO", new DataStruct(1));
             //ctor = CSharp.Interpreter.ValueReturn(block, "TO", new DataStruct(1));
             yield return ctor;
             DataStruct changeValue = ctor.Data;
@@ -370,17 +370,17 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "LIST", new DataStruct(""));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "LIST", new DataStruct(""));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "LIST", new DataStruct(""));
             yield return ctor;
             DataStruct argList = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "AT1", new DataStruct(1));
+            ctor = CheckInput.TryValueReturn(block,  "AT1", new DataStruct(1));
             //ctor = CSharp.Interpreter.ValueReturn(block, "AT1", new DataStruct(1));
             yield return ctor;
             DataStruct argAt1 = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "AT2", new DataStruct(1));
+            ctor = CheckInput.TryValueReturn(block,  "AT2", new DataStruct(1));
             //ctor = CSharp.Interpreter.ValueReturn(block, "AT2", new DataStruct(1));
             yield return ctor;
             DataStruct argAt2 = ctor.Data;
@@ -439,7 +439,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "LIST", new DataStruct(""));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "LIST", new DataStruct(""));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "LIST", new DataStruct(""));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
@@ -484,12 +484,12 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "INPUT", new DataStruct(""));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "INPUT", new DataStruct(""));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "INPUT", new DataStruct(""));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "DELIM", new DataStruct(""));
+            ctor = CheckInput.TryValueReturn(block,  "DELIM", new DataStruct(""));
             //ctor = CSharp.Interpreter.ValueReturn(block, "DELIM", new DataStruct(""));
             yield return ctor;
             DataStruct arg1 = ctor.Data;
@@ -503,12 +503,12 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.IsComplete(block,  "INPUT", new DataStruct(""));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block,  "INPUT", new DataStruct(""));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "INPUT", new DataStruct(""));
             yield return ctor;
             DataStruct arg0 = ctor.Data;
             
-            ctor = CheckInput.IsComplete(block,  "DELIM", new DataStruct(""));
+            ctor = CheckInput.TryValueReturn(block,  "DELIM", new DataStruct(""));
             //ctor = CSharp.Interpreter.ValueReturn(block, "DELIM", new DataStruct(""));
             yield return ctor;
             DataStruct arg1 = ctor.Data;
