@@ -144,6 +144,7 @@ namespace UBlockly
             {
                 Debug.LogError("Missing the value: " + key);
                 MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+                str = "";
             }
 
             return str;

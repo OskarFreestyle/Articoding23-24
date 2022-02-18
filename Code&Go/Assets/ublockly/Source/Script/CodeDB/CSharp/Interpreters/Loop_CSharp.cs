@@ -147,10 +147,9 @@ namespace UBlockly
         {
             ResetFlowState();
             
-            // TODO: por algun motivo, los bucles while funcionan diferente. Check how it goes.
-            //bool until =  CheckInput.TryGetFieldValue(block, "MODE").Equals("UNTIL");
-            bool until = block.GetFieldValue("MODE").Equals("UNTIL");
-            
+            bool until =  CheckInput.TryGetFieldValue(block, "MODE").Equals("UNTIL");
+            //bool until = block.GetFieldValue("MODE").Equals("UNTIL");
+
             CmdEnumerator ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false));
             //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "BOOL", new DataStruct(false));
             yield return ctor;
