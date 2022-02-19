@@ -21,6 +21,7 @@ limitations under the License.
 
 using System;
 using System.Collections;
+using UnityEngine;
 
 namespace UBlockly
 {
@@ -34,7 +35,6 @@ namespace UBlockly
             do
             {
                 CmdEnumerator ctor = CheckInput.TryValueReturn(block, "IF" + n);
-                //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "IF" + n);
                 yield return ctor;
                 DataStruct condition = ctor.Data;
                 if (!condition.IsUndefined && condition.IsBoolean && condition.BooleanValue)
@@ -66,52 +66,59 @@ namespace UBlockly
             string op = block.GetFieldValue("OP");
 
             CmdEnumerator ctor = CheckInput.TryValueReturn(block, "A", new DataStruct(0));
-            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "A", new DataStruct(0));
             yield return ctor;
             DataStruct argument0 = ctor.Data;
 
             ctor = CheckInput.TryValueReturn(block, "B", new DataStruct(0));
-            //ctor = CSharp.Interpreter.ValueReturn(block, "B", new DataStruct(0));
             yield return ctor;
             DataStruct argument1 = ctor.Data;
-            
-            if (argument0.Type != argument1.Type)
-                throw new Exception("arguments of block logic_compare should be the same data type");
-            
+
+            BooleansChecker.SameTipe(argument0, argument1);
+            // if (argument0.Type != argument1.Type)
+            //     throw new Exception("arguments of block logic_compare should be the same data type");
+
             DataStruct returnData = new DataStruct(false);
-            switch (op)
+            try
             {
-                case "EQ":
-                    returnData.BooleanValue = argument0 == argument1;
-                    break;
-                    
-                case "NEQ":
-                    returnData.BooleanValue = argument0 != argument1;
-                    break;
-                    
-                case "LT":
-                    if (argument0.Type != Define.EDataType.Number)
-                        throw new Exception("block logic_compare's \"<\" can't compare two strings and booleans");
-                    returnData.BooleanValue = argument0.NumberValue < argument1.NumberValue;
-                    break;
-                    
-                case "LTE":
-                    if (argument0.Type != Define.EDataType.Number)
-                        throw new Exception("block logic_compare's \"<=\" can't compare two strings and booleans");
-                    returnData.BooleanValue = argument0.NumberValue <= argument1.NumberValue;
-                    break;
-                    
-                case "GT":
-                    if (argument0.Type != Define.EDataType.Number)
-                        throw new Exception("block logic_compare's \">\" can't compare two strings and booleans");
-                    returnData.BooleanValue = argument0.NumberValue > argument1.NumberValue;
-                    break;
-                    
-                case "GTE":
-                    if (argument0.Type != Define.EDataType.Number)
-                        throw new Exception("block logic_compare's \">=\" can't compare two strings and booleans");
-                    returnData.BooleanValue = argument0.NumberValue >= argument1.NumberValue;
-                    break;
+                switch (op)
+                {
+                    case "EQ":
+                        returnData.BooleanValue = argument0 == argument1;
+                        break;
+
+                    case "NEQ":
+                        returnData.BooleanValue = argument0 != argument1;
+                        break;
+
+                    case "LT":
+                        if (argument0.Type != Define.EDataType.Number)
+                            throw new Exception("block logic_compare's \"<\" can't compare two strings and booleans");
+                        returnData.BooleanValue = argument0.NumberValue < argument1.NumberValue;
+                        break;
+
+                    case "LTE":
+                        if (argument0.Type != Define.EDataType.Number)
+                            throw new Exception("block logic_compare's \"<=\" can't compare two strings and booleans");
+                        returnData.BooleanValue = argument0.NumberValue <= argument1.NumberValue;
+                        break;
+
+                    case "GT":
+                        if (argument0.Type != Define.EDataType.Number)
+                            throw new Exception("block logic_compare's \">\" can't compare two strings and booleans");
+                        returnData.BooleanValue = argument0.NumberValue > argument1.NumberValue;
+                        break;
+
+                    case "GTE":
+                        if (argument0.Type != Define.EDataType.Number)
+                            throw new Exception("block logic_compare's \">=\" can't compare two strings and booleans");
+                        returnData.BooleanValue = argument0.NumberValue >= argument1.NumberValue;
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e.Message);
+                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
             }
             ReturnData(returnData);
         }
@@ -125,17 +132,17 @@ namespace UBlockly
             string op = block.GetFieldValue("OP");
 
             CmdEnumerator ctor = CheckInput.TryValueReturn(block, "A", new DataStruct(false));
-            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "A", new DataStruct(false));
             yield return ctor;
             DataStruct argument0 = ctor.Data;
 
             ctor = CheckInput.TryValueReturn(block, "B", new DataStruct(false));
-            //ctor = CSharp.Interpreter.ValueReturn(block, "B", new DataStruct(false));
             yield return ctor;
             DataStruct argument1 = ctor.Data;
             
-            if (argument0.Type != argument1.Type || argument0.Type != Define.EDataType.Boolean)
-                throw new Exception("arguments of block logic_operation should be the same BOOLEAN type");
+            BooleansChecker.CheckBool(argument0);
+            BooleansChecker.SameTipe(argument0, argument1);
+            // if (argument0.Type != argument1.Type || argument0.Type != Define.EDataType.Boolean)
+            //     throw new Exception("arguments of block logic_operation should be the same BOOLEAN type");
             
             DataStruct returnData = new DataStruct(false);
             switch (op)
@@ -157,12 +164,10 @@ namespace UBlockly
         protected override IEnumerator Execute(Block block)
         {
             CmdEnumerator ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false));
-            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "BOOL", new DataStruct(false));
             yield return ctor;
             DataStruct argument = ctor.Data;
             
-            if (argument.Type != Define.EDataType.Boolean)
-                throw new Exception("argument of block logic_negate should be the BOOLEAN type");
+            BooleansChecker.CheckBool(argument);
             
             ReturnData(new DataStruct(!argument.BooleanValue));
         }
@@ -198,13 +203,11 @@ namespace UBlockly
         protected override IEnumerator Execute(Block block)
         {
             CmdEnumerator ctor = CheckInput.TryValueReturn(block, "IF", new DataStruct(false));
-            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "IF", new DataStruct(false));
             yield return ctor;
             DataStruct condition = ctor.Data;
             
-            if (condition.Type != Define.EDataType.Boolean)
-                throw new Exception("argument \"IF\" of block logic_ternary should be the BOOLEAN type");
-
+            BooleansChecker.CheckBool(condition);
+            
             if (condition.BooleanValue)
             {
                 yield return CSharp.Interpreter.StatementRun(block, "THEN");
@@ -224,6 +227,34 @@ namespace UBlockly
             string toggleString = block.GetFieldValue("CHECKBOX");
             bool toggleValue = toggleString.Equals("TRUE");
             return new DataStruct(toggleValue);
+        }
+    }
+    public class BooleansChecker
+    {
+        public static void CheckBool(DataStruct data)
+        {
+            try
+            {
+                if (data.Type != Define.EDataType.Boolean)
+                    throw new Exception("La expresión no es booleana, es de tipo: " + data.Type);
+            }
+            catch (Exception e)
+            {
+                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+            }
+        }
+
+        public static void SameTipe(DataStruct first, DataStruct second)
+        {
+            try
+            {
+                if (first.Type != second.Type)
+                    throw new Exception("No se pueden comparar los tipos " + first.Type + " y " + second.Type);
+            }
+            catch (Exception e)
+            {
+                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+            }
         }
     }
 }
