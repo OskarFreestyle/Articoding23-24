@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03586712, g: 0.0503774, b: 0.10300305, a: 1}
+  m_IndirectSpecularColor: {r: 0.035867117, g: 0.0503774, b: 0.10300305, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1974,6 +1974,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &290598183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8068610178479776461, guid: 4c68a57c4ed8de64f9b7b23a2c9f7935, type: 3}
+  m_PrefabInstance: {fileID: 290598174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302143661
 GameObject:
   m_ObjectHideFlags: 0
@@ -10425,6 +10430,7 @@ MonoBehaviour:
   hintButton: {fileID: 0}
   boardModifiable: 1
   gameOverPanel: {fileID: 290598176}
+  gameOverPanelText: {fileID: 290598183}
   blackRect: {fileID: 1698826748}
   streamRoom: {fileID: 1879120465}
   deactivatedColor: {r: 0, g: 0, b: 0, a: 0}

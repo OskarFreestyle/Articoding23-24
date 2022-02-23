@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameOverMessages_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 27ad02fb47fc2a84f8a25743f5982ebb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 10785271808
+    m_Localized: There's an empty field.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1068984553844736
+    m_Localized: How many frames do you want to wait?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1150251874004992
+    m_Localized: How much time do you want to wait?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416140712194048
+    m_Localized: What condition should be met?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1418821241548800
+    m_Localized: What values do you want to compare?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1419781930102784
+    m_Localized: You can't compare different types of data!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1421484792360960
+    m_Localized: You have to insert a boolean value.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1423052166017024
+    m_Localized: What do you want to negate?
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

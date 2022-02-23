@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameOverMessages_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 27ad02fb47fc2a84f8a25743f5982ebb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 10785271808
+    m_Localized: "Hay un campo vac\xEDo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1068984553844736
+    m_Localized: "\xBFCu\xE1ntos frames quieres esperar?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1150251874004992
+    m_Localized: "\xBFCu\xE1nto tiempo quieres esperar?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416140712194048
+    m_Localized: "\xBFQu\xE9 condici\xF3n deber\xEDa cumplirse?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1418821241548800
+    m_Localized: "\xBFQu\xE9 valores quieres comparar?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1419781930102784
+    m_Localized: "\xA1No puedes comparar datos de tipos diferentes!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1421484792360960
+    m_Localized: Tienes que poner un valor booleano.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1423052166017024
+    m_Localized: "\xBFQu\xE9 quieres negar?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

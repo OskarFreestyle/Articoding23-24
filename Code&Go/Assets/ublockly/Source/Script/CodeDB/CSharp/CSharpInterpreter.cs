@@ -100,7 +100,7 @@ namespace UBlockly
     // Use it every time the input may not be there.
     public class CheckInput
     {
-        public static CmdEnumerator TryValueReturn(Block block, string key)
+        public static CmdEnumerator TryValueReturn(Block block, string key, string errorMessage = "")
         {
             CmdEnumerator ctor = null;
             try
@@ -111,12 +111,12 @@ namespace UBlockly
             catch (Exception e)
             {
                 Debug.LogError("Missing the value: " + key);
-                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+                MessageManager.Instance.SendMessage(errorMessage, MSG_TYPE.CODE_END);
             }
 
             return ctor;
         }
-        public static CmdEnumerator TryValueReturn(Block block, string key, DataStruct dataStruct)
+        public static CmdEnumerator TryValueReturn(Block block, string key, DataStruct dataStruct, string errorMessage = "")
         {
             CmdEnumerator ctor = null;
             try
@@ -126,13 +126,13 @@ namespace UBlockly
             catch (Exception e)
             {
                 Debug.LogError("Missing the value: " + key);
-                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+                MessageManager.Instance.SendMessage(errorMessage, MSG_TYPE.CODE_END);
             }
 
             return ctor;
         }
 
-        public static string TryGetFieldValue(Block block, string key)
+        public static string TryGetFieldValue(Block block, string key, string errorMessage ="")
         {
             string str = null;
             try
@@ -143,7 +143,7 @@ namespace UBlockly
             catch (Exception e)
             {
                 Debug.LogError("Missing the value: " + key);
-                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+                MessageManager.Instance.SendMessage(errorMessage, MSG_TYPE.CODE_END);
                 str = "";
             }
 

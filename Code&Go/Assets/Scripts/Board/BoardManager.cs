@@ -38,6 +38,7 @@ public class BoardManager : Listener
     private int currentSteps = 0;
 
     public GameObject gameOverPanel;
+    [SerializeField] private GameObject gameOverPanelText;
     public GameObject blackRect;
 
     public StreamRoom streamRoom;
@@ -863,7 +864,7 @@ public class BoardManager : Listener
                     if (AllReceiving())
                         completed = true;
                     else
-                        LevelFailed();
+                        LevelFailed(msg);
                     break;
             }
         }
@@ -879,12 +880,20 @@ public class BoardManager : Listener
         Invoke("LevelFailed", 1.0f);
     }
 
-    private void LevelFailed()
+    private void LevelFailed(string msg = "")
     {
         UBlockly.CSharp.Runner.Stop();
         gameOverPanel.SetActive(true);
-        blackRect.SetActive(true);
 
+        if (msg != "")
+        {
+            gameOverPanelText.SetActive(true);
+            gameOverPanel.GetComponent<GameOverPanel>().SetLocalizedText(msg);
+        }
+        else
+            gameOverPanelText.SetActive(false);
+        
+        blackRect.SetActive(true);
         streamRoom.GameOver();
 
         var levelName = GameManager.Instance.GetCurrentLevelName();

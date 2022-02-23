@@ -215,6 +215,12 @@ MonoBehaviour:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 27ad02fb47fc2a84f8a25743f5982ebb
+    m_Address: GameOverMessages Shared Data
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: fcd72a3575af0a34e932bbaab802abd7, type: 2}
   m_SchemaSet:

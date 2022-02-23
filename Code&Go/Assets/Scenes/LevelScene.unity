@@ -726,6 +726,7 @@ MonoBehaviour:
   hintButton: {fileID: 245747984}
   boardModifiable: 0
   gameOverPanel: {fileID: 1219248984}
+  gameOverPanelText: {fileID: 6361638430162536158}
   blackRect: {fileID: 1341107436}
   streamRoom: {fileID: 1898858455}
   deactivatedColor: {r: 1, g: 1, b: 1, a: 0.4392157}
@@ -9501,3 +9502,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &6361638430162536158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8068610178479776461, guid: 4c68a57c4ed8de64f9b7b23a2c9f7935, type: 3}
+  m_PrefabInstance: {fileID: 6361638430162536151}
+  m_PrefabAsset: {fileID: 0}

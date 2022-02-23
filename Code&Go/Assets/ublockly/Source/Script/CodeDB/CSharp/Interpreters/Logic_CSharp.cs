@@ -34,7 +34,7 @@ namespace UBlockly
             bool satisfyIf = false;
             do
             {
-                CmdEnumerator ctor = CheckInput.TryValueReturn(block, "IF" + n);
+                CmdEnumerator ctor = CheckInput.TryValueReturn(block, "IF" + n, "Missing_Value_Logic_If");
                 yield return ctor;
                 DataStruct condition = ctor.Data;
                 if (!condition.IsUndefined && condition.IsBoolean && condition.BooleanValue)
@@ -65,17 +65,15 @@ namespace UBlockly
         {
             string op = block.GetFieldValue("OP");
 
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "A", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "A", new DataStruct(0), "Missing_Value_Logic_Comparison");
             yield return ctor;
             DataStruct argument0 = ctor.Data;
 
-            ctor = CheckInput.TryValueReturn(block, "B", new DataStruct(0));
+            ctor = CheckInput.TryValueReturn(block, "B", new DataStruct(0), "Missing_Value_Logic_Comparison");
             yield return ctor;
             DataStruct argument1 = ctor.Data;
 
-            BooleansChecker.SameTipe(argument0, argument1);
-            // if (argument0.Type != argument1.Type)
-            //     throw new Exception("arguments of block logic_compare should be the same data type");
+            BooleansChecker.SameType(argument0, argument1);
 
             DataStruct returnData = new DataStruct(false);
             try
@@ -118,7 +116,7 @@ namespace UBlockly
             catch (Exception e)
             {
                 Debug.LogError(e.Message);
-                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+                MessageManager.Instance.SendMessage("Incompatible_Types_Comparison", MSG_TYPE.CODE_END);
             }
             ReturnData(returnData);
         }
@@ -131,18 +129,16 @@ namespace UBlockly
         {
             string op = block.GetFieldValue("OP");
 
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "A", new DataStruct(false));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "A", new DataStruct(false), "Missing_Value_Logic_Comparison");
             yield return ctor;
             DataStruct argument0 = ctor.Data;
 
-            ctor = CheckInput.TryValueReturn(block, "B", new DataStruct(false));
+            ctor = CheckInput.TryValueReturn(block, "B", new DataStruct(false), "Missing_Value_Logic_Comparison");
             yield return ctor;
             DataStruct argument1 = ctor.Data;
             
             BooleansChecker.CheckBool(argument0);
-            BooleansChecker.SameTipe(argument0, argument1);
-            // if (argument0.Type != argument1.Type || argument0.Type != Define.EDataType.Boolean)
-            //     throw new Exception("arguments of block logic_operation should be the same BOOLEAN type");
+            BooleansChecker.SameType(argument0, argument1);
             
             DataStruct returnData = new DataStruct(false);
             switch (op)
@@ -163,7 +159,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false), "Missing_Value_Logic_Negation");
             yield return ctor;
             DataStruct argument = ctor.Data;
             
@@ -240,11 +236,11 @@ namespace UBlockly
             }
             catch (Exception e)
             {
-                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+                MessageManager.Instance.SendMessage("Not_Boolean_Expression", MSG_TYPE.CODE_END);
             }
         }
 
-        public static void SameTipe(DataStruct first, DataStruct second)
+        public static void SameType(DataStruct first, DataStruct second)
         {
             try
             {
@@ -253,7 +249,7 @@ namespace UBlockly
             }
             catch (Exception e)
             {
-                MessageManager.Instance.SendMessage("Error", MSG_TYPE.CODE_END);
+                MessageManager.Instance.SendMessage("Incompatible_Types_Comparison", MSG_TYPE.CODE_END);
             }
         }
     }
