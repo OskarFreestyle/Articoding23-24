@@ -34,7 +34,7 @@ namespace UBlockly
             bool satisfyIf = false;
             do
             {
-                CmdEnumerator ctor = CheckInput.TryValueReturn(block, "IF" + n, "Missing_Value_Logic_If");
+                CmdEnumerator ctor = CheckInput.TryValueReturn(block, "IF" + n, "Missing_Value_Logic_Condition");
                 yield return ctor;
                 DataStruct condition = ctor.Data;
                 if (!condition.IsUndefined && condition.IsBoolean && condition.BooleanValue)

@@ -121,7 +121,6 @@ namespace UBlockly
             ResetFlowState();
             
             CmdEnumerator ctor = CheckInput.TryValueReturn(block, "TIMES", new DataStruct(0));
-            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "TIMES", new DataStruct(0));
             yield return ctor;
             DataStruct repeats = ctor.Data;
             
@@ -147,24 +146,20 @@ namespace UBlockly
         {
             ResetFlowState();
             
-            bool until =  CheckInput.TryGetFieldValue(block, "MODE").Equals("UNTIL");
-            //bool until = block.GetFieldValue("MODE").Equals("UNTIL");
+            bool until =  CheckInput.TryGetFieldValue(block, "MODE", "Missing_Value_Logic_Condition").Equals("UNTIL");
 
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false));
-            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "BOOL", new DataStruct(false));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false), "Missing_Value_Logic_Condition");
             yield return ctor;
             DataStruct arg = ctor.Data;
             
-            if (arg.Type != Define.EDataType.Boolean)
-                throw new Exception("input value \"BOOL\" of block controls_whileUntil must be a boolean type");
+            BooleansChecker.CheckBool(arg);
 
             bool condition = until ? !arg.BooleanValue : arg.BooleanValue;
             while (condition)
             {
                 yield return CSharp.Interpreter.StatementRun(block, "DO");
                 
-                ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false));
-                ctor = CSharp.Interpreter.ValueReturn(block, "BOOL", new DataStruct(false));
+                ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false), "Missing_Value_Logic_Condition");
                 yield return ctor;
                 arg = ctor.Data;
                 condition = until ? !arg.BooleanValue : arg.BooleanValue;
@@ -184,18 +179,15 @@ namespace UBlockly
         {
             ResetFlowState();
             
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "FROM", new DataStruct(0));
-            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "FROM", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "FROM", new DataStruct(0), "Missing_Value_For_From");
             yield return ctor;
             DataStruct from = ctor.Data;
             
-            ctor = CheckInput.TryValueReturn(block, "TO", new DataStruct(0));
-            //ctor = CSharp.Interpreter.ValueReturn(block, "TO", new DataStruct(0));
+            ctor = CheckInput.TryValueReturn(block, "TO", new DataStruct(0), "Missing_Value_For_To");
             yield return ctor;
             DataStruct to = ctor.Data;
             
-            ctor = CheckInput.TryValueReturn(block, "BY", new DataStruct(0));
-            //ctor = CSharp.Interpreter.ValueReturn(block, "BY", new DataStruct(0));
+            ctor = CheckInput.TryValueReturn(block, "BY", new DataStruct(0), "Missing_Value_For_By");
             yield return ctor;
             DataStruct increment = ctor.Data;
                 
@@ -221,8 +213,7 @@ namespace UBlockly
         {
             ResetFlowState();
             
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "LIST");
-            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "LIST");
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "LIST", "Missing_Value_ForEach");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
             

@@ -42,7 +42,6 @@ namespace UBlockly
         protected override IEnumerator Execute(Block block)
         {
             CmdEnumerator ctor = CheckInput.TryValueReturn(block, "TEXT", new DataStruct(""));
-            //CmdEnumerator ctor = CSharp.Interpreter.ValueReturn(block, "TEXT", new DataStruct(""));
             yield return ctor;
             DataStruct input = ctor.Data; 
             //todo: 暂时用Debug.Log，后面根据UI输出框再定

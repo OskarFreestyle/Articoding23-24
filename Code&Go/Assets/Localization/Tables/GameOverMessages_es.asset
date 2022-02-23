@@ -50,5 +50,69 @@ MonoBehaviour:
     m_Localized: "\xBFQu\xE9 quieres negar?"
     m_Metadata:
       m_Items: []
+  - m_Id: 1437850576498688
+    m_Localized: "\xBFQu\xE9 valor inicial tiene la variable?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1438326130880512
+    m_Localized: "\xBFCu\xE1ndo termina el bucle?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1438538933088256
+    m_Localized: "\xBFCu\xE1nto crece la variable en cada iteraci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1439346420494336
+    m_Localized: "\xBFPor qu\xE9 lista quieres iterar?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1440728812761088
+    m_Localized: "\xBFCon qu\xE9 valor quieres trabajar?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1544785405554688
+    m_Localized: "\xBFPor qu\xE9 n\xFAmero quieres dividir?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1545478967275520
+    m_Localized: "\xBFQu\xE9 n\xFAmero quieres redondear?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1545488794529792
+    m_Localized: "\xBFCu\xE1ntos pasos quieres mover el l\xE1ser?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1547677298470912
+    m_Localized: "\xBFCu\xE1ntos pasos quieres mover el objeto?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1547704150405120
+    m_Localized: "\xBFQu\xE9 objeto quieres usar?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1548092534566912
+    m_Localized: "\xBFCu\xE1nto quieres rotar el l\xE1ser?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1548095000817664
+    m_Localized: "\xBFCu\xE1nto quieres rotar el objeto?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1548096460435456
+    m_Localized: "\xA1Ponle un valor a la intensidad del l\xE1ser!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1550041413726208
+    m_Localized: "\xBFLa puerta deber\xEDa estar cerrada o abierta?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1555032522240000
+    m_Localized: "\xA1Ponle un valor a la variable!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1555271446573056
+    m_Localized: "\xBFCu\xE1nto quieres cambiar la variable?"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

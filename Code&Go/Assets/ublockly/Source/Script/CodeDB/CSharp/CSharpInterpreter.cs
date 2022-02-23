@@ -132,7 +132,7 @@ namespace UBlockly
             return ctor;
         }
 
-        public static string TryGetFieldValue(Block block, string key, string errorMessage ="")
+        public static string TryGetFieldValue(Block block, string key, string errorMessage = "")
         {
             string str = null;
             try

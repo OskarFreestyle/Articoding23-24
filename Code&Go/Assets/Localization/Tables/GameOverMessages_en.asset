@@ -50,5 +50,69 @@ MonoBehaviour:
     m_Localized: What do you want to negate?
     m_Metadata:
       m_Items: []
+  - m_Id: 1437850576498688
+    m_Localized: What initial value does the variable have?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1438326130880512
+    m_Localized: When does the loop stop?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1438538933088256
+    m_Localized: How much does the variable increase in each iteration?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1439346420494336
+    m_Localized: Which list do you want to iterate through?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1440728812761088
+    m_Localized: What value do you want to work with?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1544785405554688
+    m_Localized: What number do you want to divide by?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1545478967275520
+    m_Localized: What number do you want to round?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1545488794529792
+    m_Localized: How many steps do you want to move the laser?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1547677298470912
+    m_Localized: How many steps do you want to move the object?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1547704150405120
+    m_Localized: Which object do you want to use?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1548092534566912
+    m_Localized: How much do you want to rotate the laser?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1548095000817664
+    m_Localized: How much do you want to rotate the object?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1548096460435456
+    m_Localized: Set an intensity for the laser!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1550041413726208
+    m_Localized: Should the door be open or closed?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1555032522240000
+    m_Localized: Set a value for the variable!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1555271446573056
+    m_Localized: How much do you want to change the variable?
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

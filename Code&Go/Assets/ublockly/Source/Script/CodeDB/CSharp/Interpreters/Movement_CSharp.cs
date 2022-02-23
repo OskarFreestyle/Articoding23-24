@@ -36,7 +36,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0), "Missing_Value_Movement_Laser");
 
             yield return ctor;
             DataStruct arg0 = ctor.Data;
@@ -55,11 +55,11 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "NAME", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "NAME", new DataStruct(0), "Missing_Value_Object_Name");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
-            ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
+            ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0), "Missing_Value_Movement_Object");
             yield return ctor;
             DataStruct arg1 = ctor.Data;
 
@@ -77,7 +77,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0), "Missing_Value_Rotation_Laser");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
@@ -95,12 +95,12 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "NAME", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "NAME", new DataStruct(0), "Missing_Value_Object_Name");
             
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
-            ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
+            ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0), "Missing_Value_Rotation_Object");
             
             yield return ctor;
             DataStruct arg1 = ctor.Data;
@@ -119,7 +119,7 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "AMOUNT", new DataStruct(0), "Missing_Value_Laser_Intensity");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
             Number amount = arg0.NumberValue;           
@@ -136,15 +136,15 @@ namespace UBlockly
     {
         protected override IEnumerator Execute(Block block)
         {
-            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "ACTIVE", new DataStruct(0));
+            CmdEnumerator ctor = CheckInput.TryValueReturn(block, "ACTIVE", new DataStruct(0), "Missing_Value_Door_Active");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
 
-            ctor = CheckInput.TryValueReturn(block, "NAME", new DataStruct(0));
+            ctor = CheckInput.TryValueReturn(block, "NAME", new DataStruct(0), "Missing_Value_Object_Name");
             yield return ctor;
             DataStruct arg1 = ctor.Data;
 
-            string msg = arg1.ToString() + " " + arg0.ToString();
+            string msg = arg1 + " " + arg0;
             MessageManager.Instance.SendMessage(msg, MSG_TYPE.ACTIVATE_DOOR);
 
             yield return new WaitForSeconds(Times.instructionWaitTime);
