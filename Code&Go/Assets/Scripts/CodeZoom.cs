@@ -8,7 +8,7 @@ public class CodeZoom : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] RectTransform codingArea;
     [SerializeField] float zoomAmount = 0.1f;
-    [SerializeField] float minZoom = 0.5f;
+    [SerializeField] float minZoom = 0.3f;
     [SerializeField] float maxZoom = 1.5f;
     [SerializeField] Button zoomInButton;
     [SerializeField] Button zoomOutButton;
