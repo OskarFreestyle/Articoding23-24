@@ -57,7 +57,8 @@ namespace UBlockly
 #endregion
             if (blocks.Count == 0 || startBlock == null) //articoding - solo ejecuta si existe un bloque start
             {
-                CSharp.Runner.FireUpdate(new RunnerUpdateState(RunnerUpdateState.Stop));
+                MessageManager.Instance.SendMessage("Missing_Start_Block", MSG_TYPE.CODE_END);  
+                CSharp.Runner.FireUpdate(new RunnerUpdateState(RunnerUpdateState.Stop));              
                 return;
             }
             

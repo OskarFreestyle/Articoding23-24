@@ -114,5 +114,9 @@ MonoBehaviour:
     m_Localized: "\xBFCu\xE1nto quieres cambiar la variable?"
     m_Metadata:
       m_Items: []
+  - m_Id: 3208929720545280
+    m_Localized: "\xA1Necesitas el bloque de Comienzo para que tu c\xF3digo funcione!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -870,7 +870,7 @@ public class BoardManager : Listener
         }
         catch
         {
-            LevelFailed();
+            LevelFailed(msg);
         }
     }
 

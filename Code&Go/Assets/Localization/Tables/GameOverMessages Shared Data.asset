@@ -111,6 +111,10 @@ MonoBehaviour:
     m_Key: Missing_Value_Variable_Change
     m_Metadata:
       m_Items: []
+  - m_Id: 3208929720545280
+    m_Key: Missing_Start_Block
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

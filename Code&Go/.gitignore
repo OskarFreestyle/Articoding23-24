@@ -22,7 +22,7 @@
 /[Aa]ssets/[Aa]ddressableAssetsData/**/*.meta
 /[Aa]ssets/[Ii]]so8601Duration/**/*.meta
 /[Aa]ssets/[Ll]evels/**/*.meta
-/[Aa]ssets/[Ll]ocalization/**/*.meta
+#/[Aa]ssets/[Ll]ocalization/**/*.meta
 /[Aa]ssets/[Pp]lugins/**/*.meta
 /[Aa]ssets/[Pp]refabs/**/*.meta
 /[Aa]ssets/[Ss]cenes/**/*.meta
@@ -40,6 +40,7 @@
 
 # Visual Studio cache directory
 .vs/
+.idea/
 
 # Gradle cache directory
 .gradle/
