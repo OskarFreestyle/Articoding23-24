@@ -3,22 +3,22 @@
   "BlockCategoryList": [
     {
       "CategoryName": "START",
-      "ColorHex": "#bc79d1",
+      "ColorHex": "#d469cb",
       "BlockTypePrefix": "start"
     },
     {
       "CategoryName": "VARIABLE",
-      "ColorHex": "#8a9fc6",
+      "ColorHex": "#6ba5d7",
       "BlockTypePrefix": "variables"
     },
     {
       "CategoryName": "LOGIC",
-      "ColorHex": "#47574d",
+      "ColorHex": "#418059",
       "BlockTypePrefix": "logic"
     },
     {
       "CategoryName": "CONTROL",
-      "ColorHex": "#669966",
+      "ColorHex": "#70ae55",
       "BlockTypePrefix": "controls"
     },
     {
@@ -48,7 +48,7 @@
     },
     {
       "CategoryName": "MOVEMENT",
-      "ColorHex": "#aaaa55",
+      "ColorHex": "#c6b237",
       "BlockTypePrefix": "movement"
     }
   ]
