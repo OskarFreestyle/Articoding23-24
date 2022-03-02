@@ -503,11 +503,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6361638429232694671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb0c58b62e9f9224ab2b2079e81ab393, type: 3}
+  m_Script: {fileID: 11500000, guid: 612b10a8072ac6c408c3d4e31cbadd6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _errorText: {fileID: 169562253893926619}
-  _stringTableCollection: {fileID: 11400000, guid: f64bfe78f67ea9e4b866dda219ad8e88, type: 2}
+  _stringTableEn: {fileID: 11400000, guid: a2d16e4d6efebca45b42b8bbd7bd0ce0, type: 2}
+  _stringTableEs: {fileID: 11400000, guid: dd8376d7783c3c24eac52141045548f5, type: 2}
 --- !u!1 &6361638429456124088
 GameObject:
   m_ObjectHideFlags: 0
