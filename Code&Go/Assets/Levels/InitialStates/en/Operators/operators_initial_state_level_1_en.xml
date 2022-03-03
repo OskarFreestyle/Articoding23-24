@@ -1,12 +1,12 @@
 <xml>
     <variables>
-        <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Objeto</variable>
-        <variable type="" id="An]Sn_i2fD:nVJ/Y]5_A">Desplazamiento</variable>
+        <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Object</variable>
+        <variable type="" id="An]Sn_i2fD:nVJ/Y]5_A">Movement</variable>
     </variables>
     <block type="start_start" id="FP$;_}c|]sMopa~j||)x" x="23" y="-196">
         <next>
             <block type="variables_set" id="q7*vM`_bKyO/@ED6M%Pz">
-                <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Objeto</field>
+                <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Object</field>
                 <value name="VALUE">
                     <block type="text" id="Kgf)VE~u~}-+:C5+)WJi">
                         <field name="TEXT">Laser_1</field>
@@ -14,7 +14,7 @@
                 </value>
                 <next>
                     <block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
-                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Desplazamiento</field>
+                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movement</field>
                         <value name="VALUE">
                             <block type="math_number" id="gy6Zv}mXv(ro1e!#^[Yf">
                                 <field name="NUM">3</field>
@@ -24,7 +24,7 @@
                             <block type="movement_activate_door" id="Xl=e+^x1bJ.OJ}ptylus">
                                 <value name="NAME">
                                     <block type="text" id="{!AYsiguOrGGyXRkZ;pM">
-                                        <field name="TEXT">Puerta_1</field>
+                                        <field name="TEXT">Door_1</field>
                                     </block>
                                 </value>
                                 <value name="ACTIVE">
@@ -32,7 +32,7 @@
                                         <field name="OP">GT</field>
                                         <value name="A">
                                             <block type="variables_get" id="(iwMuCx6jT_WpxCpgf?m">
-                                                <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Desplazamiento</field>
+                                                <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movement</field>
                                             </block>
                                         </value>
                                         <value name="B">
@@ -47,12 +47,12 @@
                                         <field name="DIRECTION">LEFT</field>
                                         <value name="NAME">
                                             <block type="variables_get" id="+Fo?}_3Wrdf#HEh)olq3">
-                                                <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Objeto</field>
+                                                <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Object</field>
                                             </block>
                                         </value>
                                         <value name="AMOUNT">
                                             <block type="variables_get" id="EEi;2,[G-K2g{w^{*Jl-">
-                                                <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Desplazamiento</field>
+                                                <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movement</field>
                                             </block>
                                         </value>
                                     </block>

@@ -1,6 +1,6 @@
 <xml>
     <variables>
-        <variable type="" id="Y1/sKS9%bRPPWOodp|vK">Dos</variable>
+        <variable type="" id="Y1/sKS9%bRPPWOodp|vK">x</variable>
         <variable type="" id="jwuTPDG4T-NOP!Rp]qnM">Cantidad</variable>
     </variables>
     <block type="start_start" id="_}|]vs{tz[FLE76!cNxj" x="210" y="-191">
@@ -14,7 +14,7 @@
                 </value>
                 <next>
                     <block type="variables_set" id="uvtDnG}iB2UJhGTH}f(_">
-                        <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">Dos</field>
+                        <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">x</field>
                         <value name="VALUE">
                             <block type="math_number" id="RU2/7LXshN2~3toV$BIg">
                                 <field name="NUM">1</field>
@@ -33,7 +33,7 @@
                                         <field name="DIRECTION">DOWN</field>
                                         <value name="AMOUNT">
                                             <block type="variables_get" id="FMJkYHd*5};FXX/+@ll7">
-                                                <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">Dos</field>
+                                                <field name="VAR" id="Y1/sKS9%bRPPWOodp|vK" variableType="">x</field>
                                             </block>
                                         </value>
                                         <next>

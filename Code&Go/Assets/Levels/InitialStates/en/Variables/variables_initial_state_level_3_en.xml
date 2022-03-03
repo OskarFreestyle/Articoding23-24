@@ -1,12 +1,12 @@
 <xml>
     <variables>
-        <variable type="" id="jwuTPDG4T-NOP!Rp]qnM">CantidadMovimiento</variable>
-        <variable type="" id="o=z,]~V,4AG$IjWC8`hM">CantidadGiro</variable>
+        <variable type="" id="jwuTPDG4T-NOP!Rp]qnM">Movement</variable>
+        <variable type="" id="o=z,]~V,4AG$IjWC8`hM">Rotation</variable>
     </variables>
     <block type="start_start" id="2HG2LU6Na?oCp][@4wM%" x="176" y="-191">
         <next>
             <block type="variables_set" id="=Y^X?:FD}8?81T08s-{B">
-                <field name="VAR" id="o=z,]~V,4AG$IjWC8`hM" variableType="">CantidadGiro</field>
+                <field name="VAR" id="o=z,]~V,4AG$IjWC8`hM" variableType="">Rotation</field>
                 <value name="VALUE">
                     <block type="math_number" id="%8#Q@c2adiPb*W-JppZ-">
                         <field name="NUM">1</field>
@@ -14,13 +14,13 @@
                 </value>
                 <next>
                     <block type="variables_set" id="[AHn]l]/C,RLsw[upXZ0">
-                        <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">CantidadMovimiento</field>
+                        <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">Movement</field>
                         <next>
                             <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
                                 <field name="DIRECTION">UP</field>
                                 <value name="AMOUNT">
                                     <block type="variables_get" id="/OVNo#bRmn2dP4sbX}~I">
-                                        <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">CantidadMovimiento</field>
+                                        <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">Movement</field>
                                     </block>
                                 </value>
                                 <next>
@@ -28,7 +28,7 @@
                                         <field name="DIRECTION">DOWN</field>
                                         <value name="AMOUNT">
                                             <block type="variables_get" id="FMJkYHd*5};FXX/+@ll7">
-                                                <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">CantidadMovimiento</field>
+                                                <field name="VAR" id="jwuTPDG4T-NOP!Rp]qnM" variableType="">Movement</field>
                                             </block>
                                         </value>
                                         <next>
@@ -36,7 +36,7 @@
                                                 <field name="ROTATION">CLOCKWISE</field>
                                                 <value name="AMOUNT">
                                                     <block type="variables_get" id="hPr-SCSoZkkVT:rF7G[#">
-                                                        <field name="VAR" id="o=z,]~V,4AG$IjWC8`hM" variableType="">CantidadGiro</field>
+                                                        <field name="VAR" id="o=z,]~V,4AG$IjWC8`hM" variableType="">Rotation</field>
                                                     </block>
                                                 </value>
                                             </block>

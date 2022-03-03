@@ -1,11 +1,11 @@
 <xml>
     <variables>
-        <variable type="" id="rnq7bRY/3|0z}(wf)IUs">Cantidad</variable>
+        <variable type="" id="rnq7bRY/3|0z}(wf)IUs">Amount</variable>
     </variables>
     <block type="start_start" id="PJ5u%g@w/l=yV_0~Y?ej" x="193" y="-241">
         <next>
             <block type="variables_set" id="F~Y=!Q_QT/v5m4{a{%Z[">
-                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Cantidad</field>
+                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Amount</field>
                 <value name="VALUE">
                     <block type="math_number" id="8`JeWkAG`FG:ToQ:_6sS">
                         <field name="NUM">2</field>
@@ -16,7 +16,7 @@
                         <field name="DIRECTION">DOWN</field>
                         <value name="AMOUNT">
                             <block type="variables_get" id="D2FL-Cv~:2gBu2!?}lla">
-                                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Cantidad</field>
+                                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Amount</field>
                             </block>
                         </value>
                         <next>
@@ -24,12 +24,12 @@
                                 <field name="DIRECTION">RIGHT</field>
                                 <value name="AMOUNT">
                                     <block type="variables_get" id="oO?P,FS`B}ZI8UHtf4tF">
-                                        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Cantidad</field>
+                                        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Amount</field>
                                     </block>
                                 </value>
                                 <next>
                                     <block type="variables_set" id="Yi(eK#~(O2G+NxAepSg/">
-                                        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Cantidad</field>
+                                        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Amount</field>
                                         <value name="VALUE">
                                             <block type="math_number" id="%b/QDh@i!n5G.MsQq)m/">
                                                 <field name="NUM">0</field>

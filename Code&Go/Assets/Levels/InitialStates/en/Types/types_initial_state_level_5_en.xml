@@ -1,12 +1,12 @@
 <xml>
     <variables>
-        <variable type="" id="8`RGY%B7rb0z(,t.#)^0">Objeto</variable>
-        <variable type="" id="#Ej-#]/Qez.e{H7F]8x9">Cantidad</variable>
+        <variable type="" id="8`RGY%B7rb0z(,t.#)^0">Object</variable>
+        <variable type="" id="#Ej-#]/Qez.e{H7F]8x9">Amount</variable>
     </variables>
     <block type="start_start" id="Z~^,X5WL]VUAV@*c-.nG" x="206" y="-174">
         <next>
             <block type="variables_set" id="J!!kscBG{]e-?/bJvES*">
-                <field name="VAR" id="8`RGY%B7rb0z(,t.#)^0" variableType="">Objeto</field>
+                <field name="VAR" id="8`RGY%B7rb0z(,t.#)^0" variableType="">Object</field>
                 <value name="VALUE">
                     <block type="text" id="c8V~3|rgQ-6(;CK*IRgt">
                         <field name="TEXT" />
@@ -14,7 +14,7 @@
                 </value>
                 <next>
                     <block type="variables_set" id="nc]F2]i{oq{tM9j::Gd;">
-                        <field name="VAR" id="#Ej-#]/Qez.e{H7F]8x9" variableType="">Cantidad</field>
+                        <field name="VAR" id="#Ej-#]/Qez.e{H7F]8x9" variableType="">Amount</field>
                         <value name="VALUE">
                             <block type="math_number" id="2+R+toCQuM*VsEfAMQ|h">
                                 <field name="NUM">0</field>
