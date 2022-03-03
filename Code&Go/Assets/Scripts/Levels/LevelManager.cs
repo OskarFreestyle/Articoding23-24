@@ -43,6 +43,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int pasosOffset = 0;
 
     public GameObject endPanel;
+    public GameObject transparentRect;
     public GameObject blackRect;
     public GameObject exitConfirmationPanel;
 
@@ -85,7 +86,8 @@ public class LevelManager : MonoBehaviour
         }
 
         endPanel.SetActive(false);
-        //blackRect.SetActive(false);
+        transparentRect.SetActive(false);
+        blackRect.SetActive(false);
 
 #if UNITY_EDITOR
         saveButton.SetActive(true);
@@ -102,7 +104,6 @@ public class LevelManager : MonoBehaviour
         
         TrackerAsset.Instance.setVar("code", "\r\n" + text);
         TrackerAsset.Instance.Completable.Initialized(GameManager.Instance.GetCurrentLevelName().ToLower(), CompletableTracker.Completable.Level);
-
 
         //levelName.text = currentLevel.levelName;
         levelNameLocalized.StringReference = currentLevel.levelNameLocalized;
@@ -202,6 +203,7 @@ public class LevelManager : MonoBehaviour
     {
         ResetLevel();
         gameOverPanel.SetActive(false);
+        transparentRect.SetActive(false);
         blackRect.SetActive(false);
         gameOverMinimized.SetActive(false);
 
@@ -220,6 +222,7 @@ public class LevelManager : MonoBehaviour
         endPanelMinimized.SetActive(true);
         gameOverPanel.SetActive(false);
         endPanel.SetActive(false);
+        transparentRect.SetActive(false);
         blackRect.SetActive(false);
         debugPanel.SetActive(false);
         TrackerAsset.Instance.GameObject.Interacted("end_panel_minimized_button");
@@ -230,14 +233,21 @@ public class LevelManager : MonoBehaviour
         gameOverMinimized.SetActive(true);
         gameOverPanel.SetActive(false);
         //endPanel.SetActive(false);
+        transparentRect.SetActive(false);
         blackRect.SetActive(false);
         debugPanel.SetActive(false);
         TrackerAsset.Instance.GameObject.Interacted("game_over_panel_minimized_button");
     }
 
+    public void SetActiveNoInputPanel()
+    {
+        transparentRect.SetActive(true);
+    }
+
     public void SetActiveExitConfirmationPanel(bool active)
     {
         exitConfirmationPanel.SetActive(active);
+        transparentRect.SetActive(false);
         blackRect.SetActive(active);
     }
 

@@ -37,6 +37,7 @@ public class LevelTestManager : MonoBehaviour
     [SerializeField] StreamRoom streamRoom;
 
     public GameObject endPanel;
+    public GameObject transparentRect;
     public GameObject blackRect;
     public GameObject endPanelMinimized;
 
@@ -183,6 +184,7 @@ public class LevelTestManager : MonoBehaviour
         ResetLevel();
         gameOverPanel.SetActive(false);
         endPanel.SetActive(false);
+        transparentRect.SetActive(false);
         blackRect.SetActive(false);
         gameOverMinimized.SetActive(false);
         streamRoom.Retry();
@@ -194,6 +196,7 @@ public class LevelTestManager : MonoBehaviour
         endPanelMinimized.SetActive(true);
         gameOverPanel.SetActive(false);
         endPanel.SetActive(false);
+        transparentRect.SetActive(false);
         blackRect.SetActive(false);
         debugPanel.SetActive(false);
         TrackerAsset.Instance.GameObject.Used("end_panel_minimized");
@@ -204,9 +207,15 @@ public class LevelTestManager : MonoBehaviour
         gameOverMinimized.SetActive(true);
         gameOverPanel.SetActive(false);
         //endPanel.SetActive(false);
+        transparentRect.SetActive(false);
         blackRect.SetActive(false);
         debugPanel.SetActive(false);
         TrackerAsset.Instance.GameObject.Used("game_over_panel_minimized");
+    }
+
+    public void SetActiveNoInputPanel()
+    {
+        transparentRect.SetActive(true);
     }
 
     public void ActivateLevelBlocks(TextAsset textAsset, bool allActive)
