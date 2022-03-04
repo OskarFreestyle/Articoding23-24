@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door : BoardObject
 {
-    private bool open = false;
+    private bool close = false;
     [SerializeField] GameObject objectCollider;
     // DO STUFF I GUESS
     /*private void Awake()
@@ -15,7 +15,7 @@ public class Door : BoardObject
 
     override public string[] GetArgs()
     {
-        return new string[] { open.ToString() };
+        return new string[] { close.ToString() };
     }
 
     override public void LoadArgs(string[] args)
@@ -23,12 +23,12 @@ public class Door : BoardObject
         if (args != null && args.Length > 0)
             try
             {
-                SetActive(bool.Parse(args[0]));
+                SetActive(!bool.Parse(args[0]));
             }catch
             {
                 try
                 {
-                    SetActive(int.Parse(args[0]) > 0);
+                    SetActive(int.Parse(args[0]) <= 0);
                 }
                 catch
                 {
@@ -39,14 +39,14 @@ public class Door : BoardObject
 
     public void SetActive(bool open)
     {
-        if (this.open == open) return;
+        if (this.close != open) return;
         //Animacion
         Invoke("DeactivateCollider", 0.01f);
-        this.open = open;
+        this.close = !open;
     }
 
     public void DeactivateCollider()
     {
-        objectCollider.SetActive(!open);
+        objectCollider.SetActive(!close);
     }
 }
