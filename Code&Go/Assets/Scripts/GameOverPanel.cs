@@ -6,6 +6,8 @@ using UnityEngine.Localization.Tables;
 
 public class GameOverPanel : MonoBehaviour
 {
+    [SerializeField] private GameObject _errorIcon;
+    [SerializeField] private Text _titleText;
     [SerializeField] private Text _errorText;
     [SerializeField] private StringTable _stringTableEn;
     [SerializeField] private StringTable _stringTableEs;
@@ -31,6 +33,8 @@ public class GameOverPanel : MonoBehaviour
         }
         catch (Exception e)
         {
+            _errorIcon.SetActive(false);
+            _titleText.gameObject.SetActive(true);
             _errorText.gameObject.SetActive(false);
         }
     }

@@ -38,7 +38,9 @@ public class BoardManager : Listener
     private int currentSteps = 0;
 
     public GameObject gameOverPanel;
-    [SerializeField] private GameObject gameOverPanelText;
+    [SerializeField] private GameObject gameOverTitleText;
+    [SerializeField] private GameObject gameOverErrorText;
+    [SerializeField] private GameObject gameOverErrorIcon;
     public GameObject blackRect;
 
     public StreamRoom streamRoom;
@@ -887,12 +889,18 @@ public class BoardManager : Listener
 
         if (msg != "")
         {
-            gameOverPanelText.SetActive(true);
+            gameOverTitleText.SetActive(false);
+            gameOverErrorText.SetActive(true);
+            gameOverErrorIcon.SetActive(true);
             gameOverPanel.GetComponent<GameOverPanel>().SetLocalizedText(msg);
         }
         else
-            gameOverPanelText.SetActive(false);
-        
+        {
+            gameOverTitleText.SetActive(true);
+            gameOverErrorText.SetActive(false);
+            gameOverErrorIcon.SetActive(false);
+        }
+
         blackRect.SetActive(true);
         streamRoom.GameOver();
 
