@@ -45,7 +45,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3439720536170496
-    m_Localized: Nivel 4
+    m_Localized: Nueva variable
     m_Metadata:
       m_Items: []
   - m_Id: 3439847191568384
@@ -54,7 +54,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8064916239560704
-    m_Localized: Nivel 3
+    m_Localized: "Tarjetas de c\xF3digo"
     m_Metadata:
       m_Items: []
   - m_Id: 8064940604272640
@@ -63,7 +63,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13071693836533760
-    m_Localized: Nivel5
+    m_Localized: Giros
     m_Metadata:
       m_Items: []
   - m_Id: 13071943355678720

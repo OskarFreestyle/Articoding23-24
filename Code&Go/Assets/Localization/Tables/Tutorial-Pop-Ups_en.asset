@@ -45,7 +45,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3439720536170496
-    m_Localized: Level 4
+    m_Localized: New variable
     m_Metadata:
       m_Items: []
   - m_Id: 3439847191568384
@@ -54,7 +54,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8064916239560704
-    m_Localized: Level 3
+    m_Localized: Code cards
     m_Metadata:
       m_Items: []
   - m_Id: 8064940604272640
@@ -63,7 +63,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13071693836533760
-    m_Localized: Level5
+    m_Localized: Rotation
     m_Metadata:
       m_Items: []
   - m_Id: 13071943355678720
