@@ -19,147 +19,147 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 71444025344
-    m_Localized: Learning about variables
+    m_Localized: '2-1: Learning about variables'
     m_Metadata:
       m_Items: []
   - m_Id: 729903616000
-    m_Localized: "\rAdd code cards and fix the code"
+    m_Localized: "2-2: \rAdd code cards and fix the code"
     m_Metadata:
       m_Items: []
   - m_Id: 1047919939584
-    m_Localized: Add variables code cards
+    m_Localized: '2-4: Add variables code cards'
     m_Metadata:
       m_Items: []
   - m_Id: 1146398003200
-    m_Localized: Now with less help
+    m_Localized: '2-5: Now with less help'
     m_Metadata:
       m_Items: []
   - m_Id: 1254476828672
-    m_Localized: Add actions code cards
+    m_Localized: '2-6: Add actions code cards'
     m_Metadata:
       m_Items: []
   - m_Id: 1352116031488
-    m_Localized: Put all the actions
+    m_Localized: '2-7: Put all the actions'
     m_Metadata:
       m_Items: []
   - m_Id: 1620224331776
-    m_Localized: Data Types 2
+    m_Localized: '3-2: Data Types 2'
     m_Metadata:
       m_Items: []
   - m_Id: 1738105245696
-    m_Localized: Data Types 3
+    m_Localized: '3-3: Data Types 3'
     m_Metadata:
       m_Items: []
   - m_Id: 1880166322176
-    m_Localized: Data Types 4
+    m_Localized: '3-4: Data Types 4'
     m_Metadata:
       m_Items: []
   - m_Id: 2010802114560
-    m_Localized: Data Types 5
+    m_Localized: '3-5: Data Types 5'
     m_Metadata:
       m_Items: []
   - m_Id: 2149360947200
-    m_Localized: Data Types 6
+    m_Localized: '3-6: Data Types 6'
     m_Metadata:
       m_Items: []
   - m_Id: 2400595562496
-    m_Localized: Data Types 7
+    m_Localized: '3-7: Data Types 7'
     m_Metadata:
       m_Items: []
   - m_Id: 2751654612992
-    m_Localized: Operators 1
+    m_Localized: '4-1: Operators 1'
     m_Metadata:
       m_Items: []
   - m_Id: 2903391948800
-    m_Localized: Operators 2
+    m_Localized: '4-2: Operators 2'
     m_Metadata:
       m_Items: []
   - m_Id: 3188537511936
-    m_Localized: Operators 3
+    m_Localized: '4-3: Operators 3'
     m_Metadata:
       m_Items: []
   - m_Id: 3265909837824
-    m_Localized: Operators 4
+    m_Localized: '4-4: Operators 4'
     m_Metadata:
       m_Items: []
   - m_Id: 3463591579648
-    m_Localized: Operators 5
+    m_Localized: '4-5: Operators 5'
     m_Metadata:
       m_Items: []
   - m_Id: 3541295255552
-    m_Localized: Operators 6
+    m_Localized: '4-6: Operators 6'
     m_Metadata:
       m_Items: []
   - m_Id: 3624317308928
-    m_Localized: Operators 7
+    m_Localized: '4-7: Operators 7'
     m_Metadata:
       m_Items: []
   - m_Id: 3818501001216
-    m_Localized: Loops 2
+    m_Localized: '5-2: Loops 2'
     m_Metadata:
       m_Items: []
   - m_Id: 3945856847872
-    m_Localized: Loops 3
+    m_Localized: '5-3: Loops 3'
     m_Metadata:
       m_Items: []
   - m_Id: 4018745462784
-    m_Localized: Loops 4
+    m_Localized: '5-4: Loops 4'
     m_Metadata:
       m_Items: []
   - m_Id: 4311839232000
-    m_Localized: Loops 5
+    m_Localized: '5-5: Loops 5'
     m_Metadata:
       m_Items: []
   - m_Id: 4387194097664
-    m_Localized: Loops 6
+    m_Localized: '5-6: Loops 6'
     m_Metadata:
       m_Items: []
   - m_Id: 4464767750144
-    m_Localized: Loops 7
+    m_Localized: '5-7: Loops 7'
     m_Metadata:
       m_Items: []
   - m_Id: 4575413489664
-    m_Localized: Loops 8
+    m_Localized: '5-8: Loops 8'
     m_Metadata:
       m_Items: []
   - m_Id: 4726181941248
-    m_Localized: Loops 9
+    m_Localized: '5-9: Loops 9'
     m_Metadata:
       m_Items: []
   - m_Id: 4849486090240
-    m_Localized: Conditionals 2
+    m_Localized: 6:2 Conditionals 2
     m_Metadata:
       m_Items: []
   - m_Id: 5028813557760
-    m_Localized: Conditionals 3
+    m_Localized: '6-3: Conditionals 3'
     m_Metadata:
       m_Items: []
   - m_Id: 5120069029888
-    m_Localized: Conditionals 4
+    m_Localized: '6-4: Conditionals 4'
     m_Metadata:
       m_Items: []
   - m_Id: 5211274170368
-    m_Localized: Conditionals 5
+    m_Localized: '6-5: Conditionals 5'
     m_Metadata:
       m_Items: []
   - m_Id: 5307269206016
-    m_Localized: Conditionals 6
+    m_Localized: '6-6: Conditionals 6'
     m_Metadata:
       m_Items: []
   - m_Id: 5484713431040
-    m_Localized: Conditionals 7
+    m_Localized: '6-7: Conditionals 7'
     m_Metadata:
       m_Items: []
   - m_Id: 321477024022528
-    m_Localized: Data Types 1
+    m_Localized: '3-1: Data Types 1'
     m_Metadata:
       m_Items: []
   - m_Id: 326974879956992
-    m_Localized: Conditionals 1
+    m_Localized: '6-1: Conditionals 1'
     m_Metadata:
       m_Items: []
   - m_Id: 327157801943040
-    m_Localized: Loops 1
+    m_Localized: '5-1: Loops 1'
     m_Metadata:
       m_Items: []
   - m_Id: 2152537493164032
@@ -171,31 +171,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49891443426131968
-    m_Localized: Move and switch on
+    m_Localized: '1-4: Move and switch on'
     m_Metadata:
       m_Items: []
   - m_Id: 49891445598781440
-    m_Localized: Switch on the laser
+    m_Localized: '1-3: Switch on the laser'
     m_Metadata:
       m_Items: []
   - m_Id: 49891447557521408
-    m_Localized: Dodge the walls
+    m_Localized: '1-2: Dodge the walls'
     m_Metadata:
       m_Items: []
   - m_Id: 49891449507872768
-    m_Localized: Laser movement
+    m_Localized: '1-1: Laser movement'
     m_Metadata:
       m_Items: []
   - m_Id: 55866087298785280
-    m_Localized: Spins
+    m_Localized: '1-5: Rotation'
     m_Metadata:
       m_Items: []
   - m_Id: 57531839431716864
-    m_Localized: 'New object: the mirror'
+    m_Localized: '2-8: New object: the mirror'
     m_Metadata:
       m_Items: []
   - m_Id: 60904977424408576
-    m_Localized: Adding new code cards
+    m_Localized: '2-3: Adding new code cards'
     m_Metadata:
       m_Items: []
   references:
