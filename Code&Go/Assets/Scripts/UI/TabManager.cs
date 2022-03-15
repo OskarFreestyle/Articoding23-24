@@ -5,14 +5,6 @@ using UnityEngine.UI;
 
 public class TabManager : MonoBehaviour
 {
-    //[SerializeField] private KeyCode leftKeyCode;
-    //[SerializeField] private KeyCode rightKeyCode;
-
-    [SerializeField] private Text leftText;
-    [SerializeField] private Text rightText;
-
-    [SerializeField] private Text currentText;
-
     public Tab[] tabs;
     public GameObject[] panels;
 
@@ -21,40 +13,6 @@ public class TabManager : MonoBehaviour
     void Start()
     {
         ConfigureTabs();
-        //ConfigureTexts();
-
-        tabs[tabIndex].Select();
-        //panels[tabIndex].SetActive(true);
-    }
-
-    private void Update()
-    {
-        // Moverse por tabs con teclado
-        //if (Input.GetKeyDown(leftKeyCode))
-        //{
-        //    PreviousTab();
-        //}
-        //else if (Input.GetKeyDown(rightKeyCode))
-        //{
-        //    NextTab();
-        //}
-    }
-
-    public void PreviousTab()
-    {
-        // Desactivamos el tab actual
-        tabs[tabIndex].Deselect();
-
-        tabIndex = (tabIndex + tabs.Length - 1) % tabs.Length;
-        tabs[tabIndex].Select();
-    }
-
-    public void NextTab()
-    {
-        // Desactivamos el tab actual
-        tabs[tabIndex].Deselect();
-
-        tabIndex = (tabIndex + 1) % tabs.Length;
         tabs[tabIndex].Select();
     }
 
@@ -68,8 +26,6 @@ public class TabManager : MonoBehaviour
         // Activamos el nuevo tab seleccionado
         tabIndex = index;
         panels[tabIndex].SetActive(true);
-
-        currentText.text = panels[tabIndex].name;
     }
     private void DeselectCallback(int index)
     {
@@ -97,10 +53,4 @@ public class TabManager : MonoBehaviour
             tabs[i].Deselect();
         }
     }
-
-    //private void ConfigureTexts()
-    //{
-    //    rightText.text = rightKeyCode.ToString();
-    //    leftText.text = leftKeyCode.ToString();
-    //}
 }
