@@ -878,11 +878,15 @@ public class BoardManager : Listener
 
     public void InvokeLevelFailed()
     {
-        UBlockly.CSharp.Runner.Stop();
-        Invoke("LevelFailed", 1.0f);
+        //UBlockly.CSharp.Runner.Stop();
+        Invoke("FailLevel", 1.0f);
+    }
+    private void FailLevel()
+    {
+        LevelFailed();
     }
 
-    private void LevelFailed(string msg = "")
+    private void LevelFailed(string msg="")
     {
         UBlockly.CSharp.Runner.Stop();
         gameOverPanel.SetActive(true);
