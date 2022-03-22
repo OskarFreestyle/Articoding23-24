@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   title: Categoria desbloqueada
-  content: "Has desbloqueado una nueva categor\xEDa, completa todos sus niveles para
-    desbloquear la siguiente. Adem\xE1s puedes intentar conseguir todas las estrellas
-    de las categor\xEDas anteriores."
+  content: '-'
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
