@@ -70,5 +70,13 @@ MonoBehaviour:
     m_Localized: "Aqu\xED tienes otro nivel resuelto como ejemplo"
     m_Metadata:
       m_Items: []
+  - m_Id: 59090354492628992
+    m_Localized: Girar objetos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59090585951100928
+    m_Localized: "Para girar un objeto de la escena haz clic derecho sobre \xE9l"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

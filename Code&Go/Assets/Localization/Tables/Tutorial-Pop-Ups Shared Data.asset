@@ -63,6 +63,14 @@ MonoBehaviour:
     m_Key: popup_introduction_5_content
     m_Metadata:
       m_Items: []
+  - m_Id: 59090354492628992
+    m_Key: popup_board_creation_rotate_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59090585951100928
+    m_Key: popup_board_creation_rotate_content
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

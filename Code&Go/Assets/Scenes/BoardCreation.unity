@@ -1975,11 +1975,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &290598183 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8068610178479776461, guid: 4c68a57c4ed8de64f9b7b23a2c9f7935, type: 3}
-  m_PrefabInstance: {fileID: 290598174}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302143661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,10 +3282,10 @@ RectTransform:
   m_Father: {fileID: 1724290878}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 333.3333, y: -62.5}
+  m_SizeDelta: {x: 626.6666, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &522174335
 GameObject:
@@ -7101,6 +7096,7 @@ RectTransform:
   - {fileID: 136661367}
   - {fileID: 1201994738}
   - {fileID: 408133015}
+  - {fileID: 1707394667}
   m_Father: {fileID: 239278708}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7631,10 +7627,10 @@ RectTransform:
   m_Father: {fileID: 1724290878}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1586.6665, y: -62.5}
+  m_SizeDelta: {x: 626.6666, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1187336137
 GameObject:
@@ -9115,10 +9111,10 @@ RectTransform:
   m_Father: {fileID: 1724290878}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 959.99994, y: -62.5}
+  m_SizeDelta: {x: 626.6666, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1493221123
 GameObject:
@@ -10506,7 +10502,9 @@ MonoBehaviour:
   hintButton: {fileID: 0}
   boardModifiable: 1
   gameOverPanel: {fileID: 290598176}
-  gameOverPanelText: {fileID: 290598183}
+  gameOverTitleText: {fileID: 0}
+  gameOverErrorText: {fileID: 0}
+  gameOverErrorIcon: {fileID: 0}
   blackRect: {fileID: 1698826748}
   streamRoom: {fileID: 1879120465}
   deactivatedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -11246,7 +11244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: tutorialsON
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: popUpManager
@@ -11731,6 +11729,62 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!1 &1707394666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1707394667}
+  - component: {fileID: 1707394668}
+  m_Layer: 5
+  m_Name: PopUpHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1707394667
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707394666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1081741944}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -200}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1707394668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707394666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 10
+  info: {fileID: 11400000, guid: cd12f4099717a39448a4213d31c0cbdc, type: 2}
+  highlightObject: 1
+  destroyOnShowed: 1
+  isSaveCheckpoint: 0
+  OnShowed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1718227305
 GameObject:
   m_ObjectHideFlags: 0

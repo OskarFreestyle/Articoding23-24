@@ -70,5 +70,13 @@ MonoBehaviour:
     m_Localized: This level is also correct as an example
     m_Metadata:
       m_Items: []
+  - m_Id: 59090354492628992
+    m_Localized: Rotate objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59090585951100928
+    m_Localized: Right click on your mouse to rotate the laser and other objects
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
