@@ -30,11 +30,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1497658380288
-    m_Localized: Types
+    m_Localized: Data types
     m_Metadata:
       m_Items: []
   - m_Id: 1654173028352
-    m_Localized: 'Learn how to use different types of data in the code.
+    m_Localized: 'Learn how to use different types of data in your code.
 
       Numbers,
       characters, words, etc.'

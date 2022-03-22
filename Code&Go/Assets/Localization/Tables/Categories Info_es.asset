@@ -28,11 +28,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1497658380288
-    m_Localized: Tipos
+    m_Localized: Tipos de datos
     m_Metadata:
       m_Items: []
   - m_Id: 1654173028352
-    m_Localized: "Aprende a usar distintos tipos de datos en el c\xF3digo.\nN\xFAmeros,
+    m_Localized: "Aprende a usar distintos tipos de datos en tu c\xF3digo.\nN\xFAmeros,
       letras, palabras, etc."
     m_Metadata:
       m_Items: []
