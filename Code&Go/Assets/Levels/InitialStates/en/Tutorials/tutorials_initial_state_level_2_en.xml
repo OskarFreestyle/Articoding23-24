@@ -3,7 +3,7 @@
     <block type="start_start" id="iP=0vlX_^9#12JT)Vdp@" x="201" y="-194">
         <next>
             <block type="movement_move_laser" id="hNwU`kGYzS8mO0W,8qYg">
-                <field name="DIRECTION">RIGHT</field>
+                <field name="DIRECTION">LEFT</field>
                 <value name="AMOUNT">
                     <block type="math_number" id="`s0OG.3:RpIRTd?a6]Kf">
                         <field name="NUM">1</field>
@@ -11,10 +11,10 @@
                 </value>
                 <next>
                     <block type="movement_move_laser" id="cB_:EOJ/6_ny+3K:HukZ">
-                        <field name="DIRECTION">LEFT</field>
+                        <field name="DIRECTION">UP</field>
                         <value name="AMOUNT">
                             <block type="math_number" id="8{#;?~lc@~8K?Wg$|DS:">
-                                <field name="NUM">1</field>
+                                <field name="NUM">2</field>
                             </block>
                         </value>
                     </block>

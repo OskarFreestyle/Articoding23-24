@@ -78,5 +78,13 @@ MonoBehaviour:
     m_Localized: Right click on your mouse to rotate the laser and other objects
     m_Metadata:
       m_Items: []
+  - m_Id: 59100551516741632
+    m_Localized: Dropdown menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59100616612339712
+    m_Localized: Change the movement direction of the laser
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

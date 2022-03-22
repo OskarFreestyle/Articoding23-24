@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -568,7 +569,6 @@ GameObject:
   - component: {fileID: 9003040309071672922}
   - component: {fileID: 6997455475147127352}
   - component: {fileID: 4795787419295854226}
-  - component: {fileID: 3638101598707442863}
   m_Layer: 0
   m_Name: Block_movement_move_laser
   m_TagString: Untagged
@@ -662,26 +662,6 @@ MonoBehaviour:
   m_BgImages:
   - {fileID: 6997455475147127352}
   - {fileID: 6008929230162029741}
---- !u!114 &3638101598707442863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3220010427617538130}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 190
-  info: {fileID: 11400000, guid: ffc1630a3feb0b6438b215bcd99d04b1, type: 2}
-  highlightObject: 1
-  destroyOnShowed: 1
-  isSaveCheckpoint: 1
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4064111067934865913
 GameObject:
   m_ObjectHideFlags: 0
@@ -829,6 +809,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2833993079342632792}
   - component: {fileID: 6789944346351932324}
+  - component: {fileID: 2695321626204498441}
+  - component: {fileID: 4997273509093212207}
   m_Layer: 5
   m_Name: Field_DIRECTION
   m_TagString: Untagged
@@ -877,6 +859,40 @@ MonoBehaviour:
   m_Label: {fileID: 6313967010111704234}
   m_Image: {fileID: 5580099691104806633}
   m_Button: {fileID: 5115018950496585285}
+--- !u!114 &2695321626204498441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416252938155973807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 10
+  info: {fileID: 11400000, guid: 2708f8c4b2bee754bbc3498378b1c278, type: 2}
+  highlightObject: 1
+  destroyOnShowed: 1
+  isSaveCheckpoint: 0
+  OnShowed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4997273509093212207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416252938155973807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4a7d46654560a4d8012ca2935fcaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tt: {fileID: 2695321626204498441}
+  level: {fileID: 11400000, guid: fcd0dd4b9c2699a4e84f30e78658f82f, type: 2}
 --- !u!1 &6731769942409026984
 GameObject:
   m_ObjectHideFlags: 0

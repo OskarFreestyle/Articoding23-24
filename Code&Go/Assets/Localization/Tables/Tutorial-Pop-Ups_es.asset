@@ -78,5 +78,13 @@ MonoBehaviour:
     m_Localized: "Para girar un objeto de la escena haz clic derecho sobre \xE9l"
     m_Metadata:
       m_Items: []
+  - m_Id: 59100551516741632
+    m_Localized: Desplegables
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59100616612339712
+    m_Localized: "Prueba a corregir la direcci\xF3n en la que se mueve el l\xE1ser"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
