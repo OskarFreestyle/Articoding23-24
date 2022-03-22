@@ -1,28 +1,38 @@
 <xml>
     <variables>
-        <variable type="" id="h6Z|o2~jrsF+l7Ct+3IW">Object</variable>
-        <variable type="" id="58=o}BoO6,K^d;L*JM9,">Amount</variable>
+        <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Object</variable>
+        <variable type="" id="An]Sn_i2fD:nVJ/Y]5_A">Movement</variable>
     </variables>
-    <block type="start_start" id="(4l|h5oDTaAB.3no!|oh" x="219" y="-222">
+    <block type="start_start" id="wXMrLUN9=Bd?5amW,p|q" x="139" y="-185">
         <next>
-            <block type="variables_set" id="SY6`M2fKI]l.:CJ1rY08">
-                <field name="VAR" id="h6Z|o2~jrsF+l7Ct+3IW" variableType="">Object</field>
+            <block type="variables_set" id="q7*vM`_bKyO/@ED6M%Pz">
+                <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Object</field>
                 <value name="VALUE">
-                    <block type="text" id="B;/S$sm,o46s8h^~ZlYG">
-                        <field name="TEXT" />
+                    <block type="text" id="Kgf)VE~u~}-+:C5+)WJi">
+                        <field name="TEXT">Mirror_1</field>
                     </block>
                 </value>
                 <next>
-                    <block type="variables_set" id="rm*ap}I:|OU!UTw9tu_F">
-                        <field name="VAR" id="58=o}BoO6,K^d;L*JM9," variableType="">Amount</field>
+                    <block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
+                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movement</field>
                         <value name="VALUE">
-                            <block type="math_number" id="n*XdW5mX=1+|1RZ?3/-%">
-                                <field name="NUM">0</field>
+                            <block type="math_number" id="gy6Zv}mXv(ro1e!#^[Yf">
+                                <field name="NUM">1</field>
                             </block>
                         </value>
                         <next>
-                            <block type="movement_rotate" id="k#p$])t]dH#b$|T:[.2}">
-                                <field name="ROTATION">CLOCKWISE</field>
+                            <block type="movement_move" id="TXot^2LNWUvc5:V!aUsd">
+                                <field name="DIRECTION">DOWN</field>
+                                <value name="NAME">
+                                    <block type="variables_get" id="P/I))NrS:swgt8-ZUW,)">
+                                        <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Object</field>
+                                    </block>
+                                </value>
+                                <value name="AMOUNT">
+                                    <block type="variables_get" id="hil+bMXb7(Z}ZbTO;!]p">
+                                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movement</field>
+                                    </block>
+                                </value>
                             </block>
                         </next>
                     </block>

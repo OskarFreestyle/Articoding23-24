@@ -1,6 +1,6 @@
 {
-    "rows": 4,
-    "columns": 5,
+    "rows": 5,
+    "columns": 4,
     "cells": [
         {
             "id": 0,
@@ -28,12 +28,6 @@
         },
         {
             "id": 0,
-            "x": 5,
-            "y": 1,
-            "args": []
-        },
-        {
-            "id": 0,
             "x": 1,
             "y": 2,
             "args": []
@@ -53,12 +47,6 @@
         {
             "id": 0,
             "x": 4,
-            "y": 2,
-            "args": []
-        },
-        {
-            "id": 0,
-            "x": 5,
             "y": 2,
             "args": []
         },
@@ -88,12 +76,6 @@
         },
         {
             "id": 0,
-            "x": 5,
-            "y": 3,
-            "args": []
-        },
-        {
-            "id": 0,
             "x": 1,
             "y": 4,
             "args": []
@@ -118,52 +100,51 @@
         },
         {
             "id": 0,
-            "x": 5,
-            "y": 4,
+            "x": 1,
+            "y": 5,
+            "args": []
+        },
+        {
+            "id": 0,
+            "x": 2,
+            "y": 5,
+            "args": []
+        },
+        {
+            "id": 0,
+            "x": 3,
+            "y": 5,
+            "args": []
+        },
+        {
+            "id": 0,
+            "x": 4,
+            "y": 5,
             "args": []
         }
     ],
     "boardElements": [
         {
-            "id": 0,
-            "orientation": 7,
+            "id": 3,
+            "orientation": 0,
             "x": 1,
             "y": 1,
-            "args": []
-        },
-        {
-            "id": 2,
-            "orientation": 0,
-            "x": 1,
-            "y": 4,
-            "args": []
-        },
-        {
-            "id": 3,
-            "orientation": 0,
-            "x": 2,
-            "y": 2,
-            "args": []
-        },
-        {
-            "id": 3,
-            "orientation": 0,
-            "x": 2,
-            "y": 3,
-            "args": []
-        },
-        {
-            "id": 3,
-            "orientation": 0,
-            "x": 2,
-            "y": 4,
             "args": []
         },
         {
             "id": 4,
-            "orientation": 2,
-            "x": 3,
-            "y": 1,
+            "orientation": 0,
+            "x": 1,
+            "y": 4,
+            "args": [
+                "True"
+            ]
+        },
+        {
+            "id": 4,
+            "orientation": 0,
+            "x": 1,
+            "y": 3,
             "args": [
                 "False"
             ]
@@ -171,97 +152,134 @@
         {
             "id": 3,
             "orientation": 0,
-            "x": 3,
+            "x": 2,
+            "y": 1,
+            "args": []
+        },
+        {
+            "id": 0,
+            "orientation": 7,
+            "x": 2,
             "y": 2,
             "args": []
         },
         {
             "id": 3,
             "orientation": 0,
-            "x": 3,
+            "x": 2,
             "y": 3,
             "args": []
         },
         {
             "id": 3,
             "orientation": 0,
-            "x": 3,
-            "y": 4,
-            "args": []
-        },
-        {
-            "id": 3,
-            "orientation": 0,
-            "x": 4,
-            "y": 2,
-            "args": []
-        },
-        {
-            "id": 3,
-            "orientation": 0,
-            "x": 4,
-            "y": 3,
-            "args": []
-        },
-        {
-            "id": 3,
-            "orientation": 0,
-            "x": 4,
+            "x": 2,
             "y": 4,
             "args": []
         },
         {
             "id": 1,
-            "orientation": 2,
-            "x": 5,
-            "y": 4,
+            "orientation": 4,
+            "x": 2,
+            "y": 5,
             "args": [
                 "1"
             ]
+        },
+        {
+            "id": 3,
+            "orientation": 0,
+            "x": 3,
+            "y": 1,
+            "args": []
+        },
+        {
+            "id": 0,
+            "orientation": 5,
+            "x": 3,
+            "y": 2,
+            "args": []
+        },
+        {
+            "id": 4,
+            "orientation": 0,
+            "x": 3,
+            "y": 3,
+            "args": [
+                "True"
+            ]
+        },
+        {
+            "id": 0,
+            "orientation": 1,
+            "x": 3,
+            "y": 4,
+            "args": []
+        },
+        {
+            "id": 3,
+            "orientation": 0,
+            "x": 3,
+            "y": 5,
+            "args": []
+        },
+        {
+            "id": 3,
+            "orientation": 0,
+            "x": 4,
+            "y": 1,
+            "args": []
+        },
+        {
+            "id": 3,
+            "orientation": 0,
+            "x": 4,
+            "y": 2,
+            "args": []
+        },
+        {
+            "id": 3,
+            "orientation": 0,
+            "x": 4,
+            "y": 3,
+            "args": []
+        },
+        {
+            "id": 2,
+            "orientation": 0,
+            "x": 4,
+            "y": 4,
+            "args": []
+        },
+        {
+            "id": 3,
+            "orientation": 0,
+            "x": 4,
+            "y": 5,
+            "args": []
         }
     ],
     "boardHints": [
         {
             "id": 0,
-            "orientation": 2,
+            "orientation": 4,
             "amount": 1,
-            "x": 5,
-            "y": 4
+            "x": 2,
+            "y": 5
+        },
+        {
+            "id": 1,
+            "orientation": 4,
+            "amount": 1,
+            "x": 1,
+            "y": 5
         },
         {
             "id": 0,
-            "orientation": 2,
+            "orientation": 4,
             "amount": 1,
-            "x": 5,
-            "y": 3
-        },
-        {
-            "id": 0,
-            "orientation": 2,
-            "amount": 1,
-            "x": 5,
+            "x": 2,
             "y": 2
-        },
-        {
-            "id": 1,
-            "orientation": 2,
-            "amount": 1,
-            "x": 5,
-            "y": 1
-        },
-        {
-            "id": 1,
-            "orientation": 8,
-            "amount": 1,
-            "x": 5,
-            "y": 1
-        },
-        {
-            "id": 1,
-            "orientation": 6,
-            "amount": 1,
-            "x": 5,
-            "y": 1
         }
     ]
 }

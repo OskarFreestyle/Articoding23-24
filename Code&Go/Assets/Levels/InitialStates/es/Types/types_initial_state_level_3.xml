@@ -3,7 +3,7 @@
         <variable type="" id="h6Z|o2~jrsF+l7Ct+3IW">Objeto</variable>
         <variable type="" id="58=o}BoO6,K^d;L*JM9,">Cantidad</variable>
     </variables>
-    <block type="start_start" id="h$lU^@NEz}[@FIw)0pYJ" x="249" y="-187">
+    <block type="start_start" id="(4l|h5oDTaAB.3no!|oh" x="219" y="-222">
         <next>
             <block type="variables_set" id="SY6`M2fKI]l.:CJ1rY08">
                 <field name="VAR" id="h6Z|o2~jrsF+l7Ct+3IW" variableType="">Objeto</field>
@@ -20,6 +20,11 @@
                                 <field name="NUM">0</field>
                             </block>
                         </value>
+                        <next>
+                            <block type="movement_rotate" id="k#p$])t]dH#b$|T:[.2}">
+                                <field name="ROTATION">CLOCKWISE</field>
+                            </block>
+                        </next>
                     </block>
                 </next>
             </block>

@@ -151,7 +151,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 321477024022528
-    m_Localized: '3-1: Data Types 1'
+    m_Localized: '3-8: Data Types 8'
     m_Metadata:
       m_Items: []
   - m_Id: 326974879956992
@@ -191,7 +191,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 57531839431716864
-    m_Localized: '2-8: New object: the mirror'
+    m_Localized: '3-1: New object: Mirror'
     m_Metadata:
       m_Items: []
   - m_Id: 60904977424408576

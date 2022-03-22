@@ -52,8 +52,8 @@ MonoBehaviour:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 59032eb11ec5a2e49adbee32d0c85746
-    m_Address: variables_initial_state_level_8
+  - m_GUID: 1672b2a606dab2d4aaf984ffd9a31326
+    m_Address: types_initial_state_level_8
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

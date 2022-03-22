@@ -64,7 +64,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 321477024022528
-    m_Key: types_level_1
+    m_Key: types_level_8
     m_Metadata:
       m_Items: []
   - m_Id: 3624317308928
@@ -188,7 +188,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 57531839431716864
-    m_Key: variables_level_8
+    m_Key: types_level_1
     m_Metadata:
       m_Items: []
   - m_Id: 60904977424408576
