@@ -23,9 +23,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4046242631680
-    m_Localized: 'You will see your code here. This piece of code works correctly.
-      Once you know what it''s going to do, hit the Play button and check if you
-      were right '
+    m_Localized: You will see your code here. This piece of code works correctly
+      as an example. Once you know what it's going to do, hit the Play button and
+      check if you were right!
     m_Metadata:
       m_Items: []
   - m_Id: 5033468547072

@@ -40,6 +40,7 @@ public class LevelTestManager : MonoBehaviour
     public GameObject transparentRect;
     public GameObject blackRect;
     public GameObject endPanelMinimized;
+    public GameObject exitConfirmationPanel;
 
     public GameObject gameOverPanel;
     public GameObject gameOverMinimized;
@@ -216,6 +217,13 @@ public class LevelTestManager : MonoBehaviour
     public void SetActiveNoInputPanel()
     {
         transparentRect.SetActive(true);
+    }
+
+    public void SetActiveExitConfirmationPanel(bool active)
+    {
+        exitConfirmationPanel.SetActive(active);
+        transparentRect.SetActive(false);
+        blackRect.SetActive(active);
     }
 
     public void ActivateLevelBlocks(TextAsset textAsset, bool allActive)

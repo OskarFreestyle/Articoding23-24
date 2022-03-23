@@ -23,9 +23,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4046242631680
-    m_Localized: "Aqu\xED ver\xE1s tu c\xF3digo. Este funciona correctamente. Cuando
-      sepas qu\xE9 va a hacer, pulsa el bot\xF3n de Ejecutar arriba en el centro
-      y comprueba si has acertado"
+    m_Localized: "Aqu\xED ver\xE1s tu c\xF3digo. Este es c\xF3digo de ejemplo que
+      funciona correctamente. Cuando sepas qu\xE9 va a hacer, pulsa el bot\xF3n de
+      Ejecutar arriba en el centro, \xA1y comprueba si has acertado!"
     m_Metadata:
       m_Items: []
   - m_Id: 5033468547072

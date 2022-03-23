@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   title: "Vista del c\xF3digo."
-  content: "Aqu\xED ver\xE1s tu c\xF3digo. Este funciona correctamente. Cuando sepas
-    qu\xE9 va a hacer, dale al bot\xF3n de Ejecutar arriba en el centro y comprueba
-    si has acertado"
+  content: "Aqu\xED ver\xE1s tu c\xF3digo. Este es un c\xF3digo de ejemplo que funciona
+    correctamente. Cuando sepas qu\xE9 va a hacer, dale al bot\xF3n de Ejecutar arriba
+    en el centro, \xA1y comprueba si has acertado!"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
@@ -37,6 +37,6 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 2974370092941312
+      m_KeyId: 706820625793024
       m_Key: 
     m_FallbackState: 0
