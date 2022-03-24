@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.03586712, g: 0.0503774, b: 0.10300305, a: 1}
+  m_IndirectSpecularColor: {r: 0.035862885, g: 0.050364047, b: 0.10298859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3285,8 +3285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 333.3333, y: -62.5}
-  m_SizeDelta: {x: 626.6666, y: 115}
+  m_AnchoredPosition: {x: 333.33334, y: -62.5}
+  m_SizeDelta: {x: 626.6667, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &522174335
 GameObject:
@@ -5080,7 +5080,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: MenuScene
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &798956979
 MonoBehaviour:
@@ -7630,8 +7630,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1586.6665, y: -62.5}
-  m_SizeDelta: {x: 626.6666, y: 115}
+  m_AnchoredPosition: {x: 1586.6667, y: -62.5}
+  m_SizeDelta: {x: 626.6667, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1187336137
 GameObject:
@@ -8067,6 +8067,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4794388212091121049, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1682299158}
+    - target: {fileID: 4794388212091121049, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794388212091121049, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelTestManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4794388212091121050, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8090,6 +8102,18 @@ PrefabInstance:
     - target: {fileID: 4794388212091121050, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794388212249264213, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1682299158}
+    - target: {fileID: 4794388212249264213, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActiveExitConfirmationPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794388212249264213, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelTestManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4794388212249264214, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8144,6 +8168,11 @@ PrefabInstance:
 --- !u!224 &1214670122 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4794388211278257819, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
+  m_PrefabInstance: {fileID: 1214670121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1214670123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4794388211278257812, guid: f801f62b2a4f9a342acb3313424be92d, type: 3}
   m_PrefabInstance: {fileID: 1214670121}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1226596645
@@ -9316,8 +9345,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 959.99994, y: -62.5}
-  m_SizeDelta: {x: 626.6666, y: 115}
+  m_AnchoredPosition: {x: 960, y: -62.5}
+  m_SizeDelta: {x: 626.6667, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1493221123
 GameObject:
@@ -11471,7 +11500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: tutorialsON
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: popUpManager
@@ -11657,7 +11686,7 @@ MonoBehaviour:
   transparentRect: {fileID: 1494837519}
   blackRect: {fileID: 1698826748}
   endPanelMinimized: {fileID: 1602678924}
-  exitConfirmationPanel: {fileID: 0}
+  exitConfirmationPanel: {fileID: 1214670123}
   gameOverPanel: {fileID: 290598176}
   gameOverMinimized: {fileID: 2133333279}
   resetViewButton: {fileID: 136661368}
@@ -12437,7 +12466,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1799622407
 MonoBehaviour:
