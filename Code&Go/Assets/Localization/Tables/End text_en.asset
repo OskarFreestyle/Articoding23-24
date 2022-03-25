@@ -52,5 +52,13 @@ MonoBehaviour:
     m_Localized: You've created your first variables. Amazing!
     m_Metadata:
       m_Items: []
+  - m_Id: 55022188878245888
+    m_Localized: Mirrors reflect the laser light. Great!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55026933776920576
+    m_Localized: You can move other objects by using their nametags. Fabulous!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

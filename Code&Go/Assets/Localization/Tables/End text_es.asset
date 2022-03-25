@@ -52,5 +52,13 @@ MonoBehaviour:
     m_Localized: "Has creado tus primeras variables. \xA1Estupendo!"
     m_Metadata:
       m_Items: []
+  - m_Id: 55022188878245888
+    m_Localized: "Los espejos reflejan la luz del l\xE1ser. \xA1Genial!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55026933776920576
+    m_Localized: "Puedes mover otros objetos utilizando sus etiquetas. \xA1Estupendo!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

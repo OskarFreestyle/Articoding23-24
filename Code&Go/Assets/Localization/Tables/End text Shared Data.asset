@@ -47,6 +47,14 @@ MonoBehaviour:
     m_Key: endtext_variables_5
     m_Metadata:
       m_Items: []
+  - m_Id: 55022188878245888
+    m_Key: endtext_types_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55026933776920576
+    m_Key: endtext_types_2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
