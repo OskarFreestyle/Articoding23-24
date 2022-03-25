@@ -30,7 +30,7 @@ MonoBehaviour:
     m_FallbackState: 0
   activeBlocks: {fileID: 4900000, guid: c11173c3313b2d24db85c4d141ce36cc, type: 3}
   allActive: 0
-  levelBoard: {fileID: 4900000, guid: b1dd401c087999342974bae8fe21333b, type: 3}
+  levelBoard: {fileID: 4900000, guid: 121e62d2f4ddbfc49a5975aadf64744d, type: 3}
   auxLevelBoard: 
   minimosPasos: 4
   endTextLocalized:
