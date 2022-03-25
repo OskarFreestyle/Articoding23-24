@@ -195,6 +195,14 @@ MonoBehaviour:
     m_Key: variables_level_3
     m_Metadata:
       m_Items: []
+  - m_Id: 112963937210347520
+    m_Key: variables_level_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112964259727159296
+    m_Key: variables_level_9
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
