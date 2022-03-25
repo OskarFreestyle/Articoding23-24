@@ -198,5 +198,13 @@ MonoBehaviour:
     m_Localized: "2-3: A\xF1adir nuevas tarjetas"
     m_Metadata:
       m_Items: []
+  - m_Id: 112963937210347520
+    m_Localized: "2-8: Con los m\xEDnimos movimientos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112964259727159296
+    m_Localized: '2-9: Por tu cuenta'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
