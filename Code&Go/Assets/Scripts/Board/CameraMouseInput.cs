@@ -25,7 +25,7 @@ public class CameraMouseInput : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         {
             mousePressed = false;
             cam.Reset();
-            zoom.Reset();
+            //zoom.Reset();
         }
     }
 
