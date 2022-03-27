@@ -13,55 +13,59 @@ public class ClickDetector : MonoBehaviour
 
     void Update()
     {
-        GameObject clickedGmObj = null;
-        IMouseListener mouseListener = null;
-        // Left click 
-        if (handleLeftClick && (Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0)))
+        //Si no hay popup activado realiza raycast para el input con objs de la escena
+        if (PopUpManager.Instance.transform.GetChild(0).gameObject.activeInHierarchy == false)
         {
-            clickedGmObj = GetClickedGameObject();
-            if (clickedGmObj != null)
+            GameObject clickedGmObj = null;
+            IMouseListener mouseListener = null;
+            // Left click 
+            if (handleLeftClick && (Input.GetMouseButtonDown(0) || Input.GetMouseButtonUp(0)))
             {
-                mouseListener = clickedGmObj.GetComponent<IMouseListener>();
-                if (mouseListener != null)
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        lastMouseListener = mouseListener;
-                        mouseListener.OnMouseButtonDown(0);
-                    }
-                    else
-                        mouseListener.OnMouseButtonUp(0);
-            }
+                clickedGmObj = GetClickedGameObject();
+                if (clickedGmObj != null)
+                {
+                    mouseListener = clickedGmObj.GetComponent<IMouseListener>();
+                    if (mouseListener != null)
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            lastMouseListener = mouseListener;
+                            mouseListener.OnMouseButtonDown(0);
+                        }
+                        else
+                            mouseListener.OnMouseButtonUp(0);
+                }
 
-            if (lastMouseListener != null && Input.GetMouseButtonUp(0))
-            {
-                lastMouseListener.OnMouseButtonUpAnywhere(0);
-                lastMouseListener = null;
+                if (lastMouseListener != null && Input.GetMouseButtonUp(0))
+                {
+                    lastMouseListener.OnMouseButtonUpAnywhere(0);
+                    lastMouseListener = null;
+                }
             }
-        }
-        // Right click 
-        if (handleRightClick && (Input.GetMouseButtonDown(1) || Input.GetMouseButtonUp(1)))
-        {
-            clickedGmObj = GetClickedGameObject();
-            if (clickedGmObj != null)
+            // Right click 
+            if (handleRightClick && (Input.GetMouseButtonDown(1) || Input.GetMouseButtonUp(1)))
             {
-                mouseListener = clickedGmObj.GetComponent<IMouseListener>();
-                if (mouseListener != null)
-                    if (Input.GetMouseButtonDown(1))
-                        mouseListener.OnMouseButtonDown(1);
-                    else mouseListener.OnMouseButtonUp(1);
+                clickedGmObj = GetClickedGameObject();
+                if (clickedGmObj != null)
+                {
+                    mouseListener = clickedGmObj.GetComponent<IMouseListener>();
+                    if (mouseListener != null)
+                        if (Input.GetMouseButtonDown(1))
+                            mouseListener.OnMouseButtonDown(1);
+                        else mouseListener.OnMouseButtonUp(1);
+                }
             }
-        }
-        // Middle click 
-        if (handleMiddleClick && (Input.GetMouseButtonDown(2) || Input.GetMouseButtonUp(2)))
-        {
-            clickedGmObj = GetClickedGameObject();
-            if (clickedGmObj != null)
+            // Middle click 
+            if (handleMiddleClick && (Input.GetMouseButtonDown(2) || Input.GetMouseButtonUp(2)))
             {
-                mouseListener = clickedGmObj.GetComponent<IMouseListener>();
-                if (mouseListener != null)
-                    if (Input.GetMouseButtonDown(2))
-                        mouseListener.OnMouseButtonDown(2);
-                    else mouseListener.OnMouseButtonUp(2);
+                clickedGmObj = GetClickedGameObject();
+                if (clickedGmObj != null)
+                {
+                    mouseListener = clickedGmObj.GetComponent<IMouseListener>();
+                    if (mouseListener != null)
+                        if (Input.GetMouseButtonDown(2))
+                            mouseListener.OnMouseButtonDown(2);
+                        else mouseListener.OnMouseButtonUp(2);
+                }
             }
         }
     }
