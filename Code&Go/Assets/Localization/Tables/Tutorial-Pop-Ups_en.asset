@@ -19,12 +19,12 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 1190051590144
-    m_Localized: Great! Now you know how to turn the laser on.
+    m_Localized: Great! Now you know how to turn the laser on
     m_Metadata:
       m_Items: []
   - m_Id: 1374475137024
     m_Localized: Remember you can choose the direction and ammount of tiles you will
-      move through.
+      move through
     m_Metadata:
       m_Items: []
   - m_Id: 4171056689152
@@ -84,6 +84,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 59100616612339712
     m_Localized: Change the movement direction of the laser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60960691866001408
+    m_Localized: Level creator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60960718671798272
+    m_Localized: Do you want to make your own leves like a real programmer?
     m_Metadata:
       m_Items: []
   references:
