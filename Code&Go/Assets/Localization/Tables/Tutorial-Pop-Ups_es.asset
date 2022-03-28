@@ -19,12 +19,12 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 1190051590144
-    m_Localized: "\xA1Genial! Ya sabes encender el l\xE1ser."
+    m_Localized: "\xA1Genial! Ya sabes encender el l\xE1ser"
     m_Metadata:
       m_Items: []
   - m_Id: 1374475137024
     m_Localized: "Recuerda que puedes escoger la direcci\xF3n y la cantidad de baldosas
-      por las que moverte."
+      por las que moverte"
     m_Metadata:
       m_Items: []
   - m_Id: 4171056689152
@@ -84,6 +84,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 59100616612339712
     m_Localized: "Prueba a corregir la direcci\xF3n en la que se mueve el l\xE1ser"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60960691866001408
+    m_Localized: Creador de niveles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60960718671798272
+    m_Localized: "\xBFTe apetece crear tus propios niveles como un programador de
+      verdad?"
     m_Metadata:
       m_Items: []
   references:

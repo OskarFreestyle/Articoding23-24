@@ -79,6 +79,14 @@ MonoBehaviour:
     m_Key: popup_introduction_2_dropdown_content
     m_Metadata:
       m_Items: []
+  - m_Id: 60960691866001408
+    m_Key: popup_board_creation_info_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60960718671798272
+    m_Key: popup_board_creation_info_content
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

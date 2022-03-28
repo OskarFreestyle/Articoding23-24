@@ -19750,6 +19750,7 @@ GameObject:
   - component: {fileID: 1973914485}
   - component: {fileID: 1973914484}
   - component: {fileID: 1973914483}
+  - component: {fileID: 1973914486}
   m_Layer: 5
   m_Name: CreateLevel
   m_TagString: Untagged
@@ -19860,6 +19861,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973914481}
   m_CullTransparentMesh: 0
+--- !u!114 &1973914486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973914481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
+  info: {fileID: 11400000, guid: 32daed3d74add6f4a9b11ab602afe3c9, type: 2}
+  highlightObject: 1
+  destroyOnShowed: 1
+  isSaveCheckpoint: 0
+  OnShowed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1982339651
 GameObject:
   m_ObjectHideFlags: 0
