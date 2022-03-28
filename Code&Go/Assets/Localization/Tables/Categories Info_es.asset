@@ -42,7 +42,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2154364751872
     m_Localized: Aprende las distintas operaciones que puedes hacer con los distintos
-      tipos.
+      tipos de datos.
     m_Metadata:
       m_Items: []
   - m_Id: 2419251826688
@@ -73,7 +73,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49955408000778240
-    m_Localized: "Comienza a jugar y aprende c\xF3mo funciona la aplicaci\xF3n"
+    m_Localized: "Comienza a jugar y aprende c\xF3mo funciona la aplicaci\xF3n."
     m_Metadata:
       m_Items: []
   references:
