@@ -206,5 +206,13 @@ MonoBehaviour:
     m_Localized: '2-9: On your own'
     m_Metadata:
       m_Items: []
+  - m_Id: 114037692931465216
+    m_Localized: '1-6: Test your knowledge'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114037699403276288
+    m_Localized: '1-7: Test your knowledge'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

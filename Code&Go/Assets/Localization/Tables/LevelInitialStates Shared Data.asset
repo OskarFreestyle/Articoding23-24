@@ -191,6 +191,14 @@ MonoBehaviour:
     m_Key: variables_8
     m_Metadata:
       m_Items: []
+  - m_Id: 112742692683735040
+    m_Key: tutorials_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112742738540060672
+    m_Key: tutorials_7
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
@@ -378,6 +386,14 @@ MonoBehaviour:
           m_TableCodes:
           - en
           - es
+        - m_KeyId: 112742692683735040
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 112742738540060672
+          m_TableCodes:
+          - es
+          - en
         m_TypeString: UnityEngine.TextAsset, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
     00000001:
