@@ -52,7 +52,7 @@ namespace UBlockly
 
         protected bool CheckInfiniteLoop()
         {
-            if (++mLoopCount == Int16.MaxValue)
+            if (++mLoopCount == 100)
             {
                 CSharp.Runner.Error("Infinite loop!");
                 mLoopCount = 0;
@@ -146,15 +146,14 @@ namespace UBlockly
         {
             ResetFlowState();
             
-            bool until =  CheckInput.TryGetFieldValue(block, "MODE", "Missing_Value_Logic_Condition").Equals("UNTIL");
-
+            //bool until =  CheckInput.TryGetFieldValue(block, "MODE", "Missing_Value_Logic_Condition").Equals("UNTIL");
             CmdEnumerator ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false), "Missing_Value_Logic_Condition");
             yield return ctor;
             DataStruct arg = ctor.Data;
             
             BooleansChecker.CheckBool(arg);
 
-            bool condition = until ? !arg.BooleanValue : arg.BooleanValue;
+            bool condition = arg.BooleanValue;
             while (condition)
             {
                 yield return CSharp.Interpreter.StatementRun(block, "DO");
@@ -162,7 +161,7 @@ namespace UBlockly
                 ctor = CheckInput.TryValueReturn(block, "BOOL", new DataStruct(false), "Missing_Value_Logic_Condition");
                 yield return ctor;
                 arg = ctor.Data;
-                condition = until ? !arg.BooleanValue : arg.BooleanValue;
+                condition = arg.BooleanValue;
                 
                 //reset flow control
                 if (NeedBreak) break;
