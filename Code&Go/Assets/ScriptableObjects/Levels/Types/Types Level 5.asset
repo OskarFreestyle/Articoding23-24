@@ -25,7 +25,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
     m_TableEntryReference:
-      m_KeyId: 2408026603520
+      m_KeyId: 2425269387264
       m_Key: 
     m_FallbackState: 0
   activeBlocks: {fileID: 4900000, guid: 187d119aa73da1240a96c5cf113153c7, type: 3}
