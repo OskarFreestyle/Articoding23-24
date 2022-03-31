@@ -1976,6 +1976,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &290598183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8068610178479776461, guid: 4c68a57c4ed8de64f9b7b23a2c9f7935, type: 3}
+  m_PrefabInstance: {fileID: 290598174}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &290598184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4443570665115131158, guid: 4c68a57c4ed8de64f9b7b23a2c9f7935, type: 3}
+  m_PrefabInstance: {fileID: 290598174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302143661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3283,10 +3293,10 @@ RectTransform:
   m_Father: {fileID: 1724290878}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 333.33334, y: -62.5}
-  m_SizeDelta: {x: 626.6667, y: 115}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &522174335
 GameObject:
@@ -7628,10 +7638,10 @@ RectTransform:
   m_Father: {fileID: 1724290878}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1586.6667, y: -62.5}
-  m_SizeDelta: {x: 626.6667, y: 115}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1187336137
 GameObject:
@@ -9343,10 +9353,10 @@ RectTransform:
   m_Father: {fileID: 1724290878}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -62.5}
-  m_SizeDelta: {x: 626.6667, y: 115}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1493221123
 GameObject:
@@ -10734,9 +10744,9 @@ MonoBehaviour:
   hintButton: {fileID: 0}
   boardModifiable: 1
   gameOverPanel: {fileID: 290598176}
-  gameOverTitleText: {fileID: 0}
-  gameOverErrorText: {fileID: 0}
-  gameOverErrorIcon: {fileID: 0}
+  gameOverTitleText: {fileID: 290598177}
+  gameOverErrorText: {fileID: 290598183}
+  gameOverErrorIcon: {fileID: 290598184}
   blackRect: {fileID: 1698826748}
   streamRoom: {fileID: 1879120465}
   deactivatedColor: {r: 0, g: 0, b: 0, a: 0}

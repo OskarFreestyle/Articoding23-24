@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 10785271808
-    m_Localized: "Hay un campo vac\xEDo."
+    m_Localized: "Hay un campo vac\xEDo"
     m_Metadata:
       m_Items: []
   - m_Id: 1068984553844736
@@ -43,7 +43,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1421484792360960
-    m_Localized: Tienes que poner un valor booleano.
+    m_Localized: Tienes que poner un valor booleano
     m_Metadata:
       m_Items: []
   - m_Id: 1423052166017024

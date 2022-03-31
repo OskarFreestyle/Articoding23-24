@@ -95,7 +95,7 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 7cc9c9b4e9d9aee4b8b471117d4e4121
-    m_Address: types_initial_state_level_4_en
+    m_Address: types_initial_state_level_5_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -481,6 +481,20 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 0}
   - m_GUID: ddb8e56752bdb3744bcff5e7aa7d0b96
     m_Address: variables_initial_state_level_8_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 4f866814e3af2374d8e87b332d7b60b6
+    m_Address: tutorials_initial_state_level_6_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 6d2321356ad94f840b7009e79f7e9045
+    m_Address: tutorials_initial_state_level_7_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

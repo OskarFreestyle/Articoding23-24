@@ -45,9 +45,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2154364751872
-    m_Localized: 'Learn the different operations you can do with the different types.
-
-'
+    m_Localized: Learn the different operations you can do with different data types.
     m_Metadata:
       m_Items: []
   - m_Id: 2419251826688
@@ -81,7 +79,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49955408000778240
-    m_Localized: Start playing and learning how the app works
+    m_Localized: Start playing and learning how the app works.
     m_Metadata:
       m_Items: []
   references:

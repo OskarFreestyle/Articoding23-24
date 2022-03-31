@@ -23,36 +23,12 @@ MonoBehaviour:
     m_Key: Codigo_contenido
     m_Metadata:
       m_Items: []
-  - m_Id: 5033468547072
-    m_Key: Tarjetas_contenido
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5518300729344
-    m_Key: Tarjetas_titulo
-    m_Metadata:
-      m_Items: []
   - m_Id: 6162973642752
     m_Key: EliminarTarjetas_titulo
     m_Metadata:
       m_Items: []
   - m_Id: 6309786865664
     m_Key: EliminarTarjetas_contenido
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7364868231168
-    m_Key: tutorials_0_5_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7445918961664
-    m_Key: tutorials_0_5_content
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7952628633600
-    m_Key: tutorials_0_6_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8061764423680
-    m_Key: tutorial_0_6_content
     m_Metadata:
       m_Items: []
   - m_Id: 8876491198464
@@ -95,14 +71,6 @@ MonoBehaviour:
     m_Key: tutorial_intro_7_content
     m_Metadata:
       m_Items: []
-  - m_Id: 25396340510720
-    m_Key: tutorial_intro_8_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 25477596762112
-    m_Key: tutorial_intro_8_content
-    m_Metadata:
-      m_Items: []
   - m_Id: 115073336659968
     m_Key: tutorial_1_basic_mirror_title
     m_Metadata:
@@ -119,28 +87,12 @@ MonoBehaviour:
     m_Key: tutorial_1_change_intensity_content
     m_Metadata:
       m_Items: []
-  - m_Id: 115928500719616
-    m_Key: tutorial_1_laser_emitter_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 116015675133952
-    m_Key: tutorial_1_laser_emitter_content
-    m_Metadata:
-      m_Items: []
   - m_Id: 116897959563264
     m_Key: tutorial_1_laser_move_title
     m_Metadata:
       m_Items: []
   - m_Id: 117412940402688
     m_Key: tutorial_1_laser_move_content
-    m_Metadata:
-      m_Items: []
-  - m_Id: 117959907004416
-    m_Key: tutorial_1_laser_receiver_content
-    m_Metadata:
-      m_Items: []
-  - m_Id: 118035589025792
-    m_Key: tutorial_1_laser_receiver_title
     m_Metadata:
       m_Items: []
   - m_Id: 139388476116992
@@ -333,10 +285,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4011286208839680
     m_Key: duplicate_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 51497024521646080
-    m_Key: New Entry
     m_Metadata:
       m_Items: []
   - m_Id: 51638803722788864

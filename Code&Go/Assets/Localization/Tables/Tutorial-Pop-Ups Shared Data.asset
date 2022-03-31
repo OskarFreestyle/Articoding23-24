@@ -15,22 +15,6 @@ MonoBehaviour:
   m_TableCollectionName: Tutorial-Pop-Ups
   m_TableCollectionNameGuidString: a7210f51a0697f647a039bb956365be6
   m_Entries:
-  - m_Id: 1190051590144
-    m_Key: TurnedOn
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1374475137024
-    m_Key: Movement
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4171056689152
-    m_Key: TurnedOnTitle
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4207144480768
-    m_Key: MovementTitle
-    m_Metadata:
-      m_Items: []
   - m_Id: 3437825667063808
     m_Key: popup_variables_2_title
     m_Metadata:

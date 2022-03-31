@@ -28,15 +28,6 @@ MonoBehaviour:
       check if you were right!
     m_Metadata:
       m_Items: []
-  - m_Id: 5033468547072
-    m_Localized: The code cards are located in this drop-down, from where you can
-      drag the cards to the code view.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5518300729344
-    m_Localized: Code cards
-    m_Metadata:
-      m_Items: []
   - m_Id: 6162973642752
     m_Localized: Delete code cards
     m_Metadata:
@@ -44,25 +35,6 @@ MonoBehaviour:
   - m_Id: 6309786865664
     m_Localized: If you drag a code card to this panel, the code card will be deleted.
       Watch out! You will also delete all the code cards attached to it
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7364868231168
-    m_Localized: Code execution
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7445918961664
-    m_Localized: Once you have finished placing code cards, you must press this button
-      to start the execution and see the result. Good luck!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7952628633600
-    m_Localized: Introduction level
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8061764423680
-    m_Localized: This is an introductory  level and it's already completed, you just
-      have to press this button when you have understood the code. In each new category
-      there will be an introductory  level.
     m_Metadata:
       m_Items: []
   - m_Id: 8876491198464
@@ -111,15 +83,6 @@ MonoBehaviour:
       not spend real money.
     m_Metadata:
       m_Items: []
-  - m_Id: 25396340510720
-    m_Localized: Welcome to Articoding!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 25477596762112
-    m_Localized: And that's it, I'll leave you to explore. And remember, this is
-      a game - HAVE FUN!
-    m_Metadata:
-      m_Items: []
   - m_Id: 115073336659968
     m_Localized: Mirror
     m_Metadata:
@@ -137,10 +100,6 @@ MonoBehaviour:
     m_Localized: This card allows you to change the laser intensity
     m_Metadata:
       m_Items: []
-  - m_Id: 115928500719616
-    m_Localized: Laser Emitter
-    m_Metadata:
-      m_Items: []
   - m_Id: 116609265618944
     m_Localized: This is a laser emitter. The laser have multiple intensities. You
       can change its intensity using variables.
@@ -154,16 +113,6 @@ MonoBehaviour:
     m_Localized: You have unlocked the Laser movement! This code card allows you
       to move the laser a number of cells in the direction you want. Later on you
       will be able to move other objects as well.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 118035589025792
-    m_Localized: Laser Receiver
-    m_Metadata:
-      m_Items: []
-  - m_Id: 117959907004416
-    m_Localized: This is a Receiver. Your mission is to guide the laser to the receiver
-      to activate it. When the receiver is activated, the door will open and you
-      can move on to the next level.
     m_Metadata:
       m_Items: []
   - m_Id: 139388476116992
@@ -343,11 +292,6 @@ MonoBehaviour:
       will have an infinite loop.
     m_Metadata:
       m_Items: []
-  - m_Id: 116015675133952
-    m_Localized: This is a Laser Emitter. The laser has multiple intensities. If
-      the laser intensity is greater than 0 the laser will turn on.
-    m_Metadata:
-      m_Items: []
   - m_Id: 232223330193408
     m_Localized: Guide
     m_Metadata:
@@ -361,7 +305,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 375763816808448
-    m_Localized: Category stars.
+    m_Localized: Category stars
     m_Metadata:
       m_Items: []
   - m_Id: 216012202627072
@@ -373,8 +317,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 376247898210304
-    m_Localized: You can earn up to three stars per level, if you solve them like
-      a real programmer. Can you get them all?
+    m_Localized: You can get up to three stars per level if you solve them like a
+      real programmer. Can you get them all?
     m_Metadata:
       m_Items: []
   - m_Id: 382661282627584

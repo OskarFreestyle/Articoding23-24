@@ -18,23 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 1190051590144
-    m_Localized: "\xA1Genial! Ya sabes encender el l\xE1ser"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1374475137024
-    m_Localized: "Recuerda que puedes escoger la direcci\xF3n y la cantidad de baldosas
-      por las que moverte"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4171056689152
-    m_Localized: "L\xE1ser encendido"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4207144480768
-    m_Localized: Movimiento
-    m_Metadata:
-      m_Items: []
   - m_Id: 3437825667063808
     m_Localized: A practicar
     m_Metadata:

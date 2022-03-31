@@ -1,0 +1,54 @@
+<xml>
+    <variables />
+    <block type="start_start" id="Jb[.b))bK/!QyIwG2Kg7" x="199" y="-209">
+        <next>
+            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                <field name="DIRECTION">RIGHT</field>
+                <value name="AMOUNT">
+                    <block type="math_number" id="Yk}H}L`Y=abJ%p0!GOMG">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <next>
+                    <block type="movement_move_laser" id="p%SbAkHRwAk.JS!ci,-f">
+                        <field name="DIRECTION">RIGHT</field>
+                        <value name="AMOUNT">
+                            <block type="math_number" id="kwnD$k87Y+,`y:dgZh|o">
+                                <field name="NUM">0</field>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="movement_move_laser" id="2FZ}4p7M6B-2ZnZU8~B_">
+                                <field name="DIRECTION">RIGHT</field>
+                                <value name="AMOUNT">
+                                    <block type="math_number" id="J@?blI@qVHuI5qvc6!L}">
+                                        <field name="NUM">0</field>
+                                    </block>
+                                </value>
+                                <next>
+                                    <block type="movement_rotate_laser" id="C2I1[i5l=NTnCU]@whG4">
+                                        <field name="ROTATION">ANTI_CLOCKWISE</field>
+                                        <value name="AMOUNT">
+                                            <block type="math_number" id="!ntrC*g(MQS1(0Tey1(;">
+                                                <field name="NUM">0</field>
+                                            </block>
+                                        </value>
+                                        <next>
+                                            <block type="movement_laser_change_intensity" id="n9~C].49Ef?g9P|QTJ6?">
+                                                <value name="AMOUNT">
+                                                    <block type="math_number" id="@F_-1d-TczO|V-W_YCpT">
+                                                        <field name="NUM">0</field>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </next>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>
