@@ -36,6 +36,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d1306b234d6d67d4fb78cabeaba292c2, type: 2}
   - {fileID: 11400000, guid: e04e9155fa77be24f867559cbffecb34, type: 2}
   - {fileID: 11400000, guid: 556569d01f61d4c4a9dccf5f6bae83f4, type: 2}
-  - {fileID: 11400000, guid: 3a414b3a287756245b9f700512870af2, type: 2}
+  - {fileID: 11400000, guid: b5fdf2b8446c20248ba86baa58cca97a, type: 2}
   - {fileID: 11400000, guid: f39f41209db2aec46801e91709c6c51e, type: 2}
+  - {fileID: 11400000, guid: 3a414b3a287756245b9f700512870af2, type: 2}
   icon: {fileID: 21300000, guid: 231a2758d9364eb4d9ed100d3abf4f90, type: 3}

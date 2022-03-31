@@ -1,26 +1,4 @@
 <xml>
-    <variables>
-        <variable type="" id="TjNGYD-!b+zh*nxgbjJZ">Desplazamiento</variable>
-    </variables>
-    <block type="start_start" id="+#lN#I^/|Dvcu--Z!Bv3" x="212" y="-211">
-        <next>
-            <block type="variables_set" id="@QIHQ!3#2lxw@RaaS4T-">
-                <field name="VAR" id="TjNGYD-!b+zh*nxgbjJZ" variableType="">Desplazamiento</field>
-                <value name="VALUE">
-                    <block type="math_number" id="p:fe_Dtjp=kNCNUm}naM">
-                        <field name="NUM">0</field>
-                    </block>
-                </value>
-                <next>
-                    <block type="movement_activate_door" id="g=MBW*Xi3xDGl9sl;aYG">
-                        <value name="ACTIVE">
-                            <block type="logic_boolean" id="8|yP7Ss^lZ~3vF)k%j%R">
-                                <field name="BOOL">FALSE</field>
-                            </block>
-                        </value>
-                    </block>
-                </next>
-            </block>
-        </next>
+    <block type="start_start" id="b.wHZHWei=bq4E3FD2-5" x="228" y="-187">
     </block>
 </xml>

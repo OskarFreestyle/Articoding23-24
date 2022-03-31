@@ -211,6 +211,10 @@ MonoBehaviour:
     m_Key: introduction_level_7
     m_Metadata:
       m_Items: []
+  - m_Id: 115110037966958592
+    m_Key: types_level_9
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
