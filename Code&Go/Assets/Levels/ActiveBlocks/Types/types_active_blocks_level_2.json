@@ -1,6 +1,18 @@
 {
     "categories": [
         {
+            "categoryName": "start",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "start_start",
+                        "maxUses": 0
+                    }
+                ]
+            }
+        },
+        {
             "categoryName": "math",
             "blocksInfo": {
                 "activate": true,
@@ -25,6 +37,18 @@
                         "blockName": "variables_set",
                         "maxUses": 100
                     }                       
+                ]
+            }
+        },
+        {
+            "categoryName": "movement",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "movement_move",
+                        "maxUses": 0
+                    }
                 ]
             }
         }
