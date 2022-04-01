@@ -143,9 +143,9 @@ public class TemaryManager : MonoBehaviour
         {
             if (lastData == null || data.localizedTitle.ToString() != lastData.localizedTitle.ToString())
                 AddTitle(data.localizedTitle);
+            AddParagraph(data.localizedContent);
             if (!data.localizedImage.IsEmpty)
                 AddImage(data.localizedImage);
-            AddParagraph(data.localizedContent);
             lastData = data;
         }
 
