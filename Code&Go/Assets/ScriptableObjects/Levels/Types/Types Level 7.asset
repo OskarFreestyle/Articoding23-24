@@ -20,7 +20,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
   levelName: types_7
-  levelPreview: {fileID: 21300000, guid: de13b898647671240a26f8e4f165e73f, type: 3}
+  levelPreview: {fileID: 21300000, guid: f07d13e0b6d6476428054c4d4439af63, type: 3}
   initialState:
     m_TableReference:
       m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
