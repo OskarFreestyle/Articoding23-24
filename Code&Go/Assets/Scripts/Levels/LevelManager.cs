@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private BoardManager boardManager;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private CameraFit cameraFit;
+    [SerializeField] private CodeZoom codeZoom;
 
     [SerializeField] private Category defaultCategory;
     [SerializeField] private int defaultLevelIndex;
@@ -195,6 +196,7 @@ public class LevelManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        codeZoom.ResetZoom();
         LoadInitialBlocks(currentLevel.initialState);
         ActivateLevelBlocks(currentLevel.activeBlocks, currentLevel.allActive);
     }
