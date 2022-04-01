@@ -9519,6 +9519,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6361638429456124069, guid: 4c68a57c4ed8de64f9b7b23a2c9f7935, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1854766111}
+    - target: {fileID: 6361638429456124069, guid: 4c68a57c4ed8de64f9b7b23a2c9f7935, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MinimizeGameOverPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 6361638430544567448, guid: 4c68a57c4ed8de64f9b7b23a2c9f7935, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
