@@ -60,5 +60,30 @@ MonoBehaviour:
     m_Localized: "Puedes mover otros objetos utilizando sus etiquetas. \xA1Estupendo!"
     m_Metadata:
       m_Items: []
+  - m_Id: 57970753007124480
+    m_Localized: "Practicar lo aprendido es muy importante \xA1sigue as\xED!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57972246212902912
+    m_Localized: "\xA1Enhorabuena! Has completado el tutorial"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57973978699530240
+    m_Localized: Puedes declarar y usar tantas variables como necesites
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57975019243438080
+    m_Localized: Con el uso de variables evitas  poner enteros de manera repetida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57975506189549568
+    m_Localized: "Este nivel puede completarse con una \xFAnica variable"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57976385655406592
+    m_Localized: "Parece que dominas el uso de las variables...\xA1has completado
+      la categor\xEDa!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

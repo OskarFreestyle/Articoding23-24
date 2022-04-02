@@ -60,5 +60,30 @@ MonoBehaviour:
     m_Localized: You can move other objects by using their nametags. Fabulous!
     m_Metadata:
       m_Items: []
+  - m_Id: 57970753007124480
+    m_Localized: Practicing what you learn is very important, keep it up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57972246212902912
+    m_Localized: Congratulations! You have completed the tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57973978699530240
+    m_Localized: You can create and use as many variables as needed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57975019243438080
+    m_Localized: With the use of variables you avoid putting integers repeatedly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57975506189549568
+    m_Localized: This level can be completed with only one variable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57976385655406592
+    m_Localized: You seem to have mastered the use of variables...you have completed
+      the category!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
