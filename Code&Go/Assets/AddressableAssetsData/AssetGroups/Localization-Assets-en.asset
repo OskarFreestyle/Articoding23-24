@@ -479,8 +479,8 @@ MonoBehaviour:
     - Locale-en
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: ddb8e56752bdb3744bcff5e7aa7d0b96
-    m_Address: variables_initial_state_level_8_en
+  - m_GUID: abc5d2cbbf561db42b673cd99367e5b1
+    m_Address: Assets/Levels/InitialStates/en/Variables/variables_initial_state_level_10_en.xml
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

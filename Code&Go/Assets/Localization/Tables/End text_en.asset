@@ -85,5 +85,9 @@ MonoBehaviour:
       the category!
     m_Metadata:
       m_Items: []
+  - m_Id: 57997714316197888
+    m_Localized: You are becoming more and more proficient in the use of variables
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
