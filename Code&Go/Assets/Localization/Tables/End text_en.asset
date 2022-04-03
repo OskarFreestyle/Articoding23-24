@@ -81,12 +81,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 57976385655406592
-    m_Localized: You seem to have mastered the use of variables...you have completed
-      the category!
+    m_Localized: Giving meaningful names to variables helps to remember what you
+      store in them
     m_Metadata:
       m_Items: []
   - m_Id: 57997714316197888
     m_Localized: You are becoming more and more proficient in the use of variables
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58316743115407360
+    m_Localized: You seem to have mastered the use of variables...you have completed
+      the category!
     m_Metadata:
       m_Items: []
   references:

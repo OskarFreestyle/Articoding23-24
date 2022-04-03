@@ -81,12 +81,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 57976385655406592
-    m_Localized: "Parece que dominas el uso de las variables...\xA1has completado
-      la categor\xEDa!"
+    m_Localized: Poner nombres significativos a las variables ayuda para recordar
+      que guardas en ellas
     m_Metadata:
       m_Items: []
   - m_Id: 57997714316197888
     m_Localized: "Cada vez dominas m\xE1s el uso de las variables"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58316743115407360
+    m_Localized: "Parece que dominas el uso de las variables...\xA1has completado
+      la categor\xEDa!"
     m_Metadata:
       m_Items: []
   references:

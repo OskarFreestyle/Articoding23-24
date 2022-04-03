@@ -480,7 +480,7 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: abc5d2cbbf561db42b673cd99367e5b1
-    m_Address: Assets/Levels/InitialStates/en/Variables/variables_initial_state_level_10_en.xml
+    m_Address: variables_initial_state_level_8_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -502,6 +502,13 @@ MonoBehaviour:
     m_TargetAsset: {fileID: 0}
   - m_GUID: 30025c9c20515184999149c4127a6a73
     m_Address: types_initial_state_level_9_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3e2e687fa28292b4bb085f83353a41d1
+    m_Address: variables_initial_state_level_9_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

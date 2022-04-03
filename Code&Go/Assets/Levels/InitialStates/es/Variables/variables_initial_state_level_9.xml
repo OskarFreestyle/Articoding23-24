@@ -1,0 +1,15 @@
+<xml>
+    <variables />
+    <block type="start_start" id="nqeyFH3cB{%=79F~!_8B" x="234" y="-244">
+        <next>
+            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                <field name="DIRECTION">UP</field>
+                <next>
+                    <block type="movement_rotate_laser" id="7Oe+g6bqpuQP`l?vH{nr">
+                        <field name="ROTATION">CLOCKWISE</field>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>

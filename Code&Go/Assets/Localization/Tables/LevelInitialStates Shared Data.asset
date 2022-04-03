@@ -203,6 +203,10 @@ MonoBehaviour:
     m_Key: types_9
     m_Metadata:
       m_Items: []
+  - m_Id: 115031833147211776
+    m_Key: variables_9
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
@@ -399,6 +403,10 @@ MonoBehaviour:
           - es
           - en
         - m_KeyId: 113816108193689600
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 115031833147211776
           m_TableCodes:
           - en
           - es
