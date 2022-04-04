@@ -78,5 +78,14 @@ MonoBehaviour:
       verdad?"
     m_Metadata:
       m_Items: []
+  - m_Id: 63816708735852544
+    m_Localized: Duplicar tarjetas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63816868958265344
+    m_Localized: "Haz clic derecho sobre una tarjeta para duplicarla si tienes disponibles
+      m\xE1s tarjetas del mismo tipo"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
