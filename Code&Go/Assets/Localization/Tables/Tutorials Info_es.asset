@@ -62,8 +62,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22131901124608
     m_Localized: Puedes elegir entre jugar los niveles que hay, recordar las cosas
-      que vayas aprendiendo por el camino, crear tus propios niveles o consultar
-      tu perfil.
+      que vayas aprendiendo por el camino o crear tus propios niveles
     m_Metadata:
       m_Items: []
   - m_Id: 24403393564672

@@ -19,6 +19,102 @@ MonoBehaviour:
     m_Key: tut_none
     m_Metadata:
       m_Items: []
+  - m_Id: 114645930622279680
+    m_Key: tut_menus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646823149199360
+    m_Key: tut_cells
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646940266749952
+    m_Key: tut_goback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646946843418624
+    m_Key: tut_guide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646949288697856
+    m_Key: tut_mirror
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646950697984000
+    m_Key: tut_operators
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646952010801152
+    m_Key: tut_play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646953789186048
+    m_Key: tut_restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646955169112064
+    m_Key: tut_stars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646957610196992
+    m_Key: tut_var
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646959862538240
+    m_Key: tut_allcells
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114646961406042112
+    m_Key: tut_bool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647510079725568
+    m_Key: tut_changevar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647511795195904
+    m_Key: tut_compare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647512671805440
+    m_Key: tut_for
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647513439363072
+    m_Key: tut_ifelse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647514211115008
+    m_Key: tut_intensity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647514949312512
+    m_Key: tut_logic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647515687510016
+    m_Key: tut_rotate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647692347400192
+    m_Key: tut_state
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647694327111680
+    m_Key: tut_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114647695702843392
+    m_Key: tut_while
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114648610061115392
+    m_Key: tut_door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114650475385544704
+    m_Key: tut_not
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
@@ -31,6 +127,102 @@ MonoBehaviour:
       data:
         m_Entries:
         - m_KeyId: 61724555445854208
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114645930622279680
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646957610196992
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646955169112064
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646953789186048
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646952010801152
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646950697984000
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646949288697856
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646946843418624
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646940266749952
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646823149199360
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647695702843392
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647694327111680
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647692347400192
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647515687510016
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647514949312512
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647514211115008
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647513439363072
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647512671805440
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647511795195904
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114647510079725568
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646961406042112
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114646959862538240
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114648610061115392
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 114650475385544704
           m_TableCodes:
           - en
           - es
