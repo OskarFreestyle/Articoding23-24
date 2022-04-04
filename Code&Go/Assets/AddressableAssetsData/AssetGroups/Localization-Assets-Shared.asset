@@ -71,114 +71,10 @@ MonoBehaviour:
     m_SerializedLabels: []
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: bfdade8c5f4897b4a9556f98c11122ca
-    m_Address: temario_centrar
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: fa0c9e9b93ed6a0488118e5f8413eb7b
-    m_Address: temario_temario
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 9ac3afcc5771e484a944c2b408c94913
-    m_Address: temario_pista
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 8eea7278fd9d977429b9cc2052877496
-    m_Address: temario_espejo
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 9be969f42941bd540820cc4cea655158
-    m_Address: temario_laser
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: e760b6451f6a0be4692d6d12e1c2a57e
-    m_Address: temario_orbe
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 2c394b726577b2f49a4f82e8e1be1e4d
-    m_Address: temario_entero
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: d89891695453c8348b5ee139cc1ed634
-    m_Address: temario_puerta
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 0cd25cb18b8ffec4e86b43749c95848a
-    m_Address: temario_tipoCelda
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: c6c80405f89498d468ea1eb1d2ed8c58
-    m_Address: operatorPlus
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 77d95a7f481b3417dbe330adc8b5a348
-    m_Address: img_cross
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
   - m_GUID: 0adb858ab7533944cb93d5d83be2fec2
     m_Address: BoardObject Data Shared Data
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: a750961d0a8bd71468bf71358113b840
-    m_Address: temario_play
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: daed1f3681c9df142b3c6f1873911f44
-    m_Address: vista juego
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: cea29a7f33b93df4f92fcabe8eef0c39
@@ -197,14 +93,6 @@ MonoBehaviour:
     m_Address: End text Shared Data
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
-  - m_GUID: 434e911b70c61544fb8062acc942210c
-    m_Address: temario_estrellas
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 45824ea34dbd1d747893280825d7b109
