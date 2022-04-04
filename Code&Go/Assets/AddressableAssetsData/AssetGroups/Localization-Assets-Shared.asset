@@ -208,7 +208,7 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 45824ea34dbd1d747893280825d7b109
-    m_Address: Blanco
+    m_Address: tut_none
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
