@@ -164,10 +164,10 @@ namespace UBlockly
             // methodically step through the blocks and carefully disassemble them.
             
             // First,dispose of all mychildren.
-            for (int i = ChildBlocks.Count - 1; i >= 0; i--)
-            {
-                this.ChildBlocks[i].Dispose(false);
-            }
+            // for (int i = ChildBlocks.Count - 1; i >= 0; i--)
+            // {
+            //     this.ChildBlocks[i].Dispose(false);
+            // }
             
             // Then dispose of myself.
             // Dispose of all inputs and theri fields.
