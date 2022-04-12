@@ -118,5 +118,9 @@ MonoBehaviour:
     m_Localized: You need the Start Block to start running your code!
     m_Metadata:
       m_Items: []
+  - m_Id: 18792186679799808
+    m_Localized: You have to use numeric data!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

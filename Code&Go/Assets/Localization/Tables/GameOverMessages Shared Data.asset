@@ -115,6 +115,10 @@ MonoBehaviour:
     m_Key: Missing_Start_Block
     m_Metadata:
       m_Items: []
+  - m_Id: 18792186679799808
+    m_Key: Not_Numeric_Expression
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

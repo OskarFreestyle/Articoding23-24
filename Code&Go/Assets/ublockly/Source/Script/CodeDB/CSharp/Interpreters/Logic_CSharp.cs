@@ -73,7 +73,7 @@ namespace UBlockly
             yield return ctor;
             DataStruct argument1 = ctor.Data;
 
-            BooleansChecker.SameType(argument0, argument1);
+            TypeChecker.SameType(argument0, argument1);
 
             DataStruct returnData = new DataStruct(false);
             try
@@ -137,8 +137,8 @@ namespace UBlockly
             yield return ctor;
             DataStruct argument1 = ctor.Data;
             
-            BooleansChecker.CheckBool(argument0);
-            BooleansChecker.SameType(argument0, argument1);
+            TypeChecker.CheckBool(argument0);
+            TypeChecker.SameType(argument0, argument1);
             
             DataStruct returnData = new DataStruct(false);
             switch (op)
@@ -163,7 +163,7 @@ namespace UBlockly
             yield return ctor;
             DataStruct argument = ctor.Data;
             
-            BooleansChecker.CheckBool(argument);
+            TypeChecker.CheckBool(argument);
             
             ReturnData(new DataStruct(!argument.BooleanValue));
         }
@@ -202,7 +202,7 @@ namespace UBlockly
             yield return ctor;
             DataStruct condition = ctor.Data;
             
-            BooleansChecker.CheckBool(condition);
+            TypeChecker.CheckBool(condition);
             
             if (condition.BooleanValue)
             {
@@ -225,7 +225,7 @@ namespace UBlockly
             return new DataStruct(toggleValue);
         }
     }
-    public class BooleansChecker
+    public class TypeChecker
     {
         public static void CheckBool(DataStruct data)
         {
@@ -240,6 +240,18 @@ namespace UBlockly
             }
         }
 
+        public static void CheckNumber(DataStruct data)
+        {
+            try
+            {
+                if (data.Type != Define.EDataType.Number)
+                    throw new Exception("Not a number: " + data.Type);
+            }
+            catch (Exception e)
+            {
+                MessageManager.Instance.SendMessage("Not_Numeric_Expression", MSG_TYPE.CODE_END);
+            }
+        }
         public static void SameType(DataStruct first, DataStruct second)
         {
             try

@@ -118,5 +118,9 @@ MonoBehaviour:
     m_Localized: "\xA1Necesitas el bloque de Comienzo para que tu c\xF3digo funcione!"
     m_Metadata:
       m_Items: []
+  - m_Id: 18792186679799808
+    m_Localized: "\xA1Tienes que usar datos num\xE9ricos!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

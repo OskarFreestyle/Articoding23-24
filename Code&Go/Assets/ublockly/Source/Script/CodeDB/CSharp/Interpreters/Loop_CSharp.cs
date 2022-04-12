@@ -151,7 +151,7 @@ namespace UBlockly
             yield return ctor;
             DataStruct arg = ctor.Data;
             
-            BooleansChecker.CheckBool(arg);
+            TypeChecker.CheckBool(arg);
 
             bool condition = arg.BooleanValue;
             while (condition)
