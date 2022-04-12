@@ -95,7 +95,7 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 121de093f5392a24bac13f1ea71f5939
-    m_Address: types_initial_state_level_5
+    m_Address: types_initial_state_level_6
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
@@ -332,7 +332,7 @@ MonoBehaviour:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: 6805d1dd936c7424c8d8cac953e7cb95
+  - m_GUID: 9890559016140234daf42dba39a8c695
     m_Address: variables_initial_state_level_8
     m_ReadOnly: 1
     m_SerializedLabels:
