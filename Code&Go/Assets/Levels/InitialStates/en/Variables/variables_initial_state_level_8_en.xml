@@ -1,28 +1,6 @@
 <xml>
     <variables>
-        <variable type="" id="dRjXmTsN}O[h8uII~2;V">x</variable>
-        <variable type="" id="Hn6T/l;!m{R9JWzAYpB^">y</variable>
     </variables>
-    <block type="start_start" id="DG*AN?/S:`[+.Tj|DOH#" x="145" y="-142">
-        <next>
-            <block type="variables_set" id="X#$-5y-3*-KG!{y+lFYk">
-                <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">x</field>
-                <next>
-                    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
-                        <field name="DIRECTION">DOWN</field>
-                        <next>
-                            <block type="variables_set" id="R[][3hWh`04aB2x|RN+G">
-                                <field name="VAR" id="Hn6T/l;!m{R9JWzAYpB^" variableType="">y</field>
-                                <next>
-                                    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
-                                        <field name="DIRECTION">DOWN</field>
-                                    </block>
-                                </next>
-                            </block>
-                        </next>
-                    </block>
-                </next>
-            </block>
-        </next>
+    <block type="start_start" id="s$B1%BVXq]m(OiR:wzt!" x="264" y="-202">
     </block>
 </xml>
