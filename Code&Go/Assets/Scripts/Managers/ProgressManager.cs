@@ -18,7 +18,7 @@ public class ProgressManager : MonoBehaviour
     private CategorySaveData[] categoriesData;
     private int hintsRemaining = 5;
     private int coins = 10;
-    private string name = "";
+    private string name = "Jugador";
 
     private CategorySaveData currentCategoryData = null;
     private int currentLevel = 0, lastCategoryUnlocked = 0;
