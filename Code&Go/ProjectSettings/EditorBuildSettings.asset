@@ -20,12 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: c7e790c62e2444941ac0902c020c7736
-  - enabled: 0
+  - enabled: 1
     path: Assets/Simva/Simva.unity
     guid: fe5416dc15a29394e837da7dffe1d7c1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Simva/_Login.unity
     guid: 6c3e1015122f94e40b09f498487f4c8d
+  - enabled: 1
+    path: Assets/Simva/_Survey.unity
+    guid: 10700aa4d130b2d478f469947a905d91
+  - enabled: 1
+    path: Assets/Simva/_End.unity
+    guid: 2f3e2781dd955354fa23147e257e994c
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 6c179e007d1999744bff559f129aa2f8, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 4cd0cc8b819edac4183254570ce92a4a, type: 2}
