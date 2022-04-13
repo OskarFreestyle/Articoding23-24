@@ -8971,7 +8971,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 788968445}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1822258252}
+        m_TargetAssemblyTypeName: NameManager, Assembly-CSharp
+        m_MethodName: StoreName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &788968445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14927,7 +14939,7 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 100
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -20884,6 +20896,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackPanel: {fileID: 1512015273}
   nameMenu: {fileID: 1766057907}
+  inputField: {fileID: 1120660955}
+  textDisplay: {fileID: 1334625734}
 --- !u!4 &1822258253
 Transform:
   m_ObjectHideFlags: 0
@@ -22868,7 +22882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: tutorialsON
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: popUpManager

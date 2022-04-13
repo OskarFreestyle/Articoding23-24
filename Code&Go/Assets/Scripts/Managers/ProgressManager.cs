@@ -18,6 +18,7 @@ public class ProgressManager : MonoBehaviour
     private CategorySaveData[] categoriesData;
     private int hintsRemaining = 5;
     private int coins = 10;
+    private string name = "";
 
     private CategorySaveData currentCategoryData = null;
     private int currentLevel = 0, lastCategoryUnlocked = 0;
@@ -154,6 +155,11 @@ public class ProgressManager : MonoBehaviour
         Mathf.Clamp(coins, 0, 100);
     }
 
+    public void SetName(string n) {
+        Debug.Log("Guarda nombre " + n);
+        name = n;
+    }
+
     //Getters
     //----------
 
@@ -214,6 +220,11 @@ public class ProgressManager : MonoBehaviour
     public int GetCoins()
     {
         return coins;
+    }
+
+    public string GetName()
+    {
+        return name;
     }
 
     public void UserCreatedLevel(string board)
@@ -296,6 +307,7 @@ public class ProgressManager : MonoBehaviour
         data.hintsRemaining = hintsRemaining;
         data.lastCategoryUnlocked = lastCategoryUnlocked;
         data.coins = coins;
+        data.name = name;
         data.levelsCreatedData = levelsCreated;
         return data;
     }
@@ -306,6 +318,7 @@ public class ProgressManager : MonoBehaviour
         hintsRemaining = data.hintsRemaining;
         lastCategoryUnlocked = data.lastCategoryUnlocked;
         coins = data.coins;
+        name = data.name;
         levelsCreated = data.levelsCreatedData;
         LoadLevelsCreated();
 
