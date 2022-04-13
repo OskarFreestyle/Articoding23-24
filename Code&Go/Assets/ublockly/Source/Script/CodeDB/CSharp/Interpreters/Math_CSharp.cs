@@ -46,11 +46,12 @@ namespace UBlockly
             CmdEnumerator ctor = CheckInput.TryValueReturn(block, "A", new DataStruct(0), "Missing_Value_Math_Arithmetic");
             yield return ctor;
             DataStruct arg0 = ctor.Data;
-            TypeChecker.CheckNumber(arg0);
             
             ctor = CheckInput.TryValueReturn(block, "B", new DataStruct(0), "Missing_Value_Math_Arithmetic");
             yield return ctor;
             DataStruct arg1 = ctor.Data;
+            
+            TypeChecker.CheckNumber(arg0);
             TypeChecker.CheckNumber(arg1);
             
             string op = block.GetFieldValue("OP");
