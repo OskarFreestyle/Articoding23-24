@@ -891,18 +891,14 @@ public class BoardManager : Listener
         UBlockly.CSharp.Runner.Stop();
         gameOverPanel.SetActive(true);
 
-        if (msg != "")
+        bool thereIsMessage = msg != "";
+        
+        gameOverTitleText.SetActive(!thereIsMessage);
+        gameOverErrorText.SetActive(thereIsMessage);
+        gameOverErrorIcon.SetActive(thereIsMessage);
+        if (thereIsMessage)
         {
-            gameOverTitleText.SetActive(false);
-            gameOverErrorText.SetActive(true);
-            gameOverErrorIcon.SetActive(true);
             gameOverPanel.GetComponent<GameOverPanel>().SetLocalizedText(msg);
-        }
-        else
-        {
-            gameOverTitleText.SetActive(true);
-            gameOverErrorText.SetActive(false);
-            gameOverErrorIcon.SetActive(false);
         }
 
         blackRect.SetActive(true);
