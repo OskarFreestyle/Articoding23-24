@@ -19,7 +19,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 3
+                        "maxUses": 1
                     }
                 ]
             }

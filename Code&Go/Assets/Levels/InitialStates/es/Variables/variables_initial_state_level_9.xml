@@ -13,7 +13,7 @@
                 </value>
                 <next>
                     <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
-                        <field name="DIRECTION">LEFT</field>
+                        <field name="DIRECTION">UP</field>
                         <value name="AMOUNT">
                             <block type="variables_get" id="RF)6?fVz*khIi*-UNN}s">
                                 <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">Movimiento</field>

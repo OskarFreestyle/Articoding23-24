@@ -1,6 +1,29 @@
 <xml>
     <variables>
+        <variable type="" id="dRjXmTsN}O[h8uII~2;V">Movimiento</variable>
     </variables>
-    <block type="start_start" id="s$B1%BVXq]m(OiR:wzt!" x="264" y="-202">
+    <block type="start_start" id="DG*AN?/S:`[+.Tj|DOH#" x="145" y="-142">
+        <next>
+            <block type="variables_set" id="X#$-5y-3*-KG!{y+lFYk">
+                <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">Movimiento</field>
+                <value name="VALUE">
+                    <block type="math_number" id=")PhsJL6Uwv$Fj+LmS4P{">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <next>
+                    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                        <field name="DIRECTION">LEFT</field>
+                        <value name="AMOUNT"/>
+                        <next>
+                            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                                <field name="DIRECTION">LEFT</field>
+                                <value name="AMOUNT"/>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
     </block>
 </xml>
