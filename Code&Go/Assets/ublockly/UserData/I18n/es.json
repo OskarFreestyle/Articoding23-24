@@ -37,7 +37,7 @@
 
   "MOVEMENT_ACTIVATE_DOOR_TITLE": "Cambia estado de %1 a %2",
 
-  "MOVEMENT_CELLS_OCCUPIED_TITLE": "Todas las celdas %1 ocupadas?",
+  "MOVEMENT_CELLS_OCCUPIED_TITLE": "¿Todas las celdas %1 ocupadas?",
 
   "CELL_TYPE_1": "rojas",
   "CELL_TYPE_2": "verdes",
@@ -108,9 +108,9 @@
 
   "CANNOT_DELETE_VARIABLE_PROCEDURE": "No se puede borrar la variable \"%1\" porque forma parte de la definicion de la funcion \"%2\"",
   /// dropdown choice - Delete the currently selected variable.
-  "DELETE_VARIABLE": "Borrar variable...",
+  "DELETE_VARIABLE": "  Borrar variable...",
 
-  "SELECT_VARIABLE": "Seleccionar variable...",
+  "SELECT_VARIABLE": "  Seleccionar variable...",
 
   // Colour Blocks.
   /// url - Information about colour.
