@@ -39,7 +39,7 @@
                                         <next>
                                             <block type="logic_ifelse" id=")sD[P/3/ibhXE2;@#YN0">
                                                 <value name="IF0">
-                                                    <block type="movement_cells_occupied" id="HDw!G?#CTXp35E3P[,/U">
+                                                    <block type="logic_cells_occupied" id="HDw!G?#CTXp35E3P[,/U">
                                                         <field name="TYPE">GREEN</field>
                                                     </block>
                                                 </value>

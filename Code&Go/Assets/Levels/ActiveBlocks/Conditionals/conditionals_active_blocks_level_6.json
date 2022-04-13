@@ -58,6 +58,10 @@
                 "activate": true,
                 "activeBlocks": [     
                     {
+                        "blockName": "logic_cells_occupied",
+                        "maxUses": 2
+                    },
+                    {
                         "blockName": "logic_ifelse",
                         "maxUses": 2
                     }
@@ -84,10 +88,6 @@
                     {
                         "blockName": "movement_move",
                         "maxUses": 3
-                    },
-                    {
-                        "blockName": "movement_cells_occupied",
-                        "maxUses": 2
                     }
                 ]
             }

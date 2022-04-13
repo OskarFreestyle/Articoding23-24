@@ -973,7 +973,7 @@ GameObject:
   - component: {fileID: 2566767151446522115}
   - component: {fileID: 125076043275420518}
   m_Layer: 0
-  m_Name: Block_movement_cells_occupied
+  m_Name: Block_logic_cells_occupied
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

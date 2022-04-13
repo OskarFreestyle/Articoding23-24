@@ -275,8 +275,8 @@ MonoBehaviour:
   - IndexName: movement_activate_door
     ResName: Block_movement_activate_door
     Prefab: {fileID: 2855086744765720491, guid: f5aee89a49633724d953e580af0993f8, type: 3}
-  - IndexName: movement_cells_occupied
-    ResName: Block_movement_cells_occupied
+  - IndexName: logic_cells_occupied
+    ResName: Block_logic_cells_occupied
     Prefab: {fileID: 8622980188831786632, guid: 17dc68d6a7e99f14c80678f9c703acf5, type: 3}
   - IndexName: movement_laser_change_intensity
     ResName: Block_movement_laser_change_intensity

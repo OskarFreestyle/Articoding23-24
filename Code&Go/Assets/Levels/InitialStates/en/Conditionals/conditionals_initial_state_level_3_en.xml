@@ -25,7 +25,7 @@
                                 <value name="BOOL">
                                     <block type="logic_negate" id="=9G+p`G.$PEar3*zJBGE">
                                         <value name="BOOL">
-                                            <block type="movement_cells_occupied" id="NtNM3HeQ$*8d*_z3@02k">
+                                            <block type="logic_cells_occupied" id="NtNM3HeQ$*8d*_z3@02k">
                                                 <field name="TYPE">GREEN</field>
                                             </block>
                                         </value>

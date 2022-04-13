@@ -62,6 +62,10 @@
                 "activate": true,
                 "activeBlocks": [
                     {
+                        "blockName": "logic_cells_occupied",
+                        "maxUses": 100
+                    },
+                    {
                         "blockName": "logic_compare",
                         "maxUses": 100
                     },
@@ -123,10 +127,6 @@
                     },
                     {
                         "blockName": "movement_laser_change_intensity",
-                        "maxUses": 100
-                    },
-                    {
-                        "blockName": "movement_cells_occupied",
                         "maxUses": 100
                     }
                 ]
