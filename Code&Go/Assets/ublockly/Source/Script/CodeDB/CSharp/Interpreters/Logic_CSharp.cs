@@ -25,6 +25,24 @@ using UnityEngine;
 
 namespace UBlockly
 {
+    [CodeInterpreter(BlockType = "logic_cells_occupied")]
+    public class Cells_Occupied_Cmdtor : EnumeratorCmdtor
+    {
+        protected override IEnumerator Execute(Block block)
+        {
+            string colour = block.GetFieldValue("TYPE");
+
+            string msg = (colour == "RED" ? 2 : (colour == "GREEN" ? 3 : 4)).ToString();
+
+            DataStruct returnData = new DataStruct(false);
+            returnData.BooleanValue = MessageManager.Instance.SendBoolMessage(msg, MSG_TYPE.CELL_OCCUPIED);
+
+            yield return null;
+
+            ReturnData(returnData);
+        }
+    }
+
     [CodeInterpreter(BlockType = "logic_if")]
     public class Controls_If_Cmdtor : EnumeratorCmdtor
     {

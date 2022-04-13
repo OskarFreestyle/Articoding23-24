@@ -37,7 +37,7 @@
 
   "MOVEMENT_ACTIVATE_DOOR_TITLE": "Cambia estado de %1 a %2",
 
-  "MOVEMENT_CELLS_OCCUPIED_TITLE": "¿Todas las celdas %1 ocupadas?",
+  "LOGIC_CELLS_OCCUPIED_TITLE": "¿Todas las celdas %1 ocupadas?",
 
   "CELL_TYPE_1": "rojas",
   "CELL_TYPE_2": "verdes",
