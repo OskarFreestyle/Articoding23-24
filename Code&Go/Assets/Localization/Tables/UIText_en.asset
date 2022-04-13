@@ -345,5 +345,13 @@ MonoBehaviour:
     m_Localized: QUIT LEVEL?
     m_Metadata:
       m_Items: []
+  - m_Id: 121310690468823040
+    m_Localized: CHANGE NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121311315311067136
+    m_Localized: Enter name
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

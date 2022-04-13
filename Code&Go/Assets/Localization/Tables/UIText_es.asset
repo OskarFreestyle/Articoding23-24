@@ -345,5 +345,13 @@ MonoBehaviour:
     m_Localized: "\xBFSALIR DEL NIVEL?"
     m_Metadata:
       m_Items: []
+  - m_Id: 121310690468823040
+    m_Localized: CAMBIAR NOMBRE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121311315311067136
+    m_Localized: Introduce tu nombre
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
