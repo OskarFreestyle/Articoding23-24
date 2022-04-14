@@ -18,6 +18,7 @@ public class ProgressManager : MonoBehaviour
     private CategorySaveData[] categoriesData;
     private int hintsRemaining = 5;
     private int coins = 10;
+    private int levelsCompleted = 0;
     private string name = "";
 
     private CategorySaveData currentCategoryData = null;
@@ -174,6 +175,36 @@ public class ProgressManager : MonoBehaviour
         return allUnlocked || (categoryIndex <= lastCategoryUnlocked);
     }
 
+    public int GetLvlsCompleted() {
+        int levels = 0;
+
+        foreach (Category c in categories)
+        {
+            int tmp = GetCategoryCurrentProgress(c);
+            levels += Mathf.Max(0, tmp);
+        }
+
+        return levels;
+    }
+
+    public int GetLvlsPerfects() {
+        int levels = 0;
+
+        foreach(CategorySaveData categoryData in categoriesData)
+        {
+            for (int i = 0; i < categoryData.levelsData.Length; i++)
+            {
+                if (categoryData.lastLevelUnlocked <= i)
+                    break;
+
+                if (categoryData.levelsData[i].stars == 3)
+                    levels++;
+            }
+        }
+
+        return levels;
+    }
+
     public int GetLevelStars(int categoryIndex, int level)
     {
         if (categoryIndex >= categoriesData.Length || categoryIndex < 0 || level >= categoriesData[categoryIndex].levelsData.Length || level < 0) return 0;
@@ -183,6 +214,10 @@ public class ProgressManager : MonoBehaviour
     public int GetLevelStars(Category category, int level)
     {
         return GetLevelStars(categories.IndexOf(category), level);
+    }
+
+    public int GetLastCategory() {
+        return lastCategoryUnlocked;
     }
 
     public uint GetCategoryTotalStars(int categoryIndex)
