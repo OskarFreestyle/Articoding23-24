@@ -353,5 +353,21 @@ MonoBehaviour:
     m_Localized: Introduce tu nombre
     m_Metadata:
       m_Items: []
+  - m_Id: 121802594339913728
+    m_Localized: Estrellas obtenidas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121803009508900864
+    m_Localized: Niveles superados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121803119202533376
+    m_Localized: Niveles perfectos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121803569364598784
+    m_Localized: Categorias acabadas
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

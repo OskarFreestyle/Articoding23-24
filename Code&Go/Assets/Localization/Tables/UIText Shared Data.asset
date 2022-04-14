@@ -347,6 +347,22 @@ MonoBehaviour:
     m_Key: enter_name
     m_Metadata:
       m_Items: []
+  - m_Id: 121802594339913728
+    m_Key: stars_panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121803009508900864
+    m_Key: levels_panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121803119202533376
+    m_Key: perfect_panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121803569364598784
+    m_Key: categories_panel
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

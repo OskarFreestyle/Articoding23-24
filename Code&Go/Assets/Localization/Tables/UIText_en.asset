@@ -353,5 +353,21 @@ MonoBehaviour:
     m_Localized: Enter name
     m_Metadata:
       m_Items: []
+  - m_Id: 121802594339913728
+    m_Localized: Stars obtained
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121803009508900864
+    m_Localized: Levels passed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121803119202533376
+    m_Localized: Perfect levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 121803569364598784
+    m_Localized: Finished categories
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
