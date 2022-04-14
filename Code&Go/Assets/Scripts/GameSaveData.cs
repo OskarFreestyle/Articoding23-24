@@ -39,6 +39,7 @@ public class ProgressSaveData
     public int hintsRemaining;
     public int lastCategoryUnlocked;
     public int coins;
+    public string name;
 }
 
 [System.Serializable]
