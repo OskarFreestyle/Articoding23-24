@@ -20,7 +20,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
   levelName: variables_9
-  levelPreview: {fileID: 21300000, guid: 93253af2649c96241811f7d5ed8b9835, type: 3}
+  levelPreview: {fileID: 21300000, guid: 72ecf56285e6ef049bdfb8b00fc70b36, type: 3}
   initialState:
     m_TableReference:
       m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
@@ -32,7 +32,7 @@ MonoBehaviour:
   allActive: 0
   levelBoard: {fileID: 4900000, guid: 1398e7a3ebff82e4388575f7fc552941, type: 3}
   auxLevelBoard: 
-  minimosPasos: 7
+  minimosPasos: 4
   endTextLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:84c2393b91541f444811c7fc43a5c75a
