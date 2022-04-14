@@ -573,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
     - target: {fileID: 4301428840014341636, guid: 6d153681f563e07418361800acbc0db5, type: 3}
       propertyPath: loadSave
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4301428840014341636, guid: 6d153681f563e07418361800acbc0db5, type: 3}
       propertyPath: levelIndex
@@ -5956,13 +5956,13 @@ MonoBehaviour:
   m_UpdateString:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 537503728}
         m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
         m_MethodName: set_text
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9684,7 +9684,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 46.666687}
+  m_SizeDelta: {x: 0, y: -370}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &888301219
 MonoBehaviour:
@@ -9707,7 +9707,7 @@ MonoBehaviour:
   fitType: 4
   rows: 2
   columns: 3
-  cellSize: {x: 363.33334, y: 363.33334}
+  cellSize: {x: 155, y: 155}
   spacing: {x: 30, y: 30}
   fitX: 1
   fitY: 0
@@ -12674,8 +12674,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1120848874}
   m_HandleRect: {fileID: 1429618136}
   m_Direction: 2
-  m_Value: 0.9999987
-  m_Size: 0.9383259
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16835,8 +16835,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Top: 30
+    m_Bottom: 30
   m_ChildAlignment: 1
   m_Spacing: 5
   m_ChildForceExpandWidth: 1
@@ -20025,7 +20025,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 550}
+  m_SizeDelta: {x: 800, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1776705062
 GameObject:
@@ -20645,6 +20645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822258253}
   - component: {fileID: 1822258252}
+  - component: {fileID: 1822258254}
   m_Layer: 0
   m_Name: NameManager
   m_TagString: Untagged
@@ -20666,8 +20667,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackPanel: {fileID: 1512015273}
   nameMenu: {fileID: 1766057907}
-  inputField: {fileID: 1120660955}
-  textDisplay: {fileID: 1334625734}
+  inputField: {fileID: 1120660957}
+  userName: {fileID: 1334625736}
 --- !u!4 &1822258253
 Transform:
   m_ObjectHideFlags: 0
@@ -20682,6 +20683,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1822258254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822258251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5361068ca8a214fb8aa3e9fe1a48b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starsText: {fileID: 576965282}
 --- !u!1 &1823313725
 GameObject:
   m_ObjectHideFlags: 0

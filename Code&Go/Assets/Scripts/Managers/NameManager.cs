@@ -7,8 +7,8 @@ public class NameManager : MonoBehaviour
 {
     public GameObject blackPanel;
     public GameObject nameMenu;
-    public GameObject inputField;
-    public GameObject textDisplay;
+    public Text inputField;
+    public Text userName;
     private string name;
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class NameManager : MonoBehaviour
     {
         //blackPanel.SetActive(false);
         nameMenu.SetActive(false);
-        textDisplay.GetComponent<Text>().text = ProgressManager.Instance.GetName();
+        userName.text = ProgressManager.Instance.GetName();
     }
 
     public void SetActiveNamePanel(bool active)
@@ -26,8 +26,8 @@ public class NameManager : MonoBehaviour
     }
 
     public void StoreName() {
-        name = inputField.GetComponent<Text>().text;
-        textDisplay.GetComponent<Text>().text = name;
+        name = inputField.text;
+        userName.text = name;
 
         ProgressManager.Instance.SetName(name);
 
