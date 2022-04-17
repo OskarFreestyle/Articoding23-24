@@ -16,7 +16,12 @@ public class ProfileManager : MonoBehaviour
         int levls = ProgressManager.Instance.GetLvlsCompleted();
         starsText.text = ProgressManager.Instance.GetTotalStars().ToString();
         levelsText.text = levls.ToString();
-        perfectText.text = ((ProgressManager.Instance.GetLvlsPerfects() * 100) / levls).ToString() + "%";
+        if(levls > 0) {
+            perfectText.text = ((ProgressManager.Instance.GetLvlsPerfects() * 100) / levls).ToString() + "%";
+        }
+        else {
+            perfectText.text = "0%";
+        }
         categoryText.text = ProgressManager.Instance.GetLastCategory().ToString();
     }
 }
