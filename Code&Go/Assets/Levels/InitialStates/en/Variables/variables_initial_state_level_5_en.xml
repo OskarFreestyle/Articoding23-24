@@ -1,15 +1,27 @@
 <xml>
-    <variables />
-    <block type="start_start" id="nqeyFH3cB{%=79F~!_8B" x="234" y="-244">
+    <variables>
+        <variable type="" id="wSEEQi%#zr3^?glrcz66">x</variable>
+    </variables>
+    <block type="start_start" id="nqeyFH3cB{%=79F~!_8B" x="210" y="-252">
         <next>
-            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
-                <field name="DIRECTION">LEFT</field>
+            <block type="variables_set" id="VYZ*7[k1[Y[s6lvE.Yx;">
+                <field name="VAR" id="wSEEQi%#zr3^?glrcz66" variableType="">x</field>
+                <value name="VALUE">
+                    <block type="math_number" id="j*(utNWyd/!t(-(O,WAm">
+                        <field name="NUM">2</field>
+                    </block>
+                </value>
                 <next>
-                    <block type="movement_move_laser" id="TZr!p`ZnL|Ee5;|b@|Gv">
-                        <field name="DIRECTION">DOWN</field>
+                    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                        <field name="DIRECTION">UP</field>
                         <next>
-                            <block type="movement_rotate_laser" id="7Oe+g6bqpuQP`l?vH{nr">
-                                <field name="ROTATION">CLOCKWISE</field>
+                            <block type="movement_move_laser" id="TZr!p`ZnL|Ee5;|b@|Gv">
+                                <field name="DIRECTION">DOWN</field>
+                                <next>
+                                    <block type="movement_rotate_laser" id="7Oe+g6bqpuQP`l?vH{nr">
+                                        <field name="ROTATION">CLOCKWISE</field>
+                                    </block>
+                                </next>
                             </block>
                         </next>
                     </block>
