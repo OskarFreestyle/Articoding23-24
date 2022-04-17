@@ -60,14 +60,14 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 7e42698edd460954cb5cb1a214fcb951
-    m_Address: variables_initial_state_level_6
+    m_Address: variables_initial_state_level_5
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: c7039e69b4b5ef046853b9941f8692ca
-    m_Address: variables_initial_state_level_7
+    m_Address: variables_initial_state_level_6
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
@@ -326,14 +326,14 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 21040e2be955ea34b81b9e806e8bd4dd
-    m_Address: variables_initial_state_level_8
+    m_Address: variables_initial_state_level_7
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 9890559016140234daf42dba39a8c695
-    m_Address: variables_initial_state_level_9
+    m_Address: variables_initial_state_level_8
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
