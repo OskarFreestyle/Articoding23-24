@@ -13,18 +13,6 @@
             }
         },
         {
-            "categoryName": "math",
-            "blocksInfo": {
-                "activate": true,
-                "activeBlocks": [
-                    {
-                        "blockName": "math_number",
-                        "maxUses": 1
-                    }
-                ]
-            }
-        },
-        {
             "categoryName": "variable",
             "blocksInfo": {
                 "activate": true,
@@ -47,7 +35,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move_laser",
-                        "maxUses": 4
+                        "maxUses": 3
                     },
                     {
                         "blockName": "movement_rotate_laser",

@@ -28,11 +28,11 @@ MonoBehaviour:
       m_KeyId: 115031833147211776
       m_Key: 
     m_FallbackState: 0
-  activeBlocks: {fileID: 4900000, guid: 247aef558b2ef9745b0e22f98effd7a7, type: 3}
+  activeBlocks: {fileID: 4900000, guid: f3124d508c9cccc41bcdc555ff0f2b75, type: 3}
   allActive: 0
-  levelBoard: {fileID: 4900000, guid: 1398e7a3ebff82e4388575f7fc552941, type: 3}
+  levelBoard: {fileID: 4900000, guid: 5fa90644cf371ce499fa458eb05dab6d, type: 3}
   auxLevelBoard: 
-  minimosPasos: 4
+  minimosPasos: 8
   endTextLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:84c2393b91541f444811c7fc43a5c75a

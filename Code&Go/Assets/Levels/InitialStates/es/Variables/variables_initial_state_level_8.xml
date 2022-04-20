@@ -1,24 +1,27 @@
 <xml>
     <variables>
-        <variable type="" id="dRjXmTsN}O[h8uII~2;V">Movimiento</variable>
+        <variable type="" id="?1~94dY/yAwu(`]t*qo;">Cantidad</variable>
     </variables>
-    <block type="start_start" id="DG*AN?/S:`[+.Tj|DOH#" x="145" y="-142">
+    <block type="start_start" id=":~oNrg]Nx}Mi;J$Kf=rf" x="226" y="-216">
         <next>
-            <block type="variables_set" id="X#$-5y-3*-KG!{y+lFYk">
-                <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">Movimiento</field>
+            <block type="variables_set" id="]E[l?{8^R6Cl^O2Wh-V%">
+                <field name="VAR" id="?1~94dY/yAwu(`]t*qo;" variableType="">Cantidad</field>
                 <value name="VALUE">
-                    <block type="math_number" id=")PhsJL6Uwv$Fj+LmS4P{">
+                    <block type="math_number" id="cqH[GfDBzT%V)q7bNhCK">
                         <field name="NUM">0</field>
                     </block>
                 </value>
                 <next>
-                    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                    <block type="movement_move_laser" id="[2H$w-6]/$%E.DD.Pk94">
                         <field name="DIRECTION">LEFT</field>
-                        <value name="AMOUNT"/>
                         <next>
-                            <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
-                                <field name="DIRECTION">LEFT</field>
-                                <value name="AMOUNT"/>
+                            <block type="movement_rotate_laser" id="Qs}yLfvP`9Pv(I([H%6E">
+                                <field name="ROTATION">CLOCKWISE</field>
+                                <next>
+                                    <block type="movement_move_laser" id="ihOMqvB5g{4e4Uz.#5@?">
+                                        <field name="DIRECTION">RIGHT</field>
+                                    </block>
+                                </next>
                             </block>
                         </next>
                     </block>
