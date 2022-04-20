@@ -163,6 +163,11 @@ namespace UBlockly
             // well as corruption of the connectoin database. Therefore we must
             // methodically step through the blocks and carefully disassemble them.
             
+            /**
+            Articodign: Do not use this as it results in an exception error when
+            deleting a variable and there's a "change variable" block in the scene
+            with a value attached
+            **/ 
             // First,dispose of all mychildren.
             // for (int i = ChildBlocks.Count - 1; i >= 0; i--)
             // {
