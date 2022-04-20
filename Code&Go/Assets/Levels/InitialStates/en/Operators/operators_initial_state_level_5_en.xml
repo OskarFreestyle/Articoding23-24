@@ -23,7 +23,7 @@
                         <next>
                             <block type="movement_activate_door" id="QGT=@WPg#4/W(WFrW?c2">
                                 <value name="ACTIVE">
-                                    <block type="movement_cells_occupied" id="KshsPY6I+1S@(u+Rr2Hf">
+                                    <block type="logic_cells_occupied" id="KshsPY6I+1S@(u+Rr2Hf">
                                         <field name="TYPE">RED</field>
                                     </block>
                                 </value>

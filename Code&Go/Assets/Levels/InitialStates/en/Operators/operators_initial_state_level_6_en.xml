@@ -28,12 +28,12 @@
                                     <block type="logic_operation" id="5peOUz(!}Ge:+TDmZDTH">
                                         <field name="OP">AND</field>
                                         <value name="A">
-                                            <block type="movement_cells_occupied" id="No9`+`#RtF+|2N7lMzk5">
+                                            <block type="logic_cells_occupied" id="No9`+`#RtF+|2N7lMzk5">
                                                 <field name="TYPE">RED</field>
                                             </block>
                                         </value>
                                         <value name="B">
-                                            <block type="movement_cells_occupied" id="pxWBe6vZ!RG5)@ELo,/p">
+                                            <block type="logic_cells_occupied" id="pxWBe6vZ!RG5)@ELo,/p">
                                                 <field name="TYPE">RED</field>
                                             </block>
                                         </value>
