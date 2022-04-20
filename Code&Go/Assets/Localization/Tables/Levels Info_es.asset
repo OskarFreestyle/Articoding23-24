@@ -43,27 +43,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1620224331776
-    m_Localized: '3-2: Tipos de Datos 2'
+    m_Localized: '3-2: Moviendo otros objetos'
     m_Metadata:
       m_Items: []
   - m_Id: 1738105245696
-    m_Localized: '3-3: Tipos de Datos 3'
+    m_Localized: "3-3: Reflejos de l\xE1ser"
     m_Metadata:
       m_Items: []
   - m_Id: 1880166322176
-    m_Localized: '3-4: Tipos de Datos 4'
+    m_Localized: '3-4: Multiples reflejos'
     m_Metadata:
       m_Items: []
   - m_Id: 2010802114560
-    m_Localized: '3-5: Tipos de Datos 5'
+    m_Localized: "3-5: M\xE1s de un l\xE1ser"
     m_Metadata:
       m_Items: []
   - m_Id: 2149360947200
-    m_Localized: '3-6: Tipos de Datos 6'
+    m_Localized: '3-6: Nuevo objeto: Puerta'
     m_Metadata:
       m_Items: []
   - m_Id: 2400595562496
-    m_Localized: '3-7: Tipos de Datos 7'
+    m_Localized: '3-7: Abre la puerta'
     m_Metadata:
       m_Items: []
   - m_Id: 2751654612992
@@ -151,7 +151,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 321477024022528
-    m_Localized: '3-8: Tipos de Datos 8'
+    m_Localized: '3-8: Comprueba lo que sabes'
     m_Metadata:
       m_Items: []
   - m_Id: 326974879956992
@@ -215,7 +215,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115110037966958592
-    m_Localized: '3-9: Tipos de Datos 9'
+    m_Localized: '3-9: Comprueba lo que sabes'
     m_Metadata:
       m_Items: []
   references:

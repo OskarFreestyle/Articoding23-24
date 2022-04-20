@@ -43,27 +43,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1620224331776
-    m_Localized: '3-2: Data Types 2'
+    m_Localized: '3-2: Moving other objects'
     m_Metadata:
       m_Items: []
   - m_Id: 1738105245696
-    m_Localized: '3-3: Data Types 3'
+    m_Localized: '3-3: Laser reflections'
     m_Metadata:
       m_Items: []
   - m_Id: 1880166322176
-    m_Localized: '3-4: Data Types 4'
+    m_Localized: '3-4: Multiple reflections'
     m_Metadata:
       m_Items: []
   - m_Id: 2010802114560
-    m_Localized: '3-5: Data Types 5'
+    m_Localized: '3-5: More than one laser'
     m_Metadata:
       m_Items: []
   - m_Id: 2149360947200
-    m_Localized: '3-6: Data Types 6'
+    m_Localized: '3-6: New object: Door'
     m_Metadata:
       m_Items: []
   - m_Id: 2400595562496
-    m_Localized: '3-7: Data Types 7'
+    m_Localized: '3-7: Open the door'
     m_Metadata:
       m_Items: []
   - m_Id: 2751654612992
@@ -151,7 +151,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 321477024022528
-    m_Localized: '3-8: Data Types 8'
+    m_Localized: '3-8: Test your knowledge'
     m_Metadata:
       m_Items: []
   - m_Id: 326974879956992
@@ -215,7 +215,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115110037966958592
-    m_Localized: '3-9: Data Types 9'
+    m_Localized: '3-9: Test your knowledge'
     m_Metadata:
       m_Items: []
   references:

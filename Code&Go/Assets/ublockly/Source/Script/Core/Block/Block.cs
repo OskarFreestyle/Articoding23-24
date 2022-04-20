@@ -164,7 +164,7 @@ namespace UBlockly
             // methodically step through the blocks and carefully disassemble them.
             
             /**
-            Articodign: Do not use this as it results in an exception error when
+            Articoding: Do not use this as it results in an exception error when
             deleting a variable and there's a "change variable" block in the scene
             with a value attached
             **/ 
