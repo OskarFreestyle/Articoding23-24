@@ -571,6 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1033,6 +1034,7 @@ GameObject:
   - component: {fileID: 1805708352317463822}
   - component: {fileID: 2572878676881908821}
   - component: {fileID: -5961409083311086145}
+  - component: {fileID: 3569698558488114596}
   m_Layer: 0
   m_Name: Block_logic_compare
   m_TagString: Untagged
@@ -1144,3 +1146,17 @@ MonoBehaviour:
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3569698558488114596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9127168010095457442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4a7d46654560a4d8012ca2935fcaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tt: {fileID: -5961409083311086145}
+  level: {fileID: 11400000, guid: 9efdc2c4233e418469e86174a266520e, type: 2}
