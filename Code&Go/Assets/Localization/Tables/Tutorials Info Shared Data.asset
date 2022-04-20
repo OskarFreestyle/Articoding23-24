@@ -187,10 +187,6 @@ MonoBehaviour:
     m_Key: tutorial_3_comparator_title
     m_Metadata:
       m_Items: []
-  - m_Id: 214488768499712
-    m_Key: tutorial_3_comparator_content
-    m_Metadata:
-      m_Items: []
   - m_Id: 215098960039936
     m_Key: tutorial_3_logical_operator_title
     m_Metadata:

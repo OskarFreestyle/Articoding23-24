@@ -79,6 +79,14 @@ MonoBehaviour:
     m_Key: popup_variables_5_duplicate_content
     m_Metadata:
       m_Items: []
+  - m_Id: 69572040324689920
+    m_Key: popup_operators_1_comparison1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69573520041586688
+    m_Key: popup_operators_1_comparison2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
