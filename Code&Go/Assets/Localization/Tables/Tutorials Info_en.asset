@@ -223,11 +223,6 @@ MonoBehaviour:
     m_Localized: Comparators
     m_Metadata:
       m_Items: []
-  - m_Id: 214488768499712
-    m_Localized: 'With this code card you can compare two numbers or variables and
-      obtain a boolean based on the result. '
-    m_Metadata:
-      m_Items: []
   - m_Id: 215098960039936
     m_Localized: Logical operators
     m_Metadata:

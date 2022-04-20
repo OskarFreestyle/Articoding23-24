@@ -224,11 +224,6 @@ MonoBehaviour:
     m_Localized: Comparadores
     m_Metadata:
       m_Items: []
-  - m_Id: 214488768499712
-    m_Localized: "Con esta tarjeta puedes comparar dos n\xFAmeros o variables y obtener
-      un booleano en funci\xF3n del resultado."
-    m_Metadata:
-      m_Items: []
   - m_Id: 215098960039936
     m_Localized: "Operadores l\xF3gicos"
     m_Metadata:

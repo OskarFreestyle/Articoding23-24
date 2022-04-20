@@ -87,5 +87,15 @@ MonoBehaviour:
       m\xE1s tarjetas del mismo tipo"
     m_Metadata:
       m_Items: []
+  - m_Id: 69572040324689920
+    m_Localized: "\xA1Ups! Parece que me he olvidado de darte una tarjeta booleana,
+      \xA1lo siento! A lo mejor podemos usar esta tarjeta de comparaci\xF3n... \xA1S\xED! "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69573520041586688
+    m_Localized: "Si la comparaci\xF3n es verdadera, la tarjeta devolver\xE1 \"true\",
+      y si no lo es, devolver\xE1 \"false\". \xA1Int\xE9ntalo!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

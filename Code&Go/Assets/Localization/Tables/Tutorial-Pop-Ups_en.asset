@@ -86,5 +86,15 @@ MonoBehaviour:
       of the same type available
     m_Metadata:
       m_Items: []
+  - m_Id: 69572040324689920
+    m_Localized: 'Whoops! It seems like I forgot to give you a bool card, sorry!
+      Maybe we could use this comparison card... Yes! '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69573520041586688
+    m_Localized: If the comparison is right, the card will have a "true" value. Otherwise,
+      it can be used as a "false" value. Try this!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
