@@ -1,44 +1,34 @@
 <xml>
     <variables>
-        <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Object</variable>
-        <variable type="" id="An]Sn_i2fD:nVJ/Y]5_A">Movement</variable>
-        <variable type="" id="T5MLVG+W[93if;JDwPVe">Rotation</variable>
+        <variable type="" id=".jyFzALa|T0a:1jh+lu%">LaserMovement</variable>
+        <variable type="" id="%T!.%JH-z0j7vi8^__rn">Rotation</variable>
+        <variable type="" id="^PQXP;FRT[:q#XZPD;G~">MirrorMovement</variable>
     </variables>
-    <block type="start_start" id="n}YT#E`uK[Q6K,e}R(c}" x="150" y="-139">
+    <block type="start_start" id="RAoT1BOr@Z4#Q4)84|6D" x="39" y="-70">
         <next>
-            <block type="variables_set" id="q7*vM`_bKyO/@ED6M%Pz">
-                <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Object</field>
-                <value name="VALUE">
-                    <block type="text" id="Kgf)VE~u~}-+:C5+)WJi">
-                        <field name="TEXT" />
-                    </block>
-                </value>
+            <block type="variables_set" id="xW6NY_8_^]9E@tDHb0y8">
+                <field name="VAR" id=".jyFzALa|T0a:1jh+lu%" variableType="">LaserMovement</field>
                 <next>
-                    <block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
-                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movement</field>
-                        <value name="VALUE">
-                            <block type="math_number" id="gy6Zv}mXv(ro1e!#^[Yf">
-                                <field name="NUM">0</field>
-                            </block>
-                        </value>
+                    <block type="variables_set" id="|CZtD`8ipVy$ZBLB0wq3">
+                        <field name="VAR" id="%T!.%JH-z0j7vi8^__rn" variableType="">Rotation</field>
                         <next>
-                            <block type="variables_set" id="3Po,.`{qU[I3|wG4B:W2">
-                                <field name="VAR" id="T5MLVG+W[93if;JDwPVe" variableType="">Rotation</field>
+                            <block type="variables_set" id="~:V#!ZMT*j($+Z?~go!^">
+                                <field name="VAR" id="^PQXP;FRT[:q#XZPD;G~" variableType="">MirrorMovement</field>
                                 <value name="VALUE">
-                                    <block type="math_number" id="yH?(J@y?D@SMF.(/7g|O">
-                                        <field name="NUM">0</field>
-                                    </block>
-                                </value>
-                                <next>
-                                    <block type="variables_set" id="g@R%foA$r7~C}P)ot5!N">
-                                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movement</field>
-                                        <value name="VALUE">
-                                            <block type="math_arithmetic" id="]]/|]Q8nJGa/K@^-+HX=">
-                                                <field name="OP">ADD</field>
+                                    <block type="math_arithmetic" id="miQi(26!i*8h]hm:tyBb">
+                                        <field name="OP">ADD</field>
+                                        <value name="A">
+                                            <block type="variables_get" id="#K[a)YhtN83a(XxOVt?+">
+                                                <field name="VAR" id=".jyFzALa|T0a:1jh+lu%" variableType="">LaserMovement</field>
+                                            </block>
+                                        </value>
+                                        <value name="B">
+                                            <block type="variables_get" id="L@Mq4g]t*~_C|!H(Ocq|">
+                                                <field name="VAR" id="%T!.%JH-z0j7vi8^__rn" variableType="">Rotation</field>
                                             </block>
                                         </value>
                                     </block>
-                                </next>
+                                </value>
                             </block>
                         </next>
                     </block>

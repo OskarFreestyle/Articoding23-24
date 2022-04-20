@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 1_Operador
+  m_Name: 1_Operador_1
   m_EditorClassIdentifier: 
   type: 5
   title: "Operadores num\xE9ricos"
@@ -28,15 +28,15 @@ MonoBehaviour:
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
-      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 218012730445824
+      m_KeyId: 69613592409419776
       m_Key: 
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
       m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 114646950697984000
+      m_KeyId: 61724555445854208
       m_Key: 
     m_FallbackState: 0

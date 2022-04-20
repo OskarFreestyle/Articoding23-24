@@ -97,5 +97,16 @@ MonoBehaviour:
       y si no lo es, devolver\xE1 \"false\". \xA1Int\xE9ntalo!"
     m_Metadata:
       m_Items: []
+  - m_Id: 69613496653459456
+    m_Localized: "\xA1Ha vuelto a pasar! Siento haberme olvidado de darte la tarjeta
+      de n\xFAmeros... \xA1Qu\xE9 despiste! Bueno, \xA1por lo menos te traigo la
+      tarjeta de operaciones!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69613592409419776
+    m_Localized: "Puedes usar esta tarjeta para sumar, restar, etc. otros n\xFAmeros.
+      \xA1Puedes usar el resultado como un n\xFAmero!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

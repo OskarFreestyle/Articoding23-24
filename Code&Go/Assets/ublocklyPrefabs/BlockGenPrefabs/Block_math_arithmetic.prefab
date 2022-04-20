@@ -208,6 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -791,6 +792,7 @@ GameObject:
   - component: {fileID: 6179299339346929966}
   - component: {fileID: 5180098599713615955}
   - component: {fileID: 5036611332859236162}
+  - component: {fileID: 3943270409634957469}
   m_Layer: 0
   m_Name: Block_math_arithmetic
   m_TagString: Untagged
@@ -895,13 +897,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 210
-  info: {fileID: 11400000, guid: 495658a834d78844dac01e28a20965f5, type: 2}
+  info: {fileID: 11400000, guid: 6fae224b993a1734d9239698d552dbd0, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
   isSaveCheckpoint: 1
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3943270409634957469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8497933616421601620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4a7d46654560a4d8012ca2935fcaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tt: {fileID: 5036611332859236162}
+  level: {fileID: 11400000, guid: d3a0610d4523c1e49946b3b20b4092bd, type: 2}
 --- !u!1 &8553299020646164165
 GameObject:
   m_ObjectHideFlags: 0

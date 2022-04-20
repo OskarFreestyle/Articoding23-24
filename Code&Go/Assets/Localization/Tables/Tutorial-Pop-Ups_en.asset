@@ -96,5 +96,15 @@ MonoBehaviour:
       it can be used as a "false" value. Try this!
     m_Metadata:
       m_Items: []
+  - m_Id: 69613496653459456
+    m_Localized: It happened again! So sorry I forgot to give you the numbers card
+      this time. Totally my bad! Well... I have the operation card!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69613592409419776
+    m_Localized: You can use this card to add, substract, etc. different numbers.
+      You can use the result as a number!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

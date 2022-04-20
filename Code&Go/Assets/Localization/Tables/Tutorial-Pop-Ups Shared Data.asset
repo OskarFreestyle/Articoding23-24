@@ -87,6 +87,14 @@ MonoBehaviour:
     m_Key: popup_operators_1_comparison2
     m_Metadata:
       m_Items: []
+  - m_Id: 69613496653459456
+    m_Key: popup_operators_3_addition1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69613592409419776
+    m_Key: popup_operators_3_addition2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
