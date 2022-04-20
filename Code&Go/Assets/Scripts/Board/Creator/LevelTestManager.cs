@@ -31,6 +31,7 @@ public class LevelTestManager : MonoBehaviour
     [SerializeField] Sprite changeToEditModeSprite;
     [SerializeField] Sprite changeToPlayModeSprite;
 
+    [SerializeField] private GameObject saveButton;
     [SerializeField] GameObject loadBoardPanel;
     [SerializeField] GameObject saveBoardPanel;
 
@@ -61,6 +62,7 @@ public class LevelTestManager : MonoBehaviour
 #if UNITY_EDITOR
         loadBoardPanel.SetActive(true);
         saveBoardPanel.SetActive(true);
+        saveButton.SetActive(true);
 #endif
     }
 

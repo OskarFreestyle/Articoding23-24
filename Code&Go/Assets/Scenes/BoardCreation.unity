@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.035862885, g: 0.050364047, b: 0.10298859, a: 1}
+  m_IndirectSpecularColor: {r: 0.03586712, g: 0.0503774, b: 0.10300305, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11200,6 +11200,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -11689,6 +11693,7 @@ MonoBehaviour:
   changeModeButton: {fileID: 2036795572}
   changeToEditModeSprite: {fileID: 21300000, guid: 3c94c88b0e8c4d644acf994282fcd6cc, type: 3}
   changeToPlayModeSprite: {fileID: 21300000, guid: c458422c051d46148835ff1907b4c69f, type: 3}
+  saveButton: {fileID: 1682797348}
   loadBoardPanel: {fileID: 771741127}
   saveBoardPanel: {fileID: 1493221123}
   streamRoom: {fileID: 1879120465}
