@@ -67,15 +67,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2751654612992
-    m_Localized: '4-1: Operadores 1'
+    m_Localized: '4-1: Un booleano perdido'
     m_Metadata:
       m_Items: []
   - m_Id: 2903391948800
-    m_Localized: '4-2: Operadores 2'
+    m_Localized: '4-2: Making comparisons'
     m_Metadata:
       m_Items: []
   - m_Id: 3188537511936
-    m_Localized: '4-3: Operadores 3'
+    m_Localized: "4-3: Los n\xFAmeros no cuadran"
     m_Metadata:
       m_Items: []
   - m_Id: 3265909837824
