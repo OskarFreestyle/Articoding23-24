@@ -53,6 +53,18 @@
             }
         },
         {
+            "categoryName": "logic",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "logic_cells_occupied",
+                        "maxUses": 2
+                    }
+                ]
+            }
+        },
+        {
             "categoryName": "movement",
             "blocksInfo": {
                 "activate": true,
@@ -67,10 +79,6 @@
                     },
                     {
                         "blockName": "movement_activate_door",
-                        "maxUses": 2
-                    },
-                    {
-                        "blockName": "movement_cells_occupied",
                         "maxUses": 2
                     }
                 ]
