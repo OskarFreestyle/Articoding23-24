@@ -60,7 +60,11 @@
                     {
                         "blockName": "logic_operation",
                         "maxUses": 2
-                    }                           
+                    },
+                    {
+                        "blockName": "logic_cells_occupied",
+                        "maxUses": 2
+                    }
                 ]
             }
         },

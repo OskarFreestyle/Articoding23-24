@@ -64,7 +64,11 @@
                     {
                         "blockName": "logic_negate",
                         "maxUses": 2
-                    }   
+                    },
+                    {
+                        "blockName": "logic_cells_occupied",
+                        "maxUses": 2
+                    }
                 ]
             }
         },
@@ -83,10 +87,6 @@
                     },
                     {
                         "blockName": "movement_activate_door",
-                        "maxUses": 2
-                    },
-                    {
-                        "blockName": "movement_cells_occupied",
                         "maxUses": 2
                     }
                 ]
