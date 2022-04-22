@@ -7,7 +7,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "start_start",
-                        "maxUses": 1
+                        "maxUses": 0
                     }
                 ]
             }
