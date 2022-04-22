@@ -1,30 +1,25 @@
 <xml>
     <variables>
-        <variable type="" id="rxURkPna7w]cs)j{EFdH">Object</variable>
-        <variable type="" id=":KP!kapI*_Zb52~9_0wd">Amount</variable>
+        <variable type="" id="bDu4M@gM7j$!Zyj$-u+x">A</variable>
+        <variable type="" id="w{DiTQMvo#-1_v{y3kD7">B</variable>
     </variables>
-    <block type="start_start" id="{^::@U-)skOOKK=g)ER8" x="213" y="-131">
+    <block type="start_start" id="g,$2.N^ZDY}eD-iu:SS," x="265" y="-231">
         <next>
-            <block type="variables_set" id="h+?+J7j)+jF)7*ep]Laj">
-                <field name="VAR" id="rxURkPna7w]cs)j{EFdH" variableType="">Object</field>
+            <block type="variables_set" id="oC2{NSa?gg[!2VO$+ALf">
+                <field name="VAR" id="bDu4M@gM7j$!Zyj$-u+x" variableType="">A</field>
                 <value name="VALUE">
-                    <block type="text" id="uA-Ej.jYuEWy1h{LMw0K">
-                        <field name="TEXT" />
+                    <block type="text" id="Dl^WS9l+TGdAV1UCK1io">
+                        <field name="TEXT">Mirror_1</field>
                     </block>
                 </value>
                 <next>
-                    <block type="variables_set" id="*:JJ|W;MvXqM%4@:0pH_">
-                        <field name="VAR" id=":KP!kapI*_Zb52~9_0wd" variableType="">Amount</field>
+                    <block type="variables_set" id="1-xv*$*Hn4kTXm~yl/J@">
+                        <field name="VAR" id="w{DiTQMvo#-1_v{y3kD7" variableType="">B</field>
                         <value name="VALUE">
-                            <block type="math_number" id="Z;1LxbzUHM7,DNmGoN/H">
-                                <field name="NUM">0</field>
+                            <block type="text" id="m==KX4X~t1BQAd%;B{_4">
+                                <field name="TEXT">Mirror_2</field>
                             </block>
                         </value>
-                        <next>
-                            <block type="movement_rotate" id="IXUrd~;4/UokOx$2|`r:">
-                                <field name="ROTATION">CLOCKWISE</field>
-                            </block>
-                        </next>
                     </block>
                 </next>
             </block>

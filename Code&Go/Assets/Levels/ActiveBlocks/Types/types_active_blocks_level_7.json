@@ -7,7 +7,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "start_start",
-                        "maxUses": 0
+                        "maxUses": 1
                     }
                 ]
             }
@@ -19,7 +19,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 5
+                        "maxUses": 0
                     }
                 ]
             }
@@ -47,7 +47,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "text",
-                        "maxUses": 5
+                        "maxUses": 3
                     }                           
                 ]
             }
@@ -60,7 +60,7 @@
                     {
                         "blockName": "logic_boolean",
                         "maxUses": 1
-                    }                           
+                    }               
                 ]
             }
         },
@@ -71,11 +71,11 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 3
+                        "maxUses": 2
                     },
                     {
                         "blockName": "movement_rotate",
-                        "maxUses": 2
+                        "maxUses": 1
                     },
                     {
                         "blockName": "movement_activate_door",

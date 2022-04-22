@@ -1,4 +1,17 @@
 <xml>
-    <block type="start_start" id="b.wHZHWei=bq4E3FD2-5" x="228" y="-187">
+    <variables>
+        <variable type="" id="Edqd!1B/*:l{Vl{|$14{">Cantidad</variable>
+    </variables>
+    <block type="start_start" id="[w2u9cCps{bfYZeNOd]K" x="192" y="-214">
+        <next>
+            <block type="variables_set" id="E,+0Gs~8~*YS4g@}pM*9">
+                <field name="VAR" id="Edqd!1B/*:l{Vl{|$14{" variableType="">Cantidad</field>
+                <value name="VALUE">
+                    <block type="math_number" id="d|7-SAry1)fVB92/Y]BZ">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+            </block>
+        </next>
     </block>
 </xml>

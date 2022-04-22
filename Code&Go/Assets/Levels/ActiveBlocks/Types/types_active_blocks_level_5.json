@@ -1,13 +1,13 @@
 {
     "categories": [
-            {
+        {
             "categoryName": "start",
             "blocksInfo": {
                 "activate": true,
                 "activeBlocks": [
                     {
                         "blockName": "start_start",
-                        "maxUses": 0
+                        "maxUses": 1
                     }
                 ]
             }
@@ -47,19 +47,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "text",
-                        "maxUses": 1
-                    }                           
-                ]
-            }
-        },
-        {
-            "categoryName": "logic",
-            "blocksInfo": {
-                "activate": true,
-                "activeBlocks": [
-                    {
-                        "blockName": "logic_boolean",
-                        "maxUses": 0
+                        "maxUses": 3
                     }                           
                 ]
             }
@@ -75,10 +63,6 @@
                     },
                     {
                         "blockName": "movement_rotate",
-                        "maxUses": 1
-                    },
-                    {
-                        "blockName": "movement_activate_door",
                         "maxUses": 1
                     }
                 ]
