@@ -1,25 +1,16 @@
 <xml>
     <variables>
-        <variable type="" id="TjNGYD-!b+zh*nxgbjJZ">Movement</variable>
+        <variable type="" id="*|lYaxPiv)`+XqJvzr!t">Object</variable>
     </variables>
-    <block type="start_start" id="+#lN#I^/|Dvcu--Z!Bv3" x="212" y="-211">
+    <block type="start_start" id="_/1`#RW;!)@M]ek~cbyT" x="186" y="-200">
         <next>
-            <block type="variables_set" id="@QIHQ!3#2lxw@RaaS4T-">
-                <field name="VAR" id="TjNGYD-!b+zh*nxgbjJZ" variableType="">Movement</field>
+            <block type="variables_set" id="P@}`DOo(YDOLp9r`,HPj">
+                <field name="VAR" id="*|lYaxPiv)`+XqJvzr!t" variableType="">Object</field>
                 <value name="VALUE">
-                    <block type="math_number" id="p:fe_Dtjp=kNCNUm}naM">
-                        <field name="NUM">0</field>
+                    <block type="text" id="11_-G`,;)gv0MIr`$-t9">
+                        <field name="TEXT">a</field>
                     </block>
                 </value>
-                <next>
-                    <block type="movement_activate_door" id="g=MBW*Xi3xDGl9sl;aYG">
-                        <value name="ACTIVE">
-                            <block type="logic_boolean" id="8|yP7Ss^lZ~3vF)k%j%R">
-                                <field name="BOOL">FALSE</field>
-                            </block>
-                        </value>
-                    </block>
-                </next>
             </block>
         </next>
     </block>
