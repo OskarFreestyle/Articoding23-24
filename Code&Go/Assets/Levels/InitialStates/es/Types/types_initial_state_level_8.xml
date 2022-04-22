@@ -1,4 +1,37 @@
 <xml>
-    <block type="start_start" id="b.wHZHWei=bq4E3FD2-5" x="228" y="-187">
+    <variables>
+        <variable type="" id="NFN(K=r???rYrWgi6wg9">X</variable>
+    </variables>
+    <block type="start_start" id="b.wHZHWei=bq4E3FD2-5" x="203" y="-198">
+        <next>
+            <block type="variables_set" id="cHgH,6JDFMvrf=UND`W}">
+                <field name="VAR" id="NFN(K=r???rYrWgi6wg9" variableType="">X</field>
+                <value name="VALUE">
+                    <block type="text" id="v-Vj=-Nz66fX.Ak,YV.1">
+                        <field name="TEXT">Laser_1</field>
+                    </block>
+                </value>
+                <next>
+                    <block type="movement_rotate" id="cM:MA%SCEue=ylY:LbfU">
+                        <field name="ROTATION">ANTI_CLOCKWISE</field>
+                        <value name="NAME">
+                            <block type="variables_get" id="LqX(~4o17[+r,yZD73$i">
+                                <field name="VAR" id="NFN(K=r???rYrWgi6wg9" variableType="">X</field>
+                            </block>
+                        </value>
+                        <next>
+                            <block type="movement_move" id="ETNAJi3va5alnA3]gpE+">
+                                <field name="DIRECTION">LEFT</field>
+                                <value name="NAME">
+                                    <block type="variables_get" id="1Cakw^6}!_tmxum;/.aG">
+                                        <field name="VAR" id="NFN(K=r???rYrWgi6wg9" variableType="">X</field>
+                                    </block>
+                                </value>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </next>
     </block>
 </xml>

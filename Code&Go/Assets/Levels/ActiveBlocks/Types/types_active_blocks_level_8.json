@@ -19,7 +19,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 100
+                        "maxUses": 1
                     }
                 ]
             }
@@ -47,24 +47,8 @@
                 "activeBlocks": [
                     {
                         "blockName": "text",
-                        "maxUses": 100
-                    }                           
-                ]
-            }
-        },
-        {
-            "categoryName": "logic",
-            "blocksInfo": {
-                "activate": true,
-                "activeBlocks": [
-                    {
-                        "blockName": "logic_cells_occupied",
-                        "maxUses": 100
-                    },
-                    {
-                        "blockName": "logic_boolean",
                         "maxUses": 1
-                    }                  
+                    }                           
                 ]
             }
         },
@@ -75,19 +59,11 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 100
+                        "maxUses": 1
                     },
                     {
                         "blockName": "movement_rotate",
-                        "maxUses": 100
-                    },
-                    {
-                        "blockName": "movement_activate_door",
-                        "maxUses": 100
-                    },
-                    {
-                        "blockName": "movement_laser_change_intensity",
-                        "maxUses": 100
+                        "maxUses": 1
                     }
                 ]
             }
