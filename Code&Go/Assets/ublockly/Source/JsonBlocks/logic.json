@@ -28,8 +28,8 @@
         "type": "field_dropdown",
         "name": "BOOL",
         "options": [
-          [ "%{BKY_LOGIC_BOOLEAN_TRUE}", "TRUE" ],
-          [ "%{BKY_LOGIC_BOOLEAN_FALSE}", "FALSE" ]
+          [ "%{BKY_LOGIC_BOOLEAN_FALSE}", "FALSE" ],
+          [ "%{BKY_LOGIC_BOOLEAN_TRUE}", "TRUE" ]
         ]
       }
     ],
