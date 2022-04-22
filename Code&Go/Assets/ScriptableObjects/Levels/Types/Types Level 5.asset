@@ -20,7 +20,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
   levelName: types_5
-  levelPreview: {fileID: 21300000, guid: 3ca8df503b1377a44889c1789162ffe7, type: 3}
+  levelPreview: {fileID: 21300000, guid: b1e052906c64c3f45bc44d01c13f903e, type: 3}
   initialState:
     m_TableReference:
       m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
@@ -28,9 +28,9 @@ MonoBehaviour:
       m_KeyId: 2425269387264
       m_Key: 
     m_FallbackState: 0
-  activeBlocks: {fileID: 4900000, guid: e9f2245ac3750fa48863c55bd2f11a4e, type: 3}
+  activeBlocks: {fileID: 4900000, guid: c11173c3313b2d24db85c4d141ce36cc, type: 3}
   allActive: 0
-  levelBoard: {fileID: 4900000, guid: 58efb5d568bc5794ba89dbee8f7347b1, type: 3}
+  levelBoard: {fileID: 4900000, guid: b1dd401c087999342974bae8fe21333b, type: 3}
   auxLevelBoard: 
   minimosPasos: 7
   endTextLocalized:
