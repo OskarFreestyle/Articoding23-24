@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -972,6 +973,7 @@ GameObject:
   - component: {fileID: 7279492946688162275}
   - component: {fileID: 2566767151446522115}
   - component: {fileID: 125076043275420518}
+  - component: {fileID: -4447915605493274330}
   m_Layer: 0
   m_Name: Block_logic_cells_occupied
   m_TagString: Untagged
@@ -1083,6 +1085,20 @@ MonoBehaviour:
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-4447915605493274330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8622980188831786632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4a7d46654560a4d8012ca2935fcaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tt: {fileID: 125076043275420518}
+  level: {fileID: 11400000, guid: d3a0610d4523c1e49946b3b20b4092bd, type: 2}
 --- !u!1 &8726882109544252671
 GameObject:
   m_ObjectHideFlags: 0

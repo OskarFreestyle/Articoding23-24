@@ -120,5 +120,16 @@ MonoBehaviour:
       si hay alguna libre, devolver\xE1 un valor \"false\"."
     m_Metadata:
       m_Items: []
+  - m_Id: 71759735952125952
+    m_Localized: "\xA1Vaya! \xBFC\xF3mo vamos a abrir esa puerta? Solo podemos comprobar
+      cosas que pasan... \xA1Ya lo tengo! Usa este operador \"no\". \xA1Ahora podemos
+      comprobar cosas que NO pasan!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71759791178526720
+    m_Localized: "Usa el operador \"NO\" para negar un booleano. Si el booleano era
+      true, la tarjeta \"NO\" devolver\xE1 false, y al rev\xE9s."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -10,33 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 4_OperadorLogico
+  m_Name: 5_CeldaOcupada_1
   m_EditorClassIdentifier: 
-  type: 5
-  title: "Operadores l\xF3gicos"
-  content: Con esta tarjeta puedes hacer operaciones con booleanos. El "y" devuelve
-    verdadero si ambos campos son verdaderos. El "o" devuelve verdadero si uno de
-    los campos es verdadero.
-  next: {fileID: 0}
-  image: {fileID: 21300000, guid: 6190ba82cfe59ef42ba46d4950fbe8e3, type: 3}
+  type: 8
+  title: Celda Ocupada
+  content: "Con esta tarjeta puedes saber si una celda especial est\xE1 ocupada o
+    no."
+  next: {fileID: 11400000, guid: b078094ff5bad724f9ce65fa1c4738f5, type: 2}
+  image: {fileID: 21300000, guid: 3d6192fb233951248a5ed00720dbdb1c, type: 3}
   localizedTitle:
     m_TableReference:
       m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 215098960039936
+      m_KeyId: 215650099974144
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
-      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 215176227508224
+      m_KeyId: 71751106096148480
       m_Key: 
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
       m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 114647514949312512
+      m_KeyId: 61724555445854208
       m_Key: 
     m_FallbackState: 0

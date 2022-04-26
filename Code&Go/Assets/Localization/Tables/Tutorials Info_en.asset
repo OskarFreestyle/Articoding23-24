@@ -228,9 +228,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 215176227508224
-    m_Localized: With this code card you can operate with booleans. The "and" returns
-      True if both fields are True. The "or" returns True if one of the fields is
-      True.
+    m_Localized: With this code card you can operate with booleans. The "AND" operator
+      returns True if both fields are True. The "OR" operator returns True if at
+      least one of the fields is True.
     m_Metadata:
       m_Items: []
   - m_Id: 215650099974144
@@ -244,11 +244,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 218068925730816
     m_Localized: Numeric operators
-    m_Metadata:
-      m_Items: []
-  - m_Id: 218012730445824
-    m_Localized: With this code card you can operate with numbers or with variables
-      that store a number. It can be useful when you have few number code cards.
     m_Metadata:
       m_Items: []
   - m_Id: 219257763450880

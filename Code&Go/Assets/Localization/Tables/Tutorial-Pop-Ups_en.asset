@@ -118,5 +118,16 @@ MonoBehaviour:
       are free, it will return a false value.
     m_Metadata:
       m_Items: []
+  - m_Id: 71759735952125952
+    m_Localized: Oops! How are we going to open that door? We can only check things
+      that happen... I've got it! Use this "not" card. Now we can check things that
+      DON'T happen!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71759791178526720
+    m_Localized: Use the "NOT" operator to negate a boolean. If the boolean was true,
+      the "NOT" card will return a false, and vice versa.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
