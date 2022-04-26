@@ -106,5 +106,17 @@ MonoBehaviour:
       You can use the result as a number!
     m_Metadata:
       m_Items: []
+  - m_Id: 71751036743331840
+    m_Localized: "Look! I've found this code card. Let me see... Oh! It seems like
+      it checks whether some tiles are occupied or not. Hmmm... I wonder what we
+      could use it for?\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751106096148480
+    m_Localized: Use this card to check the state of all the tiles of the same color
+      in the board. If they are occupied, the card will return a true value; if some
+      are free, it will return a false value.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

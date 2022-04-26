@@ -108,5 +108,17 @@ MonoBehaviour:
       \xA1Puedes usar el resultado como un n\xFAmero!"
     m_Metadata:
       m_Items: []
+  - m_Id: 71751036743331840
+    m_Localized: "\xA1Mira! He encontrado esta tarjeta. A ver... \xA1Ah! Parece que
+      comprueba si hay algunas baldosas ocupadas o no. Me pregunto si podr\xEDamos
+      usarla para algo..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751106096148480
+    m_Localized: "Usa la tarjeta para comprobar el estado de las baldosas de un color
+      en el tablero. Si todas est\xE1n ocupadas, devolver\xE1 un valor \"true\";
+      si hay alguna libre, devolver\xE1 un valor \"false\"."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

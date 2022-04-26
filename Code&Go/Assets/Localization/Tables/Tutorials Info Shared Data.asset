@@ -199,10 +199,6 @@ MonoBehaviour:
     m_Key: tutorial_3_movemen_cells_occupied_title
     m_Metadata:
       m_Items: []
-  - m_Id: 215734141243392
-    m_Key: tutorial_3_movemen_cells_occupied_content
-    m_Metadata:
-      m_Items: []
   - m_Id: 215946574352384
     m_Key: tutorial_3_negation_content
     m_Metadata:

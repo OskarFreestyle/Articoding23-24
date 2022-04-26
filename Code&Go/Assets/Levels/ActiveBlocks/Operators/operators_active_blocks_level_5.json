@@ -59,7 +59,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "logic_cells_occupied",
-                        "maxUses": 2
+                        "maxUses": 1
                     }
                 ]
             }
@@ -71,10 +71,6 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 2
-                    },
-                    {
-                        "blockName": "movement_rotate",
                         "maxUses": 2
                     },
                     {

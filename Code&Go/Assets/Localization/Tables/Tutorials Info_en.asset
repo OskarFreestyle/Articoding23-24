@@ -237,11 +237,6 @@ MonoBehaviour:
     m_Localized: Occupied Cell
     m_Metadata:
       m_Items: []
-  - m_Id: 215734141243392
-    m_Localized: With this code card you can know if a special cell is occupied by
-      an object or not.
-    m_Metadata:
-      m_Items: []
   - m_Id: 215946574352384
     m_Localized: This code card negates a boolean value, that is, it returns the
       opposite value. If the boolean is True, it will return False, and viceversa.

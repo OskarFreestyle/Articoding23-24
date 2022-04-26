@@ -95,6 +95,14 @@ MonoBehaviour:
     m_Key: popup_operators_3_addition2
     m_Metadata:
       m_Items: []
+  - m_Id: 71751036743331840
+    m_Key: popup_operators_5_cellsOccupied1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71751106096148480
+    m_Key: popup_operators_5_cellsOccupied2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

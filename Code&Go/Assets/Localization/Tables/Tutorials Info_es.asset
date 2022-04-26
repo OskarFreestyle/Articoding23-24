@@ -238,11 +238,6 @@ MonoBehaviour:
     m_Localized: Celda Ocupada
     m_Metadata:
       m_Items: []
-  - m_Id: 215734141243392
-    m_Localized: "Con esta tarjeta puedes saber si una celda especial est\xE1 ocupada
-      o no."
-    m_Metadata:
-      m_Items: []
   - m_Id: 215946574352384
     m_Localized: "Esta tarjeta niega el valor de un booleano, es decir devuelve el
       valor contrario. Si el booleano es verdadero devolver\xE1 falso y viceversa."
