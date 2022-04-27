@@ -36,6 +36,8 @@ public class BoardManager : Listener
     private List<List<BoardCell>> cells;
 
     private int currentSteps = 0;
+    private int totalBlocksUsed = 0;
+    private int topBlocksUsed = 0;
 
     public GameObject gameOverPanel;
     [SerializeField] private GameObject gameOverTitleText;
@@ -823,6 +825,15 @@ public class BoardManager : Listener
 
             switch (type)
             {
+                case MSG_TYPE.NUM_OF_TOP_BLOCKS:
+                    topBlocksUsed = int.Parse(msg);
+                    break;
+                
+                case MSG_TYPE.TOTAL_NUM_OF_BLOCKS:
+                    totalBlocksUsed = int.Parse(msg);
+                    break;
+                
+                
                 case MSG_TYPE.MOVE_LASER:
                     amount = int.Parse(args[0]);
                     dir = GetDirectionFromString(args[1]);
@@ -1008,5 +1019,13 @@ public class BoardManager : Listener
         TrackerAsset.Instance.setVar("level", GameManager.Instance.GetCurrentLevelName());
         TrackerAsset.Instance.GameObject.Interacted(buttonName);
     }
-
+    
+    public int GetNumOfTopBlocksUsed()
+    {
+        return topBlocksUsed;
+    }
+    public int GetNumOfBlocksUsed()
+    {
+        return totalBlocksUsed;
+    }
 }

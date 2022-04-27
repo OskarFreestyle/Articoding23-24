@@ -61,6 +61,10 @@ namespace UBlockly
                 CSharp.Runner.FireUpdate(new RunnerUpdateState(RunnerUpdateState.Stop));              
                 return;
             }
+
+            // Enviamos la cuenta de los bloques "de comienzo" y de los totales que se estan utilizando
+            MessageManager.Instance.SendMessage(blocks.Count.ToString(), MSG_TYPE.NUM_OF_TOP_BLOCKS);
+            MessageManager.Instance.SendMessage(workspace.GetAllBlocks().Count.ToString(), MSG_TYPE.TOTAL_NUM_OF_BLOCKS);
             
             CurStatus = Status.Running;
 

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class StarsController : MonoBehaviour
 {
     public Image minimumStepsStar;
     public Image firstRunStar;
-    public Image noHintsStar;
+    public Image noHangingCodeStar;
     public Text stepsOverflowText;
     public Color activatedColor;
     private Color deactivatedColor = new Color(1.0f, 1.0f, 1.0f, 0.5f);
@@ -17,7 +18,7 @@ public class StarsController : MonoBehaviour
         int nStars = 3;
         if (firstRunStar.color == deactivatedColor)
             nStars --;
-        if (noHintsStar.color == deactivatedColor)
+        if (noHangingCodeStar.color == deactivatedColor)
             nStars --;
         if (minimumStepsStar.color == deactivatedColor)
             nStars --;
@@ -30,9 +31,9 @@ public class StarsController : MonoBehaviour
         firstRunStar.color = deactivatedColor;
     }
 
-    public void DeactivateNoHintsStar()
+    public void DeactivateNoHangingCodeStar()
     {
-        noHintsStar.color = deactivatedColor;
+        noHangingCodeStar.color = deactivatedColor;
     }
 
     public void DeactivateMinimumStepsStar(int stepsOverflow)
@@ -59,6 +60,6 @@ public class StarsController : MonoBehaviour
 
     public bool IsNoHintsStarActive()
     {
-        return noHintsStar.color != deactivatedColor;
+        return noHangingCodeStar.color != deactivatedColor;
     }
 }

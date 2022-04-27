@@ -1,12 +1,14 @@
 ﻿using AssetPackage;
 using System.Collections;
 using System.Collections.Generic;
+using UBlockly;
 using UBlockly.UGUI;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 using UnityEngine.Localization.Components;
+using Input = UnityEngine.Input;
 
 public class LevelManager : MonoBehaviour
 {
@@ -57,7 +59,7 @@ public class LevelManager : MonoBehaviour
     public StarsController starsController;
 
     private int minimosPasos = 0;
-
+    
     public LocalizeStringEvent endTextLocalized;
     //[SerializeField] private LocalizeStringEvent endText;
 
@@ -73,19 +75,17 @@ public class LevelManager : MonoBehaviour
         {
             currentCategory = gameManager.GetCurrentCategory();
             currentLevelIndex = gameManager.GetCurrentLevelIndex();
-            currentLevel = currentCategory.levels[currentLevelIndex];
-            minimosPasos = currentLevel.minimosPasos;
-            //endTextLocalized.text = currentLevel.endText;
         }
         else
         {
             currentCategory = defaultCategory;
             currentLevelIndex = defaultLevelIndex;
-            currentLevel = currentCategory.levels[currentLevelIndex];
-            minimosPasos = currentLevel.minimosPasos;
-            //endTextLocalized.text = currentLevel.endText;
         }
 
+        currentLevel = currentCategory.levels[currentLevelIndex];
+        minimosPasos = currentLevel.minimosPasos;
+        //endTextLocalized.text = currentLevel.endText;
+        
         endPanel.SetActive(false);
         transparentRect.SetActive(false);
         blackRect.SetActive(false);
@@ -126,10 +126,13 @@ public class LevelManager : MonoBehaviour
         if (boardManager.BoardCompleted() && !endPanel.activeSelf && !endPanelMinimized.activeSelf)
         {
             string levelName = GameManager.Instance.GetCurrentLevelName();
-
-
             streamRoom.FinishLevel();
-
+            
+            // Pone las estrellas que toca
+            if (boardManager.GetNumOfTopBlocksUsed() > 1)
+            {
+                starsController.DeactivateNoHangingCodeStar();
+            }
             endPanel.SetActive(true);
             blackRect.SetActive(true);
             if (!GameManager.Instance.InCreatedLevel())

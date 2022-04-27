@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum MSG_TYPE { MOVE_LASER, MOVE, ROTATE_LASER, ROTATE, CHANGE_INTENSITY, ACTIVATE_DOOR, CELL_OCCUPIED, CODE_END };
+public enum MSG_TYPE
+{
+    MOVE_LASER, MOVE, ROTATE_LASER, ROTATE, CHANGE_INTENSITY, ACTIVATE_DOOR, CELL_OCCUPIED, CODE_END,
+    
+    // Mensajes de control
+    NUM_OF_TOP_BLOCKS, TOTAL_NUM_OF_BLOCKS
+};
 
 public class MessageManager : MonoBehaviour
 {

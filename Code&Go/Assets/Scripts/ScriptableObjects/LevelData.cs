@@ -21,7 +21,11 @@ public class LevelData : ScriptableObject
     [Space(10)]
     public TextAsset levelBoard;
     public string auxLevelBoard;
-
+    
+    [Space(10)] 
     public int minimosPasos;
+    
     public LocalizedString endTextLocalized;
+    
+
 }

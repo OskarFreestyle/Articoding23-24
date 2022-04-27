@@ -1263,7 +1263,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1885510894}
         m_TargetAssemblyTypeName: StarsController, Assembly-CSharp
-        m_MethodName: DeactivateNoHintsStar
+        m_MethodName: DeactivateNoHangingCodeStar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3192,7 +3192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: allUnlocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: categories.Array.size
@@ -7628,7 +7628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumStepsStar: {fileID: 283044347}
   firstRunStar: {fileID: 288990326}
-  noHintsStar: {fileID: 586603504}
+  noHangingCodeStar: {fileID: 586603504}
   stepsOverflowText: {fileID: 5615152996844203896}
   activatedColor: {r: 1, g: 0.8313726, b: 0.41960788, a: 1}
 --- !u!4 &1885510895
@@ -7962,7 +7962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: tutorialsON
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: popUpManager
@@ -8959,6 +8959,10 @@ PrefabInstance:
     - target: {fileID: 5615152994832826088, guid: a489794761ad7a94680d475b9707ab21, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615152994832826089, guid: a489794761ad7a94680d475b9707ab21, type: 3}
+      propertyPath: m_Text
+      value: "C\xD3DIGO LIMPIO"
       objectReference: {fileID: 0}
     - target: {fileID: 5615152995353977415, guid: a489794761ad7a94680d475b9707ab21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

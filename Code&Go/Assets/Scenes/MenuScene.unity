@@ -326,7 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: allUnlocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: categories.Array.size
@@ -22818,7 +22818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: tutorialsON
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: popUpManager
