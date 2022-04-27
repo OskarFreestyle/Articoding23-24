@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour
     public StarsController starsController;
 
     private int minimosPasos = 0;
-    
+    public string specialBlock = "";
     public LocalizeStringEvent endTextLocalized;
     //[SerializeField] private LocalizeStringEvent endText;
 
@@ -133,6 +133,9 @@ public class LevelManager : MonoBehaviour
             {
                 starsController.DeactivateNoHangingCodeStar();
             }
+
+            starsController.GiveSpecialStar(specialBlock);
+            
             endPanel.SetActive(true);
             blackRect.SetActive(true);
             if (!GameManager.Instance.InCreatedLevel())
@@ -338,6 +341,11 @@ public class LevelManager : MonoBehaviour
         else if (textAsset != null)
         {
             ActiveBlocks blocks = ActiveBlocks.FromJson(textAsset.text);
+            if(blocks.specialBlock == null)
+                specialBlock = "None";
+            else
+                specialBlock = blocks.specialBlock;
+            
             BlocklyUI.WorkspaceView.Toolbox.SetActiveBlocks(blocks.AsMap(), CategoriesTutorialsAsMap());
         }
 

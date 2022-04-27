@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Localization;
 
 [CreateAssetMenu(fileName = "Level", menuName = "ScriptableObjects/Level")]
@@ -25,7 +22,6 @@ public class LevelData : ScriptableObject
     [Space(10)] 
     public int minimosPasos;
     
-    public LocalizedString endTextLocalized;
     
-
+    public LocalizedString endTextLocalized;
 }

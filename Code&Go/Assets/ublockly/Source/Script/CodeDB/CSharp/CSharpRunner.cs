@@ -65,7 +65,16 @@ namespace UBlockly
             // Enviamos la cuenta de los bloques "de comienzo" y de los totales que se estan utilizando
             MessageManager.Instance.SendMessage(blocks.Count.ToString(), MSG_TYPE.NUM_OF_TOP_BLOCKS);
             MessageManager.Instance.SendMessage(workspace.GetAllBlocks().Count.ToString(), MSG_TYPE.TOTAL_NUM_OF_BLOCKS);
-            
+            string blocksText = "";
+            foreach(Block b in workspace.GetAllBlocks() )
+                blocksText+=(b.Type + ";");
+            MessageManager.Instance.SendMessage(blocksText, MSG_TYPE.SOLUTION);
+
+            string s = "";
+            foreach(Block b in blocks)
+            {
+                //s.Append(b.ID);
+            }
             CurStatus = Status.Running;
 
             if (workspace.Options.Synchronous)

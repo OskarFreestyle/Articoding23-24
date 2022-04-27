@@ -36,9 +36,10 @@ public class CategoryData
 public class ActiveBlocks
 {
     public CategoryData[] categories;
+    public string specialBlock;
     public static ActiveBlocks FromJson(string text)
     {
-        return JsonUtility.FromJson<ActiveBlocks>(text);
+        return  JsonUtility.FromJson<ActiveBlocks>(text);
     }
 
     public Dictionary<string, CategoryBlocks> AsMap()
