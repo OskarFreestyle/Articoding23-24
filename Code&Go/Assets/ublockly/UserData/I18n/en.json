@@ -1125,5 +1125,8 @@
   "TIME_UNIT_MILLISECOND": "millisecond",
   "TIME_UNIT_SECONDS": "second",
   "TIME_UNIT_MINUTES": "minute",
-  "TIME_UNIT_TOO_HIGH": "too high to count"
+  "TIME_UNIT_TOO_HIGH": "too high to count",
+  
+  
+  "PROCEDURES": "Methods"
 }

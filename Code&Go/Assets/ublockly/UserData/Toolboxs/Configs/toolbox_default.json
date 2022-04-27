@@ -50,6 +50,11 @@
       "CategoryName": "MOVEMENT",
       "ColorHex": "#c6b237",
       "BlockTypePrefix": "movement"
+    },
+    {
+      "CategoryName": "PROCEDURES",
+      "ColorHex": "#d469cb",
+      "BlockTypePrefix": "procedures"
     }
   ]
 }
