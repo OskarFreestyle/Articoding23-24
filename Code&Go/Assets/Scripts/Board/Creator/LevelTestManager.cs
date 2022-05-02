@@ -74,7 +74,7 @@ public class LevelTestManager : MonoBehaviour
         {
             bool enabled = board.GetNEmitters() >= board.GetNReceivers() && board.GetNReceivers() > 0 && !board.AllReceiving();
             changeModeButton.GetComponent<Button>().enabled = enabled;
-            changeModeButton.GetComponent<Image>().color = enabled ? Color.white : Color.red;
+            changeModeButton.GetComponent<Image>().color = enabled ? Color.white : Color.grey;
         }
         else if (board.BoardCompleted() && !completed)
         {

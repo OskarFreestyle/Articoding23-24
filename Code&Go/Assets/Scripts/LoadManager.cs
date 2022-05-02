@@ -32,8 +32,8 @@ public class LoadManager : MonoBehaviour
         //DontDestroyOnLoad(gameObject);
         loadOperations = new List<AsyncOperation>();
 
-        if (!LocalizationSettings.InitializationOperation.IsDone)
-            loadingText.gameObject.SetActive(false);
+        /*if (!LocalizationSettings.InitializationOperation.IsDone)
+            loadingText.gameObject.SetActive(false);*/
 
 
         yield return SimvaExtension.Instance.OnAfterGameLoad();
@@ -52,7 +52,6 @@ public class LoadManager : MonoBehaviour
         color.a = 1.0f + Mathf.Sin(Time.timeSinceLevelLoad);
         loadingText.color = color;
     }
-
 
     public void LoadScene(int index)
     {

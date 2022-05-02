@@ -175,7 +175,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1476400550420480
-    m_Localized: BOARD CREATION
+    m_Localized: BOARD
     m_Metadata:
       m_Items: []
   - m_Id: 1476493492002816
@@ -354,19 +354,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 121802594339913728
-    m_Localized: Stars obtained
+    m_Localized: STARS OBTAINED
     m_Metadata:
       m_Items: []
   - m_Id: 121803009508900864
-    m_Localized: Levels passed
+    m_Localized: LEVELS PASSED
     m_Metadata:
       m_Items: []
   - m_Id: 121803119202533376
-    m_Localized: Perfect levels
+    m_Localized: PERFECT LEVELS
     m_Metadata:
       m_Items: []
   - m_Id: 121803569364598784
-    m_Localized: Finished categories
+    m_Localized: FINISHED CATEGORIES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125271498106208256
+    m_Localized: Save
     m_Metadata:
       m_Items: []
   references:

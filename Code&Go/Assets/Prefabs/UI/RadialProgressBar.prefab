@@ -148,14 +148,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41960788, g: 0.7137255, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b97b4d7cc1913944582b15e3eb30e82a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c54591bf36918a34b9f22d58a9484742, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -223,16 +223,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.53333336, g: 0.76470596, b: 0.95294124, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7eaa71a08054ff54380b6d9de2829c6a, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -293,7 +293,7 @@ MonoBehaviour:
   minimum: 0
   maximum: 200
   current: 125
-  fillColor: {r: 0.41960788, g: 0.7137255, b: 1, a: 1}
+  fillColor: {r: 1, g: 1, b: 1, a: 1}
   mask: {fileID: 4545583174097909237}
   fill: {fileID: 4545583174097909237}
 --- !u!1 &4618566472316209034
@@ -324,7 +324,7 @@ RectTransform:
   m_GameObject: {fileID: 4618566472316209034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 6059037457992494892}
   m_Father: {fileID: 5692467604195146612}

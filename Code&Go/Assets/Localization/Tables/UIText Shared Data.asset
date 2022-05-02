@@ -363,6 +363,10 @@ MonoBehaviour:
     m_Key: categories_panel
     m_Metadata:
       m_Items: []
+  - m_Id: 125271498106208256
+    m_Key: save_min
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
