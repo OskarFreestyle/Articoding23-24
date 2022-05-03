@@ -111,6 +111,14 @@ MonoBehaviour:
     m_Key: popup_operators_7_not2
     m_Metadata:
       m_Items: []
+  - m_Id: 74301654821384192
+    m_Key: popup_loops_1_for1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74303504769495040
+    m_Key: popup_loops_1_for2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

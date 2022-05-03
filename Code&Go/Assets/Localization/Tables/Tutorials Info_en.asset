@@ -250,12 +250,6 @@ MonoBehaviour:
     m_Localized: Repeat a number of times
     m_Metadata:
       m_Items: []
-  - m_Id: 219401607106560
-    m_Localized: This card allows a set of instructions to be repeated a specified
-      number of times. It can be useful to avoid repeating code and to avoid repetitive
-      instruction sequences.
-    m_Metadata:
-      m_Items: []
   - m_Id: 220462929596416
     m_Localized: If... else
     m_Metadata:

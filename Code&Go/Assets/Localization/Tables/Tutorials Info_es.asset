@@ -251,12 +251,6 @@ MonoBehaviour:
     m_Localized: "Repetir un n\xFAmero de veces"
     m_Metadata:
       m_Items: []
-  - m_Id: 219401607106560
-    m_Localized: "Esta tarjeta permite repetir un n\xFAmero de veces especificado
-      un conjunto de instrucciones. Puede ser \xFAtil para no repetir c\xF3digo y
-      para evitar secuencias de instrucciones repetitivas."
-    m_Metadata:
-      m_Items: []
   - m_Id: 220462929596416
     m_Localized: "Si\u2026 entonces"
     m_Metadata:

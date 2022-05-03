@@ -477,6 +477,7 @@ GameObject:
   - component: {fileID: 6379915243303457627}
   - component: {fileID: 5993811199949848420}
   - component: {fileID: 5731616258313686266}
+  - component: {fileID: 2487810787050253437}
   m_Layer: 0
   m_Name: Block_controls_repeat
   m_TagString: Untagged
@@ -587,13 +588,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 210
-  info: {fileID: 11400000, guid: 08b5f47b1048e1e42b2b541b52064bbc, type: 2}
+  info: {fileID: 11400000, guid: 03b392b84333f154d95b66344a41a7c6, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
   isSaveCheckpoint: 1
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2487810787050253437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2501562285492699332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4a7d46654560a4d8012ca2935fcaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tt: {fileID: 5731616258313686266}
+  level: {fileID: 11400000, guid: 1f373a8991296354da9a2b9708738398, type: 2}
 --- !u!1 &2950139083144260373
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}

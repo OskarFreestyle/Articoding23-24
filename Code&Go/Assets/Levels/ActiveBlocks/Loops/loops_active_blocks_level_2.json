@@ -19,7 +19,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 2
+                        "maxUses": 1
                     }
                 ]
             }
@@ -36,7 +36,7 @@
                     {
                         "blockName": "variables_set",
                         "maxUses": 100
-                    }                       
+                    }
                 ]
             }
         },
@@ -47,32 +47,8 @@
                 "activeBlocks": [
                     {
                         "blockName": "text",
-                        "maxUses": 4
-                    }                           
-                ]
-            }
-        },
-        {
-            "categoryName": "logic",
-            "blocksInfo": {
-                "activate": true,
-                "activeBlocks": [
-                    {
-                        "blockName": "logic_boolean",
                         "maxUses": 1
                     }
-                ]
-            }
-        },
-        {
-            "categoryName": "control",
-            "blocksInfo": {
-                "activate": true,
-                "activeBlocks": [
-                    {
-                        "blockName": "controls_repeat",
-                        "maxUses": 2
-                    }                      
                 ]
             }
         },
@@ -82,11 +58,7 @@
                 "activate": true,
                 "activeBlocks": [
                     {
-                        "blockName": "movement_rotate",
-                        "maxUses": 1
-                    },
-                    {
-                        "blockName": "movement_activate_door",
+                        "blockName": "movement_move",
                         "maxUses": 2
                     }
                 ]

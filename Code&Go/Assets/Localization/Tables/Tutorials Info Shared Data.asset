@@ -215,10 +215,6 @@ MonoBehaviour:
     m_Key: for_loop_title
     m_Metadata:
       m_Items: []
-  - m_Id: 219401607106560
-    m_Key: for_loop_content
-    m_Metadata:
-      m_Items: []
   - m_Id: 220462929596416
     m_Key: if_else_title
     m_Metadata:
