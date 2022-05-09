@@ -1,4 +1,5 @@
 {
+    "specialBlock": "logic_compare",
     "categories": [
         {
             "categoryName": "start",

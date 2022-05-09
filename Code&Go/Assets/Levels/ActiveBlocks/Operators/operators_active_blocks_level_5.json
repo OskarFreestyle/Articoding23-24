@@ -1,4 +1,5 @@
 {
+    "specialBlock": "logic_cells_occupied",
     "categories": [
         {
             "categoryName": "start",
