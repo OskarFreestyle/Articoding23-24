@@ -131,5 +131,17 @@ MonoBehaviour:
       true, la tarjeta \"NO\" devolver\xE1 false, y al rev\xE9s."
     m_Metadata:
       m_Items: []
+  - m_Id: 74301654821384192
+    m_Localized: "El \xFAltimo nivel ha sido un poco repetitivo, \xBFverdad? Bueno,
+      \xA1he dise\xF1ado esta carta especialmente para ti! Te ayudar\xE1 a evitar
+      repetir tanto c\xF3digo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74303504769495040
+    m_Localized: "Usa la tarjeta \"repetir\" cuando tengas que repetir el mismo c\xF3digo
+      varias veces. Especifica el c\xF3digo que quieres repetir, y cu\xE1ntas veces
+      quieres que se repita."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

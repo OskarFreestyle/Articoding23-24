@@ -94,5 +94,9 @@ MonoBehaviour:
       the category!
     m_Metadata:
       m_Items: []
+  - m_Id: 69069279468335104
+    m_Localized: I wonder if there is a way to avoid repeating so much code...
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

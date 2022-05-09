@@ -1,28 +1,28 @@
 <xml>
     <variables>
         <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Objeto</variable>
-        <variable type="" id=");rsXrQFqC-;or)#|SD:">Rotacion</variable>
+        <variable type="" id=");rsXrQFqC-;or)#|SD:">Movimiento</variable>
     </variables>
     <block type="start_start" id=")YV=9@bHU1,VbaK3wevt" x="247" y="-222">
         <next>
             <block type="variables_set" id="q7*vM`_bKyO/@ED6M%Pz">
                 <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Objeto</field>
-                <value name="VALUE">
-                    <block type="text" id="Kgf)VE~u~}-+:C5+)WJi">
-                        <field name="TEXT" />
-                    </block>
-                </value>
                 <next>
                     <block type="variables_set" id="@XAWBq?@(nd1}qf|rTks">
-                        <field name="VAR" id=");rsXrQFqC-;or)#|SD:" variableType="">Rotacion</field>
-                        <value name="VALUE">
-                            <block type="math_number" id="gy6Zv}mXv(ro1e!#^[Yf">
-                                <field name="NUM">0</field>
-                            </block>
-                        </value>
+                        <field name="VAR" id=");rsXrQFqC-;or)#|SD:" variableType="">Movimiento</field>
                         <next>
                             <block type="controls_repeat" id="!PeXG[c@Z5*9g7N87me/">
-                                <field name="TIMES">2</field>
+                                <field name="TIMES">3</field>
+                                <statement name="DO">
+                                    <block type="movement_move" id="nfa{nTm|OCaI}LiB[mCZ">
+                                        <field name="DIRECTION">RIGHT</field>
+                                        <next>
+                                            <block type="movement_move" id="x`y23w#kQKD(n?rHcYB!">
+                                                <field name="DIRECTION">DOWN</field>
+                                            </block>
+                                        </next>
+                                    </block>
+                                </statement>
                             </block>
                         </next>
                     </block>

@@ -175,7 +175,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1476400550420480
-    m_Localized: "CREACI\xD3N DE TABLERO"
+    m_Localized: TABLERO
     m_Metadata:
       m_Items: []
   - m_Id: 1476493492002816
@@ -354,19 +354,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 121802594339913728
-    m_Localized: Estrellas obtenidas
+    m_Localized: ESTRELLAS OBTENIDAS
     m_Metadata:
       m_Items: []
   - m_Id: 121803009508900864
-    m_Localized: Niveles superados
+    m_Localized: NIVELES SUPERADOS
     m_Metadata:
       m_Items: []
   - m_Id: 121803119202533376
-    m_Localized: Niveles perfectos
+    m_Localized: NIVELES PERFECTOS
     m_Metadata:
       m_Items: []
   - m_Id: 121803569364598784
-    m_Localized: Categorias acabadas
+    m_Localized: "CATEGOR\xCDAS ACABADAS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125271498106208256
+    m_Localized: Guardar
     m_Metadata:
       m_Items: []
   references:

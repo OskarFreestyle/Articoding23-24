@@ -129,5 +129,16 @@ MonoBehaviour:
       the "NOT" card will return a false, and vice versa.
     m_Metadata:
       m_Items: []
+  - m_Id: 74301654821384192
+    m_Localized: The last level was a bit repetitive, right? Well, I've designed
+      this card specially for you! It will help to avoid repeating so much code.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74303504769495040
+    m_Localized: Use the "for" card when you have to repeat the same code several
+      times. Specify the code you want to repeat, and the number of times it has
+      to be repeated.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 337cbf8790ad74c439e6ff4f38797641
+guid: c2dbbfb09a388eb4f86647a12812d94a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Roboto
+  - Honey Cute
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

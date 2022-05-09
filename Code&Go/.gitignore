@@ -11,6 +11,7 @@
 /[Uu]ser[Ss]ettings/
 /[Mm]emoryCaptures/
 /[Aa]ssets/[Bb]oards/[Ll]evelsCreated
+/[Aa]ssets/[Ll]evels/[Ll]evelsCreated
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/[Aa]rt/**/*.meta
