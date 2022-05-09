@@ -62,7 +62,6 @@ public class StarsController : Listener
         
         
         string s = Array.Find(blocksUsedInLevel,((string s) => {return s==specialBlock;}));
-        Debug.LogError(s);
         if(s == null && specialBlock != "None" )
         {
             firstRunStar.color = deactivatedColor;
