@@ -579,6 +579,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2990086248078495420, guid: f9c2226eb2df76e4295445929755c7cf, type: 3}
+      propertyPath: m_Spacing
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 2990086248689687782, guid: f9c2226eb2df76e4295445929755c7cf, type: 3}
       propertyPath: m_Name
       value: LoadingObject
