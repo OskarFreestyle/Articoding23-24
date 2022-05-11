@@ -359,7 +359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6624020017576711638
 RectTransform:
   m_ObjectHideFlags: 0
@@ -394,7 +394,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3231360686138550569}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -959,7 +959,6 @@ MonoBehaviour:
   - {fileID: 3354038337854995505}
   - {fileID: 883344973402320822}
   - {fileID: 2370436307429283914}
-  star: {fileID: 8046586898561958432}
 --- !u!1 &7865200458308377943
 GameObject:
   m_ObjectHideFlags: 0
