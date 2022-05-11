@@ -10,7 +10,7 @@ using UnityEngine.Serialization;
 public class StarsController : Listener
 {
     public Image minimumStepsStar;
-    public Image firstRunStar;
+    public Image specialBlockStar;
     public Image noHangingCodeStar;
     public Text stepsOverflowText;
     public Color activatedColor;
@@ -38,7 +38,7 @@ public class StarsController : Listener
     public int GetStars()
     {
         int nStars = 3;
-        if (firstRunStar.color == deactivatedColor)
+        if (specialBlockStar.color == deactivatedColor)
             nStars --;
         if (noHangingCodeStar.color == deactivatedColor)
             nStars --;
@@ -48,40 +48,26 @@ public class StarsController : Listener
         return nStars;
     }
 
+    public void GiveMinimumStepsStar(int stepsOverflow)
+    {
+        if (stepsOverflow > 0)
+        {
+            minimumStepsStar.color = deactivatedColor;
+            stepsOverflowText.text = stepsOverflow.ToString() + "+";
+        }
+    }
+    public void GiveHangingCodeStar(int topBlocks)
+    {
+        if (topBlocks > 1)
+            noHangingCodeStar.color = deactivatedColor;
+    }
     public void GiveSpecialStar(string specialBlock)
     {
-        // GameObject block = GameObject.Find("Block_start_start");
-        // while (block != null && block.name != specialBlock)
-        // {
-        //     block = Array.Find(block.GetComponentsInChildren<ConnectionView>(), (view =>
-        //     {
-        //         return view.gameObject.name == "Connection_next";
-        //     })).gameObject.GetComponentInChildren<Transform>().gameObject;
-            
-        // }
-        
-        
         string s = Array.Find(blocksUsedInLevel,((string s) => {return s==specialBlock;}));
         if(s == null && specialBlock != "None" )
         {
-            firstRunStar.color = deactivatedColor;
+            specialBlockStar.color = deactivatedColor;
         }
-    }
-    
-    public void DeactivateFirstRunStar()
-    {
-        firstRunStar.color = deactivatedColor;
-    }
-
-    public void DeactivateNoHangingCodeStar()
-    {
-        noHangingCodeStar.color = deactivatedColor;
-    }
-
-    public void DeactivateMinimumStepsStar(int stepsOverflow)
-    {
-        minimumStepsStar.color = deactivatedColor;
-        stepsOverflowText.text = stepsOverflow.ToString() + "+";
     }
 
     public void ReactivateMinimumStepsStar()
@@ -92,7 +78,7 @@ public class StarsController : Listener
 
     public bool IsFirstRunStarActive()
     {
-        return firstRunStar.color != deactivatedColor;
+        return specialBlockStar.color != deactivatedColor;
     }
 
     public bool IsMinimumStepsStarActive()

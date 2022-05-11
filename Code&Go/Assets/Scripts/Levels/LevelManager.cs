@@ -60,7 +60,7 @@ public class LevelManager : MonoBehaviour
     public StarsController starsController;
 
     private int minimosPasos = 0;
-    public string specialBlock = "";
+    private string specialBlock = "";
     public LocalizeStringEvent endTextLocalized;
     //[SerializeField] private LocalizeStringEvent endText;
 
@@ -120,21 +120,14 @@ public class LevelManager : MonoBehaviour
         if (boardManager == null)
             return;
 
-        if (boardManager.GetCurrentSteps() > minimosPasos + pasosOffset)
-            starsController.DeactivateMinimumStepsStar(boardManager.GetCurrentSteps() - (minimosPasos + pasosOffset));
-
-
         if (boardManager.BoardCompleted() && !endPanel.activeSelf && !endPanelMinimized.activeSelf)
         {
             string levelName = GameManager.Instance.GetCurrentLevelName();
             streamRoom.FinishLevel();
             
             // Pone las estrellas que toca
-            if (boardManager.GetNumOfTopBlocksUsed() > 1)
-            {
-                starsController.DeactivateNoHangingCodeStar();
-            }
-
+            starsController.GiveMinimumStepsStar(boardManager.GetCurrentSteps() - (minimosPasos + pasosOffset));
+            starsController.GiveHangingCodeStar(boardManager.GetNumOfTopBlocksUsed());
             starsController.GiveSpecialStar(specialBlock);
             
             endPanel.SetActive(true);
@@ -221,8 +214,6 @@ public class LevelManager : MonoBehaviour
         gameOverMinimized.SetActive(false);
 
         streamRoom.Retry();
-
-        starsController.DeactivateFirstRunStar();
 
         TrackerAsset.Instance.GameObject.Interacted("retry_button");
 
