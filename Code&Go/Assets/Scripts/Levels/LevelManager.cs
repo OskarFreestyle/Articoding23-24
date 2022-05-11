@@ -135,9 +135,9 @@ public class LevelManager : MonoBehaviour
             if (!GameManager.Instance.InCreatedLevel())
             {
                 TrackerAsset.Instance.setVar("steps", boardManager.GetCurrentSteps());
-                TrackerAsset.Instance.setVar("first_execution", starsController.IsFirstRunStarActive());
+                TrackerAsset.Instance.setVar("first_execution", starsController.IsSpecialBlockStarActive());
                 TrackerAsset.Instance.setVar("minimum_steps", starsController.IsMinimumStepsStarActive());
-                TrackerAsset.Instance.setVar("no_hints", starsController.IsNoHintsStarActive());
+                TrackerAsset.Instance.setVar("no_hints", starsController.IsNoHangingCodeStarActive());
                 ProgressManager.Instance.LevelCompleted(starsController.GetStars());
             }
             else

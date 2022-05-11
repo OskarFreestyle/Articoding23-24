@@ -21,19 +21,18 @@ public class StarsController : Listener
 
     public override void ReceiveMessage(string msg, MSG_TYPE type)
     {
-        if(type == MSG_TYPE.SOLUTION)
+        if(type == MSG_TYPE.SUBMITTED_CODE)
         {
             blocksUsedInLevel = msg.Split(';');
         }
     }
     public override bool ReceiveBoolMessage(string msg, MSG_TYPE type)
     {
-        if(type == MSG_TYPE.SOLUTION)
-        {
-            blocksUsedInLevel = msg.Split(';');
-            return true;
-        }
-        return false;
+        string message = String.Copy(msg);
+        if(type == MSG_TYPE.SUBMITTED_CODE)
+            blocksUsedInLevel = message.Split(';');
+        
+        return true;
     }
     public int GetStars()
     {
@@ -76,7 +75,7 @@ public class StarsController : Listener
         stepsOverflowText.text = "";
     }
 
-    public bool IsFirstRunStarActive()
+    public bool IsSpecialBlockStarActive()
     {
         return specialBlockStar.color != deactivatedColor;
     }
@@ -86,7 +85,7 @@ public class StarsController : Listener
         return minimumStepsStar.color != deactivatedColor;
     }
 
-    public bool IsNoHintsStarActive()
+    public bool IsNoHangingCodeStarActive()
     {
         return noHangingCodeStar.color != deactivatedColor;
     }
