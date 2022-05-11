@@ -79,23 +79,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3265909837824
-    m_Localized: '4-4: Operadores 4'
+    m_Localized: "4-4: Una cuesti\xF3n de reflejos"
     m_Metadata:
       m_Items: []
   - m_Id: 3463591579648
-    m_Localized: '4-5: Operadores 5'
+    m_Localized: '4-5: El camino de baldosas de colores'
     m_Metadata:
       m_Items: []
   - m_Id: 3541295255552
-    m_Localized: '4-6: Operadores 6'
+    m_Localized: '4-6: Verde O azul'
     m_Metadata:
       m_Items: []
   - m_Id: 3624317308928
-    m_Localized: '4-7: Operadores 7'
+    m_Localized: "4-7: Negaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 3818501001216
-    m_Localized: '5-2: Bucles 2'
+    m_Localized: '5-2: Una forma mejor'
     m_Metadata:
       m_Items: []
   - m_Id: 3945856847872
@@ -159,7 +159,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 327157801943040
-    m_Localized: '5-1: Bucles 1'
+    m_Localized: '5-1: Un trabajo aburrido'
     m_Metadata:
       m_Items: []
   - m_Id: 2152537493164032

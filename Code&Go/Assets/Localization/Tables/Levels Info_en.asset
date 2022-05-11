@@ -79,23 +79,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3265909837824
-    m_Localized: '4-4: Operators 4'
+    m_Localized: '4-4: Reflecting on reflexions'
     m_Metadata:
       m_Items: []
   - m_Id: 3463591579648
-    m_Localized: '4-5: Operators 5'
+    m_Localized: '4-5: The colored tiled path'
     m_Metadata:
       m_Items: []
   - m_Id: 3541295255552
-    m_Localized: '4-6: Operators 6'
+    m_Localized: '4-6: Green OR blue'
     m_Metadata:
       m_Items: []
   - m_Id: 3624317308928
-    m_Localized: '4-7: Operators 7'
+    m_Localized: '4-7: Negation'
     m_Metadata:
       m_Items: []
   - m_Id: 3818501001216
-    m_Localized: '5-2: Loops 2'
+    m_Localized: '5-2: A better way'
     m_Metadata:
       m_Items: []
   - m_Id: 3945856847872
@@ -159,7 +159,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 327157801943040
-    m_Localized: '5-1: Loops 1'
+    m_Localized: '5-1: A boring job'
     m_Metadata:
       m_Items: []
   - m_Id: 2152537493164032
