@@ -20,6 +20,7 @@ limitations under the License.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UBlockly.UGUI
 {
@@ -36,7 +37,7 @@ namespace UBlockly.UGUI
             GameObject blockPrefab = BlockResMgr.Get().LoadBlockViewPrefab(block.Type);
             if (blockPrefab != null)
             {
-                // has been builded beforehand
+                // has been built beforehand
                 GameObject blockObj = GameObject.Instantiate(blockPrefab);
                 blockObj.name = blockPrefab.name;
                 
@@ -46,7 +47,7 @@ namespace UBlockly.UGUI
                 // rebuild inputs for mutation blocks
                 if (block.Mutator != null)
                     BlockViewBuilder.BuildInputViews(block, blockView);
-                
+
                 blockView.BuildLayout();
             }
             else

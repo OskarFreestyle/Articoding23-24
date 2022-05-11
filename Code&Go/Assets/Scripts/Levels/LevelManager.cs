@@ -1,4 +1,5 @@
-﻿using AssetPackage;
+﻿using System;
+using AssetPackage;
 using System.Collections;
 using System.Collections.Generic;
 using UBlockly;
@@ -167,8 +168,8 @@ public class LevelManager : MonoBehaviour
         }
 
         // Maybe do more stuff
-        ActivateLevelBlocks(currentLevel.activeBlocks, currentLevel.allActive);
-        LoadInitialBlocks(currentLevel.initialState);
+        ActivateLevelBlocks(currentLevel.activeBlocks, currentLevel.allActive); 
+        LoadInitialBlocks(currentLevel.initialState);//UI
 
         string boardJson = currentLevel.levelBoard != null ? currentLevel.levelBoard.text : currentLevel.auxLevelBoard;
         BoardState state = BoardState.FromJson(boardJson);
@@ -194,6 +195,10 @@ public class LevelManager : MonoBehaviour
     public void LoadNextLevel()
     {
         int levelSize = currentCategory.levels.Count;
+
+        // Si habia una estrella de antes, la quitamos
+        SetSpecialBlockStarActive(false);
+        
         if (++currentLevelIndex < levelSize)
             GameManager.Instance.LoadLevel(currentCategory, currentLevelIndex);
         else
@@ -287,6 +292,9 @@ public class LevelManager : MonoBehaviour
         string text = UBlockly.Xml.DomToText(dom);
         text = GameManager.Instance.ChangeCodeIDs(text);
 
+        // Si habia una estrella de antes, la quitamos
+        SetSpecialBlockStarActive(false);
+        
         if (!completed)
         {
             TrackerAsset.Instance.setVar("code", "\r\n" + text);
@@ -344,7 +352,11 @@ public class LevelManager : MonoBehaviour
             if(blocks.specialBlock == null)
                 specialBlock = "None";
             else
+            {
+                // Ponemos la nueva estrella
                 specialBlock = blocks.specialBlock;
+                SetSpecialBlockStarActive(true);
+            }
             
             BlocklyUI.WorkspaceView.Toolbox.SetActiveBlocks(blocks.AsMap(), CategoriesTutorialsAsMap());
         }
@@ -359,4 +371,19 @@ public class LevelManager : MonoBehaviour
             map[c.categoryName.ToUpper()] = c.data;
         return map;
     }
+
+    private void SetSpecialBlockStarActive(bool active)
+    {
+        GameObject blockPrefab = BlockResMgr.Get().LoadBlockViewPrefab(specialBlock);
+
+        if (blockPrefab != null)
+        {
+            Transform star = Array.Find(blockPrefab.GetComponentsInChildren<Transform>(),
+                (transform => { return transform.gameObject.name == "Star"; }));
+            if (star)
+                star.gameObject.GetComponent<Image>().enabled = active;
+        }
+        
+    }
+
 }

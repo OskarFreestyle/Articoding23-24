@@ -80,6 +80,7 @@ namespace UBlockly.UGUI
                 if (active)
                 {
                     mMenuList[category.CategoryName].gameObject.SetActive(true);
+                    
                     List<string> blockTypes = mConfig.GetBlockCategory(category.CategoryName).BlockList;
                     foreach (string blockType in blockTypes)
                     {
