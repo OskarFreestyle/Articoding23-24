@@ -19,7 +19,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 2
+                        "maxUses": 3
                     }
                 ]
             }
@@ -36,7 +36,7 @@
                     {
                         "blockName": "variables_set",
                         "maxUses": 100
-                    }                       
+                    }
                 ]
             }
         },
@@ -47,8 +47,8 @@
                 "activeBlocks": [
                     {
                         "blockName": "text",
-                        "maxUses": 3
-                    }                           
+                        "maxUses": 2
+                    }
                 ]
             }
         },
@@ -59,8 +59,8 @@
                 "activeBlocks": [
                     {
                         "blockName": "controls_repeat",
-                        "maxUses": 5
-                    }                      
+                        "maxUses": 2
+                    }
                 ]
             }
         },
@@ -71,11 +71,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 10
-                    },
-                    {
-                        "blockName": "movement_rotate",
-                        "maxUses": 4
+                        "maxUses": 3
                     }
                 ]
             }

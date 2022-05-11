@@ -3,7 +3,7 @@
         <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Object</variable>
         <variable type="" id="An]Sn_i2fD:nVJ/Y]5_A">Movement</variable>
     </variables>
-    <block type="start_start" id="x90EyhggYP2!dc!l,Z|7" x="202" y="-200">
+    <block type="start_start" id="`05];Ijt93}nyk8?Vvn1" x="184" y="-144">
         <next>
             <block type="variables_set" id="q7*vM`_bKyO/@ED6M%Pz">
                 <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Object</field>
@@ -21,8 +21,13 @@
                             </block>
                         </value>
                         <next>
-                            <block type="controls_repeat" id="RW:rn}ZAc$U)^m?.Pxwr">
-                                <field name="TIMES">3</field>
+                            <block type="controls_repeat" id="OO_WqfwhTFt[E*b]NjlT">
+                                <field name="TIMES">2</field>
+                                <statement name="DO">
+                                    <block type="controls_repeat" id="p3h0iH.ly)o7=Sq$e#y-">
+                                        <field name="TIMES">2</field>
+                                    </block>
+                                </statement>
                             </block>
                         </next>
                     </block>
