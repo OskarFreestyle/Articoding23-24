@@ -55,16 +55,6 @@ public class PopUp : MonoBehaviour
 
         // Set action
         nextButton.onClick.RemoveAllListeners();
-        if (data.next == null)
-        {
-            buttonText.text = "Cerrar";
-            //nextButton.onClick.AddListener(Hide); // Controlled from manager
-        }
-        else
-        {
-            buttonText.text = "Siguiente";
-            //nextButton.onClick.AddListener(() => Show(data.next)); // Controlled from manager
-        }
 
         // Update size dynamically
         UpdateCapLimit();
