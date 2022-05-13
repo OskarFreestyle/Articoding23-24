@@ -1156,7 +1156,6 @@ MonoBehaviour:
   - {fileID: 5297059340813441706}
   - {fileID: 6177487785506236783}
   - {fileID: 5512651736548453455}
-  star: {fileID: 8582303806739803640}
 --- !u!114 &7425693274626968649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1642,11 +1641,11 @@ RectTransform:
   m_Father: {fileID: 8830778835524380120}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88.345, y: 24.743042}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -12, y: 12}
   m_SizeDelta: {x: 29.3096, y: 29.3096}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &3805334835499332896
 CanvasRenderer:
   m_ObjectHideFlags: 0
