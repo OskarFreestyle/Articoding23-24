@@ -139,6 +139,11 @@ public class LevelManager : MonoBehaviour
                 TrackerAsset.Instance.setVar("minimum_steps", starsController.IsMinimumStepsStarActive());
                 TrackerAsset.Instance.setVar("no_hints", starsController.IsNoHangingCodeStarActive());
                 ProgressManager.Instance.LevelCompleted(starsController.GetStars());
+
+                var dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
+                string text = UBlockly.Xml.DomToText(dom);
+                text = GameManager.Instance.ChangeCodeIDs(text);
+                TrackerAsset.Instance.setVar("code", "\r\n" + text); //codigo
             }
             else
                 TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, true, -1);
