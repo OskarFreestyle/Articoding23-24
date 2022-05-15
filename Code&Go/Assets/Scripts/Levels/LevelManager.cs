@@ -346,7 +346,9 @@ public class LevelManager : MonoBehaviour
         {
             ActiveBlocks blocks = ActiveBlocks.FromJson(textAsset.text);
             if(blocks.specialBlock == null)
+            {
                 specialBlock = "None";
+            }
             else
             {
                 // Ponemos la nueva estrella
