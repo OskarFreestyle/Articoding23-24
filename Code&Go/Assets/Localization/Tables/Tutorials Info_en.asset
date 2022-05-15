@@ -341,5 +341,9 @@ MonoBehaviour:
     m_Localized: You can scroll all the way down to see the levels that await you.
     m_Metadata:
       m_Items: []
+  - m_Id: 130271607107493888
+    m_Localized: Change object in a loop
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -140,5 +140,11 @@ MonoBehaviour:
       to be repeated.
     m_Metadata:
       m_Items: []
+  - m_Id: 78779026041610240
+    m_Localized: How about we change the object inside the loop? This way we can
+      do the same things on different objects. Try and put this line at the end of
+      the loop!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

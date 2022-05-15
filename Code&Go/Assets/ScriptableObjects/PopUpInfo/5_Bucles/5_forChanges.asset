@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 1_Operador_0
+  m_Name: 5_forChanges
   m_EditorClassIdentifier: 
   type: 0
-  title: "Operadores num\xE9ricos"
-  content: "Con esta tarjeta puedes hacer operaciones con n\xFAmeros o con variables
-    que almacenen un n\xFAmero. Puede resultar \xFAtil cuando tengas pocas tarjetas
-    de n\xFAmeros."
-  next: {fileID: 11400000, guid: 495658a834d78844dac01e28a20965f5, type: 2}
-  image: {fileID: 21300000, guid: ea27d9a80cb1fbb4b913df97fccb6ac8, type: 3}
+  title: "Repetir un n\xFAmero de veces"
+  content: "Esta tarjeta permite repetir un n\xFAmero de veces especificado un conjunto
+    de instrucciones. Puede ser \xFAtil para no repetir c\xF3digo y para evitar secuencias
+    de instrucciones repetitivas."
+  next: {fileID: 0}
+  image: {fileID: 21300000, guid: a028f5049c517e84aa272e3b8cbe5f92, type: 3}
   localizedTitle:
     m_TableReference:
       m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 218068925730816
+      m_KeyId: 130271607107493888
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 69613496653459456
+      m_KeyId: 78779026041610240
       m_Key: 
     m_FallbackState: 0
   localizedImage:

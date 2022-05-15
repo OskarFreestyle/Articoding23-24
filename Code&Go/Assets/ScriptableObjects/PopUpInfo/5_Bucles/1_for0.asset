@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
   m_Name: 1_for0
   m_EditorClassIdentifier: 
-  type: 6
+  type: 0
   title: "Repetir un n\xFAmero de veces"
   content: "Esta tarjeta permite repetir un n\xFAmero de veces especificado un conjunto
     de instrucciones. Puede ser \xFAtil para no repetir c\xF3digo y para evitar secuencias

@@ -143,5 +143,11 @@ MonoBehaviour:
       quieres que se repita."
     m_Metadata:
       m_Items: []
+  - m_Id: 78779026041610240
+    m_Localized: "\xBFY si cambiamos el objeto dentro del bucle? As\xED podemos hacer
+      las mismas cosas sobre objetos diferentes. \xA1Prueba a poner esta l\xEDnea
+      al final del bucle!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
