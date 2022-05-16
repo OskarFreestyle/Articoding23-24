@@ -348,5 +348,9 @@ MonoBehaviour:
     m_Localized: Cambiar el objeto en un bucle
     m_Metadata:
       m_Items: []
+  - m_Id: 130639555496124416
+    m_Localized: "\xA1Bloques que dan estrellas!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

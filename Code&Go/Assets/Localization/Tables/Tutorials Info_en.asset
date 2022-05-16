@@ -345,5 +345,9 @@ MonoBehaviour:
     m_Localized: Change object in a loop
     m_Metadata:
       m_Items: []
+  - m_Id: 130639555496124416
+    m_Localized: Blocks that give stars!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

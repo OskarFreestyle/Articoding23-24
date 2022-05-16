@@ -299,6 +299,10 @@ MonoBehaviour:
     m_Key: changes_loop_title
     m_Metadata:
       m_Items: []
+  - m_Id: 130639555496124416
+    m_Key: tutorial_block_star_title
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

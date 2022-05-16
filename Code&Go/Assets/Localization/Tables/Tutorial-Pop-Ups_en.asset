@@ -146,5 +146,10 @@ MonoBehaviour:
       the loop!
     m_Metadata:
       m_Items: []
+  - m_Id: 79148412690636800
+    m_Localized: Do you see this star? If you use the blocks with a star when you
+      code, you'll earn a star at the end of the level!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

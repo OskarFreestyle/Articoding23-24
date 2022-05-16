@@ -123,6 +123,10 @@ MonoBehaviour:
     m_Key: popup_loops_5_forChanges
     m_Metadata:
       m_Items: []
+  - m_Id: 79148412690636800
+    m_Key: popup_tutorial_0_blockStar
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -149,5 +149,10 @@ MonoBehaviour:
       al final del bucle!"
     m_Metadata:
       m_Items: []
+  - m_Id: 79148412690636800
+    m_Localized: "\xBFVes esta estrella? Si usas los bloques que tienen una estrella,
+      \xA1conseguir\xE1s una estrella al final del nivel!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
