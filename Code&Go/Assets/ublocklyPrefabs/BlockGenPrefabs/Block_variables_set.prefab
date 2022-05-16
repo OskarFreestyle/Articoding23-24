@@ -1058,9 +1058,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8830778835524380120}
   - component: {fileID: 3046579961395152660}
+  - component: {fileID: 7425693274626968649}
   - component: {fileID: 5297059340813441706}
   - component: {fileID: 6668650843843171006}
-  - component: {fileID: 7425693274626968649}
   m_Layer: 0
   m_Name: Block_variables_set
   m_TagString: Untagged
@@ -1100,6 +1100,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6415894192678104516}
   m_CullTransparentMesh: 0
+--- !u!114 &7425693274626968649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6415894192678104516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 190
+  info: {fileID: 11400000, guid: 409bbf2b102802544b2ad0873046bd0e, type: 2}
+  highlightObject: 1
+  destroyOnShowed: 1
+  isSaveCheckpoint: 0
+  OnShowed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5297059340813441706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,26 +1176,6 @@ MonoBehaviour:
   - {fileID: 5297059340813441706}
   - {fileID: 6177487785506236783}
   - {fileID: 5512651736548453455}
---- !u!114 &7425693274626968649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6415894192678104516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 190
-  info: {fileID: 11400000, guid: 409bbf2b102802544b2ad0873046bd0e, type: 2}
-  highlightObject: 1
-  destroyOnShowed: 1
-  isSaveCheckpoint: 0
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &6512340879977185041
 GameObject:
   m_ObjectHideFlags: 0
