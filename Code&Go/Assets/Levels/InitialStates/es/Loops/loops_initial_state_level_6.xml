@@ -1,5 +1,27 @@
 <xml>
 	<variables>
+		<variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Movimiento</variable>
 	</variables>
-	<block type="start_start" id="`05];Ijt93}nyk8?Vvn1" x="184" y="-144"/>
+	<block type="start_start" id="`05];Ijt93}nyk8?Vvn1" x="184" y="-144">
+		<next>
+			<block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
+				<field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Movimiento</field>
+				<value name="VALUE">
+					<block type="math_number" id="j*(utNWyd/!t(-(O,WAm">
+						<field name="NUM">2</field>
+					</block>
+				</value>
+				<next>
+					<block type="movement_rotate_laser" id="^^@O,jT5MmD,pY5Bz0E}">
+						<field name="ROTATION">ANTI_CLOCKWISE</field>
+						<value name="AMOUNT">
+							<block type="math_number" id="e[ho$1@UaG?@J@u:d:d`">
+								<field name="NUM">1</field>
+							</block>
+						</value>
+					</block>
+				</next>
+			</block>
+		</next>
+	</block>
 </xml>
