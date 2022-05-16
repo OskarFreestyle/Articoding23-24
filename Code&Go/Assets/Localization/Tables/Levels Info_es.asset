@@ -107,15 +107,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4311839232000
-    m_Localized: '5-5: Bucles 5'
+    m_Localized: '5-5: Cambios dentro del bucle'
     m_Metadata:
       m_Items: []
   - m_Id: 4387194097664
-    m_Localized: '5-6: Bucles 6'
+    m_Localized: "5-6: Un poco m\xE1s dif\xEDcil"
     m_Metadata:
       m_Items: []
   - m_Id: 4464767750144
-    m_Localized: '5-7: Bucles 7'
+    m_Localized: '5-7: Bucles anidados'
     m_Metadata:
       m_Items: []
   - m_Id: 4575413489664
