@@ -28,8 +28,15 @@ MonoBehaviour:
       m_KeyId: 3127702061056
       m_Key: 
     m_FallbackState: 0
-  activeBlocks: {fileID: 4900000, guid: cfde110fb454a414b8e91187992bb3c6, type: 3}
+  activeBlocks: {fileID: 4900000, guid: ac9a4d9acae0317478a1d1c3a8b14164, type: 3}
   allActive: 0
-  levelBoard: {fileID: 4900000, guid: a4484eae9abed3d40b72a1f0b02a07fa, type: 3}
+  levelBoard: {fileID: 4900000, guid: eb0e89a3f16935442b236aad3385641b, type: 3}
   auxLevelBoard: 
-  minimosPasos: 7
+  minimosPasos: 5
+  endTextLocalized:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0

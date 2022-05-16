@@ -3,7 +3,7 @@
         <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Objeto</variable>
         <variable type="" id="An]Sn_i2fD:nVJ/Y]5_A">Desplazamiento</variable>
     </variables>
-    <block type="start_start" id="P;ktpDYkm[o7~eWCY).!" x="195" y="-228">
+    <block type="start_start" id="GPKnNyE@Z)^E.kP1nN!e" x="221" y="-205">
         <next>
             <block type="variables_set" id="q7*vM`_bKyO/@ED6M%Pz">
                 <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Objeto</field>
@@ -21,8 +21,8 @@
                             </block>
                         </value>
                         <next>
-                            <block type="controls_repeat" id="]D-P+W*;agWFjtlGD,u)">
-                                <field name="TIMES">4</field>
+                            <block type="controls_repeat" id="RW:rn}ZAc$U)^m?.Pxwr">
+                                <field name="TIMES">3</field>
                             </block>
                         </next>
                     </block>

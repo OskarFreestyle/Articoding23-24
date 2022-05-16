@@ -1,4 +1,5 @@
 {
+    "specialBlock": "controls_repeat",
     "categories": [
         {
             "categoryName": "start",
@@ -19,6 +20,10 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
+                        "maxUses": 3
+                    },
+                    {
+                        "blockName": "math_arithmetic",
                         "maxUses": 2
                     }
                 ]
@@ -36,7 +41,7 @@
                     {
                         "blockName": "variables_set",
                         "maxUses": 100
-                    }                       
+                    }
                 ]
             }
         },
@@ -48,7 +53,19 @@
                     {
                         "blockName": "text",
                         "maxUses": 2
-                    }                           
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "logic",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "logic_boolean",
+                        "maxUses": 2
+                    }
                 ]
             }
         },
@@ -60,7 +77,7 @@
                     {
                         "blockName": "controls_repeat",
                         "maxUses": 2
-                    }                      
+                    }
                 ]
             }
         },
@@ -71,11 +88,11 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 3
+                        "maxUses": 4
                     },
                     {
-                        "blockName": "movement_rotate",
-                        "maxUses": 4
+                        "blockName": "movement_activate_door",
+                        "maxUses": 2
                     }
                 ]
             }

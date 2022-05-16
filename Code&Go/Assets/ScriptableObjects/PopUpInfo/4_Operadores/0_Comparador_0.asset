@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
   m_Name: 0_Comparador_0
   m_EditorClassIdentifier: 
-  type: 5
+  type: 0
   title: Comparadores
   content: "Con esta tarjeta puedes comparar dos n\xFAmeros o variables y obtener
     un booleano en funci\xF3n del resultado."

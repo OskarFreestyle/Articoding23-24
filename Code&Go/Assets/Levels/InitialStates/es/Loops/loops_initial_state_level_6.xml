@@ -1,9 +1,9 @@
 <xml>
     <variables>
         <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Objeto</variable>
-        <variable type="" id="An]Sn_i2fD:nVJ/Y]5_A">Desplazamiento</variable>
+        <variable type="" id=");rsXrQFqC-;or)#|SD:">Rotacion</variable>
     </variables>
-    <block type="start_start" id="x90EyhggYP2!dc!l,Z|7" x="202" y="-200">
+    <block type="start_start" id="lXc8b%h[rCEbM)6-Ihf5" x="204" y="-241">
         <next>
             <block type="variables_set" id="q7*vM`_bKyO/@ED6M%Pz">
                 <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Objeto</field>
@@ -13,16 +13,16 @@
                     </block>
                 </value>
                 <next>
-                    <block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
-                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Desplazamiento</field>
+                    <block type="variables_set" id="@XAWBq?@(nd1}qf|rTks">
+                        <field name="VAR" id=");rsXrQFqC-;or)#|SD:" variableType="">Rotacion</field>
                         <value name="VALUE">
                             <block type="math_number" id="gy6Zv}mXv(ro1e!#^[Yf">
                                 <field name="NUM">0</field>
                             </block>
                         </value>
                         <next>
-                            <block type="controls_repeat" id="RW:rn}ZAc$U)^m?.Pxwr">
-                                <field name="TIMES">3</field>
+                            <block type="controls_repeat" id="!PeXG[c@Z5*9g7N87me/">
+                                <field name="TIMES">2</field>
                             </block>
                         </next>
                     </block>

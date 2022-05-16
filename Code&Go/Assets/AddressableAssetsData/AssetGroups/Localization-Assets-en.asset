@@ -200,7 +200,7 @@ MonoBehaviour:
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 3cc627dd19bb2174082da5652154908f
-    m_Address: loops_initial_state_level_5_en
+    m_Address: loops_initial_state_level_6_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

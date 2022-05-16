@@ -36,7 +36,7 @@
                     {
                         "blockName": "variables_set",
                         "maxUses": 100
-                    }                       
+                    }
                 ]
             }
         },
@@ -47,8 +47,8 @@
                 "activeBlocks": [
                     {
                         "blockName": "text",
-                        "maxUses": 3
-                    }                           
+                        "maxUses": 2
+                    }
                 ]
             }
         },
@@ -59,8 +59,8 @@
                 "activeBlocks": [
                     {
                         "blockName": "controls_repeat",
-                        "maxUses": 5
-                    }                      
+                        "maxUses": 2
+                    }
                 ]
             }
         },
@@ -71,7 +71,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 10
+                        "maxUses": 3
                     },
                     {
                         "blockName": "movement_rotate",
@@ -82,3 +82,5 @@
         }
     ]
 }
+
+// 3

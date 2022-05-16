@@ -344,5 +344,9 @@ MonoBehaviour:
     m_Localized: "\xA1M\xE1s categor\xEDas!"
     m_Metadata:
       m_Items: []
+  - m_Id: 130271607107493888
+    m_Localized: Cambiar el objeto en un bucle
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

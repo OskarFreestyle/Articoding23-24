@@ -24,8 +24,13 @@
                             <block type="controls_repeat" id="OO_WqfwhTFt[E*b]NjlT">
                                 <field name="TIMES">2</field>
                                 <statement name="DO">
-                                    <block type="controls_repeat" id="p3h0iH.ly)o7=Sq$e#y-">
-                                        <field name="TIMES">2</field>
+                                    <block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
+                                        <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Object</field>
+										<value name="VALUE">
+											<block type="text" id="Kgf)VE~u~}-+:C5+)WJi">
+												<field name="TEXT">"Laser_2" </field>
+                                            </block>
+										</value>
                                     </block>
                                 </statement>
                             </block>
