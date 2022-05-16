@@ -28,7 +28,7 @@ MonoBehaviour:
       m_KeyId: 54572151968063488
       m_Key: 
     m_FallbackState: 0
-  activeBlocks: {fileID: 4900000, guid: 73806bc2b134cf34999b30f60b0f39a2, type: 3}
+  activeBlocks: {fileID: 4900000, guid: 0d715246149017c4ea13799db08f0260, type: 3}
   allActive: 0
   levelBoard: {fileID: 4900000, guid: ddf599b2287be6c4f9f2713d643a2dcd, type: 3}
   auxLevelBoard: 
