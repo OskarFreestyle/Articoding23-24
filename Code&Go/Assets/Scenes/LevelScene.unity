@@ -2237,8 +2237,6 @@ GameObject:
   - component: {fileID: 575093758}
   - component: {fileID: 575093757}
   - component: {fileID: 575093756}
-  - component: {fileID: 575093761}
-  - component: {fileID: 575093760}
   m_Layer: 5
   m_Name: LeftArea
   m_TagString: Untagged
@@ -2426,40 +2424,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tt: {fileID: 575093758}
   level: {fileID: 11400000, guid: 8698cc84718895d459f95101212d5c31, type: 2}
---- !u!114 &575093760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575093749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 130
-  info: {fileID: 11400000, guid: dce3fba348f015c45a5dc62d31e2cd71, type: 2}
-  highlightObject: 0
-  destroyOnShowed: 1
-  isSaveCheckpoint: 0
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &575093761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575093749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a4a7d46654560a4d8012ca2935fcaa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tt: {fileID: 575093760}
-  level: {fileID: 11400000, guid: 97451964c5fbf654b9aa1368e6b0080d, type: 2}
 --- !u!1 &610898750
 GameObject:
   m_ObjectHideFlags: 0
