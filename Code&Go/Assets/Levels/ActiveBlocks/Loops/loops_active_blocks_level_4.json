@@ -20,7 +20,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 3
+                        "maxUses": 5
                     },
                     {
                         "blockName": "math_arithmetic",
@@ -88,7 +88,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 4
+                        "maxUses": 6
                     },
                     {
                         "blockName": "movement_activate_door",

@@ -1,4 +1,5 @@
 {
+    "specialBlock": "controls_repeat",
     "categories": [
         {
             "categoryName": "start",
@@ -19,7 +20,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 2
+                        "maxUses": 3
                     }
                 ]
             }
@@ -70,17 +71,11 @@
                 "activate": true,
                 "activeBlocks": [
                     {
-                        "blockName": "movement_move",
-                        "maxUses": 3
-                    },
-                    {
                         "blockName": "movement_rotate",
-                        "maxUses": 4
+                        "maxUses": 3
                     }
                 ]
             }
         }
     ]
 }
-
-// 3
