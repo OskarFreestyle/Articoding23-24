@@ -48,7 +48,7 @@ namespace UBlockly.UGUI
         protected Workspace mWorkspace;
         protected ToolboxConfig mConfig;
 
-        //articoding
+        //articoding {
         protected bool allActive = false;
         protected Dictionary<string, CategoryBlocks> activeCategories;
         protected int nActiveCategories = 0;
@@ -127,7 +127,7 @@ namespace UBlockly.UGUI
             block.gameObject.SetActive(allActive || active);
             block.UpdateCount();
         }
-        //articoding
+        //articoding }
 
         protected abstract void Build();
         protected virtual void OnPickBlockView(){}
@@ -215,7 +215,7 @@ namespace UBlockly.UGUI
             //change the dragging object as the newly created blockview 
             data.pointerDrag = newBlockView.gameObject;
 
-            //articoding
+            //articoding {
             //if the max number of blocks have been used disable the block
             if (Block.blocksAvailable.ContainsKey(blockView.BlockType) && Block.blocksAvailable[blockView.BlockType] > 0)
             {
@@ -227,7 +227,7 @@ namespace UBlockly.UGUI
                 }
             }
             blockView.UpdateCount();
-            //articoding
+            //articoding }
 
             OnPickBlockView();
 
@@ -474,6 +474,7 @@ namespace UBlockly.UGUI
             block.SetFieldValue("NAME", procedureInfo.Name);
             BlockView view = NewBlockView(block, parentObj.transform);
             mProcedureCallerViews[procedureInfo.Name] = view;
+            SetBlockCount(view); //articoding
         }
         
         protected void DeleteProcedureCallerView(Procedure procedureInfo)

@@ -1037,7 +1037,7 @@
   /// block text - This precedes the name of the function when defining it.  See
   /// [https://blockly-demo.appspot.com/static/apps/code/index.html?lang=en#c84aoc this sample
   /// function definition].
-  "PROCEDURES_DEFNORETURN_TITLE": "to",
+  "PROCEDURES_DEFNORETURN_TITLE": "Procedure: ",
   /// default name - This acts as a placeholder for the name of a function on a
   /// function definition block: as shown on
   /// [https://blockly-demo.appspot.com/static/apps/code/index.html?lang=en#w7cfju this block].
@@ -1062,7 +1062,7 @@
   "PROCEDURES_DEFNORETURN_COMMENT": "Describe this function...",
   /// url - Information about defining [https://en.wikipedia.org/wiki/Subroutine functions] that have return values.
   "PROCEDURES_DEFRETURN_HELPURL": "https://en.wikipedia.org/wiki/Subroutine",
-  "PROCEDURES_DEFRETURN_TITLE": "to",
+  "PROCEDURES_DEFRETURN_TITLE": "Procedure: ",
   "PROCEDURES_DEFRETURN_PROCEDURE": "do something",
   "PROCEDURES_DEFRETURN_DO": "",
   "PROCEDURES_DEFRETURN_COMMENT": "Describe this function...",
@@ -1125,8 +1125,5 @@
   "TIME_UNIT_MILLISECOND": "millisecond",
   "TIME_UNIT_SECONDS": "second",
   "TIME_UNIT_MINUTES": "minute",
-  "TIME_UNIT_TOO_HIGH": "too high to count",
-  
-  
-  "PROCEDURES": "Methods"
+  "TIME_UNIT_TOO_HIGH": "too high to count"
 }

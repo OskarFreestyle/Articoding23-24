@@ -1037,12 +1037,12 @@
   /// block text - This precedes the name of the function when defining it.  See
   /// [https://blockly-demo.appspot.com/static/apps/code/index.html?lang=en#c84aoc this sample
   /// function definition].
-  "PROCEDURES_DEFNORETURN_TITLE": "a",
+  "PROCEDURES_DEFNORETURN_TITLE": "Función: ",
   /// default name - This acts as a placeholder for the name of a function on a
   /// function definition block: as shown on
   /// [https://blockly-demo.appspot.com/static/apps/code/index.html?lang=en#w7cfju this block].
   /// The user will replace it with the function's name.
-  "PROCEDURES_DEFNORETURN_PROCEDURE": "funcion",
+  "PROCEDURES_DEFNORETURN_PROCEDURE": "haz algo",
   /// block text - This precedes the list of parameters on a function's defiition block.  See
   /// [https://blockly-demo.appspot.com/static/apps/code/index.html?lang=en#voztpd this sample
   /// function with parameters].
@@ -1062,20 +1062,20 @@
   "PROCEDURES_DEFNORETURN_COMMENT": "Describe esta función...",
   /// url - Information about defining [https://en.wikipedia.org/wiki/Subroutine functions] that have return values.
   "PROCEDURES_DEFRETURN_HELPURL": "https://en.wikipedia.org/wiki/Subroutine",
-  "PROCEDURES_DEFRETURN_TITLE": "a",
-  "PROCEDURES_DEFRETURN_PROCEDURE": "funcion",
+  "PROCEDURES_DEFRETURN_TITLE": "Función: ",
+  "PROCEDURES_DEFRETURN_PROCEDURE": "haz algo",
   "PROCEDURES_DEFRETURN_DO": "",
   "PROCEDURES_DEFRETURN_COMMENT": "Describe esta funcion...",
   "PROCEDURES_DEFRETURN_RETURN": "devuelve",
 
   /// tooltip
-  "PROCEDURES_DEFRETURN_TOOLTIP": "Crea una funcion con una salida.",
+  "PROCEDURES_DEFRETURN_TOOLTIP": "Crea una función con una salida.",
   /// Label for a checkbox that controls if statements are allowed in a function.
   "PROCEDURES_ALLOW_STATEMENTS": "permite definiciones",
-  "PROCEDURES_NAME": "nombre de la funcion",
+  "PROCEDURES_NAME": "nombre de la función",
 
   /// alert - The user has created a function with two parameters that have the same name.  Every parameter must have a different name.
-  "PROCEDURES_DEF_DUPLICATE_WARNING": "Advertencia: esta funcion tiene parámetros duplicados.",
+  "PROCEDURES_DEF_DUPLICATE_WARNING": "Advertencia: esta función tiene parámetros duplicados.",
 
   /// url - Information about calling [https://en.wikipedia.org/wiki/Subroutine functions] that do not return values.
   "PROCEDURES_CALLNORETURN_HELPURL": "https://en.wikipedia.org/wiki/Subroutine",
@@ -1093,7 +1093,7 @@
   /// [[Translating:Blockly#function_definitions]].\n(Identical|Input)
   "PROCEDURES_MUTATORCONTAINER_TITLE": "entradas",
   /// tooltip
-  "PROCEDURES_MUTATORCONTAINER_TOOLTIP": "Añade: elimina o reordena las entradas de esta función.",
+  "PROCEDURES_MUTATORCONTAINER_TOOLTIP": "Añade, elimina o reordena las entradas de esta función.",
   /// block text - This text appears on a block in a window that appears when the user clicks
   /// on the plus sign or star on a function definition block].  It appears on the block for
   /// adding an individual parameter (referred to by the simpler term "inputs") to the function.
@@ -1125,9 +1125,6 @@
   "TIME_UNIT_MILLISECOND": "milisegundos",
   "TIME_UNIT_SECONDS": "segundos",
   "TIME_UNIT_MINUTES": "minutos",
-  "TIME_UNIT_TOO_HIGH": "mucho",
-
-  
-  "PROCEDURES": "Métodos"
+  "TIME_UNIT_TOO_HIGH": "mucho"
 }
     

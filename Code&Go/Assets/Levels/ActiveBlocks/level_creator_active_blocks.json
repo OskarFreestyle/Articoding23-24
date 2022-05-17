@@ -123,6 +123,22 @@
                     }
                 ]
             }
+        },
+        {
+            "categoryName": "procedure",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "procedures_defnoreturn",
+                        "maxUses": 100
+                    },
+                    {
+                        "blockName": "procedures_callnoreturn",
+                        "maxUses": 100
+                    }
+                ]
+            }
         }
     ]
 }
