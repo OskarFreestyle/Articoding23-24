@@ -1042,7 +1042,7 @@
   /// function definition block: as shown on
   /// [https://blockly-demo.appspot.com/static/apps/code/index.html?lang=en#w7cfju this block].
   /// The user will replace it with the function's name.
-  "PROCEDURES_DEFNORETURN_PROCEDURE": "haz algo",
+  "PROCEDURES_DEFNORETURN_PROCEDURE": "hazAlgo",
   /// block text - This precedes the list of parameters on a function's defiition block.  See
   /// [https://blockly-demo.appspot.com/static/apps/code/index.html?lang=en#voztpd this sample
   /// function with parameters].
@@ -1063,7 +1063,7 @@
   /// url - Information about defining [https://en.wikipedia.org/wiki/Subroutine functions] that have return values.
   "PROCEDURES_DEFRETURN_HELPURL": "https://en.wikipedia.org/wiki/Subroutine",
   "PROCEDURES_DEFRETURN_TITLE": "Función: ",
-  "PROCEDURES_DEFRETURN_PROCEDURE": "haz algo",
+  "PROCEDURES_DEFRETURN_PROCEDURE": "hazAlgo",
   "PROCEDURES_DEFRETURN_DO": "",
   "PROCEDURES_DEFRETURN_COMMENT": "Describe esta funcion...",
   "PROCEDURES_DEFRETURN_RETURN": "devuelve",
@@ -1072,7 +1072,7 @@
   "PROCEDURES_DEFRETURN_TOOLTIP": "Crea una función con una salida.",
   /// Label for a checkbox that controls if statements are allowed in a function.
   "PROCEDURES_ALLOW_STATEMENTS": "permite definiciones",
-  "PROCEDURES_NAME": "nombre de la función",
+  "PROCEDURES_NAME": "Nombre de función",
 
   /// alert - The user has created a function with two parameters that have the same name.  Every parameter must have a different name.
   "PROCEDURES_DEF_DUPLICATE_WARNING": "Advertencia: esta función tiene parámetros duplicados.",

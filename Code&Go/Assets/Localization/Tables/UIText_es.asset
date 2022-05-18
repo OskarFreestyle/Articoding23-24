@@ -373,5 +373,13 @@ MonoBehaviour:
     m_Localized: Guardar
     m_Metadata:
       m_Items: []
+  - m_Id: 133984100788068352
+    m_Localized: "Nombre de funci\xF3n:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133984909068197888
+    m_Localized: "Par\xE1metros:"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
