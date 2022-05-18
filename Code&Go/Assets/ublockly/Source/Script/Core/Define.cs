@@ -93,9 +93,9 @@ namespace UBlockly
         public const string VARIABLE_GET_BLOCK_TYPE = "variables_get";
         public const string VARIABLE_SET_BLOCK_TYPE = "variables_set";
         public const string DEFINE_NO_RETURN_BLOCK_TYPE = "procedures_defnoreturn";
-        public const string DEFINE_WITH_RETURN_BLOCK_TYPE = "procedures_defreturn";
+        //public const string DEFINE_WITH_RETURN_BLOCK_TYPE = "procedures_defreturn";
         public const string CALL_NO_RETURN_BLOCK_TYPE = "procedures_callnoreturn";
-        public const string CALL_WITH_RETURN_BLOCK_TYPE = "procedures_callreturn";
+        //public const string CALL_WITH_RETURN_BLOCK_TYPE = "procedures_callreturn";
 
         /// <summary>
         /// a list of field types defined in block

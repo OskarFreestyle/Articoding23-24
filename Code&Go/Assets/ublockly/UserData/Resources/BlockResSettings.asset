@@ -212,15 +212,9 @@ MonoBehaviour:
   - IndexName: procedures_defnoreturn
     ResName: Block_procedures_defnoreturn
     Prefab: {fileID: 2422219578507208060, guid: 416069e1d28705143ad9cd66dc6cec2f, type: 3}
-  - IndexName: procedures_defreturn
-    ResName: Block_procedures_defreturn
-    Prefab: {fileID: 7500945570707599284, guid: 6cebb7e20c3782a4da21c57e2d72e141, type: 3}
   - IndexName: procedures_callnoreturn
     ResName: Block_procedures_callnoreturn
     Prefab: {fileID: 9143536198455120362, guid: a83e2dc0c6251034ca4f8a66dc1d9f0c, type: 3}
-  - IndexName: procedures_callreturn
-    ResName: Block_procedures_callreturn
-    Prefab: {fileID: 3628491586076420887, guid: 936a2d0afcad97e488bbb990936ae1c3, type: 3}
   - IndexName: text
     ResName: Block_text
     Prefab: {fileID: 1745993072636738363, guid: c8971920a7d37934a9b65f5baa9a3658, type: 3}

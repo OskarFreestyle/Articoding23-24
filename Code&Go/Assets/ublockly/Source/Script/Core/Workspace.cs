@@ -332,8 +332,8 @@ namespace UBlockly
             var uses = this.GetVariableUses(name);
             foreach (var block in uses)
             {
-                if (string.Equals(block.Type, Define.DEFINE_NO_RETURN_BLOCK_TYPE) ||
-                    string.Equals(block.Type, Define.DEFINE_WITH_RETURN_BLOCK_TYPE))
+                if (string.Equals(block.Type, Define.DEFINE_NO_RETURN_BLOCK_TYPE)) // ||
+                    //string.Equals(block.Type, Define.DEFINE_WITH_RETURN_BLOCK_TYPE))
                 {
                     var procedureName = block.GetFieldValue("NAME");
                     Debug.LogError("Alert:" + I18n.Get(MsgDefine.CANNOT_DELETE_VARIABLE_PROCEDURE).

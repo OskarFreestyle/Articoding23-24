@@ -84,9 +84,9 @@ namespace UBlockly
         public const bool HAS_STATEMENTS_DEFAULT = true;
 
         public const string DEFINE_NO_RETURN_BLOCK_TYPE = Define.DEFINE_NO_RETURN_BLOCK_TYPE;
-        public const string DEFINE_WITH_RETURN_BLOCK_TYPE = Define.DEFINE_WITH_RETURN_BLOCK_TYPE;
+        //public const string DEFINE_WITH_RETURN_BLOCK_TYPE = Define.DEFINE_WITH_RETURN_BLOCK_TYPE;
         public const string CALL_NO_RETURN_BLOCK_TYPE = Define.CALL_NO_RETURN_BLOCK_TYPE;
-        public const string CALL_WITH_RETURN_BLOCK_TYPE = Define.CALL_WITH_RETURN_BLOCK_TYPE;
+        //public const string CALL_WITH_RETURN_BLOCK_TYPE = Define.CALL_WITH_RETURN_BLOCK_TYPE;
         public const string IF_RETURN_BLOCK_TYPE = "procedures_ifreturn";
 
         private Workspace mWorkspace;
@@ -131,7 +131,8 @@ namespace UBlockly
         /// </summary>
         public static bool HasReturn(Block block)
         {
-            return IsDefinition(block) && block.Type.Equals(DEFINE_WITH_RETURN_BLOCK_TYPE);
+            //return IsDefinition(block) && block.Type.Equals(DEFINE_WITH_RETURN_BLOCK_TYPE);
+            return false;
         }
 
         /// <summary>

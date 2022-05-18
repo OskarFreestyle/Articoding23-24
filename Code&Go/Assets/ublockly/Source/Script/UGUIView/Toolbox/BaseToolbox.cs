@@ -446,8 +446,8 @@ namespace UBlockly.UGUI
             List<string> blockTypes = mConfig.GetBlockCategory(Define.PROCEDURE_CATEGORY_NAME).BlockList;
             foreach (string blockType in blockTypes)
             {
-                if (!blockType.Equals(Define.CALL_NO_RETURN_BLOCK_TYPE) &&
-                    !blockType.Equals(Define.CALL_WITH_RETURN_BLOCK_TYPE))
+                if (!blockType.Equals(Define.CALL_NO_RETURN_BLOCK_TYPE)) // &&
+                    //!blockType.Equals(Define.CALL_WITH_RETURN_BLOCK_TYPE))
                 {
                     NewBlockView(blockType, parent);
                 }
@@ -469,7 +469,8 @@ namespace UBlockly.UGUI
             if (!mRootList.TryGetValue(Define.PROCEDURE_CATEGORY_NAME, out parentObj))
                 return;
 
-            string blockType = hasReturn ? Define.CALL_WITH_RETURN_BLOCK_TYPE : Define.CALL_NO_RETURN_BLOCK_TYPE;
+            //string blockType = hasReturn ? Define.CALL_WITH_RETURN_BLOCK_TYPE : Define.CALL_NO_RETURN_BLOCK_TYPE;
+            string blockType = Define.CALL_NO_RETURN_BLOCK_TYPE;
             Block block = mWorkspace.NewBlock(blockType);
             block.SetFieldValue("NAME", procedureInfo.Name);
             BlockView view = NewBlockView(block, parentObj.transform);
