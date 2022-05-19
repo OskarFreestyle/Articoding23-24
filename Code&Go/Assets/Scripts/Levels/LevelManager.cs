@@ -135,9 +135,9 @@ public class LevelManager : MonoBehaviour
             if (!GameManager.Instance.InCreatedLevel())
             {
                 TrackerAsset.Instance.setVar("steps", boardManager.GetCurrentSteps());
-                TrackerAsset.Instance.setVar("first_execution", starsController.IsSpecialBlockStarActive());
+                TrackerAsset.Instance.setVar("special_block", starsController.IsSpecialBlockStarActive());
                 TrackerAsset.Instance.setVar("minimum_steps", starsController.IsMinimumStepsStarActive());
-                TrackerAsset.Instance.setVar("no_hints", starsController.IsNoHangingCodeStarActive());
+                TrackerAsset.Instance.setVar("no_hanging_code", starsController.IsNoHangingCodeStarActive());
                 ProgressManager.Instance.LevelCompleted(starsController.GetStars());
 
                 var dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
