@@ -115,15 +115,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4464767750144
-    m_Localized: '5-7: Nested loops'
+    m_Localized: '5-7: Another kind of loop'
     m_Metadata:
       m_Items: []
   - m_Id: 4575413489664
-    m_Localized: '5-8: Loops 8'
+    m_Localized: '5-8: Test your knowledge'
     m_Metadata:
       m_Items: []
   - m_Id: 4726181941248
-    m_Localized: '5-9: Loops 9'
+    m_Localized: '5-9: Test your knowledge'
     m_Metadata:
       m_Items: []
   - m_Id: 4849486090240
