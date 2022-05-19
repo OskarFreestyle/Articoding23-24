@@ -1,21 +1,26 @@
 <xml>
 	<variables>
-		<variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Object</variable>
+		<variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Movimiento</variable>
 	</variables>
 	<block type="start_start" id="`05];Ijt93}nyk8?Vvn1" x="184" y="-144">
 		<next>
-			<block type="controls_repeat" id="OO_WqfwhTFt[E*b]NjlT">
-				<field name="TIMES">2</field>
-				<statement name="DO">
-					<block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
-						<field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Object</field>
-						<value name="VALUE">
-							<block type="text" id="Kgf)VE~u~}-+:C5+)WJi">
-								<field name="TEXT">"Laser_2" </field>
-							</block>
+			<block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
+				<field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Movimiento</field>
+				<value name="VALUE">
+					<block type="math_number" id="j*(utNWyd/!t(-(O,WAm">
+						<field name="NUM">1</field>
+					</block>
+				</value>
+				<next>
+					<block type="movement_rotate_laser" id="^^@O,jT5MmD,pY5Bz0E}">
+						<field name="ROTATION">ANTI_CLOCKWISE</field>
+						<value name="AMOUNT">
+							<block type="variables_get" id="EEi;2,[G-K2g{w^{*Jl-">
+                                <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Movimiento</field>
+                            </block>
 						</value>
 					</block>
-				</statement>
+				</next>
 			</block>
 		</next>
 	</block>

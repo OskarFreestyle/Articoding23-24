@@ -20,7 +20,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 3
+                        "maxUses": 0
                     }
                 ]
             }
@@ -71,8 +71,12 @@
                 "activate": true,
                 "activeBlocks": [
                     {
-                        "blockName": "movement_move",
-                        "maxUses": 10
+                        "blockName": "movement_rotate_laser",
+                        "maxUses": 0
+                    },
+                    {
+                        "blockName": "movement_rotate",
+                        "maxUses": 4
                     }
                 ]
             }
