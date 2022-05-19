@@ -72,7 +72,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 3
+                        "maxUses": 10
                     }
                 ]
             }
