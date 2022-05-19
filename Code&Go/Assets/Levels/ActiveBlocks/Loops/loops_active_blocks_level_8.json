@@ -1,5 +1,5 @@
 {
-    "specialBlock": "controls_repeat",
+    "specialBlock": "controls_whileUntil",
     "categories": [
         {
             "categoryName": "start",
@@ -14,13 +14,29 @@
             }
         },
         {
+            "categoryName": "logic",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "logic_negate",
+                        "maxUses": 3
+                    },
+                    {
+                        "blockName": "logic_cells_occupied",
+                        "maxUses": 3
+                    }
+                ]
+            }
+        },
+        {
             "categoryName": "math",
             "blocksInfo": {
                 "activate": true,
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 4
+                        "maxUses": 1
                     }
                 ]
             }
@@ -37,7 +53,7 @@
                     {
                         "blockName": "variables_set",
                         "maxUses": 100
-                    }                       
+                    }
                 ]
             }
         },
@@ -48,8 +64,8 @@
                 "activeBlocks": [
                     {
                         "blockName": "text",
-                        "maxUses": 2
-                    }                           
+                        "maxUses": 3
+                    }
                 ]
             }
         },
@@ -59,9 +75,9 @@
                 "activate": true,
                 "activeBlocks": [
                     {
-                        "blockName": "controls_repeat",
-                        "maxUses": 4
-                    }                      
+                        "blockName": "controls_whileUntil",
+                        "maxUses": 5
+                    }
                 ]
             }
         },
@@ -72,11 +88,11 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 8
+                        "maxUses": 100
                     },
                     {
-                        "blockName": "movement_rotate",
-                        "maxUses": 1
+                        "blockName": "movement_activate_door",
+                        "maxUses": 2
                     }
                 ]
             }
