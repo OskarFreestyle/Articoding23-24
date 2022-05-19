@@ -1,5 +1,5 @@
 {
-    "specialBlock": "controls_repeat",
+    "specialBlock": "controls_whileUntil",
     "categories": [
         {
             "categoryName": "start",
@@ -14,13 +14,29 @@
             }
         },
         {
+            "categoryName": "logic",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "logic_negate",
+                        "maxUses": 1
+                    },
+                    {
+                        "blockName": "logic_cells_occupied",
+                        "maxUses": 1
+                    }
+                ]
+            }
+        },
+        {
             "categoryName": "math",
             "blocksInfo": {
                 "activate": true,
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 2
+                        "maxUses": 1
                     }
                 ]
             }
@@ -59,7 +75,7 @@
                 "activate": true,
                 "activeBlocks": [
                     {
-                        "blockName": "controls_repeat",
+                        "blockName": "controls_whileUntil",
                         "maxUses": 5
                     }
                 ]
@@ -72,11 +88,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 10
-                    },
-                    {
-                        "blockName": "movement_rotate",
-                        "maxUses": 4
+                        "maxUses": 20
                     }
                 ]
             }

@@ -154,5 +154,15 @@ MonoBehaviour:
       \xA1conseguir\xE1s una estrella al final del nivel!"
     m_Metadata:
       m_Items: []
+  - m_Id: 80101588963307520
+    m_Localized: "Se me olvid\xF3 incluir la tarjeta de \"repetir\"... Quiz\xE1 podamos
+      usar esta. \xBFQu\xE9 te parece?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80101943394578432
+    m_Localized: "Usa el bloque de \"mientras que\" cuando quieras repetir el c\xF3digo
+      hasta que se cumpla una condici\xF3n."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

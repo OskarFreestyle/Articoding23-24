@@ -151,5 +151,15 @@ MonoBehaviour:
       code, you'll earn a star at the end of the level!
     m_Metadata:
       m_Items: []
+  - m_Id: 80101588963307520
+    m_Localized: I forgot to include the "repeat" block... Maybe we can use this
+      one. What do you think?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80101943394578432
+    m_Localized: 'Use the "while" block when you want to repeat some code until a
+      condition is met. '
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

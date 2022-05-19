@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 0_While
+  m_Name: 7_while0
   m_EditorClassIdentifier: 
-  type: 6
+  type: 0
   title: Repetir mientras que
-  content: "Esta tarjeta permite repetir una instrucci\xF3n mientras que una condici\xF3n
-    se cumpla. Puede ser \xFAtil para no repetir c\xF3digo y para evitar secuencias
-    de instrucciones repetitivas. Pero ten cuidado, no pongas condiciones que siempre
-    sean verdaderas o tendr\xE1s un bucle infinito.\r\n"
-  next: {fileID: 0}
+  content: "Se me olvid\xF3 incluir la tarjeta de \"repetir\"... Quiz\xE1 podamos
+    usar esta. \xBFQu\xE9 te parece?"
+  next: {fileID: 11400000, guid: 18f143315b01de949a6e21d171ebc0b8, type: 2}
   image: {fileID: 21300000, guid: 34beba016d89b98459f4a6983fda9228, type: 3}
   localizedTitle:
     m_TableReference:
@@ -29,9 +27,9 @@ MonoBehaviour:
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
-      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 223015247466496
+      m_KeyId: 80101588963307520
       m_Key: 
     m_FallbackState: 0
   localizedImage:
