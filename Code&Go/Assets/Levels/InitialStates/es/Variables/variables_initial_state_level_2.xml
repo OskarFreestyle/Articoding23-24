@@ -1,13 +1,13 @@
 <xml>
     <variables>
-        <variable type="" id="dRjXmTsN}O[h8uII~2;V">CantidadMovVertical</variable>
-        <variable type="" id="Hn6T/l;!m{R9JWzAYpB^">CantidadMovHorizontal</variable>
+        <variable type="" id="dRjXmTsN}O[h8uII~2;V">Vertical</variable>
+        <variable type="" id="Hn6T/l;!m{R9JWzAYpB^">Horizontal</variable>
         <variable type="" id="qvv=jWq$|SvU%*YYbU/i">CantidadGiro</variable>
     </variables>
     <block type="start_start" id="DG*AN?/S:`[+.Tj|DOH#" x="145" y="-142">
         <next>
             <block type="variables_set" id="X#$-5y-3*-KG!{y+lFYk">
-                <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">CantidadMovVertical</field>
+                <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">Vertical</field>
                 <value name="VALUE">
                     <block type="math_number" id=")PhsJL6Uwv$Fj+LmS4P{">
                         <field name="NUM">0</field>
@@ -15,7 +15,7 @@
                 </value>
                 <next>
                     <block type="variables_set" id="R[][3hWh`04aB2x|RN+G">
-                        <field name="VAR" id="Hn6T/l;!m{R9JWzAYpB^" variableType="">CantidadMovHorizontal</field>
+                        <field name="VAR" id="Hn6T/l;!m{R9JWzAYpB^" variableType="">Horizontal</field>
                         <value name="VALUE">
                             <block type="math_number" id="01i{m;SQNa!lapopw_^M">
                                 <field name="NUM">3</field>
@@ -26,7 +26,7 @@
                                 <field name="DIRECTION">DOWN</field>
                                 <value name="AMOUNT">
                                     <block type="variables_get" id="RF)6?fVz*khIi*-UNN}s">
-                                        <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">CantidadMovVertical</field>
+                                        <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">Vertical</field>
                                     </block>
                                 </value>
                                 <next>
@@ -34,7 +34,7 @@
                                         <field name="DIRECTION">LEFT</field>
                                         <value name="AMOUNT">
                                             <block type="variables_get" id="B]AH]4Y,D{PyBGgLY;Gc">
-                                                <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">CantidadMovVertical</field>
+                                                <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">Vertical</field>
                                             </block>
                                         </value>
                                         <next>
@@ -42,7 +42,7 @@
                                                 <field name="DIRECTION">DOWN</field>
                                                 <value name="AMOUNT">
                                                     <block type="variables_get" id="+r2)e)Q?@_XQMTeWej#.">
-                                                        <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">CantidadMovVertical</field>
+                                                        <field name="VAR" id="dRjXmTsN}O[h8uII~2;V" variableType="">Vertical</field>
                                                     </block>
                                                 </value>
                                                 <next>
