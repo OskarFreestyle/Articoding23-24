@@ -596,7 +596,13 @@ public class BoardManager : Listener
         cell.SetState(BoardCell.BoardCellState.FREE);
         if (boardObject != null) cell.PlaceObject(boardObject);
 
-        if (cells[id].Contains(currentCell)) cells[id].Remove(currentCell);
+        --id;
+        if (id == -1) id = 4;
+
+        if (cells[id].Contains(currentCell))
+        {
+            cells[id].Remove(currentCell);
+        }
         Destroy(currentCell.gameObject);
     }
 
