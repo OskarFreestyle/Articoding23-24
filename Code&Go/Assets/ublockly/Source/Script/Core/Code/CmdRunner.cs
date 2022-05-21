@@ -36,7 +36,6 @@ namespace UBlockly
             callstack.Push(call);
             if (call is CmdEnumerator)
             {
-                Debug.Log(">>>>>enter + " + ((CmdEnumerator) call).Block.Type);
                 CSharp.Runner.FireUpdate(new RunnerUpdateState(RunnerUpdateState.RunBlock, ((CmdEnumerator) call).Block));
             }
         }
@@ -46,7 +45,6 @@ namespace UBlockly
             var call = callstack.Pop();
             if (call is CmdEnumerator)
             {
-                Debug.Log(">>>>>exit + " + ((CmdEnumerator) call).Block.Type);
                 CSharp.Runner.FireUpdate(new RunnerUpdateState(RunnerUpdateState.FinishBlock, ((CmdEnumerator) call).Block));
             }
         }
@@ -68,7 +66,6 @@ namespace UBlockly
             callstack.Clear();
             PushCall(entryCall);
 
-            Debug.LogFormat("<color=green>[CodeRunner - {0}]: begin - time: {1}.</color>", gameObject.name, Time.time);
 
             //step mode: wait until Step() calls
             if (RunMode != Runner.Mode.Step)
@@ -183,7 +180,6 @@ namespace UBlockly
 
             if (callstack.Count == 0)
             {
-                Debug.LogFormat("<color=green>[CodeRunner - {0}]: end - time: {1}.</color>", gameObject.name, Time.time);
                 if (curStatus != Runner.Status.Stop)
                 {
                     finishCb?.Invoke();

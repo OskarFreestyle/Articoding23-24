@@ -427,7 +427,6 @@ namespace UBlockly.UGUI
                 TrackerAsset.Instance.setVar("coords", childBlock.XY.ToString());
                 TrackerAsset.Instance.setVar("action", "move");
                 TrackerAsset.Instance.GameObject.Interacted(GameManager.Instance.GetBlockId(childBlock));
-                Debug.Log("Moving block " + childBlock.ToDevString() + " to " + childBlock.XY.ToString());
             }
             else if (mClosestConnection != null && mClosestConnection.Type == Define.EConnection.PrevStatement)
             {

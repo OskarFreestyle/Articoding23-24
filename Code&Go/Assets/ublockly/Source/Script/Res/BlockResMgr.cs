@@ -165,7 +165,7 @@ namespace UBlockly
                     mABUnload(m_I18nFileLocalized.ResName);
             }
 
-            Debug.Log("Select I18n: " + m_I18nFileLocalized.IndexName);
+            //Debug.Log("Select I18n: " + m_I18nFileLocalized.IndexName);
         }
 
         public void LoadI18n(bool localized = true) //articoding
@@ -213,7 +213,7 @@ namespace UBlockly
                         mABUnload(resParam.ResName);
                 }
 
-                Debug.Log("Select I18n: " + resParam.IndexName);
+                //Debug.Log("Select I18n: " + resParam.IndexName);
             }
         }
 

@@ -22,7 +22,6 @@ namespace UBlockly
     {
         protected override DataStruct Execute(Block block)
         {
-            UnityEngine.Debug.Log("START");
             return DataStruct.Undefined;
         }
     }
