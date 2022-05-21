@@ -115,29 +115,28 @@ MonoBehaviour:
   - m_Id: 71751106096148480
     m_Localized: Use this card to check the state of all the tiles of the same color
       in the board. If they are occupied, the card will return a true value; if some
-      are free, it will return a false value.
+      are free, it will return a false value
     m_Metadata:
       m_Items: []
   - m_Id: 71759735952125952
-    m_Localized: Oops! How are we going to open that door? We can only check things
-      that happen... I've got it! Use this "not" card. Now we can check things that
-      DON'T happen!
+    m_Localized: Oops! How are we going to open that door?... Use this "not" card.
+      Now we can check things that DON'T happen!
     m_Metadata:
       m_Items: []
   - m_Id: 71759791178526720
     m_Localized: Use the "NOT" operator to negate a boolean. If the boolean was true,
-      the "NOT" card will return a false, and vice versa.
+      the "NOT" card will return a "false", and vice versa
     m_Metadata:
       m_Items: []
   - m_Id: 74301654821384192
     m_Localized: The last level was a bit repetitive, right? Well, I've designed
-      this card specially for you! It will help to avoid repeating so much code.
+      this card specially for you! It will help to avoid repeating so much code
     m_Metadata:
       m_Items: []
   - m_Id: 74303504769495040
     m_Localized: Use the "for" card when you have to repeat the same code several
       times. Specify the code you want to repeat, and the number of times it has
-      to be repeated.
+      to be repeated
     m_Metadata:
       m_Items: []
   - m_Id: 78779026041610240
@@ -157,8 +156,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 80101943394578432
-    m_Localized: 'Use the "while" block when you want to repeat some code until a
-      condition is met. '
+    m_Localized: Use the "while" block when you want to repeat some code until a
+      condition is met
     m_Metadata:
       m_Items: []
   - m_Id: 80965310904676352
@@ -171,8 +170,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 80967373780824064
-    m_Localized: 'Use the "if" block when you want to execute some code only if a
-      condition is met. '
+    m_Localized: Use the "if" block when you want to execute some code only if a
+      condition is met
     m_Metadata:
       m_Items: []
   references:

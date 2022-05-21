@@ -117,30 +117,29 @@ MonoBehaviour:
   - m_Id: 71751106096148480
     m_Localized: "Usa la tarjeta para comprobar el estado de las baldosas de un color
       en el tablero. Si todas est\xE1n ocupadas, devolver\xE1 un valor \"true\";
-      si hay alguna libre, devolver\xE1 un valor \"false\"."
+      si hay alguna libre, devolver\xE1 un valor \"false\""
     m_Metadata:
       m_Items: []
   - m_Id: 71759735952125952
-    m_Localized: "\xA1Vaya! \xBFC\xF3mo vamos a abrir esa puerta? Solo podemos comprobar
-      cosas que pasan... \xA1Ya lo tengo! Usa este operador \"no\". \xA1Ahora podemos
-      comprobar cosas que NO pasan!"
+    m_Localized: "\xA1Vaya! \xBFC\xF3mo vamos a abrir esa puerta?... Usa este operador
+      \"no\". \xA1Ahora podemos comprobar cosas que NO pasan!"
     m_Metadata:
       m_Items: []
   - m_Id: 71759791178526720
     m_Localized: "Usa el operador \"NO\" para negar un booleano. Si el booleano era
-      true, la tarjeta \"NO\" devolver\xE1 false, y al rev\xE9s."
+      true, la tarjeta \"NO\" devolver\xE1 \"false\", y al rev\xE9s"
     m_Metadata:
       m_Items: []
   - m_Id: 74301654821384192
     m_Localized: "El \xFAltimo nivel ha sido un poco repetitivo, \xBFverdad? Bueno,
       \xA1he dise\xF1ado esta carta especialmente para ti! Te ayudar\xE1 a evitar
-      repetir tanto c\xF3digo."
+      repetir tanto c\xF3digo"
     m_Metadata:
       m_Items: []
   - m_Id: 74303504769495040
     m_Localized: "Usa la tarjeta \"repetir\" cuando tengas que repetir el mismo c\xF3digo
       varias veces. Especifica el c\xF3digo que quieres repetir, y cu\xE1ntas veces
-      quieres que se repita."
+      quieres que se repita"
     m_Metadata:
       m_Items: []
   - m_Id: 78779026041610240
@@ -175,7 +174,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 80967373780824064
     m_Localized: "Usa el bolque \"si\" cuando quieras ejecutar alg\xFAn c\xF3digo
-      solo si se cumple una condici\xF3n."
+      solo si se cumple una condici\xF3n"
     m_Metadata:
       m_Items: []
   references:
