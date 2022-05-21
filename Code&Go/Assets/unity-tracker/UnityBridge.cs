@@ -139,6 +139,7 @@ namespace AssetPackage
 		/// <param name="msg">      The message. </param>
 		public void Log(Severity severity, string msg)
 		{
+			/*
 			// if (((int)LogLevel.Info & (int)severity) == (int)severity)
 			{
 				if (String.IsNullOrEmpty(msg))
@@ -150,6 +151,7 @@ namespace AssetPackage
 					UnityEngine.Debug.Log(String.Format("{0}: {1}", severity, msg));
 				}
 			}
+			*/
 		}
 
 		#endregion ILog Members

@@ -124,29 +124,24 @@ namespace uAdventure.Simva
             defaultTrackerConfig.setRawCopy(true);
             defaultTrackerConfig.setDebug(true);
 
-            Debug.Log("[SIMVA] Starting...");
             if(SimvaConf.Local == null)
             {
                 SimvaConf.Local = new SimvaConf();
                 yield return StartCoroutine(SimvaConf.Local.LoadAsync());
-                Debug.Log("[SIMVA] Conf Loaded...");
             }
 
             if (!IsEnabled)
             {
-                Debug.Log("[SIMVA] Study is not set! Stopping...");
                 yield return StartTracker(defaultTrackerConfig, null);
                 yield break;
             }
             else if (IsActive)
             {
-                Debug.Log("[SIMVA] Simva is already started...");
                 // No need to restart
                 yield break;
             }
             else
             {
-                Debug.Log("[SIMVA] Setting current target to Simva.Login...");
                 savedGameTarget = SceneManager.GetActiveScene().name;
                 LoadManager.Instance.AutoStart = false;
                 yield return RunTarget("Simva.Login");
@@ -367,7 +362,6 @@ namespace uAdventure.Simva
                     {
                         schedule.Activities[a.Key].Id = a.Key;
                     }
-                    Debug.Log("[SIMVA] Schedule: " + JsonConvert.SerializeObject(schedule));
                     result.SetResult(schedule);
                 })
                 .Catch(result.SetException);
@@ -391,7 +385,6 @@ namespace uAdventure.Simva
             var response = (AsyncCompletionSource) API.Api.SetResult(activityId, API.AuthorizationInfo.Username, body);
             response.AddProgressCallback((p) =>
              {
-                 UnityEngine.Debug.Log("SaveActivityAndContinue progress: " + p);
                  if (!result.IsCompleted && !result.IsCanceled)
                  {
                      result.SetProgress(p);
@@ -483,11 +476,9 @@ namespace uAdventure.Simva
                 if (activity != null)
                 {
                     AbortQuit();
-                    Debug.Log("[SIMVA] Schedule: " + activity.Type + ". Name: " + activity.Name + " activityId " + activityId);
                     switch (activity.Type)
                     {
                         case "limesurvey":
-                            Debug.Log("[SIMVA] Starting Survey...");
                             yield return RunTarget("Simva.Survey");
                             break;
                         case "gameplay":
@@ -512,7 +503,6 @@ namespace uAdventure.Simva
                                 trackerConfig.setTrackEndpoint("/activities/{0}/result");
                                 trackerConfig.setTrackingCode(activityId);
                                 trackerConfig.setUseBearerOnTrackEndpoint(true);
-                                Debug.Log("TrackingCode: " + activity.Id + " settings " + trackerConfig.getTrackingCode());
                             }
 
                             if (ActivityHasDetails(activity, "backup"))
@@ -524,14 +514,12 @@ namespace uAdventure.Simva
                             if (ActivityHasDetails(activity, "realtime", "trace_storage", "backup"))
                             {
                                 SimvaBridge = new SimvaBridge(API.ApiClient);
-                                Debug.Log("[SIMVA] Starting tracker...");
                                 yield return StartTracker(trackerConfig, auth.Username + "_" + activityId + "_backup.log", SimvaBridge);
                             }
 
                             DestroyImmediate(runner.gameObject);
                             SceneManager.UnloadSceneAsync("Simva");
 
-                            Debug.Log("[SIMVA] Starting Gameplay...");
                             LoadManager.Instance.LoadScene("MenuScene");
                             break;
                     }
@@ -664,7 +652,6 @@ namespace uAdventure.Simva
             int port = 80;
             bool secure = false;
 
-            Debug.Log("[ANALYTICS] Setting up tracker...");
             try
             {
                 if (config.getHost() != "")
@@ -686,11 +673,10 @@ namespace uAdventure.Simva
                 {
                     config.setHost("localhost");
                 }
-                Debug.Log("[ANALYTICS] Config: " + JsonConvert.SerializeObject(config));
             }
             catch (System.Exception e)
             {
-                Debug.Log("Tracker error: Host bad format");
+                Debug.LogError("Tracker error: Host bad format");
             }
 
             TrackerAsset.TraceFormats format;
@@ -703,7 +689,6 @@ namespace uAdventure.Simva
                     format = TrackerAsset.TraceFormats.csv;
                     break;
             }
-            Debug.Log("[ANALYTICS] Format: " + format);
 
             TrackerAsset.StorageTypes storage;
             switch (config.getStorageType())
@@ -715,7 +700,6 @@ namespace uAdventure.Simva
                     storage = TrackerAsset.StorageTypes.local;
                     break;
             }
-            Debug.Log("[ANALYTICS] Storage: " + storage);
 
             TrackerAssetSettings tracker_settings = new TrackerAssetSettings()
             {
@@ -738,7 +722,6 @@ namespace uAdventure.Simva
                 tracker_settings.BackupFile = backupFilename;
             }
 
-            Debug.Log("[ANALYTICS] Settings: " + JsonConvert.SerializeObject(tracker_settings));
             TrackerAsset.Instance.StrictMode = false;
             TrackerAsset.Instance.Bridge = bridge ?? new UnityBridge();
             TrackerAsset.Instance.Settings = tracker_settings;
@@ -746,14 +729,11 @@ namespace uAdventure.Simva
 
             var done = false;
 
-            Debug.Log("[ANALYTICS] Starting tracker without login...");
             TrackerAsset.Instance.StartAsync(() => done = true);
             
             this.nextFlush = config.getFlushInterval();
 
-            Debug.Log("[ANALYTICS] Waiting until start");
             yield return new WaitUntil(() => done);
-            Debug.Log("[ANALYTICS] Start done, result: " + TrackerAsset.Instance.Started);
         }
 
         private void CheckTrackerFlush()

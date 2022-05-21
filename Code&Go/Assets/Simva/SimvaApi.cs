@@ -104,8 +104,6 @@ namespace SimvaPlugin
                 TokenPath = SimvaConf.Local.SSO + "/token"
             };
 
-            Debug.Log("Platform: " + Application.platform.ToString());
-            Debug.Log("Use PKCE: " + (Application.platform != RuntimePlatform.WebGLPlayer));
 
             var result = new AsyncCompletionSource<SimvaApi<T>>();
             apiClient.InitOAuth(SimvaConf.Local.ClientId, null, "simva", null, ":", Application.platform != RuntimePlatform.WebGLPlayer, null, offline_access)
@@ -356,11 +354,11 @@ namespace SimvaPlugin
                     var apiException = error as ApiException;
                     if(apiException != null)
                     {
-                        Debug.Log(error.Message + " " + apiException.ErrorContent);
+                        Debug.LogError(error.Message + " " + apiException.ErrorContent);
                     }
                     else
                     {
-                        Debug.Log(error.Message);
+                        Debug.LogError(error.Message);
                     }
                     result.SetException(error);
                 });

@@ -47,7 +47,6 @@ namespace Simva
 
         public SimvaConf()
         {
-            Debug.Log("[SIMVA CONF] Loading...");
             Host = "localhost";
             Port = "443";
             Protocol = "https";
@@ -59,12 +58,10 @@ namespace Simva
 
             // WebGL and Android have to use WWW to load from streaming assets
 #if UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_ANDROID 
-            Debug.Log("[SIMVA CONF] Doing WebGL / Android read...");
             UnityWebRequest reader = GetReader();
             yield return reader.SendWebRequest();
             if (string.IsNullOrEmpty(reader.error))
             {
-                Debug.Log("[SIMVA CONF] Request failed: (" + reader.responseCode + " ) " + reader.error + " - " + reader.downloadHandler.data);
                 contents = System.Text.Encoding.UTF8.GetString(reader.downloadHandler.data);
             }
 #else       // The others can read from System.IO       
@@ -82,7 +79,6 @@ namespace Simva
         {
             if (!string.IsNullOrEmpty(contents))
             {
-                Debug.Log("[SIMVA CONF] Simva.conf content: " + contents);
                 var simvaconf = SimpleJSON.JSON.Parse(contents);
                 Study = simvaconf["study"];
                 Host = simvaconf["host"];
@@ -106,7 +102,6 @@ namespace Simva
 #elif UNITY_ANDROID
             reader = UnityWebRequest.Get("jar:file://" + Application.dataPath + "!/assets/" + FileName);
 #endif
-            Debug.Log("[SIMVA CONF] Requesting simva.conf from: " + reader.uri);
             return reader;
         }
 
