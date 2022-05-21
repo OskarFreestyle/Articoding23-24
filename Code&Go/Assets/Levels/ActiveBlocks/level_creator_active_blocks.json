@@ -78,6 +78,10 @@
                         "maxUses": 100
                     },
                     {
+                        "blockName": "logic_if",
+                        "maxUses": 100
+                    },
+                    {
                         "blockName": "logic_ifelse",
                         "maxUses": 100
                     }                     
