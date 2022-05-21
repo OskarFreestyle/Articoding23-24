@@ -23,9 +23,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4046242631680
-    m_Localized: "Aqu\xED ver\xE1s tu c\xF3digo. Este es c\xF3digo de ejemplo que
-      funciona correctamente. Cuando sepas qu\xE9 va a hacer, pulsa el bot\xF3n de
-      Ejecutar arriba en el centro, \xA1y comprueba si has acertado!"
+    m_Localized: "Aqu\xED ver\xE1s tu c\xF3digo, este ya funciona correctamente.
+      Cuando sepas qu\xE9 va a hacer, pulsa el bot\xF3n de Ejecutar \xA1y comprueba
+      si has acertado!"
     m_Metadata:
       m_Items: []
   - m_Id: 6162973642752
@@ -42,9 +42,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9158549753856
-    m_Localized: "Esta categor\xEDa contiene todas las tarjetas que te permiten interactuar
-      con los elementos del tablero. A medida que avances en el juego ir\xE1s desbloqueando
-      nuevas tarjetas de esta categor\xEDa."
+    m_Localized: "Esta categor\xEDa contiene las tarjetas que te permiten interactuar
+      con los elementos del tablero. A medida que avances aparecer\xE1n algunas nuevas"
     m_Metadata:
       m_Items: []
   - m_Id: 21107291377664
@@ -53,7 +52,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21217643515904
     m_Localized: "\xBFEst\xE1s listo para aprender a programar? Voy a ense\xF1arte
-      c\xF3mo funcionan las cosas."
+      c\xF3mo funcionan las cosas"
     m_Metadata:
       m_Items: []
   - m_Id: 22053882875904
@@ -61,8 +60,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22131901124608
-    m_Localized: Puedes elegir entre jugar los niveles que hay, recordar las cosas
-      que vayas aprendiendo por el camino o crear tus propios niveles
+    m_Localized: Puedes elegir entre jugar los niveles que hay, repasar las cosas
+      que vayas aprendiendo, crear tus propios niveles o ver tu perfil
     m_Metadata:
       m_Items: []
   - m_Id: 24403393564672
@@ -70,8 +69,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24492170203136
-    m_Localized: "Esto de aqu\xED es tu perfil. Aqu\xED puedes configurar tu apariencia
-      y mirar las estad\xEDsticas de tu progreso."
+    m_Localized: "Este es tu perfil, aqu\xED puedes configurar tu nombre y mirar
+      las estad\xEDsticas de tu progreso"
     m_Metadata:
       m_Items: []
   - m_Id: 115073336659968
@@ -79,8 +78,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115190152220672
-    m_Localized: "Esto es un espejo. Cuando un l\xE1ser choca, hace que rebote cambiando
-      la direcci\xF3n del laser 90\xBA. \xA1Es muy \xFAtil! "
+    m_Localized: "Esto es un espejo, cuando un l\xE1ser choca, cambia la direcci\xF3n
+      del l\xE1ser 90\xBA. \xA1Es muy \xFAtil! "
     m_Metadata:
       m_Items: []
   - m_Id: 115480574218240
@@ -102,7 +101,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 139446865022976
     m_Localized: "Con esta tarjeta podr\xE1s girar el l\xE1ser un m\xFAltiplo de
-      90 grados, en el sentido que elijas."
+      90\xBA, en el sentido que elijas"
     m_Metadata:
       m_Items: []
   - m_Id: 140658565894144
@@ -111,11 +110,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 140721623060480
     m_Localized: Esto es una variable, puedes utilizarla para almacenar un valor.
-      Con esta tarjeta puedes acceder al valor que le has dado a la variable.
+      Con esta tarjeta puedes acceder al valor que le has dado a la variable
     m_Metadata:
       m_Items: []
   - m_Id: 141069112758272
-    m_Localized: Usando esta tarjeta puedes cambiar el valor de una variable.
+    m_Localized: Usando esta tarjeta puedes cambiar el valor de una variable
     m_Metadata:
       m_Items: []
   - m_Id: 141139207966720
@@ -128,8 +127,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 209759204200448
     m_Localized: "Con esta tarjeta puedes cambiar el estado de una puerta, si utilizas
-      verdadero la puerta se activar\xE1 y abrir\xE1, si usas falso se apagar\xE1
-      y se cerrar\xE1."
+      \"verdadero\" la puerta se abrir\xE1, si usas \"falso\" se cerrar\xE1"
     m_Metadata:
       m_Items: []
   - m_Id: 211383465201664
@@ -137,9 +135,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 211441606643712
-    m_Localized: Esta tarjeta muestra un valor booleano, este valor puede ser verdadero
-      o falso. Con este valor puedes indicar el estado de objetos (verdadero = activo
-      y falso = apagado)
+    m_Localized: Esta tarjeta muestra un valor booleano, este valor puede ser "verdadero"
+      (true) o "falso" (false)
     m_Metadata:
       m_Items: []
   - m_Id: 213496203235328
@@ -147,9 +144,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 213547373744128
-    m_Localized: "Con esta tarjeta puedes escribir textos. Puedes usar este texto
-      para referirte a objetos espec\xEDficos. Para referirte a un objeto introduce
-      su nombre del tablero. Por ejemplo \"Laser_1\"."
+    m_Localized: "Con esta tarjeta puedes escribir textos para referirte a objetos
+      espec\xEDficos, introduciendo su nombre. Por ejemplo \"Laser_1\""
     m_Metadata:
       m_Items: []
   - m_Id: 213877238976512
@@ -157,9 +153,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 213951402659840
-    m_Localized: "Esto es una celda especial, como ves tiene un color diferente a
-      las dem\xE1s, eso significa que puedes saber si esta ocupada o no. Puede que
-      te sean \xFAtiles para resolver los puzzles."
+    m_Localized: Esto es una celda especial, como ves tiene un color diferente, eso
+      significa que puedes saber si esta ocupada o no
     m_Metadata:
       m_Items: []
   - m_Id: 214436532637696
@@ -171,9 +166,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 215176227508224
-    m_Localized: Con esta tarjeta puedes hacer operaciones con booleanos. El operador
-      "Y" devuelve verdadero si ambos campos son verdaderos. El operador "O" devuelve
-      verdadero si al menos uno de los campos es verdadero.
+    m_Localized: En las operaciones con booleanos, el operador "Y" devuelve "verdadero"
+      si ambos campos son verdaderos. El operador "O" devuelve "verdadero" si al
+      menos uno de los campos es verdadero
     m_Metadata:
       m_Items: []
   - m_Id: 215650099974144
@@ -182,7 +177,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 215946574352384
     m_Localized: "Esta tarjeta niega el valor de un booleano, es decir, devuelve
-      el valor contrario. Si el booleano es verdadero devolver\xE1 falso y viceversa."
+      el valor contrario. Si el booleano es \"verdadero\" devolver\xE1 \"falso\"
+      y viceversa."
     m_Metadata:
       m_Items: []
   - m_Id: 218068925730816
@@ -229,7 +225,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4010029192708096
     m_Localized: "Puedes duplicar una tarjeta pulsando click derecho sobre ella.
-      Pero cuidado! Si no tienes tarjetas suficientes la tarjeta no se duplicar\xE1."
+      \xA1Pero cuidado! Si no tienes tarjetas suficientes la tarjeta no se duplicar\xE1"
     m_Metadata:
       m_Items: []
   - m_Id: 4011286208839680
@@ -254,7 +250,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 57791802787901440
-    m_Localized: Puedes bajar para ver todos los niveles que te esperan.
+    m_Localized: Puedes bajar para ver todos los niveles que te esperan
     m_Metadata:
       m_Items: []
   - m_Id: 57791728913625088

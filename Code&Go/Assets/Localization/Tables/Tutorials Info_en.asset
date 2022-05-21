@@ -23,9 +23,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4046242631680
-    m_Localized: You will see your code here. This piece of code works correctly
-      as an example. Once you know what it's going to do, hit the Play button and
-      check if you were right!
+    m_Localized: You will see your code here, this one works correctly as an example.
+      Once you know what it's going to do, hit the Play button and check if you were
+      right!
     m_Metadata:
       m_Items: []
   - m_Id: 6162973642752
@@ -42,9 +42,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9158549753856
-    m_Localized: This code card type contains all the code cards that allow you to
-      interact with the elements on the board. As you progress through the game you
-      will unlock new code cards of this type.
+    m_Localized: This code card type contains the code cards that allow you to interact
+      with the elements on the board. As you progress through the game you will unlock
+      new code cards of this type
     m_Metadata:
       m_Items: []
   - m_Id: 21107291377664
@@ -53,7 +53,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21217643515904
     m_Localized: Are you ready to learn how to code? I'm going to show you how things
-      work.
+      work
     m_Metadata:
       m_Items: []
   - m_Id: 22053882875904
@@ -62,7 +62,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22131901124608
     m_Localized: You can play the levels you've unlocked, remember the concepts you've
-      learned along the way or create your own levels
+      learned along the way, create your own levels or see your profile
     m_Metadata:
       m_Items: []
   - m_Id: 24403393564672
@@ -70,8 +70,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24492170203136
-    m_Localized: This is your profile. Here you can customize your appereance and
-      look at your progress stats.
+    m_Localized: This is your profile, here you can customize your name and look
+      at your progress stats
     m_Metadata:
       m_Items: []
   - m_Id: 115073336659968
@@ -79,8 +79,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115190152220672
-    m_Localized: "This is a mirror. When a laser collides with it, it will reflect,
-      this will change the laser direction by 90\xBA. It can be very useful!"
+    m_Localized: "This is a mirror, when a laser collides with it, it will change
+      the laser direction by 90\xBA. It can be very useful!"
     m_Metadata:
       m_Items: []
   - m_Id: 115480574218240
@@ -101,8 +101,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139446865022976
-    m_Localized: With this code card you can rotate the laser a multiple of 90 degrees,
-      in the direction you choose.
+    m_Localized: "With this code card you can rotate the laser a multiple of 90\xBA,
+      in the direction you choose"
     m_Metadata:
       m_Items: []
   - m_Id: 140658565894144
@@ -111,11 +111,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 140721623060480
     m_Localized: This is a variable. You can use it to store a value. With this code
-      card you can access the value you stored by the variable.
+      card you can access the value you stored by the variable
     m_Metadata:
       m_Items: []
   - m_Id: 141069112758272
-    m_Localized: With this code card you can change the value stored in a variable.
+    m_Localized: With this code card you can change the value stored in a variable
     m_Metadata:
       m_Items: []
   - m_Id: 141139207966720
@@ -127,9 +127,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 209759204200448
-    m_Localized: With this code card you can change the door state. If you use True,
-      the door activates and it opens. If you use False, the door deactivates and 
-      closes.
+    m_Localized: With this code card you can change the door state. If you use "true",
+      the door opens, if you use "false", the door closes
     m_Metadata:
       m_Items: []
   - m_Id: 211383465201664
@@ -137,9 +136,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 211441606643712
-    m_Localized: This code card shows a boolean value. This value can be True or
-      False. With this value you can indicate an object state (True = activated and
-      False = deactivated).
+    m_Localized: This code card shows a boolean value. This value can be "true" or
+      "false"
     m_Metadata:
       m_Items: []
   - m_Id: 213496203235328
@@ -147,9 +145,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 213547373744128
-    m_Localized: With this code card you can write texts. You can use that text to
-      reference specific objects. To reference an object use its name from the board.
-      For example "Laser_1".
+    m_Localized: With this code card you can write texts to reference specific objects,
+      using its name. For example "Laser_1"
     m_Metadata:
       m_Items: []
   - m_Id: 213877238976512
@@ -157,8 +154,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 213951402659840
-    m_Localized: This is a special cell. As you see, it has a different color. That
-      means you can know if its occupied or not. It can be useful to solve the levels.
+    m_Localized: This is a special cell, as you see, it has a different color. That
+      means you can know if its occupied or not
     m_Metadata:
       m_Items: []
   - m_Id: 214436532637696
@@ -171,8 +168,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 215176227508224
     m_Localized: With this code card you can operate with booleans. The "AND" operator
-      returns True if both fields are True. The "OR" operator returns True if at
-      least one of the fields is True.
+      returns "true" if both fields are true. The "OR" operator returns "true" if
+      at least one of the fields is true.
     m_Metadata:
       m_Items: []
   - m_Id: 215650099974144
@@ -181,7 +178,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 215946574352384
     m_Localized: This code card negates a boolean value, that is, it returns the
-      opposite value. If the boolean is True, it will return False, and viceversa.
+      opposite value. If the boolean is "true", it will return "false", and viceversa.
     m_Metadata:
       m_Items: []
   - m_Id: 218068925730816
@@ -227,7 +224,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4010029192708096
     m_Localized: You can duplicate a card by right clicking on it. But be careful!
-      if you don't have enough cards the card will not be duplicated.
+      if you don't have enough cards the card will not be duplicated
     m_Metadata:
       m_Items: []
   - m_Id: 4011286208839680
@@ -255,7 +252,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 57791802787901440
-    m_Localized: You can scroll all the way down to see the levels that await you.
+    m_Localized: You can scroll all the way down to see the levels that await you
     m_Metadata:
       m_Items: []
   - m_Id: 130271607107493888
