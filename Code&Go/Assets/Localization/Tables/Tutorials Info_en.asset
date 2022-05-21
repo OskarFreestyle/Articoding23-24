@@ -122,15 +122,6 @@ MonoBehaviour:
     m_Localized: Modify variable
     m_Metadata:
       m_Items: []
-  - m_Id: 141412252962816
-    m_Localized: Integer number
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141494159331328
-    m_Localized: This code card allows you to use a number. You can store the value
-      in a variable.
-    m_Metadata:
-      m_Items: []
   - m_Id: 209625145856000
     m_Localized: Activate door
     m_Metadata:
@@ -149,26 +140,6 @@ MonoBehaviour:
     m_Localized: This code card shows a boolean value. This value can be True or
       False. With this value you can indicate an object state (True = activated and
       False = deactivated).
-    m_Metadata:
-      m_Items: []
-  - m_Id: 212346884247552
-    m_Localized: Move Object
-    m_Metadata:
-      m_Items: []
-  - m_Id: 212626795319296
-    m_Localized: With this code card you can move both MIRRORS and LASERS. To indicate
-      which object you want to move enter a text card with its name in the first
-      field.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 213120515231744
-    m_Localized: Rotate Object
-    m_Metadata:
-      m_Items: []
-  - m_Id: 213169416622080
-    m_Localized: With this code card you can rotate both MIRRORS and LASERS. To indicate
-      which object you want to rotate enter a text card with its name in the first
-      field.
     m_Metadata:
       m_Items: []
   - m_Id: 213496203235328

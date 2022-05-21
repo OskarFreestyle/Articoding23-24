@@ -122,15 +122,6 @@ MonoBehaviour:
     m_Localized: Modificar variable
     m_Metadata:
       m_Items: []
-  - m_Id: 141412252962816
-    m_Localized: Numero entero
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141494159331328
-    m_Localized: "Esta tarjeta te permite usar un n\xFAmero, puedes almacenar el
-      valor en una variable"
-    m_Metadata:
-      m_Items: []
   - m_Id: 209625145856000
     m_Localized: Activar Puerta
     m_Metadata:
@@ -149,26 +140,6 @@ MonoBehaviour:
     m_Localized: Esta tarjeta muestra un valor booleano, este valor puede ser verdadero
       o falso. Con este valor puedes indicar el estado de objetos (verdadero = activo
       y falso = apagado)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 212346884247552
-    m_Localized: Mover Objeto
-    m_Metadata:
-      m_Items: []
-  - m_Id: 212626795319296
-    m_Localized: "Con esta tarjeta puedes mover tanto ESPEJOS como L\xC1SERES. Para
-      indicar qu\xE9 objeto quieres mover introduce un texto con su nombre en el
-      primer campo."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 213120515231744
-    m_Localized: Girar Objeto
-    m_Metadata:
-      m_Items: []
-  - m_Id: 213169416622080
-    m_Localized: "Con esta tarjeta puedes girar tanto ESPEJOS como LASERES. Para
-      indicar qu\xE9 objeto quieres girar introduce un texto con su nombre en el
-      primer campo."
     m_Metadata:
       m_Items: []
   - m_Id: 213496203235328
