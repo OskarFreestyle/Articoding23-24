@@ -32,4 +32,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c106b364ddab76544be2020d741bcd72, type: 2}
   - {fileID: 11400000, guid: dbd4931fc1b628a4089ddcaa9f163033, type: 2}
   - {fileID: 11400000, guid: 67ca11dbfd03950439df4cda822f8674, type: 2}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: df9b9f8d98c2d4c4d906f7b59043e81a, type: 3}
