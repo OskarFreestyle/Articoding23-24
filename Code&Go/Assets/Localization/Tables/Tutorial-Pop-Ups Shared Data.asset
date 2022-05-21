@@ -135,6 +135,18 @@ MonoBehaviour:
     m_Key: popup_loops_7_while2
     m_Metadata:
       m_Items: []
+  - m_Id: 80965310904676352
+    m_Key: popup_conditions_1_if_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80966186465636352
+    m_Key: popup_conditions_1_if_content1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80967373780824064
+    m_Key: popup_conditions_1_if_content2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

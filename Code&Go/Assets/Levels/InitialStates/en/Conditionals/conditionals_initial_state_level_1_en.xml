@@ -17,7 +17,7 @@
                         <field name="VAR" id="Tz@@pswS,d6/W%fW{7H3" variableType="">Movement</field>
                         <value name="VALUE">
                             <block type="math_number" id="(,|/KPVfG@Sc33NWJL,W">
-                                <field name="NUM">1</field>
+                                <field name="NUM">2</field>
                             </block>
                         </value>
                         <next>
@@ -25,7 +25,7 @@
                                 <field name="TIMES">2</field>
                                 <statement name="DO">
                                     <block type="movement_move" id="f|bL[$55XfX[;E?W|k|}">
-                                        <field name="DIRECTION">RIGHT</field>
+                                        <field name="DIRECTION">UP</field>
                                         <value name="NAME">
                                             <block type="variables_get" id="ETsC!WD;TYc0||ozG;p`">
                                                 <field name="VAR" id="RpIbn}p]Rtf-_1(qs5p/" variableType="">Object</field>
@@ -37,15 +37,15 @@
                                             </block>
                                         </value>
                                         <next>
-                                            <block type="logic_ifelse" id=")sD[P/3/ibhXE2;@#YN0">
+                                            <block type="logic_if" id=")sD[P/3/ibhXE2;@#YN0">
                                                 <value name="IF0">
                                                     <block type="logic_cells_occupied" id="HDw!G?#CTXp35E3P[,/U">
-                                                        <field name="TYPE">GREEN</field>
+                                                        <field name="TYPE">RED</field>
                                                     </block>
                                                 </value>
                                                 <statement name="DO0">
                                                     <block type="movement_move" id="Gp}u7lcP~rBnZQn.,k]T">
-                                                        <field name="DIRECTION">UP</field>
+                                                        <field name="DIRECTION">RIGHT</field>
                                                         <value name="NAME">
                                                             <block type="variables_get" id="oqkK_BxQ/X{$oMr]%AzU">
                                                                 <field name="VAR" id="RpIbn}p]Rtf-_1(qs5p/" variableType="">Object</field>
@@ -53,22 +53,7 @@
                                                         </value>
                                                         <value name="AMOUNT">
                                                             <block type="math_number" id="h)9H3k!~}r0D/|1EsyzP">
-                                                                <field name="NUM">2</field>
-                                                            </block>
-                                                        </value>
-                                                    </block>
-                                                </statement>
-                                                <statement name="ELSE">
-                                                    <block type="movement_move" id="`,A9wO4P}2d3BWm_9rOZ">
-                                                        <field name="DIRECTION">UP</field>
-                                                        <value name="NAME">
-                                                            <block type="variables_get" id="[C,~J*|L*L1f{)H_w,:X">
-                                                                <field name="VAR" id="RpIbn}p]Rtf-_1(qs5p/" variableType="">Object</field>
-                                                            </block>
-                                                        </value>
-                                                        <value name="AMOUNT">
-                                                            <block type="variables_get" id="j~efUYT*;|vJ={[:X7H7">
-                                                                <field name="VAR" id="Tz@@pswS,d6/W%fW{7H3" variableType="">Movement</field>
+                                                                <field name="NUM">1</field>
                                                             </block>
                                                         </value>
                                                     </block>

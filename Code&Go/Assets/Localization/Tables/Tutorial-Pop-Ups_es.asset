@@ -164,5 +164,19 @@ MonoBehaviour:
       hasta que se cumpla una condici\xF3n."
     m_Metadata:
       m_Items: []
+  - m_Id: 80965310904676352
+    m_Localized: Bloque "si"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80966186465636352
+    m_Localized: "\xA1Mira esta carta! Nos permite hacer algunas cosas, solo bajo
+      las circunstancias que queramos. \xA1Este ejemplo es correcto!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80967373780824064
+    m_Localized: "Usa el bolque \"si\" cuando quieras ejecutar alg\xFAn c\xF3digo
+      solo si se cumple una condici\xF3n."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

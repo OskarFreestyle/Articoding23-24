@@ -1015,7 +1015,6 @@ GameObject:
   - component: {fileID: 235292603679965504}
   - component: {fileID: 7589583347340071973}
   - component: {fileID: 5717332669485385327}
-  - component: {fileID: -5614846709791605737}
   m_Layer: 0
   m_Name: Block_controls_if
   m_TagString: Untagged
@@ -1116,26 +1115,6 @@ MonoBehaviour:
   - {fileID: 62370608819528327}
   - {fileID: 733922047860845395}
   - {fileID: 6877394059276341316}
---- !u!114 &-5614846709791605737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5023353830049994535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 210
-  info: {fileID: 11400000, guid: 0e2be3b523edebe4c8d5fa163bda7489, type: 2}
-  highlightObject: 1
-  destroyOnShowed: 1
-  isSaveCheckpoint: 0
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &5207670394192406495
 GameObject:
   m_ObjectHideFlags: 0

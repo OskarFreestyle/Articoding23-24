@@ -161,5 +161,19 @@ MonoBehaviour:
       condition is met. '
     m_Metadata:
       m_Items: []
+  - m_Id: 80965310904676352
+    m_Localized: '"If" block'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80966186465636352
+    m_Localized: Check this new card! It allows us to do some things, only under
+      certain circunstances. This example is correct!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80967373780824064
+    m_Localized: 'Use the "if" block when you want to execute some code only if a
+      condition is met. '
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
