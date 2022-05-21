@@ -42,7 +42,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8064940604272640
     m_Localized: Oops! There's a missing card! Hurry! Grab it from the left section
-      and put it in the correct place before anyone notices!
+      and put it in the correct place!
     m_Metadata:
       m_Items: []
   - m_Id: 13071693836533760
@@ -50,7 +50,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13071943355678720
-    m_Localized: This level is also correct as an example
+    m_Localized: This level is also correct as an example, watch and learn
     m_Metadata:
       m_Items: []
   - m_Id: 59090354492628992
@@ -87,8 +87,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 69572040324689920
-    m_Localized: 'Whoops! It seems like I forgot to give you a bool card, sorry!
-      Maybe we could use this comparison card... Yes! '
+    m_Localized: Whoops! It seems like I forgot to give you a bool card, maybe we
+      could use this comparison card...
     m_Metadata:
       m_Items: []
   - m_Id: 69573520041586688
@@ -97,8 +97,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 69613496653459456
-    m_Localized: It happened again! So sorry I forgot to give you the numbers card
-      this time. Totally my bad! Well... I have the operation card!
+    m_Localized: It happened again! I've not given you the number card. Totally my
+      bad! Well, I'm bringing you the operation card!
     m_Metadata:
       m_Items: []
   - m_Id: 69613592409419776
@@ -107,36 +107,34 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71751036743331840
-    m_Localized: "Look! I've found this code card. Let me see... Oh! It seems like
-      it checks whether some tiles are occupied or not. Hmmm... I wonder what we
-      could use it for?\r"
+    m_Localized: Look! I've found this code card, it seems like it checks whether
+      some tiles are occupied or not
     m_Metadata:
       m_Items: []
   - m_Id: 71751106096148480
-    m_Localized: Use this card to check the state of all the tiles of the same color
-      in the board. If they are occupied, the card will return a true value; if some
-      are free, it will return a false value
+    m_Localized: This card return a "true" value f all the tiles of the same color
+      are occupied, if some are free, it will return a "false" value
     m_Metadata:
       m_Items: []
   - m_Id: 71759735952125952
-    m_Localized: Oops! How are we going to open that door?... Use this "not" card.
+    m_Localized: Oops! How are we going to open that door?... Use this "NOT" card.
       Now we can check things that DON'T happen!
     m_Metadata:
       m_Items: []
   - m_Id: 71759791178526720
-    m_Localized: Use the "NOT" operator to negate a boolean. If the boolean was true,
+    m_Localized: Use the "NOT" operator to negate a boolean. If the boolean was "true",
       the "NOT" card will return a "false", and vice versa
     m_Metadata:
       m_Items: []
   - m_Id: 74301654821384192
-    m_Localized: The last level was a bit repetitive, right? Well, I've designed
-      this card specially for you! It will help to avoid repeating so much code
+    m_Localized: The last level was a bit repetitive, right? Well, this new card
+      will help to avoid repeating so much code
     m_Metadata:
       m_Items: []
   - m_Id: 74303504769495040
     m_Localized: Use the "for" card when you have to repeat the same code several
-      times. Specify the code you want to repeat, and the number of times it has
-      to be repeated
+      times. Specify the code you want to repeat and the number of times it has to
+      do it
     m_Metadata:
       m_Items: []
   - m_Id: 78779026041610240
@@ -147,7 +145,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 79148412690636800
     m_Localized: Do you see this star? If you use the blocks with a star when you
-      code, you'll earn a star at the end of the level!
+      code at least once, you'll earn a star at the end of the level!
     m_Metadata:
       m_Items: []
   - m_Id: 80101588963307520
@@ -165,8 +163,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 80966186465636352
-    m_Localized: Check this new card! It allows us to do some things, only under
-      certain circunstances. This example is correct!
+    m_Localized: Check this new card! It allows us to do some things only under certain
+      circunstances. This example is correct!
     m_Metadata:
       m_Items: []
   - m_Id: 80967373780824064

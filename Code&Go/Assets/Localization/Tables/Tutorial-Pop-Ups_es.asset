@@ -42,7 +42,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8064940604272640
     m_Localized: "\xA1Vaya! \xA1Falta una tarjeta! \xA1R\xE1pido, coje una de la
-      izquierda y ponla en su sitio, antes de que alguien lo vea!"
+      izquierda y ponla en su sitio!"
     m_Metadata:
       m_Items: []
   - m_Id: 13071693836533760
@@ -50,7 +50,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13071943355678720
-    m_Localized: "Aqu\xED tienes otro nivel resuelto como ejemplo"
+    m_Localized: "Aqu\xED tienes otro nivel resuelto como ejemplo, f\xEDjate y aprende"
     m_Metadata:
       m_Items: []
   - m_Id: 59090354492628992
@@ -89,7 +89,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 69572040324689920
     m_Localized: "\xA1Ups! Parece que me he olvidado de darte una tarjeta booleana,
-      \xA1lo siento! A lo mejor podemos usar esta tarjeta de comparaci\xF3n... \xA1S\xED! "
+      a lo mejor podemos usar esta tarjeta de comparaci\xF3n..."
     m_Metadata:
       m_Items: []
   - m_Id: 69573520041586688
@@ -98,9 +98,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 69613496653459456
-    m_Localized: "\xA1Ha vuelto a pasar! Siento haberme olvidado de darte la tarjeta
-      de n\xFAmeros... \xA1Qu\xE9 despiste! Bueno, \xA1por lo menos te traigo la
-      tarjeta de operaciones!"
+    m_Localized: "\xA1Ha vuelto a pasar! No te he dado la tarjeta de n\xFAmeros...
+      \xA1Qu\xE9 despiste! Bueno, \xA1te traigo la tarjeta de operaciones!"
     m_Metadata:
       m_Items: []
   - m_Id: 69613592409419776
@@ -109,37 +108,34 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 71751036743331840
-    m_Localized: "\xA1Mira! He encontrado esta tarjeta. A ver... \xA1Ah! Parece que
-      comprueba si hay algunas baldosas ocupadas o no. Me pregunto si podr\xEDamos
-      usarla para algo..."
+    m_Localized: "\xA1Mira! He encontrado esta tarjeta, parece que comprueba si hay
+      algunas baldosas ocupadas o no"
     m_Metadata:
       m_Items: []
   - m_Id: 71751106096148480
-    m_Localized: "Usa la tarjeta para comprobar el estado de las baldosas de un color
-      en el tablero. Si todas est\xE1n ocupadas, devolver\xE1 un valor \"true\";
-      si hay alguna libre, devolver\xE1 un valor \"false\""
+    m_Localized: "Esta tarjeta devolver\xE1 un valor \"true\" si todas las baldosas
+      de un color est\xE1n ocupadas, si hay alguna libre, devolver\xE1 un valor \"false\""
     m_Metadata:
       m_Items: []
   - m_Id: 71759735952125952
     m_Localized: "\xA1Vaya! \xBFC\xF3mo vamos a abrir esa puerta?... Usa este operador
-      \"no\". \xA1Ahora podemos comprobar cosas que NO pasan!"
+      \"NO\". \xA1Ahora podemos comprobar cosas que NO pasan!"
     m_Metadata:
       m_Items: []
   - m_Id: 71759791178526720
     m_Localized: "Usa el operador \"NO\" para negar un booleano. Si el booleano era
-      true, la tarjeta \"NO\" devolver\xE1 \"false\", y al rev\xE9s"
+      \"true\", la tarjeta \"NO\" devolver\xE1 \"false\", y viceversa"
     m_Metadata:
       m_Items: []
   - m_Id: 74301654821384192
     m_Localized: "El \xFAltimo nivel ha sido un poco repetitivo, \xBFverdad? Bueno,
-      \xA1he dise\xF1ado esta carta especialmente para ti! Te ayudar\xE1 a evitar
-      repetir tanto c\xF3digo"
+      con esta nueva tarjeta evitaremos repetir tanto c\xF3digo"
     m_Metadata:
       m_Items: []
   - m_Id: 74303504769495040
     m_Localized: "Usa la tarjeta \"repetir\" cuando tengas que repetir el mismo c\xF3digo
-      varias veces. Especifica el c\xF3digo que quieres repetir, y cu\xE1ntas veces
-      quieres que se repita"
+      varias veces. Especifica el c\xF3digo que quieres repetir y cu\xE1ntas veces
+      quieres que lo haga"
     m_Metadata:
       m_Items: []
   - m_Id: 78779026041610240
@@ -149,18 +145,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 79148412690636800
-    m_Localized: "\xBFVes esta estrella? Si usas los bloques que tienen una estrella,
-      \xA1conseguir\xE1s una estrella al final del nivel!"
+    m_Localized: "\xBFVes esta estrella? Si usas al menos una vez los bloques que
+      tienen una estrella, \xA1conseguir\xE1s una estrella al final del nivel!"
     m_Metadata:
       m_Items: []
   - m_Id: 80101588963307520
     m_Localized: "Se me olvid\xF3 incluir la tarjeta de \"repetir\"... Quiz\xE1 podamos
-      usar esta. \xBFQu\xE9 te parece?"
+      usar esta otra. \xBFQu\xE9 te parece?"
     m_Metadata:
       m_Items: []
   - m_Id: 80101943394578432
     m_Localized: "Usa el bloque de \"mientras que\" cuando quieras repetir el c\xF3digo
-      hasta que se cumpla una condici\xF3n."
+      hasta que se cumpla una condici\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 80965310904676352
@@ -168,7 +164,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 80966186465636352
-    m_Localized: "\xA1Mira esta carta! Nos permite hacer algunas cosas, solo bajo
+    m_Localized: "\xA1Mira esta tarjeta! Nos permite hacer algunas cosas solo bajo
       las circunstancias que queramos. \xA1Este ejemplo es correcto!"
     m_Metadata:
       m_Items: []
