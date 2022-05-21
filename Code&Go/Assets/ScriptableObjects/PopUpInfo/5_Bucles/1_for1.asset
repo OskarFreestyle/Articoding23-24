@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 6
   title: "Repetir un n\xFAmero de veces"
-  content: "Esta tarjeta permite repetir un n\xFAmero de veces especificado un conjunto
-    de instrucciones. Puede ser \xFAtil para no repetir c\xF3digo y para evitar secuencias
-    de instrucciones repetitivas."
+  content: "Usa la tarjeta \"repetir\" cuando tengas que repetir el mismo c\xF3digo
+    varias veces. Especifica el c\xF3digo que quieres repetir, y cu\xE1ntas veces
+    quieres que se repita."
   next: {fileID: 0}
   image: {fileID: 21300000, guid: a028f5049c517e84aa272e3b8cbe5f92, type: 3}
   localizedTitle:

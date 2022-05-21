@@ -63,14 +63,6 @@ MonoBehaviour:
     m_Key: tutorial_intro_6_content
     m_Metadata:
       m_Items: []
-  - m_Id: 24771179499520
-    m_Key: tutorial_intro_7_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 24852699992064
-    m_Key: tutorial_intro_7_content
-    m_Metadata:
-      m_Items: []
   - m_Id: 115073336659968
     m_Key: tutorial_1_basic_mirror_title
     m_Metadata:
@@ -85,14 +77,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 115546592563200
     m_Key: tutorial_1_change_intensity_content
-    m_Metadata:
-      m_Items: []
-  - m_Id: 116897959563264
-    m_Key: tutorial_1_laser_move_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 117412940402688
-    m_Key: tutorial_1_laser_move_content
     m_Metadata:
       m_Items: []
   - m_Id: 139388476116992
@@ -141,14 +125,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 211441606643712
     m_Key: tutorials_2_boolean_content
-    m_Metadata:
-      m_Items: []
-  - m_Id: 211976023887872
-    m_Key: tutorial_2_door_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 212048866365440
-    m_Key: tutorial_2_door_content
     m_Metadata:
       m_Items: []
   - m_Id: 212346884247552
@@ -215,20 +191,8 @@ MonoBehaviour:
     m_Key: for_loop_title
     m_Metadata:
       m_Items: []
-  - m_Id: 220462929596416
-    m_Key: if_else_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 220560799485952
-    m_Key: if_else_content
-    m_Metadata:
-      m_Items: []
   - m_Id: 222928127578112
     m_Key: while_loop_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223015247466496
-    m_Key: while_loop_content
     m_Metadata:
       m_Items: []
   - m_Id: 232223330193408
@@ -237,14 +201,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 232403949506560
     m_Key: tutorial_0_8_content
-    m_Metadata:
-      m_Items: []
-  - m_Id: 232959606706176
-    m_Key: tutorial_0_9_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 233012316524544
-    m_Key: tutorial_0_9_content
     m_Metadata:
       m_Items: []
   - m_Id: 375763816808448

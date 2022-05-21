@@ -512,7 +512,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6745913655574259915}
   - component: {fileID: 1094048151191990440}
-  - component: {fileID: -7701360075010967078}
   - component: {fileID: 301715066766844080}
   - component: {fileID: 234962636879377392}
   m_Layer: 0
@@ -573,26 +572,6 @@ MonoBehaviour:
   isMovable: 0
   isRotatable: 1
   objectCollider: {fileID: 3733731375953064989}
---- !u!114 &-7701360075010967078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6745913655574259957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 200
-  info: {fileID: 11400000, guid: 426e3a823249f6a4db7dcc8d7f4aca6e, type: 2}
-  highlightObject: 1
-  destroyOnShowed: 1
-  isSaveCheckpoint: 0
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &301715066766844080
 BoxCollider:
   m_ObjectHideFlags: 0

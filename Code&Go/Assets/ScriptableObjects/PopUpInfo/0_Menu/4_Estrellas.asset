@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   title: Estrellas por categoria
-  content: "Puedes ganar tres estrellas por nivel, si resuelves los niveles como
-    un verdadero programador. \xBFConseguir\xE1s todas?"
+  content: "Puedes ganar tres estrellas por nivel si los resuelves como un verdadero
+    programador. \xBFConseguir\xE1s todas?"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:

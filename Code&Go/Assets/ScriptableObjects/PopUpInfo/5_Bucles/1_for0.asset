@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   title: "Repetir un n\xFAmero de veces"
-  content: "Esta tarjeta permite repetir un n\xFAmero de veces especificado un conjunto
-    de instrucciones. Puede ser \xFAtil para no repetir c\xF3digo y para evitar secuencias
-    de instrucciones repetitivas."
+  content: "El \xFAltimo nivel ha sido un poco repetitivo, \xBFverdad? Bueno, \xA1he
+    dise\xF1ado esta carta especialmente para ti! Te ayudar\xE1 a evitar repetir
+    tanto c\xF3digo."
   next: {fileID: 11400000, guid: 08b5f47b1048e1e42b2b541b52064bbc, type: 2}
   image: {fileID: 21300000, guid: a028f5049c517e84aa272e3b8cbe5f92, type: 3}
   localizedTitle:

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   title: "Negaci\xF3n"
-  content: "Esta tarjeta niega el valor de un booleano, es decir devuelve el valor
-    contrario. Si el booleano es verdadero devolver\xE1 falso y viceversa."
+  content: "Usa el operador \"NO\" para negar un booleano. Si el booleano era true,
+    la tarjeta \"NO\" devolver\xE1 false, y al rev\xE9s."
   next: {fileID: 0}
   image: {fileID: 21300000, guid: 7a65d20cea402e1438858f2e7c84bf0b, type: 3}
   localizedTitle:

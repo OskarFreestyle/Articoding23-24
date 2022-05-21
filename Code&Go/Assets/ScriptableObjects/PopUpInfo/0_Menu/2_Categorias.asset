@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   title: Categoria desbloqueada
-  content: '-'
+  content: "Por ahora, tienes estos niveles disponibles. \xA1Buena suerte!"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:

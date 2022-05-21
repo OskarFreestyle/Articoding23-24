@@ -74,15 +74,6 @@ MonoBehaviour:
       look at your progress stats.
     m_Metadata:
       m_Items: []
-  - m_Id: 24771179499520
-    m_Localized: Shop menu
-    m_Metadata:
-      m_Items: []
-  - m_Id: 24852699992064
-    m_Localized: In this section you can buy hints with coins. Don't worry, you will
-      not spend real money.
-    m_Metadata:
-      m_Items: []
   - m_Id: 115073336659968
     m_Localized: Mirror
     m_Metadata:
@@ -103,16 +94,6 @@ MonoBehaviour:
   - m_Id: 116609265618944
     m_Localized: This is a laser emitter. The laser have multiple intensities. You
       can change its intensity using variables.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 116897959563264
-    m_Localized: Move Laser
-    m_Metadata:
-      m_Items: []
-  - m_Id: 117412940402688
-    m_Localized: You have unlocked the Laser movement! This code card allows you
-      to move the laser a number of cells in the direction you want. Later on you
-      will be able to move other objects as well.
     m_Metadata:
       m_Items: []
   - m_Id: 139388476116992
@@ -168,16 +149,6 @@ MonoBehaviour:
     m_Localized: This code card shows a boolean value. This value can be True or
       False. With this value you can indicate an object state (True = activated and
       False = deactivated).
-    m_Metadata:
-      m_Items: []
-  - m_Id: 211976023887872
-    m_Localized: Door
-    m_Metadata:
-      m_Items: []
-  - m_Id: 212048866365440
-    m_Localized: This is a door. It can be activated or deactivated and you can change
-      its state with code cards. To open the door you will have to power it up using
-      the correct code card.
     m_Metadata:
       m_Items: []
   - m_Id: 212346884247552
@@ -250,25 +221,8 @@ MonoBehaviour:
     m_Localized: Repeat a number of times
     m_Metadata:
       m_Items: []
-  - m_Id: 220462929596416
-    m_Localized: If... else
-    m_Metadata:
-      m_Items: []
-  - m_Id: 220560799485952
-    m_Localized: This code card allows you to evaluate the value of a boolean condition.
-      If the condition is True, the cards on the "do" will be executed. If not, the
-      "else, do" will be executed.
-    m_Metadata:
-      m_Items: []
   - m_Id: 222928127578112
     m_Localized: Repeat while
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223015247466496
-    m_Localized: This card allows you to repeat an instruction as long as a condition
-      is met. It can be useful to avoid repeating code and to avoid repetitive instruction
-      sequences. But be careful, don't set conditions that are always true or you
-      will have an infinite loop.
     m_Metadata:
       m_Items: []
   - m_Id: 232223330193408
@@ -279,20 +233,12 @@ MonoBehaviour:
     m_Localized: You can also check the guide if you forgot anything about the game
     m_Metadata:
       m_Items: []
-  - m_Id: 233012316524544
-    m_Localized: If you are ever stuck, you can use these hints
-    m_Metadata:
-      m_Items: []
   - m_Id: 375763816808448
     m_Localized: Category stars
     m_Metadata:
       m_Items: []
   - m_Id: 216012202627072
     m_Localized: Not card
-    m_Metadata:
-      m_Items: []
-  - m_Id: 232959606706176
-    m_Localized: Level hints
     m_Metadata:
       m_Items: []
   - m_Id: 376247898210304

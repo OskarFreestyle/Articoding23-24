@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 8
   title: "Girar L\xE1ser"
-  content: "Con esta tarjeta podr\xE1s girar el l\xE1ser en un sentido un m\xFAltiplo
-    de 90 grados. Si usas (+) el l\xE1ser girar\xE1 en el sentido de las agujas del
-    reloj, si usas (-) girar\xE1 en sentido antihorario."
+  content: "Con esta tarjeta podr\xE1s girar el l\xE1ser un m\xFAltiplo de 90 grados,
+    en el sentido que elijas."
   next: {fileID: 0}
   image: {fileID: 21300000, guid: 8c7b08fd1cba70c489b4a8990b82c4d5, type: 3}
   localizedTitle:

@@ -74,15 +74,6 @@ MonoBehaviour:
       y mirar las estad\xEDsticas de tu progreso."
     m_Metadata:
       m_Items: []
-  - m_Id: 24771179499520
-    m_Localized: "Men\xFA de Tienda"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 24852699992064
-    m_Localized: "En esta secci\xF3n podr\xE1s comprar pistas a cambio de monedas.
-      No te preocupes, no gastar\xE1s dinero real."
-    m_Metadata:
-      m_Items: []
   - m_Id: 115073336659968
     m_Localized: Espejo
     m_Metadata:
@@ -103,16 +94,6 @@ MonoBehaviour:
   - m_Id: 116609265618944
     m_Localized: "Esto es un emisor de l\xE1ser. El l\xE1ser tiene varias intensidades.
       Puedes variar la intensidad del l\xE1ser utilizando las variables."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 116897959563264
-    m_Localized: "Mover L\xE1ser"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 117412940402688
-    m_Localized: "Has desbloqueado el movimiento del laser! Esta tarjeta te permite
-      mover el l\xE1ser un n\xFAmero de casillas en una direcci\xF3n. M\xE1s adelante
-      tambi\xE9n podr\xE1s mover otros objetos."
     m_Metadata:
       m_Items: []
   - m_Id: 139388476116992
@@ -168,16 +149,6 @@ MonoBehaviour:
     m_Localized: Esta tarjeta muestra un valor booleano, este valor puede ser verdadero
       o falso. Con este valor puedes indicar el estado de objetos (verdadero = activo
       y falso = apagado)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 211976023887872
-    m_Localized: Puerta
-    m_Metadata:
-      m_Items: []
-  - m_Id: 212048866365440
-    m_Localized: "Esto es una puerta, puede estar encendida o apagada y podr\xE1s
-      modificar su estado mediante tarjetas. Para abrir la puerta tendr\xE1s que
-      activarla con la tarjeta de c\xF3digo correspondiente."
     m_Metadata:
       m_Items: []
   - m_Id: 212346884247552
@@ -239,8 +210,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 215946574352384
-    m_Localized: "Esta tarjeta niega el valor de un booleano, es decir devuelve el
-      valor contrario. Si el booleano es verdadero devolver\xE1 falso y viceversa."
+    m_Localized: "Esta tarjeta niega el valor de un booleano, es decir, devuelve
+      el valor contrario. Si el booleano es verdadero devolver\xE1 falso y viceversa."
     m_Metadata:
       m_Items: []
   - m_Id: 218068925730816
@@ -251,25 +222,8 @@ MonoBehaviour:
     m_Localized: "Repetir un n\xFAmero de veces"
     m_Metadata:
       m_Items: []
-  - m_Id: 220462929596416
-    m_Localized: "Si\u2026 entonces"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 220560799485952
-    m_Localized: "Esta tarjeta permite comprobar el valor de una condici\xF3n booleana.
-      Si la condici\xF3n es verdadera se ejecutar\xE1 las instrucciones en el haz,
-      si no se ejecutara la secci\xF3n del s\xED no."
-    m_Metadata:
-      m_Items: []
   - m_Id: 222928127578112
     m_Localized: Repetir mientras que
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223015247466496
-    m_Localized: "Esta tarjeta permite repetir una instrucci\xF3n mientras que una
-      condici\xF3n se cumpla. Puede ser \xFAtil para no repetir c\xF3digo y para
-      evitar secuencias de instrucciones repetitivas. Pero ten cuidado, no pongas
-      condiciones que siempre sean verdaderas o tendr\xE1s un bucle infinito.\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 232223330193408
@@ -281,20 +235,12 @@ MonoBehaviour:
       nuevo"
     m_Metadata:
       m_Items: []
-  - m_Id: 233012316524544
-    m_Localized: Si te quedas atascado en un nivel, prueba a pedir una pista
-    m_Metadata:
-      m_Items: []
   - m_Id: 375763816808448
     m_Localized: "Estrellas por categor\xEDa"
     m_Metadata:
       m_Items: []
   - m_Id: 216012202627072
     m_Localized: "Negaci\xF3n"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 232959606706176
-    m_Localized: Pistas del nivel
     m_Metadata:
       m_Items: []
   - m_Id: 376247898210304

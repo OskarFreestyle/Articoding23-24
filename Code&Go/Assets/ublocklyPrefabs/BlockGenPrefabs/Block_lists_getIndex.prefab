@@ -1351,7 +1351,6 @@ GameObject:
   - component: {fileID: 5617574514529496822}
   - component: {fileID: 9084874933869101291}
   - component: {fileID: 4474615142726330664}
-  - component: {fileID: -1570386481185235255}
   m_Layer: 0
   m_Name: Block_lists_getIndex
   m_TagString: Untagged
@@ -1444,26 +1443,6 @@ MonoBehaviour:
   m_BgImages:
   - {fileID: 9084874933869101291}
   - {fileID: 6998026453259828110}
---- !u!114 &-1570386481185235255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6622082892826579288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 210
-  info: {fileID: 11400000, guid: 15fa7f6c4f5ea7246b509970623e7d7a, type: 2}
-  highlightObject: 1
-  destroyOnShowed: 1
-  isSaveCheckpoint: 0
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &6788169161969032308
 GameObject:
   m_ObjectHideFlags: 0

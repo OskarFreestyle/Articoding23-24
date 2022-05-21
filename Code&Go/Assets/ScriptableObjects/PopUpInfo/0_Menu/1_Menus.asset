@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   title: "Barra de navegaci\xF3n."
-  content: "Esta es la barra de navegaci\xF3n. Aqu\xED arriba puedes navegar por
-    los distintos men\xFAs."
+  content: Puedes elegir entre jugar los niveles que hay, recordar las cosas que
+    vayas aprendiendo por el camino o crear tus propios niveles
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:

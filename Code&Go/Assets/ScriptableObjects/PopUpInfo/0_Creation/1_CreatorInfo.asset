@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   title: Creador de niveles
-  content: '-'
+  content: "\xBFTe apetece crear tus propios niveles como un programador de verdad?"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:

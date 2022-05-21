@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   title: Duplicar tarjetas
-  content: '-'
+  content: "Haz clic derecho sobre una tarjeta para duplicarla si tienes disponibles
+    m\xE1s tarjetas del mismo tipo"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:

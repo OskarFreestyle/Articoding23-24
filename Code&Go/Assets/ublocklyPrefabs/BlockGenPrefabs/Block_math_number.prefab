@@ -300,7 +300,6 @@ GameObject:
   - component: {fileID: 8896060562805891810}
   - component: {fileID: 6346648832741579710}
   - component: {fileID: 1670129908229157240}
-  - component: {fileID: -6059538900877875439}
   m_Layer: 0
   m_Name: Block_math_number
   m_TagString: Untagged
@@ -393,26 +392,6 @@ MonoBehaviour:
   m_BgImages:
   - {fileID: 6346648832741579710}
   - {fileID: 2110311030633043193}
---- !u!114 &-6059538900877875439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4902997637340511936}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 200
-  info: {fileID: 11400000, guid: e399b40bd57775b41a5f5a6fa004c9e1, type: 2}
-  highlightObject: 1
-  destroyOnShowed: 1
-  isSaveCheckpoint: 0
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &6148858740774813992
 GameObject:
   m_ObjectHideFlags: 0

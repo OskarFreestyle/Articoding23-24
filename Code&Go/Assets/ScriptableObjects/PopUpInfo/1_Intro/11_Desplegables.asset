@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   title: Desplegables
-  content: '-'
+  content: "Prueba a corregir la direcci\xF3n en la que se mueve el l\xE1ser"
   next: {fileID: 0}
   image: {fileID: 0}
   localizedTitle:
