@@ -1,4 +1,5 @@
 {
+    "specialBlock": "logic_if",
     "categories": [
         {
             "categoryName": "start",
@@ -19,7 +20,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 2
+                        "maxUses": 1
                     }
                 ]
             }
@@ -36,7 +37,7 @@
                     {
                         "blockName": "variables_set",
                         "maxUses": 100
-                    }                       
+                    }
                 ]
             }
         },
@@ -47,8 +48,8 @@
                 "activeBlocks": [
                     {
                         "blockName": "text",
-                        "maxUses": 4
-                    }                           
+                        "maxUses": 1
+                    }
                 ]
             }
         },
@@ -56,19 +57,19 @@
             "categoryName": "logic",
             "blocksInfo": {
                 "activate": true,
-                "activeBlocks": [    
+                "activeBlocks": [
                     {
                         "blockName": "logic_cells_occupied",
                         "maxUses": 3
-                    },            
-                    {
-                        "blockName": "logic_negate",
-                        "maxUses": 2
                     },
                     {
-                        "blockName": "logic_ifelse",
-                        "maxUses": 2
-                    }      
+                        "blockName": "logic_operation",
+                        "maxUses": 1
+                    },
+                    {
+                        "blockName": "logic_if",
+                        "maxUses": 1
+                    }
                 ]
             }
         },
@@ -91,7 +92,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 1
+                        "maxUses": 5
                     }
                 ]
             }
