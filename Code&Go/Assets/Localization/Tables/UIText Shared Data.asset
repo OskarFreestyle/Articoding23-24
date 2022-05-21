@@ -375,6 +375,10 @@ MonoBehaviour:
     m_Key: procedure_input
     m_Metadata:
       m_Items: []
+  - m_Id: 135113092386217984
+    m_Key: selected_category_procedures
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

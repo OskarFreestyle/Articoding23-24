@@ -71,6 +71,14 @@ MonoBehaviour:
     m_Key: introduction_description
     m_Metadata:
       m_Items: []
+  - m_Id: 133700533783322624
+    m_Key: procedures_name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133700560933052416
+    m_Key: procedures_description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

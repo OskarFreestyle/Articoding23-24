@@ -76,5 +76,13 @@ MonoBehaviour:
     m_Localized: "Comienza a jugar y aprende c\xF3mo funciona la aplicaci\xF3n."
     m_Metadata:
       m_Items: []
+  - m_Id: 133700533783322624
+    m_Localized: Funciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133700560933052416
+    m_Localized: "Aprende a organizar tu c\xF3digo con el uso de funciones."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
