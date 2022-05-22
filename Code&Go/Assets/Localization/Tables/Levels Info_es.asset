@@ -135,19 +135,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5120069029888
-    m_Localized: '6-4: Condicionales 4'
+    m_Localized: '6-4: Haciendo zig-zag'
     m_Metadata:
       m_Items: []
   - m_Id: 5211274170368
-    m_Localized: '6-5: Condicionales 5'
+    m_Localized: '6-5: Bloque "si, si no"'
     m_Metadata:
       m_Items: []
   - m_Id: 5307269206016
-    m_Localized: '6-6: Condicionales 6'
+    m_Localized: "6-6: Un paso m\xE1s all\xE1"
     m_Metadata:
       m_Items: []
   - m_Id: 5484713431040
-    m_Localized: '6-7: Condicionales 7'
+    m_Localized: "6-7: Yendo hacia delanta y hacia atr\xE1s"
     m_Metadata:
       m_Items: []
   - m_Id: 321477024022528
