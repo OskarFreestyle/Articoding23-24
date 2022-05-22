@@ -1,31 +1,111 @@
 <xml>
     <variables>
-        <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Objeto</variable>
-        <variable type="" id="An]Sn_i2fD:nVJ/Y]5_A">Desplazamiento</variable>
+        <variable type="" id="n:WsN1pJ9hJ.ue!#m#{U">Laser</variable>
+        <variable type="" id="An]Sn_i2fD:nVJ/Y]5_A">Movimiento</variable>
+        <variable type="" id="*)o8y@zkNzVAAhsXh?B:">Espejo</variable>
     </variables>
-    <block type="start_start" id="kvv^m%y+;]}vh6YrQOSx" x="175" y="-126">
+    <block type="start_start" id="kvv^m%y+;]}vh6YrQOSx" x="99" y="-68">
         <next>
             <block type="variables_set" id="q7*vM`_bKyO/@ED6M%Pz">
-                <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Objeto</field>
+                <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Laser</field>
                 <value name="VALUE">
                     <block type="text" id="Kgf)VE~u~}-+:C5+)WJi">
-                        <field name="TEXT" />
+                        <field name="TEXT">Laser_1</field>
                     </block>
                 </value>
                 <next>
-                    <block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
-                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Desplazamiento</field>
+                    <block type="variables_set" id="-!ht6.b}{t0J[u@^t1Pa">
+                        <field name="VAR" id="*)o8y@zkNzVAAhsXh?B:" variableType="">Espejo</field>
                         <value name="VALUE">
-                            <block type="math_number" id="gy6Zv}mXv(ro1e!#^[Yf">
-                                <field name="NUM">0</field>
+                            <block type="text" id="e@R1ZImy9Zj[MWIK,lTx">
+                                <field name="TEXT">Espejo_1</field>
                             </block>
                         </value>
                         <next>
-                            <block type="controls_repeat" id="P+0#:2@{E`vHz`aC|#}h">
-                                <field name="TIMES">2</field>
-                                <statement name="DO">
-                                    <block type="logic_ifelse" id=";ckZk3lHC8y[RUaTQ]D," />
-                                </statement>
+                            <block type="variables_set" id="%wfzC[9p(,l=~`R:|wRb">
+                                <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movimiento</field>
+                                <value name="VALUE">
+                                    <block type="math_number" id="gy6Zv}mXv(ro1e!#^[Yf">
+                                        <field name="NUM">1</field>
+                                    </block>
+                                </value>
+                                <next>
+                                    <block type="controls_whileUntil" id="21f$8njMityep/F@Px8a">
+                                        <value name="BOOL">
+                                            <block type="logic_negate" id="wiXaqpT/Yxwu=|nSD:b-">
+                                                <value name="BOOL">
+                                                    <block type="logic_cells_occupied" id=",!O{(k9h!Yc8,KEjdb0L">
+                                                        <field name="TYPE">BLUE</field>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </value>
+                                        <statement name="DO">
+                                            <block type="movement_move" id="aN~v1yUQ,6dLQigCL=;J">
+                                                <field name="DIRECTION">UP</field>
+                                                <value name="NAME">
+                                                    <block type="variables_get" id="-f0b;U?eydc[AZ138{}!">
+                                                        <field name="VAR" id="*)o8y@zkNzVAAhsXh?B:" variableType="">Espejo</field>
+                                                    </block>
+                                                </value>
+                                                <value name="AMOUNT">
+                                                    <block type="variables_get" id="9E3[xn8jD90+=qm]LIWC">
+                                                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movimiento</field>
+                                                    </block>
+                                                </value>
+                                                <next>
+                                                    <block type="logic_ifelse" id=";ckZk3lHC8y[RUaTQ]D,">
+                                                        <value name="IF0">
+                                                            <block type="logic_operation" id="AV2[a:w`{(r^QVkkk!D~">
+                                                                <field name="OP">OR</field>
+                                                                <value name="A">
+                                                                    <block type="logic_cells_occupied" id="((LB6EzUloMeI5iYr=n6">
+                                                                        <field name="TYPE">RED</field>
+                                                                    </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                    <block type="logic_cells_occupied" id="-m+$_z6wtSS2ZWf$S{Sd">
+                                                                        <field name="TYPE">GREEN</field>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                            <block type="movement_move" id="}vS6GktvUxNF-03}gjF8">
+                                                                <field name="DIRECTION">RIGHT</field>
+                                                                <value name="NAME">
+                                                                    <block type="variables_get" id="~.Cw@ND7Zvt_MkkeY:a@">
+                                                                        <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Laser</field>
+                                                                    </block>
+                                                                </value>
+                                                                <value name="AMOUNT">
+                                                                    <block type="variables_get" id="SL;O8Gg!Q~19h89u8xjs">
+                                                                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movimiento</field>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </statement>
+                                                        <statement name="ELSE">
+                                                            <block type="movement_move" id="CmA*oQV0UQ54Bszv|6]o">
+                                                                <field name="DIRECTION">UP</field>
+                                                                <value name="NAME">
+                                                                    <block type="variables_get" id="^#*8twQ/bSXk?cMEUxu8">
+                                                                        <field name="VAR" id="n:WsN1pJ9hJ.ue!#m#{U" variableType="">Laser</field>
+                                                                    </block>
+                                                                </value>
+                                                                <value name="AMOUNT">
+                                                                    <block type="variables_get" id=".PM3G}^d2[FG@=?tBy(E">
+                                                                        <field name="VAR" id="An]Sn_i2fD:nVJ/Y]5_A" variableType="">Movimiento</field>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </statement>
+                                                    </block>
+                                                </next>
+                                            </block>
+                                        </statement>
+                                    </block>
+                                </next>
                             </block>
                         </next>
                     </block>
