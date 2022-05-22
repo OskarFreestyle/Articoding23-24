@@ -1,0 +1,105 @@
+{
+    "specialBlock": "logic_ifelse",
+    "categories": [
+        {
+            "categoryName": "start",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "start_start",
+                        "maxUses": 0
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "math",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "math_number",
+                        "maxUses": 2
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "variable",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "variables_get",
+                        "maxUses": 100
+                    },
+                    {
+                        "blockName": "variables_set",
+                        "maxUses": 100
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "text",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "text",
+                        "maxUses": 2
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "logic",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "logic_negate",
+                        "maxUses": 1
+                    },
+                    {
+                        "blockName": "logic_cells_occupied",
+                        "maxUses": 5
+                    },
+                    {
+                        "blockName": "logic_operation",
+                        "maxUses": 3
+                    },
+                    {
+                        "blockName": "logic_ifelse",
+                        "maxUses": 2
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "control",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "controls_whileUntil",
+                        "maxUses": 1
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "movement",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "movement_move",
+                        "maxUses": 100
+                    }
+                ]
+            }
+        }
+    ]
+}

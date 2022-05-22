@@ -230,5 +230,13 @@ MonoBehaviour:
     m_Localized: '7-3: Procedures 3'
     m_Metadata:
       m_Items: []
+  - m_Id: 134019708391927808
+    m_Localized: '6-8: Test your knowledge'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134019767724552192
+    m_Localized: '6-9: Test your knowledge'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
