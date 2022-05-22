@@ -127,11 +127,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4849486090240
-    m_Localized: 6:2 Conditionals 2
+    m_Localized: 6:2 One way OR another
     m_Metadata:
       m_Items: []
   - m_Id: 5028813557760
-    m_Localized: '6-3: Conditionals 3'
+    m_Localized: '6-3: Movement in parts'
     m_Metadata:
       m_Items: []
   - m_Id: 5120069029888
@@ -155,7 +155,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 326974879956992
-    m_Localized: '6-1: Conditionals 1'
+    m_Localized: '6-1: "If" block'
     m_Metadata:
       m_Items: []
   - m_Id: 327157801943040

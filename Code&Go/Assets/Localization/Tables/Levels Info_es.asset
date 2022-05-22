@@ -127,11 +127,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4849486090240
-    m_Localized: '6-2: Condicionales 2'
+    m_Localized: '6-2: De una forma O de otra'
     m_Metadata:
       m_Items: []
   - m_Id: 5028813557760
-    m_Localized: '6-3: Condicionales 3'
+    m_Localized: '6-3: Movimiento por partes'
     m_Metadata:
       m_Items: []
   - m_Id: 5120069029888
@@ -155,7 +155,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 326974879956992
-    m_Localized: '6:1: Condicionales 1'
+    m_Localized: '6:1: Bloque "si"'
     m_Metadata:
       m_Items: []
   - m_Id: 327157801943040
