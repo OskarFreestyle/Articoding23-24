@@ -1,6 +1,93 @@
 {
-    "specialBlock": "movement_move_laser",
+    "specialBlock": "procedures_defnoreturn",
     "categories": [
-        
+        {
+            "categoryName": "start",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "start_start",
+                        "maxUses": 0
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "math",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "math_number",
+                        "maxUses": 0
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "variable",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "variables_get",
+                        "maxUses": 100
+                    },
+                    {
+                        "blockName": "variables_set",
+                        "maxUses": 100
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "text",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "text",
+                        "maxUses": 0
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "control",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "controls_repeat",
+                        "maxUses": 0
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "movement",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "movement_move",
+                        "maxUses": 0
+                    }
+                ]
+            }
+        },
+        {
+            "categoryName": "procedure",
+            "blocksInfo": {
+                "activate": true,
+                "activeBlocks": [
+                    {
+                        "blockName": "procedures_defnoreturn",
+                        "maxUses": 0
+                    }
+                ]
+            }
+        }
     ]
 }
