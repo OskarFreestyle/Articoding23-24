@@ -32,7 +32,7 @@ MonoBehaviour:
   allActive: 0
   levelBoard: {fileID: 4900000, guid: 0d7402d048eda0d489dfccc3369cd8ac, type: 3}
   auxLevelBoard: 
-  minimosPasos: 10
+  minimosPasos: 9
   endTextLocalized:
     m_TableReference:
       m_TableCollectionName: 
