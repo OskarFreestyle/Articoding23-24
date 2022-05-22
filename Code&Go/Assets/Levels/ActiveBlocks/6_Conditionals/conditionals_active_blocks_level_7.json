@@ -1,4 +1,5 @@
 {
+    "specialBlock": "logic_ifelse",
     "categories": [
         {
             "categoryName": "start",
@@ -19,7 +20,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "math_number",
-                        "maxUses": 3
+                        "maxUses": 2
                     }
                 ]
             }
@@ -36,7 +37,7 @@
                     {
                         "blockName": "variables_set",
                         "maxUses": 100
-                    }                       
+                    }
                 ]
             }
         },
@@ -47,8 +48,8 @@
                 "activeBlocks": [
                     {
                         "blockName": "text",
-                        "maxUses": 3
-                    }                           
+                        "maxUses": 2
+                    }
                 ]
             }
         },
@@ -56,11 +57,19 @@
             "categoryName": "logic",
             "blocksInfo": {
                 "activate": true,
-                "activeBlocks": [ 
+                "activeBlocks": [
+                    {
+                        "blockName": "logic_negate",
+                        "maxUses": 1
+                    },
                     {
                         "blockName": "logic_cells_occupied",
-                        "maxUses": 2
-                    },    
+                        "maxUses": 5
+                    },
+                    {
+                        "blockName": "logic_operation",
+                        "maxUses": 3
+                    },
                     {
                         "blockName": "logic_ifelse",
                         "maxUses": 2
@@ -74,9 +83,9 @@
                 "activate": true,
                 "activeBlocks": [
                     {
-                        "blockName": "controls_repeat",
-                        "maxUses": 4
-                    }                  
+                        "blockName": "controls_whileUntil",
+                        "maxUses": 1
+                    }
                 ]
             }
         },
@@ -87,7 +96,7 @@
                 "activeBlocks": [
                     {
                         "blockName": "movement_move",
-                        "maxUses": 3
+                        "maxUses": 100
                     }
                 ]
             }

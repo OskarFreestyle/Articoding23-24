@@ -62,6 +62,10 @@
                 "activate": true,
                 "activeBlocks": [
                     {
+                        "blockName": "logic_negate",
+                        "maxUses": 100
+                    },
+                    {
                         "blockName": "logic_cells_occupied",
                         "maxUses": 100
                     },
