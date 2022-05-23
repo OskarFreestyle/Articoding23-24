@@ -1,5 +1,5 @@
 {
-    "specialBlock": "logic_negate",
+    "specialBlock": "variables_set",
     "categories": [
         {
             "categoryName": "start",
@@ -37,7 +37,7 @@
                     {
                         "blockName": "variables_set",
                         "maxUses": 100
-                    }                       
+                    }
                 ]
             }
         },
@@ -49,7 +49,7 @@
                     {
                         "blockName": "text",
                         "maxUses": 2
-                    }                           
+                    }
                 ]
             }
         },
