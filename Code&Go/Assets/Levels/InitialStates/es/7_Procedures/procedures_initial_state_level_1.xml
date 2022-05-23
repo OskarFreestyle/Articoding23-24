@@ -1,7 +1,7 @@
 <xml>
     <variables>
-        <variable type="" id="yB{~qj1f4,O%(7/R^uZ4">Object</variable>
-        <variable type="" id="@a~/[#Lreg|jSzDhZwqA">Movement</variable>
+        <variable type="" id="yB{~qj1f4,O%(7/R^uZ4">Objeto</variable>
+        <variable type="" id="@a~/[#Lreg|jSzDhZwqA">Movimiento</variable>
     </variables>
     <block type="procedures_defnoreturn" id="`-jOcqF|jcIVq6EYv5gj" x="202" y="-629">
         <mutation name="ZigZag" statements="true" />
@@ -12,12 +12,12 @@
                 <field name="DIRECTION">UP</field>
                 <value name="NAME">
                     <block type="variables_get" id="RD.yk`Ow8J1tCD5qft0r">
-                        <field name="VAR" id="yB{~qj1f4,O%(7/R^uZ4" variableType="">Object</field>
+                        <field name="VAR" id="yB{~qj1f4,O%(7/R^uZ4" variableType="">Objeto</field>
                     </block>
                 </value>
                 <value name="AMOUNT">
                     <block type="variables_get" id="Fq$D~rx(rFEhM$uwHgHD">
-                        <field name="VAR" id="@a~/[#Lreg|jSzDhZwqA" variableType="">Movement</field>
+                        <field name="VAR" id="@a~/[#Lreg|jSzDhZwqA" variableType="">Movimiento</field>
                     </block>
                 </value>
                 <next>
@@ -25,12 +25,12 @@
                         <field name="DIRECTION">RIGHT</field>
                         <value name="NAME">
                             <block type="variables_get" id="}8xdU@UzPljFMH:v_%[D">
-                                <field name="VAR" id="yB{~qj1f4,O%(7/R^uZ4" variableType="">Object</field>
+                                <field name="VAR" id="yB{~qj1f4,O%(7/R^uZ4" variableType="">Objeto</field>
                             </block>
                         </value>
                         <value name="AMOUNT">
                             <block type="variables_get" id=";?]3wDFp3p%6Bl/UQ3`L">
-                                <field name="VAR" id="@a~/[#Lreg|jSzDhZwqA" variableType="">Movement</field>
+                                <field name="VAR" id="@a~/[#Lreg|jSzDhZwqA" variableType="">Movimiento</field>
                             </block>
                         </value>
                     </block>
@@ -41,7 +41,7 @@
     <block type="start_start" id="UMTv(6s|[b2w^6-8-;Io" x="140" y="-167">
         <next>
             <block type="variables_set" id="!s2,.ytY~D;t2M;`?18y">
-                <field name="VAR" id="yB{~qj1f4,O%(7/R^uZ4" variableType="">Object</field>
+                <field name="VAR" id="yB{~qj1f4,O%(7/R^uZ4" variableType="">Objeto</field>
                 <value name="VALUE">
                     <block type="text" id="e9H)cjIY)I*F^}g,%XAB">
                         <field name="TEXT">Laser_1</field>
@@ -49,7 +49,7 @@
                 </value>
                 <next>
                     <block type="variables_set" id="gz7b`,MoC|:]Y#K$T#dw">
-                        <field name="VAR" id="@a~/[#Lreg|jSzDhZwqA" variableType="">Movement</field>
+                        <field name="VAR" id="@a~/[#Lreg|jSzDhZwqA" variableType="">Movimiento</field>
                         <value name="VALUE">
                             <block type="math_number" id="Cw4Pm,?r|I~*()DY5O$N">
                                 <field name="NUM">1</field>
