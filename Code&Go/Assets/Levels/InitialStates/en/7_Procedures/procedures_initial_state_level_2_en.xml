@@ -1,0 +1,29 @@
+<xml>
+    <variables />
+    <block type="procedures_defnoreturn" id="aT4p93B%nT/qjRsQ#h)x" x="140" y="-436">
+        <mutation name="UpAndDown" statements="true" />
+        <field name="NAME">UpAndDown</field>
+        <field name="PARAMS" />
+        <statement name="STACK">
+            <block type="movement_move" id=".H`cExxDh0^-~yU;e]8v">
+                <field name="DIRECTION">UP</field>
+                <next>
+                    <block type="movement_move" id="8o}{a^S?rek@1Bsdq:;:">
+                        <field name="DIRECTION">RIGHT</field>
+                        <next>
+                            <block type="movement_move" id="7^B.U=?C%U5ue]poWiyl">
+                                <field name="DIRECTION">DOWN</field>
+                                <next>
+                                    <block type="movement_move" id="o!7Tz%-1R23sZ4_`99e@">
+                                        <field name="DIRECTION">RIGHT</field>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </statement>
+    </block>
+    <block type="start_start" id="LL_8Ax3RLJT@fexF3B{(" x="140" y="-59" />
+</xml>
