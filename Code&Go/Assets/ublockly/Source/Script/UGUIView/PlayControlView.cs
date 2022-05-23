@@ -140,6 +140,7 @@ namespace UBlockly.UGUI
         private void OnStop()
         {
             CSharp.Runner.Stop();
+            m_BtnStop.enabled = false;
         }
 
         private void OnStep()

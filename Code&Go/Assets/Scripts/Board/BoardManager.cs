@@ -267,6 +267,28 @@ public class BoardManager : Listener
                 RemoveBoardObject(pos.x, pos.y, true, false);
     }
 
+    public void DeleteBoardElementsStop()
+    {
+        List<Transform> lasers = new List<Transform>();
+        for(int i = 0; i < elementsParent.childCount; ++i)
+        {
+            Transform obj = elementsParent.GetChild(i);
+            if (obj.name == "LaserEmitter(Clone)")
+            {
+                lasers.Add(obj);
+            }
+        }
+
+        foreach(Transform laser in lasers)
+        {
+            Destroy(laser.gameObject);
+        }
+
+        foreach (List<Vector2Int> item in elementPositions.Values)
+            foreach (Vector2Int pos in item)
+                RemoveBoardObject(pos.x, pos.y, true, false);
+    }
+
     public void GenerateBoardElements(BoardState state)
     {
         // Generate board elements
@@ -286,7 +308,8 @@ public class BoardManager : Listener
 
     public void Reset()
     {
-        DeleteBoardElements();
+        StopAllCoroutines();
+        DeleteBoardElementsStop();
         elementPositions.Clear();
         completed = false;
         currentSteps = 0;

@@ -66,6 +66,13 @@ public class LevelManager : MonoBehaviour
 
     public StreamRoom streamRoom;
 
+    public Button exitButtonLeft;
+    public Button exitButtonRight;
+    public Button retryButton;
+    public Button guideButton;
+    public Button runButton;
+    public Button stopButton;
+
     private bool completed = false;
 
     private void Awake()
@@ -234,6 +241,7 @@ public class LevelManager : MonoBehaviour
         transparentRect.SetActive(false);
         blackRect.SetActive(false);
         gameOverMinimized.SetActive(false);
+        EnableHeaderButtons();
 
         streamRoom.Retry();
 
@@ -241,6 +249,18 @@ public class LevelManager : MonoBehaviour
 
         var levelName = GameManager.Instance.GetCurrentLevelName();
         TrackerAsset.Instance.Completable.Initialized(levelName, CompletableTracker.Completable.Level);
+    }
+
+    public void ClickStopButton()
+    {
+        ResetLevel();
+        gameOverPanel.SetActive(false);
+        transparentRect.SetActive(false);
+        blackRect.SetActive(false);
+        gameOverMinimized.SetActive(false);
+        EnableHeaderButtons();
+
+        streamRoom.Retry();
     }
 
     public void MinimizeEndPanel()
@@ -268,6 +288,27 @@ public class LevelManager : MonoBehaviour
     public void SetActiveNoInputPanel()
     {
         transparentRect.SetActive(true);
+        DisableHeaderButtons();
+    }
+
+    void DisableHeaderButtons()
+    {
+        exitButtonLeft.enabled = false;
+        exitButtonRight.enabled = false;
+        retryButton.enabled = false;
+        guideButton.enabled = false;
+        runButton.enabled = false;
+        stopButton.enabled = true;
+    }
+
+    void EnableHeaderButtons()
+    {
+        exitButtonLeft.enabled = true;
+        exitButtonRight.enabled = true;
+        retryButton.enabled = true;
+        guideButton.enabled = true;
+        runButton.enabled = true;
+        stopButton.enabled = false;
     }
 
     public void SetActiveExitConfirmationPanel(bool active)

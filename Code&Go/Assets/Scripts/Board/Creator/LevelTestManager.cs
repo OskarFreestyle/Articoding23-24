@@ -54,6 +54,12 @@ public class LevelTestManager : MonoBehaviour
 
     [SerializeField] Button resetViewButton;
 
+    public Button exitButtonLeft;
+    public Button exitButtonRight;
+    public Button modeButton;
+    public Button runButton;
+    public Button stopButton;
+
     private void Start()
     {
 
@@ -190,6 +196,8 @@ public class LevelTestManager : MonoBehaviour
         transparentRect.SetActive(false);
         blackRect.SetActive(false);
         gameOverMinimized.SetActive(false);
+        EnableHeaderButtons();
+
         streamRoom.Retry();
         completed = false;
     }
@@ -219,6 +227,25 @@ public class LevelTestManager : MonoBehaviour
     public void SetActiveNoInputPanel()
     {
         transparentRect.SetActive(true);
+        DisableHeaderButtons();
+    }
+
+    void DisableHeaderButtons()
+    {
+        exitButtonLeft.enabled = false;
+        exitButtonRight.enabled = false;
+        modeButton.enabled = false;
+        runButton.enabled = false;
+        stopButton.enabled = true;
+    }
+
+    void EnableHeaderButtons()
+    {
+        exitButtonLeft.enabled = true;
+        exitButtonRight.enabled = true;
+        modeButton.enabled = true;
+        runButton.enabled = true;
+        stopButton.enabled = false;
     }
 
     public void SetActiveExitConfirmationPanel(bool active)
