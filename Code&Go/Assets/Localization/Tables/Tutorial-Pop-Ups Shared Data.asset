@@ -147,6 +147,18 @@ MonoBehaviour:
     m_Key: popup_conditions_1_if_content2
     m_Metadata:
       m_Items: []
+  - m_Id: 81554717810503680
+    m_Key: pop_up_conditions_5_ifelse_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81554883732975616
+    m_Key: pop_up_conditions_5_ifelse_content1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81554915936841728
+    m_Key: pop_up_conditions_5_ifelse_content2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

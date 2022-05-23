@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 927466401804302710}
   - component: {fileID: 3498085461560455901}
   - component: {fileID: 4785349483245768456}
+  - component: {fileID: 3987217429526473208}
   m_Layer: 0
   m_Name: Block_logic_ifelse
   m_TagString: Untagged
@@ -524,6 +525,20 @@ MonoBehaviour:
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3987217429526473208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3472462910947544474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4a7d46654560a4d8012ca2935fcaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tt: {fileID: 4785349483245768456}
+  level: {fileID: 11400000, guid: 065fda48c2f8ca04b9bb429d3181dc32, type: 2}
 --- !u!1 &4278699886110127611
 GameObject:
   m_ObjectHideFlags: 0

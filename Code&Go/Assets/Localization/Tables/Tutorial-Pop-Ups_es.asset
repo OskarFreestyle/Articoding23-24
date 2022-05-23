@@ -173,5 +173,19 @@ MonoBehaviour:
       solo si se cumple una condici\xF3n"
     m_Metadata:
       m_Items: []
+  - m_Id: 81554717810503680
+    m_Localized: Bloque "si, si no"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81554883732975616
+    m_Localized: "\xA1Mira esta carta! Es un poco diferente al bloque \"si\". \xA1Nos
+      deja ejecutar otro c\xF3digo cuando no se cumple la condici\xF3n!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81554915936841728
+    m_Localized: "Usa el bloque \"si, si no\" cuando quieres ejecutar un c\xF3digo
+      si se cumple una condici\xF3n, y ejecutar otro cuando no se cumpla."
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -10,27 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 1_IfElse
+  m_Name: 1_IfElse1
   m_EditorClassIdentifier: 
   type: 7
-  title: "Si\u2026 entonces"
-  content: "Esta tarjeta permite comprobar el valor de una condici\xF3n booleana.
-    Si la condici\xF3n es verdadera se ejecutar\xE1 las instrucciones en el haz,
-    si no se ejecutara la secci\xF3n del s\xED no."
+  title: Bloque "si, si no"
+  content: "\xA1Mira esta carta! Es un poco diferente al bloque \"si\". \xA1Nos deja
+    ejecutar otro c\xF3digo cuando no se cumple la condici\xF3n!"
   next: {fileID: 0}
   image: {fileID: 21300000, guid: b1555856eec5f154db9c07bbf571d2bf, type: 3}
   localizedTitle:
     m_TableReference:
-      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 220462929596416
+      m_KeyId: 81554717810503680
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
-      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 220560799485952
+      m_KeyId: 81554915936841728
       m_Key: 
     m_FallbackState: 0
   localizedImage:

@@ -172,5 +172,19 @@ MonoBehaviour:
       condition is met
     m_Metadata:
       m_Items: []
+  - m_Id: 81554717810503680
+    m_Localized: '"if, else" block'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81554883732975616
+    m_Localized: Look at this card! It is slightly different to the "if" block. It
+      allows us to execute some code when the condition is not met!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81554915936841728
+    m_Localized: Use the "if, else" block when you want to execute some code if a
+      condition is met, and a different one when it is not met.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
