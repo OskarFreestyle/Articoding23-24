@@ -192,15 +192,32 @@ public class LevelManager : MonoBehaviour
     // It is called when the current level is completed
     public void LoadNextLevel()
     {
+        GameManager gMng = GameManager.Instance;
+
         int levelSize = currentCategory.levels.Count;
+        List<Category> categories = gMng.GetCategories();
 
         // Si habia una estrella de antes, la quitamos
         SetSpecialBlockStarActive(false);
         
         if (++currentLevelIndex < levelSize)
-            GameManager.Instance.LoadLevel(currentCategory, currentLevelIndex);
-        else
-            LoadMainMenu(); // Por ejemplo
+        {
+            gMng.LoadLevel(currentCategory, currentLevelIndex);
+        }
+        else //Intenta pasar a la categoria siguiente
+        {
+            int currentCategoryIndex = categories.IndexOf(currentCategory);
+            if (++currentCategoryIndex < categories.Count - 1)
+            {
+                currentCategory = categories[currentCategoryIndex];
+                currentLevelIndex = 0;
+                gMng.LoadLevel(currentCategory, currentLevelIndex);
+            }
+            else
+            {
+                LoadMainMenu();
+            }
+        }
     }
 
     public void RestartLevel()

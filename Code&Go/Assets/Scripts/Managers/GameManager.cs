@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [SerializeField] private Category[] categories;
+    [SerializeField] private List <Category> categories;
     [SerializeField] private bool loadSave = true;
 
     [SerializeField] private Category category;
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
 
     public bool InCreatedLevel()
     {
-        return category == categories[categories.Length - 1];
+        return category == categories[categories.Count - 1];
     }
 
     public int GetCurrentLevelIndex()
@@ -145,7 +145,7 @@ public class GameManager : MonoBehaviour
         return levelName;
     }
 
-    public Category[] GetCategories()
+    public List<Category> GetCategories()
     {
         return categories;
     }

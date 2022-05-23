@@ -52,7 +52,7 @@ namespace UBlockly
 
         protected bool CheckInfiniteLoop()
         {
-            if (++mLoopCount == 15)
+            if (++mLoopCount == 20)
             {
                 CSharp.Runner.Error("Infinite loop!");
                 mLoopCount = 0;
