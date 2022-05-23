@@ -219,15 +219,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 133638100792336384
-    m_Localized: '7-1: Funciones 1'
+    m_Localized: '7-1: Usando funciones'
     m_Metadata:
       m_Items: []
   - m_Id: 133638134141247488
-    m_Localized: '7-2: Funciones 2'
+    m_Localized: '7-2: Arriba y abajo'
     m_Metadata:
       m_Items: []
   - m_Id: 133638166722600960
-    m_Localized: '7-3: Funciones 3'
+    m_Localized: "7-3: Tu propia funci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 134019708391927808

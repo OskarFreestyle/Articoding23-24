@@ -219,15 +219,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 133638100792336384
-    m_Localized: '7-1: Procedures 1'
+    m_Localized: '7-1: Using functions'
     m_Metadata:
       m_Items: []
   - m_Id: 133638134141247488
-    m_Localized: '7-2: Procedures 2'
+    m_Localized: '7-2: Up and down'
     m_Metadata:
       m_Items: []
   - m_Id: 133638166722600960
-    m_Localized: '7-3: Procedures 3'
+    m_Localized: '7-3: Your own function'
     m_Metadata:
       m_Items: []
   - m_Id: 134019708391927808
