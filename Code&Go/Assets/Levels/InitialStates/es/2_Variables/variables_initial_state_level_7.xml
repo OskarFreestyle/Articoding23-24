@@ -1,25 +1,44 @@
 <xml>
     <variables>
-        <variable type="" id="UGcI_Hv@{k(V^#USPMo}">A</variable>
-        <variable type="" id=":,(]MF(VrqQkPA^f,xbU">B</variable>
+        <variable type="" id="rnq7bRY/3|0z}(wf)IUs">Cantidad</variable>
     </variables>
-    <block type="start_start" id="s$B1%BVXq]m(OiR:wzt!" x="264" y="-202">
+    <block type="start_start" id="PJ5u%g@w/l=yV_0~Y?ej" x="193" y="-241">
         <next>
-            <block type="variables_set" id=".;[ND1*DOzZCLf$Ku~D{">
-                <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">A</field>
+            <block type="variables_set" id="F~Y=!Q_QT/v5m4{a{%Z[">
+                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Cantidad</field>
                 <value name="VALUE">
-                    <block type="math_number" id="^NH,z/.43U#%JR2NV?U@">
+                    <block type="math_number" id="8`JeWkAG`FG:ToQ:_6sS">
                         <field name="NUM">2</field>
                     </block>
                 </value>
                 <next>
-                    <block type="variables_set" id="DP^K(7-5FzhcazBn~jSP">
-                        <field name="VAR" id=":,(]MF(VrqQkPA^f,xbU" variableType="">B</field>
-                        <value name="VALUE">
-                            <block type="math_number" id="j~sj}lcU*#3dbssILwS6">
-                                <field name="NUM">0</field>
+                    <block type="movement_move_laser" id="B*SI^ir8~:gtG$D;=_){">
+                        <field name="DIRECTION">DOWN</field>
+                        <value name="AMOUNT">
+                            <block type="variables_get" id="D2FL-Cv~:2gBu2!?}lla">
+                                <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Cantidad</field>
                             </block>
                         </value>
+                        <next>
+                            <block type="movement_move_laser" id="/:V|j4,+cFnbR_qiA61:">
+                                <field name="DIRECTION">RIGHT</field>
+                                <value name="AMOUNT">
+                                    <block type="variables_get" id="oO?P,FS`B}ZI8UHtf4tF">
+                                        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Cantidad</field>
+                                    </block>
+                                </value>
+                                <next>
+                                    <block type="variables_set" id="Yi(eK#~(O2G+NxAepSg/">
+                                        <field name="VAR" id="rnq7bRY/3|0z}(wf)IUs" variableType="">Cantidad</field>
+                                        <value name="VALUE">
+                                            <block type="math_number" id="%b/QDh@i!n5G.MsQq)m/">
+                                                <field name="NUM">0</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
                     </block>
                 </next>
             </block>

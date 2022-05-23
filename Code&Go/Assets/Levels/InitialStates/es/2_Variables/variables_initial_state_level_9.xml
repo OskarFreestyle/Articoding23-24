@@ -1,25 +1,29 @@
 <xml>
     <variables>
-        <variable type="" id="urRxji5T[1Qzu$17ca|J">X</variable>
-        <variable type="" id="{c4px%Pg|L^,!A2`n0fb">Y</variable>
+        <variable type="" id="?1~94dY/yAwu(`]t*qo;">Cantidad</variable>
     </variables>
-    <block type="start_start" id="~Rm%ElbHxnScr=.RM6fL" x="235" y="-182">
+    <block type="start_start" id=":~oNrg]Nx}Mi;J$Kf=rf" x="226" y="-216">
         <next>
-            <block type="variables_set" id="_BCD=Jx3~.}Nt.@5NR$5">
-                <field name="VAR" id="urRxji5T[1Qzu$17ca|J" variableType="">X</field>
+            <block type="variables_set" id="]E[l?{8^R6Cl^O2Wh-V%">
+                <field name="VAR" id="?1~94dY/yAwu(`]t*qo;" variableType="">Cantidad</field>
                 <value name="VALUE">
-                    <block type="math_number" id="z9k`AE]*Gh8vnr2;7i:l">
+                    <block type="math_number" id="cqH[GfDBzT%V)q7bNhCK">
                         <field name="NUM">0</field>
                     </block>
                 </value>
                 <next>
-                    <block type="variables_set" id="8D-Lg$Zg`fGMo?%}sL52">
-                        <field name="VAR" id="{c4px%Pg|L^,!A2`n0fb" variableType="">Y</field>
-                        <value name="VALUE">
-                            <block type="math_number" id="6j;I{}-_8,_K}MX?!?SP">
-                                <field name="NUM">3</field>
+                    <block type="movement_move_laser" id="[2H$w-6]/$%E.DD.Pk94">
+                        <field name="DIRECTION">LEFT</field>
+                        <next>
+                            <block type="movement_rotate_laser" id="Qs}yLfvP`9Pv(I([H%6E">
+                                <field name="ROTATION">CLOCKWISE</field>
+                                <next>
+                                    <block type="movement_move_laser" id="ihOMqvB5g{4e4Uz.#5@?">
+                                        <field name="DIRECTION">RIGHT</field>
+                                    </block>
+                                </next>
                             </block>
-                        </value>
+                        </next>
                     </block>
                 </next>
             </block>

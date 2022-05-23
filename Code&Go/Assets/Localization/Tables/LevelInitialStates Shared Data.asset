@@ -227,6 +227,10 @@ MonoBehaviour:
     m_Key: conditionals_9
     m_Metadata:
       m_Items: []
+  - m_Id: 133028952776781824
+    m_Key: variables_10
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
@@ -447,6 +451,10 @@ MonoBehaviour:
           - en
           - es
         - m_KeyId: 132726800057511936
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 133028952776781824
           m_TableCodes:
           - en
           - es

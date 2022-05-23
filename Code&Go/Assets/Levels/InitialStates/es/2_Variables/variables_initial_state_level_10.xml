@@ -1,0 +1,28 @@
+<xml>
+    <variables>
+        <variable type="" id="urRxji5T[1Qzu$17ca|J">X</variable>
+        <variable type="" id="{c4px%Pg|L^,!A2`n0fb">Y</variable>
+    </variables>
+    <block type="start_start" id="~Rm%ElbHxnScr=.RM6fL" x="235" y="-182">
+        <next>
+            <block type="variables_set" id="_BCD=Jx3~.}Nt.@5NR$5">
+                <field name="VAR" id="urRxji5T[1Qzu$17ca|J" variableType="">X</field>
+                <value name="VALUE">
+                    <block type="math_number" id="z9k`AE]*Gh8vnr2;7i:l">
+                        <field name="NUM">0</field>
+                    </block>
+                </value>
+                <next>
+                    <block type="variables_set" id="8D-Lg$Zg`fGMo?%}sL52">
+                        <field name="VAR" id="{c4px%Pg|L^,!A2`n0fb" variableType="">Y</field>
+                        <value name="VALUE">
+                            <block type="math_number" id="6j;I{}-_8,_K}MX?!?SP">
+                                <field name="NUM">3</field>
+                            </block>
+                        </value>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>

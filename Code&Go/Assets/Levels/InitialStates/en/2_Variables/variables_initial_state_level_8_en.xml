@@ -1,29 +1,25 @@
 <xml>
     <variables>
-        <variable type="" id="?1~94dY/yAwu(`]t*qo;">Amount</variable>
+        <variable type="" id="UGcI_Hv@{k(V^#USPMo}">A</variable>
+        <variable type="" id=":,(]MF(VrqQkPA^f,xbU">B</variable>
     </variables>
-    <block type="start_start" id=":~oNrg]Nx}Mi;J$Kf=rf" x="226" y="-216">
+    <block type="start_start" id="s$B1%BVXq]m(OiR:wzt!" x="264" y="-202">
         <next>
-            <block type="variables_set" id="]E[l?{8^R6Cl^O2Wh-V%">
-                <field name="VAR" id="?1~94dY/yAwu(`]t*qo;" variableType="">Amount</field>
+            <block type="variables_set" id=".;[ND1*DOzZCLf$Ku~D{">
+                <field name="VAR" id="UGcI_Hv@{k(V^#USPMo}" variableType="">A</field>
                 <value name="VALUE">
-                    <block type="math_number" id="cqH[GfDBzT%V)q7bNhCK">
-                        <field name="NUM">0</field>
+                    <block type="math_number" id="^NH,z/.43U#%JR2NV?U@">
+                        <field name="NUM">2</field>
                     </block>
                 </value>
                 <next>
-                    <block type="movement_move_laser" id="[2H$w-6]/$%E.DD.Pk94">
-                        <field name="DIRECTION">LEFT</field>
-                        <next>
-                            <block type="movement_rotate_laser" id="Qs}yLfvP`9Pv(I([H%6E">
-                                <field name="ROTATION">CLOCKWISE</field>
-                                <next>
-                                    <block type="movement_move_laser" id="ihOMqvB5g{4e4Uz.#5@?">
-                                        <field name="DIRECTION">RIGHT</field>
-                                    </block>
-                                </next>
+                    <block type="variables_set" id="DP^K(7-5FzhcazBn~jSP">
+                        <field name="VAR" id=":,(]MF(VrqQkPA^f,xbU" variableType="">B</field>
+                        <value name="VALUE">
+                            <block type="math_number" id="j~sj}lcU*#3dbssILwS6">
+                                <field name="NUM">0</field>
                             </block>
-                        </next>
+                        </value>
                     </block>
                 </next>
             </block>

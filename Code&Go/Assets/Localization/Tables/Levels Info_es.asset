@@ -31,15 +31,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1146398003200
-    m_Localized: '2-5: Ahora con menos ayuda'
+    m_Localized: '2-5: WIP'
     m_Metadata:
       m_Items: []
   - m_Id: 1254476828672
-    m_Localized: "2-6: A\xF1ade tarjetas de acciones"
+    m_Localized: '2-6: Ahora con menos ayuda'
     m_Metadata:
       m_Items: []
   - m_Id: 1352116031488
-    m_Localized: '2-7: Pon todas las acciones'
+    m_Localized: "2-7: A\xF1ade tarjetas de acciones"
     m_Metadata:
       m_Items: []
   - m_Id: 1620224331776
@@ -199,7 +199,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112963937210347520
-    m_Localized: '2-8: Comprueba lo que sabes'
+    m_Localized: '2-8: Pon todas las acciones'
     m_Metadata:
       m_Items: []
   - m_Id: 112964259727159296
@@ -236,6 +236,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 134019767724552192
     m_Localized: '6-9: Comprueba lo que sabes'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134322686772523008
+    m_Localized: '2-10: Comprueba lo que sabes'
     m_Metadata:
       m_Items: []
   references:

@@ -72,19 +72,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 57975506189549568
-    m_Key: endtext_variables_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57976385655406592
     m_Key: endtext_variables_7
     m_Metadata:
       m_Items: []
-  - m_Id: 57997714316197888
+  - m_Id: 57976385655406592
     m_Key: endtext_variables_8
     m_Metadata:
       m_Items: []
-  - m_Id: 58316743115407360
+  - m_Id: 57997714316197888
     m_Key: endtext_variables_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58316743115407360
+    m_Key: endtext_variables_10
     m_Metadata:
       m_Items: []
   - m_Id: 69069279468335104
