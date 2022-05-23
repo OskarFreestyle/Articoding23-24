@@ -231,6 +231,14 @@ MonoBehaviour:
     m_Key: variables_10
     m_Metadata:
       m_Items: []
+  - m_Id: 133100955110092800
+    m_Key: operators_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133100967718170624
+    m_Key: operators_9
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
@@ -455,6 +463,14 @@ MonoBehaviour:
           - en
           - es
         - m_KeyId: 133028952776781824
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 133100955110092800
+          m_TableCodes:
+          - en
+          - es
+        - m_KeyId: 133100967718170624
           m_TableCodes:
           - en
           - es

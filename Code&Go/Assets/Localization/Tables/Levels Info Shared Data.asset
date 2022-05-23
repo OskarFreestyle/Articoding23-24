@@ -239,6 +239,14 @@ MonoBehaviour:
     m_Key: variables_level_10
     m_Metadata:
       m_Items: []
+  - m_Id: 134394921289920512
+    m_Key: operators_level_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134394966177361920
+    m_Key: operators_level_9
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
