@@ -85,6 +85,10 @@
                     {
                         "blockName": "procedures_defnoreturn",
                         "maxUses": 0
+                    },
+                    {
+                        "blockName": "procedures_callnoreturn",
+                        "maxUses": 0
                     }
                 ]
             }

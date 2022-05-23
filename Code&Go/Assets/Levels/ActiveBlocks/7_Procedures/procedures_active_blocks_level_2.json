@@ -76,7 +76,7 @@
                     },
                     {
                         "blockName": "procedures_callnoreturn",
-                        "maxUses": 3
+                        "maxUses": 100
                     }
                 ]
             }
