@@ -83,11 +83,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 133700533783322624
-    m_Localized: Procedures
+    m_Localized: Functions
     m_Metadata:
       m_Items: []
   - m_Id: 133700560933052416
-    m_Localized: Learn how to organise your code using procedure blocks.
+    m_Localized: Learn how to organise your code using function blocks.
     m_Metadata:
       m_Items: []
   references:
