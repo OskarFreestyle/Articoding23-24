@@ -269,19 +269,20 @@ public class BoardManager : Listener
 
     public void DeleteBoardElementsStop()
     {
-        List<Transform> lasers = new List<Transform>();
+        List<Transform> movingObjs = new List<Transform>();
         for(int i = 0; i < elementsParent.childCount; ++i)
         {
             Transform obj = elementsParent.GetChild(i);
-            if (obj.name == "LaserEmitter(Clone)")
+            if (obj.name == "LaserEmitter(Clone)" || obj.name == "BasicMirror(Clone)"
+            || obj.name == "LaserEmitter(Clone)(Clone)" || obj.name == "BasicMirror(Clone)(Clone)")
             {
-                lasers.Add(obj);
+                movingObjs.Add(obj);
             }
         }
 
-        foreach(Transform laser in lasers)
+        foreach(Transform obj in movingObjs)
         {
-            Destroy(laser.gameObject);
+            Destroy(obj.gameObject);
         }
 
         foreach (List<Vector2Int> item in elementPositions.Values)
