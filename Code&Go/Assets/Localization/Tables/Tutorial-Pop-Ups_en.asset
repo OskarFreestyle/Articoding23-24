@@ -186,5 +186,19 @@ MonoBehaviour:
       condition is met, and a different one when it is not met.
     m_Metadata:
       m_Items: []
+  - m_Id: 82271273024630784
+    m_Localized: Functions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82271536062017536
+    m_Localized: This is a function. It allows us to repeat a block of code, whenever
+      we call it. Use this card to describe what you want to do.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82271927281528832
+    m_Localized: Then, we can use this card to execute that code. Use it as many
+      times as you need to!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

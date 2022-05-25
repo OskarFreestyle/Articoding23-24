@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
+  m_Name: 1_Funciones_Definicion
+  m_EditorClassIdentifier: 
+  type: 0
+  title: 
+  content: "Esto es una funcion. Nos deja repetir un bloque de c\xF3digo, cuando
+    lo llamemos. Usa esta tarjeta para describir qu\xE9 quieres hacer."
+  next: {fileID: 0}
+  image: {fileID: 21300000, guid: 77d95a7f481b3417dbe330adc8b5a348, type: 3}
+  localizedTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
+    m_TableEntryReference:
+      m_KeyId: 82271273024630784
+      m_Key: 
+    m_FallbackState: 0
+  localizedContent:
+    m_TableReference:
+      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
+    m_TableEntryReference:
+      m_KeyId: 82271536062017536
+      m_Key: 
+    m_FallbackState: 0
+  localizedImage:
+    m_TableReference:
+      m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
+    m_TableEntryReference:
+      m_KeyId: 61724555445854208
+      m_Key: 
+    m_FallbackState: 0

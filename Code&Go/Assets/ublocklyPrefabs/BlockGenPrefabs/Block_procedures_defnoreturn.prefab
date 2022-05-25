@@ -243,6 +243,8 @@ GameObject:
   - component: {fileID: 1107990710846573563}
   - component: {fileID: 8231201947477303456}
   - component: {fileID: 8427322444901613291}
+  - component: {fileID: 3360678545819048539}
+  - component: {fileID: 2698897869585708794}
   m_Layer: 0
   m_Name: Block_procedures_defnoreturn
   m_TagString: Untagged
@@ -336,6 +338,40 @@ MonoBehaviour:
   m_BgImages:
   - {fileID: 8231201947477303456}
   - {fileID: 3970275795128500322}
+--- !u!114 &3360678545819048539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422219578507208060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 130
+  info: {fileID: 11400000, guid: 68c08cdcbecadb348a9d2d7768beedd5, type: 2}
+  highlightObject: 1
+  destroyOnShowed: 1
+  isSaveCheckpoint: 1
+  OnShowed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2698897869585708794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422219578507208060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4a7d46654560a4d8012ca2935fcaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tt: {fileID: 3360678545819048539}
+  level: {fileID: 11400000, guid: c106b364ddab76544be2020d741bcd72, type: 2}
 --- !u!1 &3684891127607695356
 GameObject:
   m_ObjectHideFlags: 0

@@ -187,5 +187,19 @@ MonoBehaviour:
       si se cumple una condici\xF3n, y ejecutar otro cuando no se cumpla."
     m_Metadata:
       m_Items: []
+  - m_Id: 82271273024630784
+    m_Localized: Funciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82271536062017536
+    m_Localized: "Esto es una funcion. Nos deja repetir un bloque de c\xF3digo, cuando
+      lo llamemos. Usa esta tarjeta para describir qu\xE9 quieres hacer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82271927281528832
+    m_Localized: "Despu\xE9s, podemos usar esta tarjeta para ejecutar ese c\xF3digo.
+      \xA1Usala tantas veces como necesites!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
