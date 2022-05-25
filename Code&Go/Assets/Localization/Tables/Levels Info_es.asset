@@ -35,7 +35,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1254476828672
-    m_Localized: '2-6: Ahora con menos ayuda'
+    m_Localized: '2-6: En el otro sentido'
     m_Metadata:
       m_Items: []
   - m_Id: 1352116031488
@@ -147,7 +147,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5484713431040
-    m_Localized: "6-7: Yendo hacia delanta y hacia atr\xE1s"
+    m_Localized: "6-7: Yendo hacia delante y hacia atr\xE1s"
     m_Metadata:
       m_Items: []
   - m_Id: 321477024022528
