@@ -240,5 +240,19 @@ MonoBehaviour:
     m_Localized: "\xA1Ya solo te queda una categor\xEDa!"
     m_Metadata:
       m_Items: []
+  - m_Id: 77938753076330496
+    m_Localized: "\xA1Has completado el juego! \xBFTe quedan estrellas por conseguir?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77938664832368640
+    m_Localized: "Cuando llamas a una funci\xF3n, se ejecuta el c\xF3digo que esta
+      tenga dentro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77938741529411584
+    m_Localized: "Las funciones nos ayudan a evitar escribir c\xF3digo repetido y
+      generan limpieza"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

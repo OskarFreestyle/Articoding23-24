@@ -227,6 +227,18 @@ MonoBehaviour:
     m_Key: endtext_conditionals_9
     m_Metadata:
       m_Items: []
+  - m_Id: 77938664832368640
+    m_Key: endtext_procedures_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77938741529411584
+    m_Key: endtext_procedures_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77938753076330496
+    m_Key: endtext_procedures_3
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

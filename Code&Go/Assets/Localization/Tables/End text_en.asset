@@ -234,5 +234,18 @@ MonoBehaviour:
     m_Localized: You only have one category left!
     m_Metadata:
       m_Items: []
+  - m_Id: 77938753076330496
+    m_Localized: You have completed the game! Do you have any stars left to collect?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77938664832368640
+    m_Localized: When you call a function, the code inside the function is executed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77938741529411584
+    m_Localized: Functions help us to avoid writing repetitive code and generate
+      cleanliness
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
