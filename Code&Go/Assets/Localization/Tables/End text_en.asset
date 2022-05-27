@@ -98,5 +98,37 @@ MonoBehaviour:
     m_Localized: I wonder if there is a way to avoid repeating so much code...
     m_Metadata:
       m_Items: []
+  - m_Id: 77807675334328320
+    m_Localized: You can always make use of your variables!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77807692698746880
+    m_Localized: You can also rotate objects using their nametags
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809525018198016
+    m_Localized: Perfect combination of mirrors!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809542026100736
+    m_Localized: Each laser points to a sphere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809555011665920
+    m_Localized: Closed doors block the passage of lasers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809588293468160
+    m_Localized: You can't move if another object is in your way
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809603330048000
+    m_Localized: Again handling multiple lasers. Great!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809619033522176
+    m_Localized: At "true" the door opens
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

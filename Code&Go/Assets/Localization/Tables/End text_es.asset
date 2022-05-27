@@ -99,5 +99,37 @@ MonoBehaviour:
       c\xF3digo..."
     m_Metadata:
       m_Items: []
+  - m_Id: 77807675334328320
+    m_Localized: "\xA1Siempre podr\xE1s hacer uso de tus variables!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77807692698746880
+    m_Localized: "Tambi\xE9n puedes rotar los objetos usando sus etiquetas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809525018198016
+    m_Localized: "\xA1Combo perfecto de espejos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809542026100736
+    m_Localized: "Cada l\xE1ser apunta a una esfera"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809555011665920
+    m_Localized: "Las puertas cerradas bloquean el paso del l\xE1ser"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809588293468160
+    m_Localized: No puedes moverte si otro objeto te obstaculiza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809603330048000
+    m_Localized: "De nuevo manejando varios l\xE1seres. \xA1Genial!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809619033522176
+    m_Localized: En "verdadero" la puerta se abre
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
