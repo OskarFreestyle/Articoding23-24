@@ -33,6 +33,7 @@ namespace UBlockly.UGUI
             m_BtnRun.onClick.AddListener(OnRun);
             m_BtnPause.onClick.AddListener(OnPause);
             m_BtnStop.onClick.AddListener(OnStop);
+            m_BtnStop.gameObject.SetActive(false); //articoding
             m_BtnStep.onClick.AddListener(OnStep);
 
             m_ToggleNormal.isOn = true;
@@ -107,8 +108,7 @@ namespace UBlockly.UGUI
         private void OnRun()
         {            
             m_BtnRun.gameObject.SetActive(false);
-            // TODO: Cuando queramos que se pueda parar la ejecucion, recuperar este boton
-            //m_BtnPause.gameObject.SetActive(true);
+
             EnableSettings(false);
 
             if (CSharp.Runner.CurStatus == Runner.Status.Stop)
@@ -139,8 +139,8 @@ namespace UBlockly.UGUI
 
         private void OnStop()
         {
+            m_BtnStop.enabled = false; //articoding
             CSharp.Runner.Stop();
-            m_BtnStop.enabled = false;
         }
 
         private void OnStep()

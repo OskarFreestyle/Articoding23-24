@@ -299,6 +299,7 @@ public class LevelManager : MonoBehaviour
         guideButton.enabled = false;
         runButton.enabled = false;
         stopButton.enabled = true;
+        stopButton.gameObject.SetActive(true);
     }
 
     void EnableHeaderButtons()
@@ -309,6 +310,7 @@ public class LevelManager : MonoBehaviour
         guideButton.enabled = true;
         runButton.enabled = true;
         stopButton.enabled = false;
+        stopButton.gameObject.SetActive(false);
     }
 
     public void SetActiveExitConfirmationPanel(bool active)

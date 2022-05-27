@@ -237,6 +237,7 @@ public class LevelTestManager : MonoBehaviour
         modeButton.enabled = false;
         runButton.enabled = false;
         stopButton.enabled = true;
+        stopButton.gameObject.SetActive(true);
     }
 
     void EnableHeaderButtons()
@@ -246,6 +247,7 @@ public class LevelTestManager : MonoBehaviour
         modeButton.enabled = true;
         runButton.enabled = true;
         stopButton.enabled = false;
+        stopButton.gameObject.SetActive(false);
     }
 
     public void SetActiveExitConfirmationPanel(bool active)
