@@ -191,6 +191,42 @@ MonoBehaviour:
     m_Key: endtext_loops_9
     m_Metadata:
       m_Items: []
+  - m_Id: 77856345555599360
+    m_Key: endtext_conditionals_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856430309900288
+    m_Key: endtext_conditionals_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856443593261056
+    m_Key: endtext_conditionals_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856456545271808
+    m_Key: endtext_conditionals_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856465542053888
+    m_Key: endtext_conditionals_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856477483237376
+    m_Key: endtext_conditionals_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856498320539648
+    m_Key: endtext_conditionals_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856520630042624
+    m_Key: endtext_conditionals_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856531577176064
+    m_Key: endtext_conditionals_9
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

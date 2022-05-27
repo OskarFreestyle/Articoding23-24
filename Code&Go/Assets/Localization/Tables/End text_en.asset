@@ -198,5 +198,41 @@ MonoBehaviour:
     m_Localized: You finished another category!
     m_Metadata:
       m_Items: []
+  - m_Id: 77856345555599360
+    m_Localized: If the condition is "true" it will execute the code inside the block
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856430309900288
+    m_Localized: By using conditionals inside loops you can vary what they execute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856443593261056
+    m_Localized: It is interesting to combine loops with conditionals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856456545271808
+    m_Localized: Moving objects in parallel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856465542053888
+    m_Localized: The "else" block is executed when the condition "if" is "false"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856477483237376
+    m_Localized: Thanks to conditionals we can adapt the code according to the situation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856498320539648
+    m_Localized: You sure know how to use conditionals!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856520630042624
+    m_Localized: Let's review a little more
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856531577176064
+    m_Localized: You only have one category left!
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

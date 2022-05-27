@@ -201,5 +201,44 @@ MonoBehaviour:
     m_Localized: "\xA1Terminaste otra categor\xEDa!"
     m_Metadata:
       m_Items: []
+  - m_Id: 77856345555599360
+    m_Localized: "Si la condici\xF3n es \"verdadero\" ejecutar\xE1 el c\xF3digo de
+      dentro del bloque"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856430309900288
+    m_Localized: Usando condicionales dentro de bucles puedes variar lo que ejecuten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856443593261056
+    m_Localized: Es interesante combinar bucles con condicionales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856456545271808
+    m_Localized: Moviendo objetos a la par
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856465542053888
+    m_Localized: "El bloque \"si no\" se ejecuta cuando la condici\xF3n \"si\" es
+      \"falso\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856477483237376
+    m_Localized: "Gracias a los condicionales podemos adaptar el c\xF3digo seg\xFAn
+      la situaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856498320539648
+    m_Localized: "\xA1Si que sabes hacer uso de los condicionales!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856520630042624
+    m_Localized: "Repasemos un poquito m\xE1s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77856531577176064
+    m_Localized: "\xA1Ya solo te queda una categor\xEDa!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
