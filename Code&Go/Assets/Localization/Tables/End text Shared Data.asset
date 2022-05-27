@@ -123,6 +123,42 @@ MonoBehaviour:
     m_Key: endtext_types_9
     m_Metadata:
       m_Items: []
+  - m_Id: 77812983632887808
+    m_Key: endtext_operators_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813074368266240
+    m_Key: endtext_operators_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813080710053888
+    m_Key: endtext_operators_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813082274529280
+    m_Key: endtext_operators_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813083897724928
+    m_Key: endtext_operators_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813085470588928
+    m_Key: endtext_operators_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813106341445632
+    m_Key: endtext_operators_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813107645874176
+    m_Key: endtext_operators_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813108954497024
+    m_Key: endtext_operators_9
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

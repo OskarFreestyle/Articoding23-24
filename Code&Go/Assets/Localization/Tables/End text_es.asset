@@ -131,5 +131,42 @@ MonoBehaviour:
     m_Localized: En "verdadero" la puerta se abre
     m_Metadata:
       m_Items: []
+  - m_Id: 77812983632887808
+    m_Localized: "Si la condici\xF3n se cumple devolver\xE1 \"verdadero\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813074368266240
+    m_Localized: "Y sin bloques iniciales. \xA1Enhorabuena!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813080710053888
+    m_Localized: "Si no ves bien el c\xF3digo puedes usar las lupas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813082274529280
+    m_Localized: "Como se nota tu progreso. \xA1Sigue as\xED!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813083897724928
+    m_Localized: "Cuando una baldosa est\xE1 ocupada ser\xE1 \"verdadero\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813085470588928
+    m_Localized: "\"o\" devolver\xE1 \"verdadero\" si al menos una de las condiciones
+      lo es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813106341445632
+    m_Localized: "\"no\" invierte el resultado de la condici\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813107645874176
+    m_Localized: Parece que ya dominas los condicionales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813108954497024
+    m_Localized: "\xA1Enhorabuena! Has terminado la categor\xEDa de Operadores"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -130,5 +130,41 @@ MonoBehaviour:
     m_Localized: At "true" the door opens
     m_Metadata:
       m_Items: []
+  - m_Id: 77812983632887808
+    m_Localized: If the condition is met it will return "true"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813074368266240
+    m_Localized: And without initial blocks, congratulations!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813080710053888
+    m_Localized: If you can't see the code well you can use the loupes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813082274529280
+    m_Localized: Your progress is noticeable, keep it up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813083897724928
+    m_Localized: When a tile is occupied it will be "true"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813085470588928
+    m_Localized: '"or" will return "true" if at least one of the conditions is true'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813106341445632
+    m_Localized: '"not" reverses the result of the condition'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813107645874176
+    m_Localized: You seem to have mastered the conditionals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77813108954497024
+    m_Localized: Congratulations! You have completed the Operators category
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
