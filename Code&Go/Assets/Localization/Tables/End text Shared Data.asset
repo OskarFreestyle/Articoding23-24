@@ -15,112 +15,36 @@ MonoBehaviour:
   m_TableCollectionName: End text
   m_TableCollectionNameGuidString: 84c2393b91541f444811c7fc43a5c75a
   m_Entries:
-  - m_Id: 22732038144
-    m_Key: endtext_tutorials_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 119771455488
-    m_Key: endtext_tutorials_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 156261900288
-    m_Key: endtext_tutorials_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 165569060864
-    m_Key: endtext_tutorials_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 193448599552
-    m_Key: endtext_tutorials_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 221579796480
-    m_Key: endtext_variables_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 283781324800
-    m_Key: endtext_variables_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2849116914331648
-    m_Key: endtext_variables_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55022188878245888
-    m_Key: endtext_types_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55026933776920576
-    m_Key: endtext_types_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57970753007124480
-    m_Key: endtext_tutorials_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57972246212902912
-    m_Key: endtext_tutorials_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57973978699530240
-    m_Key: endtext_variables_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57975019243438080
-    m_Key: endtext_variables_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57975506189549568
-    m_Key: endtext_variables_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57976385655406592
-    m_Key: endtext_variables_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57997714316197888
-    m_Key: endtext_variables_9
-    m_Metadata:
-      m_Items: []
-  - m_Id: 58316743115407360
-    m_Key: endtext_variables_10
-    m_Metadata:
-      m_Items: []
-  - m_Id: 69069279468335104
+  - m_Id: 77841938687590400
     m_Key: endtext_loops_1
     m_Metadata:
       m_Items: []
-  - m_Id: 77807675334328320
-    m_Key: endtext_variables_6
+  - m_Id: 77841940268843008
+    m_Key: endtext_loops_2
     m_Metadata:
       m_Items: []
-  - m_Id: 77807692698746880
-    m_Key: endtext_types_3
+  - m_Id: 77841941602631680
+    m_Key: endtext_loops_3
     m_Metadata:
       m_Items: []
-  - m_Id: 77809525018198016
-    m_Key: endtext_types_4
+  - m_Id: 77842149275205632
+    m_Key: endtext_loops_4
     m_Metadata:
       m_Items: []
-  - m_Id: 77809542026100736
-    m_Key: endtext_types_5
+  - m_Id: 77842150080512000
+    m_Key: endtext_loops_5
     m_Metadata:
       m_Items: []
-  - m_Id: 77809555011665920
-    m_Key: endtext_types_6
+  - m_Id: 77842150751600640
+    m_Key: endtext_loops_6
     m_Metadata:
       m_Items: []
-  - m_Id: 77809588293468160
-    m_Key: endtext_types_7
+  - m_Id: 77842151720484864
+    m_Key: endtext_loops_7
     m_Metadata:
       m_Items: []
-  - m_Id: 77809603330048000
-    m_Key: endtext_types_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 77809619033522176
-    m_Key: endtext_types_9
+  - m_Id: 77842235409432576
+    m_Key: endtext_loops_8
     m_Metadata:
       m_Items: []
   - m_Id: 77812983632887808
@@ -157,6 +81,114 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 77813108954497024
     m_Key: endtext_operators_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22732038144
+    m_Key: endtext_tutorials_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 119771455488
+    m_Key: endtext_tutorials_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156261900288
+    m_Key: endtext_tutorials_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 165569060864
+    m_Key: endtext_tutorials_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 193448599552
+    m_Key: endtext_tutorials_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57970753007124480
+    m_Key: endtext_tutorials_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57972246212902912
+    m_Key: endtext_tutorials_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55022188878245888
+    m_Key: endtext_types_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55026933776920576
+    m_Key: endtext_types_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77807692698746880
+    m_Key: endtext_types_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809525018198016
+    m_Key: endtext_types_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809542026100736
+    m_Key: endtext_types_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809555011665920
+    m_Key: endtext_types_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809588293468160
+    m_Key: endtext_types_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809603330048000
+    m_Key: endtext_types_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77809619033522176
+    m_Key: endtext_types_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221579796480
+    m_Key: endtext_variables_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58316743115407360
+    m_Key: endtext_variables_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57973978699530240
+    m_Key: endtext_variables_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57975019243438080
+    m_Key: endtext_variables_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 283781324800
+    m_Key: endtext_variables_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2849116914331648
+    m_Key: endtext_variables_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77807675334328320
+    m_Key: endtext_variables_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57975506189549568
+    m_Key: endtext_variables_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57976385655406592
+    m_Key: endtext_variables_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57997714316197888
+    m_Key: endtext_variables_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842251213570048
+    m_Key: endtext_loops_9
     m_Metadata:
       m_Items: []
   m_Metadata:

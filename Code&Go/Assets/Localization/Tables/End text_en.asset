@@ -94,10 +94,6 @@ MonoBehaviour:
       the category!
     m_Metadata:
       m_Items: []
-  - m_Id: 69069279468335104
-    m_Localized: I wonder if there is a way to avoid repeating so much code...
-    m_Metadata:
-      m_Items: []
   - m_Id: 77807675334328320
     m_Localized: You can always make use of your variables!
     m_Metadata:
@@ -164,6 +160,42 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 77813108954497024
     m_Localized: Congratulations! You have completed the Operators category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77841938687590400
+    m_Localized: I wonder know if there is a way to avoid repeating so much code...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77841940268843008
+    m_Localized: You can repeat the code inside the block as many times as you wish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77841941602631680
+    m_Localized: Anything you don't want to be repeated, put it out of the loop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842149275205632
+    m_Localized: It's important to reduce the amount of code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842150080512000
+    m_Localized: You can use the variables to change the effect of the loops
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842150751600640
+    m_Localized: Again you can use the same loop for several objects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842151720484864
+    m_Localized: Objects can be used in several ways
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842235409432576
+    m_Localized: You are getting better and better
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842251213570048
+    m_Localized: You finished another category!
     m_Metadata:
       m_Items: []
   references:

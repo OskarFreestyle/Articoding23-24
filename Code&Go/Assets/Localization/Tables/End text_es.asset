@@ -94,11 +94,6 @@ MonoBehaviour:
       la categor\xEDa!"
     m_Metadata:
       m_Items: []
-  - m_Id: 69069279468335104
-    m_Localized: "Me pregunto si habr\xE1 alguna forma de no tener que repetir tanto
-      c\xF3digo..."
-    m_Metadata:
-      m_Items: []
   - m_Id: 77807675334328320
     m_Localized: "\xA1Siempre podr\xE1s hacer uso de tus variables!"
     m_Metadata:
@@ -166,6 +161,44 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 77813108954497024
     m_Localized: "\xA1Enhorabuena! Has terminado la categor\xEDa de Operadores"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77841938687590400
+    m_Localized: "Me pregunto si habr\xE1 alguna forma para evitar repetir tanto
+      c\xF3digo..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77841940268843008
+    m_Localized: "Puedes repetir el c\xF3digo de dentro del bloque tantas veces como
+      indiques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77841941602631680
+    m_Localized: Todo lo que no quieras que se repita ponlo fuera del bucle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842149275205632
+    m_Localized: "Es importante reducir la cantidad de c\xF3digo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842150080512000
+    m_Localized: Puedes usar las variables para cambiar el efecto de los bucles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842150751600640
+    m_Localized: De nuevo puedes usar el mismo bucle para varios objetos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842151720484864
+    m_Localized: Los objetos se pueden usar de varias formas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842235409432576
+    m_Localized: Cada vez te desenvuelves mejor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77842251213570048
+    m_Localized: "\xA1Terminaste otra categor\xEDa!"
     m_Metadata:
       m_Items: []
   references:
