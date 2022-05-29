@@ -10,32 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 1_IfElse0
+  m_Name: 11_Duplicar
   m_EditorClassIdentifier: 
-  type: 0
-  title: Bloque "si, si no"
-  content: "\xA1Mira esta carta! Es un poco diferente al bloque \"si\". \xA1Nos deja
-    ejecutar otro c\xF3digo cuando no se cumple la condici\xF3n!"
-  next: {fileID: 11400000, guid: 987b0b351d2654a4896d4d1bb934a454, type: 2}
-  image: {fileID: 21300000, guid: b1555856eec5f154db9c07bbf571d2bf, type: 3}
+  type: 1
+  title: Duplicar tarjetas
+  content: "Haz clic derecho sobre una tarjeta para duplicarla si tienes disponibles
+    m\xE1s tarjetas del mismo tipo"
+  next: {fileID: 0}
+  image: {fileID: 0}
   localizedTitle:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 81554717810503680
+      m_KeyId: 63816708735852544
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 81554883732975616
+      m_KeyId: 63816868958265344
       m_Key: 
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
       m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 114647513439363072
+      m_KeyId: 61724555445854208
       m_Key: 
     m_FallbackState: 0

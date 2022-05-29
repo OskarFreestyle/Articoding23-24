@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: allUnlocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: categories.Array.size
@@ -1768,17 +1768,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 37b3ce52663950440980415e6610e9be, type: 2}
   - {fileID: 11400000, guid: 11f13378b87243241b4cc8bf699652e5, type: 2}
   - {fileID: 11400000, guid: a96e916be95884e4a871a711f1af2c93, type: 2}
-  - {fileID: 11400000, guid: bd21cd1442f54e34d98b0a844f851a72, type: 2}
   - {fileID: 11400000, guid: 458b86697f807bc44a1c2658d517ef8c, type: 2}
   - {fileID: 11400000, guid: b9734e7999035c946b1c25d10d243094, type: 2}
   - {fileID: 11400000, guid: cfc2cc2b94cdd594ca5dd92c74d357bb, type: 2}
   - {fileID: 11400000, guid: 6a0845fe6a0ca6743b86d42542884c13, type: 2}
+  - {fileID: 11400000, guid: cc5e98daf00136f40b7942029e15d6d9, type: 2}
+  - {fileID: 11400000, guid: 2708f8c4b2bee754bbc3498378b1c278, type: 2}
+  - {fileID: 11400000, guid: 6e0729fe19c84c3468f56e1154b380ef, type: 2}
+  - {fileID: 11400000, guid: 964a4f0fa438c704ea7bf54690e1469d, type: 2}
   - {fileID: 11400000, guid: 0060832cdf1639243bfdaaf4b0da217d, type: 2}
   - {fileID: 11400000, guid: 409bbf2b102802544b2ad0873046bd0e, type: 2}
   - {fileID: 11400000, guid: 6df275ff49be63c4bb240cac1436e00f, type: 2}
   - {fileID: 11400000, guid: f77ba652e936e8846b27e7795868a200, type: 2}
   - {fileID: 11400000, guid: 6ee64b0635057c74aa4e112ecce2ba87, type: 2}
-  - {fileID: 11400000, guid: 426e3a823249f6a4db7dcc8d7f4aca6e, type: 2}
   - {fileID: 11400000, guid: 9e504f43d665a734eb0a610eaaf1068d, type: 2}
   - {fileID: 11400000, guid: e84cb5ed2c8a5f344925a6e00b6150d3, type: 2}
   - {fileID: 11400000, guid: afab5220ecbaaa44d846d12f3c32b852, type: 2}
@@ -1787,10 +1789,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5631543e91f77bf409e5d9a103c0aae1, type: 2}
   - {fileID: 11400000, guid: 5d77a102564a98846bfbe7fe150feec3, type: 2}
   - {fileID: 11400000, guid: 741bdcbc9f9d88348bc058b1ad25c5e0, type: 2}
-  - {fileID: 11400000, guid: 08b5f47b1048e1e42b2b541b52064bbc, type: 2}
+  - {fileID: 11400000, guid: 03b392b84333f154d95b66344a41a7c6, type: 2}
+  - {fileID: 11400000, guid: dce3fba348f015c45a5dc62d31e2cd71, type: 2}
   - {fileID: 11400000, guid: 7c1172ceee543bc408e1986f59a6bea7, type: 2}
-  - {fileID: 11400000, guid: 3960e1f34c100b14eb5728ead9d4595f, type: 2}
   - {fileID: 11400000, guid: 0e2be3b523edebe4c8d5fa163bda7489, type: 2}
+  - {fileID: 11400000, guid: 3960e1f34c100b14eb5728ead9d4595f, type: 2}
 --- !u!4 &248057272
 Transform:
   m_ObjectHideFlags: 0
@@ -7900,7 +7903,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1051489696}
   m_HandleRect: {fileID: 1966084407}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15036,7 +15039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: tutorialsON
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: popUpManager

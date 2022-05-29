@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 12_Duplicar
+  m_Name: 5_Negacion_0
   m_EditorClassIdentifier: 
-  type: 1
-  title: Duplicar tarjetas
-  content: "Haz clic derecho sobre una tarjeta para duplicarla si tienes disponibles
-    m\xE1s tarjetas del mismo tipo"
-  next: {fileID: 0}
+  type: 0
+  title: "Negaci\xF3n"
+  content: "\xA1Vaya! \xBFC\xF3mo vamos a abrir esa puerta? Solo podemos comprobar
+    cosas que pasan... \xA1Ya lo tengo! Usa este operador \"no\". \xA1Ahora podemos
+    comprobar cosas que NO pasan!"
+  next: {fileID: 11400000, guid: a4387892109f75b49b6e9d9835089ecc, type: 2}
   image: {fileID: 0}
   localizedTitle:
     m_TableReference:
-      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
+      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 63816708735852544
+      m_KeyId: 216012202627072
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 63816868958265344
+      m_KeyId: 71759735952125952
       m_Key: 
     m_FallbackState: 0
   localizedImage:

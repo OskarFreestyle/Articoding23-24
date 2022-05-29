@@ -10,33 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 5_CeldaOcupada_1
+  m_Name: 5_Tutoriales
   m_EditorClassIdentifier: 
-  type: 8
-  title: Celda Ocupada
-  content: "Usa la tarjeta para comprobar el estado de las baldosas de un color en
-    el tablero. Si todas est\xE1n ocupadas, devolver\xE1 un valor \"true\"; si hay
-    alguna libre, devolver\xE1 un valor \"false\"."
-  next: {fileID: 11400000, guid: b078094ff5bad724f9ce65fa1c4738f5, type: 2}
-  image: {fileID: 21300000, guid: 3d6192fb233951248a5ed00720dbdb1c, type: 3}
+  type: 2
+  title: Volver a ver Tutoriales
+  content: "Tambi\xE9n puedes consultar el manual si quieres repasar algo de nuevo"
+  next: {fileID: 0}
+  image: {fileID: 21300000, guid: 41f54c9739f95eb4fbc33ba29b0e2e3e, type: 3}
   localizedTitle:
     m_TableReference:
       m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 215650099974144
+      m_KeyId: 232223330193408
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
-      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
+      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 71751106096148480
+      m_KeyId: 232403949506560
       m_Key: 
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
       m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 61724555445854208
+      m_KeyId: 114646946843418624
       m_Key: 
     m_FallbackState: 0

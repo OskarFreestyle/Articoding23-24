@@ -10,32 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 1_IfElse1
+  m_Name: 12_Estrella_Bloque
   m_EditorClassIdentifier: 
-  type: 7
-  title: Bloque "si, si no"
-  content: "\xA1Mira esta carta! Es un poco diferente al bloque \"si\". \xA1Nos deja
-    ejecutar otro c\xF3digo cuando no se cumple la condici\xF3n!"
+  type: 1
+  title: Duplicar tarjetas
+  content: "\xBFVes esta estrella? Si usas los bloques que tienen una estrella, \xA1conseguir\xE1s
+    una estrella al final del nivel!"
   next: {fileID: 0}
-  image: {fileID: 21300000, guid: b1555856eec5f154db9c07bbf571d2bf, type: 3}
+  image: {fileID: 0}
   localizedTitle:
     m_TableReference:
-      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
+      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 81554717810503680
+      m_KeyId: 130639555496124416
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 81554915936841728
+      m_KeyId: 79148412690636800
       m_Key: 
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
       m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 114647513439363072
+      m_KeyId: 61724555445854208
       m_Key: 
     m_FallbackState: 0

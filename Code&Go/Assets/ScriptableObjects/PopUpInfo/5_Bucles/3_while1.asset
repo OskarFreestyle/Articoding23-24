@@ -10,33 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 5_CeldaOcupada_0
+  m_Name: 3_while1
   m_EditorClassIdentifier: 
-  type: 0
-  title: Celda Ocupada
-  content: "\xA1Mira! He encontrado esta tarjeta. A ver... \xA1Ah! Parece que comprueba
-    si hay algunas baldosas ocupadas o no. Me pregunto si podr\xEDamos usarla para
-    algo..."
-  next: {fileID: 11400000, guid: cc2c92d3b652bcc4e8c066c618ef9af5, type: 2}
-  image: {fileID: 21300000, guid: 3d6192fb233951248a5ed00720dbdb1c, type: 3}
+  type: 6
+  title: Repetir mientras que
+  content: "Usa el bloque de \"mientras que\" cuando quieras repetir el c\xF3digo
+    hasta que se cumpla una condici\xF3n."
+  next: {fileID: 0}
+  image: {fileID: 21300000, guid: 34beba016d89b98459f4a6983fda9228, type: 3}
   localizedTitle:
     m_TableReference:
       m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 215650099974144
+      m_KeyId: 222928127578112
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 71751036743331840
+      m_KeyId: 80101943394578432
       m_Key: 
     m_FallbackState: 0
   localizedImage:
     m_TableReference:
       m_TableCollectionName: GUID:8b643ace1f13e814484b503a64e70316
     m_TableEntryReference:
-      m_KeyId: 61724555445854208
+      m_KeyId: 114647695702843392
       m_Key: 
     m_FallbackState: 0

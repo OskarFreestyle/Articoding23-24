@@ -10,25 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a0e3270f25d68e4c9277895f9ca890b, type: 3}
-  m_Name: 10_Introduccion5
+  m_Name: 2_forChanges
   m_EditorClassIdentifier: 
   type: 0
-  title: Novel 5
-  content: "Aqu\xED tienes otro nivel resuelto"
+  title: "Repetir un n\xFAmero de veces"
+  content: "\xBFY si cambiamos el objeto dentro del bucle? As\xED podemos hacer las
+    mismas cosas sobre objetos diferentes. \xA1Prueba a poner esta l\xEDnea al final
+    del bucle!"
   next: {fileID: 0}
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: a028f5049c517e84aa272e3b8cbe5f92, type: 3}
   localizedTitle:
     m_TableReference:
-      m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
+      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
     m_TableEntryReference:
-      m_KeyId: 13071693836533760
+      m_KeyId: 130271607107493888
       m_Key: 
     m_FallbackState: 0
   localizedContent:
     m_TableReference:
       m_TableCollectionName: GUID:a7210f51a0697f647a039bb956365be6
     m_TableEntryReference:
-      m_KeyId: 13071943355678720
+      m_KeyId: 78779026041610240
       m_Key: 
     m_FallbackState: 0
   localizedImage:
