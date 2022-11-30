@@ -42,6 +42,11 @@ public class ActiveBlocks
         return  JsonUtility.FromJson<ActiveBlocks>(text);
     }
 
+    public string ToJson(bool pretty = false)
+    {
+        return JsonUtility.ToJson(this, pretty);
+    }
+
     public Dictionary<string, CategoryBlocks> AsMap()
     {
         Dictionary<string, CategoryBlocks> map = new Dictionary<string, CategoryBlocks>();
