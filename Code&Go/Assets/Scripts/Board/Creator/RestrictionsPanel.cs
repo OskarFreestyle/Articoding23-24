@@ -85,6 +85,11 @@ public class RestrictionsPanel : MonoBehaviour
         writer.Close();
     }
 
+    public ActiveBlocks GetActiveBlocks()
+    {
+        return activeBlocks;
+    }
+
     private ActiveBlocks activeBlocks;
 
     // Category and blocks name arrays

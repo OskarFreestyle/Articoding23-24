@@ -43,6 +43,8 @@ public class LevelTestManager : MonoBehaviour
     public GameObject endPanelMinimized;
     public GameObject exitConfirmationPanel;
 
+    public RestrictionsPanel restrictionsPanel;
+
     public GameObject gameOverPanel;
     public GameObject gameOverMinimized;
 
@@ -116,6 +118,7 @@ public class LevelTestManager : MonoBehaviour
 
         if (!inCreator)
         {
+            ActivateLevelBlocks(restrictionsPanel.GetActiveBlocks());
             completed = false;
             initialState = board.GetBoardState();
             cameraFit.SetViewPort(levelViewport);
@@ -140,6 +143,7 @@ public class LevelTestManager : MonoBehaviour
             cameraFit.SetViewPort(creatorViewPort);
             changeModeButton.GetComponent<Image>().sprite = changeToPlayModeSprite;
             boardCreator.FitBoard();
+
 
             if (fromButton)
                 TrackerAsset.Instance.setVar("mode", "edition");
@@ -262,6 +266,12 @@ public class LevelTestManager : MonoBehaviour
         if (textAsset == null) return;
 
         StartCoroutine(AsyncActivateLevelBlocks(textAsset, allActive));
+    }
+
+    public void ActivateLevelBlocks(ActiveBlocks ablocks)
+    {
+        ActiveBlocks blocks = ablocks;
+        BlocklyUI.WorkspaceView.Toolbox.SetActiveBlocks(blocks.AsMap());
     }
 
     IEnumerator AsyncActivateLevelBlocks(TextAsset textAsset, bool allActive)
