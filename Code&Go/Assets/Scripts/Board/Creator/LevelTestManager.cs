@@ -6,6 +6,7 @@ using UnityEngine;
 using AssetPackage;
 using UBlockly.UGUI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class LevelTestManager : MonoBehaviour
 {
@@ -90,7 +91,7 @@ public class LevelTestManager : MonoBehaviour
             endPanel.SetActive(true);
             blackRect.SetActive(true);
             streamRoom.FinishLevel();
-            ProgressManager.Instance.UserCreatedLevel(initialState.ToJson());
+            ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), "NaN");
 
             string levelName = GameManager.Instance.GetCurrentLevelName();
             TrackerAsset.Instance.setVar("steps", board.GetCurrentSteps());
@@ -285,4 +286,20 @@ public class LevelTestManager : MonoBehaviour
 
         yield return null;
     }
+ 
+    public void SaveCustomLevel()
+    {
+        //LevelData levelData = ScriptableObject.CreateInstance<LevelData>();
+        //levelData.levelName = "Hola";
+        //levelData.levelBoard = initialState.GetBoardState();
+       // levelData.initialState = initialState.GetBoardState();
+       //levelData.activeBlocks = restrictionsPanel.GetActiveBlocks();
+       //levelData.allActive = false;
+       //levelBoard.auxLevelBoard = 
+       //levelData.minimosPasos = 1;
+       //levelData.endTextLocalized = "quien eres";
+        ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson());
+
+    }
+
 }

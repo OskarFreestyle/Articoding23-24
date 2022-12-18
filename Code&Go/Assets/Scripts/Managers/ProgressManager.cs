@@ -5,7 +5,7 @@ using System.IO;
 using System;
 using UnityEngine.Localization;
 using AssetPackage;
-
+using UnityEditor;
 public class ProgressManager : MonoBehaviour
 {
     public static ProgressManager Instance;
@@ -262,7 +262,7 @@ public class ProgressManager : MonoBehaviour
         return name;
     }
 
-    public void UserCreatedLevel(string board)
+    public void UserCreatedLevel(string board, string customActiveBlocks)
     {
         //si el nivel ya existe no se guarda
         if (levelsCreatedHash.Contains(Hash.ToHash(board, ""))) return;
@@ -286,7 +286,25 @@ public class ProgressManager : MonoBehaviour
         writer.Write(board);
         writer.Close();
 
-        AddLevelCreated(board, index);
+        /**/    
+        if (!customActiveBlocks.Equals("NaN")) { 
+            Debug.Log("Entro en el if");
+            string directoryRestrinction = Path.Combine(path, "Levels/LevelsCreated/");
+            string filePathRestrinction = directoryRestrinction + "pepito" + ".json";
+            Debug.Log(filePathRestrinction);
+            FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
+            fileRestriction.Close();
+            StreamWriter writerRestriction = new StreamWriter(filePathRestrinction);
+            writerRestriction.Write(customActiveBlocks);
+            writerRestriction.Close();
+            TextAsset customActiveBlocksAssets = Resources.Load(filePathRestrinction) as TextAsset;
+            AddLevelCreated(board, index, customActiveBlocksAssets);
+        } else {
+             Debug.Log("NOOO Entro en el if");
+            AddLevelCreated(board, index, activeBlocks);
+        }
+               
+        /**/
         Array.Resize(ref levelsCreated.levelsCreated, levelsCreated.levelsCreated.Length + 1);
         levelsCreated.levelsCreated[levelsCreated.levelsCreated.GetUpperBound(0)] = levelName;
     }
@@ -303,12 +321,16 @@ public class ProgressManager : MonoBehaviour
         {
             string levelName = levelsCreated.levelsCreated[i];
             string filePath = Path.Combine(path, "Boards/LevelsCreated/" + levelName + ".userLevel");
+
+            string directoryRestrinction = Path.Combine(path, "Assets/Levels/LevelsCreated/");
+            string filePathRestrinction = directoryRestrinction + "pepito" + ".json";
+            TextAsset activeBlocks = Resources.Load(filePathRestrinction) as TextAsset;
             try
             {
                 StreamReader reader = new StreamReader(filePath);
                 string readerData = reader.ReadToEnd();
                 reader.Close();
-                AddLevelCreated(readerData, i + 1);
+                AddLevelCreated(readerData, i + 1, activeBlocks);
             }
             catch
             {
@@ -317,11 +339,14 @@ public class ProgressManager : MonoBehaviour
         }
     }
 
-    private void AddLevelCreated(string board, int index)
+    private void AddLevelCreated(string board, int index, TextAsset customActiveBlocks)
     {
         LevelData data = ScriptableObject.CreateInstance<LevelData>();
         //TODO//data.description = "Nivel creado por el usuario";
-        data.activeBlocks = activeBlocks;
+
+            data.activeBlocks = customActiveBlocks;
+
+        
         data.levelName = "level_created_" + index.ToString();
         data.auxLevelBoard = board;
         data.minimosPasos = 10;
@@ -329,8 +354,12 @@ public class ProgressManager : MonoBehaviour
         data.levelNameLocalized = createdLevelString;
         //data.endTextLocalized = null;
 
+        categories[2].levels.Add(data);
         levelsCreatedCategory.levels.Add(data);
         levelsCreatedHash.Add(board);
+
+        AssetDatabase.CreateAsset(data,"Assets/ScriptableObjects/Levels/2_Variables/cosa.asset");
+        AssetDatabase.SaveAssets();
     }
 
     //Save and Load
