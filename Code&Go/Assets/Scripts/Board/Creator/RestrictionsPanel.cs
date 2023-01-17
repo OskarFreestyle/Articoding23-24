@@ -49,28 +49,29 @@ public class RestrictionsPanel : MonoBehaviour
         else activeBlocks.categories[catIndex].categoryName = "";
     }
 
-    public void SetBlockAllow(string category, string block, bool allowed)
+    public void SetBlockAllow(string category, string block)
     {
         int catIndex = GetCategoryData(category);
         int blockIndex = GetBlockInfo(catIndex, block);
-        if (allowed) activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].blockName = categoryBlockNames[catIndex][blockIndex];
+        bool isActive = activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].blockName != "";
+        if (!isActive) activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].blockName = categoryBlockNames[catIndex][blockIndex];
         else activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].blockName = "";
     }
 
     private int GetCategoryData(string name)
     {
-        for(int i = 0; i < activeBlocks.categories.Length; i++)
+        for(int i = 0; i < categoryNames.Length; i++)
         {
-            if (activeBlocks.categories[i].categoryName == name) return i;
+            if (categoryNames[i] == name) return i;
         }
         return -1;
     }
 
     private int GetBlockInfo(int category, string name)
     {
-        for (int i = 0; i < activeBlocks.categories[category].blocksInfo.activeBlocks.Length; i++)
+        for (int i = 0; i < categoryBlockNames[category].Length; i++)
         {
-            if (activeBlocks.categories[category].blocksInfo.activeBlocks[i].blockName == name) return i;
+            if (categoryBlockNames[category][i] == name) return i;
         }
         return -1;
     }
