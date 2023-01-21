@@ -289,15 +289,18 @@ public class ProgressManager : MonoBehaviour
         /**/    
         if (!customActiveBlocks.Equals("NaN")) { 
             Debug.Log("Entro en el if");
-            string directoryRestrinction = Path.Combine(path, "Levels/LevelsCreated/");
-            string filePathRestrinction = directoryRestrinction + "pepito" + ".json";
+            string directoryRestrinction = Path.Combine(path, "Resources/");
+            string filePathRestrinction = directoryRestrinction + levelName + ".json";
             Debug.Log(filePathRestrinction);
             FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
             fileRestriction.Close();
             StreamWriter writerRestriction = new StreamWriter(filePathRestrinction);
             writerRestriction.Write(customActiveBlocks);
             writerRestriction.Close();
-            TextAsset customActiveBlocksAssets = Resources.Load(filePathRestrinction) as TextAsset;
+            AssetDatabase.ImportAsset(filePathRestrinction);
+            TextAsset customActiveBlocksAssets = Resources.Load<TextAsset>(levelName);
+            //AssetDatabase.CreateAsset(customActiveBlocksAssets, filePathRestrinction);
+
             AddLevelCreated(board, index, customActiveBlocksAssets);
         } else {
              Debug.Log("NOOO Entro en el if");
@@ -354,11 +357,11 @@ public class ProgressManager : MonoBehaviour
         data.levelNameLocalized = createdLevelString;
         //data.endTextLocalized = null;
 
-        categories[2].levels.Add(data);
+        categories[7].levels.Add(data);
         levelsCreatedCategory.levels.Add(data);
         levelsCreatedHash.Add(board);
 
-        AssetDatabase.CreateAsset(data,"Assets/ScriptableObjects/Levels/2_Variables/cosa.asset");
+        AssetDatabase.CreateAsset(data,"Assets/ScriptableObjects/Levels/8_LevelsCreated/"+data.levelName+".asset");
         AssetDatabase.SaveAssets();
     }
 

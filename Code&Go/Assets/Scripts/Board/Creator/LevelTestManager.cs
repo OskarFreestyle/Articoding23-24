@@ -63,6 +63,8 @@ public class LevelTestManager : MonoBehaviour
     public Button runButton;
     public Button stopButton;
 
+    private string ipserver;
+
     private void Start()
     {
 
@@ -91,7 +93,7 @@ public class LevelTestManager : MonoBehaviour
             endPanel.SetActive(true);
             blackRect.SetActive(true);
             streamRoom.FinishLevel();
-            ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), "NaN");
+            ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson());
 
             string levelName = GameManager.Instance.GetCurrentLevelName();
             TrackerAsset.Instance.setVar("steps", board.GetCurrentSteps());
@@ -286,19 +288,16 @@ public class LevelTestManager : MonoBehaviour
 
         yield return null;
     }
- 
-    public void SaveCustomLevel()
+
+    public void SetIPServer(string ip)
     {
-        //LevelData levelData = ScriptableObject.CreateInstance<LevelData>();
-        //levelData.levelName = "Hola";
-        //levelData.levelBoard = initialState.GetBoardState();
-       // levelData.initialState = initialState.GetBoardState();
-       //levelData.activeBlocks = restrictionsPanel.GetActiveBlocks();
-       //levelData.allActive = false;
-       //levelBoard.auxLevelBoard = 
-       //levelData.minimosPasos = 1;
-       //levelData.endTextLocalized = "quien eres";
-        ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson());
+        ipserver = ip;
+    }
+ 
+    public void ExportCustomLevel()
+    {
+
+        // Aqui exportamos
 
     }
 

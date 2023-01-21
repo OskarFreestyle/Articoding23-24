@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: categories.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: categories.Array.data[0]
@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: categories.Array.data[6]
       value: 
       objectReference: {fileID: 11400000, guid: 5228a65f591e2954ea2814ee5233c817, type: 2}
+    - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
+      propertyPath: categories.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: c642f429130381c4abd0378f75c2f12c, type: 2}
     - target: {fileID: 4288857746588494250, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -12283,6 +12287,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3cd880f8f74a1a849b532c2b369cb9cc, type: 2}
   - {fileID: 11400000, guid: d8e0fa3ec83da554c8d7cc0e28d9bb4e, type: 2}
   - {fileID: 11400000, guid: 5228a65f591e2954ea2814ee5233c817, type: 2}
+  - {fileID: 11400000, guid: c642f429130381c4abd0378f75c2f12c, type: 2}
   categoriesParent: {fileID: 648946452}
   categoryCardPrefab: {fileID: 4497312642027457297, guid: a93bed07b62db4c4486eecc53e459c17, type: 3}
   levelsParent: {fileID: 888301217}
@@ -12355,6 +12360,12 @@ MonoBehaviour:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
       m_KeyId: 3533794265354240
+      m_Key: 
+    m_FallbackState: 0
+  - m_TableReference:
+      m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
+    m_TableEntryReference:
+      m_KeyId: 135113092386217984
       m_Key: 
     m_FallbackState: 0
   - m_TableReference:
