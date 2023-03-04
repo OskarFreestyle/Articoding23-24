@@ -48,7 +48,7 @@ public class LevelTestManager : MonoBehaviour
 
     public GameObject gameOverPanel;
     public GameObject gameOverMinimized;
-
+    GameObject deactivableObject;
     private bool inCreator = false;
     private BoardState initialState;
     private bool completed = false;
@@ -89,15 +89,21 @@ public class LevelTestManager : MonoBehaviour
         }
         else if (board.BoardCompleted() && !completed)
         {
+        Debug.Log("Entro aqui de jajis");
             completed = true;
             endPanel.SetActive(true);
             blackRect.SetActive(true);
             streamRoom.FinishLevel();
             ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson());
+            /**
+            * TODO No las tengo todas conmigo de que la exportación aqui esté bien, pero creo que es el flujo de gruardado normal
+            */
+            Exportar(initialState, restrictionsPanel.GetActiveBlocks());
 
             string levelName = GameManager.Instance.GetCurrentLevelName();
             TrackerAsset.Instance.setVar("steps", board.GetCurrentSteps());
             TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, true, -1f);
+            
         }
     }
 
@@ -293,12 +299,23 @@ public class LevelTestManager : MonoBehaviour
     {
         ipserver = ip;
     }
- 
+    /**
+    * TODO Aqui llamariamos al exportar, ahora sin nombre ni nada
+    */
+     public void Exportar(BoardState boardstate, ActiveBlocks activeblocks) {
+       deactivableObject  = GameObject.Find("ActivatedObject");
+       //De-activate it
+       deactivableObject.SetActive(true);
+       //Get it's component/script
+       ActivatedScript script = deactivableObject.GetComponent<ActivatedScript>();
+       //Start coroutine on the other script with this MonoBehaviour
+       script.Export(boardstate, activeblocks);
+    }
     public void ExportCustomLevel()
     {
 
         // Aqui exportamos
-
+        //TODO ESTO EN TEORIA NO LO USA NADIE, CREO QUE NOS QUEDO ALGO POR SUBIR DEL ULTIMO DIA DE PAIR, LO PONGO EN ProgressManager PERO LO MISMO LUEGO HAY QUE TRAERLO, PERDONA SI ES ASÍ
     }
 
 }

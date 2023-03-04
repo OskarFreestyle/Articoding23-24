@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Category category;
     public int levelIndex;
     private bool gameLoaded = false;
-
+    GameObject deactivableObject;
     private Dictionary<UBlockly.Block, string> blockIDs;
     void Awake()
     {
@@ -166,5 +167,22 @@ public class GameManager : MonoBehaviour
         foreach(var kv in blockIDs)       
             code = code.Replace(kv.Key.ID, kv.Value);
         return code;
+    }
+
+        
+    
+    /**
+    TODO Aqui llamo a la importación, la cosa seria que ese ID (mas adelante un nombre) se obtuviera por una ventanita...
+    ahora he hecho una cutrada con la estrellita para que llame a esto machetero porque soy inutil con el unity
+    */
+    public void Importar() {
+        string id = "63bb086f1e0a2d98e2d2fe94";
+       deactivableObject  = GameObject.Find("ActivatedObject");
+       //De-activate it
+       deactivableObject.SetActive(true);
+       //Get it's component/script
+       ActivatedScript script = deactivableObject.GetComponent<ActivatedScript>();
+       //Start coroutine on the other script with this MonoBehaviour
+       script.Import(id);
     }
 }

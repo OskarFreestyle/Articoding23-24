@@ -6,6 +6,7 @@ using System;
 using UnityEngine.Localization;
 using AssetPackage;
 using UnityEditor;
+
 public class ProgressManager : MonoBehaviour
 {
     public static ProgressManager Instance;
@@ -72,6 +73,7 @@ public class ProgressManager : MonoBehaviour
     {
         return allUnlocked;
     }
+
 
     //Setters
     //---------
@@ -270,11 +272,11 @@ public class ProgressManager : MonoBehaviour
         int index = levelsCreatedCategory.levels.Count + 1;
         string levelName = "created_level_" + index.ToString();
         string path =
-#if UNITY_EDITOR
-                   Application.dataPath;
-#else
-                   Application.persistentDataPath;
-#endif
+    #if UNITY_EDITOR
+                       Application.dataPath;
+    #else
+                       Application.persistentDataPath;
+    #endif
         string directory = Path.Combine(path, "Boards/LevelsCreated/");
         if (!Directory.Exists(directory))
             Directory.CreateDirectory(directory);

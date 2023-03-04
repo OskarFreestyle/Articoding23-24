@@ -31,7 +31,7 @@ MonoBehaviour:
   activeBlocks: {fileID: 4900000, guid: 8f1faede5566f124cacaa9577b8145e6, type: 3}
   allActive: 0
   levelBoard: {fileID: 0}
-  auxLevelBoard: '{"rows":4,"columns":4,"cells":[{"id":0,"x":1,"y":1,"args":[]},{"id":0,"x":2,"y":1,"args":[]},{"id":0,"x":3,"y":1,"args":[]},{"id":0,"x":4,"y":1,"args":[]},{"id":0,"x":1,"y":2,"args":[]},{"id":0,"x":2,"y":2,"args":[]},{"id":0,"x":3,"y":2,"args":[]},{"id":0,"x":4,"y":2,"args":[]},{"id":0,"x":1,"y":3,"args":[]},{"id":0,"x":2,"y":3,"args":[]},{"id":0,"x":3,"y":3,"args":[]},{"id":0,"x":4,"y":3,"args":[]},{"id":0,"x":1,"y":4,"args":[]},{"id":0,"x":2,"y":4,"args":[]},{"id":0,"x":3,"y":4,"args":[]},{"id":0,"x":4,"y":4,"args":[]}],"boardElements":[{"id":1,"orientation":0,"x":1,"y":1,"args":["0"]},{"id":2,"orientation":0,"x":4,"y":1,"args":[]}],"boardHints":[]}'
+  auxLevelBoard: '{"rows":4,"columns":4,"cells":[],"boardElements":[],"boardHints":[]}'
   minimosPasos: 10
   endTextLocalized:
     m_TableReference:

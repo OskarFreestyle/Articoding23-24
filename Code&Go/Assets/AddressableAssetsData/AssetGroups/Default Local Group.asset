@@ -16,7 +16,13 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 47232c850350a8b4fb90f37cf2ce7745
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 70363d5b289724b45ab8b7b71740a354
+    m_Address: Assets/Art/Sprites/UI/shopIcon.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fcd72a3575af0a34e932bbaab802abd7, type: 2}
   m_SchemaSet:
