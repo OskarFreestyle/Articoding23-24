@@ -10,6 +10,7 @@ public class ActivatedScript : MonoBehaviour
 {   //TODO Esto no se muy bien si estaria mejor en campos que configurara el usuario en el momento de la exportación/Importación
     public string server = "http://localhost";
     public string port = "5000";
+    public string levelName = "level";
 
     [System.Serializable]
     public class Level
@@ -18,8 +19,8 @@ public class ActivatedScript : MonoBehaviour
         public ActiveBlocks activeblocks;
     }
 
-    IEnumerator Import_Courutine(string id) {
-        string url = server + ":" + port + "/levels/" + id;
+    IEnumerator Import_Courutine(string id, string ip) {
+        string url = ip + "/levels/" + id;
         Debug.Log("Obteniendo nivel de servidor " + url);
          using (UnityWebRequest request = UnityWebRequest.Get(url))
         {
@@ -65,8 +66,8 @@ public class ActivatedScript : MonoBehaviour
         }
     }
 
-    public void Import(string id) {
-         StartCoroutine(Import_Courutine(id));
+    public void Import(string id, string ip) {
+         StartCoroutine(Import_Courutine(id, ip));
     }
 
     public void Export(BoardState boardstate, ActiveBlocks activeblocks) {

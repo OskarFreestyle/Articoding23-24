@@ -168,21 +168,4 @@ public class GameManager : MonoBehaviour
             code = code.Replace(kv.Key.ID, kv.Value);
         return code;
     }
-
-        
-    
-    /**
-    TODO Aqui llamo a la importación, la cosa seria que ese ID (mas adelante un nombre) se obtuviera por una ventanita...
-    ahora he hecho una cutrada con la estrellita para que llame a esto machetero porque soy inutil con el unity
-    */
-    public void Importar() {
-        string id = "63bb086f1e0a2d98e2d2fe94";
-       deactivableObject  = GameObject.Find("ActivatedObject");
-       //De-activate it
-       deactivableObject.SetActive(true);
-       //Get it's component/script
-       ActivatedScript script = deactivableObject.GetComponent<ActivatedScript>();
-       //Start coroutine on the other script with this MonoBehaviour
-       script.Import(id);
-    }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IPInputText : MonoBehaviour
+public class LevelNameInputText : MonoBehaviour
 {
-    private string text;
+    private string ip;
     private InputField mainInputField;
 
     void Start()
@@ -16,11 +16,6 @@ public class IPInputText : MonoBehaviour
 
     void EndEditCheck()
     {
-        text = mainInputField.text;
-    }
-
-    public string GetString()
-    {
-        return text;
+        ip = mainInputField.text;
     }
 }
