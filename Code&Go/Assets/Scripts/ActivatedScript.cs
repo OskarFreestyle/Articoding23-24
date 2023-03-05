@@ -47,6 +47,7 @@ public class ActivatedScript : MonoBehaviour
         level.activeblocks = activeblocks;
 
         string json = JsonUtility.ToJson(level);
+        Debug.Log(json);
         
         var req = new UnityWebRequest(url, "POST");
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
@@ -72,15 +73,10 @@ public class ActivatedScript : MonoBehaviour
          StartCoroutine(Export_Courutine(boardstate, activeblocks));
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetIp(string newip)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        string[] serverport = newip.Split(':');
+        server = serverport[0];
+        port = serverport[1];
     }
 }

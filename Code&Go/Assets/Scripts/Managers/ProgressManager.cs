@@ -290,7 +290,6 @@ public class ProgressManager : MonoBehaviour
 
         /**/    
         if (!customActiveBlocks.Equals("NaN")) { 
-            Debug.Log("Entro en el if");
             string directoryRestrinction = Path.Combine(path, "Resources/");
             string filePathRestrinction = directoryRestrinction + levelName + ".json";
             Debug.Log(filePathRestrinction);
