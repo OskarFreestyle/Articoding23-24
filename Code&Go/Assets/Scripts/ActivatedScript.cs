@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 /**
 TODO Esta es la clase que se comunica con el servidor, la he generado en un gameObject a parte porque me ha dado muchisimos problemas para ejecutar si estaba inactivo, 
@@ -11,10 +12,13 @@ public class ActivatedScript : MonoBehaviour
     public string server = "http://localhost";
     public string port = "5000";
     public string levelName = "level";
-
+    public GameObject InfoImportPanel;
+    [SerializeField] 
+        private Text _title;
     [System.Serializable]
     public class Level
     {
+        public string _id;
         public BoardState boardstate;
         public ActiveBlocks activeblocks;
     }
@@ -27,12 +31,11 @@ public class ActivatedScript : MonoBehaviour
             yield return request.Send();
 
             if (request.isNetworkError){
-                Debug.Log(request.error);
+                showError("Error en la importación del nivel: " + request.error);
             }else  {
-                Debug.Log(request.downloadHandler.text);
                 Level level = JsonUtility.FromJson<Level>(request.downloadHandler.text);
-                Debug.Log("Llamamos a almacenar el nivel importado...");
                 ProgressManager.Instance.UserCreatedLevel(level.boardstate.ToJson(), level.activeblocks.ToJson());
+                showSuccess("¡Nivel importado con éxito!");
             }
         }
 
@@ -60,9 +63,12 @@ public class ActivatedScript : MonoBehaviour
         yield return req.SendWebRequest();
 
         if (req.isNetworkError) {
-            Debug.Log("Error While Sending: " + req.error);
+            showError("Error en la exportación del nivel: " + req.error);
+
         } else {
-            Debug.Log("Exportado! " + req.downloadHandler.text);
+            Level newLevel = JsonUtility.FromJson<Level>(req.downloadHandler.text);
+            showSuccess("Nivel exportado con éxito. ID: " + newLevel._id);
+            
         }
     }
 
@@ -79,5 +85,39 @@ public class ActivatedScript : MonoBehaviour
         string[] serverport = newip.Split(':');
         server = serverport[0];
         port = serverport[1];
+    }
+
+    public void showError(string msg){
+        InfoImportPanel.SetActive(true);
+
+        //To find `child2` which is the second index(1)
+        GameObject iconError = InfoImportPanel.transform.GetChild(1).gameObject;
+        iconError.SetActive(true);
+        //To find `child3` which is the third index(2)
+        GameObject iconSuccess = InfoImportPanel.transform.GetChild(2).gameObject;
+        iconSuccess.SetActive(false);
+        Debug.Log(msg);
+
+        _title.text = msg;
+        //TODO AQUI LA IDEA ES QUE SE MUESTRE EN UNA VENTANA EMERGENTE GUAY
+    }
+
+    public void showSuccess(string msg){
+        InfoImportPanel.SetActive(true);
+
+        //To find `child2` which is the second index(1)
+        GameObject iconError = InfoImportPanel.transform.GetChild(1).gameObject;
+        iconError.SetActive(false);
+        //To find `child3` which is the third index(2)
+        GameObject iconSuccess = InfoImportPanel.transform.GetChild(2).gameObject;
+        iconSuccess.SetActive(true);
+        Debug.Log(msg);
+
+        _title.text = msg;
+        //TODO AQUI LA IDEA ES QUE SE MUESTRE EN UNA VENTANA EMERGENTE GUAY
+    }
+
+    public void closeInfoPanel(){
+        InfoImportPanel.SetActive(false);
     }
 }
