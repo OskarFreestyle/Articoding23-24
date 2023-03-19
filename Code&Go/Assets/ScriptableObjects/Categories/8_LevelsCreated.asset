@@ -16,17 +16,17 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
     m_TableEntryReference:
-      m_KeyId: 133700533783322624
+      m_KeyId: 243170232606478336
       m_Key: 
     m_FallbackState: 0
   descriptionLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
     m_TableEntryReference:
-      m_KeyId: 133700560933052416
+      m_KeyId: 243170782957883392
       m_Key: 
     m_FallbackState: 0
-  name_id: procedures
-  description: "Aprende a organizar tu c\xF3digo con el uso de funciones."
+  name_id: CreatedLevels
+  description: Niveles creados por el usuario
   levels: []
-  icon: {fileID: 21300000, guid: df9b9f8d98c2d4c4d906f7b59043e81a, type: 3}
+  icon: {fileID: 21300000, guid: 3c94c88b0e8c4d644acf994282fcd6cc, type: 3}

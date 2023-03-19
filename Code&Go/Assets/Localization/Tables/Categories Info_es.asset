@@ -84,5 +84,13 @@ MonoBehaviour:
     m_Localized: "Aprende a organizar tu c\xF3digo con el uso de funciones."
     m_Metadata:
       m_Items: []
+  - m_Id: 243170232606478336
+    m_Localized: Niveles Creados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 243170782957883392
+    m_Localized: Niveles creados por el usuario
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

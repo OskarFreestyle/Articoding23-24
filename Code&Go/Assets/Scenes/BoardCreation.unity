@@ -455,7 +455,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: comtrols_repeat
+  m_Text: controls_repeat
 --- !u!222 &34836918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -961,7 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 1064442649}
-  categoryName: start
+  categoryName: logic
 --- !u!114 &64407148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2298,7 +2298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 1902669920}
-  categoryName: start
+  categoryName: procedure
 --- !u!114 &224323339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3672,7 +3672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 507838061}
-  categoryName: start
+  categoryName: variable
 --- !u!114 &326830290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3850,7 +3850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 541838226}
-  categoryName: start
+  categoryName: logic
 --- !u!114 &364687510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4833,7 +4833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 34836917}
-  categoryName: start
+  categoryName: control
 --- !u!114 &434302506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5922,7 +5922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 710522825}
-  categoryName: start
+  categoryName: logic
 --- !u!114 &568961519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6396,7 +6396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 2090200681}
-  categoryName: start
+  categoryName: logic
 --- !u!114 &627683854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8907,7 +8907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 1225805264}
-  categoryName: start
+  categoryName: procedure
 --- !u!114 &848089907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9388,7 +9388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 2092175625}
-  categoryName: start
+  categoryName: logic
 --- !u!114 &874047541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10553,7 +10553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 2023495858}
-  categoryName: start
+  categoryName: text
 --- !u!114 &963761913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11542,7 +11542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200.00003, y: 150.00003}
+  m_AnchoredPosition: {x: 200, y: 150.00003}
   m_SizeDelta: {x: 300, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1063143553
@@ -12140,7 +12140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 682085813}
-  categoryName: start
+  categoryName: movement
 --- !u!114 &1101276315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12576,7 +12576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 320374727}
-  categoryName: start
+  categoryName: movement
 --- !u!114 &1122791891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14819,7 +14819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 1671507663}
-  categoryName: start
+  categoryName: control
 --- !u!114 &1342842670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16526,7 +16526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 462883987}
-  categoryName: start
+  categoryName: math
 --- !u!114 &1497553105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19084,7 +19084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 2025814673}
-  categoryName: start
+  categoryName: movement
 --- !u!114 &1663602021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19304,7 +19304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 2044698452}
-  categoryName: start
+  categoryName: movement
 --- !u!114 &1673822326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20927,7 +20927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 901478066}
-  categoryName: start
+  categoryName: variable
 --- !u!114 &1768674973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22016,7 +22016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 1438526884}
-  categoryName: start
+  categoryName: math
 --- !u!114 &1847685059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23719,7 +23719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 1263806241}
-  categoryName: start
+  categoryName: logic
 --- !u!114 &1987885858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25190,7 +25190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restrictions: {fileID: 1063143553}
   blockName: {fileID: 252737672}
-  categoryName: start
+  categoryName: logic
 --- !u!114 &2100789761
 MonoBehaviour:
   m_ObjectHideFlags: 0
