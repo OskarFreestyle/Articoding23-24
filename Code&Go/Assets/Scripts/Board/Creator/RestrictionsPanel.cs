@@ -60,18 +60,20 @@ public class RestrictionsPanel : MonoBehaviour
 
     private int GetCategoryData(string name)
     {
+        string realname = RestrictionsNamesDefs.categoryNames[name];
         for(int i = 0; i < categoryNames.Length; i++)
         {
-            if (categoryNames[i] == name) return i;
+            if (categoryNames[i] == realname) return i;
         }
         return -1;
     }
 
     private int GetBlockInfo(int category, string name)
     {
+        string realname = RestrictionsNamesDefs.blocksNames[name];
         for (int i = 0; i < categoryBlockNames[category].Length; i++)
         {
-            if (categoryBlockNames[category][i] == name) return i;
+            if (categoryBlockNames[category][i] == realname) return i;
         }
         return -1;
     }
