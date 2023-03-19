@@ -45,6 +45,7 @@ public class LevelTestManager : MonoBehaviour
     public GameObject exitConfirmationPanel;
 
     public RestrictionsPanel restrictionsPanel;
+    public string levelName = "LevelCreated";
 
     public GameObject gameOverPanel;
     public GameObject gameOverMinimized;
@@ -93,11 +94,11 @@ public class LevelTestManager : MonoBehaviour
             endPanel.SetActive(true);
             blackRect.SetActive(true);
             streamRoom.FinishLevel();
-            ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson());
+            ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson(), levelName);
 
-            string levelName = GameManager.Instance.GetCurrentLevelName();
+            string levelNameEditor = GameManager.Instance.GetCurrentLevelName();
             TrackerAsset.Instance.setVar("steps", board.GetCurrentSteps());
-            TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, true, -1f);
+            TrackerAsset.Instance.Completable.Completed(levelNameEditor, CompletableTracker.Completable.Level, true, -1f);
             
         }
     }
@@ -310,6 +311,11 @@ public class LevelTestManager : MonoBehaviour
     {
 
         Exportar(initialState, restrictionsPanel.GetActiveBlocks());
+    }
+
+    public void ChangeLevelName(string newLevelName)
+    {
+        levelName = newLevelName;
     }
 
 }

@@ -264,13 +264,12 @@ public class ProgressManager : MonoBehaviour
         return name;
     }
 
-    public void UserCreatedLevel(string board, string customActiveBlocks)
+    public void UserCreatedLevel(string board, string customActiveBlocks, string levelName)
     {
         //si el nivel ya existe no se guarda
         if (levelsCreatedHash.Contains(Hash.ToHash(board, ""))) return;
 
         int index = levelsCreatedCategory.levels.Count + 1;
-        string levelName = "created_level_" + index.ToString();
         string path =
     #if UNITY_EDITOR
                        Application.dataPath;
@@ -302,10 +301,10 @@ public class ProgressManager : MonoBehaviour
             TextAsset customActiveBlocksAssets = Resources.Load<TextAsset>(levelName);
             //AssetDatabase.CreateAsset(customActiveBlocksAssets, filePathRestrinction);
 
-            AddLevelCreated(board, index, customActiveBlocksAssets);
+            AddLevelCreated(board, index, customActiveBlocksAssets, levelName);
         } else {
              Debug.Log("NOOO Entro en el if");
-            AddLevelCreated(board, index, activeBlocks);
+            AddLevelCreated(board, index, activeBlocks, levelName);
         }
                
         /**/
@@ -334,7 +333,7 @@ public class ProgressManager : MonoBehaviour
                 StreamReader reader = new StreamReader(filePath);
                 string readerData = reader.ReadToEnd();
                 reader.Close();
-                AddLevelCreated(readerData, i + 1, activeBlocks);
+                AddLevelCreated(readerData, i + 1, activeBlocks, levelName);
             }
             catch
             {
@@ -343,18 +342,16 @@ public class ProgressManager : MonoBehaviour
         }
     }
 
-    private void AddLevelCreated(string board, int index, TextAsset customActiveBlocks)
+    private void AddLevelCreated(string board, int index, TextAsset customActiveBlocks, string levelName)
     {
         LevelData data = ScriptableObject.CreateInstance<LevelData>();
         //TODO//data.description = "Nivel creado por el usuario";
 
-            data.activeBlocks = customActiveBlocks;
-
         
-        data.levelName = "level_created_" + index.ToString();
+        data.levelName = levelName;
         data.auxLevelBoard = board;
         data.minimosPasos = 10;
-
+        data.activeBlocks = customActiveBlocks;
         data.levelNameLocalized = createdLevelString;
         //data.endTextLocalized = null;
 

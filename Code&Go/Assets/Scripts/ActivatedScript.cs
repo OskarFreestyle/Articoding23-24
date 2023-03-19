@@ -34,7 +34,7 @@ public class ActivatedScript : MonoBehaviour
                 showError("Error en la importación del nivel: " + request.error);
             }else  {
                 Level level = JsonUtility.FromJson<Level>(request.downloadHandler.text);
-                ProgressManager.Instance.UserCreatedLevel(level.boardstate.ToJson(), level.activeblocks.ToJson());
+                ProgressManager.Instance.UserCreatedLevel(level.boardstate.ToJson(), level.activeblocks.ToJson(), "NivelImportado");
                 showSuccess("¡Nivel importado con éxito!");
             }
         }
