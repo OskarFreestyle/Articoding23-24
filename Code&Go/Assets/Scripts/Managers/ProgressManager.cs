@@ -292,14 +292,17 @@ public class ProgressManager : MonoBehaviour
             string directoryRestrinction = Path.Combine(path, "Resources/");
             string filePathRestrinction = directoryRestrinction + levelName + ".json";
             Debug.Log(filePathRestrinction);
+            //Creamos el archivo contenedor de las restricciones
             FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
             fileRestriction.Close();
             StreamWriter writerRestriction = new StreamWriter(filePathRestrinction);
             writerRestriction.Write(customActiveBlocks);
             writerRestriction.Close();
+            //Lo importamos a la base de datos que gestiona Unity
             AssetDatabase.ImportAsset(filePathRestrinction);
+            AssetDatabase.Refresh();
+            //Y lo cargamos como TextAsset para poder añadirlo al Scriptable del nivel creado
             TextAsset customActiveBlocksAssets = Resources.Load<TextAsset>(levelName);
-            //AssetDatabase.CreateAsset(customActiveBlocksAssets, filePathRestrinction);
 
             AddLevelCreated(board, index, customActiveBlocksAssets, levelName);
         } else {
@@ -326,7 +329,7 @@ public class ProgressManager : MonoBehaviour
             string filePath = Path.Combine(path, "Boards/LevelsCreated/" + levelName + ".userLevel");
 
             string directoryRestrinction = Path.Combine(path, "Assets/Levels/LevelsCreated/");
-            string filePathRestrinction = directoryRestrinction + "pepito" + ".json";
+            string filePathRestrinction = directoryRestrinction + levelName + ".json";
             TextAsset activeBlocks = Resources.Load(filePathRestrinction) as TextAsset;
             try
             {
