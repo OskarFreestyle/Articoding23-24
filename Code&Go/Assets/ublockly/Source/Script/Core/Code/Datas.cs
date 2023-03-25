@@ -53,8 +53,13 @@ namespace UBlockly
         {
             get
             {
-                if (this.Type != Define.EDataType.Number)
-                    throw new Exception("try to GET a number value from a not-number data");
+                if (this.Type != Define.EDataType.Number && this.Type != Define.EDataType.Boolean)
+                    throw new Exception("try to GET a number value from a not-number or not-boolean data");
+                if(this.Type == Define.EDataType.Boolean)
+                {
+                    if (this.mBooleanValue) return new Number(1);
+                    else return new Number(0);
+                }
                 return mNumberValue;
             }
             set
