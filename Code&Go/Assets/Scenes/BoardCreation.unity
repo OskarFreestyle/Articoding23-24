@@ -12772,7 +12772,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: Niveles Creados
 --- !u!222 &1109527604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21153,11 +21153,21 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: Niveles Creados
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: Introduccion
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: Variables
+      m_Image: {fileID: 0}
+    - m_Text: Tipos de datos
+      m_Image: {fileID: 0}
+    - m_Text: Operaciones
+      m_Image: {fileID: 0}
+    - m_Text: Bucles
+      m_Image: {fileID: 0}
+    - m_Text: Condiciones
+      m_Image: {fileID: 0}
+    - m_Text: Funciones
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -27491,7 +27501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2756695377260671288, guid: 22318c90224dcbd4793ae40a6d757c59, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 310
       objectReference: {fileID: 0}
     - target: {fileID: 2756695377260671288, guid: 22318c90224dcbd4793ae40a6d757c59, type: 3}
       propertyPath: m_SizeDelta.y
@@ -27499,7 +27509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2756695377260671288, guid: 22318c90224dcbd4793ae40a6d757c59, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 2756695377260671288, guid: 22318c90224dcbd4793ae40a6d757c59, type: 3}
       propertyPath: m_AnchoredPosition.y

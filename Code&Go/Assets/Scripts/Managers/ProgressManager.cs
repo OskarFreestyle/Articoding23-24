@@ -264,7 +264,7 @@ public class ProgressManager : MonoBehaviour
         return name;
     }
 
-    public void UserCreatedLevel(string board, string customActiveBlocks, string levelName)
+    public void UserCreatedLevel(string board, string customActiveBlocks, string levelName, int levelCategory)
     {
         //si el nivel ya existe no se guarda
         if (levelsCreatedHash.Contains(Hash.ToHash(board, ""))) return;
@@ -299,15 +299,17 @@ public class ProgressManager : MonoBehaviour
             writerRestriction.Write(customActiveBlocks);
             writerRestriction.Close();
             //Lo importamos a la base de datos que gestiona Unity
+#if UNITY_EDITOR
             AssetDatabase.ImportAsset(filePathRestrinction);
             AssetDatabase.Refresh();
+#endif
             //Y lo cargamos como TextAsset para poder añadirlo al Scriptable del nivel creado
             TextAsset customActiveBlocksAssets = Resources.Load<TextAsset>(levelName);
 
-            AddLevelCreated(board, index, customActiveBlocksAssets, levelName);
+            AddLevelCreated(board, index, customActiveBlocksAssets, levelName, levelCategory);
         } else {
              Debug.Log("NOOO Entro en el if");
-            AddLevelCreated(board, index, activeBlocks, levelName);
+            AddLevelCreated(board, index, activeBlocks, levelName, levelCategory);
         }
                
         /**/
@@ -336,7 +338,7 @@ public class ProgressManager : MonoBehaviour
                 StreamReader reader = new StreamReader(filePath);
                 string readerData = reader.ReadToEnd();
                 reader.Close();
-                AddLevelCreated(readerData, i + 1, activeBlocks, levelName);
+                AddLevelCreated(readerData, i + 1, activeBlocks, levelName, 7);
             }
             catch
             {
@@ -345,12 +347,11 @@ public class ProgressManager : MonoBehaviour
         }
     }
 
-    private void AddLevelCreated(string board, int index, TextAsset customActiveBlocks, string levelName)
+    private void AddLevelCreated(string board, int index, TextAsset customActiveBlocks, string levelName, int levelCategory)
     {
         LevelData data = ScriptableObject.CreateInstance<LevelData>();
         //TODO//data.description = "Nivel creado por el usuario";
 
-        
         data.levelName = levelName;
         data.auxLevelBoard = board;
         data.minimosPasos = 10;
@@ -362,8 +363,10 @@ public class ProgressManager : MonoBehaviour
         levelsCreatedCategory.levels.Add(data);
         levelsCreatedHash.Add(board);
 
+#if UNITY_EDITOR
         AssetDatabase.CreateAsset(data,"Assets/ScriptableObjects/Levels/8_LevelsCreated/"+data.levelName+".asset");
         AssetDatabase.SaveAssets();
+#endif
     }
 
     //Save and Load

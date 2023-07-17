@@ -46,6 +46,7 @@ public class LevelTestManager : MonoBehaviour
 
     public RestrictionsPanel restrictionsPanel;
     public string levelName = "LevelCreated";
+    public int levelCategory = 0;
 
     public GameObject gameOverPanel;
     public GameObject gameOverMinimized;
@@ -94,7 +95,7 @@ public class LevelTestManager : MonoBehaviour
             endPanel.SetActive(true);
             blackRect.SetActive(true);
             streamRoom.FinishLevel();
-            ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson(), levelName);
+            ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson(), levelName, levelCategory);
 
             string levelNameEditor = GameManager.Instance.GetCurrentLevelName();
             TrackerAsset.Instance.setVar("steps", board.GetCurrentSteps());
@@ -305,7 +306,7 @@ public class LevelTestManager : MonoBehaviour
        //Get it's component/script
        ActivatedScript script = deactivableObject.GetComponent<ActivatedScript>();
        //Start coroutine on the other script with this MonoBehaviour
-       script.Export(boardstate, activeblocks);
+       //script.Export(boardstate, activeblocks);
     }
     public void ExportCustomLevel()
     {
@@ -316,6 +317,11 @@ public class LevelTestManager : MonoBehaviour
     public void ChangeLevelName(string newLevelName)
     {
         levelName = newLevelName;
+    }  
+
+    public void ChangeLevelCategory(int newLevelCategory)
+    {
+        levelCategory = newLevelCategory;
     }
 
 }

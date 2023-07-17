@@ -3,81 +3,93 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using System;
 /**
 TODO Esta es la clase que se comunica con el servidor, la he generado en un gameObject a parte porque me ha dado muchisimos problemas para ejecutar si estaba inactivo, 
 por lo que siempre la activo y luego la llamo, no se si es muy mala practica, pero es lo único que me ha funcionado.
 */
 public class ActivatedScript : MonoBehaviour
 {   //TODO Esto no se muy bien si estaria mejor en campos que configurara el usuario en el momento de la exportación/Importación
-    public string server = "http://localhost";
-    public string port = "5000";
-    public string levelName = "level";
+    string server = "http://13.48.149.249";
+    string port = "8080";
     public GameObject InfoImportPanel;
     [SerializeField] 
-        private Text _title;
-    [System.Serializable]
-    public class Level
+    private Text _title;
+
+    IEnumerator PostCourutine(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
     {
-        public string _id;
-        public BoardState boardstate;
-        public ActiveBlocks activeblocks;
-    }
+        string url = server + ":" + port + "/" + path;
 
-    IEnumerator Import_Courutine(string id, string ip) {
-        string url = ip + "/levels/" + id;
-        Debug.Log("Obteniendo nivel de servidor " + url);
-         using (UnityWebRequest request = UnityWebRequest.Get(url))
-        {
-            yield return request.Send();
+        Debug.Log("Posteito a " + url);
 
-            if (request.isNetworkError){
-                showError("Error en la importación del nivel: " + request.error);
-            }else  {
-                Level level = JsonUtility.FromJson<Level>(request.downloadHandler.text);
-                ProgressManager.Instance.UserCreatedLevel(level.boardstate.ToJson(), level.activeblocks.ToJson(), "NivelImportado");
-                showSuccess("¡Nivel importado con éxito!");
-            }
-        }
-
-    } 
-
-    IEnumerator Export_Courutine(BoardState boardstate, ActiveBlocks activeblocks) {
-        string url = server + ":" + port + "/levels/";
-        
-        Debug.Log("Exportando al servidor " + url);
-        
-        Level level = new Level();
-        level.boardstate = boardstate;
-        level.activeblocks = activeblocks;
-
-        string json = JsonUtility.ToJson(level);
-        Debug.Log(json);
-        
         var req = new UnityWebRequest(url, "POST");
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
         req.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
         req.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
         req.SetRequestHeader("Content-Type", "application/json");
 
+        if (GameManager.Instance.GetLogged())
+            req.SetRequestHeader("Authorization", GameManager.Instance.GetToken());
+
         //Send the request then wait here until it returns
         yield return req.SendWebRequest();
 
-        if (req.isNetworkError) {
-            showError("Error en la exportación del nivel: " + req.error);
-
-        } else {
-            Level newLevel = JsonUtility.FromJson<Level>(req.downloadHandler.text);
-            showSuccess("Nivel exportado con éxito. ID: " + newLevel._id);
-            
+        if (req.isNetworkError)
+        {
+            showError("Error en post: " + req.error);
+        }
+        else
+        {
+            //Todo guay
+            if(req.responseCode == 200)
+            {
+                onOK(req);
+            }
+            else
+            {
+                onKO(req);
+            }
         }
     }
 
-    public void Import(string id, string ip) {
-         StartCoroutine(Import_Courutine(id, ip));
+    IEnumerator GetCourutine(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
+    {
+        string url = server + ":" + port + "/" + path;
+
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            if(GameManager.Instance.GetLogged())
+                request.SetRequestHeader("Authorization", GameManager.Instance.GetToken());
+
+            yield return request.Send();
+
+            if (request.isNetworkError)
+            {
+                showError("Error en get: " + request.error);
+            }
+            else
+            {
+                //Todo guay
+                if (request.responseCode == 200)
+                {
+                    onOK(request);
+                }
+                else
+                {
+                    onKO(request);
+                }
+            }
+        }
     }
 
-    public void Export(BoardState boardstate, ActiveBlocks activeblocks) {
-         StartCoroutine(Export_Courutine(boardstate, activeblocks));
+    public void Post(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
+    {
+        StartCoroutine(PostCourutine(path, json, onOK, onKO));
+    }
+
+    public void Get(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
+    {
+        StartCoroutine(GetCourutine(path, onOK, onKO));
     }
 
     public void SetIp(string newip)

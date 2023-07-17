@@ -18,6 +18,11 @@ public class GameManager : MonoBehaviour
     private bool gameLoaded = false;
     GameObject deactivableObject;
     private Dictionary<UBlockly.Block, string> blockIDs;
+
+    //Variables de conexion
+    bool loggedIn;
+    string token;
+
     void Awake()
     {
         if (Instance == null)
@@ -168,4 +173,9 @@ public class GameManager : MonoBehaviour
             code = code.Replace(kv.Key.ID, kv.Value);
         return code;
     }
+
+    public void SetToken(string newtoken) { token = "Bearer " + newtoken; }
+    public string GetToken() { return token; }
+    public void SetLogged(bool isLogged) { loggedIn = isLogged; }
+    public bool GetLogged() { return loggedIn; }
 }

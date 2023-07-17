@@ -13,6 +13,6 @@ public class ImportLevelManager : MonoBehaviour
         string id = idInputText.GetString();
         string ip = ipInputText.GetString();
 
-        activated.Import(id, ip);
+        //activated.Import(id, ip);
     }
 }
