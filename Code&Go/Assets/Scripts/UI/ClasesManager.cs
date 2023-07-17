@@ -5,19 +5,14 @@ using UnityEngine.UI;
 
 public class ClasesManager : MonoBehaviour
 {
-    public GameObject[] clases;
+    public List<GameObject> clases;
     public GameObject[] lists;
 
     public int tabIndex;
 
-    void Start()
-    {
-        ConfigureTabs();
-    }
-
     private void SelectCallback(int index)
     {
-        if (index >= clases.Length || index < 0) return;
+        if (index >= clases.Count || index < 0) return;
 
         // Desactivamos el tab actual
         if (tabIndex != index) lists[tabIndex].SetActive(false);
@@ -27,9 +22,9 @@ public class ClasesManager : MonoBehaviour
         lists[tabIndex].SetActive(true);
     }
 
-    private void ConfigureTabs()
+    public void ConfigureTabs()
     {
-        for (int i = 0; i < clases.Length; i++)
+        for (int i = 0; i < clases.Count; i++)
         {
             int index = i;
 

@@ -19,6 +19,10 @@ public class ComunidadLayout : MonoBehaviour
 
     ServerClasses.ClaseList clases;
 
+    public ClasesManager clasesManager;
+
+    public GameObject clasePrefab;
+
     private void OnEnable()
     {
         if(!GameManager.Instance.GetLogged())
@@ -61,16 +65,22 @@ public class ComunidadLayout : MonoBehaviour
     {
         string clasesJson = req.downloadHandler.text;
         //Insertamos este string para poder cogerlo comodamente con jsonutility
-        clasesJson = clasesJson.Insert(0, "{ list:");
+        clasesJson = clasesJson.Insert(0, "{ \"list\":");
         clasesJson = clasesJson.Insert(clasesJson.Length, "}");
 
         try
         {
             clases = JsonUtility.FromJson<ServerClasses.ClaseList>(clasesJson);
         }
-        catch
+        catch (System.Exception e)
         {
-            Debug.Log("Error al leer clases");
+            Debug.Log("Error al leer clases " + e);
+        }
+
+        for (int i = 0; i < clases.list.Count; i++)
+        {
+            var newclase = Instantiate(clasePrefab, clasesList.transform);
+            clasesManager.clases.Add(newclase);
         }
 
         return 0;
@@ -78,7 +88,7 @@ public class ComunidadLayout : MonoBehaviour
 
     int GetClassesKO(UnityWebRequest req)
     {
-
+        Debug.Log("Error al obtener clases");
         return 0;
     }
 }
