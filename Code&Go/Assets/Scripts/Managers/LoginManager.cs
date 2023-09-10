@@ -9,22 +9,42 @@ public class LoginManager : MonoBehaviour
     public GameObject OKPanel;
     public GameObject KOPanel;
     public GameObject loginPanel;
+    public GameObject logButton;
 
     public ActivatedScript activated;
 
     public ComunidadLayout comunidadLayout;
+    public LevelTestManager levelTestManager;
+
+    string userName = "";
 
     public void TryToLogIn(string user, string pass)
     {
-        //Movidas de conexión
-
-        waitPanel.SetActive(true);
+        if (waitPanel != null)
+        {
+            waitPanel.SetActive(true);
+        }
 
         ServerClasses.Login loginJson = new ServerClasses.Login();
         loginJson.username = user;
         loginJson.password = pass;
 
+        userName = user;
+
         activated.Post("login", JsonUtility.ToJson(loginJson), OnLoginOK, OnLoginKO);
+    }
+
+    public void LogOut()
+    {
+        if(comunidadLayout != null)
+            comunidadLayout.IsNotLoggedAction();
+
+        Debug.Log("Deslogueado");
+
+        GameManager.Instance.SetToken("");
+        GameManager.Instance.SetAdmin(false);
+        GameManager.Instance.SetUserName("");
+        GameManager.Instance.SetLogged(false);
     }
 
     int OnLoginOK(UnityWebRequest req)
@@ -33,14 +53,26 @@ public class LoginManager : MonoBehaviour
         Debug.Log("Logeado");
 
         GameManager.Instance.SetToken(responseToken.token);
+        GameManager.Instance.SetRole(responseToken.role);
+        GameManager.Instance.SetUserName(userName);
         GameManager.Instance.SetLogged(true);
 
-        waitPanel.SetActive(false);
-        loginPanel.SetActive(false);
-        OKPanel.SetActive(true);
-        KOPanel.SetActive(false);
+        if (waitPanel != null)
+        {
+            waitPanel.SetActive(false);
+            OKPanel.SetActive(true);
+            KOPanel.SetActive(false);
+        }
 
-        if (comunidadLayout.gameObject.active) 
+        if (logButton != null)
+        {
+            logButton.SetActive(false);
+            levelTestManager.ActivateExportButtons(responseToken.role != "ROLE_USER");
+        }
+
+        loginPanel.SetActive(false);
+
+        if (comunidadLayout != null && comunidadLayout.gameObject.active) 
             comunidadLayout.IsLoggedAction();
 
         return 0;
@@ -49,9 +81,14 @@ public class LoginManager : MonoBehaviour
     int OnLoginKO(UnityWebRequest req)
     {
         Debug.Log("No logeado");
-        waitPanel.SetActive(false);
-        KOPanel.SetActive(true);
-        OKPanel.SetActive(false);
+        if (waitPanel != null)
+        {
+            waitPanel.SetActive(false);
+            KOPanel.SetActive(true);
+            OKPanel.SetActive(false);
+        }
+
+        userName = "";
 
         return 0;
     }

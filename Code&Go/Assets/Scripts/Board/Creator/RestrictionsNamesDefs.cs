@@ -13,7 +13,7 @@ public class RestrictionsNamesDefs : MonoBehaviour
         { "Enteros", "math"},
         { "Texto", "text"},
         { "Acciones", "movement"},
-        { "Funciones", "procedures"}
+        { "Funciones", "procedure"}
     };
     public static Dictionary<string, string> blocksNames = new Dictionary<string, string>
     {

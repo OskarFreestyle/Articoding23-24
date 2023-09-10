@@ -52,7 +52,13 @@ public class ProgressManager : MonoBehaviour
             CategorySaveData data = new CategorySaveData();
             data.lastLevelUnlocked = i <= lastCategoryUnlocked ? 0 : -1;
             data.totalStars = 0;
-            data.levelsData = new LevelSaveData[categories[i].levels.Count];
+            //Si es la categoría de niveles creados, reseteamos el contador siempre
+            //ya que los niveles no se guardan en el scriptable, se guardan en archivos
+            if(i == 7)
+                data.levelsData = new LevelSaveData[0];
+            else
+                data.levelsData = new LevelSaveData[categories[i].levels.Count];
+
             for (int j = 0; j < data.levelsData.Length; j++)
             {
                 data.levelsData[j] = new LevelSaveData();
@@ -270,17 +276,24 @@ public class ProgressManager : MonoBehaviour
         if (levelsCreatedHash.Contains(Hash.ToHash(board, ""))) return;
 
         int index = levelsCreatedCategory.levels.Count + 1;
-        string path =
-    #if UNITY_EDITOR
-                       Application.dataPath;
-    #else
-                       Application.persistentDataPath;
-    #endif
-        string directory = Path.Combine(path, "Boards/LevelsCreated/");
-        if (!Directory.Exists(directory))
-            Directory.CreateDirectory(directory);
+        string path = Application.dataPath;
+        string directory = Path.Combine(path, "Resources/Levels/Boards/8_CreatedLevels/");
 
-        string filePath = directory + levelName + ".userLevel";
+        //Creamos las carpetas pertinentes si no estan creadas
+        if (!Directory.Exists(path + "/Resources/Levels/")) ;
+            Directory.CreateDirectory(path + "/Resources/Levels/");
+        if (!Directory.Exists(path + "/Resources/Levels/Boards/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/Boards/");
+        if (!Directory.Exists(path + "/Resources/Levels/Boards/8_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/Boards/8_CreatedLevels/");
+        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/");
+        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/");
+
+        if (levelName.Trim() == "") levelName = "NivelCreado";
+
+        string filePath = directory + levelName + ".json";
         FileStream file = new FileStream(filePath, FileMode.Create);
         file.Close();
         StreamWriter writer = new StreamWriter(filePath);
@@ -289,7 +302,10 @@ public class ProgressManager : MonoBehaviour
 
         /**/    
         if (!customActiveBlocks.Equals("NaN")) { 
-            string directoryRestrinction = Path.Combine(path, "Resources/");
+
+            string directoryRestrinction = Path.Combine(path, "Resources/Levels/ActiveBlocks/8_CreatedLevels/");
+            if (!Directory.Exists(directoryRestrinction))
+                Directory.CreateDirectory(directoryRestrinction);
             string filePathRestrinction = directoryRestrinction + levelName + ".json";
             Debug.Log(filePathRestrinction);
             //Creamos el archivo contenedor de las restricciones
@@ -298,17 +314,13 @@ public class ProgressManager : MonoBehaviour
             StreamWriter writerRestriction = new StreamWriter(filePathRestrinction);
             writerRestriction.Write(customActiveBlocks);
             writerRestriction.Close();
-            //Lo importamos a la base de datos que gestiona Unity
-#if UNITY_EDITOR
-            AssetDatabase.ImportAsset(filePathRestrinction);
-            AssetDatabase.Refresh();
-#endif
+
             //Y lo cargamos como TextAsset para poder añadirlo al Scriptable del nivel creado
-            TextAsset customActiveBlocksAssets = Resources.Load<TextAsset>(levelName);
+            TextAsset customActiveBlocksAssets = (TextAsset)Resources.Load(levelName);
 
             AddLevelCreated(board, index, customActiveBlocksAssets, levelName, levelCategory);
+
         } else {
-             Debug.Log("NOOO Entro en el if");
             AddLevelCreated(board, index, activeBlocks, levelName, levelCategory);
         }
                
@@ -349,24 +361,7 @@ public class ProgressManager : MonoBehaviour
 
     private void AddLevelCreated(string board, int index, TextAsset customActiveBlocks, string levelName, int levelCategory)
     {
-        LevelData data = ScriptableObject.CreateInstance<LevelData>();
-        //TODO//data.description = "Nivel creado por el usuario";
-
-        data.levelName = levelName;
-        data.auxLevelBoard = board;
-        data.minimosPasos = 10;
-        data.activeBlocks = customActiveBlocks;
-        data.levelNameLocalized = createdLevelString;
-        //data.endTextLocalized = null;
-
-        categories[7].levels.Add(data);
-        levelsCreatedCategory.levels.Add(data);
         levelsCreatedHash.Add(board);
-
-#if UNITY_EDITOR
-        AssetDatabase.CreateAsset(data,"Assets/ScriptableObjects/Levels/8_LevelsCreated/"+data.levelName+".asset");
-        AssetDatabase.SaveAssets();
-#endif
     }
 
     //Save and Load

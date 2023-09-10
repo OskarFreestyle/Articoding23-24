@@ -16,12 +16,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Category category;
     public int levelIndex;
     private bool gameLoaded = false;
-    GameObject deactivableObject;
     private Dictionary<UBlockly.Block, string> blockIDs;
 
     //Variables de conexion
     bool loggedIn;
     string token;
+    bool isAdmin = false;
+    string userName = "";
+    bool playingCommunityLevel = false;
+
+    BoardState communityBoard = null;
+    ActiveBlocks communityActiveBlocks = null;
 
     void Awake()
     {
@@ -88,6 +93,7 @@ public class GameManager : MonoBehaviour
     // Esto habra que moverlo al MenuManager o algo asi
     public void LoadLevel(Category category, int levelIndex)
     {
+        playingCommunityLevel = false;
         blockIDs = new Dictionary<UBlockly.Block, string>();
         this.category = category;
         this.levelIndex = levelIndex;
@@ -105,8 +111,20 @@ public class GameManager : MonoBehaviour
         LoadManager.Instance.LoadScene("LevelScene");
     }
 
+    //Seteamos algunos flags para que sepa el juego que estamos jugando 
+    //desde la pestaña de comunidad
+    public void LoadCommunityLevel()
+    {
+        playingCommunityLevel = true;
+
+        blockIDs = new Dictionary<UBlockly.Block, string>();
+        this.category = null;
+        this.levelIndex = -1;
+    }
+
     public void LoadLevelCreator()
     {
+        playingCommunityLevel = false;
         blockIDs = new Dictionary<UBlockly.Block, string>();
         levelIndex = -1;
         if (LoadManager.Instance == null)
@@ -146,7 +164,11 @@ public class GameManager : MonoBehaviour
 
         Category category = GetCurrentCategory();
         int levelIndex = GetCurrentLevelIndex();
-        string levelName = category.levels[levelIndex].levelName;
+
+        string levelName;
+        if (category.name_id != "CreatedLevels")
+            levelName = category.levels[levelIndex].levelName;
+        else levelName = "Nivel creado";
 
         return levelName;
     }
@@ -178,4 +200,15 @@ public class GameManager : MonoBehaviour
     public string GetToken() { return token; }
     public void SetLogged(bool isLogged) { loggedIn = isLogged; }
     public bool GetLogged() { return loggedIn; }
+    public void SetRole(string role) { if (role == "ROLE_USER") isAdmin = false; else isAdmin = true; }
+    public void SetAdmin(bool aux) { isAdmin = aux; }
+    public bool GetIsAdmin() { return isAdmin; }
+    public void SetUserName(string name) { userName = name; }
+    public string GetUserName() { return userName; }
+
+    public bool GetPlayingCommunityLevel() { return playingCommunityLevel; }
+    public void SetCommunityLevelBoard(BoardState state) { communityBoard = state; }
+    public BoardState GetCommunityLevelBoard() { return communityBoard; }
+    public void SetCommunityLevelActiveBlocks(ActiveBlocks blocks) { communityActiveBlocks = blocks; }
+    public ActiveBlocks GetCommunityLevelActiveBlocks() { return communityActiveBlocks; }
 }

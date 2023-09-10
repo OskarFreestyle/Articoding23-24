@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 using AssetPackage;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 using UnityEngine.Localization.Components;
 using Input = UnityEngine.Input;
+using Newtonsoft.Json;
 
 public class LevelManager : MonoBehaviour
 {
@@ -90,8 +92,11 @@ public class LevelManager : MonoBehaviour
             currentLevelIndex = defaultLevelIndex;
         }
 
-        currentLevel = currentCategory.levels[currentLevelIndex];
-        minimosPasos = currentLevel.minimosPasos;
+        if (!GameManager.Instance.GetPlayingCommunityLevel())
+        {
+            currentLevel = currentCategory.levels[currentLevelIndex];
+            minimosPasos = currentLevel.minimosPasos;
+        }
         //endTextLocalized.text = currentLevel.endText;
         
         endPanel.SetActive(false);
@@ -105,7 +110,9 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        Initialize();
+        //Si estamos jugando desde la pestaña de comunidad, inicializamos de otra forma
+        if (GameManager.Instance.GetPlayingCommunityLevel()) InitializeCommunityLevel();
+        else Initialize();
 
         var dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
         string text = UBlockly.Xml.DomToText(dom);
@@ -114,12 +121,18 @@ public class LevelManager : MonoBehaviour
         TrackerAsset.Instance.setVar("code", "\r\n" + text);
         TrackerAsset.Instance.Completable.Initialized(GameManager.Instance.GetCurrentLevelName().ToLower(), CompletableTracker.Completable.Level);
 
-        //levelName.text = currentLevel.levelName;
-        levelNameLocalized.StringReference = currentLevel.levelNameLocalized;
-        levelNameLocalized.RefreshString();
+        if (currentLevel != null)
+        {
+            levelName.text = currentLevel.levelName;
+            levelNameLocalized.StringReference = currentLevel.levelNameLocalized;
+            levelNameLocalized.RefreshString();
 
-        endTextLocalized.StringReference = currentLevel.endTextLocalized;
-        endTextLocalized.RefreshString();
+            endTextLocalized.StringReference = currentLevel.endTextLocalized;
+            endTextLocalized.RefreshString();
+        }
+        //Si esta a null es nivel de comunidad 
+        else
+            levelName.text = "Comunidad";
     }
 
     private void Update()
@@ -166,6 +179,7 @@ public class LevelManager : MonoBehaviour
 
     private void Initialize()
     {
+
         if (currentLevel == null)
         {
             Debug.LogError("Cannot initialize Level. CurrentLevel is null");
@@ -178,6 +192,20 @@ public class LevelManager : MonoBehaviour
 
         string boardJson = currentLevel.levelBoard != null ? currentLevel.levelBoard.text : currentLevel.auxLevelBoard;
         BoardState state = BoardState.FromJson(boardJson);
+        boardManager.LoadBoard(state, buildLimits);
+        cameraFit.FitBoard(boardManager.GetRows(), boardManager.GetColumns());
+
+        BlocklyUI.WorkspaceView.InitIDs();
+    }
+
+    private void InitializeCommunityLevel()
+    {
+        //Restricciones y estado inicial
+        ActivateLevelBlocks(GameManager.Instance.GetCommunityLevelActiveBlocks(), false);
+        //LoadInitialBlocks(currentLevel.initialState);//UI
+
+        //Tablero
+        BoardState state = GameManager.Instance.GetCommunityLevelBoard();
         boardManager.LoadBoard(state, buildLimits);
         cameraFit.FitBoard(boardManager.GetRows(), boardManager.GetColumns());
 
@@ -200,6 +228,12 @@ public class LevelManager : MonoBehaviour
     public void LoadNextLevel()
     {
         GameManager gMng = GameManager.Instance;
+
+        if (GameManager.Instance.GetPlayingCommunityLevel())
+        {
+            LoadMainMenu();
+            return;
+        }
 
         int levelSize = currentCategory.levels.Count;
         List<Category> categories = gMng.GetCategories();
@@ -384,6 +418,9 @@ public class LevelManager : MonoBehaviour
 
         BlocklyUI.WorkspaceView.CleanViews();
 
+        XDocument xmldoc = XDocument.Parse(localizedTextAsset.text);
+        string josn = JsonConvert.SerializeXNode(xmldoc, Newtonsoft.Json.Formatting.None, true);
+
         var dom = UBlockly.Xml.TextToDom(localizedTextAsset.text);
 
         UBlockly.Xml.DomToWorkspace(dom, BlocklyUI.WorkspaceView.Workspace);
@@ -397,6 +434,13 @@ public class LevelManager : MonoBehaviour
         if (textAsset == null) return;
 
         StartCoroutine(AsyncActivateLevelBlocks(textAsset, allActive));
+    }
+
+    public void ActivateLevelBlocks(ActiveBlocks blocks, bool allActive)
+    {
+        if (blocks == null) return;
+
+        StartCoroutine(AsyncActivateLevelBlocks(blocks, allActive));
     }
 
     IEnumerator AsyncActivateLevelBlocks(TextAsset textAsset, bool allActive)
@@ -416,6 +460,28 @@ public class LevelManager : MonoBehaviour
                 SetSpecialBlockStarActive(true);
             }
             
+            BlocklyUI.WorkspaceView.Toolbox.SetActiveBlocks(blocks.AsMap(), CategoriesTutorialsAsMap());
+        }
+
+        yield return null;
+    }
+
+    IEnumerator AsyncActivateLevelBlocks(ActiveBlocks blocks, bool allActive)
+    {
+        if (allActive) BlocklyUI.WorkspaceView.Toolbox.SetActiveAllBlocks();
+        else if (blocks != null)
+        {
+            if (blocks.specialBlock == null)
+            {
+                specialBlock = "None";
+            }
+            else
+            {
+                // Ponemos la nueva estrella
+                specialBlock = blocks.specialBlock;
+                SetSpecialBlockStarActive(true);
+            }
+
             BlocklyUI.WorkspaceView.Toolbox.SetActiveBlocks(blocks.AsMap(), CategoriesTutorialsAsMap());
         }
 

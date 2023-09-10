@@ -18,5 +18,6 @@ public class LoginPanel : MonoBehaviour
     private void TryToLogin(string user, string pass)
     {
         loginManager.TryToLogIn(user, pass);
+        password.text = "";
     }
 }

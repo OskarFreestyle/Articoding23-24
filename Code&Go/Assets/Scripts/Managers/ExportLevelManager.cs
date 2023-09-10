@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ExportLevelManager : MonoBehaviour
 {
     public ActivatedScript activated;
-    public IPInputText ipInputText;
 
-    public void CallExport()
+    private void Start()
     {
-        string ip = ipInputText.GetString();
-
-        activated.SetIp(ip);
     }
 }

@@ -92,6 +92,11 @@ public class ActivatedScript : MonoBehaviour
         StartCoroutine(GetCourutine(path, onOK, onKO));
     }
 
+    public void Get(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO, int param)
+    {
+
+    }
+
     public void SetIp(string newip)
     {
         string[] serverport = newip.Split(':');

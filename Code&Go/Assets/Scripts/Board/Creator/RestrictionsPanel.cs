@@ -25,19 +25,22 @@ public class RestrictionsPanel : MonoBehaviour
 
         activeBlocks = new ActiveBlocks();
         activeBlocks.categories = new CategoryData[8];
+        blockTogglesLists = new List<List<BlockToggle>>();
         for (int i = 0; i < 8; i++)
         {
-                activeBlocks.categories[i] = new CategoryData();
-                activeBlocks.categories[i].categoryName = categoryNames[i];
-                activeBlocks.categories[i].blocksInfo = new CategoryBlocksInfo();
-                activeBlocks.categories[i].blocksInfo.activate = true;
-                activeBlocks.categories[i].blocksInfo.activeBlocks = new BlockInfo[categoryBlocksNum[i]];
-                for (int j = 0; j < categoryBlocksNum[i]; j++)
-                {
-                    activeBlocks.categories[i].blocksInfo.activeBlocks[j] = new BlockInfo();
-                    activeBlocks.categories[i].blocksInfo.activeBlocks[j].blockName = categoryBlockNames[i][j];
-                    activeBlocks.categories[i].blocksInfo.activeBlocks[j].maxUses = 100;
-                }
+            blockTogglesLists.Add(new List<BlockToggle>());
+
+            activeBlocks.categories[i] = new CategoryData();
+            activeBlocks.categories[i].categoryName = categoryNames[i];
+            activeBlocks.categories[i].blocksInfo = new CategoryBlocksInfo();
+            activeBlocks.categories[i].blocksInfo.activate = true;
+            activeBlocks.categories[i].blocksInfo.activeBlocks = new BlockInfo[categoryBlocksNum[i]];
+            for (int j = 0; j < categoryBlocksNum[i]; j++)
+            {
+                activeBlocks.categories[i].blocksInfo.activeBlocks[j] = new BlockInfo();
+                activeBlocks.categories[i].blocksInfo.activeBlocks[j].blockName = categoryBlockNames[i][j];
+                activeBlocks.categories[i].blocksInfo.activeBlocks[j].maxUses = 100;
+            }
         }
     }
 
@@ -47,6 +50,12 @@ public class RestrictionsPanel : MonoBehaviour
         bool isActive = activeBlocks.categories[catIndex].categoryName != "";
         if (!isActive) activeBlocks.categories[catIndex].categoryName = categoryNames[catIndex];
         else activeBlocks.categories[catIndex].categoryName = "";
+
+        for (int i = 0; i < categoryBlockNames[catIndex].Length; i++)
+        {
+            string realName = blockTogglesLists[catIndex][i].SetActive(!isActive);
+            SetBlockAllow(category, realName, !isActive);
+        }
     }
 
     public void SetBlockAllow(string category, string block)
@@ -55,6 +64,14 @@ public class RestrictionsPanel : MonoBehaviour
         int blockIndex = GetBlockInfo(catIndex, block);
         bool isActive = activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].blockName != "";
         if (!isActive) activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].blockName = categoryBlockNames[catIndex][blockIndex];
+        else activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].blockName = "";
+    }
+
+    public void SetBlockAllow(string category, string block, bool toActive)
+    {
+        int catIndex = GetCategoryData(category);
+        int blockIndex = GetBlockInfo(catIndex, block);
+        if (toActive) activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].blockName = categoryBlockNames[catIndex][blockIndex];
         else activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].blockName = "";
     }
 
@@ -93,7 +110,14 @@ public class RestrictionsPanel : MonoBehaviour
         return activeBlocks;
     }
 
+    public void AddBlockToggle(string category, BlockToggle toggle)
+    {
+        int cat = GetCategoryData(category);
+        blockTogglesLists[cat].Add(toggle);
+    }
+
     private ActiveBlocks activeBlocks;
+    private List<List<BlockToggle>> blockTogglesLists;
 
     // Category and blocks name arrays
 

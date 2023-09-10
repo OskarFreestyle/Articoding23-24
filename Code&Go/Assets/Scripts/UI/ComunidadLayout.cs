@@ -3,25 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class ComunidadLayout : MonoBehaviour
 {
     public GameObject clasesLayout;
+    public GameObject nivelesLayout;
     public GameObject notLoggedLayout;
-
-    public Button clasesTab;
-    public Button nivelesTab;
+    public GameObject infoZone;
+    public GameObject refreshButton;
+    public GameObject addClassButton;
 
     public GameObject clasesList;
-    public GameObject nivelesList;
+    public GameObject savePanel;
 
     public ActivatedScript activatedScript;
 
-    ServerClasses.ClaseList clases;
+    ServerClasses.ClaseJSON clases;
+    ServerClasses.LevelPage publicLevels;
 
     public ClasesManager clasesManager;
 
     public GameObject clasePrefab;
+
+    public Text username;
+    public Text userRole;
+
+    bool alreadyLogged = false;
 
     private void OnEnable()
     {
@@ -40,9 +48,16 @@ public class ComunidadLayout : MonoBehaviour
     {
         clasesLayout.SetActive(true);
         notLoggedLayout.SetActive(false);
+        infoZone.SetActive(true);
+        refreshButton.SetActive(true);
 
-        clasesTab.interactable = true;
-        nivelesTab.interactable = true;
+        username.text = GameManager.Instance.GetUserName();
+        if (GameManager.Instance.GetIsAdmin())
+        {
+            userRole.text = "Profesor";
+            addClassButton.SetActive(true);
+        }
+        else userRole.text = "Alumno";
 
         CreateClasses();
     }
@@ -50,38 +65,45 @@ public class ComunidadLayout : MonoBehaviour
     public void IsNotLoggedAction()
     {
         clasesLayout.SetActive(false);
+        nivelesLayout.SetActive(false);
         notLoggedLayout.SetActive(true);
-
-        clasesTab.interactable = false;
-        nivelesTab.interactable = false;
+        infoZone.SetActive(false);
+        refreshButton.SetActive(false);
+        username.text = "";
+        userRole.text = "";
     }
 
     void CreateClasses()
     {
-        activatedScript.Get("classes", GetClassesOK, GetClassesKO);
+        if (!alreadyLogged)
+        {
+            activatedScript.Get("classes", GetClassesOK, GetClassesKO);
+            activatedScript.Get("levels?publicLevels=true&size=15", GetPublicLevelsOK, GetPublicLevelsKO);
+            alreadyLogged = true;
+        }
     }
 
     int GetClassesOK(UnityWebRequest req)
     {
         string clasesJson = req.downloadHandler.text;
-        //Insertamos este string para poder cogerlo comodamente con jsonutility
-        clasesJson = clasesJson.Insert(0, "{ \"list\":");
-        clasesJson = clasesJson.Insert(clasesJson.Length, "}");
 
         try
         {
-            clases = JsonUtility.FromJson<ServerClasses.ClaseList>(clasesJson);
+            clases = JsonUtility.FromJson<ServerClasses.ClaseJSON>(clasesJson);
         }
         catch (System.Exception e)
         {
             Debug.Log("Error al leer clases " + e);
         }
 
-        for (int i = 0; i < clases.list.Count; i++)
+        for (int i = 0; i < clases.content.Count; i++)
         {
             var newclase = Instantiate(clasePrefab, clasesList.transform);
             clasesManager.clases.Add(newclase);
+            newclase.GetComponent<ClasePrefab>().SetupClase(clases.content[i]);
         }
+
+        clasesManager.ConfigureTabs();
 
         return 0;
     }
@@ -90,5 +112,98 @@ public class ComunidadLayout : MonoBehaviour
     {
         Debug.Log("Error al obtener clases");
         return 0;
+    }
+
+    int GetPublicLevelsOK(UnityWebRequest req)
+    {
+        string nivelesJson = req.downloadHandler.text;
+
+        try
+        {
+            publicLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(nivelesJson);
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log("Error al leer niveles " + e);
+        }
+
+        clasesManager.CreatePublicLevels(publicLevels);
+
+        return 0;
+    }
+
+    int GetPublicLevelsKO(UnityWebRequest req)
+    {
+        Debug.Log("Error al obtener niveles publicos");
+        return 0;
+    }
+
+    public void PlayCommunityLevel()
+    {
+        GameManager.Instance.LoadCommunityLevel();
+
+        clasesManager.SetCommunityLevel();
+
+        if (LoadManager.Instance == null)
+        {
+            SceneManager.LoadScene("LevelScene");
+            return;
+        }
+
+        LoadManager.Instance.LoadScene("LevelScene");
+    }
+
+    public void PlayPublicLevel(ServerClasses.Level level)
+    {
+        GameManager.Instance.LoadCommunityLevel();
+
+        clasesManager.SetPublicLevel(level);
+
+        if (LoadManager.Instance == null)
+        {
+            SceneManager.LoadScene("LevelScene");
+            return;
+        }
+
+        LoadManager.Instance.LoadScene("LevelScene");
+    }
+
+    public void SaveCommunityLevel()
+    {
+        ServerClasses.Level theLevel = clasesManager.GetCommuintyLevel();
+
+        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.title, 7);
+
+        savePanel.SetActive(true);
+    }
+
+    public void SavePublicLevel(ServerClasses.Level theLevel)
+    {
+        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.title, 7);
+
+        savePanel.SetActive(true);
+    }
+
+    public void RefreshClases()
+    {
+        //Eliminamos todas las clases y las volvemos a llamar
+        for (var i = clasesList.transform.childCount - 1; i >= 1; i--)
+        {
+            Destroy(clasesList.transform.GetChild(i).gameObject);
+        }
+
+        clasesManager.DeleteLists();
+
+        activatedScript.Get("classes", GetClassesOK, GetClassesKO);
+    }
+
+    public ServerClasses.LevelPage GetPublicLevels()
+    {
+        return publicLevels;
+    }
+
+    public void SetPublicLevels(ServerClasses.LevelPage lvls)
+    {
+        publicLevels = lvls;
     }
 }

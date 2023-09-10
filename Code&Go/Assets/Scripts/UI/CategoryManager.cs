@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.Localization.Components;
@@ -15,6 +16,9 @@ public class CategoryManager : MonoBehaviour
 
     [SerializeField] private GameObject levelsParent;
     [SerializeField] private LevelCard levelCardPrefab;
+    [SerializeField] private LevelCard createdLevelCardPrefab;
+
+    public Sprite createdLevelPreview;
 
     [SerializeField] private GameObject levelsCreatedParent;
     [SerializeField] private Button createLevelButton;
@@ -160,29 +164,87 @@ public class CategoryManager : MonoBehaviour
         while (levelsParent.transform.childCount != 0)
             DestroyImmediate(levelsParent.transform.GetChild(0).gameObject);
 
-        for (int i = 0; i < category.levels.Count; i++)
+        if (category.name_id == "CreatedLevels")
         {
-            int index = i;
-            LevelData levelData = category.levels[i];
-            LevelCard levelCard = Instantiate(levelCardPrefab, levelsParent.transform);
-            levelCard.ConfigureLevel(levelData, category, i + 1);
-            if (ProgressManager.Instance.IsLevelUnlocked(currentCategory, i))
-            {
-                levelCard.button.onClick.AddListener(() =>
-                {
-                    currentLevel = index;
+            categories[currentCategory].levels.Clear();
 
-                    localizedLevelName.StringReference = levelData.levelNameLocalized;
-                    localizedLevelName.RefreshString();
+            //Encontramos todos los archivos que haya en las carpetas de creación de niveles
+            //y los almacenamos como TextAssets para su lectura
+            string[] boardFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/Boards/8_CreatedLevels", "*.json");
+            string[] activeFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/ActiveBlocks/8_CreatedLevels", "*.json");
+            TextAsset[] boards = new TextAsset[boardFilePaths.Length];
+            TextAsset[] activeBlocks = new TextAsset[activeFilePaths.Length];
+            string[] fileNames = new string[boardFilePaths.Length];
+
+            for(int i = 0; i < boardFilePaths.Length; i++)
+            {
+                boards[i] = new TextAsset(File.ReadAllText(boardFilePaths[i]));
+                activeBlocks[i] = new TextAsset(File.ReadAllText(activeFilePaths[i]));
+                fileNames[i] = Path.GetFileNameWithoutExtension(boardFilePaths[i]);
+            }
+
+            for (int i = 0; i < boards.Length; i++)
+            {
+                int index = i;
+                LevelData levelData = new LevelData();
+                levelData.levelName = fileNames[i];
+                levelData.activeBlocks = activeBlocks[i];
+                levelData.levelBoard = boards[i];
+                levelData.levelPreview = createdLevelPreview;
+                    
+                categories[currentCategory].levels.Add(levelData);
+
+                LevelCard levelCard = Instantiate(createdLevelCardPrefab, levelsParent.transform);
+                levelCard.ConfigureLevel(levelData, category, i + 1);
+                if (ProgressManager.Instance.IsLevelUnlocked(currentCategory, i))
+                {
+                    levelCard.button.onClick.AddListener(() =>
+                    {
+                        currentLevel = index;
+
+                        if (levelData.levelNameLocalized != null)
+                        {
+                            localizedLevelName.StringReference = levelData.levelNameLocalized;
+                            localizedLevelName.RefreshString();
+                        }
+
+                        levelName.text = levelData.levelName;
+                        levelPreview.sprite = levelData.levelPreview;
+                        levelCard.button.Select();
+                    });
+                    levelCard.button.onClick.Invoke();
+                }
+                else
+                    levelCard.DeactivateCard();
+            }
+        }
+        else
+        {
+
+            for (int i = 0; i < category.levels.Count; i++)
+            {
+                int index = i;
+                LevelData levelData = category.levels[i];
+                LevelCard levelCard = Instantiate(levelCardPrefab, levelsParent.transform);
+                levelCard.ConfigureLevel(levelData, category, i + 1);
+                if (ProgressManager.Instance.IsLevelUnlocked(currentCategory, i))
+                {
+                    levelCard.button.onClick.AddListener(() =>
+                    {
+                        currentLevel = index;
+
+                        localizedLevelName.StringReference = levelData.levelNameLocalized;
+                        localizedLevelName.RefreshString();
 
                     //levelName.text = levelData.levelName;
                     levelPreview.sprite = levelData.levelPreview;
-                    levelCard.button.Select();
-                });
-                levelCard.button.onClick.Invoke();
+                        levelCard.button.Select();
+                    });
+                    levelCard.button.onClick.Invoke();
+                }
+                else
+                    levelCard.DeactivateCard();
             }
-            else
-                levelCard.DeactivateCard();
         }
 
         TraceScreenAccesed();

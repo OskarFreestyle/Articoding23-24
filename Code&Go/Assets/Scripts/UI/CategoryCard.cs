@@ -27,7 +27,8 @@ public class CategoryCard : MonoBehaviour
         var op = localizeString.StringReference.GetLocalizedString();
         title.text = op.Result;
 
-        stars.text = ProgressManager.Instance.GetCategoryTotalStars(category).ToString() + "/" + (category.levels.Count * 3).ToString(); ; //category.description;
+        if (category.name_id == "CreatedLevels") stars.text = "";
+        else stars.text = ProgressManager.Instance.GetCategoryTotalStars(category).ToString() + "/" + (category.levels.Count * 3).ToString(); ; //category.description;
         progressBar.minimum = 0.0f;
         progressBar.maximum = category.levels.Count;
         progressBar.current = ProgressManager.Instance.GetCategoryCurrentProgress(category);

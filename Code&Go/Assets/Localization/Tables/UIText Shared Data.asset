@@ -379,6 +379,12 @@ MonoBehaviour:
     m_Key: selected_category_procedures
     m_Metadata:
       m_Items: []
+  - m_Id: 305467943556567040
+    m_Key: 'selected_category_created
+
+'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
