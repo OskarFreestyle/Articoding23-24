@@ -1,4 +1,5 @@
 using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -58,6 +59,8 @@ public class ComunidadLayout : MonoBehaviour
             addClassButton.SetActive(true);
         }
         else userRole.text = "Alumno";
+
+        ReadLevelFiles();
 
         CreateClasses();
     }
@@ -205,5 +208,21 @@ public class ComunidadLayout : MonoBehaviour
     public void SetPublicLevels(ServerClasses.LevelPage lvls)
     {
         publicLevels = lvls;
+    }
+
+    void ReadLevelFiles()
+    {
+        string path = Application.dataPath;
+        //Creamos las carpetas pertinentes si no estan creadas
+        if (!Directory.Exists(path + "/Resources/Levels/")) ;
+        Directory.CreateDirectory(path + "/Resources/Levels/");
+        if (!Directory.Exists(path + "/Resources/Levels/Boards/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/Boards/");
+        if (!Directory.Exists(path + "/Resources/Levels/Boards/8_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/Boards/8_CreatedLevels/");
+        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/");
+        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/");
     }
 }
