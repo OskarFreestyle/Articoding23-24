@@ -81,7 +81,7 @@ public class ComunidadLayout : MonoBehaviour
         if (!alreadyLogged)
         {
             activatedScript.Get("classes", GetClassesOK, GetClassesKO);
-            activatedScript.Get("levels?publicLevels=true&size=15", GetPublicLevelsOK, GetPublicLevelsKO);
+            activatedScript.Get("levels?publicLevels=true&size=10", GetPublicLevelsOK, GetPublicLevelsKO);
             alreadyLogged = true;
         }
     }
@@ -175,14 +175,14 @@ public class ComunidadLayout : MonoBehaviour
     {
         ServerClasses.Level theLevel = clasesManager.GetCommuintyLevel();
 
-        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.title, 7);
+        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), JsonUtility.ToJson(theLevel.articodingLevel.initialState), theLevel.title, 7);
 
         savePanel.SetActive(true);
     }
 
     public void SavePublicLevel(ServerClasses.Level theLevel)
     {
-        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.title, 7);
+        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), JsonUtility.ToJson(theLevel.articodingLevel.initialState), theLevel.title, 7);
 
         savePanel.SetActive(true);
     }

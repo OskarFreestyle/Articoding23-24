@@ -270,7 +270,7 @@ public class ProgressManager : MonoBehaviour
         return name;
     }
 
-    public void UserCreatedLevel(string board, string customActiveBlocks, string levelName, int levelCategory)
+    public void UserCreatedLevel(string board, string customActiveBlocks, string customInitialState, string levelName, int levelCategory)
     {
         //si el nivel ya existe no se guarda
         if (levelsCreatedHash.Contains(Hash.ToHash(board, ""))) return;
@@ -279,17 +279,7 @@ public class ProgressManager : MonoBehaviour
         string path = Application.dataPath;
         string directory = Path.Combine(path, "Resources/Levels/Boards/8_CreatedLevels/");
 
-        //Creamos las carpetas pertinentes si no estan creadas
-        if (!Directory.Exists(path + "/Resources/Levels/")) ;
-            Directory.CreateDirectory(path + "/Resources/Levels/");
-        if (!Directory.Exists(path + "/Resources/Levels/Boards/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/Boards/");
-        if (!Directory.Exists(path + "/Resources/Levels/Boards/8_CreatedLevels/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/Boards/8_CreatedLevels/");
-        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/");
-        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/");
+        CreateDirectories();
 
         if (levelName.Trim() == "") levelName = "NivelCreado";
 
@@ -300,7 +290,21 @@ public class ProgressManager : MonoBehaviour
         writer.Write(board);
         writer.Close();
 
-        /**/    
+        /**/
+
+        if (!customInitialState.Equals("NaN"))
+        {
+            string directoryInitial = Path.Combine(path, "Resources/Levels/InitialStates/8_CreatedLevels/");
+            string filePathRestrinction = directoryInitial + levelName + ".json";
+            Debug.Log(filePathRestrinction);
+            //Creamos el archivo contenedor del estado inicial
+            FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
+            fileRestriction.Close();
+            StreamWriter writerRestriction = new StreamWriter(filePathRestrinction);
+            writerRestriction.Write(customInitialState);
+            writerRestriction.Close();
+        }
+
         if (!customActiveBlocks.Equals("NaN")) { 
 
             string directoryRestrinction = Path.Combine(path, "Resources/Levels/ActiveBlocks/8_CreatedLevels/");
@@ -430,5 +434,26 @@ public class ProgressManager : MonoBehaviour
                     categoryData.levelsData[i].stars = -1;
             }
         }
+    }
+
+    private void CreateDirectories()
+    {
+        string path = Application.dataPath;
+
+        //Creamos las carpetas pertinentes si no estan creadas
+        if (!Directory.Exists(path + "/Resources/Levels/")) ;
+        Directory.CreateDirectory(path + "/Resources/Levels/");
+        if (!Directory.Exists(path + "/Resources/Levels/Boards/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/Boards/");
+        if (!Directory.Exists(path + "/Resources/Levels/Boards/8_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/Boards/8_CreatedLevels/");
+        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/");
+        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/");
+        if (!Directory.Exists(path + "/Resources/Levels/InitialStates/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/InitialStates/");
+        if (!Directory.Exists(path + "/Resources/Levels/InitialStates/8_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/InitialStates/8_CreatedLevels/");
     }
 }

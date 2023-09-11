@@ -62,6 +62,8 @@ public class LevelTestManager : MonoBehaviour
     private BoardState initialState;
     private bool completed = false;
 
+    private ServerClasses.InitialState initialStateObject = null;
+
     private string boardString = "";
 
     [SerializeField] Button resetViewButton;
@@ -180,7 +182,7 @@ public class LevelTestManager : MonoBehaviour
     public void SaveLevelLocal()
     {
         confirmSavePanel.SetActive(true);
-        ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson(), levelName, 7);
+        ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson(), JsonUtility.ToJson(initialStateObject), levelName, 7);
     }
 
     //Convertirmos los datos que tenemos (nombre, nivel y clase a la que va) a un objeto
@@ -199,6 +201,7 @@ public class LevelTestManager : MonoBehaviour
         ActiveBlocks thisActiveBlocks = ActiveBlocks.FromJson(activeBlocks.text);
         levelToPost.articodingLevel.activeblocks = thisActiveBlocks;
         levelToPost.articodingLevel.boardstate = initialState;
+        levelToPost.articodingLevel.initialState = initialStateObject;
 
         activatedScript.Post("levels", JsonUtility.ToJson(levelToPost), GetPostLevelOK, GetPostLevelKO);
     }
@@ -421,11 +424,13 @@ public class LevelTestManager : MonoBehaviour
         string text = UBlockly.Xml.DomToText(dom);
 
         XDocument xmldoc = XDocument.Parse(text);
-        string josn = JsonConvert.SerializeXNode(xmldoc, Formatting.None, true);
 
-        ServerClasses.InitialState actualBlocks = JsonUtility.FromJson<ServerClasses.InitialState>(josn);
+        string json = JsonConvert.SerializeXNode(xmldoc, Formatting.None, true);
+        string newjson = json.Replace('@'.ToString(), string.Empty);
 
+        ServerClasses.InitialState actualBlocks = JsonUtility.FromJson<ServerClasses.InitialState>(newjson);
 
+        initialStateObject = actualBlocks;
     }
 
     int GetClassesOK(UnityWebRequest req)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Xml.Linq;
+using System.Xml;
 using AssetPackage;
 using System.Collections;
 using System.Collections.Generic;
@@ -187,8 +188,10 @@ public class LevelManager : MonoBehaviour
         }
 
         // Maybe do more stuff
-        ActivateLevelBlocks(currentLevel.activeBlocks, currentLevel.allActive); 
-        LoadInitialBlocks(currentLevel.initialState);//UI
+        ActivateLevelBlocks(currentLevel.activeBlocks, currentLevel.allActive);
+
+        if (currentLevel.initialState == null) LoadInitialBlocks(currentLevel.customInitialState);
+        else LoadInitialBlocks(currentLevel.initialState);//UI
 
         string boardJson = currentLevel.levelBoard != null ? currentLevel.levelBoard.text : currentLevel.auxLevelBoard;
         BoardState state = BoardState.FromJson(boardJson);
@@ -202,7 +205,7 @@ public class LevelManager : MonoBehaviour
     {
         //Restricciones y estado inicial
         ActivateLevelBlocks(GameManager.Instance.GetCommunityLevelActiveBlocks(), false);
-        //LoadInitialBlocks(currentLevel.initialState);//UI
+        LoadCommunityInitialBlocks(GameManager.Instance.GetCommunityInitialState());//UI
 
         //Tablero
         BoardState state = GameManager.Instance.GetCommunityLevelBoard();
@@ -407,6 +410,20 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(AsyncLoadInitialBlocks(textAsset));
     }
 
+    public void LoadInitialBlocks(TextAsset textAsset)
+    {
+        if (textAsset == null) return;
+
+        StartCoroutine(AsyncLoadInitialBlocks(textAsset));
+    }
+
+    public void LoadCommunityInitialBlocks(ServerClasses.InitialState initialState)
+    {
+        if (initialState == null) return;
+
+        StartCoroutine(AsyncLoadInitialBlocks(initialState));
+    }
+
     IEnumerator AsyncLoadInitialBlocks(LocalizedAsset<TextAsset> textAsset)
     {
         var loadingOp = textAsset.LoadAssetAsync();
@@ -418,15 +435,78 @@ public class LevelManager : MonoBehaviour
 
         BlocklyUI.WorkspaceView.CleanViews();
 
-        XDocument xmldoc = XDocument.Parse(localizedTextAsset.text);
-        string josn = JsonConvert.SerializeXNode(xmldoc, Newtonsoft.Json.Formatting.None, true);
-
         var dom = UBlockly.Xml.TextToDom(localizedTextAsset.text);
 
         UBlockly.Xml.DomToWorkspace(dom, BlocklyUI.WorkspaceView.Workspace);
         BlocklyUI.WorkspaceView.BuildViews();
 
         yield return null;
+    }
+
+    IEnumerator AsyncLoadInitialBlocks(TextAsset textAsset)
+    {
+        BlocklyUI.WorkspaceView.CleanViews();
+
+        string initial = textAsset.text;
+
+        ServerClasses.InitialState initialState = JsonUtility.FromJson<ServerClasses.InitialState>(initial);
+
+        XmlDocument doc = new XmlDocument();
+        doc.CreateElement("variables");
+        XmlElement block = doc.CreateElement("block");
+
+        block.SetAttribute("type", initialState.block.type);
+        block.SetAttribute("id", initialState.block.id);
+        block.SetAttribute("x", initialState.block.x.ToString());
+        block.SetAttribute("y", initialState.block.y.ToString());
+        block.AppendChild(CreateBlock(doc, initialState.block.next.block));
+
+        var nodeblock = UBlockly.Xml.DomToBlock(block, BlocklyUI.WorkspaceView.Workspace);
+        var dom = UBlockly.Xml.BlockToDom(nodeblock);
+        UBlockly.Xml.DomToWorkspace(dom, BlocklyUI.WorkspaceView.Workspace);
+
+        BlocklyUI.WorkspaceView.BuildViews();
+
+        yield return null;
+    }
+
+    IEnumerator AsyncLoadInitialBlocks(ServerClasses.InitialState initialState)
+    {
+        BlocklyUI.WorkspaceView.CleanViews();
+
+        string initial = JsonUtility.ToJson(initialState);
+
+        XmlDocument doc = new XmlDocument();
+        doc.CreateElement("variables");
+        XmlElement block = doc.CreateElement("block");
+
+        block.SetAttribute("type", initialState.block.type);
+        block.SetAttribute("id", initialState.block.id);
+        block.SetAttribute("x", initialState.block.x.ToString());
+        block.SetAttribute("y", initialState.block.y.ToString());
+        block.AppendChild(CreateBlock(doc, initialState.block.next.block));
+
+        var nodeblock = UBlockly.Xml.DomToBlock(block, BlocklyUI.WorkspaceView.Workspace);
+        var dom = UBlockly.Xml.BlockToDom(nodeblock);
+        UBlockly.Xml.DomToWorkspace(dom, BlocklyUI.WorkspaceView.Workspace);
+
+        BlocklyUI.WorkspaceView.BuildViews();
+
+        yield return null;
+    }
+
+    XmlElement CreateBlock(XmlDocument doc, ServerClasses.BlocklyBlock block)
+    {
+        XmlElement theBlock = doc.CreateElement("next");
+        XmlElement nextBlock = doc.CreateElement("block");
+
+        nextBlock.SetAttribute("type", block.type);
+        nextBlock.SetAttribute("id", block.id);
+        nextBlock.SetAttribute("x", block.x.ToString());
+        nextBlock.SetAttribute("y", block.y.ToString());
+
+        theBlock.AppendChild(nextBlock);
+        return theBlock;
     }
 
     public void ActivateLevelBlocks(TextAsset textAsset, bool allActive)

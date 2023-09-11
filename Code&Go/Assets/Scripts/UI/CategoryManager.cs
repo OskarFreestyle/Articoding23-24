@@ -172,14 +172,17 @@ public class CategoryManager : MonoBehaviour
             //y los almacenamos como TextAssets para su lectura
             string[] boardFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/Boards/8_CreatedLevels", "*.json");
             string[] activeFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/ActiveBlocks/8_CreatedLevels", "*.json");
+            string[] initialFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/InitialStates/8_CreatedLevels", "*.json");
             TextAsset[] boards = new TextAsset[boardFilePaths.Length];
             TextAsset[] activeBlocks = new TextAsset[activeFilePaths.Length];
+            TextAsset[] initialBlocks = new TextAsset[initialFilePaths.Length];
             string[] fileNames = new string[boardFilePaths.Length];
 
             for(int i = 0; i < boardFilePaths.Length; i++)
             {
                 boards[i] = new TextAsset(File.ReadAllText(boardFilePaths[i]));
                 activeBlocks[i] = new TextAsset(File.ReadAllText(activeFilePaths[i]));
+                initialBlocks[i] = new TextAsset(File.ReadAllText(initialFilePaths[i]));
                 fileNames[i] = Path.GetFileNameWithoutExtension(boardFilePaths[i]);
             }
 
@@ -189,6 +192,7 @@ public class CategoryManager : MonoBehaviour
                 LevelData levelData = new LevelData();
                 levelData.levelName = fileNames[i];
                 levelData.activeBlocks = activeBlocks[i];
+                levelData.customInitialState = initialBlocks[i];
                 levelData.levelBoard = boards[i];
                 levelData.levelPreview = createdLevelPreview;
                     

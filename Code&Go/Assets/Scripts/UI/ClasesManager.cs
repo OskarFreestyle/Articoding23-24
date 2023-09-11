@@ -187,7 +187,7 @@ public class ClasesManager : MonoBehaviour
 
         publicLevels.Clear();
 
-        string getCall = "levels?publicLevels=true&size=30&title=" + name;
+        string getCall = "levels?publicLevels=true&size=10&title=" + name;
         activatedScript.Get(getCall, GetCreateLevelsNameOK, GetCreateLevelsNameKO);
     }
 
@@ -238,12 +238,14 @@ public class ClasesManager : MonoBehaviour
 
         GameManager.Instance.SetCommunityLevelBoard(theLevel.articodingLevel.boardstate);
         GameManager.Instance.SetCommunityLevelActiveBlocks(theLevel.articodingLevel.activeblocks);
+        GameManager.Instance.SetCommunityInitialState(theLevel.articodingLevel.initialState);
     }
 
     public void SetPublicLevel(ServerClasses.Level theLevel)
     {
         GameManager.Instance.SetCommunityLevelBoard(theLevel.articodingLevel.boardstate);
         GameManager.Instance.SetCommunityLevelActiveBlocks(theLevel.articodingLevel.activeblocks);
+        GameManager.Instance.SetCommunityInitialState(theLevel.articodingLevel.initialState);
     }
 
     public ServerClasses.Level GetCommuintyLevel()

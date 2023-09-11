@@ -10,6 +10,7 @@ public class LevelData : ScriptableObject
     public Sprite levelPreview;
 
     public LocalizedAsset<TextAsset> initialState; // Estado inicial en .xml
+    public TextAsset customInitialState = null;
 
     [Header("Active Blocks")]
     public TextAsset activeBlocks;//Bloques y categorias disponibles    

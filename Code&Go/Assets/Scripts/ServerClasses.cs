@@ -151,6 +151,7 @@ public class ServerClasses : MonoBehaviour
     {
         public ActiveBlocks activeblocks;
         public BoardState boardstate;
+        public InitialState initialState;
     }
 
     [System.Serializable]
@@ -203,12 +204,19 @@ public class ServerClasses : MonoBehaviour
         public int x;
         public int y;
         public BlocklyMutation mutation;
-        public List<BlocklyField> field;
+        public BlocklyField field;
         public BlocklyStatement statement;
         public BlocklyValue value;
-        public BlocklyBlock next;
+        public BlocklyNextBlock next;
     }
 
+    [System.Serializable]
+    public class BlocklyNextBlock
+    {
+        public BlocklyBlock block;
+    }
+
+    [System.Serializable]
     public class BlocklyVariable
     {
         public string type;
@@ -216,6 +224,7 @@ public class ServerClasses : MonoBehaviour
         public string text;
     }
 
+    [System.Serializable]
     public class BlocklyBaseVariable
     {
         public List<BlocklyVariable> variable;
@@ -225,7 +234,7 @@ public class ServerClasses : MonoBehaviour
     [System.Serializable]
     public class InitialState
     {
-        public List<BlocklyVariable> variables;
-        public List<BlocklyBlock> block;
+        public BlocklyBaseVariable variables;
+        public BlocklyBlock block;
     }
 }
