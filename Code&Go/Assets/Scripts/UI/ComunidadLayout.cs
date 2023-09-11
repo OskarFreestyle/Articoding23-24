@@ -48,6 +48,7 @@ public class ComunidadLayout : MonoBehaviour
     public void IsLoggedAction()
     {
         clasesLayout.SetActive(true);
+        nivelesLayout.SetActive(false);
         notLoggedLayout.SetActive(false);
         infoZone.SetActive(true);
         refreshButton.SetActive(true);
@@ -80,8 +81,9 @@ public class ComunidadLayout : MonoBehaviour
     {
         if (!alreadyLogged)
         {
+            clasesManager.ReadCreatedLevels();
             activatedScript.Get("classes", GetClassesOK, GetClassesKO);
-            activatedScript.Get("levels?publicLevels=true&size=10", GetPublicLevelsOK, GetPublicLevelsKO);
+            activatedScript.Get("levels?publicLevels=true&size=12", GetPublicLevelsOK, GetPublicLevelsKO);
             alreadyLogged = true;
         }
     }
@@ -175,14 +177,14 @@ public class ComunidadLayout : MonoBehaviour
     {
         ServerClasses.Level theLevel = clasesManager.GetCommuintyLevel();
 
-        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), JsonUtility.ToJson(theLevel.articodingLevel.initialState), theLevel.title, 7);
+        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.articodingLevel.initialState, theLevel.title, 7);
 
         savePanel.SetActive(true);
     }
 
     public void SavePublicLevel(ServerClasses.Level theLevel)
     {
-        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), JsonUtility.ToJson(theLevel.articodingLevel.initialState), theLevel.title, 7);
+        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.articodingLevel.initialState, theLevel.title, 7);
 
         savePanel.SetActive(true);
     }
@@ -215,7 +217,7 @@ public class ComunidadLayout : MonoBehaviour
         string path = Application.dataPath;
         //Creamos las carpetas pertinentes si no estan creadas
         if (!Directory.Exists(path + "/Resources/Levels/")) ;
-        Directory.CreateDirectory(path + "/Resources/Levels/");
+            Directory.CreateDirectory(path + "/Resources/Levels/");
         if (!Directory.Exists(path + "/Resources/Levels/Boards/"))
             Directory.CreateDirectory(path + "/Resources/Levels/Boards/");
         if (!Directory.Exists(path + "/Resources/Levels/Boards/8_CreatedLevels/"))

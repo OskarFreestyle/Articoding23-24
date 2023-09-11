@@ -190,7 +190,7 @@ public class LevelManager : MonoBehaviour
         // Maybe do more stuff
         ActivateLevelBlocks(currentLevel.activeBlocks, currentLevel.allActive);
 
-        if (currentLevel.initialState == null) LoadInitialBlocks(currentLevel.customInitialState);
+        if (currentLevel.initialState == null) LoadInitialBlocks(currentLevel.customInitialState.text);
         else LoadInitialBlocks(currentLevel.initialState);//UI
 
         string boardJson = currentLevel.levelBoard != null ? currentLevel.levelBoard.text : currentLevel.auxLevelBoard;
@@ -205,7 +205,7 @@ public class LevelManager : MonoBehaviour
     {
         //Restricciones y estado inicial
         ActivateLevelBlocks(GameManager.Instance.GetCommunityLevelActiveBlocks(), false);
-        LoadCommunityInitialBlocks(GameManager.Instance.GetCommunityInitialState());//UI
+        LoadInitialBlocks(GameManager.Instance.GetCommunityInitialState());//UI
 
         //Tablero
         BoardState state = GameManager.Instance.GetCommunityLevelBoard();
@@ -410,18 +410,11 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(AsyncLoadInitialBlocks(textAsset));
     }
 
-    public void LoadInitialBlocks(TextAsset textAsset)
+    public void LoadInitialBlocks(string textAsset)
     {
         if (textAsset == null) return;
 
         StartCoroutine(AsyncLoadInitialBlocks(textAsset));
-    }
-
-    public void LoadCommunityInitialBlocks(ServerClasses.InitialState initialState)
-    {
-        if (initialState == null) return;
-
-        StartCoroutine(AsyncLoadInitialBlocks(initialState));
     }
 
     IEnumerator AsyncLoadInitialBlocks(LocalizedAsset<TextAsset> textAsset)
@@ -443,70 +436,15 @@ public class LevelManager : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator AsyncLoadInitialBlocks(TextAsset textAsset)
+    IEnumerator AsyncLoadInitialBlocks(string textAsset)
     {
         BlocklyUI.WorkspaceView.CleanViews();
 
-        string initial = textAsset.text;
-
-        ServerClasses.InitialState initialState = JsonUtility.FromJson<ServerClasses.InitialState>(initial);
-
-        XmlDocument doc = new XmlDocument();
-        doc.CreateElement("variables");
-        XmlElement block = doc.CreateElement("block");
-
-        block.SetAttribute("type", initialState.block.type);
-        block.SetAttribute("id", initialState.block.id);
-        block.SetAttribute("x", initialState.block.x.ToString());
-        block.SetAttribute("y", initialState.block.y.ToString());
-        block.AppendChild(CreateBlock(doc, initialState.block.next.block));
-
-        var nodeblock = UBlockly.Xml.DomToBlock(block, BlocklyUI.WorkspaceView.Workspace);
-        var dom = UBlockly.Xml.BlockToDom(nodeblock);
+        var dom = UBlockly.Xml.TextToDom(textAsset);
         UBlockly.Xml.DomToWorkspace(dom, BlocklyUI.WorkspaceView.Workspace);
-
         BlocklyUI.WorkspaceView.BuildViews();
 
         yield return null;
-    }
-
-    IEnumerator AsyncLoadInitialBlocks(ServerClasses.InitialState initialState)
-    {
-        BlocklyUI.WorkspaceView.CleanViews();
-
-        string initial = JsonUtility.ToJson(initialState);
-
-        XmlDocument doc = new XmlDocument();
-        doc.CreateElement("variables");
-        XmlElement block = doc.CreateElement("block");
-
-        block.SetAttribute("type", initialState.block.type);
-        block.SetAttribute("id", initialState.block.id);
-        block.SetAttribute("x", initialState.block.x.ToString());
-        block.SetAttribute("y", initialState.block.y.ToString());
-        block.AppendChild(CreateBlock(doc, initialState.block.next.block));
-
-        var nodeblock = UBlockly.Xml.DomToBlock(block, BlocklyUI.WorkspaceView.Workspace);
-        var dom = UBlockly.Xml.BlockToDom(nodeblock);
-        UBlockly.Xml.DomToWorkspace(dom, BlocklyUI.WorkspaceView.Workspace);
-
-        BlocklyUI.WorkspaceView.BuildViews();
-
-        yield return null;
-    }
-
-    XmlElement CreateBlock(XmlDocument doc, ServerClasses.BlocklyBlock block)
-    {
-        XmlElement theBlock = doc.CreateElement("next");
-        XmlElement nextBlock = doc.CreateElement("block");
-
-        nextBlock.SetAttribute("type", block.type);
-        nextBlock.SetAttribute("id", block.id);
-        nextBlock.SetAttribute("x", block.x.ToString());
-        nextBlock.SetAttribute("y", block.y.ToString());
-
-        theBlock.AppendChild(nextBlock);
-        return theBlock;
     }
 
     public void ActivateLevelBlocks(TextAsset textAsset, bool allActive)

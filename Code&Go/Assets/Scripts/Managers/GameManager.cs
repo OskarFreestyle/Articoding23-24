@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     BoardState communityBoard = null;
     ActiveBlocks communityActiveBlocks = null;
-    ServerClasses.InitialState communityInitialState = null;
+    string communityInitialState = null;
 
     void Awake()
     {
@@ -212,6 +212,6 @@ public class GameManager : MonoBehaviour
     public BoardState GetCommunityLevelBoard() { return communityBoard; }
     public void SetCommunityLevelActiveBlocks(ActiveBlocks blocks) { communityActiveBlocks = blocks; }
     public ActiveBlocks GetCommunityLevelActiveBlocks() { return communityActiveBlocks; }
-    public void SetCommunityInitialState(ServerClasses.InitialState state) { communityInitialState = state; }
-    public ServerClasses.InitialState GetCommunityInitialState() { return communityInitialState; }
+    public void SetCommunityInitialState(string state) { communityInitialState = state; }
+    public string GetCommunityInitialState() { return communityInitialState; }
 }

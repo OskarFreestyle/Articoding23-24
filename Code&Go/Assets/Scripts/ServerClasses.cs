@@ -151,7 +151,7 @@ public class ServerClasses : MonoBehaviour
     {
         public ActiveBlocks activeblocks;
         public BoardState boardstate;
-        public InitialState initialState;
+        public string initialState;
     }
 
     [System.Serializable]
@@ -162,79 +162,5 @@ public class ServerClasses : MonoBehaviour
         public List<int> classes;
         public bool publicLevel;
         public ArticodingLevel articodingLevel;
-    }
-
-    /// <summary>
-    /// Initial state classes
-    /// </summary>
-
-    [System.Serializable]
-    public class BlocklyValue
-    {
-        public string name;
-        public BlocklyBlock block;
-    }
-    
-    [System.Serializable]
-    public class BlocklyMutation
-    {
-        public string name;
-        public bool statements;
-    }
-    
-    [System.Serializable]
-    public class BlocklyStatement
-    {
-        public string name;
-        public BlocklyBlock block;
-    }
-
-    [System.Serializable]
-    public class BlocklyField
-    {
-        public string name;
-        public string text;
-    }
-    
-    [System.Serializable]
-    public class BlocklyBlock
-    {
-        public string type;
-        public string id;
-        public int x;
-        public int y;
-        public BlocklyMutation mutation;
-        public BlocklyField field;
-        public BlocklyStatement statement;
-        public BlocklyValue value;
-        public BlocklyNextBlock next;
-    }
-
-    [System.Serializable]
-    public class BlocklyNextBlock
-    {
-        public BlocklyBlock block;
-    }
-
-    [System.Serializable]
-    public class BlocklyVariable
-    {
-        public string type;
-        public string id;
-        public string text;
-    }
-
-    [System.Serializable]
-    public class BlocklyBaseVariable
-    {
-        public List<BlocklyVariable> variable;
-    }
-
-
-    [System.Serializable]
-    public class InitialState
-    {
-        public BlocklyBaseVariable variables;
-        public BlocklyBlock block;
     }
 }

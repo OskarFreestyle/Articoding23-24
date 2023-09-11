@@ -295,7 +295,7 @@ public class ProgressManager : MonoBehaviour
         if (!customInitialState.Equals("NaN"))
         {
             string directoryInitial = Path.Combine(path, "Resources/Levels/InitialStates/8_CreatedLevels/");
-            string filePathRestrinction = directoryInitial + levelName + ".json";
+            string filePathRestrinction = directoryInitial + levelName + ".txt";
             Debug.Log(filePathRestrinction);
             //Creamos el archivo contenedor del estado inicial
             FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);

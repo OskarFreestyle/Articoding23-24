@@ -62,7 +62,7 @@ public class LevelTestManager : MonoBehaviour
     private BoardState initialState;
     private bool completed = false;
 
-    private ServerClasses.InitialState initialStateObject = null;
+    private string initialStateObject = null;
 
     private string boardString = "";
 
@@ -423,14 +423,7 @@ public class LevelTestManager : MonoBehaviour
         var dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
         string text = UBlockly.Xml.DomToText(dom);
 
-        XDocument xmldoc = XDocument.Parse(text);
-
-        string json = JsonConvert.SerializeXNode(xmldoc, Formatting.None, true);
-        string newjson = json.Replace('@'.ToString(), string.Empty);
-
-        ServerClasses.InitialState actualBlocks = JsonUtility.FromJson<ServerClasses.InitialState>(newjson);
-
-        initialStateObject = actualBlocks;
+        initialStateObject = text;
     }
 
     int GetClassesOK(UnityWebRequest req)

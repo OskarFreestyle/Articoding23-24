@@ -172,7 +172,7 @@ public class CategoryManager : MonoBehaviour
             //y los almacenamos como TextAssets para su lectura
             string[] boardFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/Boards/8_CreatedLevels", "*.json");
             string[] activeFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/ActiveBlocks/8_CreatedLevels", "*.json");
-            string[] initialFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/InitialStates/8_CreatedLevels", "*.json");
+            string[] initialFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/InitialStates/8_CreatedLevels", "*.txt");
             TextAsset[] boards = new TextAsset[boardFilePaths.Length];
             TextAsset[] activeBlocks = new TextAsset[activeFilePaths.Length];
             TextAsset[] initialBlocks = new TextAsset[initialFilePaths.Length];
