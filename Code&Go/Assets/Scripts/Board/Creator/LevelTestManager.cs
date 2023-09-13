@@ -282,15 +282,19 @@ public class LevelTestManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        var dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
-        string text = UBlockly.Xml.DomToText(dom);
-        text = GameManager.Instance.ChangeCodeIDs(text);
-
-        if (!completed)
+        // Si estamos en la creacion del tablero todavia no existe el workspace
+        if (BlocklyUI.WorkspaceView != null)
         {
-            TrackerAsset.Instance.setVar("code", "\r\n" + text);
-            var levelName = GameManager.Instance.GetCurrentLevelName();
-            TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, false, -1f);
+            var dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
+            string text = UBlockly.Xml.DomToText(dom);
+            text = GameManager.Instance.ChangeCodeIDs(text);
+
+            if (!completed)
+            {
+                TrackerAsset.Instance.setVar("code", "\r\n" + text);
+                var levelName = GameManager.Instance.GetCurrentLevelName();
+                TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, false, -1f);
+            }
         }
 
         if (LoadManager.Instance == null)

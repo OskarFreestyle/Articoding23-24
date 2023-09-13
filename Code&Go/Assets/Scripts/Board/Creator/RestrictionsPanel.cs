@@ -6,11 +6,11 @@ using System.IO;
 
 public class RestrictionsPanel : MonoBehaviour
 {
-    private void Start()
+
+    private void Awake()
     {
         ActivateActiveBlocks();
     }
-
     private void ActivateActiveBlocks()
     {
         categoryBlockNames = new string[8][];
@@ -114,10 +114,27 @@ public class RestrictionsPanel : MonoBehaviour
     {
         int cat = GetCategoryData(category);
         blockTogglesLists[cat].Add(toggle);
+
+        togglesActivated++;
+        if(togglesActivated >= totalToggles)
+        {
+            foreach (var panel in blocksPanels) panel.gameObject.SetActive(false);
+        }
+    }
+
+    public void SetBlockUses(int uses, string category, string block)
+    {
+        int catIndex = GetCategoryData(category);
+        int blockIndex = GetBlockInfo(catIndex, block);
+        activeBlocks.categories[catIndex].blocksInfo.activeBlocks[blockIndex].maxUses = uses;
     }
 
     private ActiveBlocks activeBlocks;
     private List<List<BlockToggle>> blockTogglesLists;
+    public List<GameObject> blocksPanels;
+
+    private int togglesActivated = 0;
+    private int totalToggles = 19;
 
     // Category and blocks name arrays
 

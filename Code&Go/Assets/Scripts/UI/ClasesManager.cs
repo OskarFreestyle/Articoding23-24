@@ -35,6 +35,10 @@ public class ClasesManager : MonoBehaviour
 
     private string[] fileNames;
 
+    private string lastCall;
+    private int actualPage;
+    private int totalPages;
+
     private void Start()
     {
         searchBar.onEndEdit.AddListener(delegate
@@ -166,6 +170,8 @@ public class ClasesManager : MonoBehaviour
 
     public void CreatePublicLevels(ServerClasses.LevelPage levels) 
     {
+        actualPage = 0;
+        totalPages = levels.totalPages;
         publicLevels = new List<ServerClasses.Level>();
 
         for(int i = 0; i < levels.content.Count; i++)
@@ -177,7 +183,6 @@ public class ClasesManager : MonoBehaviour
         }
     }
 
-
     public void CreateLevelsWithText(string name)
     {
         for (var i = publicLevels.Count - 1; i >= 0; i--)
@@ -187,7 +192,8 @@ public class ClasesManager : MonoBehaviour
 
         publicLevels.Clear();
 
-        string getCall = "levels?publicLevels=true&size=12&title=" + name;
+        string getCall = "levels?publicLevels=true&size=1&page=" + actualPage + "&title=" + name;
+        lastCall = getCall;
         activatedScript.Get(getCall, GetCreateLevelsNameOK, GetCreateLevelsNameKO);
     }
 
@@ -212,6 +218,21 @@ public class ClasesManager : MonoBehaviour
 
         return 0;
     }
+
+    public void NextPage()
+    {
+        if (actualPage < totalPages - 1) actualPage++;
+
+        CreateLevelsWithText(searchBar.text);
+    }
+
+    public void PrevPage()
+    {
+        if (actualPage > 0) actualPage--;
+
+        CreateLevelsWithText(searchBar.text);
+    }
+
     int GetCreateLevelsNameKO(UnityWebRequest req)
     {
         Debug.Log("Error al crear niveles publicos con nombre");

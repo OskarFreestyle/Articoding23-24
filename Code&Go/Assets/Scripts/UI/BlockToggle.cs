@@ -13,6 +13,13 @@ public class BlockToggle : MonoBehaviour
         {
             restrictions.SetBlockAllow(categoryName, blockName.text);
         });
+
+        inputUses.onEndEdit.AddListener(delegate
+        {
+            if(inputUses.text == "") restrictions.SetBlockUses(99, categoryName, blockName.text);
+            else if (int.Parse(inputUses.text) <= 0) inputUses.text = "1";
+            else restrictions.SetBlockUses(int.Parse(inputUses.text), categoryName, blockName.text);
+        });
     }
 
     //Activa o descactiva el Toggle y devuelve el nombre que esta asignado en el editor
@@ -24,5 +31,6 @@ public class BlockToggle : MonoBehaviour
 
     public RestrictionsPanel restrictions;
     public Text blockName;
+    public InputField inputUses;
     public string categoryName;
 }
