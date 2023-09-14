@@ -174,13 +174,15 @@ public class ProgressManager : MonoBehaviour
 
     public bool IsLevelUnlocked(int categoryIndex, int level)
     {
-        return allUnlocked || (categoryIndex < categoriesData.Length && level < categoriesData[categoryIndex].levelsData.Length &&
+        if (categoryIndex == 7) return true;
+        else return allUnlocked || (categoryIndex < categoriesData.Length && level < categoriesData[categoryIndex].levelsData.Length &&
             level <= categoriesData[categoryIndex].lastLevelUnlocked);
     }
 
     public bool IsCategoryUnlocked(int categoryIndex)
     {
-        return allUnlocked || (categoryIndex <= lastCategoryUnlocked);
+        if (categoryIndex == 7) return true;
+        else return allUnlocked || (categoryIndex <= lastCategoryUnlocked);
     }
 
     public int GetLvlsCompleted() {
@@ -296,7 +298,6 @@ public class ProgressManager : MonoBehaviour
         {
             string directoryInitial = Path.Combine(path, "Resources/Levels/InitialStates/8_CreatedLevels/");
             string filePathRestrinction = directoryInitial + levelName + ".txt";
-            Debug.Log(filePathRestrinction);
             //Creamos el archivo contenedor del estado inicial
             FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
             fileRestriction.Close();
@@ -308,10 +309,7 @@ public class ProgressManager : MonoBehaviour
         if (!customActiveBlocks.Equals("NaN")) { 
 
             string directoryRestrinction = Path.Combine(path, "Resources/Levels/ActiveBlocks/8_CreatedLevels/");
-            if (!Directory.Exists(directoryRestrinction))
-                Directory.CreateDirectory(directoryRestrinction);
             string filePathRestrinction = directoryRestrinction + levelName + ".json";
-            Debug.Log(filePathRestrinction);
             //Creamos el archivo contenedor de las restricciones
             FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
             fileRestriction.Close();

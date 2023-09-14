@@ -192,7 +192,7 @@ public class ClasesManager : MonoBehaviour
 
         publicLevels.Clear();
 
-        string getCall = "levels?publicLevels=true&size=1&page=" + actualPage + "&title=" + name;
+        string getCall = "levels?publicLevels=true&size=6&page=" + actualPage + "&title=" + name;
         lastCall = getCall;
         activatedScript.Get(getCall, GetCreateLevelsNameOK, GetCreateLevelsNameKO);
     }

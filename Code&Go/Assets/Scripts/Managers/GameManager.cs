@@ -125,7 +125,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevelCreator()
     {
-        playingCommunityLevel = false;
         blockIDs = new Dictionary<UBlockly.Block, string>();
         levelIndex = -1;
         if (LoadManager.Instance == null)
@@ -208,10 +207,18 @@ public class GameManager : MonoBehaviour
     public string GetUserName() { return userName; }
 
     public bool GetPlayingCommunityLevel() { return playingCommunityLevel; }
+    public void SetPlayingCommunityLevel(bool aux) { playingCommunityLevel = aux; }
     public void SetCommunityLevelBoard(BoardState state) { communityBoard = state; }
     public BoardState GetCommunityLevelBoard() { return communityBoard; }
     public void SetCommunityLevelActiveBlocks(ActiveBlocks blocks) { communityActiveBlocks = blocks; }
     public ActiveBlocks GetCommunityLevelActiveBlocks() { return communityActiveBlocks; }
     public void SetCommunityInitialState(string state) { communityInitialState = state; }
     public string GetCommunityInitialState() { return communityInitialState; }
+
+    public void ResetCommunityElements()
+    {
+        communityInitialState = null;
+        communityActiveBlocks = null;
+        communityBoard = null;
+    }
 }

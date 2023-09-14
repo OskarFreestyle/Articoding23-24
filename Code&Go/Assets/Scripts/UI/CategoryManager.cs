@@ -39,6 +39,7 @@ public class CategoryManager : MonoBehaviour
 
     public GameObject categoriesPanel;
     public GameObject levelsPanel;
+    public GameObject playSelectedLevelButton;
 
     public GameObject currentCategoryPanel;
     public GameObject currentLevelPanel;
@@ -178,7 +179,9 @@ public class CategoryManager : MonoBehaviour
             TextAsset[] initialBlocks = new TextAsset[initialFilePaths.Length];
             string[] fileNames = new string[boardFilePaths.Length];
 
-            for(int i = 0; i < boardFilePaths.Length; i++)
+            playSelectedLevelButton.SetActive(boardFilePaths.Length > 0);
+
+            for (int i = 0; i < boardFilePaths.Length; i++)
             {
                 boards[i] = new TextAsset(File.ReadAllText(boardFilePaths[i]));
                 activeBlocks[i] = new TextAsset(File.ReadAllText(activeFilePaths[i]));
@@ -217,6 +220,11 @@ public class CategoryManager : MonoBehaviour
                         levelCard.button.Select();
                     });
                     levelCard.button.onClick.Invoke();
+                    levelCard.editLevelButton.onClick.AddListener(() =>
+                    {
+                        levelCard.button.onClick.Invoke();
+                        EditCreatedLevel();
+                    });
                 }
                 else
                     levelCard.DeactivateCard();
@@ -224,7 +232,7 @@ public class CategoryManager : MonoBehaviour
         }
         else
         {
-
+            playSelectedLevelButton.SetActive(true);
             for (int i = 0; i < category.levels.Count; i++)
             {
                 int index = i;
@@ -290,6 +298,22 @@ public class CategoryManager : MonoBehaviour
         {
             GameManager.Instance.LoadLevel(levelsCreatedCategory, levelCreatedIndex);
         }
+    }
+
+    public void EditCreatedLevel()
+    {
+        LevelData thisleveldata = categories[currentCategory].levels[currentLevel];
+
+        BoardState thisBoard = JsonUtility.FromJson<BoardState>(thisleveldata.levelBoard.text);
+        ActiveBlocks thisActive = JsonUtility.FromJson<ActiveBlocks>(thisleveldata.activeBlocks.text);
+        string thisInitial = thisleveldata.customInitialState.text;
+
+        GameManager.Instance.SetCommunityLevelBoard(thisBoard);
+        GameManager.Instance.SetCommunityLevelActiveBlocks(thisActive);
+        GameManager.Instance.SetCommunityInitialState(thisInitial);
+        GameManager.Instance.SetPlayingCommunityLevel(true);
+
+        GameManager.Instance.LoadLevelCreator();
     }
 
     public void TraceScreenAccesed()

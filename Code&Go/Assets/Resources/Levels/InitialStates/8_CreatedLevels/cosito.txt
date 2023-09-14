@@ -1,0 +1,8 @@
+<xml>
+    <variables />
+    <block type="start_start" id="janed0,2h%FmUM!ZhDG:" x="209" y="-196">
+        <next>
+            <block type="movement_laser_change_intensity" id="WvM8|KgS8tht[t@]y/9A" />
+        </next>
+    </block>
+</xml>

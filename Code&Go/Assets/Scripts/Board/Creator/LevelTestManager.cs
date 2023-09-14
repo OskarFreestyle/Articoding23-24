@@ -52,7 +52,7 @@ public class LevelTestManager : MonoBehaviour
     public GameObject endPanelMinimized;
     public GameObject exitConfirmationPanel;
 
-    public RestrictionsPanel restrictionsPanel;
+    public RestrictionsPanel restrictionsPanel = new RestrictionsPanel();
     public string levelName = "LevelCreated";
     public int levelCategory = 0;
 
@@ -62,7 +62,7 @@ public class LevelTestManager : MonoBehaviour
     private BoardState initialState;
     private bool completed = false;
 
-    private string initialStateObject = null;
+    private string initialStateObject = "";
 
     private string boardString = "";
 
@@ -79,28 +79,36 @@ public class LevelTestManager : MonoBehaviour
     public ActivatedScript activatedScript;
     ServerClasses.ClaseJSON clases;
 
+    private bool alreadyInitialized = false;
+
     private void Start()
     {
-
-        Invoke("ChangeMode", 0.01f);
-        ActivateLevelBlocks(activeBlocks, false);
+        if (GameManager.Instance.GetPlayingCommunityLevel())
+        {
+            Invoke("ChangeModeFromEditButton", 0.01f);
+        }
+        else
+        {
+            Invoke("ChangeMode", 0.01f);
+            ActivateLevelBlocks(activeBlocks, false);
+        }
 #if UNITY_EDITOR
         loadBoardPanel.SetActive(true);
         saveBoardPanel.SetActive(true);
         saveButton.SetActive(true);
 #endif
-
-        //Obtenemos la lista de clases del profesor creando el nivel
-        if(GameManager.Instance.GetIsAdmin())
-        {
-            activatedScript.Get("classes", GetClassesOK, GetClassesKO);
-        }
-
     }
 
     private void Update()
     {
         resetViewButton.interactable = !cameraOrbit.IsReset();
+
+        if (BlocklyUI.WorkspaceView != null && alreadyInitialized == false)
+        {
+            LoadInitialBlocks(GameManager.Instance.GetCommunityInitialState());
+            ActivateLevelBlocks(GameManager.Instance.GetCommunityLevelActiveBlocks(), false);
+            alreadyInitialized = true;
+        }
 
         if (inCreator)
         {
@@ -110,6 +118,8 @@ public class LevelTestManager : MonoBehaviour
         }
         else if (board.BoardCompleted() && !completed)
         {
+            GameManager.Instance.ResetCommunityElements();
+
             completed = true;
             endPanel.SetActive(true);
 
@@ -121,17 +131,6 @@ public class LevelTestManager : MonoBehaviour
                 {
                     exportButton.SetActive(logged);
                     exportUserButton.SetActive(!logged);
-                    //Si es profesor, activamos el boton y añadimos las clases a la elección de clases para subir el nivel
-                    List<ServerClasses.Clase> clasesList = clases.content;
-
-                    clasesDropdown.ClearOptions();
-
-                    for (int i = 0; i < clasesList.Count; i++)
-                    {
-                        Dropdown.OptionData data = new Dropdown.OptionData();
-                        data.text = clasesList[i].name;
-                        clasesDropdown.options.Add(data);
-                    }
                 }
                 else
                 {
@@ -155,34 +154,34 @@ public class LevelTestManager : MonoBehaviour
         }
     }
 
+    public void CreateClassesDropdown()
+    {
+        //Obtenemos la lista de clases del profesor creando el nivel
+        if (GameManager.Instance.GetIsAdmin())
+        {
+            activatedScript.Get("classes", GetClassesOK, GetClassesKO);
+        }
+    }
+
     public void TryToSaveLocal()
     {
-        if(levelName.Trim() != "")
-            SaveLevelLocal();
-        else
-            nameWarningPanel.SetActive(true);
+        SaveLevelLocal();
     }
 
     public void TryToExport()
     {
-        if (levelName.Trim() != "")
-            ExportLevel(true);
-        else
-            nameWarningPanel.SetActive(true);
+        ExportLevel(true);
     }
 
     public void TryToUserExport()
     {
-        if (levelName.Trim() != "")
-            ExportLevel(false);
-        else
-            nameWarningPanel.SetActive(true);
+       ExportLevel(false);
     }
 
     public void SaveLevelLocal()
     {
         confirmSavePanel.SetActive(true);
-        ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson(), JsonUtility.ToJson(initialStateObject), levelName, 7);
+        ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson(), initialStateObject, levelName, 7);
     }
 
     //Convertirmos los datos que tenemos (nombre, nivel y clase a la que va) a un objeto
@@ -222,7 +221,35 @@ public class LevelTestManager : MonoBehaviour
 
     public void ChangeMode()
     {
-        ChangeMode(false);
+        if (levelName.Trim(' ') == "") nameWarningPanel.SetActive(true);
+        else ChangeMode(false);
+    }
+
+    public void ChangeModeFromEditButton()
+    {
+        inCreator = false;
+
+        initialState = GameManager.Instance.GetCommunityLevelBoard();
+        board.LoadBoard(initialState);
+
+        levelObjects.SetActive(!inCreator);
+        levelCanvas.SetActive(!inCreator);
+        levelButtons.SetActive(!inCreator);
+
+        creatorObjects.SetActive(inCreator);
+        creatorCanvas.SetActive(inCreator);
+
+        board.SetModifiable(inCreator);
+
+        completed = false;
+        cameraFit.SetViewPort(levelViewport);
+
+        changeModeButton.GetComponent<Image>().sprite = changeToEditModeSprite;
+        board.SetFocusPointOffset(new Vector3((board.GetColumns() - 2) / 2.0f + 0.5f, 0.0f, (board.GetRows() - 2) / 2.0f + 0.5f));
+        cameraFit.FitBoard(board.GetRows(), board.GetColumns());
+
+        string boardState = board.GetBoardStateAsFormatedString();
+        boardString = boardState;
     }
 
     public void ChangeMode(bool fromButton)
@@ -265,7 +292,6 @@ public class LevelTestManager : MonoBehaviour
             cameraFit.SetViewPort(creatorViewPort);
             changeModeButton.GetComponent<Image>().sprite = changeToPlayModeSprite;
             boardCreator.FitBoard();
-
 
             if (fromButton)
                 TrackerAsset.Instance.setVar("mode", "edition");
@@ -412,6 +438,42 @@ public class LevelTestManager : MonoBehaviour
         yield return null;
     }
 
+    public void ActivateLevelBlocks(ActiveBlocks blocks, bool allActive)
+    {
+        if (blocks == null) return;
+
+        StartCoroutine(AsyncActivateLevelBlocks(blocks, allActive));
+    }
+
+    IEnumerator AsyncActivateLevelBlocks(ActiveBlocks blocks, bool allActive)
+    {
+        if (allActive) BlocklyUI.WorkspaceView.Toolbox.SetActiveAllBlocks();
+        else if (blocks != null)
+        {
+            BlocklyUI.WorkspaceView.Toolbox.SetActiveBlocks(blocks.AsMap());
+        }
+
+        yield return null;
+    }
+
+    public void LoadInitialBlocks(string textAsset)
+    {
+        if (textAsset == null) return;
+
+        StartCoroutine(AsyncLoadInitialBlocks(textAsset));
+    }
+
+    IEnumerator AsyncLoadInitialBlocks(string textAsset)
+    {
+        BlocklyUI.WorkspaceView.CleanViews();
+
+        var dom = UBlockly.Xml.TextToDom(textAsset);
+        UBlockly.Xml.DomToWorkspace(dom, BlocklyUI.WorkspaceView.Workspace);
+        BlocklyUI.WorkspaceView.BuildViews();
+
+        yield return null;
+    }
+
     public void ChangeLevelName(string newLevelName)
     {
         levelName = newLevelName;
@@ -441,6 +503,18 @@ public class LevelTestManager : MonoBehaviour
         catch (System.Exception e)
         {
             Debug.Log("Error al leer clases " + e);
+        }
+
+        //Si es profesor, activamos el boton y añadimos las clases a la elección de clases para subir el nivel
+        List<ServerClasses.Clase> clasesList = clases.content;
+
+        clasesDropdown.ClearOptions();
+
+        for (int i = 0; i < clasesList.Count; i++)
+        {
+            Dropdown.OptionData data = new Dropdown.OptionData();
+            data.text = clasesList[i].name;
+            clasesDropdown.options.Add(data);
         }
 
         return 0;

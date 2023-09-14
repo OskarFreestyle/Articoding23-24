@@ -7,6 +7,7 @@ public class LevelCard : MonoBehaviour
 {
     private LevelData level;
     private Category category;
+    public Button editLevelButton;
 
     [SerializeField] private Text title;
     [SerializeField] private Image[] stars;
@@ -28,7 +29,7 @@ public class LevelCard : MonoBehaviour
 #else
     private void Update()
     {
-        //Configure();
+
     }
 #endif
     private void Configure()
