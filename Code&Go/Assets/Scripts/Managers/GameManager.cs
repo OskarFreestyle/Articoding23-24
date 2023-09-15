@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     BoardState communityBoard = null;
     ActiveBlocks communityActiveBlocks = null;
     string communityInitialState = null;
+    string levelName = "";
 
     void Awake()
     {
@@ -126,7 +127,6 @@ public class GameManager : MonoBehaviour
     public void LoadLevelCreator()
     {
         blockIDs = new Dictionary<UBlockly.Block, string>();
-        levelIndex = -1;
         if (LoadManager.Instance == null)
         {
             SceneManager.LoadScene("BoardCreation");
@@ -166,9 +166,7 @@ public class GameManager : MonoBehaviour
         int levelIndex = GetCurrentLevelIndex();
 
         string levelName;
-        if (category.name_id != "CreatedLevels")
-            levelName = category.levels[levelIndex].levelName;
-        else levelName = "Nivel creado";
+        levelName = category.levels[levelIndex].levelName;
 
         return levelName;
     }

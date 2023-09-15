@@ -36,8 +36,8 @@ public class ClasesManager : MonoBehaviour
     private string[] fileNames;
 
     private string lastCall;
-    private int actualPage;
-    private int totalPages;
+    private int actualPage = 0;
+    private int totalPages = 0;
 
     private void Start()
     {
@@ -170,7 +170,16 @@ public class ClasesManager : MonoBehaviour
 
     public void CreatePublicLevels(ServerClasses.LevelPage levels) 
     {
-        actualPage = 0;
+        if (publicLevels != null)
+        {
+            for (var i = publicLevels.Count - 1; i >= 0; i--)
+            {
+                Destroy(publicLevelList.transform.GetChild(i).gameObject);
+            }
+
+            publicLevels.Clear();
+        }
+
         totalPages = levels.totalPages;
         publicLevels = new List<ServerClasses.Level>();
 

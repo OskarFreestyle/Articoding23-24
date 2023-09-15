@@ -222,6 +222,8 @@ public class CategoryManager : MonoBehaviour
                     levelCard.button.onClick.Invoke();
                     levelCard.editLevelButton.onClick.AddListener(() =>
                     {
+                        GameManager.Instance.SetCurrentLevel(currentLevel);
+                        GameManager.Instance.SetCurrentCategory(categories[currentCategory]);
                         levelCard.button.onClick.Invoke();
                         EditCreatedLevel();
                     });

@@ -20,4 +20,9 @@ public class LevelName : MonoBehaviour
     {
         levelTestManager.ChangeLevelName(levelNameText.text);
     }
+
+    public void SetName()
+    {
+        inputField.text = levelTestManager.levelName;
+    }
 }

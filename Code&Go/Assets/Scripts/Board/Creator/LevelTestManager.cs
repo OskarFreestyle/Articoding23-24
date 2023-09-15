@@ -221,8 +221,13 @@ public class LevelTestManager : MonoBehaviour
 
     public void ChangeMode()
     {
+        ChangeMode(false);
+    }
+
+    public void TryChangeMode()
+    {
+        ChangeMode(true);
         if (levelName.Trim(' ') == "") nameWarningPanel.SetActive(true);
-        else ChangeMode(false);
     }
 
     public void ChangeModeFromEditButton()
@@ -231,6 +236,7 @@ public class LevelTestManager : MonoBehaviour
 
         initialState = GameManager.Instance.GetCommunityLevelBoard();
         board.LoadBoard(initialState);
+        levelName = GameManager.Instance.GetCurrentLevelName();
 
         levelObjects.SetActive(!inCreator);
         levelCanvas.SetActive(!inCreator);
