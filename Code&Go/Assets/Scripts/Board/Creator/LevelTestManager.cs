@@ -523,6 +523,8 @@ public class LevelTestManager : MonoBehaviour
             clasesDropdown.options.Add(data);
         }
 
+        clasesDropdown.RefreshShownValue();
+
         return 0;
     }
 
