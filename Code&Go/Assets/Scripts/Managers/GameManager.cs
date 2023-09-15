@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
     BoardState communityBoard = null;
     ActiveBlocks communityActiveBlocks = null;
     string communityInitialState = null;
-    string levelName = "";
 
     void Awake()
     {
@@ -218,5 +217,6 @@ public class GameManager : MonoBehaviour
         communityInitialState = null;
         communityActiveBlocks = null;
         communityBoard = null;
+        playingCommunityLevel = false;
     }
 }

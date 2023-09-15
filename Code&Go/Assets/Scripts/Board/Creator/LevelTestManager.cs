@@ -329,6 +329,8 @@ public class LevelTestManager : MonoBehaviour
             }
         }
 
+        GameManager.Instance.ResetCommunityElements();
+
         if (LoadManager.Instance == null)
         {
             SceneManager.LoadScene("MenuScene");
