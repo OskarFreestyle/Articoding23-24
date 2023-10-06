@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class penguinLoading : MonoBehaviour
+public class PenguinLoadingBehaviour : MonoBehaviour
 {
-    public Transform initialPoint;
-    private float midX = -11.0f;
-    private Vector3 temp;
+    [SerializeField] private Transform initialPoint;
+    [SerializeField] private Transform finalPoint;
+    [SerializeField] private float speed;
 
     // Start is called before the first frame update
     void Start()
     {
         transform.position = initialPoint.position;
-        temp = new Vector3(-2.0f,0,0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(temp * Time.deltaTime);
+        transform.Translate(Vector3.left * speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other) {
