@@ -13,46 +13,39 @@ public class LoadManager : MonoBehaviour
 {
     public static LoadManager Instance;
 
-    public bool AutoStart = true;
+    [SerializeField] private bool autoStart;
+    public bool AutoStart {
+        get { return autoStart; }
+        set { autoStart = value; }
+    }
 
-    public GameObject content;
-    public Text loadingText;
-    public float extraLoadingTime = 1.0f;
+    [SerializeField] private GameObject content;
+    [SerializeField] private Text loadingText;
+    [SerializeField] private float extraLoadingTime = 1.0f;
 
-    private List<AsyncOperation> loadOperations;
-
+    private List<AsyncOperation> loadOperations = new List<AsyncOperation>();
     private int lastLoadedIndex = -1;
 
-    IEnumerator Start()
-    {
-        Debug.Log("Load Manager Start");
-        // TODO create instance in Awake
-        if(Instance != null)
-        {
+    private void Awake() {
+        if (Instance) {
             Destroy(gameObject);
-            yield break;
         }
+        else {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+    }
 
-        Instance = this;
-        //DontDestroyOnLoad(gameObject);
-        loadOperations = new List<AsyncOperation>();
-
-        /*if (!LocalizationSettings.InitializationOperation.IsDone)
-            loadingText.gameObject.SetActive(false);*/
-
-
+    IEnumerator Start() {
         yield return SimvaExtension.Instance.OnAfterGameLoad();
 
         yield return WaitUntilLoadingIsComplete();
 
-        if (AutoStart && lastLoadedIndex == -1)
+        if (autoStart && lastLoadedIndex == -1)
             LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    void LateUpdate()
-    {
-        Debug.Log("Load Manager Late Update");
-
+    void LateUpdate() {
         if (!content.activeInHierarchy) return;
 
         Color color = loadingText.color;
@@ -60,13 +53,10 @@ public class LoadManager : MonoBehaviour
         loadingText.color = color;
     }
 
-    public IEnumerator Unload()
-    {
-        Debug.Log("Load Manager Late Unload");
-
+    public IEnumerator Unload() {
         content.SetActive(true);
 
-        //Unload current Scene
+        // Unload current Scene
         if (lastLoadedIndex != -1)
             loadOperations.Add(SceneManager.UnloadSceneAsync(lastLoadedIndex));
 
@@ -75,33 +65,29 @@ public class LoadManager : MonoBehaviour
         lastLoadedIndex = -1;
     }
 
-    public void LoadScene(string sceneName)
-    {
-        Debug.Log("Load Manager Late load string");
-
+    public void LoadScene(string sceneName) {
         content.SetActive(true);
 
-        //Unload current Scene
+        // Unload current Scene
         if (lastLoadedIndex != -1)
             loadOperations.Add(SceneManager.UnloadSceneAsync(lastLoadedIndex));
 
-        //Load async 
+        // Load async 
         loadOperations.Add(SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive));
 
         StartCoroutine(WaitUntilLoadingIsComplete());
 
         lastLoadedIndex = SceneManager.GetSceneByName(sceneName).buildIndex;
     }
-    public void LoadScene(int index) {
-        Debug.Log("Load Manager Late load int");
 
+    public void LoadScene(int index) {
         content.SetActive(true);
 
-        //Unload current Scene
+        // Unload current Scene
         if (lastLoadedIndex != -1)
             loadOperations.Add(SceneManager.UnloadSceneAsync(lastLoadedIndex));
 
-        //Load async 
+        // Load async 
         loadOperations.Add(SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive));
 
         StartCoroutine(WaitUntilLoadingIsComplete());
@@ -109,10 +95,7 @@ public class LoadManager : MonoBehaviour
         lastLoadedIndex = index;
     }
 
-    private IEnumerator WaitUntilLoadingIsComplete()
-    {
-        Debug.Log("Load Manager Late load wait until complete");
-
+    private IEnumerator WaitUntilLoadingIsComplete() {
         // Wait for scene loading operations
         for (int i = 0; i < loadOperations.Count; i++)
         {
@@ -136,5 +119,4 @@ public class LoadManager : MonoBehaviour
         if(!loadingText.gameObject.activeSelf)
             loadingText.gameObject.SetActive(true);
     }
-
 }

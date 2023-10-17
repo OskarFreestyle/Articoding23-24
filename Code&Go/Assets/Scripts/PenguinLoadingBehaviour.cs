@@ -11,20 +11,17 @@ public class PenguinLoadingBehaviour : MonoBehaviour
     [SerializeField] private Transform finalPoint;
     [SerializeField] private float speed;
 
-    private void Start()
-    {
+    private void Start() {
+        // Start positioning the penguin on the initial position
         transform.position = initialPoint.position;
     }
 
-    private void Update()
-    {
-        Debug.Log("PenguinLoadingBehaviour Update");
+    private void Update() {
+        // Move the penguin
         transform.position += Vector3.right * speed * Time.deltaTime;
-    }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Respawn")) {
-            Debug.Log("Resposition");
+        // Reposition the penguin when it passes the final position
+        if(transform.position.x >= finalPoint.position.x) {
             transform.position = initialPoint.position;
         }
     }
