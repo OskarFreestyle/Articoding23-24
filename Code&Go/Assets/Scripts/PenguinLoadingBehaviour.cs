@@ -2,26 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// The penguin behaviour during the Loading Scene
+/// </summary>
 public class PenguinLoadingBehaviour : MonoBehaviour
 {
     [SerializeField] private Transform initialPoint;
     [SerializeField] private Transform finalPoint;
     [SerializeField] private float speed;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         transform.position = initialPoint.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        Debug.Log("PenguinLoadingBehaviour Update");
+        transform.position += Vector3.right * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Respawn")) {
+            Debug.Log("Resposition");
             transform.position = initialPoint.position;
         }
     }

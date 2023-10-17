@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Localization.Settings;
 using uAdventure.Simva;
 
+/// <summary>
+/// Manage the loading of the scenes
+/// </summary>
 public class LoadManager : MonoBehaviour
 {
     public static LoadManager Instance;
@@ -22,6 +25,8 @@ public class LoadManager : MonoBehaviour
 
     IEnumerator Start()
     {
+        Debug.Log("Load Manager Start");
+        // TODO create instance in Awake
         if(Instance != null)
         {
             Destroy(gameObject);
@@ -46,6 +51,8 @@ public class LoadManager : MonoBehaviour
 
     void LateUpdate()
     {
+        Debug.Log("Load Manager Late Update");
+
         if (!content.activeInHierarchy) return;
 
         Color color = loadingText.color;
@@ -53,8 +60,41 @@ public class LoadManager : MonoBehaviour
         loadingText.color = color;
     }
 
-    public void LoadScene(int index)
+    public IEnumerator Unload()
     {
+        Debug.Log("Load Manager Late Unload");
+
+        content.SetActive(true);
+
+        //Unload current Scene
+        if (lastLoadedIndex != -1)
+            loadOperations.Add(SceneManager.UnloadSceneAsync(lastLoadedIndex));
+
+        yield return StartCoroutine(WaitUntilLoadingIsComplete());
+
+        lastLoadedIndex = -1;
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        Debug.Log("Load Manager Late load string");
+
+        content.SetActive(true);
+
+        //Unload current Scene
+        if (lastLoadedIndex != -1)
+            loadOperations.Add(SceneManager.UnloadSceneAsync(lastLoadedIndex));
+
+        //Load async 
+        loadOperations.Add(SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive));
+
+        StartCoroutine(WaitUntilLoadingIsComplete());
+
+        lastLoadedIndex = SceneManager.GetSceneByName(sceneName).buildIndex;
+    }
+    public void LoadScene(int index) {
+        Debug.Log("Load Manager Late load int");
+
         content.SetActive(true);
 
         //Unload current Scene
@@ -69,37 +109,10 @@ public class LoadManager : MonoBehaviour
         lastLoadedIndex = index;
     }
 
-    public IEnumerator Unload()
-    {
-        content.SetActive(true);
-
-        //Unload current Scene
-        if (lastLoadedIndex != -1)
-            loadOperations.Add(SceneManager.UnloadSceneAsync(lastLoadedIndex));
-
-        yield return StartCoroutine(WaitUntilLoadingIsComplete());
-
-        lastLoadedIndex = -1;
-    }
-
-    public void LoadScene(string sceneName)
-    {
-        content.SetActive(true);
-
-        //Unload current Scene
-        if (lastLoadedIndex != -1)
-            loadOperations.Add(SceneManager.UnloadSceneAsync(lastLoadedIndex));
-
-        //Load async 
-        loadOperations.Add(SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive));
-
-        StartCoroutine(WaitUntilLoadingIsComplete());
-
-        lastLoadedIndex = SceneManager.GetSceneByName(sceneName).buildIndex;
-    }
-
     private IEnumerator WaitUntilLoadingIsComplete()
     {
+        Debug.Log("Load Manager Late load wait until complete");
+
         // Wait for scene loading operations
         for (int i = 0; i < loadOperations.Count; i++)
         {
