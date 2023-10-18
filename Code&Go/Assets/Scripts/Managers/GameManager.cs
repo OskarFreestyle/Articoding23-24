@@ -6,10 +6,13 @@ using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
-
+/// <summary>
+/// Main manager of the game
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
     [SerializeField] private List <Category> categories;
     [SerializeField] private bool loadSave = true;
 
@@ -18,7 +21,7 @@ public class GameManager : MonoBehaviour
     private bool gameLoaded = false;
     private Dictionary<UBlockly.Block, string> blockIDs;
 
-    //Variables de conexion
+    // Variables de conexion
     bool loggedIn;
     string token;
     bool isAdmin = false;
@@ -202,7 +205,6 @@ public class GameManager : MonoBehaviour
     public bool GetIsAdmin() { return isAdmin; }
     public void SetUserName(string name) { userName = name; }
     public string GetUserName() { return userName; }
-
     public bool GetPlayingCommunityLevel() { return playingCommunityLevel; }
     public void SetPlayingCommunityLevel(bool aux) { playingCommunityLevel = aux; }
     public void SetCommunityLevelBoard(BoardState state) { communityBoard = state; }

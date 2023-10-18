@@ -49,6 +49,7 @@ public class Tab : MonoBehaviour, IPointerClickHandler
 
     private void Configure()
     {
+        Debug.Log("Entra aqui todo el rato");
         if (!selected)
         {
             text.color = textDeselectedColor;

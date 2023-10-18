@@ -28,7 +28,8 @@ public class LoadManager : MonoBehaviour
 
     private void Awake() {
         if (Instance) {
-            Destroy(gameObject);
+            Debug.LogWarning("More than 1 Load Manager created");
+            DestroyImmediate(this);
         }
         else {
             Instance = this;
@@ -36,7 +37,7 @@ public class LoadManager : MonoBehaviour
         }
     }
 
-    IEnumerator Start() {
+    private IEnumerator Start() {
         yield return SimvaExtension.Instance.OnAfterGameLoad();
 
         yield return WaitUntilLoadingIsComplete();
