@@ -25,6 +25,8 @@ public class PanelGroup : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log(gameObject + "has a PanelGruop");
+        Debug.Log(gameObject + "has a PanelGruop");
         rect = GetComponent<RectTransform>();
         panelWidth = rect.rect.width;
     }
@@ -77,7 +79,7 @@ public class PanelGroup : MonoBehaviour
             if(index != currentPanel)
             {
                 currentPanel = index;
-                tabGroup.SetTabIndex(currentPanel);
+                //tabGroup.SetTabIndex(currentPanel); // WARNING Quitado para compilar
             }
         }
     }

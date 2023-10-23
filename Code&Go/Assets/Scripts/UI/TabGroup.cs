@@ -1,58 +1,58 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TabGroup : MonoBehaviour
 {
-    /* List of all tabs that should be managed */
-    public List<TabButton> tabs;
+    [SerializeField] private List<TabButton> tabButtons;
+    private TabButton selectedTabButton;
 
-    /* Current selected tab */
-    private TabButton selectedTab;
+    [SerializeField] private List<GameObject> objectsToSwap;
 
-    /* Associated PanelGroup */
-    public PanelGroup panelGroup;
+    [SerializeField] private Color tabActive;
+    [SerializeField] private Color tabIdle;
+    [SerializeField] private Color tabHover;
 
+    [SerializeField] private Color tabActiveText;
+    [SerializeField] private Color tabIdleText;
 
-    public void Subscribe(TabButton tab)
-    {
-        if (tabs == null)
-        {
-            tabs = new List<TabButton>();
-        }
-
-        tabs.Add(tab);
+    private void Start() {
+        OnTabSelected(tabButtons[0]);
     }
 
-    public void OnSelected(TabButton tab)
-    {
-        if (selectedTab == tab)
-            return;
-
-        selectedTab = tab;
+    public void OnTabEnter(TabButton tabButton) {
         ResetTabs();
-
-        /* Change to panel (order matters) */
-        panelGroup.SetPanelIndex(tab.transform.GetSiblingIndex());
-    }
-
-    /* Deselect all tabs */
-    private void ResetTabs()
-    {
-        foreach (TabButton tab in tabs)
-        {
-            tab.ResetTab();
+        if (selectedTabButton == null || selectedTabButton != tabButton) {
+            tabButton.Background.color = tabHover;
         }
     }
 
-    public void SetTabIndex(int index)
-    {
-        if(index < 0 || index >= tabs.Count)
-        {
-            print("Valor de index no valido");
-            return;
+    public void OnTabExit(TabButton tabButton) {
+        ResetTabs();
+    }
+
+    public void OnTabSelected(TabButton tabButton) {
+        selectedTabButton = tabButton;
+        ResetTabs();
+        tabButton.Background.color = tabActive;
+        tabButton.TabText.color = tabActiveText;
+        int index = tabButton.transform.GetSiblingIndex();
+        for(int i = 0; i < objectsToSwap.Count; i++) {
+            if(i == index) {
+                objectsToSwap[i].SetActive(true);
+            }
+            else {
+                objectsToSwap[i].SetActive(false);
+            }
         }
-        tabs[index].Select();
+    }
+
+    public void ResetTabs() {
+        foreach (TabButton tabButton in tabButtons) {
+            if (selectedTabButton != null && selectedTabButton == tabButton) continue;
+            tabButton.Background.color = tabIdle;
+            tabButton.TabText.color = tabIdleText;
+        }
     }
 }
