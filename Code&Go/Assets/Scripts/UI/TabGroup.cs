@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manages the tab buttons
+/// </summary>
 public class TabGroup : MonoBehaviour
 {
     [SerializeField] private List<TabButton> tabButtons;
