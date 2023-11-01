@@ -18,48 +18,47 @@ public class CategoryManager : MonoBehaviour
     [SerializeField] private LevelCard levelCardPrefab;
     [SerializeField] private LevelCard createdLevelCardPrefab;
 
-    public Sprite createdLevelPreview;
+    [SerializeField] private Sprite createdLevelPreview;
 
     [SerializeField] private GameObject levelsCreatedParent;
     [SerializeField] private Button createLevelButton;
     [SerializeField] private Category levelsCreatedCategory;
 
-    public Text categoryName;
-    public Text categoryDescription;
-    public LocalizeStringEvent localizedCategoryName;
-    public LocalizeStringEvent localizedCategoryDescription;
+    [SerializeField] private Text categoryName;
+    [SerializeField] private Text categoryDescription;
+    [SerializeField] private LocalizeStringEvent localizedCategoryName;
+    [SerializeField] private LocalizeStringEvent localizedCategoryDescription;
 
-    public Text levelName;
-    public LocalizeStringEvent localizedLevelName;
-    public Image levelPreview;
+    [SerializeField] private Text levelName;
+    [SerializeField] private LocalizeStringEvent localizedLevelName;
+    [SerializeField] private Image levelPreview;
 
-    public Text levelCreatedName;
-    public LocalizeStringEvent localizedLevelCreatedName;
-    public LocalizedString createLevelLocalizeString;
+    [SerializeField] private Text levelCreatedName;
+    [SerializeField] private LocalizeStringEvent localizedLevelCreatedName;
+    [SerializeField] private LocalizedString createLevelLocalizeString;
 
-    public GameObject categoriesPanel;
-    public GameObject levelsPanel;
-    public GameObject playSelectedLevelButton;
+    [SerializeField] private GameObject categoriesPanel;
+    [SerializeField] private GameObject levelsPanel;
+    [SerializeField] private GameObject playSelectedLevelButton;
 
-    public GameObject currentCategoryPanel;
-    public GameObject currentLevelPanel;
+    [SerializeField] private GameObject currentCategoryPanel;
+    [SerializeField] private GameObject currentLevelPanel;
 
-    public GameObject currentLevelCreatedPanel;
+    [SerializeField] private GameObject currentLevelCreatedPanel;
 
-    public Text currentCategoryLevelsText;
-    public LocalizeStringEvent currentCategoryLevelsTextLocalized;
-    public LocalizedString categoryNameLocaliced;
-    public LocalizedString[] selectedCategoryNameLocaliced;
+    [SerializeField] private Text currentCategoryLevelsText;
+    [SerializeField] private LocalizeStringEvent currentCategoryLevelsTextLocalized;
+    [SerializeField] private LocalizedString categoryNameLocaliced;
+    [SerializeField] private LocalizedString[] selectedCategoryNameLocaliced;
 
-    public int currentCategory;
-    private int currentLevel;
-    private int levelCreatedIndex = -1000;
+    [SerializeField] private int currentCategory;
+    [SerializeField] private int currentLevel;
+    [SerializeField] private int levelCreatedIndex = -1000;
 
-    public Color deactivatedCategoryColor;
-    public Sprite deactivatedImage;
+    [SerializeField] private Color deactivatedCategoryColor;
+    [SerializeField] private Sprite deactivatedImage;
 
-    private void Start()
-    {
+    private void Start() {
         if (!GameManager.Instance.IsGameLoaded()) GameManager.Instance.LoadGame();
 
         for (int i = 0; i < categories.Length; i++)

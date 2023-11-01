@@ -4,8 +4,7 @@ using System.IO;
 using uAdventure.Simva;
 using UnityEngine;
 
-public class SaveManager
-{
+public class SaveManager {
     private static string filename = "gameSave.save";
     private static string Filepath = "";
 
