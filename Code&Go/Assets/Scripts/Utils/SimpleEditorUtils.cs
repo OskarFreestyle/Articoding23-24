@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 using System.Collections;
@@ -72,3 +73,4 @@ public static class SimpleEditorUtils {
 		EditorSceneManager.OpenScene("Assets/Scenes/MenuScene.unity");
 	}
 }
+#endif
