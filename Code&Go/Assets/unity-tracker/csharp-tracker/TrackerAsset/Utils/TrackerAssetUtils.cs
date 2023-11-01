@@ -102,8 +102,9 @@ namespace AssetPackage.Utils{
 
             try {
                 value = (T) Enum.Parse(typeof(T), text, true);
-            }catch(Exception e) {
-                ret = false;
+            }
+			catch(Exception) {
+				ret = false;
             }
 
             return ret;

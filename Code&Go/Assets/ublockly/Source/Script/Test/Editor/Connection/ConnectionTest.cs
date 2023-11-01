@@ -142,7 +142,7 @@ namespace UBlockly.Test
             }
             catch (Exception e)
             {
-                //expected
+                Debug.LogError(e.Message);
             }
             
             TearDown();
@@ -207,6 +207,7 @@ namespace UBlockly.Test
             }
             catch (Exception e)
             {
+                Debug.LogError(e.Message);
                 //expected
             }
             TearDown();

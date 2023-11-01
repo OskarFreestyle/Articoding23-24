@@ -409,6 +409,7 @@ namespace UBlockly.Test
 			}
 			catch (Exception e)
 			{
+				Debug.LogError(e.Message);
 			}
 			
 			

@@ -182,9 +182,10 @@ namespace Simva
                 {
                     windowOpened = windowProcess.Start();
                 }
-                catch(Exception ex)
+                catch(Exception e)
                 {
                     windowOpened = false;
+                    Debug.LogError(e.Message);
                 }
 
                 if (!windowOpened)

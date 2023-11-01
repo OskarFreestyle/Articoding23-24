@@ -7,12 +7,11 @@ using System.IO;
 public class RestrictionsPanel : MonoBehaviour
 {
 
-    private void Awake()
-    {
+    private void Awake() {
         ActivateActiveBlocks();
     }
-    private void ActivateActiveBlocks()
-    {
+
+    private void ActivateActiveBlocks() {
         categoryBlockNames = new string[8][];
         categoryBlockNames[0] = startBlocks;
         categoryBlockNames[1] = mathBlocks;
@@ -44,8 +43,8 @@ public class RestrictionsPanel : MonoBehaviour
         }
     }
 
-    public void SetCategoryAllow(string category)
-    {
+    public void SetCategoryAllow(string category) {
+
         int catIndex = GetCategoryData(category);
         bool isActive = activeBlocks.categories[catIndex].categoryName != "";
         if (!isActive) activeBlocks.categories[catIndex].categoryName = categoryNames[catIndex];

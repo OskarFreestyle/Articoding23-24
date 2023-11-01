@@ -255,6 +255,7 @@ namespace UBlockly
             catch (Exception e)
             {
                 MessageManager.Instance.SendMessage("Not_Boolean_Expression", MSG_TYPE.CODE_END);
+                Debug.LogError(e.Message);
             }
         }
 
@@ -268,6 +269,7 @@ namespace UBlockly
             catch (Exception e)
             {
                 MessageManager.Instance.SendMessage("Not_Numeric_Expression", MSG_TYPE.CODE_END);
+                Debug.LogError(e.Message);
             }
         }
         public static void SameType(DataStruct first, DataStruct second)

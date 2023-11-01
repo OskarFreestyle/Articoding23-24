@@ -11,9 +11,10 @@ using AssetPackage;
 public class TemaryManager : MonoBehaviour
 {
     public static TemaryManager Instance = null;
+
     private Dictionary<TutorialType, List<PopUpData>> shownTemary;
 
-    [SerializeField] private RectTransform rectTransform;
+    //[SerializeField] private RectTransform rectTransform;
 
     private PopUpData lastData;
 
@@ -26,7 +27,7 @@ public class TemaryManager : MonoBehaviour
     [SerializeField] private LocalizeSpriteEvent imagePrefab;
     [SerializeField] private RectTransform contentRect;
     [SerializeField] private Button backButton;
-    [SerializeField] private LocalizeStringEvent categoryTitle;
+    //[SerializeField] private LocalizeStringEvent categoryTitle;
     [SerializeField] private GameObject bodyContent;
     [Space]
     [SerializeField] private LocalizeStringEvent localizedCategoryTitle;
@@ -37,22 +38,22 @@ public class TemaryManager : MonoBehaviour
 
     private Button[] categoryButtons;
 
-    private TutorialType[] categoriesOrder = new TutorialType[] { TutorialType.NONE,
-    TutorialType.GENERAL,
-    TutorialType.BOARD,
-    TutorialType.ACTION,
-    TutorialType.CATEGORY_VARIABLES,
-    TutorialType.CATEGORY_TYPES,
-    TutorialType.CATEGORY_OPERATORS,
-    TutorialType.CATEGORY_LOOPS,
-    TutorialType.CATEGORY_CONDITIONS
+    private TutorialType[] categoriesOrder = new TutorialType[] { 
+        TutorialType.NONE,
+        TutorialType.GENERAL,
+        TutorialType.BOARD,
+        TutorialType.ACTION,
+        TutorialType.CATEGORY_VARIABLES,
+        TutorialType.CATEGORY_TYPES,
+        TutorialType.CATEGORY_OPERATORS,
+        TutorialType.CATEGORY_LOOPS,
+        TutorialType.CATEGORY_CONDITIONS
      };
 
     private bool initialized = false;
     private TutorialType currentType = TutorialType.NONE;
 
-    private void Awake()
-    {
+    private void Awake() {
         shownTutorials = new List<string>();
 
         Instance = this;
@@ -62,10 +63,9 @@ public class TemaryManager : MonoBehaviour
         if (backButton != null)
             backButton.onClick.AddListener(() => ShowTutorialsCategoryList());
     }
-    private void Start()
-    {
-        if (!GameManager.Instance.IsGameLoaded())
-            GameManager.Instance.LoadGame();
+    private void Start() {
+        if (!GameManager.Instance.IsGameLoaded()) GameManager.Instance.LoadGame();
+
         shownTutorials.AddRange(TutorialManager.Instance.GetTriggeredTutorials());
         Configure();
     }

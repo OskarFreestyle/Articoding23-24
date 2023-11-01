@@ -677,6 +677,7 @@ namespace uAdventure.Simva
             catch (System.Exception e)
             {
                 Debug.LogError("Tracker error: Host bad format");
+                Debug.LogError(e.Message);
             }
 
             TrackerAsset.TraceFormats format;

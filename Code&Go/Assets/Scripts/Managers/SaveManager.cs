@@ -5,8 +5,14 @@ using uAdventure.Simva;
 using UnityEngine;
 
 public class SaveManager {
+    public static SaveManager Instance;
+
     private static string filename = "gameSave.save";
     private static string Filepath = "";
+
+    public void Awake() {
+        if (Instance == null) Instance = this;
+    }
 
     public static void Init()
     {
@@ -25,6 +31,7 @@ public class SaveManager {
         }
         catch(System.Exception e)
         {
+            Debug.LogError(e.Message);
             token = "";
         }
         Filepath = Path.Combine(dataPath, token + filename);
@@ -33,8 +40,7 @@ public class SaveManager {
     public static void Load()
     {
         // Si no existe, se crea
-        if (!File.Exists(Filepath))
-        {
+        if (!File.Exists(Filepath)) {
             Debug.LogWarning("Archivo no encontrado");
             FileStream file = new FileStream(Filepath, FileMode.Create);
             file.Close();

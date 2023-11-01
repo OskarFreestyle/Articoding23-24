@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);            
-            SaveManager.Init();
         }
         else
             DestroyImmediate(gameObject);
@@ -46,6 +45,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        SaveManager.Init();
         LoadGame();
         TrackerAsset.Instance.setVar("language", LocalizationSettings.SelectedLocale.Identifier.Code);
         TrackerAsset.Instance.setVar("resolution", Screen.currentResolution.ToString());

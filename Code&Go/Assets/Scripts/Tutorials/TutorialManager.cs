@@ -70,6 +70,7 @@ public class TutorialManager : MonoBehaviour
     {
         if (!tutorialsON) return;
 
+        popUpManager.enabled = true;
 
         if (lastWidth != Screen.width || lastHeight != Screen.height)
         {

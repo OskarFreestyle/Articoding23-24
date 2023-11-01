@@ -112,6 +112,7 @@ namespace UBlockly
             {
                 Debug.LogError("Missing the value: " + key);
                 MessageManager.Instance.SendMessage(errorMessage, MSG_TYPE.CODE_END);
+                Debug.LogError(e.Message);
             }
 
             return ctor;
@@ -119,13 +120,12 @@ namespace UBlockly
         public static CmdEnumerator TryValueReturn(Block block, string key, DataStruct dataStruct, string errorMessage = "")
         {
             CmdEnumerator ctor = null;
-            try
-            {
+            try {
                 ctor = CSharp.Interpreter.ValueReturn(block, key, dataStruct);
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Debug.LogError("Missing the value: " + key);
+                Debug.LogError(e.Message);
                 MessageManager.Instance.SendMessage(errorMessage, MSG_TYPE.CODE_END);
             }
 
@@ -145,6 +145,7 @@ namespace UBlockly
                 Debug.LogError("Missing the value: " + key);
                 MessageManager.Instance.SendMessage(errorMessage, MSG_TYPE.CODE_END);
                 str = "";
+                Debug.LogError(e.Message);
             }
 
             return str;

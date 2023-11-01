@@ -36,6 +36,7 @@ public class GameOverPanel : MonoBehaviour
             _errorIcon.SetActive(false);
             _titleText.gameObject.SetActive(true);
             _errorText.gameObject.SetActive(false);
+            Debug.LogError(e.Message);
         }
     }
 }
