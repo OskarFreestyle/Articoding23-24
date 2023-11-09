@@ -29,7 +29,7 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5488e7fb6d014ee4e8f5dcf0dbc9ce67
     m_Address: Levels Info Shared Data
-    m_ReadOnly: 0
+    m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d06c343659e3fe646a5f9ecb6cbb3144

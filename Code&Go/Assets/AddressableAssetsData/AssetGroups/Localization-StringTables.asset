@@ -45,20 +45,6 @@ MonoBehaviour:
     - Locale-es
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2825c86e582318d4497a10b348eab1ff
-    m_Address: Levels Info_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 420473bfe15144a4a97852492defb567
-    m_Address: Levels Info_es
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4add6abb7863c240aa8d2a1844e39d8
     m_Address: temary_info_en
     m_ReadOnly: 1
