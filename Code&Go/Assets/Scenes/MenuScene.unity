@@ -1696,8 +1696,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 206.46703, y: -20}
-  m_SizeDelta: {x: 217.06595, y: 225}
+  m_AnchoredPosition: {x: 50, y: -20}
+  m_SizeDelta: {x: 530, y: 225}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &163193316
 MonoBehaviour:
@@ -1732,7 +1732,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\xA1Prueba a crear tus propios niveles!"
 --- !u!222 &163193317
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1775,9 +1775,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:5488e7fb6d014ee4e8f5dcf0dbc9ce67
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 328292474644508672
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -7495,7 +7495,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 315, y: -265}
-  m_SizeDelta: {x: 530, y: 449.35153}
+  m_SizeDelta: {x: 530, y: 569.0662}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &636373233
 MonoBehaviour:
@@ -7537,7 +7537,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c6441a13076d894eb1fb193c68f231d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a012e2e818dc8604cb9faa65bf86e1af, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -13391,7 +13391,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1120848874}
   m_HandleRect: {fileID: 1429618136}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15680,8 +15680,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1585, y: -457.67575}
-  m_SizeDelta: {x: 630, y: 915.3515}
+  m_AnchoredPosition: {x: 1585, y: -457.5331}
+  m_SizeDelta: {x: 630, y: 915.0662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322358356
 MonoBehaviour:
@@ -16599,8 +16599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1597.5, y: -457.85025}
-  m_SizeDelta: {x: 605, y: 915.7005}
+  m_AnchoredPosition: {x: 635, y: -457.5331}
+  m_SizeDelta: {x: 1230, y: 915.0662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430211045
 MonoBehaviour:
@@ -18611,6 +18611,16 @@ MonoBehaviour:
   levelCreatedIndex: -1000
   deactivatedCategoryColor: {r: 0.9019608, g: 0.9019608, b: 0.9019608, a: 1}
   deactivatedImage: {fileID: 21300000, guid: fc14dad9fd2c6384e8811a111a565237, type: 3}
+  nonCreatedLevelsString:
+    m_TableReference:
+      m_TableCollectionName: GUID:5488e7fb6d014ee4e8f5dcf0dbc9ce67
+    m_TableEntryReference:
+      m_KeyId: 328292474644508672
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  nonCreatedLevelsSprite: {fileID: 21300000, guid: a012e2e818dc8604cb9faa65bf86e1af, type: 3}
   references:
     version: 1
 --- !u!4 &1614135275

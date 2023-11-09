@@ -58,6 +58,9 @@ public class CategoryManager : MonoBehaviour
     [SerializeField] private Color deactivatedCategoryColor;
     [SerializeField] private Sprite deactivatedImage;
 
+    [SerializeField] private LocalizedString nonCreatedLevelsString;
+    [SerializeField] private Sprite nonCreatedLevelsSprite;
+
     private void Start() {
         if (!GameManager.Instance.IsGameLoaded()) GameManager.Instance.LoadGame();
 
@@ -163,8 +166,13 @@ public class CategoryManager : MonoBehaviour
         while (levelsParent.transform.childCount != 0)
             DestroyImmediate(levelsParent.transform.GetChild(0).gameObject);
 
-        if (category.name_id == "CreatedLevels")
-        {
+        // Created Level Category
+        if (category.name_id == "CreatedLevels") {
+
+            localizedLevelName.StringReference = nonCreatedLevelsString;
+            localizedLevelName.RefreshString();
+            levelPreview.sprite = nonCreatedLevelsSprite;
+
             categories[currentCategory].levels.Clear();
 
             //Encontramos todos los archivos que haya en las carpetas de creación de niveles
@@ -177,18 +185,18 @@ public class CategoryManager : MonoBehaviour
             TextAsset[] initialBlocks = new TextAsset[initialFilePaths.Length];
             string[] fileNames = new string[boardFilePaths.Length];
 
+            
             playSelectedLevelButton.SetActive(boardFilePaths.Length > 0);
 
-            for (int i = 0; i < boardFilePaths.Length; i++)
-            {
+
+            for (int i = 0; i < boardFilePaths.Length; i++) {
                 boards[i] = new TextAsset(File.ReadAllText(boardFilePaths[i]));
                 activeBlocks[i] = new TextAsset(File.ReadAllText(activeFilePaths[i]));
                 initialBlocks[i] = new TextAsset(File.ReadAllText(initialFilePaths[i]));
                 fileNames[i] = Path.GetFileNameWithoutExtension(boardFilePaths[i]);
             }
 
-            for (int i = 0; i < boards.Length; i++)
-            {
+            for (int i = 0; i < boards.Length; i++) {
                 int index = i;
                 LevelData levelData = new LevelData();
                 levelData.levelName = fileNames[i];
@@ -230,8 +238,9 @@ public class CategoryManager : MonoBehaviour
                     levelCard.DeactivateCard();
             }
         }
-        else
-        {
+
+        // Default Levels Categories
+        else {
             playSelectedLevelButton.SetActive(true);
             for (int i = 0; i < category.levels.Count; i++)
             {
