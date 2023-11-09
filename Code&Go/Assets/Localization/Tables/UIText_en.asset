@@ -389,5 +389,11 @@ MonoBehaviour:
     m_Localized: Levels - Created Levels
     m_Metadata:
       m_Items: []
+  - m_Id: 329756171707527168
+    m_Localized: 'Sign in to view
+
+      the content'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -68,14 +68,14 @@ public class PopUpManager : MonoBehaviour
 
     private void TraceShow(PopUpData data)
     {
-        string content = data.localizedTitle.GetLocalizedString().Result + ": " + data.localizedContent.GetLocalizedString().Result;
+        string content = data.localizedTitle.GetLocalizedStringAsync().Result + ": " + data.localizedContent.GetLocalizedStringAsync().Result;
         TrackerAsset.Instance.setVar("content", content.Replace("\"", "'"));
         TrackerAsset.Instance.Completable.Initialized("tip_" + data.name.ToLower(), CompletableTracker.Completable.DialogFragment);
     }
 
     private void TraceHide(PopUpData data)
     {
-        string content = data.localizedTitle.GetLocalizedString().Result + ": " + data.localizedContent.GetLocalizedString().Result;
+        string content = data.localizedTitle.GetLocalizedStringAsync().Result + ": " + data.localizedContent.GetLocalizedStringAsync().Result;
         TrackerAsset.Instance.setVar("content", content.Replace("\"", "'"));
         TrackerAsset.Instance.Completable.Completed("tip_" + data.name.ToLower(), CompletableTracker.Completable.DialogFragment);
     }

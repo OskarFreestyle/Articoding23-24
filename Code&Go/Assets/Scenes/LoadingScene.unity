@@ -1200,7 +1200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1920, y: -1256}
+  m_AnchoredPosition: {x: 1920, y: -1370}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 1, y: 0}
 --- !u!65 &2054481968125099271
@@ -2988,6 +2988,8 @@ MonoBehaviour:
       m_KeyId: 3176648965181440
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -3004,6 +3006,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!23 &7326918940533843097
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: allUnlocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: categories.Array.size
@@ -945,6 +945,8 @@ MonoBehaviour:
       m_KeyId: 1428800459677696
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -961,6 +963,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &93878156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,8 +1254,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 195, y: -439.9793}
-  m_SizeDelta: {x: 350, y: 879.9586}
+  m_AnchoredPosition: {x: 195, y: -440.0421}
+  m_SizeDelta: {x: 350, y: 880.0842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &123389116
 MonoBehaviour:
@@ -1436,6 +1440,8 @@ MonoBehaviour:
       m_KeyId: 1477202849472512
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -1452,6 +1458,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &135185218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,6 +1780,8 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -1788,6 +1798,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &166227915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,54 +2908,72 @@ MonoBehaviour:
       m_KeyId: 80625356800
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:d06c343659e3fe646a5f9ecb6cbb3144
     m_TableEntryReference:
       m_KeyId: 245155319808
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:d06c343659e3fe646a5f9ecb6cbb3144
     m_TableEntryReference:
       m_KeyId: 459379396608
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:d06c343659e3fe646a5f9ecb6cbb3144
     m_TableEntryReference:
       m_KeyId: 770227654656
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:d06c343659e3fe646a5f9ecb6cbb3144
     m_TableEntryReference:
       m_KeyId: 919872032768
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:d06c343659e3fe646a5f9ecb6cbb3144
     m_TableEntryReference:
       m_KeyId: 1064692961280
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:d06c343659e3fe646a5f9ecb6cbb3144
     m_TableEntryReference:
       m_KeyId: 1208905715712
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:d06c343659e3fe646a5f9ecb6cbb3144
     m_TableEntryReference:
       m_KeyId: 1378678558720
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:d06c343659e3fe646a5f9ecb6cbb3144
     m_TableEntryReference:
       m_KeyId: 1545343422464
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   allTutorials:
   - {fileID: 11400000, guid: ae3dba98c7ae97d458086bf40dcd742c, type: 2}
   - {fileID: 11400000, guid: a211d8400db4b08479465c335223b00f, type: 2}
@@ -2981,6 +3011,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7c1172ceee543bc408e1986f59a6bea7, type: 2}
   - {fileID: 11400000, guid: 0e2be3b523edebe4c8d5fa163bda7489, type: 2}
   - {fileID: 11400000, guid: 3960e1f34c100b14eb5728ead9d4595f, type: 2}
+  references:
+    version: 1
 --- !u!4 &248057272
 Transform:
   m_ObjectHideFlags: 0
@@ -3566,6 +3598,8 @@ MonoBehaviour:
       m_KeyId: 121310690468823040
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -3582,6 +3616,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &292717239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3830,6 +3866,8 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -3846,6 +3884,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &330253727
 GameObject:
   m_ObjectHideFlags: 0
@@ -4573,6 +4613,7 @@ GameObject:
   - component: {fileID: 390262694}
   - component: {fileID: 390262696}
   - component: {fileID: 390262695}
+  - component: {fileID: 390262697}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4641,6 +4682,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390262693}
   m_CullTransparentMesh: 1
+--- !u!114 &390262697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390262693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
+    m_TableEntryReference:
+      m_KeyId: 329756171707527168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 390262695}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &394681717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5361,8 +5441,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 270, y: -440}
-  m_SizeDelta: {x: 500, y: 880}
+  m_AnchoredPosition: {x: 270, y: -440.04214}
+  m_SizeDelta: {x: 500, y: 880.0843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473327469
 MonoBehaviour:
@@ -5447,6 +5527,8 @@ MonoBehaviour:
       m_KeyId: 1422459544444928
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -5463,6 +5545,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &480981868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5833,6 +5917,8 @@ MonoBehaviour:
       m_KeyId: 121802594339913728
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -5849,6 +5935,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &523313473
 GameObject:
   m_ObjectHideFlags: 0
@@ -6321,6 +6409,8 @@ MonoBehaviour:
       m_KeyId: 1477719935852544
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -6337,6 +6427,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &546391805
 GameObject:
   m_ObjectHideFlags: 0
@@ -9564,6 +9656,8 @@ MonoBehaviour:
       m_KeyId: 121311315311067136
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -9580,6 +9674,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &806194038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9796,7 +9892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 470, y: -489.97934}
+  m_AnchoredPosition: {x: 470, y: -490.04214}
   m_SizeDelta: {x: 940, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847159636
@@ -9988,6 +10084,8 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -10004,6 +10102,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &885940924
 GameObject:
   m_ObjectHideFlags: 0
@@ -10670,6 +10770,8 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -10686,6 +10788,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &930785793
 GameObject:
   m_ObjectHideFlags: 0
@@ -10911,127 +11015,127 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1581783402957505471, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1581783402957505471, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1581783402957505471, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 503
       objectReference: {fileID: 0}
     - target: {fileID: 1581783402957505471, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 51.51703
       objectReference: {fileID: 0}
     - target: {fileID: 1581783402957505471, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 266.5
       objectReference: {fileID: 0}
     - target: {fileID: 1581783402957505471, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -40.758514
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176444407308, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176444407308, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176444407308, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176444407308, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 100.51703
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176444407308, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176444407308, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -176.25851
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176691547335, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176691547335, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 341.51703
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176997144477, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176997144477, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176997144477, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176997144477, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 460
       objectReference: {fileID: 0}
     - target: {fileID: 1935694176997144477, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177109315664, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177109315664, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177109315664, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177109315664, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177109315664, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177109315664, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -271.51703
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177772314452, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177772314452, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177772314452, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177772314452, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177772314452, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1935694177772314452, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75.5
       objectReference: {fileID: 0}
     - target: {fileID: 1935694178192948148, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_Pivot.x
@@ -11123,79 +11227,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1935694178192948159, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5207280409407047505, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5207280409407047505, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5207280409407047505, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5207280409407047505, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 412
       objectReference: {fileID: 0}
     - target: {fileID: 5207280409407047505, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 5207280409407047505, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 329
       objectReference: {fileID: 0}
     - target: {fileID: 5207280409407047505, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -53
       objectReference: {fileID: 0}
     - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 503
       objectReference: {fileID: 0}
     - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 266.5
       objectReference: {fileID: 0}
     - target: {fileID: 5884375435463991259, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -83.51703
       objectReference: {fileID: 0}
     - target: {fileID: 6566672748051747927, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6566672748051747927, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6566672748051747927, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6566672748051747927, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 6566672748051747927, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 6566672748051747927, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -56.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac9942121b03f3478da27dd316dd41b, type: 3}
@@ -11803,6 +11907,8 @@ MonoBehaviour:
       m_KeyId: 121803569364598784
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -11819,6 +11925,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &999975212
 GameObject:
   m_ObjectHideFlags: 0
@@ -12438,6 +12546,8 @@ MonoBehaviour:
       m_KeyId: 1422185069191168
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -12454,6 +12564,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &1043821683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15509,6 +15621,8 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -15525,6 +15639,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &1322358354
 GameObject:
   m_ObjectHideFlags: 0
@@ -16352,6 +16468,8 @@ MonoBehaviour:
       m_KeyId: 121803119202533376
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -16368,6 +16486,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &1429618135
 GameObject:
   m_ObjectHideFlags: 0
@@ -16639,6 +16759,8 @@ MonoBehaviour:
       m_KeyId: 1421241308848128
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -16655,6 +16777,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &1461927553
 GameObject:
   m_ObjectHideFlags: 0
@@ -17246,6 +17370,8 @@ MonoBehaviour:
       m_KeyId: 121803009508900864
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -17262,6 +17388,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &1518595264
 GameObject:
   m_ObjectHideFlags: 0
@@ -17730,6 +17858,8 @@ MonoBehaviour:
       m_KeyId: 2786174151872512
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -17746,6 +17876,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &1530919154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18324,8 +18456,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1145, y: -439.9793}
-  m_SizeDelta: {x: 1510, y: 879.9586}
+  m_AnchoredPosition: {x: 1145, y: -440.0421}
+  m_SizeDelta: {x: 1510, y: 880.0842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1614135273
 GameObject:
@@ -18390,6 +18522,8 @@ MonoBehaviour:
       m_KeyId: 2152537493164032
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   categoriesPanel: {fileID: 93878156}
   levelsPanel: {fileID: 1430211043}
   playSelectedLevelButton: {fileID: 23515798}
@@ -18405,6 +18539,8 @@ MonoBehaviour:
       m_KeyId: 1420915302375424
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   selectedCategoryNameLocaliced:
   - m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
@@ -18412,53 +18548,71 @@ MonoBehaviour:
       m_KeyId: 51386213193416704
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
       m_KeyId: 3527593704116224
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
       m_KeyId: 3533265313288192
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
       m_KeyId: 3533466572771328
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
       m_KeyId: 3533656998367232
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
       m_KeyId: 3533794265354240
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
       m_KeyId: 135113092386217984
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   - m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
       m_KeyId: 305467943556567040
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   currentCategory: 0
   currentLevel: 0
   levelCreatedIndex: -1000
   deactivatedCategoryColor: {r: 0.9019608, g: 0.9019608, b: 0.9019608, a: 1}
   deactivatedImage: {fileID: 21300000, guid: fc14dad9fd2c6384e8811a111a565237, type: 3}
+  references:
+    version: 1
 --- !u!4 &1614135275
 Transform:
   m_ObjectHideFlags: 0
@@ -18530,6 +18684,8 @@ MonoBehaviour:
       m_KeyId: 6785107689078784
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -18546,6 +18702,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &1617394266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19184,6 +19342,8 @@ MonoBehaviour:
       m_KeyId: 1422951372726272
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -19200,6 +19360,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &1753993592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19219,6 +19381,8 @@ MonoBehaviour:
       m_KeyId: 1422299963760640
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -19235,6 +19399,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &1753993594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19354,6 +19520,8 @@ MonoBehaviour:
       m_KeyId: 1421111801323520
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -19370,6 +19538,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &1754452328
 GameObject:
   m_ObjectHideFlags: 0
@@ -19405,8 +19575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1015, y: -439.97934}
-  m_SizeDelta: {x: 950, y: 879.9587}
+  m_AnchoredPosition: {x: 1015, y: -440.04214}
+  m_SizeDelta: {x: 950, y: 880.0843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754452330
 MonoBehaviour:
@@ -21600,6 +21770,8 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -21616,6 +21788,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &1918150307
 GameObject:
   m_ObjectHideFlags: 0
@@ -21841,6 +22015,8 @@ MonoBehaviour:
       m_KeyId: 1429901711941632
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -21857,6 +22033,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &1950189144
 GameObject:
   m_ObjectHideFlags: 0
@@ -22429,6 +22607,8 @@ MonoBehaviour:
       m_KeyId: 1423191605682176
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -22445,6 +22625,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &1983697618
 GameObject:
   m_ObjectHideFlags: 0
@@ -22778,7 +22960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: tutorialsON
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8678186673926732497, guid: ff7d0fd4926e04e4a80cc863cba6283f, type: 3}
       propertyPath: popUpManager
@@ -23582,6 +23764,8 @@ MonoBehaviour:
       m_KeyId: 53906010204471296
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -23598,6 +23782,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &2093289466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25494,6 +25680,8 @@ MonoBehaviour:
       m_KeyId: 1421355934982144
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -25510,6 +25698,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!222 &4794388211458547459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25689,6 +25879,8 @@ MonoBehaviour:
       m_KeyId: 1419276717826048
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -25705,6 +25897,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &4794388211669443344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25780,9 +25974,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 944922604}
-        m_TargetAssemblyTypeName: MenusManager, Assembly-CSharp
-        m_MethodName: SetActiveExitConfirmationPanel
-        m_Mode: 6
+        m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
+        m_MethodName: ResetSettingPanels
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -27201,6 +27395,7 @@ MonoBehaviour:
       m_KeyId: 966453972992
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
   m_UpdateAsset:
     m_PersistentCalls:
       m_Calls:
@@ -27477,6 +27672,8 @@ MonoBehaviour:
       m_KeyId: 1420236840148992
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -27493,6 +27690,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!222 &6928563705597330464
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28560,6 +28759,8 @@ MonoBehaviour:
       m_KeyId: 1420112172851200
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -28576,6 +28777,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!114 &6928563706118825424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28721,6 +28924,8 @@ MonoBehaviour:
       m_KeyId: 1419885000957952
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -28737,6 +28942,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &6928563706136105132
 GameObject:
   m_ObjectHideFlags: 0
@@ -29353,9 +29560,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 944922604}
-        m_TargetAssemblyTypeName: MenusManager, Assembly-CSharp
-        m_MethodName: SetActiveOptionsPanel
-        m_Mode: 6
+        m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
+        m_MethodName: ResetSettingPanels
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -29972,6 +30179,8 @@ MonoBehaviour:
       m_KeyId: 1420337075625984
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -29988,6 +30197,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 1
 --- !u!1 &6928563706998151171
 GameObject:
   m_ObjectHideFlags: 0

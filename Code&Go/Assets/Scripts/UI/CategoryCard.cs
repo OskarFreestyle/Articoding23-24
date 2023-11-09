@@ -24,7 +24,7 @@ public class CategoryCard : MonoBehaviour
 
         localizeString.StringReference = category.nameIDLocalized;
         localizeString.RefreshString();
-        var op = localizeString.StringReference.GetLocalizedString();
+        var op = localizeString.StringReference.GetLocalizedStringAsync();
         title.text = op.Result;
 
         if (category.name_id == "CreatedLevels") stars.text = "";

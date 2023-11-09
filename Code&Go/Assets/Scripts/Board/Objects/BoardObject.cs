@@ -50,10 +50,10 @@ public class BoardObject : MonoBehaviour
 
     public string GetName()
     {
-        if (typeNameLocalized.IsEmpty || !typeNameLocalized.GetLocalizedString().IsDone)
+        if (typeNameLocalized.IsEmpty || !typeNameLocalized.GetLocalizedStringAsync().IsDone)
             return typeName;
 
-        string res = typeNameLocalized.GetLocalizedString().Result;
+        string res = typeNameLocalized.GetLocalizedStringAsync().Result;
         return res;
         //return typeName;
     }
@@ -67,20 +67,20 @@ public class BoardObject : MonoBehaviour
 
     public string GetNameAsLower()
     {
-        if (typeNameLocalized.IsEmpty || !typeNameLocalized.GetLocalizedString().IsDone)
+        if (typeNameLocalized.IsEmpty || !typeNameLocalized.GetLocalizedStringAsync().IsDone)
             return typeName.ToLower();
 
-        string res = typeNameLocalized.GetLocalizedString().Result;
+        string res = typeNameLocalized.GetLocalizedStringAsync().Result;
         return res.ToLower();
         //return typeName.ToLower();
     }
 
     public string GetNameWithIndex()
     {
-        if (typeNameLocalized.IsEmpty || !typeNameLocalized.GetLocalizedString().IsDone)
+        if (typeNameLocalized.IsEmpty || !typeNameLocalized.GetLocalizedStringAsync().IsDone)
             return typeName + index.ToString();
 
-        string res = typeNameLocalized.GetLocalizedString().Result;
+        string res = typeNameLocalized.GetLocalizedStringAsync().Result;
         return res + "_" + index.ToString();
         //return typeName + index.ToString();
     }
@@ -92,9 +92,9 @@ public class BoardObject : MonoBehaviour
 
         for (int i = 0; i < argsNamesLocalized.Length; i++)
         {
-            if (!argsNamesLocalized[i].GetLocalizedString().IsDone)
+            if (!argsNamesLocalized[i].GetLocalizedStringAsync().IsDone)
                 return argsNames;
-            argsArr[i] = argsNamesLocalized[i].GetLocalizedString().Result;
+            argsArr[i] = argsNamesLocalized[i].GetLocalizedStringAsync().Result;
         }
         return argsArr;
 

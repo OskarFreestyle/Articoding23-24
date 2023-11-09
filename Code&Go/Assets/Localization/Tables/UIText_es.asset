@@ -389,5 +389,9 @@ MonoBehaviour:
     m_Localized: Niveles - Niveles creados
     m_Metadata:
       m_Items: []
+  - m_Id: 329756171707527168
+    m_Localized: "Inicia sesi\xF3n para ver\nel contenido"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
