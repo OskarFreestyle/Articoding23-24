@@ -8,17 +8,17 @@ using System;
 TODO Esta es la clase que se comunica con el servidor, la he generado en un gameObject a parte porque me ha dado muchisimos problemas para ejecutar si estaba inactivo, 
 por lo que siempre la activo y luego la llamo, no se si es muy mala practica, pero es lo único que me ha funcionado.
 */
-public class ActivatedScript : MonoBehaviour
+public class ActivatedScript : MonoBehaviour {
 
-{   //TODO Esto no se muy bien si estaria mejor en campos que configurara el usuario en el momento de la exportación/Importación
-    string server = "http://13.48.149.249";
-    string port = "8080";
+    //TODO Esto no se muy bien si estaria mejor en campos que configurara el usuario en el momento de la exportación/Importación
+    [SerializeField] private string server; // = "http://13.48.149.249";
+    [SerializeField] private string port;   // = "8080";
+
     public GameObject InfoImportPanel;
-    [SerializeField] 
-    private Text _title;
 
-    private void Start()
-    {
+    [SerializeField] private Text _title;
+
+    private void Start() {
         var FileName = "communityServer.conf";
 
         var filePath = System.IO.Path.Combine(Application.streamingAssetsPath + "/", FileName);
@@ -34,7 +34,8 @@ public class ActivatedScript : MonoBehaviour
             server = serverConf["serverIP"];
             port = serverConf["serverPort"];
         }
-        Debug.Log("Server IP = " + server + port);
+
+        Debug.Log("Server IP = " + server + " - Port = " + port);
     }
 
     IEnumerator PostCourutine(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
