@@ -706,7 +706,7 @@ MonoBehaviour:
   autoStart: 1
   content: {fileID: 7715883592381250272}
   loadingText: {fileID: 528102410}
-  extraLoadingTime: 209.58
+  extraLoadingTime: 0
 --- !u!1 &1768260164
 GameObject:
   m_ObjectHideFlags: 0

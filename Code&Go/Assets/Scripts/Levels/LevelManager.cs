@@ -62,6 +62,8 @@ public class LevelManager : MonoBehaviour
 
     public StarsController starsController;
 
+    [SerializeField] private PenguinFinishController penguinFinishController;
+
     private int minimosPasos = 0;
     private string specialBlock = "";
     public LocalizeStringEvent endTextLocalized;
@@ -145,11 +147,14 @@ public class LevelManager : MonoBehaviour
         {
             string levelName = GameManager.Instance.GetCurrentLevelName();
             streamRoom.FinishLevel();
-            
-            // Pone las estrellas que toca
+
+            // Active the stars
             starsController.GiveMinimumStepsStar(boardManager.GetCurrentSteps() - (minimosPasos + pasosOffset));
             starsController.GiveHangingCodeStar(boardManager.GetNumOfTopBlocksUsed());
             starsController.GiveSpecialStar(specialBlock);
+
+            // Choose the current penguin reaction
+            penguinFinishController.SetFinishAnimation(starsController.GetStars());
             
             endPanel.SetActive(true);
             blackRect.SetActive(true);
