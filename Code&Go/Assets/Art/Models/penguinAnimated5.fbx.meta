@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c7074459d41827744927453f122fe861
+guid: c28d7533fbc15364986b2ed62db8735c
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -10,23 +10,35 @@ ModelImporter:
       74: 8293587360295463613
     second: LoseReaction
   - first:
-      74: -9086439588681010484
-    second: Penguin|Action
+      74: -6355682191695799899
+    second: 1StarReaction
   - first:
-      74: 4755016971934255741
-    second: Penguin|Idle
+      74: -239959436342166912
+    second: 2StarsReaction
   - first:
-      74: 6099128200622479656
-    second: Penguin|LoseReaction
+      74: 7471933777507745566
+    second: 3StarsReaction
   - first:
-      74: -4161128233232175076
-    second: Penguin|Walk
+      74: 3306406818883663981
+    second: Armature|1StarReaction
   - first:
-      74: -3976163302951158718
-    second: Penguin|Walk.001
+      74: 7807602801906135491
+    second: Armature|-
+  - first:
+      74: 6387544801039760725
+    second: Armature|-.001
+  - first:
+      74: 133914881600761452
+    second: Armature|2StarsReaction
+  - first:
+      74: 6969648780142492461
+    second: Armature|3StarsReaction
   - first:
       74: 885944232402757753
     second: Armature|Action
+  - first:
+      74: -9125523489441110064
+    second: Armature|Action.001
   - first:
       74: -8945691123924629249
     second: Armature|Idle
@@ -68,18 +80,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
-      takeName: Walk
+      name: Armature|1StarReaction
+      takeName: Armature|1StarReaction
       internalID: 0
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 149
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -97,18 +109,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: LoseReaction
-      takeName: LoseReaction
+      name: Armature|2StarsReaction
+      takeName: Armature|2StarsReaction
       internalID: 0
       firstFrame: 0
-      lastFrame: 239
+      lastFrame: 149
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -126,18 +138,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Action
-      takeName: Armature|Action
+      name: Armature|3StarsReaction
+      takeName: Armature|3StarsReaction
       internalID: 0
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 119
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -166,7 +178,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -224,36 +236,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Armature|Walk.001
-      takeName: Armature|Walk.001
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 39
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

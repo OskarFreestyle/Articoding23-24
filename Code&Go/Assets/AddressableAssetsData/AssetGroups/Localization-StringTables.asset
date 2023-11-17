@@ -97,18 +97,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e3c4fee569c7e3e4fa968492c9c56c29
-    m_Address: End text_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b6757256a07dcfc4d8ca381eb847d577
-    m_Address: End text_es
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a2d16e4d6efebca45b42b8bbd7bd0ce0
     m_Address: GameOverMessages_en
     m_ReadOnly: 1
