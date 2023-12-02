@@ -11,19 +11,24 @@ por lo que siempre la activo y luego la llamo, no se si es muy mala practica, pe
 public class ActivatedScript : MonoBehaviour {
 
     //TODO Esto no se muy bien si estaria mejor en campos que configurara el usuario en el momento de la exportación/Importación
-    [SerializeField] private string server; // = "http://13.48.149.249";
-    [SerializeField] private string port;   // = "8080";
+
+    //Standard local values
+    [SerializeField] private string server; // = "http://localhost";
+    [SerializeField] private string port;   // = "4200";
 
     public GameObject InfoImportPanel;
 
     [SerializeField] private Text _title;
 
     private void Start() {
+        //Tries to find the file "communityServer". If found parses its information to connect to the url.
         var FileName = "communityServer.conf";
 
         var filePath = System.IO.Path.Combine(Application.streamingAssetsPath + "/", FileName);
 
         string contents = "";
+
+        //If the path is found, it add everything to "contents" and then parses it and uses this values to define the url.
         if (System.IO.File.Exists(filePath))
         {
             contents = System.IO.File.ReadAllText(filePath);
@@ -34,7 +39,7 @@ public class ActivatedScript : MonoBehaviour {
             server = serverConf["serverIP"];
             port = serverConf["serverPort"];
         }
-
+        //Si no existe el path utiliza el serve y port por defecto
         Debug.Log("Server IP = " + server + " - Port = " + port);
     }
 
