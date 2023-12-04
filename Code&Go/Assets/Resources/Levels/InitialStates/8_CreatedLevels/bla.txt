@@ -1,0 +1,27 @@
+<xml>
+    <variables>
+        <variable type="" id="{n+(R/@?UDRu.z!Y^S/K">Laser1</variable>
+    </variables>
+    <block type="start_start" id="sxM1!1G8/+B!%*-6j6SR" x="34" y="-86">
+        <next>
+            <block type="variables_set" id="%J,4PQz`]~K|cRk2aGTg">
+                <field name="VAR" id="{n+(R/@?UDRu.z!Y^S/K" variableType="">Laser1</field>
+                <next>
+                    <block type="movement_move" id="]Mf{LJtKW7SO6MKxI)~U">
+                        <field name="DIRECTION">UP</field>
+                        <value name="NAME">
+                            <block type="variables_get" id="h..Y:*ZKqWI8)v^4E(T)">
+                                <field name="VAR" id="{n+(R/@?UDRu.z!Y^S/K" variableType="">Laser1</field>
+                            </block>
+                        </value>
+                        <value name="AMOUNT">
+                            <block type="math_number" id="sCN+|VZQ/UfudXzP*C%?">
+                                <field name="NUM">1</field>
+                            </block>
+                        </value>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>

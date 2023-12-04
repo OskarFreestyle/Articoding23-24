@@ -16,7 +16,7 @@ public class ActivatedScript : MonoBehaviour {
     [SerializeField] private string server; // = "http://localhost";
     [SerializeField] private string port;   // = "4200";
 
-    public GameObject InfoImportPanel;
+    [SerializeField] private GameObject InfoImportPanel;
 
     [SerializeField] private Text _title;
 
@@ -61,7 +61,7 @@ public class ActivatedScript : MonoBehaviour {
         //Send the request then wait here until it returns
         yield return req.SendWebRequest();
 
-        if (req.isNetworkError)
+        if (req.result == UnityWebRequest.Result.ConnectionError)
         {
             showError("Error en post: " + req.error);
         }
