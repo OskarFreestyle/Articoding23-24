@@ -47,69 +47,34 @@ public class ActivatedScript : MonoBehaviour {
     IEnumerator PostCourutine(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
     {
         string url = server + ":" + port + "/" + path;
-        
 
-        Debug.Log("Post to: " + url);
+        var req = new UnityWebRequest(url, "POST");
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
+        req.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
+        req.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        req.SetRequestHeader("Content-Type", "application/json");
 
-        using (UnityWebRequest postRequest = UnityWebRequest.Post(url, json))
+        if (GameManager.Instance.GetLogged())
+            req.SetRequestHeader("Authorization", GameManager.Instance.GetToken());
+          
+        yield return req.SendWebRequest();
+          
+        if (req.result == UnityWebRequest.Result.ConnectionError)
         {
-            postRequest.SetRequestHeader("Content-Type", "application/json");
-            if (GameManager.Instance.GetLogged())
-                postRequest.SetRequestHeader("Authorization", GameManager.Instance.GetToken());
-
-            yield return postRequest.SendWebRequest();
-
-            if (postRequest.result == UnityWebRequest.Result.ConnectionError)
+            showError("Error en post: " + req.error);
+        }
+        else
+        {
+            //Todo guay
+            if(req.responseCode == 200)
             {
-                showError("Error en post: " + postRequest.error);
+                onOK(req);
             }
             else
             {
-                Debug.Log("Request: " + postRequest.downloadHandler.text);
-
-                if (postRequest.responseCode == 200)
-                {
-                    onOK(postRequest);
-                }
-                else
-                {
-                    onKO(postRequest);
-                }
+                onKO(req);
             }
-        }
-
-
-
-
-        //Codigo previo
-        //var req = new UnityWebRequest(url, "POST");
-        //byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
-        //req.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
-        //req.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-        //req.SetRequestHeader("Content-Type", "application/json");
-
-        //  if (GameManager.Instance.GetLogged())
-        //      req.SetRequestHeader("Authorization", GameManager.Instance.GetToken());
-        //  
-        //  Send the request then wait here until it returns
-        //  yield return req.SendWebRequest();
-        //  
-        //  if (req.result == UnityWebRequest.Result.ConnectionError)
-        //  {
-        //      showError("Error en post: " + req.error);
-        //  }
-        //  else
-        //  {
-        //      //Todo guay
-        //      if(req.responseCode == 200)
-        //      {
-        //          onOK(req);
-        //      }
-        //      else
-        //      {
-        //          onKO(req);
-        //      }
-        //  }
+          }
     }
 
     IEnumerator GetCourutine(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
