@@ -66,22 +66,22 @@ public class CategoryManagerOld : MonoBehaviour
 
         for (int i = 0; i < categories.Length; i++)
         {
-            int index = i;
+            //int index = i;
 
-            CategoryCardOld card = Instantiate(categoryCardPrefab, categoriesParent.transform);
-            card.ConfigureCategory(categories[i]);
-            card.button.onClick.AddListener(() =>
-            {
-                SelectCategory(index);
-            });
+            //CategoryCardOld card = Instantiate(categoryCardPrefab, categoriesParent.transform);
+            //card.ConfigureCategory(categories[i]);
+            //card.button.onClick.AddListener(() =>
+            //{
+            //    SelectCategory(index);
+            //});
 
             //If it's not unlocked it can't be selected
-            if (!ProgressManager.Instance.IsCategoryUnlocked(index))
-            {
-                card.button.enabled = false;
-                card.image.sprite = deactivatedImage;
-                card.button.image.color = deactivatedCategoryColor;
-            }
+            //if (!ProgressManager.Instance.IsCategoryUnlocked(index))
+            //{
+            //    card.button.enabled = false;
+            //    card.image.sprite = deactivatedImage;
+            //    card.button.image.color = deactivatedCategoryColor;
+            //}
         }
         //currentLevelCreatedPanel.SetActive(false);
 
@@ -135,7 +135,7 @@ public class CategoryManagerOld : MonoBehaviour
         {
             currentCategory = index;
 
-            localizedCategoryName.StringReference = categories[currentCategory].nameIDLocalized;
+            localizedCategoryName.StringReference = categories[currentCategory].titleLocalized;
             localizedCategoryName.RefreshString();
 
             localizedCategoryDescription.StringReference = categories[currentCategory].descriptionLocalized;

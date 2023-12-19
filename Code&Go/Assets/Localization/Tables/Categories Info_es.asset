@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 78159106048
-    m_Localized: Variables
+    m_Localized: 2.Variables
     m_Metadata:
       m_Items: []
   - m_Id: 1215138451456
@@ -37,7 +37,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1988949790720
-    m_Localized: "Operadores b\xE1sicos"
+    m_Localized: "3.Operadores b\xE1sicos"
     m_Metadata:
       m_Items: []
   - m_Id: 2154364751872
@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5602590150656
-    m_Localized: Niveles creados
+    m_Localized: 0.Niveles creados
     m_Metadata:
       m_Items: []
   - m_Id: 5936704212992
@@ -69,7 +69,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49954735318302720
-    m_Localized: "Introducci\xF3n"
+    m_Localized: "1.Introducci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 49955408000778240

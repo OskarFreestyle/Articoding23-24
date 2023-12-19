@@ -6,7 +6,7 @@ using UnityEngine.Localization;
 [CreateAssetMenu(fileName = "Category", menuName = "ScriptableObjects/Category")]
 public class Category : ScriptableObject
 {
-    public LocalizedString nameIDLocalized;
+    public LocalizedString titleLocalized;
     public LocalizedString descriptionLocalized;
 
     public string name_id;
@@ -16,4 +16,8 @@ public class Category : ScriptableObject
     public List<LevelData> levels;
 
     public Sprite icon;
+
+    public int GetTotalStars() {
+        return levels.Count * 3;
+    }
 }

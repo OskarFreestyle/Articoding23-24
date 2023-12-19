@@ -5,29 +5,26 @@ using UnityEngine.UI;
 
 public class CategoriesSwipe : MonoBehaviour {
 
-    public Color[] colors;
-    public GameObject scrollbar, imageContent;
+    [SerializeField] private Color[] colors;
+    [SerializeField] private GameObject scrollbar;
+    [SerializeField] private GameObject imageContent;
+
     private float scroll_pos = 0;
-    float[] pos;
+    private float[] pos;
     private bool runIt = false;
     private float time;
     private Button takeTheBtn;
     int btnNumber;
-    // Start is called before the first frame update
-    void Start() {
 
-    }
-
-    // Update is called once per frame
-    void Update() {
+    private void Update() {
         pos = new float[transform.childCount];
         float distance = 1f / (pos.Length - 1f);
 
         if (runIt) {
-            GecisiDuzenle(distance, pos, takeTheBtn);
+            AdjustList(distance, pos, takeTheBtn);
             time += Time.deltaTime;
 
-            if (time > 1f) {
+            if (time > 4f) {
                 time = 0;
                 runIt = false;
             }
@@ -64,17 +61,13 @@ public class CategoriesSwipe : MonoBehaviour {
                 }
             }
         }
-
-
     }
 
-    private void GecisiDuzenle(float distance, float[] pos, Button btn) {
-        // btnSayi = System.Int32.Parse(btn.transform.name);
+    private void AdjustList(float distance, float[] pos, Button btn) {
 
         for (int i = 0; i < pos.Length; i++) {
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2)) {
                 scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[btnNumber], 1f * Time.deltaTime);
-
             }
         }
 
@@ -83,19 +76,31 @@ public class CategoriesSwipe : MonoBehaviour {
         }
 
     }
-    public void WhichBtnClicked(Button btn) {
-        btn.transform.name = "clicked";
-        for (int i = 0; i < btn.transform.parent.transform.childCount; i++) {
-            if (btn.transform.parent.transform.GetChild(i).transform.name == "clicked") {
+
+
+    public void WhichShortcutClicked(Button shortcutClicked) {
+        shortcutClicked.transform.name = "clicked";
+        for (int i = 0; i < shortcutClicked.transform.parent.transform.childCount; i++) {
+            if (shortcutClicked.transform.parent.transform.GetChild(i).transform.name == "clicked") {
                 btnNumber = i;
-                takeTheBtn = btn;
+                takeTheBtn = shortcutClicked;
                 time = 0;
                 scroll_pos = (pos[btnNumber]);
                 runIt = true;
             }
         }
-
-
     }
 
+    public void WhichCategoryClicked(Button categoryClicked) {
+        categoryClicked.transform.name = "clicked";
+        for (int i = 0; i < categoryClicked.transform.parent.transform.childCount; i++) {
+            if (categoryClicked.transform.parent.transform.GetChild(i).transform.name == "clicked") {
+                btnNumber = i;
+                takeTheBtn = categoryClicked;
+                time = 0;
+                scroll_pos = (pos[btnNumber]);
+                runIt = true;
+            }
+        }
+    }
 }

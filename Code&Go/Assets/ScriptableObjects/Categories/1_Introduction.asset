@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2318897db1d40b74dbbfa9d80ce90140, type: 3}
   m_Name: 1_Introduction
   m_EditorClassIdentifier: 
-  nameIDLocalized:
+  titleLocalized:
     m_TableReference:
-      m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
+      m_TableCollectionName: 
     m_TableEntryReference:
-      m_KeyId: 49954735318302720
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   descriptionLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
@@ -26,7 +28,9 @@ MonoBehaviour:
       m_KeyId: 49955408000778240
       m_Key: 
     m_FallbackState: 0
-  name_id: introduction
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  name_id: Introduction
   description: "Comienza a jugar y aprende c\xF3mo funciona la aplicaci\xF3n"
   levels:
   - {fileID: 11400000, guid: a67e471a63c69094082cbad2156111e6, type: 2}
@@ -37,3 +41,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6b2797568c361ce4cb114e7c785ca9a4, type: 2}
   - {fileID: 11400000, guid: 67a09de5abc31a043ba0958f6388d696, type: 2}
   icon: {fileID: 21300000, guid: d01396d3c0bfda148982813d202de586, type: 3}
+  references:
+    version: 1

@@ -37,7 +37,7 @@ MonoBehaviour:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b6b190e1eae3e264881c942f4eaca9a3
-    m_Address: Introduction_es
+    m_Address: primer_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es

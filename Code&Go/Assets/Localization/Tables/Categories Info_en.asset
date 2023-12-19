@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 78159106048
-    m_Localized: Variables
+    m_Localized: 2.Variables
     m_Metadata:
       m_Items: []
   - m_Id: 1215138451456
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1988949790720
-    m_Localized: Basic operators
+    m_Localized: 3.Basic operators
     m_Metadata:
       m_Items: []
   - m_Id: 2154364751872
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5602590150656
-    m_Localized: Created levels
+    m_Localized: 0.Created levels
     m_Metadata:
       m_Items: []
   - m_Id: 5936704212992
@@ -75,7 +75,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49954735318302720
-    m_Localized: Introduction
+    m_Localized: 1.Introduction
     m_Metadata:
       m_Items: []
   - m_Id: 49955408000778240

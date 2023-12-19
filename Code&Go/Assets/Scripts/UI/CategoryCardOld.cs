@@ -22,7 +22,7 @@ public class CategoryCardOld : MonoBehaviour
 
         button = GetComponent<Button>();
 
-        localizeString.StringReference = category.nameIDLocalized;
+        localizeString.StringReference = category.titleLocalized;
         localizeString.RefreshString();
         var op = localizeString.StringReference.GetLocalizedStringAsync();
         title.text = op.Result;
