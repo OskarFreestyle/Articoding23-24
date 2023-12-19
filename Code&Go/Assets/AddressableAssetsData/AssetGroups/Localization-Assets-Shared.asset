@@ -19,12 +19,12 @@ MonoBehaviour:
   m_SerializeEntries:
   - m_GUID: a894dd1023aa1204dbc04675aada18ae
     m_Address: UIText Shared Data
-    m_ReadOnly: 0
+    m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cee591da47cfcc540ba90c0dcafe72e7
     m_Address: Categories Info Shared Data
-    m_ReadOnly: 0
+    m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5488e7fb6d014ee4e8f5dcf0dbc9ce67

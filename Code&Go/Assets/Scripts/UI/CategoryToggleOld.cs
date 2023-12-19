@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CategoryToggle : MonoBehaviour
+public class CategoryToggleOld : MonoBehaviour
 {
     void Start()
     {

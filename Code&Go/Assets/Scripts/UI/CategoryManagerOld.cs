@@ -7,12 +7,12 @@ using UnityEngine.Localization.Components;
 using UnityEngine.Localization;
 using AssetPackage;
 
-public class CategoryManager : MonoBehaviour
+public class CategoryManagerOld : MonoBehaviour
 {
     [SerializeField] private Category[] categories;
 
     [SerializeField] private GameObject categoriesParent;
-    [SerializeField] private CategoryCard categoryCardPrefab;
+    [SerializeField] private CategoryCardOld categoryCardPrefab;
 
     [SerializeField] private GameObject levelsParent;
     [SerializeField] private LevelCard levelCardPrefab;
@@ -68,7 +68,7 @@ public class CategoryManager : MonoBehaviour
         {
             int index = i;
 
-            CategoryCard card = Instantiate(categoryCardPrefab, categoriesParent.transform);
+            CategoryCardOld card = Instantiate(categoryCardPrefab, categoriesParent.transform);
             card.ConfigureCategory(categories[i]);
             card.button.onClick.AddListener(() =>
             {

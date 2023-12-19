@@ -3,7 +3,7 @@ using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class CategoryCard : MonoBehaviour
+public class CategoryCardOld : MonoBehaviour
 {
     [SerializeField] private Category category;
 

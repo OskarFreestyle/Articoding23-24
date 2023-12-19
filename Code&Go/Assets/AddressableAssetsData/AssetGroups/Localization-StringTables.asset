@@ -17,34 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 1e83a66a580933f41b8e8737ebb3907b
   m_SerializeEntries:
-  - m_GUID: fc1d24d8f7d03e04f8c919ae862a8bfc
-    m_Address: UIText_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b6b190e1eae3e264881c942f4eaca9a3
-    m_Address: UIText_es
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6de77f5ef86e93b42b59dfe8511f26ce
-    m_Address: Categories Info_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d2c4c74770cac4247bb531f689502e9b
-    m_Address: Categories Info_es
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f4add6abb7863c240aa8d2a1844e39d8
     m_Address: temary_info_en
     m_ReadOnly: 1
