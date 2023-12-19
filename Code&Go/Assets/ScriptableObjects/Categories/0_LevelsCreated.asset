@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2318897db1d40b74dbbfa9d80ce90140, type: 3}
   m_Name: 0_LevelsCreated
   m_EditorClassIdentifier: 
-  nameIDLocalized:
+  titleLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
     m_TableEntryReference:
@@ -30,9 +30,11 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  icon: {fileID: 21300000, guid: 40799da7d32281c4692820a89ee3c824, type: 3}
+  primaryColor: {r: 0.7803922, g: 0.5019608, b: 0.909804, a: 1}
+  secondaryColor: {r: 0.6392157, g: 0.18039216, b: 0.85098046, a: 1}
+  levels: []
   name_id: levels_created
   description: Niveles creados por el usuario
-  levels: []
-  icon: {fileID: 21300000, guid: 5af9ffbf088295e4aa53a9eb00126f1e, type: 3}
   references:
     version: 1

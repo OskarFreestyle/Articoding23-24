@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2318897db1d40b74dbbfa9d80ce90140, type: 3}
   m_Name: 7_Procedures
   m_EditorClassIdentifier: 
-  nameIDLocalized:
+  titleLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
     m_TableEntryReference:
       m_KeyId: 133700533783322624
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   descriptionLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
@@ -26,10 +28,16 @@ MonoBehaviour:
       m_KeyId: 133700560933052416
       m_Key: 
     m_FallbackState: 0
-  name_id: procedures
-  description: "Aprende a organizar tu c\xF3digo con el uso de funciones."
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  icon: {fileID: 21300000, guid: df9b9f8d98c2d4c4d906f7b59043e81a, type: 3}
+  primaryColor: {r: 1, g: 0.5745761, b: 0.5518868, a: 1}
+  secondaryColor: {r: 1, g: 0.2918054, b: 0.2688679, a: 1}
   levels:
   - {fileID: 11400000, guid: c106b364ddab76544be2020d741bcd72, type: 2}
   - {fileID: 11400000, guid: dbd4931fc1b628a4089ddcaa9f163033, type: 2}
   - {fileID: 11400000, guid: 67ca11dbfd03950439df4cda822f8674, type: 2}
-  icon: {fileID: 21300000, guid: df9b9f8d98c2d4c4d906f7b59043e81a, type: 3}
+  name_id: procedures
+  description: "Aprende a organizar tu c\xF3digo con el uso de funciones."
+  references:
+    version: 1

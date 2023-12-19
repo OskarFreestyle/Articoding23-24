@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 78159106048
-    m_Localized: 2.Variables
+    m_Localized: Variables
     m_Metadata:
       m_Items: []
   - m_Id: 1215138451456
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1988949790720
-    m_Localized: 3.Basic operators
+    m_Localized: Basic operators
     m_Metadata:
       m_Items: []
   - m_Id: 2154364751872
@@ -60,7 +60,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5602590150656
-    m_Localized: 0.Created levels
+    m_Localized: Created levels
     m_Metadata:
       m_Items: []
   - m_Id: 5936704212992
@@ -75,7 +75,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49954735318302720
-    m_Localized: 1.Introduction
+    m_Localized: Introduction
     m_Metadata:
       m_Items: []
   - m_Id: 49955408000778240
@@ -90,12 +90,12 @@ MonoBehaviour:
     m_Localized: Learn how to organise your code using function blocks.
     m_Metadata:
       m_Items: []
-  - m_Id: 243170232606478336
-    m_Localized: Created Levels
+  - m_Id: 5754780471296
+    m_Localized: ' '
     m_Metadata:
       m_Items: []
-  - m_Id: 243170782957883392
-    m_Localized: Levels created by the user
+  - m_Id: 342858052847534080
+    m_Localized: Choose
     m_Metadata:
       m_Items: []
   references:

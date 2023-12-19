@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2318897db1d40b74dbbfa9d80ce90140, type: 3}
   m_Name: 4_Operators
   m_EditorClassIdentifier: 
-  nameIDLocalized:
+  titleLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
     m_TableEntryReference:
       m_KeyId: 1988949790720
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   descriptionLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
@@ -26,9 +28,11 @@ MonoBehaviour:
       m_KeyId: 2154364751872
       m_Key: 
     m_FallbackState: 0
-  name_id: basic_operators
-  description: Aprende las distintas operaciones que puedes hacer con los distintos
-    tipos.
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  icon: {fileID: 21300000, guid: b5a863e38a522ee46b3d4435b60f5aef, type: 3}
+  primaryColor: {r: 0.25882354, g: 0.83921576, b: 0.6431373, a: 1}
+  secondaryColor: {r: 0, g: 0.7372549, b: 0.41176474, a: 1}
   levels:
   - {fileID: 11400000, guid: 9efdc2c4233e418469e86174a266520e, type: 2}
   - {fileID: 11400000, guid: 838f4bb9acdd8b04cb104432154625fb, type: 2}
@@ -39,4 +43,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 671b14a866d013f4abc325c47719b611, type: 2}
   - {fileID: 11400000, guid: bdfc551903f0dec479799f421965298e, type: 2}
   - {fileID: 11400000, guid: f4aa32bb99354a847b205beac787d274, type: 2}
-  icon: {fileID: 21300000, guid: b5a863e38a522ee46b3d4435b60f5aef, type: 3}
+  name_id: basic_operators
+  description: Aprende las distintas operaciones que puedes hacer con los distintos
+    tipos.
+  references:
+    version: 1

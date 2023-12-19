@@ -39,52 +39,48 @@ MonoBehaviour:
     m_Key: 2_Variables_Title
     m_Metadata:
       m_Items: []
-  - m_Id: 2154364751872
-    m_Key: 3_Basic_Operators_Description
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1988949790720
-    m_Key: 3_Basic_Operators_Name
-    m_Metadata:
-      m_Items: []
-  - m_Id: 6053872095232
-    m_Key: conditions_description
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5936704212992
-    m_Key: conditions_name
-    m_Metadata:
-      m_Items: []
-  - m_Id: 243170782957883392
-    m_Key: createdlevels_description
-    m_Metadata:
-      m_Items: []
-  - m_Id: 243170232606478336
-    m_Key: createdlevels_name
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5019636420608
-    m_Key: loops_description
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2419251826688
-    m_Key: loops_name
-    m_Metadata:
-      m_Items: []
-  - m_Id: 133700560933052416
-    m_Key: procedures_description
-    m_Metadata:
-      m_Items: []
-  - m_Id: 133700533783322624
-    m_Key: procedures_name
-    m_Metadata:
-      m_Items: []
   - m_Id: 1654173028352
-    m_Key: types_description
+    m_Key: 3_Types_Description
     m_Metadata:
       m_Items: []
   - m_Id: 1497658380288
-    m_Key: types_name
+    m_Key: 3_Types_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2154364751872
+    m_Key: 4_Basic_Operators_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1988949790720
+    m_Key: 4_Basic_Operators_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5019636420608
+    m_Key: 5_Loops_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2419251826688
+    m_Key: 5_Loops_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6053872095232
+    m_Key: 6_Conditions_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5936704212992
+    m_Key: 6_Conditions_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133700560933052416
+    m_Key: 7_Procedures_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133700533783322624
+    m_Key: 7_Procedures_Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 342858052847534080
+    m_Key: Categories_Button_Text
     m_Metadata:
       m_Items: []
   m_Metadata:

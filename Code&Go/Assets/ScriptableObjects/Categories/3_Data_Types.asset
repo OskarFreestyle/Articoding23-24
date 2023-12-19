@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2318897db1d40b74dbbfa9d80ce90140, type: 3}
-  m_Name: 3_Types
+  m_Name: 3_Data_Types
   m_EditorClassIdentifier: 
-  nameIDLocalized:
+  titleLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
     m_TableEntryReference:
       m_KeyId: 1497658380288
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   descriptionLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
@@ -26,9 +28,11 @@ MonoBehaviour:
       m_KeyId: 1654173028352
       m_Key: 
     m_FallbackState: 0
-  name_id: types
-  description: "Aprende a usar distintos tipos de datos en el c\xF3digo.\nN\xFAmeros,
-    letras, palabras, etc."
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  icon: {fileID: 21300000, guid: 231a2758d9364eb4d9ed100d3abf4f90, type: 3}
+  primaryColor: {r: 0.03137255, g: 0.79215693, b: 0.8196079, a: 1}
+  secondaryColor: {r: 0, g: 0.65882355, b: 0.7019608, a: 1}
   levels:
   - {fileID: 11400000, guid: 605a780ebe3150340ade5bb7c8f80965, type: 2}
   - {fileID: 11400000, guid: bdb6275f8ede0bf48a1e20b99a81d70a, type: 2}
@@ -39,4 +43,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b5fdf2b8446c20248ba86baa58cca97a, type: 2}
   - {fileID: 11400000, guid: f39f41209db2aec46801e91709c6c51e, type: 2}
   - {fileID: 11400000, guid: 3a414b3a287756245b9f700512870af2, type: 2}
-  icon: {fileID: 21300000, guid: 231a2758d9364eb4d9ed100d3abf4f90, type: 3}
+  name_id: types
+  description: "Aprende a usar distintos tipos de datos en el c\xF3digo.\nN\xFAmeros,
+    letras, palabras, etc."
+  references:
+    version: 1

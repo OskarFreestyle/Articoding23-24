@@ -1625,7 +1625,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4376553936429697906, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Name
-      value: Category Card 0 (3)
+      value: Category Card 3
       objectReference: {fileID: 0}
     - target: {fileID: 4376553936429697907, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Pivot.x
@@ -1714,7 +1714,7 @@ PrefabInstance:
     - target: {fileID: 4376553936429697917, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: category
       value: 
-      objectReference: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
+      objectReference: {fileID: 11400000, guid: dfa47587175d9064f93d86b96992e049, type: 2}
     - target: {fileID: 7832621191096040704, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2931,7 +2931,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4376553936429697906, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Name
-      value: Category Card 0 (4)
+      value: Category Card 4
       objectReference: {fileID: 0}
     - target: {fileID: 4376553936429697907, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Pivot.x
@@ -3020,7 +3020,7 @@ PrefabInstance:
     - target: {fileID: 4376553936429697917, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: category
       value: 
-      objectReference: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
+      objectReference: {fileID: 11400000, guid: a0018dc9815375040b573fc317dc0019, type: 2}
     - target: {fileID: 7832621191096040704, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9392,7 +9392,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4376553936429697906, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Name
-      value: Category Card 0 (5)
+      value: Category Card 5
       objectReference: {fileID: 0}
     - target: {fileID: 4376553936429697907, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Pivot.x
@@ -9481,7 +9481,7 @@ PrefabInstance:
     - target: {fileID: 4376553936429697917, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: category
       value: 
-      objectReference: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
+      objectReference: {fileID: 11400000, guid: 3cd880f8f74a1a849b532c2b369cb9cc, type: 2}
     - target: {fileID: 7832621191096040704, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9732,7 +9732,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4376553936429697906, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Name
-      value: Category Card 0 (1)
+      value: Category Card 1
       objectReference: {fileID: 0}
     - target: {fileID: 4376553936429697907, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Pivot.x
@@ -16716,7 +16716,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4376553936429697906, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Name
-      value: Category Card 0 (6)
+      value: Category Card 6
       objectReference: {fileID: 0}
     - target: {fileID: 4376553936429697907, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Pivot.x
@@ -16805,7 +16805,7 @@ PrefabInstance:
     - target: {fileID: 4376553936429697917, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: category
       value: 
-      objectReference: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
+      objectReference: {fileID: 11400000, guid: d8e0fa3ec83da554c8d7cc0e28d9bb4e, type: 2}
     - target: {fileID: 7832621191096040704, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16890,7 +16890,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4376553936429697906, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Name
-      value: Category Card 0 (2)
+      value: Category Card 2
       objectReference: {fileID: 0}
     - target: {fileID: 4376553936429697907, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Pivot.x
@@ -16979,7 +16979,7 @@ PrefabInstance:
     - target: {fileID: 4376553936429697917, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: category
       value: 
-      objectReference: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
+      objectReference: {fileID: 11400000, guid: e88a57daea5a5d84d97ee1e74d54d8a9, type: 2}
     - target: {fileID: 7832621191096040704, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -24199,7 +24199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4376553936429697906, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Name
-      value: Category Card 0 (7)
+      value: Category Card 7
       objectReference: {fileID: 0}
     - target: {fileID: 4376553936429697907, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_Pivot.x
@@ -24288,7 +24288,7 @@ PrefabInstance:
     - target: {fileID: 4376553936429697917, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: category
       value: 
-      objectReference: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
+      objectReference: {fileID: 11400000, guid: 5228a65f591e2954ea2814ee5233c817, type: 2}
     - target: {fileID: 7832621191096040704, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -47303,7 +47303,7 @@ PrefabInstance:
     - target: {fileID: 4376553936429697917, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: category
       value: 
-      objectReference: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
+      objectReference: {fileID: 11400000, guid: f97e110c31f39254bafe499d9cd34038, type: 2}
     - target: {fileID: 7832621191096040704, guid: 8c7bb6927a50d0048bb941bda74fd9f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

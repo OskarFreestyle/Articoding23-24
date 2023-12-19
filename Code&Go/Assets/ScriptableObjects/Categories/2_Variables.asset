@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2318897db1d40b74dbbfa9d80ce90140, type: 3}
   m_Name: 2_Variables
   m_EditorClassIdentifier: 
-  nameIDLocalized:
+  titleLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
     m_TableEntryReference:
       m_KeyId: 78159106048
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   descriptionLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
@@ -26,9 +28,11 @@ MonoBehaviour:
       m_KeyId: 1215138451456
       m_Key: 
     m_FallbackState: 0
-  name_id: variables
-  description: "Aprende a almacenar y usar datos.\nCrea nuevas variables, util\xEDzalas
-    en tu c\xF3digo."
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  icon: {fileID: 21300000, guid: b3f7b15f906cfb34fb65d33c735932d2, type: 3}
+  primaryColor: {r: 0.34901962, g: 0.6784314, b: 0.96470594, a: 1}
+  secondaryColor: {r: 0, g: 0.47058827, b: 0.94117653, a: 1}
   levels:
   - {fileID: 11400000, guid: b472aa0358dc362459e58df5b9c010b5, type: 2}
   - {fileID: 11400000, guid: cfd7655cf0ea5a045874e92f3a99083b, type: 2}
@@ -40,4 +44,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 55977fdde97a358489e27af1249e7cee, type: 2}
   - {fileID: 11400000, guid: 75c51b65d11d9e2499649396b0696a45, type: 2}
   - {fileID: 11400000, guid: 88cae954cbd3a56459851ea922e13d4e, type: 2}
-  icon: {fileID: 21300000, guid: b3f7b15f906cfb34fb65d33c735932d2, type: 3}
+  name_id: variables
+  description: "Aprende a almacenar y usar datos.\nCrea nuevas variables, util\xEDzalas
+    en tu c\xF3digo."
+  references:
+    version: 1

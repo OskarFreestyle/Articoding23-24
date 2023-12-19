@@ -151,10 +151,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: {fileID: 11400000, guid: f97e110c31f39254bafe499d9cd34038, type: 2}
+  cardBGImage: {fileID: 4376553936429697904}
   titleText: {fileID: 4376553938241138039}
+  titleLocalized: {fileID: 4376553938241138038}
+  titleBGImage: {fileID: 4376553936744407139}
   descriptionText: {fileID: 4376553937045328870}
+  descriptionLocalized: {fileID: 4376553937045328865}
+  descriptionBGImage: {fileID: 4376553937766167421}
   numStarsText: {fileID: 4376553937349555131}
-  image: {fileID: 4376553936686156523}
+  numStarsBGImage: {fileID: 4376553937066657556}
+  icon: {fileID: 4376553936686156523}
+  iconBGImage: {fileID: 4376553937989568215}
+  buttonBGImage: {fileID: 4376553936573621277}
 --- !u!1 &4376553936573621278
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,9 +506,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: c2dbbfb09a388eb4f86647a12812d94a, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -655,7 +663,6 @@ GameObject:
   - component: {fileID: 4376553937349555124}
   - component: {fileID: 4376553937349555128}
   - component: {fileID: 4376553937349555131}
-  - component: {fileID: 4376553937349555130}
   - component: {fileID: 4376553937349555125}
   m_Layer: 5
   m_Name: Category Num Stars Text
@@ -725,45 +732,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: -/-
---- !u!114 &4376553937349555130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4376553937349555127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StringReference:
-    m_TableReference:
-      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
-    m_TableEntryReference:
-      m_KeyId: 382661282627584
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  m_FormatArguments: []
-  m_UpdateString:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4376553937349555131}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
-        m_MethodName: set_text
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  references:
-    version: 1
 --- !u!114 &4376553937349555125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1246,9 +1214,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:683e20d7caf70d24f9b84521e6736e9a
+      m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7
     m_TableEntryReference:
-      m_KeyId: 382661282627584
+      m_KeyId: 342858052847534080
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
