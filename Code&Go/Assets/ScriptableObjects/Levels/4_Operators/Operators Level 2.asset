@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8b8cb799550274ba252141012086f5, type: 3}
   m_Name: Operators Level 2
   m_EditorClassIdentifier: 
+  categoryData: {fileID: 11400000, guid: a0018dc9815375040b573fc317dc0019, type: 2}
   levelNameLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:5488e7fb6d014ee4e8f5dcf0dbc9ce67
@@ -19,6 +20,8 @@ MonoBehaviour:
       m_KeyId: 2903391948800
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   levelName: basic_operators_2
   levelPreview: {fileID: 21300000, guid: 5bb3c16e2f1e1d141959e74a40b8f18b, type: 3}
   initialState:
@@ -28,6 +31,8 @@ MonoBehaviour:
       m_KeyId: 2725417975808
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+  customInitialState: {fileID: 0}
   activeBlocks: {fileID: 4900000, guid: 391f13aa0d132644ba0b5e9f6a8c485e, type: 3}
   allActive: 0
   levelBoard: {fileID: 4900000, guid: ec332859cbd6e0c41bf309dc3d40af92, type: 3}
@@ -40,3 +45,7 @@ MonoBehaviour:
       m_KeyId: 77813074368266240
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 1

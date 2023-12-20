@@ -23,8 +23,8 @@ public class LevelManager : MonoBehaviour
         public string categoryName;
     }
 
-    private Category currentCategory;
-    [SerializeField] private LevelData currentLevel;
+    private CategoryDataSO currentCategory;
+    [SerializeField] private LevelDataSO currentLevel;
     private int currentLevelIndex = 0;
 
     [SerializeField] private bool buildLimits = true;
@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private CameraFit cameraFit;
     [SerializeField] private CodeZoom codeZoom;
 
-    [SerializeField] private Category defaultCategory;
+    [SerializeField] private CategoryDataSO defaultCategory;
     [SerializeField] private int defaultLevelIndex;
 
     [SerializeField] private Text levelName;
@@ -220,13 +220,13 @@ public class LevelManager : MonoBehaviour
         BlocklyUI.WorkspaceView.InitIDs();
     }
 
-    public void LoadLevel(Category category, int levelIndex)
+    public void LoadLevel(CategoryDataSO category, int levelIndex)
     {
         currentCategory = category;
         currentLevelIndex = levelIndex;
         LoadLevel(category.levels[levelIndex]);
     }
-    private void LoadLevel(LevelData level)
+    private void LoadLevel(LevelDataSO level)
     {
         currentLevel = level;
         Initialize();
@@ -244,7 +244,7 @@ public class LevelManager : MonoBehaviour
         }
 
         int levelSize = currentCategory.levels.Count;
-        List<Category> categories = gMng.GetCategories();
+        List<CategoryDataSO> categories = gMng.GetCategories();
 
         // Si habia una estrella de antes, la quitamos
         SetSpecialBlockStarActive(false);

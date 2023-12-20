@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 [ExecuteInEditMode]
 public class CategoryCardOld : MonoBehaviour {
-    [SerializeField] private Category category;
+    [SerializeField] private CategoryDataSO category;
 
     [SerializeField] private LocalizeStringEvent localizeString;
     [SerializeField] private Text title;
@@ -34,7 +34,7 @@ public class CategoryCardOld : MonoBehaviour {
         image.sprite = category.icon;
     }
 
-    public void ConfigureCategory(Category category)
+    public void ConfigureCategory(CategoryDataSO category)
     {
         this.category = category;
         Configure();

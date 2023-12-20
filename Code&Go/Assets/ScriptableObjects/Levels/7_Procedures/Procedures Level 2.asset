@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8b8cb799550274ba252141012086f5, type: 3}
   m_Name: Procedures Level 2
   m_EditorClassIdentifier: 
+  categoryData: {fileID: 11400000, guid: 5228a65f591e2954ea2814ee5233c817, type: 2}
   levelNameLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:5488e7fb6d014ee4e8f5dcf0dbc9ce67
@@ -19,6 +20,8 @@ MonoBehaviour:
       m_KeyId: 133638134141247488
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   levelName: procedures_2
   levelPreview: {fileID: 21300000, guid: 4bff04c26692aa54cbc66d1b4915ac29, type: 3}
   initialState:
@@ -28,6 +31,8 @@ MonoBehaviour:
       m_KeyId: 132344273322336256
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+  customInitialState: {fileID: 0}
   activeBlocks: {fileID: 4900000, guid: 5e125baf33c79d143a97d83ca9cd94a6, type: 3}
   allActive: 0
   levelBoard: {fileID: 4900000, guid: 7ef15f6549908854f96446992bfd2c09, type: 3}
@@ -40,3 +45,7 @@ MonoBehaviour:
       m_KeyId: 77938741529411584
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 1

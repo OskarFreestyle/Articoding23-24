@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8b8cb799550274ba252141012086f5, type: 3}
   m_Name: cosa
   m_EditorClassIdentifier: 
+  categoryData: {fileID: 11400000, guid: e88a57daea5a5d84d97ee1e74d54d8a9, type: 2}
   levelNameLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:5488e7fb6d014ee4e8f5dcf0dbc9ce67
@@ -19,6 +20,8 @@ MonoBehaviour:
       m_KeyId: 2155318866169856
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   levelName: level_created_1
   levelPreview: {fileID: 0}
   initialState:
@@ -28,6 +31,8 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+  customInitialState: {fileID: 0}
   activeBlocks: {fileID: 4900000, guid: 8f1faede5566f124cacaa9577b8145e6, type: 3}
   allActive: 0
   levelBoard: {fileID: 0}
@@ -40,3 +45,7 @@ MonoBehaviour:
       m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 1

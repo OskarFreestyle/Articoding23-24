@@ -7,7 +7,7 @@ public class TutorialTriggerLevelCap : MonoBehaviour
 {
 
     public TutorialTrigger tt;
-    public LevelData level;
+    public LevelDataSO level;
 
     void Awake()
     {

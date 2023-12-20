@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class LevelCardOld : MonoBehaviour
 {
-    private LevelData level;
-    private Category category;
+    private LevelDataSO level;
+    private CategoryDataSO category;
     public Button editLevelButton;
 
     [SerializeField] private Text title;
@@ -54,7 +54,7 @@ public class LevelCardOld : MonoBehaviour
         }
     }
 
-    public void ConfigureLevel(LevelData level, Category category, int numLevel)
+    public void ConfigureLevel(LevelDataSO level, CategoryDataSO category, int numLevel)
     {
         this.level = level;
         this.numLevel = numLevel;

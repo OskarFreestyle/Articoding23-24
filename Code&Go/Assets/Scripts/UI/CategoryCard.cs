@@ -7,7 +7,7 @@ using DG.Tweening;
 
 public class CategoryCard : MonoBehaviour {
 
-    [SerializeField] private Category category;
+    [SerializeField] private CategoryDataSO category;
 
     [SerializeField] private Image cardBGImage;
 

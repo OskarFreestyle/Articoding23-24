@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8b8cb799550274ba252141012086f5, type: 3}
   m_Name: Loops Level 1
   m_EditorClassIdentifier: 
+  categoryData: {fileID: 11400000, guid: 3cd880f8f74a1a849b532c2b369cb9cc, type: 2}
   levelNameLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:5488e7fb6d014ee4e8f5dcf0dbc9ce67
@@ -19,6 +20,8 @@ MonoBehaviour:
       m_KeyId: 327157801943040
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   levelName: loops_1
   levelPreview: {fileID: 21300000, guid: ea887ce8ce658b54ca35475bd8a6100c, type: 3}
   initialState:
@@ -28,6 +31,8 @@ MonoBehaviour:
       m_KeyId: 2814400135168
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+  customInitialState: {fileID: 0}
   activeBlocks: {fileID: 4900000, guid: 345aa3c819bc1dd43a95f81fea4f59ff, type: 3}
   allActive: 0
   levelBoard: {fileID: 4900000, guid: 155cec421a042f943a40aba9983b0cd6, type: 3}
@@ -40,3 +45,7 @@ MonoBehaviour:
       m_KeyId: 77841938687590400
       m_Key: 
     m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 1

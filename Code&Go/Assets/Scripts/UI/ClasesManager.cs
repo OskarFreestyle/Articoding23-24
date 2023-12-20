@@ -139,9 +139,9 @@ public class ClasesManager : MonoBehaviour
                 for (int i = 0; i < levelPage.content.Count; i++)
                 {
                     var newlevel = Instantiate(levelPrefab, lists[currentClass].transform);
-                    newlevel.GetComponent<LevelPrefab>().SetLevel(levelPage.content[i], this, comunidadLayout);
-                    newlevel.GetComponent<LevelPrefab>().SetLevelListId(i);
-                    if (IsLevelAlreadySaved(levelPage.content[i].title)) newlevel.GetComponent<LevelPrefab>().DeactivateSave();
+                    newlevel.GetComponent<LevelPrefabOld>().SetLevel(levelPage.content[i], this, comunidadLayout);
+                    newlevel.GetComponent<LevelPrefabOld>().SetLevelListId(i);
+                    if (IsLevelAlreadySaved(levelPage.content[i].title)) newlevel.GetComponent<LevelPrefabOld>().DeactivateSave();
                 }
                 clases[currentClass].GetComponent<ClasePrefab>().SetLevelsCreated();
             }
@@ -187,7 +187,7 @@ public class ClasesManager : MonoBehaviour
         {
             var newlevel = Instantiate(publicLevelPrefab, publicLevelList.transform);
             newlevel.GetComponent<PublicLevelPrefab>().SetLevel(levels.content[i], this, comunidadLayout);
-            if (IsLevelAlreadySaved(levels.content[i].title)) newlevel.GetComponent<LevelPrefab>().DeactivateSave();
+            if (IsLevelAlreadySaved(levels.content[i].title)) newlevel.GetComponent<LevelPrefabOld>().DeactivateSave();
             publicLevels.Add(levels.content[i]);
         }
     }

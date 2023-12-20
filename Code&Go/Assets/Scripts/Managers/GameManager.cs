@@ -13,10 +13,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private List <Category> categories;
+    [SerializeField] private List <CategoryDataSO> categories;
     [SerializeField] private bool loadSave = true;
 
-    [SerializeField] private Category category;
+    [SerializeField] private CategoryDataSO category;
     public int levelIndex;
     private bool gameLoaded = false;
     private Dictionary<UBlockly.Block, string> blockIDs;
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         return gameLoaded;
     }
 
-    public Category GetCurrentCategory()
+    public CategoryDataSO GetCurrentCategory()
     {
         return category;
     }
@@ -89,13 +89,13 @@ public class GameManager : MonoBehaviour
         this.levelIndex = levelIndex;
     }
 
-    public void SetCurrentCategory(Category category)
+    public void SetCurrentCategory(CategoryDataSO category)
     {
         this.category = category;
     }
 
     // Esto habra que moverlo al MenuManager o algo asi
-    public void LoadLevel(Category category, int levelIndex)
+    public void LoadLevel(CategoryDataSO category, int levelIndex)
     {
         playingCommunityLevel = false;
         blockIDs = new Dictionary<UBlockly.Block, string>();
@@ -164,7 +164,7 @@ public class GameManager : MonoBehaviour
         if (this.levelIndex == -1)
             return "editor_level";
 
-        Category category = GetCurrentCategory();
+        CategoryDataSO category = GetCurrentCategory();
         int levelIndex = GetCurrentLevelIndex();
 
         string levelName;
@@ -173,7 +173,7 @@ public class GameManager : MonoBehaviour
         return levelName;
     }
 
-    public List<Category> GetCategories()
+    public List<CategoryDataSO> GetCategories()
     {
         return categories;
     }

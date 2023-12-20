@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Localization;
 
 [CreateAssetMenu(fileName = "Category", menuName = "ScriptableObjects/Category")]
-public class Category : ScriptableObject {
+public class CategoryDataSO : ScriptableObject {
     // New
     public LocalizedString titleLocalized;
     public LocalizedString descriptionLocalized;
@@ -14,7 +14,7 @@ public class Category : ScriptableObject {
     public Color primaryColor;
     public Color secondaryColor;
 
-    public List<LevelData> levels;
+    public List<LevelDataSO> levels;
 
     public int GetTotalStars() {
         return levels.Count * 3;

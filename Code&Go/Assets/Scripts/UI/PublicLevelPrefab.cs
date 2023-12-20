@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PublicLevelPrefab : LevelPrefab
+public class PublicLevelPrefab : LevelPrefabOld
 {
     public Text username;
 

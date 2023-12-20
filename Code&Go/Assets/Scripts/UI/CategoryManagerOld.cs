@@ -9,20 +9,20 @@ using AssetPackage;
 
 public class CategoryManagerOld : MonoBehaviour
 {
-    [SerializeField] private Category[] categories;
+    [SerializeField] private CategoryDataSO[] categories;
 
     [SerializeField] private GameObject categoriesParent;
     [SerializeField] private CategoryCardOld categoryCardPrefab;
 
     [SerializeField] private GameObject levelsParent;
-    [SerializeField] private LevelCard levelCardPrefab;
-    [SerializeField] private LevelCard createdLevelCardPrefab;
+    [SerializeField] private LevelCardOld levelCardPrefab;
+    [SerializeField] private LevelCardOld createdLevelCardPrefab;
 
     [SerializeField] private Sprite createdLevelPreview;
 
     [SerializeField] private GameObject levelsCreatedParent;
     [SerializeField] private Button createLevelButton;
-    [SerializeField] private Category levelsCreatedCategory;
+    [SerializeField] private CategoryDataSO levelsCreatedCategory;
 
     [SerializeField] private Text categoryName;
     [SerializeField] private Text categoryDescription;
@@ -97,8 +97,8 @@ public class CategoryManagerOld : MonoBehaviour
         for (int i = 0; i < levelsCreatedCategory.levels.Count; i++)
         {
             int index = i;
-            LevelData levelData = levelsCreatedCategory.levels[i];
-            LevelCard levelCard = Instantiate(levelCardPrefab, levelsCreatedParent.transform);
+            LevelDataSO levelData = levelsCreatedCategory.levels[i];
+            LevelCardOld levelCard = Instantiate(levelCardPrefab, levelsCreatedParent.transform);
             levelCard.ConfigureLevel(levelData, levelsCreatedCategory, i + 1);
             levelCard.DeactivateStars();
             levelCard.button.onClick.AddListener(() =>
@@ -150,7 +150,7 @@ public class CategoryManagerOld : MonoBehaviour
     {
         if (!ProgressManager.Instance.IsCategoryUnlocked(currentCategory)) return;
 
-        Category category = categories[currentCategory];
+        CategoryDataSO category = categories[currentCategory];
         //currentCategoryLevelsText.text = "Niveles - " + category.name_id;
 
         //selectedCategoryNameLocaliced.Arguments = new object[] { selectedLevelName };
@@ -198,7 +198,7 @@ public class CategoryManagerOld : MonoBehaviour
 
             for (int i = 0; i < boards.Length; i++) {
                 int index = i;
-                LevelData levelData = new LevelData();
+                LevelDataSO levelData = new LevelDataSO();
                 levelData.levelName = fileNames[i];
                 levelData.activeBlocks = activeBlocks[i];
                 levelData.customInitialState = initialBlocks[i];
@@ -207,7 +207,7 @@ public class CategoryManagerOld : MonoBehaviour
                     
                 categories[currentCategory].levels.Add(levelData);
 
-                LevelCard levelCard = Instantiate(createdLevelCardPrefab, levelsParent.transform);
+                LevelCardOld levelCard = Instantiate(createdLevelCardPrefab, levelsParent.transform);
                 levelCard.ConfigureLevel(levelData, category, i + 1);
                 if (ProgressManager.Instance.IsLevelUnlocked(currentCategory, i))
                 {
@@ -245,8 +245,8 @@ public class CategoryManagerOld : MonoBehaviour
             for (int i = 0; i < category.levels.Count; i++)
             {
                 int index = i;
-                LevelData levelData = category.levels[i];
-                LevelCard levelCard = Instantiate(levelCardPrefab, levelsParent.transform);
+                LevelDataSO levelData = category.levels[i];
+                LevelCardOld levelCard = Instantiate(levelCardPrefab, levelsParent.transform);
                 levelCard.ConfigureLevel(levelData, category, i + 1);
                 if (ProgressManager.Instance.IsLevelUnlocked(currentCategory, i))
                 {
@@ -311,7 +311,7 @@ public class CategoryManagerOld : MonoBehaviour
 
     public void EditCreatedLevel()
     {
-        LevelData thisleveldata = categories[currentCategory].levels[currentLevel];
+        LevelDataSO thisleveldata = categories[currentCategory].levels[currentLevel];
 
         BoardState thisBoard = JsonUtility.FromJson<BoardState>(thisleveldata.levelBoard.text);
         ActiveBlocks thisActive = JsonUtility.FromJson<ActiveBlocks>(thisleveldata.activeBlocks.text);
