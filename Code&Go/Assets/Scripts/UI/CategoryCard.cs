@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Localization.Components;
+using DG.Tweening;
 
 public class CategoryCard : MonoBehaviour {
 
@@ -86,13 +87,13 @@ public class CategoryCard : MonoBehaviour {
     }
 
     public void Expand(float adjustSpeed) {
-        Debug.Log(transform.name + " expanded");
-
         // Disable the description and the button
         descriptionBGImage.gameObject.SetActive(true);
         buttonBGImage.gameObject.SetActive(true);
 
         // Scale the category card
+        transform.DOMoveY(500, 5f);
+        
         GetComponent<RectTransform>().sizeDelta = new Vector2(EXPAND_WIDTH, EXPAND_HEIGHT);
 
         // Scale the title text
@@ -108,8 +109,6 @@ public class CategoryCard : MonoBehaviour {
     }
 
     public void Contract(float adjustSpeed) {
-        Debug.Log(transform.name + " contracted");
-
         // Disable the description and the button
         descriptionBGImage.gameObject.SetActive(false);
         buttonBGImage.gameObject.SetActive(false);

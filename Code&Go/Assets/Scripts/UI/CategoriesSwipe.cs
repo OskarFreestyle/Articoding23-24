@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class CategoriesSwipe : MonoBehaviour {
 
@@ -25,7 +26,7 @@ public class CategoriesSwipe : MonoBehaviour {
             AdjustList(distance, pos, takeTheBtn);
             time += Time.deltaTime;
 
-            if (time > 1f) {
+            if (time > adjustSpeed) {
                 time = 0;
                 runIt = false;
             }
@@ -50,18 +51,12 @@ public class CategoriesSwipe : MonoBehaviour {
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2)) {
                 // Transform the selected one
                 Debug.LogWarning("Current Category Selected " + i);
-                //transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1f, 1f), adjustSpeed);
-                //imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), adjustSpeed);
-                //imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
                 imageContent.transform.GetChild(i).GetComponent<CategoryCard>().Expand(adjustSpeed);
 
                 for (int j = 0; j < pos.Length; j++) {
                     // Transform the non selected ones
                     if (j != i) {
-                        //imageContent.transform.GetChild(j).GetComponent<Image>().color = colors[0];
                         imageContent.transform.GetChild(j).GetComponent<CategoryCard>().Contract(adjustSpeed);
-                        //imageContent.transform.GetChild(j).localScale = Vector2.Lerp(imageContent.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
-                        //transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
                     }
                 }
             }

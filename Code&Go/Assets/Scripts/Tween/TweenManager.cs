@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class TweenManager : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class TweenManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
+            DOTween.Init();
         }
         else
         {
             DestroyImmediate(gameObject);
         }
     }
+
 
     public void AddTween(Tween tween)
     {
