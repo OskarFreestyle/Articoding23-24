@@ -30,9 +30,14 @@ public class CategoryCard : MonoBehaviour {
     private const int EXPAND_WIDTH = 640;
     private const int EXPAND_HEIGHT = 700;
     private const float EXPAND_TEXTS_SCALE = 1.0f;
-    private const float EXPAND_ICON_SCALE = 1.0f;
+    private const float EXPAND_ICON_SCALE = 1.0f;    
+    private const float EXPAND_DESCRIPTION_SCALE = 1.0f;
     private const int EXPAND_NUM_STARS_POS_X = 10;
     private const int EXPAND_NUM_STARS_POS_Y = -330;
+    private const int EXPAND_BUTTON_POS_X = -300;
+    private const int EXPAND_BUTTON_POS_Y = -330;    
+    private const int EXPAND_DESCRIPTION_POS_X = -300;
+    private const int EXPAND_DESCRIPTION_POS_Y = -240;
     private const int EXPAND_ICON_POS_X = 0;
     private const int EXPAND_ICON_POS_Y = 70;    
     
@@ -40,8 +45,13 @@ public class CategoryCard : MonoBehaviour {
     private const int CONTRACT_HEIGHT = 438;
     private const float CONTRACT_TEXTS_SCALE = 0.6f;
     private const float CONTRACT_ICON_SCALE = 0.8f;
+    private const float CONTRACT_DESCRIPTION_SCALE = 0.25f;
     private const int CONTRACT_NUM_STARS_POS_X = -78;
-    private const int CONTRACT_NUM_STARS_POS_Y = -199;
+    private const int CONTRACT_NUM_STARS_POS_Y = -199;    
+    private const int CONTRACT_BUTTON_POS_X = -78;
+    private const int CONTRACT_BUTTON_POS_Y = -199;    
+    private const int CONTRACT_DESCRIPTION_POS_X = -68;
+    private const int CONTRACT_DESCRIPTION_POS_Y = -195;
     private const int CONTRACT_ICON_POS_X = 0;
     private const int CONTRACT_ICON_POS_Y = 0;
 
@@ -87,44 +97,52 @@ public class CategoryCard : MonoBehaviour {
     }
 
     public void Expand(float adjustSpeed) {
-        // Disable the description and the button
-        descriptionBGImage.gameObject.SetActive(true);
-        buttonBGImage.gameObject.SetActive(true);
-
         // Scale the category card
-        transform.DOMoveY(500, 5f);
-        
-        GetComponent<RectTransform>().sizeDelta = new Vector2(EXPAND_WIDTH, EXPAND_HEIGHT);
+        DOTween.To(() => GetComponent<RectTransform>().sizeDelta, x => GetComponent<RectTransform>().sizeDelta = x, new Vector2(EXPAND_WIDTH, EXPAND_HEIGHT), adjustSpeed);
 
         // Scale the title text
-        titleBGImage.GetComponent<RectTransform>().localScale = new Vector2(EXPAND_TEXTS_SCALE, EXPAND_TEXTS_SCALE);
+        DOTween.To(() => titleBGImage.GetComponent<RectTransform>().localScale, x => titleBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(EXPAND_TEXTS_SCALE, EXPAND_TEXTS_SCALE), adjustSpeed);
         
         // Scale and move the icon
-        iconBGImage.GetComponent<RectTransform>().localScale = new Vector2(EXPAND_ICON_SCALE, EXPAND_ICON_SCALE);
-        iconBGImage.GetComponent<RectTransform>().localPosition = new Vector2(EXPAND_ICON_POS_X, EXPAND_ICON_POS_Y);
+        DOTween.To(() => iconBGImage.GetComponent<RectTransform>().localScale, x => iconBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(EXPAND_ICON_SCALE, EXPAND_ICON_SCALE), adjustSpeed);
+        DOTween.To(() => iconBGImage.GetComponent<RectTransform>().localPosition, x => iconBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(EXPAND_ICON_POS_X, EXPAND_ICON_POS_Y), adjustSpeed);
+
+        // Scale and move the description
+        DOTween.To(() => descriptionBGImage.GetComponent<RectTransform>().localScale, x => descriptionBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(EXPAND_DESCRIPTION_SCALE, EXPAND_DESCRIPTION_SCALE), adjustSpeed);
+        DOTween.To(() => descriptionBGImage.GetComponent<RectTransform>().localPosition, x => descriptionBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(EXPAND_DESCRIPTION_POS_X, EXPAND_DESCRIPTION_POS_Y), adjustSpeed);
+
+        // Scale, move and enable the button
+        buttonBGImage.GetComponent<Button>().enabled = true;
+        DOTween.To(() => buttonBGImage.GetComponent<RectTransform>().localScale, x => buttonBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(EXPAND_TEXTS_SCALE, EXPAND_TEXTS_SCALE), adjustSpeed);
+        DOTween.To(() => buttonBGImage.GetComponent<RectTransform>().localPosition, x => buttonBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(EXPAND_BUTTON_POS_X, EXPAND_BUTTON_POS_Y), adjustSpeed);
 
         // Scale and move the num stars
-        numStarsBGImage.GetComponent<RectTransform>().localScale = new Vector2(EXPAND_TEXTS_SCALE, EXPAND_TEXTS_SCALE);
-        numStarsBGImage.GetComponent<RectTransform>().localPosition = new Vector2(EXPAND_NUM_STARS_POS_X, EXPAND_NUM_STARS_POS_Y);
+        DOTween.To(() => numStarsBGImage.GetComponent<RectTransform>().localScale, x => numStarsBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(EXPAND_TEXTS_SCALE, EXPAND_TEXTS_SCALE), adjustSpeed);
+        DOTween.To(() => numStarsBGImage.GetComponent<RectTransform>().localPosition, x => numStarsBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(EXPAND_NUM_STARS_POS_X, EXPAND_NUM_STARS_POS_Y), adjustSpeed);
     }
 
     public void Contract(float adjustSpeed) {
-        // Disable the description and the button
-        descriptionBGImage.gameObject.SetActive(false);
-        buttonBGImage.gameObject.SetActive(false);
-
         // Scale the category card
-        GetComponent<RectTransform>().sizeDelta = new Vector2(CONTRACT_WIDTH, CONTRACT_HEIGHT);
+        DOTween.To(() => GetComponent<RectTransform>().sizeDelta, x => GetComponent<RectTransform>().sizeDelta = x, new Vector2(CONTRACT_WIDTH, CONTRACT_HEIGHT), adjustSpeed);
 
         // Scale the title text
-        titleBGImage.GetComponent<RectTransform>().localScale = new Vector2(CONTRACT_TEXTS_SCALE, CONTRACT_TEXTS_SCALE);
+        DOTween.To(() => titleBGImage.GetComponent<RectTransform>().localScale, x => titleBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(CONTRACT_TEXTS_SCALE, CONTRACT_TEXTS_SCALE), adjustSpeed);
 
         // Scale and move the icon
-        iconBGImage.GetComponent<RectTransform>().localScale = new Vector2(CONTRACT_ICON_SCALE, CONTRACT_ICON_SCALE);
-        iconBGImage.GetComponent<RectTransform>().localPosition = new Vector2(CONTRACT_ICON_POS_X, CONTRACT_ICON_POS_Y);
+        DOTween.To(() => iconBGImage.GetComponent<RectTransform>().localScale, x => iconBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(CONTRACT_ICON_SCALE, CONTRACT_ICON_SCALE), adjustSpeed);
+        DOTween.To(() => iconBGImage.GetComponent<RectTransform>().localPosition, x => iconBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(CONTRACT_ICON_POS_X, CONTRACT_ICON_POS_Y), adjustSpeed);
+        
+        // Scale and move the description
+        DOTween.To(() => descriptionBGImage.GetComponent<RectTransform>().localScale, x => descriptionBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(CONTRACT_DESCRIPTION_SCALE, CONTRACT_DESCRIPTION_SCALE), adjustSpeed / 2);
+        DOTween.To(() => descriptionBGImage.GetComponent<RectTransform>().localPosition, x => descriptionBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(CONTRACT_DESCRIPTION_POS_X, CONTRACT_DESCRIPTION_POS_Y), adjustSpeed / 2);
+
+        // Scale, move and enable the button
+        buttonBGImage.GetComponent<Button>().enabled = false;
+        DOTween.To(() => buttonBGImage.GetComponent<RectTransform>().localScale, x => buttonBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(CONTRACT_TEXTS_SCALE, CONTRACT_TEXTS_SCALE), adjustSpeed / 2);
+        DOTween.To(() => buttonBGImage.GetComponent<RectTransform>().localPosition, x => buttonBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(CONTRACT_BUTTON_POS_X, CONTRACT_BUTTON_POS_Y), adjustSpeed / 2);
 
         // Scale and move the num stars
-        numStarsBGImage.GetComponent<RectTransform>().localScale = new Vector2(CONTRACT_TEXTS_SCALE, CONTRACT_TEXTS_SCALE);
-        numStarsBGImage.GetComponent<RectTransform>().localPosition = new Vector2(CONTRACT_NUM_STARS_POS_X, CONTRACT_NUM_STARS_POS_Y);
+        DOTween.To(() => numStarsBGImage.GetComponent<RectTransform>().localScale, x => numStarsBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(CONTRACT_TEXTS_SCALE, CONTRACT_TEXTS_SCALE), adjustSpeed);
+        DOTween.To(() => numStarsBGImage.GetComponent<RectTransform>().localPosition, x => numStarsBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(CONTRACT_NUM_STARS_POS_X, CONTRACT_NUM_STARS_POS_Y), adjustSpeed);
     }
 }

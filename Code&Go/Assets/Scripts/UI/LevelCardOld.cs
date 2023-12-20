@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class LevelCard : MonoBehaviour
+public class LevelCardOld : MonoBehaviour
 {
     private LevelData level;
     private Category category;
