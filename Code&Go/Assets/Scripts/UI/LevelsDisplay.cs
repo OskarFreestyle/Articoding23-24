@@ -1,19 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Localization.Components;
 
-public class LevelsDisplay : MonoBehaviour
-{
+public class LevelsDisplay : MonoBehaviour {
+
+    [SerializeField] private Text titleText;
+    [SerializeField] private LocalizeStringEvent titleLocalized;
+    [SerializeField] private Image titleBGImage;
+
     [SerializeField] private LevelCard levelCardTemplate;
-    [SerializeField] private CategoryDataSO category;
-
     [SerializeField] private List<Vector3> levelsLocalPositions;
 
-    private void Start() {
-        InstanciateLevels(category);
-    }
+    public void InstanciateLevelsFromCategory(CategoryDataSO category) {
+        // Active the levels page
+        transform.parent.gameObject.SetActive(true);
 
-    public void InstanciateLevels(CategoryDataSO category) {
+        // Set the title
+        titleLocalized.StringReference = category.titleLocalized;
+        titleLocalized.RefreshString();
+        titleText.text = titleLocalized.StringReference.GetLocalizedStringAsync().Result;
+        titleBGImage.color = category.secondaryColor;
+
         int i = 0;
         foreach(LevelDataSO levelData in category.levels) {
             LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
@@ -21,6 +30,16 @@ public class LevelsDisplay : MonoBehaviour
             currentLevelCard.transform.localPosition = levelsLocalPositions[i];
             i++;
         }
+    }
+
+    public void ClearDisplay() {
+        // Clear all the levelCards
+        foreach(Transform child in transform) {
+            Destroy(child.gameObject);
+        }
+
+        // Then disable the gameObject
+        transform.parent.gameObject.SetActive(false);
     }
 
 }

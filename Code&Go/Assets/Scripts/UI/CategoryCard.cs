@@ -27,6 +27,8 @@ public class CategoryCard : MonoBehaviour {
 
     [SerializeField] private Image buttonBGImage;
 
+    [SerializeField] private LevelsDisplay levelDisplay;
+
     private const int EXPAND_WIDTH = 640;
     private const int EXPAND_HEIGHT = 700;
     private const float EXPAND_TEXTS_SCALE = 1.0f;
@@ -62,6 +64,16 @@ public class CategoryCard : MonoBehaviour {
         SetColors();
         SetTexts();
         SetIcon();
+        SetButton();
+    }
+
+    private void SetButton() {
+        // Set the button function
+        buttonBGImage.GetComponent<Button>().onClick.AddListener(OnSelectedButtonClicked);
+    }
+
+    private void OnSelectedButtonClicked() {
+        levelDisplay.InstanciateLevelsFromCategory(category);
     }
 
     private void SetIcon() {
