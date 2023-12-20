@@ -8,6 +8,7 @@ public class CategoriesSwipe : MonoBehaviour {
     [SerializeField] private Color[] colors;
     [SerializeField] private GameObject scrollbar;
     [SerializeField] private GameObject imageContent;
+    [SerializeField] private float adjustSpeed;
 
     private float scroll_pos = 0;
     private float[] pos;
@@ -24,7 +25,7 @@ public class CategoriesSwipe : MonoBehaviour {
             AdjustList(distance, pos, takeTheBtn);
             time += Time.deltaTime;
 
-            if (time > 4f) {
+            if (time > 1f) {
                 time = 0;
                 runIt = false;
             }
@@ -40,23 +41,27 @@ public class CategoriesSwipe : MonoBehaviour {
         else {
             for (int i = 0; i < pos.Length; i++) {
                 if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2)) {
-                    scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.1f);
+                    scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[i], adjustSpeed);
                 }
             }
         }
 
-
         for (int i = 0; i < pos.Length; i++) {
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2)) {
-                Debug.LogWarning("Current Selected Level" + i);
-                transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1f, 1f), 0.1f);
-                imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
-                imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
+                // Transform the selected one
+                Debug.LogWarning("Current Category Selected " + i);
+                //transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1f, 1f), adjustSpeed);
+                //imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), adjustSpeed);
+                //imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
+                imageContent.transform.GetChild(i).GetComponent<CategoryCard>().Expand(adjustSpeed);
+
                 for (int j = 0; j < pos.Length; j++) {
+                    // Transform the non selected ones
                     if (j != i) {
-                        imageContent.transform.GetChild(j).GetComponent<Image>().color = colors[0];
-                        imageContent.transform.GetChild(j).localScale = Vector2.Lerp(imageContent.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
-                        transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
+                        //imageContent.transform.GetChild(j).GetComponent<Image>().color = colors[0];
+                        imageContent.transform.GetChild(j).GetComponent<CategoryCard>().Contract(adjustSpeed);
+                        //imageContent.transform.GetChild(j).localScale = Vector2.Lerp(imageContent.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
+                        //transform.GetChild(j).localScale = Vector2.Lerp(transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
                     }
                 }
             }
@@ -67,7 +72,7 @@ public class CategoriesSwipe : MonoBehaviour {
 
         for (int i = 0; i < pos.Length; i++) {
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2)) {
-                scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[btnNumber], 1f * Time.deltaTime);
+                scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[btnNumber], adjustSpeed * Time.deltaTime);
             }
         }
 

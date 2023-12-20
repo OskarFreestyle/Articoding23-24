@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Localization.Components;
 
 public class CategoryCard : MonoBehaviour {
+
     [SerializeField] private Category category;
 
     [SerializeField] private Image cardBGImage;
@@ -18,7 +19,6 @@ public class CategoryCard : MonoBehaviour {
     [SerializeField] private Image descriptionBGImage;
 
     [SerializeField] private Text numStarsText;
-    //private LocalizeStringEvent localizedTitle;
     [SerializeField] private Image numStarsBGImage;
 
     [SerializeField] private Image icon;
@@ -26,15 +26,31 @@ public class CategoryCard : MonoBehaviour {
 
     [SerializeField] private Image buttonBGImage;
 
+    private const int EXPAND_WIDTH = 640;
+    private const int EXPAND_HEIGHT = 700;
+    private const float EXPAND_TEXTS_SCALE = 1.0f;
+    private const float EXPAND_ICON_SCALE = 1.0f;
+    private const int EXPAND_NUM_STARS_POS_X = 10;
+    private const int EXPAND_NUM_STARS_POS_Y = -330;
+    private const int EXPAND_ICON_POS_X = 0;
+    private const int EXPAND_ICON_POS_Y = 70;    
+    
+    private const int CONTRACT_WIDTH = 400;
+    private const int CONTRACT_HEIGHT = 438;
+    private const float CONTRACT_TEXTS_SCALE = 0.6f;
+    private const float CONTRACT_ICON_SCALE = 0.8f;
+    private const int CONTRACT_NUM_STARS_POS_X = -78;
+    private const int CONTRACT_NUM_STARS_POS_Y = -199;
+    private const int CONTRACT_ICON_POS_X = 0;
+    private const int CONTRACT_ICON_POS_Y = 0;
+
     /// <summary>
     /// Setup the category using the scriptable object
     /// </summary>
     private void Start() {
-        Debug.Log("STARTED");
         SetColors();
         SetTexts();
         SetIcon();
-        Debug.Log("FINISHED");
     }
 
     private void SetIcon() {
@@ -54,7 +70,7 @@ public class CategoryCard : MonoBehaviour {
         descriptionText.text = descriptionLocalized.StringReference.GetLocalizedStringAsync().Result;
 
         // Set the stars number
-        numStarsText.text = "0/" + category.GetTotalStars();
+        numStarsText.text = ProgressManager.Instance.GetCategoryTotalStars(category).ToString() + "/" + category.GetTotalStars();
     }
 
     private void SetColors() {
@@ -67,5 +83,49 @@ public class CategoryCard : MonoBehaviour {
         numStarsBGImage.color = category.secondaryColor;
         buttonBGImage.color = category.secondaryColor;
         iconBGImage.color = category.secondaryColor;
+    }
+
+    public void Expand(float adjustSpeed) {
+        Debug.Log(transform.name + " expanded");
+
+        // Disable the description and the button
+        descriptionBGImage.gameObject.SetActive(true);
+        buttonBGImage.gameObject.SetActive(true);
+
+        // Scale the category card
+        GetComponent<RectTransform>().sizeDelta = new Vector2(EXPAND_WIDTH, EXPAND_HEIGHT);
+
+        // Scale the title text
+        titleBGImage.GetComponent<RectTransform>().localScale = new Vector2(EXPAND_TEXTS_SCALE, EXPAND_TEXTS_SCALE);
+        
+        // Scale and move the icon
+        iconBGImage.GetComponent<RectTransform>().localScale = new Vector2(EXPAND_ICON_SCALE, EXPAND_ICON_SCALE);
+        iconBGImage.GetComponent<RectTransform>().localPosition = new Vector2(EXPAND_ICON_POS_X, EXPAND_ICON_POS_Y);
+
+        // Scale and move the num stars
+        numStarsBGImage.GetComponent<RectTransform>().localScale = new Vector2(EXPAND_TEXTS_SCALE, EXPAND_TEXTS_SCALE);
+        numStarsBGImage.GetComponent<RectTransform>().localPosition = new Vector2(EXPAND_NUM_STARS_POS_X, EXPAND_NUM_STARS_POS_Y);
+    }
+
+    public void Contract(float adjustSpeed) {
+        Debug.Log(transform.name + " contracted");
+
+        // Disable the description and the button
+        descriptionBGImage.gameObject.SetActive(false);
+        buttonBGImage.gameObject.SetActive(false);
+
+        // Scale the category card
+        GetComponent<RectTransform>().sizeDelta = new Vector2(CONTRACT_WIDTH, CONTRACT_HEIGHT);
+
+        // Scale the title text
+        titleBGImage.GetComponent<RectTransform>().localScale = new Vector2(CONTRACT_TEXTS_SCALE, CONTRACT_TEXTS_SCALE);
+
+        // Scale and move the icon
+        iconBGImage.GetComponent<RectTransform>().localScale = new Vector2(CONTRACT_ICON_SCALE, CONTRACT_ICON_SCALE);
+        iconBGImage.GetComponent<RectTransform>().localPosition = new Vector2(CONTRACT_ICON_POS_X, CONTRACT_ICON_POS_Y);
+
+        // Scale and move the num stars
+        numStarsBGImage.GetComponent<RectTransform>().localScale = new Vector2(CONTRACT_TEXTS_SCALE, CONTRACT_TEXTS_SCALE);
+        numStarsBGImage.GetComponent<RectTransform>().localPosition = new Vector2(CONTRACT_NUM_STARS_POS_X, CONTRACT_NUM_STARS_POS_Y);
     }
 }

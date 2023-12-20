@@ -3,8 +3,7 @@ using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class CategoryCardOld : MonoBehaviour
-{
+public class CategoryCardOld : MonoBehaviour {
     [SerializeField] private Category category;
 
     [SerializeField] private LocalizeStringEvent localizeString;
@@ -16,8 +15,7 @@ public class CategoryCardOld : MonoBehaviour
     [HideInInspector] public Button button;
     public Image image;
 
-    private void Configure()
-    {
+    private void Configure() {
         if (category == null) return;
 
         button = GetComponent<Button>();

@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.Localization;
 
 [CreateAssetMenu(fileName = "Category", menuName = "ScriptableObjects/Category")]
-public class Category : ScriptableObject
-{
+public class Category : ScriptableObject {
     // New
-
     public LocalizedString titleLocalized;
     public LocalizedString descriptionLocalized;
     
@@ -22,12 +20,8 @@ public class Category : ScriptableObject
         return levels.Count * 3;
     }
 
-
-    // Old
+    // Old - BORRAR?
     public string name_id;
     [TextArea(3, 6)]
     public string description;
-
-
-
 }

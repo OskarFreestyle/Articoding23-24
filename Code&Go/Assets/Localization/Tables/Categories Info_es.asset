@@ -51,8 +51,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 5019636420608
     m_Localized: "Aprende a programar c\xF3digo que se repetir\xE1 un n\xFAmero de
-      veces concreto o mientras se cumpla una condici\xF3n.\nUsar\xE1s while, for,
-      etc."
+      veces concreto o mientras se cumpla una condici\xF3n."
     m_Metadata:
       m_Items: []
   - m_Id: 5602590150656
@@ -64,8 +63,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6053872095232
-    m_Localized: "Utiliza el tipo bool visto anteriormente para hacer c\xF3digo condicional.\nUsar\xE1s
-      if, if-else, etc."
+    m_Localized: "Utiliza el tipo bool visto anteriormente para hacer c\xF3digo condicional."
     m_Metadata:
       m_Items: []
   - m_Id: 49954735318302720
