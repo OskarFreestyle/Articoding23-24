@@ -142,8 +142,7 @@ public class ProgressManager : MonoBehaviour {
         //int index = categories.IndexOf(category);
         //if (index < 0)
         //    TrackerAsset.Instance.Accessible.Accessed(levelsCreatedCategory.levels[level].levelName);
-        //else
-        //{
+        //else {
         //    LevelStarted(categories.IndexOf(category), level);
         //}
     }

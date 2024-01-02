@@ -105,6 +105,9 @@ public class GameManager : MonoBehaviour {
             SceneManager.LoadScene("LevelScene");
             return;
         }
+        else {
+            Debug.LogWarning("ERROR WTF");
+        }
 
         LoadManager.Instance.LoadScene("LevelScene");
     }

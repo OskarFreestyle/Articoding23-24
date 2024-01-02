@@ -24,7 +24,6 @@ public class LevelCard : MonoBehaviour {
     private LevelDataSO levelData;
 
     public void SetLevelData(LevelDataSO levelData) {
-        Debug.Log("Setted: " + levelData.name);
         this.levelData = levelData;
         SetText();
         SetColors();
@@ -56,10 +55,15 @@ public class LevelCard : MonoBehaviour {
 
         // Set the secondary color
         titleBGImage.color = levelData.categoryData.secondaryColor;
+        buttonBGImage.color = levelData.categoryData.secondaryColor;
     }
 
     private void SetIcon() {
         // Set the icon
         icon.sprite = levelData.levelPreview;
+    }
+
+    public void PlayLevel() {
+        GameManager.Instance.LoadLevel(levelData.categoryData, levelData.index);
     }
 }
