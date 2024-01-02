@@ -34,6 +34,7 @@ public class SaveManager {
             Debug.LogError(e.Message);
             token = "";
         }
+
         Filepath = Path.Combine(dataPath, token + filename);
         Debug.Log(Filepath);
     }
@@ -46,6 +47,9 @@ public class SaveManager {
             file.Close();
             Save();
             return;
+        }
+        else {
+            Debug.Log("File Found");
         }
 
         StreamReader reader = new StreamReader(Filepath);
@@ -66,19 +70,24 @@ public class SaveManager {
     }
 
     public static void Save() {
-        SaveData data = new SaveData();
+        // Save the game data
         GameSaveData gameData = new GameSaveData();
         gameData.tutorialInfo = TutorialManager.Instance.Save();
         gameData.progressData = ProgressManager.Instance.Save();
+        
+        // Add the hash to the save data
+        SaveData data = new SaveData();
         data.gameData = gameData;
-
         data.hash = Hash.ToHash(data.gameData.ToString(), "");
 
+        // Parse to json
         string finalJson = JsonUtility.ToJson(data);
-        // Se crea de nuevo
+
+        // Create a new file
         FileStream file = new FileStream(Filepath, FileMode.Create);
         file.Close();
 
+        // Write the new file
         StreamWriter writer = new StreamWriter(Filepath);
         writer.Write(finalJson);
         writer.Close();

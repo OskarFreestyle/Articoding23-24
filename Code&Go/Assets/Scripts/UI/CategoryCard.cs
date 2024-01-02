@@ -9,6 +9,11 @@ public class CategoryCard : MonoBehaviour {
 
     [SerializeField] private CategoryDataSO category;
 
+    public CategoryDataSO Category {
+        get { return category; }
+        private set { category = value; }
+    }
+
     [SerializeField] private Image cardBGImage;
 
     [SerializeField] private Text titleText;
@@ -92,8 +97,8 @@ public class CategoryCard : MonoBehaviour {
         descriptionLocalized.RefreshString();
         descriptionText.text = descriptionLocalized.StringReference.GetLocalizedStringAsync().Result;
 
-        // Set the stars number
-        numStarsText.text = ProgressManager.Instance.GetCategoryTotalStars(category).ToString() + "/" + category.GetTotalStars();
+        // Set the stars number by default
+        numStarsText.text = "0/" + category.GetTotalStars();
     }
 
     private void SetColors() {

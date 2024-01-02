@@ -32,34 +32,34 @@ public class LevelCardOld : MonoBehaviour
 
     }
 #endif
-    private void Configure()
-    {
-        if (level == null) return;
+    //private void Configure()
+    //{
+    //    if (level == null) return;
 
-        button = GetComponent<Button>();
-        starsColor = stars[0].color;
-        starsColor.a = 0f;
+    //    button = GetComponent<Button>();
+    //    starsColor = stars[0].color;
+    //    starsColor.a = 0f;
 
-        lockedImage.enabled = false;
-        title.text = numLevel.ToString();
+    //    lockedImage.enabled = false;
+    //    title.text = numLevel.ToString();
 
-        int levelStars = ProgressManager.Instance.GetLevelStars(category, numLevel - 1);
+    //    int levelStars = ProgressManager.Instance.GetLevelStars(category, numLevel - 1);
 
-        //cambia el color de las estrellas que ha conseguido el jugador en el nivel
-        for (int i = 0; i < 3; i++) {
-            if (i >= levelStars)
-                stars[i].color = starsColor;
-            else
-                starsColor.a = 0.2f;
-        }
-    }
+    //    //cambia el color de las estrellas que ha conseguido el jugador en el nivel
+    //    for (int i = 0; i < 3; i++) {
+    //        if (i >= levelStars)
+    //            stars[i].color = starsColor;
+    //        else
+    //            starsColor.a = 0.2f;
+    //    }
+    //}
 
     public void ConfigureLevel(LevelDataSO level, CategoryDataSO category, int numLevel)
     {
         this.level = level;
         this.numLevel = numLevel;
         this.category = category;
-        Configure();
+        //Configure();
     }
 
     public void DeactivateStars()

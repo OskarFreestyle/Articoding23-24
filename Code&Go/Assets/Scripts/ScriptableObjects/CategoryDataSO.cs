@@ -20,6 +20,10 @@ public class CategoryDataSO : ScriptableObject {
         return levels.Count * 3;
     }
 
+    public int GetTotalLevels() {
+        return levels.Count;
+    }
+
     // Old - BORRAR?
     public string name_id;
     [TextArea(3, 6)]

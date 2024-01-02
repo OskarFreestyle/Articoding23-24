@@ -18,7 +18,7 @@ public class ProgressManager : MonoBehaviour {
     
     // Old
 
-    [SerializeField] private List<CategoryDataSO> categories;
+    //[SerializeField] private List<CategoryDataSO> categories;
     [SerializeField] private bool allUnlocked;
     [SerializeField] private TextAsset activeBlocks;
     [SerializeField] private CategoryDataSO levelsCreatedCategory;
@@ -50,34 +50,32 @@ public class ProgressManager : MonoBehaviour {
     }
 
     private void Init() {
-        categoriesData = new CategorySaveData[categories.Count];
-        for (int i = 0; i < categoriesData.Length; i++)
-        {
+        // Category Levels
+        categoriesData = new CategorySaveData[categoryCards.Length];
+
+        for (int i = 0; i < categoriesData.Length; i++) {
+
             CategorySaveData data = new CategorySaveData();
-            //data.lastLevelUnlocked = i <= lastCategoryUnlocked ? 0 : -1;
-            //data.totalStars = 0;
+            data.levelsData = new LevelSaveData[categoryCards[i].Category.GetTotalLevels()];
 
-            //Si es la categoría de niveles creados, reseteamos el contador siempre
-            //ya que los niveles no se guardan en el scriptable, se guardan en archivos
-            if(i == 0)
-                data.levelsData = new LevelSaveData[0];
-            else
-                data.levelsData = new LevelSaveData[categories[i].levels.Count];
-
-            for (int j = 0; j < data.levelsData.Length; j++)
-            {
+            // Create every level without any star
+            for (int j = 0; j < data.levelsData.Length; j++) {
                 data.levelsData[j] = new LevelSaveData();
                 data.levelsData[j].stars = -1;
             }
+
             categoriesData[i] = data;
         }
 
-        currentCategoryData = categoriesData[0];
-        currentLevel = 0;
+        // Created Levels
         levelsCreated = new LevelsCreatedSaveData();
         levelsCreated.levelsCreated = new string[0];
         levelsCreatedHash = new List<string>();
         levelsCreatedCategory.levels.Clear();
+
+        // Old
+        currentCategoryData = categoriesData[0];
+        currentLevel = 0;
     }
 
     public bool IsAllUnlockedModeOn()
@@ -112,19 +110,19 @@ public class ProgressManager : MonoBehaviour {
         var levelName = GameManager.Instance.GetCurrentLevelName();
         TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, true, starsAchieved);
 
-        var categoryName = categories[categoryIndex].name_id;
-        if (currentCategoryData.GetLevelsCompleted() < currentCategoryData.levelsData.Length)
-        {
-            TrackerAsset.Instance.Completable.Progressed(categoryName, CompletableTracker.Completable.Completable, (float)currentCategoryData.GetLevelsCompleted() / categories[categoryIndex].levels.Count);
-        }
-        else
-        {
-            TrackerAsset.Instance.Completable.Completed(categoryName, CompletableTracker.Completable.Completable, true, GetCategoryTotalStars(categoryIndex));
-        }
+        //var categoryName = categories[categoryIndex].name_id;
+        //if (currentCategoryData.GetLevelsCompleted() < currentCategoryData.levelsData.Length)
+        //{
+        //    TrackerAsset.Instance.Completable.Progressed(categoryName, CompletableTracker.Completable.Completable, (float)currentCategoryData.GetLevelsCompleted() / categories[categoryIndex].levels.Count);
+        //}
+        //else
+        //{
+        //    TrackerAsset.Instance.Completable.Completed(categoryName, CompletableTracker.Completable.Completable, true, GetCategoryTotalStars(categoryIndex));
+        //}
 
         if (GetGameProgress() == 1.0f)
         {
-            TrackerAsset.Instance.Completable.Completed("articoding", CompletableTracker.Completable.Game, true, GetTotalStars());
+            //TrackerAsset.Instance.Completable.Completed("articoding", CompletableTracker.Completable.Game, true, GetTotalStars());
         }
     }
 
@@ -148,13 +146,13 @@ public class ProgressManager : MonoBehaviour {
 
     public void LevelStarted(CategoryDataSO category, int level)
     {
-        int index = categories.IndexOf(category);
-        if (index < 0)
-            TrackerAsset.Instance.Accessible.Accessed(levelsCreatedCategory.levels[level].levelName);
-        else
-        {
-            LevelStarted(categories.IndexOf(category), level);
-        }
+        //int index = categories.IndexOf(category);
+        //if (index < 0)
+        //    TrackerAsset.Instance.Accessible.Accessed(levelsCreatedCategory.levels[level].levelName);
+        //else
+        //{
+        //    LevelStarted(categories.IndexOf(category), level);
+        //}
     }
 
     public void AddHints(int amount)
@@ -196,11 +194,11 @@ public class ProgressManager : MonoBehaviour {
     public int GetLvlsCompleted() {
         int levels = 0;
 
-        foreach (CategoryDataSO c in categories)
-        {
-            int tmp = GetCategoryCurrentProgress(c);
-            levels += Mathf.Max(0, tmp);
-        }
+        //foreach (CategoryDataSO c in categories)
+        //{
+        //    int tmp = GetCategoryCurrentProgress(c);
+        //    levels += Mathf.Max(0, tmp);
+        //}
 
         return levels;
     }
@@ -229,10 +227,10 @@ public class ProgressManager : MonoBehaviour {
         return categoriesData[categoryIndex].levelsData[level].stars;
     }
 
-    public int GetLevelStars(CategoryDataSO category, int level)
-    {
-        return GetLevelStars(categories.IndexOf(category), level);
-    }
+    //public int GetLevelStars(CategoryDataSO category, int level)
+    //{
+    //    return GetLevelStars(categories.IndexOf(category), level);
+    //}
 
     public int GetLastCategory() {
         return lastCategoryUnlocked;
@@ -244,26 +242,26 @@ public class ProgressManager : MonoBehaviour {
         return categoriesData[categoryIndex].GetCurrentNumStars();
     }
 
-    public int GetCategoryTotalStars(CategoryDataSO category)
-    {
-        return GetCategoryTotalStars(categories.IndexOf(category));
-    }
+    //public int GetCategoryTotalStars(CategoryDataSO category)
+    //{
+    //    return GetCategoryTotalStars(categoryCards[IndexOf(category));
+    //}
 
-    public int GetCategoryCurrentProgress(CategoryDataSO category)
-    {
-        int index = categories.IndexOf(category);
-        if (index >= categoriesData.Length || index < 0) return 0;
+    //public int GetCategoryCurrentProgress(CategoryDataSO category)
+    //{
+    //    int index = categories.IndexOf(category);
+    //    if (index >= categoriesData.Length || index < 0) return 0;
 
-        return categoriesData[index].GetLevelsCompleted();
-    }
+    //    return categoriesData[index].GetLevelsCompleted();
+    //}
 
-    public int GetCategoryTotalProgress(CategoryDataSO category)
-    {
-        int index = categories.IndexOf(category);
-        if (index >= categoriesData.Length || index < 0) return 0;
+    //public int GetCategoryTotalProgress(CategoryDataSO category)
+    //{
+    //    int index = categories.IndexOf(category);
+    //    if (index >= categoriesData.Length || index < 0) return 0;
 
-        return categoriesData[index].levelsData.Length;
-    }
+    //    return categoriesData[index].levelsData.Length;
+    //}
 
     public int GetHintsRemaining()
     {
@@ -376,8 +374,7 @@ public class ProgressManager : MonoBehaviour {
 
     //Save and Load
     //----------------
-    public ProgressSaveData Save()
-    {
+    public ProgressSaveData Save() {
         ProgressSaveData data = new ProgressSaveData();
         data.categoriesInfo = categoriesData;
         data.levelsCreatedData = levelsCreated;
@@ -388,6 +385,7 @@ public class ProgressManager : MonoBehaviour {
     public void Load(ProgressSaveData data) {
         categoriesData = data.categoriesInfo;
         levelsCreated = data.levelsCreatedData;
+
         LoadLevelsCreated();
         CheckLevelsData();
 
@@ -404,27 +402,27 @@ public class ProgressManager : MonoBehaviour {
         int levels = 0;
         int totalLevel = 0;
 
-        foreach (CategoryDataSO c in categories)
-        {
-            int tmp = GetCategoryCurrentProgress(c);
-            levels += Mathf.Max(0, tmp);
-            totalLevel += c.levels.Count;
-        }
+        //foreach (CategoryDataSO c in categories)
+        //{
+        //    int tmp = GetCategoryCurrentProgress(c);
+        //    levels += Mathf.Max(0, tmp);
+        //    totalLevel += c.levels.Count;
+        //}
 
         return levels / (float)totalLevel;
     }
 
-    public int GetTotalStars()
-    {
-        int stars = 0;
+    //public int GetTotalStars()
+    //{
+    //    int stars = 0;
 
-        for (int i = 0; i < categories.Count; i++)
-        {
-            stars += (int)GetCategoryTotalStars(i);
-        }
+    //    //for (int i = 0; i < categories.Count; i++)
+    //    //{
+    //    //    stars += (int)GetCategoryTotalStars(i);
+    //    //}
 
-        return stars;
-    }
+    //    return stars;
+    //}
 
     private void CheckLevelsData()
     {
