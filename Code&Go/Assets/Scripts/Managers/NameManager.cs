@@ -29,7 +29,7 @@ public class NameManager : MonoBehaviour
         name = inputField.text;
         userName.text = name;
 
-        ProgressManager.Instance.SetName(name);
+        //ProgressManager.Instance.SetName(name);
 
         SetActiveNamePanel(false);
     }

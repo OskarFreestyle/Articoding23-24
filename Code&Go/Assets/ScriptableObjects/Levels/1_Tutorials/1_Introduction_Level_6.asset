@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8b8cb799550274ba252141012086f5, type: 3}
+  m_Name: 1_Introduction_Level_6
+  m_EditorClassIdentifier: 
+  index: 6
+  categoryData: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
+  levelNameLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:5488e7fb6d014ee4e8f5dcf0dbc9ce67
+    m_TableEntryReference:
+      m_KeyId: 114037692931465216
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  levelPreview: {fileID: 21300000, guid: 54a09a45a2ae58d4abcb9aa929338c23, type: 3}
+  levelName: tutorials_6
+  initialState:
+    m_TableReference:
+      m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
+    m_TableEntryReference:
+      m_KeyId: 112742692683735040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  customInitialState: {fileID: 0}
+  activeBlocks: {fileID: 4900000, guid: 0d715246149017c4ea13799db08f0260, type: 3}
+  allActive: 0
+  levelBoard: {fileID: 4900000, guid: 6a79e34ee58395c43b93dca6ac5ac364, type: 3}
+  auxLevelBoard: 
+  minimosPasos: 9
+  endTextLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:84c2393b91541f444811c7fc43a5c75a
+    m_TableEntryReference:
+      m_KeyId: 57970753007124480
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 1

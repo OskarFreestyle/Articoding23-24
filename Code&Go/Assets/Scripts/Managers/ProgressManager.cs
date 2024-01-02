@@ -13,9 +13,7 @@ public class ProgressManager : MonoBehaviour {
 
     [SerializeField] private CategoryCard[] categoryCards;
 
-    
-    
-    
+
     // Old
 
     //[SerializeField] private List<CategoryDataSO> categories;
@@ -24,10 +22,6 @@ public class ProgressManager : MonoBehaviour {
     [SerializeField] private CategoryDataSO levelsCreatedCategory;
 
     private CategorySaveData[] categoriesData;
-    private int hintsRemaining = 5;
-    private int coins = 10;
-    private int levelsCompleted = 0;
-    private string name = "";
 
     private CategorySaveData currentCategoryData = null;
     private int currentLevel = 0, lastCategoryUnlocked = 0;
@@ -152,23 +146,6 @@ public class ProgressManager : MonoBehaviour {
         //{
         //    LevelStarted(categories.IndexOf(category), level);
         //}
-    }
-
-    public void AddHints(int amount)
-    {
-        hintsRemaining += amount;
-        Mathf.Clamp(hintsRemaining, 0, 100);
-    }
-
-    public void AddCoins(int amount)
-    {
-        coins += amount;
-        Mathf.Clamp(coins, 0, 100);
-    }
-
-    public void SetName(string n) {
-        Debug.Log("Guarda nombre " + n);
-        name = n;
     }
 
     //Getters

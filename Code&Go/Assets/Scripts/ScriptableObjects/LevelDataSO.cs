@@ -4,6 +4,8 @@ using UnityEngine.Localization;
 [CreateAssetMenu(fileName = "Level", menuName = "ScriptableObjects/Level")]
 public class LevelDataSO : ScriptableObject {
     // New
+    public int index;
+
     public CategoryDataSO categoryData;
 
     public LocalizedString levelNameLocalized;
@@ -17,7 +19,7 @@ public class LevelDataSO : ScriptableObject {
     public TextAsset customInitialState = null;
 
     [Header("Active Blocks")]
-    public TextAsset activeBlocks;//Bloques y categorias disponibles    
+    public TextAsset activeBlocks;  //Bloques y categorias disponibles    
     public bool allActive = false;
 
     [Space(10)]
@@ -26,6 +28,5 @@ public class LevelDataSO : ScriptableObject {
     
     [Space(10)] 
     public int minimosPasos;
-    
     public LocalizedString endTextLocalized;
 }

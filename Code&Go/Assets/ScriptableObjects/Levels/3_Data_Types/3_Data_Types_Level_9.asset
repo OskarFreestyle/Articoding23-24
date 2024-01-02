@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8b8cb799550274ba252141012086f5, type: 3}
+  m_Name: 3_Data_Types_Level_9
+  m_EditorClassIdentifier: 
+  index: 9
+  categoryData: {fileID: 11400000, guid: dfa47587175d9064f93d86b96992e049, type: 2}
+  levelNameLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:5488e7fb6d014ee4e8f5dcf0dbc9ce67
+    m_TableEntryReference:
+      m_KeyId: 115110037966958592
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  levelPreview: {fileID: 21300000, guid: 3d2e07ccb55bd81439a37c18437d4229, type: 3}
+  levelName: types_9
+  initialState:
+    m_TableReference:
+      m_TableCollectionName: GUID:0cb20202274dbd645b2ec8c9ac22ad0a
+    m_TableEntryReference:
+      m_KeyId: 113816108193689600
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+  customInitialState: {fileID: 0}
+  activeBlocks: {fileID: 4900000, guid: 779968d6ced86f44dbf9145f7a1f5331, type: 3}
+  allActive: 0
+  levelBoard: {fileID: 4900000, guid: 98248f50bc7f64f449392d03fc8624b5, type: 3}
+  auxLevelBoard: 
+  minimosPasos: 3
+  endTextLocalized:
+    m_TableReference:
+      m_TableCollectionName: GUID:84c2393b91541f444811c7fc43a5c75a
+    m_TableEntryReference:
+      m_KeyId: 77809619033522176
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 1

@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour {
     ActiveBlocks communityActiveBlocks = null;
     string communityInitialState = null;
 
-    void Awake() {
+    private void Awake() {
         if (Instance) {
             Debug.LogWarning("More than 1 Game Manager created");
             DestroyImmediate(this);

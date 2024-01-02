@@ -15,240 +15,240 @@ MonoBehaviour:
   m_TableCollectionName: Levels Info
   m_TableCollectionNameGuidString: 5488e7fb6d014ee4e8f5dcf0dbc9ce67
   m_Entries:
-  - m_Id: 1352116031488
-    m_Key: variables_level_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1254476828672
-    m_Key: variables_level_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1146398003200
-    m_Key: variables_level_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1047919939584
-    m_Key: variables_level_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 729903616000
-    m_Key: variables_level_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 71444025344
-    m_Key: variable_level_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2400595562496
-    m_Key: types_level_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2149360947200
-    m_Key: types_level_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2010802114560
-    m_Key: types_level_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1880166322176
-    m_Key: types_level_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1738105245696
-    m_Key: types_level_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1620224331776
-    m_Key: types_level_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 321477024022528
-    m_Key: types_level_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3624317308928
-    m_Key: operators_level_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3541295255552
-    m_Key: operators_level_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3463591579648
-    m_Key: operators_level_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3265909837824
-    m_Key: operators_level_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3188537511936
-    m_Key: operators_level_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2903391948800
-    m_Key: operators_level_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2751654612992
-    m_Key: operators_level_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4726181941248
-    m_Key: loops_level_9
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4575413489664
-    m_Key: loops_level_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4464767750144
-    m_Key: loops_level_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4387194097664
-    m_Key: loops_level_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4311839232000
-    m_Key: loops_level_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4018745462784
-    m_Key: loops_level_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3945856847872
-    m_Key: loops_level_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3818501001216
-    m_Key: loops_level_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 327157801943040
-    m_Key: loops_level_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5484713431040
-    m_Key: conditions_level_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5307269206016
-    m_Key: conditions_level_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5211274170368
-    m_Key: conditions_level_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5120069029888
-    m_Key: conditions_level_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5028813557760
-    m_Key: conditions_level_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4849486090240
-    m_Key: conditions_level_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 326974879956992
-    m_Key: conditions_level_1
-    m_Metadata:
-      m_Items: []
   - m_Id: 2152537493164032
-    m_Key: create_level_name
+    m_Key: 0_Levels_Created_Create
     m_Metadata:
       m_Items: []
   - m_Id: 2155318866169856
-    m_Key: created_level_name
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49891443426131968
-    m_Key: introduction_level_4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49891445598781440
-    m_Key: introduction_level_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49891447557521408
-    m_Key: introduction_level_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49891449507872768
-    m_Key: introduction_level_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55866087298785280
-    m_Key: introduction_level_5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 57531839431716864
-    m_Key: types_level_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 60904977424408576
-    m_Key: variables_level_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112963937210347520
-    m_Key: variables_level_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112964259727159296
-    m_Key: variables_level_9
-    m_Metadata:
-      m_Items: []
-  - m_Id: 114037692931465216
-    m_Key: introduction_level_6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 114037699403276288
-    m_Key: introduction_level_7
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115110037966958592
-    m_Key: types_level_9
-    m_Metadata:
-      m_Items: []
-  - m_Id: 133638100792336384
-    m_Key: procedures_level_1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 133638134141247488
-    m_Key: procedures_level_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 133638166722600960
-    m_Key: procedures_level_3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 134019708391927808
-    m_Key: conditions_level_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 134019767724552192
-    m_Key: conditions_level_9
-    m_Metadata:
-      m_Items: []
-  - m_Id: 134322686772523008
-    m_Key: variables_level_10
-    m_Metadata:
-      m_Items: []
-  - m_Id: 134394921289920512
-    m_Key: operators_level_8
-    m_Metadata:
-      m_Items: []
-  - m_Id: 134394966177361920
-    m_Key: operators_level_9
+    m_Key: 0_Levels_Created_Level
     m_Metadata:
       m_Items: []
   - m_Id: 328292474644508672
-    m_Key: non_created_levels_found
+    m_Key: 0_Levels_Created_None_Found
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49891449507872768
+    m_Key: 1_Introduction_Level_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49891447557521408
+    m_Key: 1_Introduction_Level_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49891445598781440
+    m_Key: 1_Introduction_Level_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49891443426131968
+    m_Key: 1_Introduction_Level_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55866087298785280
+    m_Key: 1_Introduction_Level_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114037692931465216
+    m_Key: 1_Introduction_Level_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 114037699403276288
+    m_Key: 1_Introduction_Level_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71444025344
+    m_Key: 2_Variables_Level_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134322686772523008
+    m_Key: 2_Variables_Level_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 729903616000
+    m_Key: 2_Variables_Level_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60904977424408576
+    m_Key: 2_Variables_Level_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1047919939584
+    m_Key: 2_Variables_Level_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1146398003200
+    m_Key: 2_Variables_Level_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1254476828672
+    m_Key: 2_Variables_Level_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1352116031488
+    m_Key: 2_Variables_Level_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112963937210347520
+    m_Key: 2_Variables_Level_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112964259727159296
+    m_Key: 2_Variables_Level_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57531839431716864
+    m_Key: 3_Data_Types_Level_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1620224331776
+    m_Key: 3_Data_Types_Level_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1738105245696
+    m_Key: 3_Data_Types_Level_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1880166322176
+    m_Key: 3_Data_Types_Level_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2010802114560
+    m_Key: 3_Data_Types_Level_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2149360947200
+    m_Key: 3_Data_Types_Level_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2400595562496
+    m_Key: 3_Data_Types_Level_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 321477024022528
+    m_Key: 3_Data_Types_Level_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115110037966958592
+    m_Key: 3_Data_Types_Level_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2751654612992
+    m_Key: 4_Operators_Level_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2903391948800
+    m_Key: 4_Operators_Level_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3188537511936
+    m_Key: 4_Operators_Level_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3265909837824
+    m_Key: 4_Operators_Level_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3463591579648
+    m_Key: 4_Operators_Level_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3541295255552
+    m_Key: 4_Operators_Level_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3624317308928
+    m_Key: 4_Operators_Level_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134394921289920512
+    m_Key: 4_Operators_Level_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134394966177361920
+    m_Key: 4_Operators_Level_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327157801943040
+    m_Key: 5_Loops_Level_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3818501001216
+    m_Key: 5_Loops_Level_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3945856847872
+    m_Key: 5_Loops_Level_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4018745462784
+    m_Key: 5_Loops_Level_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4311839232000
+    m_Key: 5_Loops_Level_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4387194097664
+    m_Key: 5_Loops_Level_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4464767750144
+    m_Key: 5_Loops_Level_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4575413489664
+    m_Key: 5_Loops_Level_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4726181941248
+    m_Key: 5_Loops_Level_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 326974879956992
+    m_Key: 6_Conditions_Level_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4849486090240
+    m_Key: 6_Conditions_Level_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5028813557760
+    m_Key: 6_Conditions_Level_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5120069029888
+    m_Key: 6_Conditions_Level_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5211274170368
+    m_Key: 6_Conditions_Level_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5307269206016
+    m_Key: 6_Conditions_Level_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5484713431040
+    m_Key: 6_Conditions_Level_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134019708391927808
+    m_Key: 6_Conditions_Level_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134019767724552192
+    m_Key: 6_Conditions_Level_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133638100792336384
+    m_Key: 7_Procedures_Level_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133638134141247488
+    m_Key: 7_Procedures_Level_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 133638166722600960
+    m_Key: 7_Procedures_Level_3
     m_Metadata:
       m_Items: []
   m_Metadata:
