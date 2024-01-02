@@ -6,6 +6,8 @@ using UnityEngine.Localization;
 [CreateAssetMenu(fileName = "Category", menuName = "ScriptableObjects/Category")]
 public class CategoryDataSO : ScriptableObject {
     // New
+    public int index;
+
     public LocalizedString titleLocalized;
     public LocalizedString descriptionLocalized;
     

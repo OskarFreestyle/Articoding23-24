@@ -97,8 +97,8 @@ public class CategoryCard : MonoBehaviour {
         descriptionLocalized.RefreshString();
         descriptionText.text = descriptionLocalized.StringReference.GetLocalizedStringAsync().Result;
 
-        // Set the stars number by default
-        numStarsText.text = "0/" + category.GetTotalStars();
+        //// Set the stars number by default
+        //numStarsText.text = "0/" + category.GetTotalStars();
     }
 
     private void SetColors() {
@@ -163,7 +163,7 @@ public class CategoryCard : MonoBehaviour {
         DOTween.To(() => numStarsBGImage.GetComponent<RectTransform>().localPosition, x => numStarsBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(CONTRACT_NUM_STARS_POS_X, CONTRACT_NUM_STARS_POS_Y), adjustSpeed);
     }
 
-    public void UpdateData(CategorySaveData categoryData) {
+    public void Configure(CategorySaveData categoryData) {
         // Update the number of stars
         numStarsText.text = categoryData.GetCurrentNumStars().ToString() + "/" + category.GetTotalStars().ToString();
 
@@ -171,5 +171,7 @@ public class CategoryCard : MonoBehaviour {
 
 
 
+        Debug.Log(gameObject.name + " configured");
+        Debug.Log(gameObject.name + " has " + categoryData.GetCurrentNumStars().ToString());
     }
 }

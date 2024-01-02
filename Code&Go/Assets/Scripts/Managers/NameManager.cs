@@ -9,14 +9,14 @@ public class NameManager : MonoBehaviour
     public GameObject nameMenu;
     public Text inputField;
     public Text userName;
-    private string name;
+    //private string name;
 
     // Start is called before the first frame update
     void Start()
     {
         //blackPanel.SetActive(false);
         nameMenu.SetActive(false);
-        userName.text = ProgressManager.Instance.GetName();
+        //userName.text = ProgressManager.Instance.GetName();
     }
 
     public void SetActiveNamePanel(bool active)

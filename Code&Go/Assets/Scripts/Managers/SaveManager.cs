@@ -59,11 +59,11 @@ public class SaveManager {
         // Leemos
         SaveData data = JsonUtility.FromJson<SaveData>(readerData);
 
-        // Verificamos
-        if (Hash.ToHash(data.gameData.ToString(), "") == data.hash) {
+        // Verificamos TODO active hash
+        //if (Hash.ToHash(data.gameData.ToString(), "") == data.hash) {
             ProgressManager.Instance.Load(data.gameData.progressData);
             TutorialManager.Instance.Load(data.gameData.tutorialInfo);
-        }
+        //}
 
         // Se ha modificado el archivo, empiezas de 0
         Save();

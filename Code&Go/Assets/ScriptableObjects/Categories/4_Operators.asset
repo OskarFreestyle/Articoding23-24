@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0aca013380010645a2a7369e9956567, type: 3}
   m_Name: 4_Operators
   m_EditorClassIdentifier: 
+  index: 4
   titleLocalized:
     m_TableReference:
       m_TableCollectionName: GUID:cee591da47cfcc540ba90c0dcafe72e7

@@ -28,12 +28,15 @@ public class LevelCard : MonoBehaviour {
         SetText();
         SetColors();
         SetIcon();
-
-        // TODO
-        SetStars();
     }
-    private void SetStars() {
 
+    public void SetLevelStars(int levelStars) {
+        if(levelStars < 3) starIcon2.color = new Color (0,0,0,0.5f);
+        if(levelStars < 2) starIcon1.color = new Color (0,0,0,0.5f);
+        if(levelStars < 1) starIcon0.color = new Color (0,0,0,0.5f);
+
+        // Level locked TODO change icon
+        if(levelStars < 0) starIcon0.color = new Color (0,0,0,0.5f);
     }
 
     private void SetText() {

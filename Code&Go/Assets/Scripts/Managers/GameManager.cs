@@ -9,8 +9,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Main manager of the game
 /// </summary>
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
     public static GameManager Instance;
 
     [SerializeField] private List <CategoryDataSO> categories;

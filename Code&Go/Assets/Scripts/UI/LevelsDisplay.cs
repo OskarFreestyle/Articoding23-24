@@ -27,6 +27,7 @@ public class LevelsDisplay : MonoBehaviour {
         foreach(LevelDataSO levelData in category.levels) {
             LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
             currentLevelCard.SetLevelData(levelData);
+            currentLevelCard.SetLevelStars(ProgressManager.Instance.GetLevelStars(category, i));
             currentLevelCard.transform.localPosition = levelsLocalPositions[i];
             i++;
         }
@@ -41,5 +42,4 @@ public class LevelsDisplay : MonoBehaviour {
         // Then disable the gameObject
         transform.parent.gameObject.SetActive(false);
     }
-
 }

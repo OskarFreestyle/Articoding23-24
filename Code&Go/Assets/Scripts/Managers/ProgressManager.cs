@@ -227,10 +227,9 @@ public class ProgressManager : MonoBehaviour {
         return categoriesData[categoryIndex].levelsData[level].stars;
     }
 
-    //public int GetLevelStars(CategoryDataSO category, int level)
-    //{
-    //    return GetLevelStars(categories.IndexOf(category), level);
-    //}
+    public int GetLevelStars(CategoryDataSO category, int level) {
+        return GetLevelStars(category.index, level);
+    }
 
     public int GetLastCategory() {
         return lastCategoryUnlocked;
@@ -262,21 +261,6 @@ public class ProgressManager : MonoBehaviour {
 
     //    return categoriesData[index].levelsData.Length;
     //}
-
-    public int GetHintsRemaining()
-    {
-        return hintsRemaining;
-    }
-
-    public int GetCoins()
-    {
-        return coins;
-    }
-
-    public string GetName()
-    {
-        return name;
-    }
 
     public void UserCreatedLevel(string board, string customActiveBlocks, string customInitialState, string levelName, int levelCategory)
     {
@@ -389,11 +373,13 @@ public class ProgressManager : MonoBehaviour {
         LoadLevelsCreated();
         CheckLevelsData();
 
+        UpdateCategoryCards();
+
     }
 
     private void UpdateCategoryCards() {
         for (int i = 0; i < categoryCards.Length; i++) {
-            categoryCards[i].UpdateData(categoriesData[i]);
+            categoryCards[i].Configure(categoriesData[i]);
         }
     }
 

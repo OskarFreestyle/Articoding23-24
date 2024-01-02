@@ -1039,7 +1039,6 @@ public class BoardManager : Listener
             DeactivateHintButton();
 
 
-        TrackerAsset.Instance.setVar("remaining_hints", ProgressManager.Instance.GetHintsRemaining());
         TrackerAsset.Instance.setVar("level", GameManager.Instance.GetCurrentLevelName());
         TrackerAsset.Instance.GameObject.Interacted("hint_button");
     }

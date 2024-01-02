@@ -40,9 +40,10 @@ public class CategorySaveData {
         int currentNumStars = 0;
 
         foreach (LevelSaveData levelData in levelsData)
-            currentNumStars += levelData.stars + 1;            //totalStars += levelData.stars; TODO quitar el +1
+            if (levelData.stars != -1) currentNumStars += levelData.stars;
 
-        return currentNumStars;
+        return levelsData.Length;
+        //return currentNumStars;
     }
 }
 
