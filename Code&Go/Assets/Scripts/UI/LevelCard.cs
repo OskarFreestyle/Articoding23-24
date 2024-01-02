@@ -13,6 +13,7 @@ public class LevelCard : MonoBehaviour {
     [SerializeField] private Image titleBGImage;
 
     [SerializeField] private Image icon;
+    [SerializeField] private Image lockedIcon;
 
     [SerializeField] private Image starIcon0;
     [SerializeField] private Image starIcon1;
@@ -35,8 +36,11 @@ public class LevelCard : MonoBehaviour {
         if(levelStars < 2) starIcon1.color = new Color (0,0,0,0.5f);
         if(levelStars < 1) starIcon0.color = new Color (0,0,0,0.5f);
 
-        // Level locked TODO change icon
-        if(levelStars < 0) starIcon0.color = new Color (0,0,0,0.5f);
+        // Level locked
+        if (levelStars < 0) {
+            starIcon0.color = new Color(0, 0, 0, 0.5f);
+            lockedIcon.gameObject.SetActive(true);
+        }
     }
 
     private void SetText() {
