@@ -32,71 +32,66 @@ public class GameManager : MonoBehaviour
     ActiveBlocks communityActiveBlocks = null;
     string communityInitialState = null;
 
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);            
+    void Awake() {
+        if (Instance) {
+            Debug.LogWarning("More than 1 Game Manager created");
+            DestroyImmediate(this);
         }
-        else
-            DestroyImmediate(gameObject);
+        else {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
     }
 
-    private void Start()
-    {
+    private void Start() {
+        Debug.Log("Save Manager Init");
         SaveManager.Init();
+        Debug.Log("Save Manager Init Finished");
+
         LoadGame();
+
         TrackerAsset.Instance.setVar("language", LocalizationSettings.SelectedLocale.Identifier.Code);
         TrackerAsset.Instance.setVar("resolution", Screen.currentResolution.ToString());
         TrackerAsset.Instance.setVar("fullscreen", Screen.fullScreen);
-
         TrackerAsset.Instance.Completable.Initialized("articoding", CompletableTracker.Completable.Game);
         TrackerAsset.Instance.Completable.Progressed("articoding", CompletableTracker.Completable.Game, ProgressManager.Instance.GetGameProgress());
     }
 
-    public void LoadGame()
-    {
-        if (loadSave && !gameLoaded)
-        {
+    public void LoadGame() {
+        if (loadSave && !gameLoaded) {
             SaveManager.Load();
             gameLoaded = true;
+            Debug.Log("Game Loaded");
         }
+        else Debug.Log("Game Load Not Found");
     }
 
-    public bool IsGameLoaded()
-    {
+    public bool IsGameLoaded() {
         return gameLoaded;
     }
 
-    public CategoryDataSO GetCurrentCategory()
-    {
+    public CategoryDataSO GetCurrentCategory() {
         return category;
     }
 
-    public bool InCreatedLevel()
-    {
+    public bool InCreatedLevel() {
         return category == categories[categories.Count - 1];
     }
 
-    public int GetCurrentLevelIndex()
-    {
+    public int GetCurrentLevelIndex() {
         return levelIndex;
     }
 
-    public void SetCurrentLevel(int levelIndex)
-    {
+    public void SetCurrentLevel(int levelIndex) {
         this.levelIndex = levelIndex;
     }
 
-    public void SetCurrentCategory(CategoryDataSO category)
-    {
+    public void SetCurrentCategory(CategoryDataSO category) {
         this.category = category;
     }
 
     // Esto habra que moverlo al MenuManager o algo asi
-    public void LoadLevel(CategoryDataSO category, int levelIndex)
-    {
+    public void LoadLevel(CategoryDataSO category, int levelIndex) {
         playingCommunityLevel = false;
         blockIDs = new Dictionary<UBlockly.Block, string>();
         this.category = category;

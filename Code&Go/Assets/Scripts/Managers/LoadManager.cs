@@ -9,8 +9,7 @@ using uAdventure.Simva;
 /// <summary>
 /// Manage the loading of the scenes
 /// </summary>
-public class LoadManager : MonoBehaviour
-{
+public class LoadManager : MonoBehaviour {
     public static LoadManager Instance;
 
     [SerializeField] private bool autoStart;

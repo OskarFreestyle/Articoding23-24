@@ -7,8 +7,7 @@ using UnityEngine.Localization.Components;
 using UnityEngine.Localization;
 using AssetPackage;
 
-public class CategoryManagerOld : MonoBehaviour
-{
+public class CategoryManagerOld : MonoBehaviour {
     [SerializeField] private CategoryDataSO[] categories;
 
     [SerializeField] private GameObject categoriesParent;
@@ -292,8 +291,7 @@ public class CategoryManagerOld : MonoBehaviour
         TraceScreenAccesed();
     }
 
-    public void PlaySelectedLevel()
-    {
+    public void PlaySelectedLevel() {
         GameManager.Instance.LoadLevel(categories[currentCategory], currentLevel);
     }
 

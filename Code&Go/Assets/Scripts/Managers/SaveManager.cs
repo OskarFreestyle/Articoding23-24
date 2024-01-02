@@ -35,10 +35,10 @@ public class SaveManager {
             token = "";
         }
         Filepath = Path.Combine(dataPath, token + filename);
+        Debug.Log(Filepath);
     }
 
-    public static void Load()
-    {
+    public static void Load() {
         // Si no existe, se crea
         if (!File.Exists(Filepath)) {
             Debug.LogWarning("Archivo no encontrado");
@@ -56,18 +56,16 @@ public class SaveManager {
         SaveData data = JsonUtility.FromJson<SaveData>(readerData);
 
         // Verificamos
-        if (Hash.ToHash(data.gameData.ToString(), "") == data.hash)
-        {
-            TutorialManager.Instance.Load(data.gameData.tutorialInfo);
+        if (Hash.ToHash(data.gameData.ToString(), "") == data.hash) {
             ProgressManager.Instance.Load(data.gameData.progressData);
+            TutorialManager.Instance.Load(data.gameData.tutorialInfo);
         }
 
         // Se ha modificado el archivo, empiezas de 0
         Save();
     }
 
-    public static void Save()
-    {
+    public static void Save() {
         SaveData data = new SaveData();
         GameSaveData gameData = new GameSaveData();
         gameData.tutorialInfo = TutorialManager.Instance.Save();

@@ -157,4 +157,14 @@ public class CategoryCard : MonoBehaviour {
         DOTween.To(() => numStarsBGImage.GetComponent<RectTransform>().localScale, x => numStarsBGImage.GetComponent<RectTransform>().localScale = x, new Vector3(CONTRACT_TEXTS_SCALE, CONTRACT_TEXTS_SCALE), adjustSpeed);
         DOTween.To(() => numStarsBGImage.GetComponent<RectTransform>().localPosition, x => numStarsBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(CONTRACT_NUM_STARS_POS_X, CONTRACT_NUM_STARS_POS_Y), adjustSpeed);
     }
+
+    public void UpdateData(CategorySaveData categoryData) {
+        // Update the number of stars
+        numStarsText.text = categoryData.GetCurrentNumStars().ToString() + "/" + category.GetTotalStars().ToString();
+
+        // Update the icon
+
+
+
+    }
 }
