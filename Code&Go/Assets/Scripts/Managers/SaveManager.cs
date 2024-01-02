@@ -7,7 +7,7 @@ using UnityEngine;
 public class SaveManager {
     public static SaveManager Instance;
 
-    private static string filename = "gameSave.save";
+    private static string filename = "gameSave.json";
     private static string Filepath = "";
 
     public void Awake() {

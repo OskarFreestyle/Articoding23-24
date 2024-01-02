@@ -56,12 +56,11 @@ public class ProgressManager : MonoBehaviour {
         for (int i = 0; i < categoriesData.Length; i++) {
 
             CategorySaveData data = new CategorySaveData();
-            data.levelsData = new LevelSaveData[categoryCards[i].Category.GetTotalLevels()];
+            data.levelsData = new int[categoryCards[i].Category.GetTotalLevels()];
 
             // Create every level without any star
             for (int j = 0; j < data.levelsData.Length; j++) {
-                data.levelsData[j] = new LevelSaveData();
-                data.levelsData[j].stars = -1;
+                data.levelsData[j] = -1;
             }
 
             categoriesData[i] = data;
@@ -88,11 +87,11 @@ public class ProgressManager : MonoBehaviour {
     //---------
     public void LevelCompleted(int starsAchieved)
     {
-        if (currentCategoryData.levelsData[currentLevel].stars == -1)
-            currentCategoryData.levelsData[currentLevel].stars = 0;
+        if (currentCategoryData.levelsData[currentLevel] == -1)
+            currentCategoryData.levelsData[currentLevel] = 0;
 
-        int newStarsAchieved = Mathf.Clamp(starsAchieved - currentCategoryData.levelsData[currentLevel].stars, 0, 3);
-        currentCategoryData.levelsData[currentLevel].stars = currentCategoryData.levelsData[currentLevel].stars + newStarsAchieved;
+        int newStarsAchieved = Mathf.Clamp(starsAchieved - currentCategoryData.levelsData[currentLevel], 0, 3);
+        currentCategoryData.levelsData[currentLevel] = currentCategoryData.levelsData[currentLevel] + newStarsAchieved;
         //currentCategoryData.totalStars += (uint)newStarsAchieved;
 
         int categoryIndex = Array.IndexOf(categoriesData, currentCategoryData);
@@ -213,7 +212,7 @@ public class ProgressManager : MonoBehaviour {
                 //if (categoryData.lastLevelUnlocked <= i)
                 //    break;
 
-                if (categoryData.levelsData[i].stars == 3)
+                if (categoryData.levelsData[i] == 3)
                     levels++;
             }
         }
@@ -224,7 +223,7 @@ public class ProgressManager : MonoBehaviour {
     public int GetLevelStars(int categoryIndex, int level)
     {
         if (categoryIndex >= categoriesData.Length || categoryIndex < 0 || level >= categoriesData[categoryIndex].levelsData.Length || level < 0) return 0;
-        return categoriesData[categoryIndex].levelsData[level].stars;
+        return categoriesData[categoryIndex].levelsData[level];
     }
 
     public int GetLevelStars(CategoryDataSO category, int level) {

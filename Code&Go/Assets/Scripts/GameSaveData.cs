@@ -27,29 +27,23 @@ public class LevelsCreatedSaveData {
 
 [System.Serializable]
 public class CategorySaveData {
-    public LevelSaveData[] levelsData;
+    public int[] levelsData;
 
     public int GetLevelsCompleted() {
         int levelsCompleted = 0;
-        foreach (LevelSaveData levelData in levelsData)
-            levelsCompleted += levelData.stars >= 0 ? 1 : 0;
+        foreach (int levelData in levelsData)
+            levelsCompleted += levelData >= 0 ? 1 : 0;
         return levelsCompleted;
     }
 
     public int GetCurrentNumStars() {
         int currentNumStars = 0;
 
-        foreach (LevelSaveData levelData in levelsData)
-            if (levelData.stars != -1) currentNumStars += levelData.stars;
+        foreach (int levelData in levelsData)
+            if (levelData != -1) currentNumStars += levelData;
 
-        return levelsData.Length;
-        //return currentNumStars;
+        return currentNumStars;
     }
-}
-
-[System.Serializable]
-public class LevelSaveData {
-    public int stars = -1; // -1 if the level is not completed
 }
 
 [System.Serializable]
