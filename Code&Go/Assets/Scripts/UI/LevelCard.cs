@@ -39,6 +39,7 @@ public class LevelCard : MonoBehaviour {
         if (levelStars < 0) {
             starIcon0.color = new Color(0, 0, 0, 0.5f);
             lockedIcon.gameObject.SetActive(true);
+            buttonBGImage.GetComponent<Button>().enabled = false;
         }
     }
 

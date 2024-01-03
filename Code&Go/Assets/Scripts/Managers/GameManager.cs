@@ -43,10 +43,7 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Start() {
-        Debug.Log("Save Manager Init");
         SaveManager.Init();
-        Debug.Log("Save Manager Init Finished");
-
         LoadGame();
 
         TrackerAsset.Instance.setVar("language", LocalizationSettings.SelectedLocale.Identifier.Code);
@@ -60,9 +57,7 @@ public class GameManager : MonoBehaviour {
         if (loadSave && !gameLoaded) {
             SaveManager.Load();
             gameLoaded = true;
-            Debug.Log("Game Loaded");
         }
-        else Debug.Log("Game Load Not Found");
     }
 
     public bool IsGameLoaded() {
@@ -210,7 +205,6 @@ public class GameManager : MonoBehaviour {
     public ActiveBlocks GetCommunityLevelActiveBlocks() { return communityActiveBlocks; }
     public void SetCommunityInitialState(string state) { communityInitialState = state; }
     public string GetCommunityInitialState() { return communityInitialState; }
-
     public void ResetCommunityElements()
     {
         communityInitialState = null;

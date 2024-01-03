@@ -78,6 +78,7 @@ public class CategoryCard : MonoBehaviour {
     private void SetButton() {
         // Set the button function
         buttonBGImage.GetComponent<Button>().onClick.AddListener(OnSelectedButtonClicked);
+        Debug.Log(category.name + " button configure");
     }
 
     private void OnSelectedButtonClicked() {
@@ -195,6 +196,7 @@ public class CategoryCard : MonoBehaviour {
         // Update the icon
         lockedIcon.gameObject.SetActive(categoryData.levelsData[0] == -1);
         icon.gameObject.SetActive(categoryData.levelsData[0] != -1);
-        buttonBGImage.GetComponent<Button>().enabled = categoryData.levelsData[0] != -1;
+        buttonBGImage.GetComponent<Button>().interactable = categoryData.levelsData[0] != -1;
+        Debug.Log(category.name + " button state " + (categoryData.levelsData[0] != -1));
     }
 }

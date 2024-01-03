@@ -11,6 +11,7 @@ public class CategoriesSwipe : MonoBehaviour {
     [SerializeField] private GameObject categoriesContent;
     [SerializeField] private GameObject imageContent;
     [SerializeField] private float adjustSpeed;
+    [SerializeField] private int initialCategory;
 
     private float scroll_pos = 0;
     private float[] pos;
@@ -19,15 +20,24 @@ public class CategoriesSwipe : MonoBehaviour {
     private Button takeTheBtn;
     private int btnNumber;
 
-    private void Update() {
+    private void Start() {
         pos = new float[transform.childCount];
+        scroll_pos = initialCategory / pos.Length;
+        ConfigureCategories(0, true);
+    }
+
+    private void Update() {
+        ConfigureCategories(adjustSpeed);
+    }
+
+    private void ConfigureCategories(float configureSpeed, bool init = false) {
         float distance = 1f / (pos.Length - 1f);
 
         if (runIt) {
-            AdjustList(distance, pos, takeTheBtn);
+            AdjustList(distance, pos, takeTheBtn, configureSpeed);
             time += Time.deltaTime;
 
-            if (time > adjustSpeed) {
+            if (time > configureSpeed) {
                 time = 0;
                 runIt = false;
             }
@@ -39,6 +49,9 @@ public class CategoriesSwipe : MonoBehaviour {
 
         if (Input.GetMouseButton(0)) {
             scroll_pos = scrollbar.GetComponent<Scrollbar>().value;
+        } 
+        else if (init) {
+            scroll_pos = (float)initialCategory / pos.Length;
         }
         else {
             for (int i = 0; i < pos.Length; i++) {
@@ -55,30 +68,29 @@ public class CategoriesSwipe : MonoBehaviour {
                 Debug.LogWarning("Current Category Selected " + i);
                 imageContent.transform.GetChild(i).localScale = Vector2.Lerp(categoriesContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
                 imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
-                categoriesContent.transform.GetChild(i).GetComponent<CategoryCard>().Expand(adjustSpeed);
+                categoriesContent.transform.GetChild(i).GetComponent<CategoryCard>().Expand(configureSpeed);
 
                 for (int j = 0; j < pos.Length; j++) {
                     // Transform the non selected ones
                     if (j != i) {
                         imageContent.transform.GetChild(j).GetComponent<Image>().color = colors[0];
                         imageContent.transform.GetChild(j).localScale = Vector2.Lerp(imageContent.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.1f);
-                        categoriesContent.transform.GetChild(j).GetComponent<CategoryCard>().Contract(adjustSpeed);
+                        categoriesContent.transform.GetChild(j).GetComponent<CategoryCard>().Contract(configureSpeed);
                     }
                 }
             }
         }
     }
 
-    private void AdjustList(float distance, float[] pos, Button btn) {
+    private void AdjustList(float distance, float[] pos, Button btn, float configureSpeed) {
 
         for (int i = 0; i < pos.Length; i++) {
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2)) {
                 //DOTween.To(() => scrollbar.GetComponent<Scrollbar>().value, x => scrollbar.GetComponent<Scrollbar>().value = x, pos[btnNumber], adjustSpeed);
-                scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[btnNumber], adjustSpeed * Time.deltaTime);
+                scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[btnNumber], configureSpeed * Time.deltaTime);
             }
         }
     }
-
 
     public void WhichShortcutClicked(Button shortcutClicked) {
         string auxName = shortcutClicked.transform.name;

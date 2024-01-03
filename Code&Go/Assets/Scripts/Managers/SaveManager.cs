@@ -11,6 +11,7 @@ public class SaveManager {
     private static string Filepath = "";
 
     public void Awake() {
+        Debug.Log("Entra al save manager awake");
         if (Instance == null) Instance = this;
     }
 
@@ -31,12 +32,11 @@ public class SaveManager {
         }
         catch(System.Exception e)
         {
-            Debug.LogError(e.Message);
+            Debug.LogError("SimvaExtension: " + e.Message);
             token = "";
         }
 
         Filepath = Path.Combine(dataPath, token + filename);
-        Debug.Log(Filepath);
     }
 
     public static void Load() {
