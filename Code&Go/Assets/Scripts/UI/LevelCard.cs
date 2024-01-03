@@ -65,6 +65,6 @@ public class LevelCard : MonoBehaviour {
     }
 
     public void PlayLevel() {
-        GameManager.Instance.LoadLevel(levelData.categoryData, levelData.index);
+        GameManager.Instance.LoadLevel(levelData.categoryData, levelData.index - 1);
     }
 }

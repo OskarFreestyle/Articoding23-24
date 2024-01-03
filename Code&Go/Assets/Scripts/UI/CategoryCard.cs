@@ -78,7 +78,6 @@ public class CategoryCard : MonoBehaviour {
     private void SetButton() {
         // Set the button function
         buttonBGImage.GetComponent<Button>().onClick.AddListener(OnSelectedButtonClicked);
-        Debug.Log(category.name + " button configure");
     }
 
     private void OnSelectedButtonClicked() {

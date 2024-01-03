@@ -84,7 +84,6 @@ public class GameManager : MonoBehaviour {
         this.category = category;
     }
 
-    // Esto habra que moverlo al MenuManager o algo asi
     public void LoadLevel(CategoryDataSO category, int levelIndex) {
         playingCommunityLevel = false;
         blockIDs = new Dictionary<UBlockly.Block, string>();

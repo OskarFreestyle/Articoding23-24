@@ -80,12 +80,10 @@ public class LevelManager : MonoBehaviour
 
     private bool completed = false;
 
-    private void Awake()
-    {
+    private void Awake() {
         GameManager gameManager = GameManager.Instance;
 
-        if (gameManager != null)
-        {
+        if (gameManager != null) {
             currentCategory = gameManager.GetCurrentCategory();
             currentLevelIndex = gameManager.GetCurrentLevelIndex();
         }
@@ -95,7 +93,7 @@ public class LevelManager : MonoBehaviour
             currentLevelIndex = defaultLevelIndex;
         }
 
-        if (!GameManager.Instance.GetPlayingCommunityLevel())
+        if (!gameManager.GetPlayingCommunityLevel())
         {
             currentLevel = currentCategory.levels[currentLevelIndex];
             minimosPasos = currentLevel.minimosPasos;
@@ -186,8 +184,7 @@ public class LevelManager : MonoBehaviour
     private void Initialize()
     {
 
-        if (currentLevel == null)
-        {
+        if (currentLevel == null) {
             Debug.LogError("Cannot initialize Level. CurrentLevel is null");
             return;
         }
