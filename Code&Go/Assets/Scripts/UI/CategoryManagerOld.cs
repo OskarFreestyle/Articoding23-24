@@ -7,330 +7,330 @@ using UnityEngine.Localization.Components;
 using UnityEngine.Localization;
 using AssetPackage;
 
-public class CategoryManagerOld : MonoBehaviour {
-    [SerializeField] private CategoryDataSO[] categories;
+//public class CategoryManagerOld : MonoBehaviour {
+//    [SerializeField] private CategoryDataSO[] categories;
 
-    [SerializeField] private GameObject categoriesParent;
-    [SerializeField] private CategoryCardOld categoryCardPrefab;
+//    [SerializeField] private GameObject categoriesParent;
+//    [SerializeField] private CategoryCardOld categoryCardPrefab;
 
-    [SerializeField] private GameObject levelsParent;
-    [SerializeField] private LevelCardOld levelCardPrefab;
-    [SerializeField] private LevelCardOld createdLevelCardPrefab;
+//    [SerializeField] private GameObject levelsParent;
+//    //[SerializeField] private LevelCardOld levelCardPrefab;
+//    //[SerializeField] private LevelCardOld createdLevelCardPrefab;
 
-    [SerializeField] private Sprite createdLevelPreview;
+//    [SerializeField] private Sprite createdLevelPreview;
 
-    [SerializeField] private GameObject levelsCreatedParent;
-    [SerializeField] private Button createLevelButton;
-    [SerializeField] private CategoryDataSO levelsCreatedCategory;
+//    [SerializeField] private GameObject levelsCreatedParent;
+//    [SerializeField] private Button createLevelButton;
+//    [SerializeField] private CategoryDataSO levelsCreatedCategory;
 
-    [SerializeField] private Text categoryName;
-    [SerializeField] private Text categoryDescription;
-    [SerializeField] private LocalizeStringEvent localizedCategoryName;
-    [SerializeField] private LocalizeStringEvent localizedCategoryDescription;
+//    [SerializeField] private Text categoryName;
+//    [SerializeField] private Text categoryDescription;
+//    [SerializeField] private LocalizeStringEvent localizedCategoryName;
+//    [SerializeField] private LocalizeStringEvent localizedCategoryDescription;
 
-    [SerializeField] private Text levelName;
-    [SerializeField] private LocalizeStringEvent localizedLevelName;
-    [SerializeField] private Image levelPreview;
+//    [SerializeField] private Text levelName;
+//    [SerializeField] private LocalizeStringEvent localizedLevelName;
+//    [SerializeField] private Image levelPreview;
 
-    [SerializeField] private Text levelCreatedName;
-    [SerializeField] private LocalizeStringEvent localizedLevelCreatedName;
-    [SerializeField] private LocalizedString createLevelLocalizeString;
+//    [SerializeField] private Text levelCreatedName;
+//    [SerializeField] private LocalizeStringEvent localizedLevelCreatedName;
+//    [SerializeField] private LocalizedString createLevelLocalizeString;
 
-    [SerializeField] private GameObject categoriesPanel;
-    [SerializeField] private GameObject levelsPanel;
-    [SerializeField] private GameObject playSelectedLevelButton;
+//    [SerializeField] private GameObject categoriesPanel;
+//    [SerializeField] private GameObject levelsPanel;
+//    [SerializeField] private GameObject playSelectedLevelButton;
 
-    [SerializeField] private GameObject currentCategoryPanel;
-    [SerializeField] private GameObject currentLevelPanel;
+//    [SerializeField] private GameObject currentCategoryPanel;
+//    [SerializeField] private GameObject currentLevelPanel;
 
-    [SerializeField] private GameObject currentLevelCreatedPanel;
+//    [SerializeField] private GameObject currentLevelCreatedPanel;
 
-    [SerializeField] private Text currentCategoryLevelsText;
-    [SerializeField] private LocalizeStringEvent currentCategoryLevelsTextLocalized;
-    [SerializeField] private LocalizedString categoryNameLocaliced;
-    [SerializeField] private LocalizedString[] selectedCategoryNameLocaliced;
+//    [SerializeField] private Text currentCategoryLevelsText;
+//    [SerializeField] private LocalizeStringEvent currentCategoryLevelsTextLocalized;
+//    [SerializeField] private LocalizedString categoryNameLocaliced;
+//    [SerializeField] private LocalizedString[] selectedCategoryNameLocaliced;
 
-    [SerializeField] private int currentCategory;
-    [SerializeField] private int currentLevel;
-    [SerializeField] private int levelCreatedIndex = -1000;
+//    [SerializeField] private int currentCategory;
+//    [SerializeField] private int currentLevel;
+//    [SerializeField] private int levelCreatedIndex = -1000;
 
-    [SerializeField] private Color deactivatedCategoryColor;
-    [SerializeField] private Sprite deactivatedImage;
+//    [SerializeField] private Color deactivatedCategoryColor;
+//    [SerializeField] private Sprite deactivatedImage;
 
-    [SerializeField] private LocalizedString nonCreatedLevelsString;
-    [SerializeField] private Sprite nonCreatedLevelsSprite;
+//    [SerializeField] private LocalizedString nonCreatedLevelsString;
+//    [SerializeField] private Sprite nonCreatedLevelsSprite;
 
-    private void Start() {
-        if (!GameManager.Instance.IsGameLoaded()) GameManager.Instance.LoadGame();
+//    private void Start() {
+//        if (!GameManager.Instance.IsGameLoaded()) GameManager.Instance.LoadGame();
 
-        for (int i = 0; i < categories.Length; i++)
-        {
-            //int index = i;
+//        for (int i = 0; i < categories.Length; i++)
+//        {
+//            //int index = i;
 
-            //CategoryCardOld card = Instantiate(categoryCardPrefab, categoriesParent.transform);
-            //card.ConfigureCategory(categories[i]);
-            //card.button.onClick.AddListener(() =>
-            //{
-            //    SelectCategory(index);
-            //});
+//            //CategoryCardOld card = Instantiate(categoryCardPrefab, categoriesParent.transform);
+//            //card.ConfigureCategory(categories[i]);
+//            //card.button.onClick.AddListener(() =>
+//            //{
+//            //    SelectCategory(index);
+//            //});
 
-            //If it's not unlocked it can't be selected
-            //if (!ProgressManager.Instance.IsCategoryUnlocked(index))
-            //{
-            //    card.button.enabled = false;
-            //    card.image.sprite = deactivatedImage;
-            //    card.button.image.color = deactivatedCategoryColor;
-            //}
-        }
-        //currentLevelCreatedPanel.SetActive(false);
+//            //If it's not unlocked it can't be selected
+//            //if (!ProgressManager.Instance.IsCategoryUnlocked(index))
+//            //{
+//            //    card.button.enabled = false;
+//            //    card.image.sprite = deactivatedImage;
+//            //    card.button.image.color = deactivatedCategoryColor;
+//            //}
+//        }
+//        //currentLevelCreatedPanel.SetActive(false);
 
-        HideLevels();
+//        HideLevels();
 
-        SelectCategory(currentCategory);
+//        SelectCategory(currentCategory);
 
-        CreateUserLevelsCards();
-    }
+//        CreateUserLevelsCards();
+//    }
 
-    private void CreateUserLevelsCards()
-    {
-        for (int i = 0; i < levelsCreatedCategory.levels.Count; i++)
-        {
-            int index = i;
-            LevelDataSO levelData = levelsCreatedCategory.levels[i];
-            LevelCardOld levelCard = Instantiate(levelCardPrefab, levelsCreatedParent.transform);
-            levelCard.ConfigureLevel(levelData, levelsCreatedCategory, i + 1);
-            levelCard.DeactivateStars();
-            levelCard.button.onClick.AddListener(() =>
-            {
-                //currentLevelCreatedPanel.SetActive(true);
-                levelCreatedIndex = index;
-                //levelCreatedName.text = levelData.levelName;
+//    private void CreateUserLevelsCards()
+//    {
+//        for (int i = 0; i < levelsCreatedCategory.levels.Count; i++)
+//        {
+//            int index = i;
+//            LevelDataSO levelData = levelsCreatedCategory.levels[i];
+//            LevelCardOld levelCard = Instantiate(levelCardPrefab, levelsCreatedParent.transform);
+//            levelCard.ConfigureLevel(levelData, levelsCreatedCategory, i + 1);
+//            levelCard.DeactivateStars();
+//            levelCard.button.onClick.AddListener(() =>
+//            {
+//                //currentLevelCreatedPanel.SetActive(true);
+//                levelCreatedIndex = index;
+//                //levelCreatedName.text = levelData.levelName;
 
-                localizedLevelCreatedName.StringReference = levelData.levelNameLocalized;
-                localizedLevelCreatedName.StringReference.Arguments = new object[] { index + 1 };
-                localizedLevelCreatedName.RefreshString();
-            });
-        }
-        createLevelButton.gameObject.SetActive(true);
-        createLevelButton.onClick.AddListener(() =>
-        {
-            //levelCreatedName.text = "Crear nivel";
+//                localizedLevelCreatedName.StringReference = levelData.levelNameLocalized;
+//                localizedLevelCreatedName.StringReference.Arguments = new object[] { index + 1 };
+//                localizedLevelCreatedName.RefreshString();
+//            });
+//        }
+//        createLevelButton.gameObject.SetActive(true);
+//        createLevelButton.onClick.AddListener(() =>
+//        {
+//            //levelCreatedName.text = "Crear nivel";
 
-            localizedLevelCreatedName.StringReference = createLevelLocalizeString;
-            localizedLevelCreatedName.RefreshString();
+//            localizedLevelCreatedName.StringReference = createLevelLocalizeString;
+//            localizedLevelCreatedName.RefreshString();
 
-            levelCreatedIndex = -1; // Reserved for creator mode
-        });
-        createLevelButton.transform.SetParent(levelsCreatedParent.transform);
+//            levelCreatedIndex = -1; // Reserved for creator mode
+//        });
+//        createLevelButton.transform.SetParent(levelsCreatedParent.transform);
 
-        createLevelButton.onClick.Invoke();
-    }
+//        createLevelButton.onClick.Invoke();
+//    }
 
-    private void SelectCategory(int index)
-    {
-        if (!ProgressManager.Instance.IsCategoryUnlocked(index)) return;
+//    private void SelectCategory(int index)
+//    {
+//        if (!ProgressManager.Instance.IsCategoryUnlocked(index)) return;
 
-        if (index >= 0 && index < categories.Length)
-        {
-            currentCategory = index;
+//        if (index >= 0 && index < categories.Length)
+//        {
+//            currentCategory = index;
 
-            localizedCategoryName.StringReference = categories[currentCategory].titleLocalized;
-            localizedCategoryName.RefreshString();
+//            localizedCategoryName.StringReference = categories[currentCategory].titleLocalized;
+//            localizedCategoryName.RefreshString();
 
-            localizedCategoryDescription.StringReference = categories[currentCategory].descriptionLocalized;
-            localizedCategoryDescription.RefreshString();
+//            localizedCategoryDescription.StringReference = categories[currentCategory].descriptionLocalized;
+//            localizedCategoryDescription.RefreshString();
 
-            //categoryName.text = categories[currentCategory].name_id;
-            //categoryDescription.text = categories[currentCategory].description;
-        }
-    }
+//            //categoryName.text = categories[currentCategory].name_id;
+//            //categoryDescription.text = categories[currentCategory].description;
+//        }
+//    }
 
-    public void ShowLevels()
-    {
-        if (!ProgressManager.Instance.IsCategoryUnlocked(currentCategory)) return;
+//    public void ShowLevels()
+//    {
+//        if (!ProgressManager.Instance.IsCategoryUnlocked(currentCategory)) return;
 
-        CategoryDataSO category = categories[currentCategory];
-        //currentCategoryLevelsText.text = "Niveles - " + category.name_id;
+//        CategoryDataSO category = categories[currentCategory];
+//        //currentCategoryLevelsText.text = "Niveles - " + category.name_id;
 
-        //selectedCategoryNameLocaliced.Arguments = new object[] { selectedLevelName };
-        currentCategoryLevelsTextLocalized.StringReference = selectedCategoryNameLocaliced[currentCategory];
-        currentCategoryLevelsTextLocalized.RefreshString();
+//        //selectedCategoryNameLocaliced.Arguments = new object[] { selectedLevelName };
+//        currentCategoryLevelsTextLocalized.StringReference = selectedCategoryNameLocaliced[currentCategory];
+//        currentCategoryLevelsTextLocalized.RefreshString();
 
-        categoriesPanel.SetActive(false);
-        levelsPanel.SetActive(true);
+//        categoriesPanel.SetActive(false);
+//        levelsPanel.SetActive(true);
 
-        currentCategoryPanel.SetActive(false);
-        currentLevelPanel.SetActive(true);
+//        currentCategoryPanel.SetActive(false);
+//        currentLevelPanel.SetActive(true);
 
-        while (levelsParent.transform.childCount != 0)
-            DestroyImmediate(levelsParent.transform.GetChild(0).gameObject);
+//        while (levelsParent.transform.childCount != 0)
+//            DestroyImmediate(levelsParent.transform.GetChild(0).gameObject);
 
-        // Created Level Category
-        if (category.name_id == "CreatedLevels") {
+//        // Created Level Category
+//        if (category.name_id == "CreatedLevels") {
 
-            localizedLevelName.StringReference = nonCreatedLevelsString;
-            localizedLevelName.RefreshString();
-            levelPreview.sprite = nonCreatedLevelsSprite;
+//            localizedLevelName.StringReference = nonCreatedLevelsString;
+//            localizedLevelName.RefreshString();
+//            levelPreview.sprite = nonCreatedLevelsSprite;
 
-            categories[currentCategory].levels.Clear();
+//            categories[currentCategory].levels.Clear();
 
-            //Encontramos todos los archivos que haya en las carpetas de creación de niveles
-            //y los almacenamos como TextAssets para su lectura
-            string[] boardFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/Boards/8_CreatedLevels", "*.json");
-            string[] activeFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/ActiveBlocks/8_CreatedLevels", "*.json");
-            string[] initialFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/InitialStates/8_CreatedLevels", "*.txt");
-            TextAsset[] boards = new TextAsset[boardFilePaths.Length];
-            TextAsset[] activeBlocks = new TextAsset[activeFilePaths.Length];
-            TextAsset[] initialBlocks = new TextAsset[initialFilePaths.Length];
-            string[] fileNames = new string[boardFilePaths.Length];
+//            //Encontramos todos los archivos que haya en las carpetas de creación de niveles
+//            //y los almacenamos como TextAssets para su lectura
+//            string[] boardFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/Boards/8_CreatedLevels", "*.json");
+//            string[] activeFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/ActiveBlocks/8_CreatedLevels", "*.json");
+//            string[] initialFilePaths = Directory.GetFiles(Application.dataPath + "/Resources/Levels/InitialStates/8_CreatedLevels", "*.txt");
+//            TextAsset[] boards = new TextAsset[boardFilePaths.Length];
+//            TextAsset[] activeBlocks = new TextAsset[activeFilePaths.Length];
+//            TextAsset[] initialBlocks = new TextAsset[initialFilePaths.Length];
+//            string[] fileNames = new string[boardFilePaths.Length];
 
             
-            playSelectedLevelButton.SetActive(boardFilePaths.Length > 0);
+//            playSelectedLevelButton.SetActive(boardFilePaths.Length > 0);
 
 
-            for (int i = 0; i < boardFilePaths.Length; i++) {
-                boards[i] = new TextAsset(File.ReadAllText(boardFilePaths[i]));
-                activeBlocks[i] = new TextAsset(File.ReadAllText(activeFilePaths[i]));
-                initialBlocks[i] = new TextAsset(File.ReadAllText(initialFilePaths[i]));
-                fileNames[i] = Path.GetFileNameWithoutExtension(boardFilePaths[i]);
-            }
+//            for (int i = 0; i < boardFilePaths.Length; i++) {
+//                boards[i] = new TextAsset(File.ReadAllText(boardFilePaths[i]));
+//                activeBlocks[i] = new TextAsset(File.ReadAllText(activeFilePaths[i]));
+//                initialBlocks[i] = new TextAsset(File.ReadAllText(initialFilePaths[i]));
+//                fileNames[i] = Path.GetFileNameWithoutExtension(boardFilePaths[i]);
+//            }
 
-            for (int i = 0; i < boards.Length; i++) {
-                int index = i;
-                LevelDataSO levelData = new LevelDataSO();
-                levelData.levelName = fileNames[i];
-                levelData.activeBlocks = activeBlocks[i];
-                levelData.customInitialState = initialBlocks[i];
-                levelData.levelBoard = boards[i];
-                levelData.levelPreview = createdLevelPreview;
+//            for (int i = 0; i < boards.Length; i++) {
+//                int index = i;
+//                LevelDataSO levelData = new LevelDataSO();
+//                levelData.levelName = fileNames[i];
+//                levelData.activeBlocks = activeBlocks[i];
+//                levelData.customInitialState = initialBlocks[i];
+//                levelData.levelBoard = boards[i];
+//                levelData.levelPreview = createdLevelPreview;
                     
-                categories[currentCategory].levels.Add(levelData);
+//                categories[currentCategory].levels.Add(levelData);
 
-                LevelCardOld levelCard = Instantiate(createdLevelCardPrefab, levelsParent.transform);
-                levelCard.ConfigureLevel(levelData, category, i + 1);
-                if (ProgressManager.Instance.IsLevelUnlocked(currentCategory, i))
-                {
-                    levelCard.button.onClick.AddListener(() =>
-                    {
-                        currentLevel = index;
+//                LevelCardOld levelCard = Instantiate(createdLevelCardPrefab, levelsParent.transform);
+//                levelCard.ConfigureLevel(levelData, category, i + 1);
+//                if (ProgressManager.Instance.IsLevelUnlocked(currentCategory, i))
+//                {
+//                    levelCard.button.onClick.AddListener(() =>
+//                    {
+//                        currentLevel = index;
 
-                        if (levelData.levelNameLocalized != null)
-                        {
-                            localizedLevelName.StringReference = levelData.levelNameLocalized;
-                            localizedLevelName.RefreshString();
-                        }
+//                        if (levelData.levelNameLocalized != null)
+//                        {
+//                            localizedLevelName.StringReference = levelData.levelNameLocalized;
+//                            localizedLevelName.RefreshString();
+//                        }
 
-                        levelName.text = levelData.levelName;
-                        levelPreview.sprite = levelData.levelPreview;
-                        levelCard.button.Select();
-                    });
-                    levelCard.button.onClick.Invoke();
-                    levelCard.editLevelButton.onClick.AddListener(() =>
-                    {
-                        GameManager.Instance.SetCurrentLevel(currentLevel);
-                        GameManager.Instance.SetCurrentCategory(categories[currentCategory]);
-                        levelCard.button.onClick.Invoke();
-                        EditCreatedLevel();
-                    });
-                }
-                else
-                    levelCard.DeactivateCard();
-            }
-        }
+//                        levelName.text = levelData.levelName;
+//                        levelPreview.sprite = levelData.levelPreview;
+//                        levelCard.button.Select();
+//                    });
+//                    levelCard.button.onClick.Invoke();
+//                    levelCard.editLevelButton.onClick.AddListener(() =>
+//                    {
+//                        GameManager.Instance.SetCurrentLevel(currentLevel);
+//                        GameManager.Instance.SetCurrentCategory(categories[currentCategory]);
+//                        levelCard.button.onClick.Invoke();
+//                        EditCreatedLevel();
+//                    });
+//                }
+//                else
+//                    levelCard.DeactivateCard();
+//            }
+//        }
 
-        // Default Levels Categories
-        else {
-            playSelectedLevelButton.SetActive(true);
-            for (int i = 0; i < category.levels.Count; i++)
-            {
-                int index = i;
-                LevelDataSO levelData = category.levels[i];
-                LevelCardOld levelCard = Instantiate(levelCardPrefab, levelsParent.transform);
-                levelCard.ConfigureLevel(levelData, category, i + 1);
-                if (ProgressManager.Instance.IsLevelUnlocked(currentCategory, i))
-                {
-                    levelCard.button.onClick.AddListener(() =>
-                    {
-                        currentLevel = index;
+//        // Default Levels Categories
+//        else {
+//            playSelectedLevelButton.SetActive(true);
+//            for (int i = 0; i < category.levels.Count; i++)
+//            {
+//                int index = i;
+//                LevelDataSO levelData = category.levels[i];
+//                LevelCardOld levelCard = Instantiate(levelCardPrefab, levelsParent.transform);
+//                levelCard.ConfigureLevel(levelData, category, i + 1);
+//                if (ProgressManager.Instance.IsLevelUnlocked(currentCategory, i))
+//                {
+//                    levelCard.button.onClick.AddListener(() =>
+//                    {
+//                        currentLevel = index;
 
-                        localizedLevelName.StringReference = levelData.levelNameLocalized;
-                        localizedLevelName.RefreshString();
+//                        localizedLevelName.StringReference = levelData.levelNameLocalized;
+//                        localizedLevelName.RefreshString();
 
-                    //levelName.text = levelData.levelName;
-                    levelPreview.sprite = levelData.levelPreview;
-                        levelCard.button.Select();
-                    });
-                    levelCard.button.onClick.Invoke();
-                }
-                else
-                    levelCard.DeactivateCard();
-            }
-        }
+//                    //levelName.text = levelData.levelName;
+//                    levelPreview.sprite = levelData.levelPreview;
+//                        levelCard.button.Select();
+//                    });
+//                    levelCard.button.onClick.Invoke();
+//                }
+//                else
+//                    levelCard.DeactivateCard();
+//            }
+//        }
 
-        TraceScreenAccesed();
+//        TraceScreenAccesed();
 
-    }
+//    }
 
-    public void HideLevels()
-    {
-        if (!levelsPanel.activeSelf) return;
+//    public void HideLevels()
+//    {
+//        if (!levelsPanel.activeSelf) return;
 
-        //currentCategoryLevelsText.text = "Categories";
-        currentCategoryLevelsTextLocalized.StringReference = categoryNameLocaliced;
-        currentCategoryLevelsTextLocalized.RefreshString();
+//        //currentCategoryLevelsText.text = "Categories";
+//        currentCategoryLevelsTextLocalized.StringReference = categoryNameLocaliced;
+//        currentCategoryLevelsTextLocalized.RefreshString();
 
-        categoriesPanel.SetActive(true);
-        levelsPanel.SetActive(false);
+//        categoriesPanel.SetActive(true);
+//        levelsPanel.SetActive(false);
 
-        currentCategoryPanel.SetActive(true);
-        currentLevelPanel.SetActive(false);
+//        currentCategoryPanel.SetActive(true);
+//        currentLevelPanel.SetActive(false);
 
-        while (levelsParent.transform.childCount != 0)
-            DestroyImmediate(levelsParent.transform.GetChild(0).gameObject);
+//        while (levelsParent.transform.childCount != 0)
+//            DestroyImmediate(levelsParent.transform.GetChild(0).gameObject);
 
-        TraceScreenAccesed();
-    }
+//        TraceScreenAccesed();
+//    }
 
-    public void PlaySelectedLevel() {
-        GameManager.Instance.LoadLevel(categories[currentCategory], currentLevel);
-    }
+//    public void PlaySelectedLevel() {
+//        GameManager.Instance.LoadLevel(categories[currentCategory], currentLevel);
+//    }
 
-    public void PlayLevelCreated()
-    {
-        if (levelCreatedIndex == -1)
-        {
-            GameManager.Instance.LoadLevelCreator();
-        }
-        else
-        {
-            GameManager.Instance.LoadLevel(levelsCreatedCategory, levelCreatedIndex);
-        }
-    }
+//    public void PlayLevelCreated()
+//    {
+//        if (levelCreatedIndex == -1)
+//        {
+//            GameManager.Instance.LoadLevelCreator();
+//        }
+//        else
+//        {
+//            GameManager.Instance.LoadLevel(levelsCreatedCategory, levelCreatedIndex);
+//        }
+//    }
 
-    public void EditCreatedLevel()
-    {
-        LevelDataSO thisleveldata = categories[currentCategory].levels[currentLevel];
+//    public void EditCreatedLevel()
+//    {
+//        LevelDataSO thisleveldata = categories[currentCategory].levels[currentLevel];
 
-        BoardState thisBoard = JsonUtility.FromJson<BoardState>(thisleveldata.levelBoard.text);
-        ActiveBlocks thisActive = JsonUtility.FromJson<ActiveBlocks>(thisleveldata.activeBlocks.text);
-        string thisInitial = thisleveldata.customInitialState.text;
+//        BoardState thisBoard = JsonUtility.FromJson<BoardState>(thisleveldata.levelBoard.text);
+//        ActiveBlocks thisActive = JsonUtility.FromJson<ActiveBlocks>(thisleveldata.activeBlocks.text);
+//        string thisInitial = thisleveldata.customInitialState.text;
 
-        GameManager.Instance.SetCommunityLevelBoard(thisBoard);
-        GameManager.Instance.SetCommunityLevelActiveBlocks(thisActive);
-        GameManager.Instance.SetCommunityInitialState(thisInitial);
-        GameManager.Instance.SetPlayingCommunityLevel(true);
+//        GameManager.Instance.SetCommunityLevelBoard(thisBoard);
+//        GameManager.Instance.SetCommunityLevelActiveBlocks(thisActive);
+//        GameManager.Instance.SetCommunityInitialState(thisInitial);
+//        GameManager.Instance.SetPlayingCommunityLevel(true);
 
-        GameManager.Instance.LoadLevelCreator();
-    }
+//        GameManager.Instance.LoadLevelCreator();
+//    }
 
-    public void TraceScreenAccesed()
-    {
-        string nameID = "main";
+//    public void TraceScreenAccesed()
+//    {
+//        string nameID = "main";
 
-        if (levelsPanel.activeSelf && currentCategory >= 0)
-            nameID = categories[currentCategory].name_id;
+//        if (levelsPanel.activeSelf && currentCategory >= 0)
+//            nameID = categories[currentCategory].name_id;
 
-        TrackerAsset.Instance.Accessible.Accessed("categories_" + nameID, AccessibleTracker.Accessible.Screen);
+//        TrackerAsset.Instance.Accessible.Accessed("categories_" + nameID, AccessibleTracker.Accessible.Screen);
 
-    }
-}
+//    }
+//}
