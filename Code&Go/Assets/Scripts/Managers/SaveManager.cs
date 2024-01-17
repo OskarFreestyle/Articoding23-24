@@ -40,6 +40,8 @@ public class SaveManager {
     }
 
     public static void Load() {
+        Debug.Log("Load Save Data");
+
         // Si no existe, se crea
         if (!File.Exists(Filepath)) {
             Debug.LogWarning("Archivo no encontrado");

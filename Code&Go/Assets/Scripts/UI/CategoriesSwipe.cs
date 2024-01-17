@@ -65,7 +65,7 @@ public class CategoriesSwipe : MonoBehaviour {
         for (int i = 0; i < pos.Length; i++) {
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2)) {
                 // Transform the selected one
-                Debug.LogWarning("Current Category Selected " + i);
+                //Debug.LogWarning("Current Category Selected " + i);
                 imageContent.transform.GetChild(i).localScale = Vector2.Lerp(categoriesContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
                 imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
                 categoriesContent.transform.GetChild(i).GetComponent<CategoryCard>().Expand(configureSpeed);

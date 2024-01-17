@@ -83,7 +83,7 @@ public class LevelTestManager : MonoBehaviour
 
     private void Start()
     {
-        if (GameManager.Instance.GetPlayingCommunityLevel())
+        if (GameManager.Instance.IsPlayingCommunityLevel())
         {
             Invoke("ChangeModeFromEditButton", 0.01f);
         }

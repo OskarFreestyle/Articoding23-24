@@ -18,6 +18,14 @@ public class GameSaveData {
 public class ProgressSaveData {
     public LevelsCreatedSaveData levelsCreatedData;
     public CategorySaveData[] categoriesInfo;
+
+    public void DebugLogCategoriesData() {
+        int i = 0;
+        foreach (CategorySaveData categorySaveData in categoriesInfo) {
+            Debug.Log("Category " + i + ": " + categorySaveData.DebugLogLevelsData());
+            i++;
+        }
+    }
 }
 
 [System.Serializable]
@@ -43,6 +51,14 @@ public class CategorySaveData {
             if (levelData != -1) currentNumStars += levelData;
 
         return currentNumStars;
+    }
+
+    public string DebugLogLevelsData() {
+        string line = "";
+        foreach (int level in levelsData) {
+            line += " " + level + " ";
+        }
+        return line;
     }
 }
 

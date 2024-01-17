@@ -73,6 +73,7 @@ public class CategoryCard : MonoBehaviour {
         SetTexts();
         SetIcon();
         SetButton();
+        Configure();
     }
 
     private void SetButton() {
@@ -103,7 +104,7 @@ public class CategoryCard : MonoBehaviour {
         // The created levels category doesn't have stars
         if (category.index == 0) numStarsBGImage.gameObject.SetActive(false);
 
-        //// Set the stars number by default
+        // Set the stars number by default
         //numStarsText.text = "0/" + category.GetTotalStars();
     }
 
@@ -185,9 +186,12 @@ public class CategoryCard : MonoBehaviour {
         DOTween.To(() => numStarsBGImage.GetComponent<RectTransform>().localPosition, x => numStarsBGImage.GetComponent<RectTransform>().localPosition = x, new Vector3(CONTRACT_NUM_STARS_POS_X, CONTRACT_NUM_STARS_POS_Y), adjustSpeed);
     }
 
-    public void Configure(CategorySaveData categoryData) {
+    public void Configure() {
         // The created levels category doesn't need to be configured
         if (category.index == 0) return;
+
+        // Get the current data
+        CategorySaveData categoryData = ProgressManager.Instance.GetCategoryData(category.index);
 
         // Update the number of stars
         numStarsText.text = categoryData.GetCurrentNumStars().ToString() + "/" + category.GetTotalStars().ToString();
@@ -196,6 +200,6 @@ public class CategoryCard : MonoBehaviour {
         lockedIcon.gameObject.SetActive(categoryData.levelsData[0] == -1);
         icon.gameObject.SetActive(categoryData.levelsData[0] != -1);
         buttonBGImage.GetComponent<Button>().interactable = categoryData.levelsData[0] != -1;
-        Debug.Log(category.name + " button state " + (categoryData.levelsData[0] != -1));
+        //Debug.Log(category.name + " button state " + (categoryData.levelsData[0] != -1));
     }
 }

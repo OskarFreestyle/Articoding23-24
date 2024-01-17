@@ -93,7 +93,7 @@ public class LevelManager : MonoBehaviour
             currentLevelIndex = defaultLevelIndex;
         }
 
-        if (!gameManager.GetPlayingCommunityLevel())
+        if (!gameManager.IsPlayingCommunityLevel())
         {
             currentLevel = currentCategory.levels[currentLevelIndex];
             minimosPasos = currentLevel.minimosPasos;
@@ -112,7 +112,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         //Si estamos jugando desde la pestaña de comunidad, inicializamos de otra forma
-        if (GameManager.Instance.GetPlayingCommunityLevel()) InitializeCommunityLevel();
+        if (GameManager.Instance.IsPlayingCommunityLevel()) InitializeCommunityLevel();
         else Initialize();
 
         var dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
@@ -234,7 +234,7 @@ public class LevelManager : MonoBehaviour
     {
         GameManager gMng = GameManager.Instance;
 
-        if (GameManager.Instance.GetPlayingCommunityLevel())
+        if (GameManager.Instance.IsPlayingCommunityLevel())
         {
             LoadMainMenu();
             return;
@@ -377,11 +377,12 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        SaveManager.Save();
+
         string levelName = GameManager.Instance.GetCurrentLevelName().ToLower();
         TrackerAsset.Instance.setVar("steps", boardManager.GetCurrentSteps());
         TrackerAsset.Instance.setVar("level", levelName);
         TrackerAsset.Instance.GameObject.Interacted("level_exit_button");
-
 
         var dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
         string text = UBlockly.Xml.DomToText(dom);

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField] private CategoryDataSO category;
     public int levelIndex;
+
     private bool gameLoaded = false;
     private Dictionary<UBlockly.Block, string> blockIDs;
 
@@ -89,6 +90,7 @@ public class GameManager : MonoBehaviour {
         blockIDs = new Dictionary<UBlockly.Block, string>();
         this.category = category;
         this.levelIndex = levelIndex;
+        Debug.Log("trying to load " + category.index + " - " + levelIndex);
 
         ProgressManager.Instance.LevelStarted(category, levelIndex);
         if (loadSave)
@@ -98,9 +100,6 @@ public class GameManager : MonoBehaviour {
         {
             SceneManager.LoadScene("LevelScene");
             return;
-        }
-        else {
-            Debug.LogWarning("ERROR WTF");
         }
 
         LoadManager.Instance.LoadScene("LevelScene");
@@ -196,7 +195,7 @@ public class GameManager : MonoBehaviour {
     public bool GetIsAdmin() { return isAdmin; }
     public void SetUserName(string name) { userName = name; }
     public string GetUserName() { return userName; }
-    public bool GetPlayingCommunityLevel() { return playingCommunityLevel; }
+    public bool IsPlayingCommunityLevel() { return playingCommunityLevel; }
     public void SetPlayingCommunityLevel(bool aux) { playingCommunityLevel = aux; }
     public void SetCommunityLevelBoard(BoardState state) { communityBoard = state; }
     public BoardState GetCommunityLevelBoard() { return communityBoard; }

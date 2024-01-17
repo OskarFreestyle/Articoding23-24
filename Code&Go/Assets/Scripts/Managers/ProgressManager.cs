@@ -24,6 +24,7 @@ public class ProgressManager : MonoBehaviour {
     private CategorySaveData[] categoriesData;
 
     private CategorySaveData currentCategoryData = null;
+
     private int currentLevel = 0, lastCategoryUnlocked = 0;
 
     private LevelsCreatedSaveData levelsCreated;
@@ -60,6 +61,9 @@ public class ProgressManager : MonoBehaviour {
             categoriesData[i] = data;
         }
 
+        // Unlock the first level
+        categoriesData[1].levelsData[0] = 0;
+
         // Created Levels
         levelsCreated = new LevelsCreatedSaveData();
         levelsCreated.levelsCreated = new string[0];
@@ -81,35 +85,40 @@ public class ProgressManager : MonoBehaviour {
     //---------
     public void LevelCompleted(int starsAchieved)
     {
+        // Set the stars for the current level complete
         if (currentCategoryData.levelsData[currentLevel] == -1)
             currentCategoryData.levelsData[currentLevel] = 0;
 
         int newStarsAchieved = Mathf.Clamp(starsAchieved - currentCategoryData.levelsData[currentLevel], 0, 3);
         currentCategoryData.levelsData[currentLevel] = currentCategoryData.levelsData[currentLevel] + newStarsAchieved;
-        //currentCategoryData.totalStars += (uint)newStarsAchieved;
 
+
+        // Unlock the next level
+        int nextLevelIndex = currentLevel + 1;
         int categoryIndex = Array.IndexOf(categoriesData, currentCategoryData);
+        int nextCatagoryIndex = categoryIndex + 1;
 
-        //if (currentLevel >= currentCategoryData.lastLevelUnlocked)
-        //{
-        //    if (currentLevel + 1 >= currentCategoryData.levelsData.Length && lastCategoryUnlocked == categoryIndex && lastCategoryUnlocked + 1 < categories.Count)
-        //    {
-        //        lastCategoryUnlocked++;
-        //        categoriesData[lastCategoryUnlocked].lastLevelUnlocked = 0;
-        //    }
-        //    currentCategoryData.lastLevelUnlocked = currentLevel + 1;
-        //}
+        // If is in the same category
+        if (nextLevelIndex < categoriesData[categoryIndex].levelsData.Length) {
+            // If is locked
+            if (categoriesData[categoryIndex].levelsData[nextLevelIndex] == -1) categoriesData[categoryIndex].levelsData[nextLevelIndex] = 0;
+        }
+        // If is the next category
+        else {
+            if (categoriesData[nextCatagoryIndex].levelsData[0] == -1) categoriesData[nextCatagoryIndex].levelsData[0] = 0;
+        }
 
+
+
+        // Tracks
         var levelName = GameManager.Instance.GetCurrentLevelName();
         TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, true, starsAchieved);
 
         //var categoryName = categories[categoryIndex].name_id;
-        //if (currentCategoryData.GetLevelsCompleted() < currentCategoryData.levelsData.Length)
-        //{
+        //if (currentCategoryData.GetLevelsCompleted() < currentCategoryData.levelsData.Length) {
         //    TrackerAsset.Instance.Completable.Progressed(categoryName, CompletableTracker.Completable.Completable, (float)currentCategoryData.GetLevelsCompleted() / categories[categoryIndex].levels.Count);
         //}
-        //else
-        //{
+        //else {
         //    TrackerAsset.Instance.Completable.Completed(categoryName, CompletableTracker.Completable.Completable, true, GetCategoryTotalStars(categoryIndex));
         //}
 
@@ -139,16 +148,20 @@ public class ProgressManager : MonoBehaviour {
 
     public void LevelStarted(CategoryDataSO category, int level)
     {
-        //int index = categories.IndexOf(category);
-        //if (index < 0)
-        //    TrackerAsset.Instance.Accessible.Accessed(levelsCreatedCategory.levels[level].levelName);
-        //else {
-        //    LevelStarted(categories.IndexOf(category), level);
-        //}
+        int index = category.index;
+        if (index < 0)
+            TrackerAsset.Instance.Accessible.Accessed(levelsCreatedCategory.levels[level].levelName);
+        else {
+            LevelStarted(category.index, level);
+        }
     }
 
     //Getters
     //----------
+
+    public CategorySaveData GetCategoryData(int index) {
+        return categoriesData[index];
+    }
 
     public bool IsLevelUnlocked(int categoryIndex, int level)
     {
@@ -335,8 +348,14 @@ public class ProgressManager : MonoBehaviour {
     //----------------
     public ProgressSaveData Save() {
         ProgressSaveData data = new ProgressSaveData();
+
+        Debug.Log("Save data"); // TODO quitar
+
         data.categoriesInfo = categoriesData;
         data.levelsCreatedData = levelsCreated;
+
+        data.DebugLogCategoriesData(); // Todo quitar
+        
         return data;
     }
 
@@ -348,15 +367,16 @@ public class ProgressManager : MonoBehaviour {
         LoadLevelsCreated();
         CheckLevelsData();
 
-        UpdateCategoryCards();
+        //UpdateCategoryCards();
 
+        data.DebugLogCategoriesData();
     }
 
-    private void UpdateCategoryCards() {
-        for (int i = 0; i < categoryCards.Length; i++) {
-            categoryCards[i].Configure(categoriesData[i]);
-        }
-    }
+    //private void UpdateCategoryCards() {
+    //    for (int i = 0; i < categoryCards.Length; i++) {
+    //        categoryCards[i].Configure(categoriesData[i]);
+    //    }
+    //}
 
     public float GetGameProgress()
     {
