@@ -104,7 +104,8 @@ public class ProgressManager : MonoBehaviour {
             if (categoriesData[categoryIndex].levelsData[nextLevelIndex] == -1) categoriesData[categoryIndex].levelsData[nextLevelIndex] = 0;
         }
         // If is the next category
-        else {
+        else if (nextCatagoryIndex < categoriesData.Length) {
+            // If is locked
             if (categoriesData[nextCatagoryIndex].levelsData[0] == -1) categoriesData[nextCatagoryIndex].levelsData[0] = 0;
         }
 
