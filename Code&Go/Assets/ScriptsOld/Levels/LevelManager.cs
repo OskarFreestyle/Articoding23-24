@@ -375,9 +375,8 @@ public class LevelManager : MonoBehaviour
         LoadLevel(currentLevel);
     }
 
-    public void LoadMainMenu()
-    {
-        SaveManager.Save();
+    public void LoadMainMenu() {
+        SaveManager.Instance.Save();
 
         string levelName = GameManager.Instance.GetCurrentLevelName().ToLower();
         TrackerAsset.Instance.setVar("steps", boardManager.GetCurrentSteps());

@@ -10,7 +10,12 @@ using uAdventure.Simva;
 /// Manage the loading of the scenes
 /// </summary>
 public class LoadManager : MonoBehaviour {
-    public static LoadManager Instance;
+
+    #region Properties
+    private static LoadManager instance;
+    static public LoadManager Instance {
+        get { return instance; }
+    }
 
     [SerializeField] private bool autoStart;
     public bool AutoStart {
@@ -24,15 +29,17 @@ public class LoadManager : MonoBehaviour {
 
     private List<AsyncOperation> loadOperations = new List<AsyncOperation>();
     private int lastLoadedIndex = -1;
+    #endregion
 
+    #region Methods
     private void Awake() {
-        if (Instance) {
-            Debug.LogWarning("More than 1 Load Manager created");
-            DestroyImmediate(this);
+        if (!instance) {
+            instance = this;
+            DontDestroyOnLoad(this);
         }
         else {
-            Instance = this;
-            DontDestroyOnLoad(this);
+            Debug.LogWarning("More than 1 Load Manager created");
+            DestroyImmediate(this);
         }
     }
 
@@ -119,4 +126,6 @@ public class LoadManager : MonoBehaviour {
         if(!loadingText.gameObject.activeSelf)
             loadingText.gameObject.SetActive(true);
     }
+    #endregion
+
 }

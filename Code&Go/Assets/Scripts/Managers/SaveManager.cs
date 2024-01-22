@@ -4,34 +4,50 @@ using System.IO;
 using uAdventure.Simva;
 using UnityEngine;
 
-public class SaveManager {
-    public static SaveManager Instance;
+/// <summary>
+/// Manage the save and load data
+/// </summary>
+public class SaveManager : MonoBehaviour {
 
-    private static string filename = "gameSave.json";
-    private static string Filepath = "";
-
-    public void Awake() {
-        Debug.Log("Entra al save manager awake");
-        if (Instance == null) Instance = this;
+    #region Properties
+    public static SaveManager instance;
+    static public SaveManager Instance {
+        get { return instance; }
     }
 
-    public static void Init()
-    {
+    [SerializeField] private string filename = "gameSave.json";
+
+    private string Filepath = "";
+    #endregion
+
+    #region Methods
+    public void Awake() {
+        if (!instance) {
+            instance = this;
+            DontDestroyOnLoad(this);
+            Init();
+        }
+        else {
+            Debug.LogWarning("More than 1 Save Manager created");
+            DestroyImmediate(gameObject);
+        }
+    }
+
+    public void Init() {
         string dataPath =
 #if UNITY_EDITOR
         Application.dataPath;
 #else
         Application.persistentDataPath;
 #endif
+
         string token = "";
 
-        try
-        {
+        try {
             token = SimvaExtension.Instance.API.AuthorizationInfo.Username;
             token += "_";
         }
-        catch(System.Exception e)
-        {
+        catch(System.Exception e) {
             Debug.LogError("SimvaExtension: " + e.Message);
             token = "";
         }
@@ -39,29 +55,27 @@ public class SaveManager {
         Filepath = Path.Combine(dataPath, token + filename);
     }
 
-    public static void Load() {
+    public void Load() {
         Debug.Log("Load Save Data");
 
         // Si no existe, se crea
         if (!File.Exists(Filepath)) {
-            Debug.LogWarning("Archivo no encontrado");
+            Debug.LogWarning("File not found, creating a new one");
             FileStream file = new FileStream(Filepath, FileMode.Create);
             file.Close();
             Save();
             return;
         }
         else {
-            Debug.Log("File Found");
+            Debug.Log("File found");
         }
 
         StreamReader reader = new StreamReader(Filepath);
         string readerData = reader.ReadToEnd();
         reader.Close();
-
-        // Leemos
         SaveData data = JsonUtility.FromJson<SaveData>(readerData);
 
-        // Verificamos TODO active hash
+        // Check the hash TODO active
         //if (Hash.ToHash(data.gameData.ToString(), "") == data.hash) {
             ProgressManager.Instance.Load(data.gameData.progressData);
             TutorialManager.Instance.Load(data.gameData.tutorialInfo);
@@ -71,7 +85,7 @@ public class SaveManager {
         Save();
     }
 
-    public static void Save() {
+    public void Save() {
         // Save the game data
         GameSaveData gameData = new GameSaveData();
         gameData.tutorialInfo = TutorialManager.Instance.Save();
@@ -94,4 +108,6 @@ public class SaveManager {
         writer.Write(finalJson);
         writer.Close();
     }
+    #endregion
+
 }

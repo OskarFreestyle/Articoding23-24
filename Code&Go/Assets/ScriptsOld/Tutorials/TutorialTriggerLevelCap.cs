@@ -21,7 +21,7 @@ public class TutorialTriggerLevelCap : MonoBehaviour {
                 tt.enabled = false;
         }
 
-        if (ProgressManager.Instance.IsAllUnlockedModeOn())
+        if (ProgressManager.Instance.AllUnlocked)
             tt.enabled = true;
     }
 }

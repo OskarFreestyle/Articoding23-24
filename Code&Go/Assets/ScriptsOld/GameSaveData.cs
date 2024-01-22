@@ -39,8 +39,10 @@ public class CategorySaveData {
 
     public int GetLevelsCompleted() {
         int levelsCompleted = 0;
+
         foreach (int levelData in levelsData)
             levelsCompleted += levelData >= 0 ? 1 : 0;
+
         return levelsCompleted;
     }
 

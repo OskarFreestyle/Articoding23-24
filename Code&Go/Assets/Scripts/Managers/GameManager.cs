@@ -11,13 +11,13 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class GameManager : MonoBehaviour {
 
-    #region Propierties
+    #region Properties
     private static GameManager instance;
     static public GameManager Instance {
         get { return instance; }
     }
 
-    [SerializeField] private List <CategoryDataSO> categories;
+    [SerializeField] private CategoryDataSO[] categories;
     [SerializeField] private bool tryToLoadSave;
 
     private int currentCategoryIndex;
@@ -57,7 +57,6 @@ public class GameManager : MonoBehaviour {
         if (!instance) {
             instance = this;
             DontDestroyOnLoad(this);
-            SaveManager.Init();
         }
         else {
             Debug.LogWarning("More than 1 Game Manager created");
@@ -83,7 +82,7 @@ public class GameManager : MonoBehaviour {
     /// </summary>
     public void LoadGame() {
         if (tryToLoadSave && !isGameLoaded) {
-            SaveManager.Load();
+            SaveManager.Instance.Load();
             isGameLoaded = true;
         }
     }
@@ -111,7 +110,7 @@ public class GameManager : MonoBehaviour {
         ProgressManager.Instance.LevelStarted(categoryIndex, levelIndex);
 
         // Save the data, because you can start a level after finish another
-        if (tryToLoadSave) SaveManager.Save();
+        if (tryToLoadSave) SaveManager.Instance.Save();
 
         // Load the level scene
         if (LoadManager.Instance == null) {
@@ -160,16 +159,16 @@ public class GameManager : MonoBehaviour {
     /// Save the game when is going to close
     /// </summary>
     public void OnDestroy() {
-        if (Instance && tryToLoadSave)
-            SaveManager.Save();
+        if (Instance && tryToLoadSave && SaveManager.Instance)
+            SaveManager.Instance.Save();
     }
 
     /// <summary>
     /// Save the game when is going to close
     /// </summary>
     public void OnApplicationQuit() {
-        if (tryToLoadSave)
-            SaveManager.Save();
+        if (tryToLoadSave && SaveManager.Instance)
+            SaveManager.Instance.Save();
     }
 
     /// <summary>
@@ -238,4 +237,5 @@ public class GameManager : MonoBehaviour {
         playingCommunityLevel = false;
     }
     #endregion
+
 }
