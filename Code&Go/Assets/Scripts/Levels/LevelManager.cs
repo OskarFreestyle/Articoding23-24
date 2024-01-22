@@ -84,8 +84,8 @@ public class LevelManager : MonoBehaviour
         GameManager gameManager = GameManager.Instance;
 
         if (gameManager != null) {
-            currentCategory = gameManager.GetCurrentCategory();
-            currentLevelIndex = gameManager.GetCurrentLevelIndex();
+            currentCategory = gameManager.GetCategoryByIndex(gameManager.CurrentCategoryIndex);
+            currentLevelIndex = gameManager.CurrentLevelIndex;
         }
         else
         {
@@ -156,7 +156,7 @@ public class LevelManager : MonoBehaviour
             
             endPanel.SetActive(true);
             blackRect.SetActive(true);
-            if (!GameManager.Instance.InCreatedLevel())
+            if (!GameManager.Instance.IsCreatedLevel())
             {
                 TrackerAsset.Instance.setVar("steps", boardManager.GetCurrentSteps());
                 TrackerAsset.Instance.setVar("special_block", starsController.IsSpecialBlockStarActive());

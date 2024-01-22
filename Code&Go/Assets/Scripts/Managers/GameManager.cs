@@ -7,160 +7,187 @@ using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Main manager of the game
+/// Main manager of the game, who creates the SaveManager static class
 /// </summary>
 public class GameManager : MonoBehaviour {
-    public static GameManager Instance;
+
+    #region Propierties
+    private static GameManager instance;
+    static public GameManager Instance {
+        get { return instance; }
+    }
 
     [SerializeField] private List <CategoryDataSO> categories;
-    [SerializeField] private bool loadSave = true;
+    [SerializeField] private bool tryToLoadSave;
 
-    [SerializeField] private CategoryDataSO category;
-    public int levelIndex;
+    private int currentCategoryIndex;
+    public int CurrentCategoryIndex {
+        get { return currentCategoryIndex; }
+    }
 
-    private bool gameLoaded = false;
+    private int currentLevelIndex;
+    public int CurrentLevelIndex {
+        get { return currentCategoryIndex; }
+    }
+
+    private bool isGameLoaded = false;
+    public bool IsGameLoaded {
+        get { return isGameLoaded; }
+    }
+
     private Dictionary<UBlockly.Block, string> blockIDs;
 
     // Variables de conexion
-    bool loggedIn;
-    string token;
-    bool isAdmin = false;
-    string userName = "";
-    bool playingCommunityLevel = false;
+    private bool loggedIn;
+    private string token;
+    private bool isAdmin = false;
+    private string userName = "";
+    private bool playingCommunityLevel = false;
 
     BoardState communityBoard = null;
     ActiveBlocks communityActiveBlocks = null;
     string communityInitialState = null;
+    #endregion
 
+    #region Methods
+    /// <summary>
+    /// Create the instance of the singleton, initialize the save manager and destroy the duplicates
+    /// </summary>
     private void Awake() {
-        if (Instance) {
-            Debug.LogWarning("More than 1 Game Manager created");
-            DestroyImmediate(this);
+        if (!instance) {
+            instance = this;
+            DontDestroyOnLoad(this);
+            SaveManager.Init();
         }
         else {
-            Instance = this;
-            DontDestroyOnLoad(this);
+            Debug.LogWarning("More than 1 Game Manager created");
+            DestroyImmediate(gameObject);
         }
     }
 
+    /// <summary>
+    /// Just load the game data
+    /// </summary>
     private void Start() {
-        SaveManager.Init();
         LoadGame();
 
-        TrackerAsset.Instance.setVar("language", LocalizationSettings.SelectedLocale.Identifier.Code);
-        TrackerAsset.Instance.setVar("resolution", Screen.currentResolution.ToString());
-        TrackerAsset.Instance.setVar("fullscreen", Screen.fullScreen);
-        TrackerAsset.Instance.Completable.Initialized("articoding", CompletableTracker.Completable.Game);
-        TrackerAsset.Instance.Completable.Progressed("articoding", CompletableTracker.Completable.Game, ProgressManager.Instance.GetGameProgress());
+        //TrackerAsset.Instance.setVar("language", LocalizationSettings.SelectedLocale.Identifier.Code);
+        //TrackerAsset.Instance.setVar("resolution", Screen.currentResolution.ToString());
+        //TrackerAsset.Instance.setVar("fullscreen", Screen.fullScreen);
+        //TrackerAsset.Instance.Completable.Initialized("articoding", CompletableTracker.Completable.Game);
+        //TrackerAsset.Instance.Completable.Progressed("articoding", CompletableTracker.Completable.Game, ProgressManager.Instance.GetGameProgress());
     }
 
+    /// <summary>
+    /// Try to load the game
+    /// </summary>
     public void LoadGame() {
-        if (loadSave && !gameLoaded) {
+        if (tryToLoadSave && !isGameLoaded) {
             SaveManager.Load();
-            gameLoaded = true;
+            isGameLoaded = true;
         }
     }
 
-    public bool IsGameLoaded() {
-        return gameLoaded;
-    }
-
-    public CategoryDataSO GetCurrentCategory() {
-        return category;
-    }
-
-    public bool InCreatedLevel() {
-        return category == categories[categories.Count - 1];
-    }
-
-    public int GetCurrentLevelIndex() {
-        return levelIndex;
-    }
-
-    public void SetCurrentLevel(int levelIndex) {
-        this.levelIndex = levelIndex;
-    }
-
-    public void SetCurrentCategory(CategoryDataSO category) {
-        this.category = category;
-    }
-
+    /// <summary>
+    /// Load an offline level
+    /// </summary>
     public void LoadLevel(CategoryDataSO category, int levelIndex) {
-        playingCommunityLevel = false;
+        LoadLevel(category.index, levelIndex);
+    }
+
+    /// <summary>
+    /// Load an offline level
+    /// </summary>
+    public void LoadLevel(int categoryIndex, int levelIndex) {
+        
+        // Set the information of the current level
         blockIDs = new Dictionary<UBlockly.Block, string>();
-        this.category = category;
-        this.levelIndex = levelIndex;
-        Debug.Log("trying to load " + category.index + " - " + levelIndex);
+        playingCommunityLevel = false;
+        currentCategoryIndex = categoryIndex;
+        currentLevelIndex = levelIndex;
 
-        ProgressManager.Instance.LevelStarted(category, levelIndex);
-        if (loadSave)
-            SaveManager.Save();
+        Debug.Log("Loading level: " + categoryIndex + " - " + levelIndex);
 
-        if (LoadManager.Instance == null)
-        {
+        ProgressManager.Instance.LevelStarted(categoryIndex, levelIndex);
+
+        // Save the data, because you can start a level after finish another
+        if (tryToLoadSave) SaveManager.Save();
+
+        // Load the level scene
+        if (LoadManager.Instance == null) {
             SceneManager.LoadScene("LevelScene");
             return;
         }
-
         LoadManager.Instance.LoadScene("LevelScene");
     }
 
-    //Seteamos algunos flags para que sepa el juego que estamos jugando 
-    //desde la pestaña de comunidad
-    public void LoadCommunityLevel()
-    {
-        playingCommunityLevel = true;
-
+    /// <summary>
+    /// Load a community level
+    /// </summary>
+    public void LoadCommunityLevel() {
         blockIDs = new Dictionary<UBlockly.Block, string>();
-        this.category = null;
-        this.levelIndex = -1;
+        playingCommunityLevel = true;
+        currentCategoryIndex = -1;
+        currentLevelIndex = -1;
     }
 
-    public void LoadLevelCreator()
-    {
+    /// <summary>
+    /// Load the level creator
+    /// </summary>
+    public void LoadLevelCreator() {
+        Debug.Log("Loading level creator");
         blockIDs = new Dictionary<UBlockly.Block, string>();
-        if (LoadManager.Instance == null)
-        {
+
+        if (LoadManager.Instance == null) {
             SceneManager.LoadScene("BoardCreation");
             return;
         }
         LoadManager.Instance.LoadScene("BoardCreation");
     }
 
-    public void LoadScene(string name)
-    {
-        if (LoadManager.Instance == null)
-        {
+    /// <summary>
+    /// Load 
+    /// </summary>
+    public void LoadScene(string name) {
+        if (LoadManager.Instance == null) {
             SceneManager.LoadScene(name);
             return;
         }
         LoadManager.Instance.LoadScene(name);
     }
 
-    public void OnDestroy()
-    {
-        if (Instance == this && loadSave)
+    /// <summary>
+    /// Save the game when is going to close
+    /// </summary>
+    public void OnDestroy() {
+        if (Instance && tryToLoadSave)
             SaveManager.Save();
     }
 
-    public void OnApplicationQuit()
-    {
-        if (loadSave)
+    /// <summary>
+    /// Save the game when is going to close
+    /// </summary>
+    public void OnApplicationQuit() {
+        if (tryToLoadSave)
             SaveManager.Save();
     }
 
-    public string GetCurrentLevelName()
-    {
-        if (this.levelIndex == -1)
-            return "editor_level";
+    /// <summary>
+    /// Get the current level name
+    /// </summary>
+    public string GetCurrentLevelName() {
+        if (currentLevelIndex == -1) return "Editor level";
+        else return categories[CurrentCategoryIndex].levels[CurrentLevelIndex].levelName;
+    }
+    #endregion
 
-        CategoryDataSO category = GetCurrentCategory();
-        int levelIndex = GetCurrentLevelIndex();
+    #region Getters And Setters
+    public CategoryDataSO GetCategoryByIndex(int index) {
+        return categories[index];
+    }
 
-        string levelName;
-        levelName = category.levels[levelIndex].levelName;
-
-        return levelName;
+    public bool IsCreatedLevel() {
+        return currentCategoryIndex == -1;
     }
 
     public List<CategoryDataSO> GetCategories()
@@ -210,4 +237,5 @@ public class GameManager : MonoBehaviour {
         communityBoard = null;
         playingCommunityLevel = false;
     }
+    #endregion
 }

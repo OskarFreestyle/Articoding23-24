@@ -109,8 +109,6 @@ public class ProgressManager : MonoBehaviour {
             if (categoriesData[nextCatagoryIndex].levelsData[0] == -1) categoriesData[nextCatagoryIndex].levelsData[0] = 0;
         }
 
-
-
         // Tracks
         var levelName = GameManager.Instance.GetCurrentLevelName();
         TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, true, starsAchieved);
@@ -258,7 +256,7 @@ public class ProgressManager : MonoBehaviour {
 
         int index = levelsCreatedCategory.levels.Count + 1;
         string path = Application.dataPath;
-        string directory = Path.Combine(path, "Resources/Levels/Boards/8_CreatedLevels/");
+        string directory = Path.Combine(path, "Resources/Levels/Boards/0_CreatedLevels/");
 
         CreateDirectories();
 
@@ -275,7 +273,7 @@ public class ProgressManager : MonoBehaviour {
 
         if (!customInitialState.Equals("NaN"))
         {
-            string directoryInitial = Path.Combine(path, "Resources/Levels/InitialStates/8_CreatedLevels/");
+            string directoryInitial = Path.Combine(path, "Resources/Levels/InitialStates/0_CreatedLevels/");
             string filePathRestrinction = directoryInitial + levelName + ".txt";
             //Creamos el archivo contenedor del estado inicial
             FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
@@ -287,7 +285,7 @@ public class ProgressManager : MonoBehaviour {
 
         if (!customActiveBlocks.Equals("NaN")) { 
 
-            string directoryRestrinction = Path.Combine(path, "Resources/Levels/ActiveBlocks/8_CreatedLevels/");
+            string directoryRestrinction = Path.Combine(path, "Resources/Levels/ActiveBlocks/0_CreatedLevels/");
             string filePathRestrinction = directoryRestrinction + levelName + ".json";
             //Creamos el archivo contenedor de las restricciones
             FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
