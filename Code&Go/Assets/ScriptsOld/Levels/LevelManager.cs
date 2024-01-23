@@ -83,12 +83,8 @@ public class LevelManager : MonoBehaviour {
         GameManager gameManager = GameManager.Instance;
 
         if (gameManager != null) {
-            Debug.Log(gameManager.CurrentCategoryIndex + " - " + gameManager.CurrentLevelIndex);
-
             currentCategory = gameManager.GetCategoryByIndex(gameManager.CurrentCategoryIndex);
             currentLevelIndex = gameManager.CurrentLevelIndex;
-
-            Debug.Log("aft: " + currentCategory + " - " + currentLevelIndex);
         }
         else
         {
@@ -99,9 +95,6 @@ public class LevelManager : MonoBehaviour {
         if (!gameManager.IsPlayingCommunityLevel())
         {
             currentLevel = currentCategory.levels[currentLevelIndex];
-
-            Debug.Log("Level loaded: " + currentLevel.levelName);
-
             minimosPasos = currentLevel.minimosPasos;
         }
         //endTextLocalized.text = currentLevel.endText;

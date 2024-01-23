@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: allUnlocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: categories.Array.size
@@ -7492,7 +7492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db54c8c9c63872f4c8fbb28f998b2005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: data1.json
+  filename: gameSave.json
 --- !u!4 &572042591
 Transform:
   m_ObjectHideFlags: 0

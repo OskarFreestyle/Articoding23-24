@@ -101,16 +101,10 @@ public class GameManager : MonoBehaviour {
         // Set the information of the current level
         blockIDs = new Dictionary<UBlockly.Block, string>();
         playingCommunityLevel = false;
-        Debug.Log("Loading levelll: " + categoryIndex + " - " + levelIndex);
-
         currentCategoryIndex = categoryIndex;
         currentLevelIndex = levelIndex;
 
-        Debug.Log("Loading level: " + currentCategoryIndex + " - " + currentLevelIndex);
-
         ProgressManager.Instance.LevelStarted(categories[currentCategoryIndex], currentLevelIndex);
-
-        Debug.Log("Loading level: " + currentCategoryIndex + " - " + currentLevelIndex);
 
         // Save the data, because you can start a level after finish another
         if (tryToLoadSave) SaveManager.Instance.Save();
@@ -121,8 +115,6 @@ public class GameManager : MonoBehaviour {
             return;
         }
         LoadManager.Instance.LoadScene("LevelScene");
-
-        Debug.Log("Loading level after all: " + categoryIndex + " - " + levelIndex);
     }
 
     /// <summary>

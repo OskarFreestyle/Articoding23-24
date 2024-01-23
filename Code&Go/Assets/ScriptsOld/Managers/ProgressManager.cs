@@ -162,50 +162,44 @@ public class ProgressManager : MonoBehaviour {
         return categoriesData[index];
     }
 
-    public bool IsLevelUnlocked(int categoryIndex, int level)
-    {
-        //if (categoryIndex == 7) return true;
-        //else return allUnlocked || (categoryIndex < categoriesData.Length && level < categoriesData[categoryIndex].levelsData.Length &&
-        //    level <= categoriesData[categoryIndex].lastLevelUnlocked);
-
-        // Quitar
-        return true;
-    }
-
-    public bool IsCategoryUnlocked(int categoryIndex)
-    {
-        if (categoryIndex == 7) return true;
-        else return allUnlocked || (categoryIndex <= lastCategoryUnlocked);
-    }
-
-    public int GetLvlsCompleted() {
-        int levels = 0;
-
-        //foreach (CategoryDataSO c in categories)
-        //{
-        //    int tmp = GetCategoryCurrentProgress(c);
-        //    levels += Mathf.Max(0, tmp);
-        //}
-
-        return levels;
-    }
-
-    public int GetLvlsPerfects() {
-        int levels = 0;
-
-        foreach(CategorySaveData categoryData in categoriesData)
-        {
-            for (int i = 0; i < categoryData.levelsData.Length; i++)
-            {
-                //if (categoryData.lastLevelUnlocked <= i)
-                //    break;
-
-                if (categoryData.levelsData[i] == 3)
-                    levels++;
-            }
+    public int GetTotalStars() {
+        int totalStars = 0;
+        foreach (CategorySaveData categoryData in categoriesData) {
+            totalStars += categoryData.GetCurrentNumStars();
         }
+        return totalStars;
+    }
 
-        return levels;
+    public int GetTotalLevels() {
+        int totalLevels = 0;
+        foreach (CategorySaveData categoryData in categoriesData) {
+            totalLevels += categoryData.GetTotalLevels();
+        }
+        return totalLevels;
+    }
+
+    public int GetTotalLevelsComplete() {
+        int totalLevelsComplete = 0;
+        foreach (CategorySaveData categoryData in categoriesData) {
+            totalLevelsComplete += categoryData.GetLevelsCompleted();
+        }
+        return totalLevelsComplete;
+    }
+
+    public int GetTotalPerfectLevelsComplete() {
+        int totalPerfectLevelsComplete = 0;
+        foreach (CategorySaveData categoryData in categoriesData) {
+            totalPerfectLevelsComplete += categoryData.GetPerfectLevelsCompleted();
+        }
+        return totalPerfectLevelsComplete;
+    }
+
+    public int GetTotalFinishedCategories() {
+        int totalFinishedCategories = 0;
+        foreach (CategorySaveData categoryData in categoriesData) {
+            if (categoryData.IsCategoryFinished()) totalFinishedCategories++;
+        }
+        return totalFinishedCategories;
     }
 
     public int GetLevelStars(int categoryIndex, int level)
@@ -218,35 +212,10 @@ public class ProgressManager : MonoBehaviour {
         return GetLevelStars(category.index, level);
     }
 
-    public int GetLastCategory() {
-        return lastCategoryUnlocked;
-    }
-
     public int GetCategoryTotalStars(int categoryIndex) {
         if (categoryIndex >= categoriesData.Length || categoryIndex < 0) return 0;
         return categoriesData[categoryIndex].GetCurrentNumStars();
     }
-
-    //public int GetCategoryTotalStars(CategoryDataSO category)
-    //{
-    //    return GetCategoryTotalStars(categoryCards[IndexOf(category));
-    //}
-
-    //public int GetCategoryCurrentProgress(CategoryDataSO category)
-    //{
-    //    int index = categories.IndexOf(category);
-    //    if (index >= categoriesData.Length || index < 0) return 0;
-
-    //    return categoriesData[index].GetLevelsCompleted();
-    //}
-
-    //public int GetCategoryTotalProgress(CategoryDataSO category)
-    //{
-    //    int index = categories.IndexOf(category);
-    //    if (index >= categoriesData.Length || index < 0) return 0;
-
-    //    return categoriesData[index].levelsData.Length;
-    //}
 
     public void UserCreatedLevel(string board, string customActiveBlocks, string customInitialState, string levelName, int levelCategory) {
         //si el nivel ya existe no se guarda

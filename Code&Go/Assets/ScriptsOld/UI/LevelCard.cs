@@ -28,7 +28,6 @@ public class LevelCard : MonoBehaviour {
         SetText();
         SetColors();
         SetIcon();
-        Debug.Log("This is level card for " + levelData.index);
     }
 
     public void SetLevelStars(int levelStars) {
@@ -66,7 +65,6 @@ public class LevelCard : MonoBehaviour {
     }
 
     public void PlayLevel() {
-        Debug.Log("levelData.index: " + levelData.index);
         GameManager.Instance.LoadLevel(levelData.categoryData, levelData.index);
     }
 }

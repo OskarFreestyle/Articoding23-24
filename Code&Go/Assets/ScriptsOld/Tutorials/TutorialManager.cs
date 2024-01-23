@@ -55,7 +55,7 @@ public class TutorialManager : MonoBehaviour {
         saved = new HashSet<string>();
     }
 
-    private bool showInfo = false;
+    private bool showInfo = true;
     private void Start() {
         //Horrible
         if (needToBeDestroyed) {
