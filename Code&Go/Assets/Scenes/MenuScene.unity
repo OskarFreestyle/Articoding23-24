@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: allUnlocked
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4288857746588494249, guid: ba844446174cf8a42b99cbb88471e536, type: 3}
       propertyPath: categories.Array.size
@@ -20627,7 +20627,7 @@ MonoBehaviour:
   blackPanel: {fileID: 1512015273}
   nameMenu: {fileID: 1766057907}
   inputField: {fileID: 1120660957}
-  userName: {fileID: 0}
+  userName: {fileID: 1724867530}
 --- !u!4 &1822258253
 Transform:
   m_ObjectHideFlags: 0
@@ -20654,10 +20654,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5361068ca8a214fb8aa3e9fe1a48b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starsText: {fileID: 0}
-  levelsText: {fileID: 0}
-  perfectText: {fileID: 0}
-  categoryText: {fileID: 0}
+  starsText: {fileID: 1712326987}
+  levelsText: {fileID: 2012093802}
+  perfectText: {fileID: 1017759507}
+  categoryText: {fileID: 1547661673}
 --- !u!1 &1829782554
 GameObject:
   m_ObjectHideFlags: 0
@@ -23272,38 +23272,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080767344}
   m_CullTransparentMesh: 1
---- !u!114 &2093289462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109850004140801729}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe02e80f7fd665441bf8e2b0eddbcd35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 50
-  info: {fileID: 0}
-  highlightObject: 1
-  destroyOnShowed: 1
-  isSaveCheckpoint: 0
-  OnShowed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Tab, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2093289465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24350,7 +24318,6 @@ GameObject:
   - component: {fileID: 3423825501194277360}
   - component: {fileID: 1118825333477346965}
   - component: {fileID: 5386787696819116677}
-  - component: {fileID: 2093289462}
   - component: {fileID: 2093289467}
   - component: {fileID: 2093289468}
   - component: {fileID: 2093289478}

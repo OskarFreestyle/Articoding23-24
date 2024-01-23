@@ -55,6 +55,7 @@ public class TutorialManager : MonoBehaviour {
         saved = new HashSet<string>();
     }
 
+    private bool showInfo = false;
     private void Start() {
         //Horrible
         if (needToBeDestroyed) {
@@ -62,19 +63,17 @@ public class TutorialManager : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-        Debug.Log("TutorialManager Manager start");
 
         TutorialTrigger[] aux = FindObjectsOfType<TutorialTrigger>();
-        Debug.Log("Found " + aux.Length + " tutorial triggers");
+        if(showInfo) Debug.Log("Found " + aux.Length + " tutorial triggers");
 
         for (int i = 0; i < aux.Length; i++) {
-            Debug.Log("Try " + i + ", " + aux[i].name + aux[i].GetInstanceID());
+            if (showInfo) Debug.Log("Try " + i + ", " + aux[i].name + aux[i].GetInstanceID());
             AddTutorialTrigger(aux[i], true);
-            Debug.Log("Trigger " + i + " added, " + aux[i].gameObject + aux[i].gameObject.GetComponentInParent<Transform>().name);
+            if (showInfo) Debug.Log("Trigger " + i + " added, " + aux[i].gameObject + aux[i].gameObject.GetComponentInParent<Transform>().name);
         }
-
         conditionTriggers.Sort();
-        Debug.Log("Sorted");
+        if (showInfo) Debug.Log("Sorted");
 
     }
 

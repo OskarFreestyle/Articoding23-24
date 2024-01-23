@@ -18,10 +18,8 @@ using System.Collections;
 using Newtonsoft.Json;
 using UnityEngine.SceneManagement;
 
-namespace uAdventure.Simva
-{
-    public class SimvaExtension : MonoBehaviour
-    {
+namespace uAdventure.Simva {
+    public class SimvaExtension : MonoBehaviour {
         private static SimvaExtension instance;
 
         public delegate void LoadingDelegate(bool loading);
@@ -41,28 +39,23 @@ namespace uAdventure.Simva
         private bool allowedToQuit;
         private bool gameplay;
 
-        protected void Awake()
-        {
+        protected void Awake() {
             instance = this;
             Application.wantsToQuit += Application_wantsToQuit;
         }
 
-        private bool Application_wantsToQuit()
-        {
-            if (!allowedToQuit && IsActive)
-            {
+        private bool Application_wantsToQuit() {
+            if (!allowedToQuit && IsActive) {
                 StartCoroutine(QuitRoutine());
             }
             return allowedToQuit || !IsActive;
         }
 
-        private void Update()
-        {
+        private void Update() {
             CheckTrackerFlush();
         }
 
-        public static SimvaExtension Instance
-        {
+        public static SimvaExtension Instance {
             get
             {
                 return instance;
@@ -645,44 +638,37 @@ namespace uAdventure.Simva
         private float nextFlush = 0;
         private bool flushRequested = true;
 
-        public IEnumerator StartTracker(TrackerConfig config, string backupFilename, IBridge bridge = null)
-        {
+        public IEnumerator StartTracker(TrackerConfig config, string backupFilename, IBridge bridge = null) {
             trackerConfig = config;
             string domain = "";
             int port = 80;
             bool secure = false;
 
-            try
-            {
-                if (config.getHost() != "")
-                {
+            try {
+                if (config.getHost() != "") {
                     string[] splitted = config.getHost().Split('/');
 
-                    if (splitted.Length > 1)
-                    {
+                    if (splitted.Length > 1) {
                         string[] host_splitted = splitted[2].Split(':');
-                        if (host_splitted.Length > 0)
-                        {
+                        if (host_splitted.Length > 0) {
                             domain = host_splitted[0];
                             port = (host_splitted.Length > 1) ? int.Parse(host_splitted[1]) : (splitted[0] == "https:" ? 443 : 80);
                             secure = splitted[0] == "https:";
                         }
                     }
                 }
-                else
-                {
+                else {
                     config.setHost("localhost");
                 }
             }
-            catch (System.Exception e)
-            {
+            catch (System.Exception e) {
                 Debug.LogError("Tracker error: Host bad format");
                 Debug.LogError(e.Message);
             }
 
             TrackerAsset.TraceFormats format;
-            switch (config.getTraceFormat())
-            {
+
+            switch (config.getTraceFormat()) {
                 case TrackerConfig.TraceFormat.XAPI:
                     format = TrackerAsset.TraceFormats.xapi;
                     break;
@@ -692,8 +678,7 @@ namespace uAdventure.Simva
             }
 
             TrackerAsset.StorageTypes storage;
-            switch (config.getStorageType())
-            {
+            switch (config.getStorageType()) {
                 case TrackerConfig.StorageType.NET:
                     storage = TrackerAsset.StorageTypes.net;
                     break;
@@ -702,8 +687,7 @@ namespace uAdventure.Simva
                     break;
             }
 
-            TrackerAssetSettings tracker_settings = new TrackerAssetSettings()
-            {
+            TrackerAssetSettings tracker_settings = new TrackerAssetSettings() {
                 Host = domain,
                 TrackingCode = config.getTrackingCode(),
                 BasePath = trackerConfig.getBasePath() ?? "/api",
@@ -718,8 +702,7 @@ namespace uAdventure.Simva
                 UseBearerOnTrackEndpoint = trackerConfig.getUseBearerOnTrackEndpoint()
             };
 
-            if (!string.IsNullOrEmpty(backupFilename))
-            {
+            if (!string.IsNullOrEmpty(backupFilename)) {
                 tracker_settings.BackupFile = backupFilename;
             }
 

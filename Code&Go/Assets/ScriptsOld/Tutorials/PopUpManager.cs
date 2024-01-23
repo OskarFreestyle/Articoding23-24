@@ -34,12 +34,10 @@ public class PopUpManager : MonoBehaviour {
     }
 
     private void Init() {
-        Debug.Log("PopUp Manager Init");
         imageMaterial = new Material(highlightShader);
         highlightImage.material = imageMaterial;
         mainContent.SetActive(false);
         if (TutorialManager.Instance.TutorialsON) bodyRect.gameObject.SetActive(true);
-        Debug.Log("PopUp Manager Init Good");
     }
 
     public void Show(PopUpData data) {

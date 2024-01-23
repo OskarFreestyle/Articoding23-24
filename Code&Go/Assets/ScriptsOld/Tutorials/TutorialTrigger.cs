@@ -75,7 +75,6 @@ public class TutorialTrigger : MonoBehaviour, IComparable<TutorialTrigger> {
     }
 
     public string GetHash() {
-        Debug.Log(transform.name);
         return Hash.ToHash(info.title + info.content, "TutorialTrigger");
     }
 
