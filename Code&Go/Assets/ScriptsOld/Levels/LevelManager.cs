@@ -109,8 +109,7 @@ public class LevelManager : MonoBehaviour
 #endif
     }
 
-    private void Start()
-    {
+    private void Start() {
         //Si estamos jugando desde la pestaña de comunidad, inicializamos de otra forma
         if (GameManager.Instance.IsPlayingCommunityLevel()) InitializeCommunityLevel();
         else Initialize();
@@ -122,8 +121,7 @@ public class LevelManager : MonoBehaviour
         TrackerAsset.Instance.setVar("code", "\r\n" + text);
         TrackerAsset.Instance.Completable.Initialized(GameManager.Instance.GetCurrentLevelName().ToLower(), CompletableTracker.Completable.Level);
 
-        if (currentLevel != null)
-        {
+        if (currentLevel != null) {
             levelName.text = currentLevel.levelName;
             levelNameLocalized.StringReference = currentLevel.levelNameLocalized;
             levelNameLocalized.RefreshString();
@@ -156,8 +154,8 @@ public class LevelManager : MonoBehaviour
             
             endPanel.SetActive(true);
             blackRect.SetActive(true);
-            if (!GameManager.Instance.IsCreatedLevel())
-            {
+
+            if (!GameManager.Instance.IsCreatedLevel()) {
                 TrackerAsset.Instance.setVar("steps", boardManager.GetCurrentSteps());
                 TrackerAsset.Instance.setVar("special_block", starsController.IsSpecialBlockStarActive());
                 TrackerAsset.Instance.setVar("minimum_steps", starsController.IsMinimumStepsStarActive());
@@ -181,8 +179,7 @@ public class LevelManager : MonoBehaviour
 #endif
     }
 
-    private void Initialize()
-    {
+    private void Initialize() {
 
         if (currentLevel == null) {
             Debug.LogError("Cannot initialize Level. CurrentLevel is null");
@@ -217,8 +214,7 @@ public class LevelManager : MonoBehaviour
         BlocklyUI.WorkspaceView.InitIDs();
     }
 
-    public void LoadLevel(CategoryDataSO category, int levelIndex)
-    {
+    public void LoadLevel(CategoryDataSO category, int levelIndex) {
         currentCategory = category;
         currentLevelIndex = levelIndex;
         LoadLevel(category.levels[levelIndex]);
@@ -234,14 +230,13 @@ public class LevelManager : MonoBehaviour
     {
         GameManager gMng = GameManager.Instance;
 
-        if (GameManager.Instance.IsPlayingCommunityLevel())
-        {
+        if (GameManager.Instance.IsPlayingCommunityLevel()) {
             LoadMainMenu();
             return;
         }
 
         int levelSize = currentCategory.levels.Count;
-        List<CategoryDataSO> categories = gMng.GetCategories();
+        CategoryDataSO[] categories = gMng.GetCategories();
 
         // Si habia una estrella de antes, la quitamos
         SetSpecialBlockStarActive(false);
@@ -252,8 +247,8 @@ public class LevelManager : MonoBehaviour
         }
         else //Intenta pasar a la categoria siguiente
         {
-            int currentCategoryIndex = categories.IndexOf(currentCategory);
-            if (++currentCategoryIndex < categories.Count - 1)
+            int currentCategoryIndex = currentCategory.index;
+            if (++currentCategoryIndex < categories.Length - 1)
             {
                 currentCategory = categories[currentCategoryIndex];
                 currentLevelIndex = 0;

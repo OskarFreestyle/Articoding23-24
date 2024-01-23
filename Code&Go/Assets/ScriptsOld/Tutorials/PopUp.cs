@@ -5,8 +5,7 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 
 // Class that controls inner functionality
-public class PopUp : MonoBehaviour
-{
+public class PopUp : MonoBehaviour {
     [SerializeField] private RectTransform contentRect;
     [SerializeField] private RectTransform panelRect;
     [SerializeField] private GameObject titleContent;
@@ -24,16 +23,14 @@ public class PopUp : MonoBehaviour
     [SerializeField] private bool lerpX = false;
     [SerializeField] private bool lerpY = true;
 
-    private void Awake()
-    {
+    private void Awake() {
         if (!Application.isPlaying) return;
         gameObject.SetActive(false);
         panelRect.anchoredPosition = new Vector2(contentRect.rect.width / 2.0f, contentRect.rect.height / 2.0f);
     }
 
     // Warning: this method empties button listeners
-    public void Show(PopUpData data)
-    {
+    public void Show(PopUpData data) {
         data.localizedTitle.RefreshString();
         data.localizedContent.RefreshString();
 
@@ -63,13 +60,11 @@ public class PopUp : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void Hide()
-    {
+    public void Hide() {
         gameObject.SetActive(false);
     }
 
-    public void SetTargetPositionAndOffset(Vector2 position, Vector2 offset)
-    {
+    public void SetTargetPositionAndOffset(Vector2 position, Vector2 offset) {
         if (position == null) return;
 
         float width = contentRect.rect.width;
@@ -117,13 +112,11 @@ public class PopUp : MonoBehaviour
         panelRect.anchoredPosition = position;
     }
 
-    public void SetTargetPosition(float x, float y)
-    {
+    public void SetTargetPosition(float x, float y) {
         SetTargetPositionAndOffset(new Vector2(x, y), Vector2.zero);
     }
 
-    public void CenterPosition()
-    {
+    public void CenterPosition() {
         Vector2 position = new Vector2(contentRect.rect.width / 2.0f, contentRect.rect.height / 2.0f);
         panelRect.pivot = new Vector2(0.5f, 0.5f);
         /*
@@ -137,13 +130,11 @@ public class PopUp : MonoBehaviour
         panelRect.anchoredPosition = position;
     }
 
-    public void AddListener(UnityAction action)
-    {
+    public void AddListener(UnityAction action) {
         nextButton.onClick.AddListener(action);
     }
 
-    private void UpdateCapLimit()
-    {
+    private void UpdateCapLimit() {
         bool capPassed = contentText.StringReference.ToString().Length >= contentCharacterCap || titleText.StringReference.ToString().Length >= titleCharacterCap;
         capLayoutElement.enabled = capPassed;
     }

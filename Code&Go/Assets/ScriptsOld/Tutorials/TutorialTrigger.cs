@@ -3,8 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TutorialTrigger : MonoBehaviour, IComparable<TutorialTrigger>
-{
+public class TutorialTrigger : MonoBehaviour, IComparable<TutorialTrigger> {
     public int priority;
     public PopUpData info;
     public Func<bool> condition;
@@ -21,23 +20,19 @@ public class TutorialTrigger : MonoBehaviour, IComparable<TutorialTrigger>
     private bool waitColliderSync = false;
     private bool waitCanvasSync = false;
 
-    private void Awake()
-    {
+    private void Awake() {
         if ((mRectTransform = GetComponent<RectTransform>()) != null) { waitCanvasSync = true; return; }
         if ((mRenderer = GetComponent<Renderer>()) != null) return;
         if ((mCollider = GetComponent<Collider>()) != null) { waitColliderSync = true; return; }
     }
 
-    public void Start()
-    {
-        if(waitColliderSync)
-        {
+    public void Start() {
+        if(waitColliderSync) {
             StartCoroutine(AsyncColliderStart());
             return;
         }
 
-        if (waitCanvasSync)
-        {
+        if (waitCanvasSync) {
             StartCoroutine(AsyncCanvasStart());
             return;
         }
@@ -46,32 +41,28 @@ public class TutorialTrigger : MonoBehaviour, IComparable<TutorialTrigger>
             TutorialManager.Instance.AddTutorialTrigger(this, true);
     }
 
-    public IEnumerator AsyncColliderStart()
-    {
+    public IEnumerator AsyncColliderStart() {
         yield return new WaitForFixedUpdate();
 
         if (TutorialManager.Instance != null)
             TutorialManager.Instance.AddTutorialTrigger(this, true);
     }
 
-    public IEnumerator AsyncCanvasStart()
-    {
+    public IEnumerator AsyncCanvasStart() {
         yield return new WaitForEndOfFrame();
 
         if (TutorialManager.Instance != null)
             TutorialManager.Instance.AddTutorialTrigger(this, true);
     }
 
-    public Rect GetRect()
-    {
+    public Rect GetRect() {
         if (mRectTransform != null) return RectUtils.RectTransformToScreenSpace(mRectTransform);
         if (mRenderer != null) return RectUtils.RendererToScreenSpace(mRenderer);
         if (mCollider != null) return RectUtils.ColliderToScreenSpace(mCollider);
         return new Rect(Screen.width / 2.0f, Screen.height / 2.0f, 0.0f, 0.0f); ;
     }
 
-    public int CompareTo(TutorialTrigger other)
-    {
+    public int CompareTo(TutorialTrigger other) {
         if (other.condition != null && condition != null)
         {
             bool mCondition = condition.Invoke();
@@ -83,14 +74,15 @@ public class TutorialTrigger : MonoBehaviour, IComparable<TutorialTrigger>
         return priority - other.priority;
     }
 
-    public string GetHash()
-    {
+    public string GetHash() {
+        Debug.Log(transform.name);
         return Hash.ToHash(info.title + info.content, "TutorialTrigger");
     }
 
-    // Returns true if hash is the same as GetHash()
-    public bool CompareHash(string hash)
-    {
+    /// <summary>
+    /// Returns true if hash is the same as GetHash()
+    /// </summary>
+    public bool CompareHash(string hash) {
         return hash == GetHash();
     }
 }

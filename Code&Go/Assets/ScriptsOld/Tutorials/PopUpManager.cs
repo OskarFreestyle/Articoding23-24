@@ -4,9 +4,11 @@ using UnityEngine.UI;
 using UnityEngine.Localization;
 using AssetPackage;
 
-public class PopUpManager : MonoBehaviour
-{
-    public static PopUpManager Instance;
+public class PopUpManager : MonoBehaviour {
+    private static PopUpManager instance;
+    public static PopUpManager Instance {
+        get { return instance; }
+    }
 
     [SerializeField] private RectTransform bodyRect;
     [SerializeField] private GraphicRaycaster graphicRaycaster;
@@ -18,23 +20,29 @@ public class PopUpManager : MonoBehaviour
     [SerializeField] [Min(0.0f)] private float highlightPadding;
     private Material imageMaterial;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
+    private void Awake() {
+        if (!instance) {
+            instance = this;
             DontDestroyOnLoad(gameObject);
-            Instance = this;
-            imageMaterial = new Material(highlightShader);
-            highlightImage.material = imageMaterial;
-            mainContent.SetActive(false);
+            Init();
             return;
         }
-        Destroy(gameObject);
+        else {
+            Debug.LogWarning("More than 1 Pop Up Manager created");
+            DestroyImmediate(gameObject);
+        }
     }
 
-    public void Show(PopUpData data)
-    {
+    private void Init() {
+        Debug.Log("PopUp Manager Init");
+        imageMaterial = new Material(highlightShader);
+        highlightImage.material = imageMaterial;
+        mainContent.SetActive(false);
+        if (TutorialManager.Instance.TutorialsON) bodyRect.gameObject.SetActive(true);
+        Debug.Log("PopUp Manager Init Good");
+    }
+
+    public void Show(PopUpData data) {
         imageMaterial.SetVector("_PositionSize", Vector4.zero);
         mainContent.SetActive(true);
         popupPanel.Show(data);
@@ -45,8 +53,7 @@ public class PopUpManager : MonoBehaviour
     }
 
 
-    public void Show(PopUpData data, Rect rect)
-    {
+    public void Show(PopUpData data, Rect rect) {
         TraceShow(data);
         float xPadding = highlightPadding * Screen.width / bodyRect.rect.width;
         float yPadding = highlightPadding * Screen.height / bodyRect.rect.height;
@@ -66,34 +73,29 @@ public class PopUpManager : MonoBehaviour
 
     }
 
-    private void TraceShow(PopUpData data)
-    {
+    private void TraceShow(PopUpData data) {
         string content = data.localizedTitle.GetLocalizedStringAsync().Result + ": " + data.localizedContent.GetLocalizedStringAsync().Result;
         TrackerAsset.Instance.setVar("content", content.Replace("\"", "'"));
         TrackerAsset.Instance.Completable.Initialized("tip_" + data.name.ToLower(), CompletableTracker.Completable.DialogFragment);
     }
 
-    private void TraceHide(PopUpData data)
-    {
+    private void TraceHide(PopUpData data) {
         string content = data.localizedTitle.GetLocalizedStringAsync().Result + ": " + data.localizedContent.GetLocalizedStringAsync().Result;
         TrackerAsset.Instance.setVar("content", content.Replace("\"", "'"));
         TrackerAsset.Instance.Completable.Completed("tip_" + data.name.ToLower(), CompletableTracker.Completable.DialogFragment);
     }
 
-    public void Hide()
-    {
+    public void Hide() {
         mainContent.SetActive(false);
         popupPanel.Hide();
     }
 
 
-    public bool IsShowing()
-    {
+    public bool IsShowing() {
         return popupPanel.gameObject.activeSelf && mainContent.activeSelf;
     }
 
-    public GraphicRaycaster GetGraphicRaycaster()
-    {
+    public GraphicRaycaster GetGraphicRaycaster() {
         return graphicRaycaster;
     }
 

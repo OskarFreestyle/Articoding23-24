@@ -51,8 +51,8 @@ public class ProgressManager : MonoBehaviour {
 
     private void Init() {
 
-        List<CategoryDataSO> categoriesDataSO = GameManager.Instance.GetCategories();
-        categoriesData = new CategorySaveData[categoriesDataSO.Count];
+        CategoryDataSO[] categoriesDataSO = GameManager.Instance.GetCategories();
+        categoriesData = new CategorySaveData[categoriesDataSO.Length];
 
         int i = 0;
         foreach (CategoryDataSO categoryDataSO in categoriesDataSO) {
@@ -146,7 +146,7 @@ public class ProgressManager : MonoBehaviour {
 
     public void LevelStarted(CategoryDataSO category, int level)
     {
-        int index = category.iWndex;
+        int index = category.index;
         if (index < 0)
             TrackerAsset.Instance.Accessible.Accessed(levelsCreatedCategory.levels[level].levelName);
         else {

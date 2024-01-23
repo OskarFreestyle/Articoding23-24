@@ -189,7 +189,7 @@ public class GameManager : MonoBehaviour {
         return currentCategoryIndex == -1;
     }
 
-    public List<CategoryDataSO> GetCategories()
+    public CategoryDataSO[] GetCategories()
     {
         return categories;
     }

@@ -8,9 +8,11 @@ using UnityEngine.UI;
 using AssetPackage;
 
 
-public class TemaryManager : MonoBehaviour
-{
-    public static TemaryManager Instance = null;
+public class TemaryManager : MonoBehaviour {
+    private static TemaryManager instance;
+    public static TemaryManager Instance {
+        get { return instance; }
+    }
 
     private Dictionary<TutorialType, List<PopUpData>> shownTemary;
 
@@ -54,15 +56,26 @@ public class TemaryManager : MonoBehaviour
     private TutorialType currentType = TutorialType.NONE;
 
     private void Awake() {
-        shownTutorials = new List<string>();
+        if (!instance) {
+            instance = this;
+            DontDestroyOnLoad(this);
+            Init();
+        }
+        else {
+            Debug.LogWarning("More than 1 Temary Manager created");
+            DestroyImmediate(gameObject);
+        }
+    }
 
-        Instance = this;
+    private void Init() {
+        shownTutorials = new List<string>();
 
         CreateCategoryList();
 
         if (backButton != null)
             backButton.onClick.AddListener(() => ShowTutorialsCategoryList());
     }
+
     private void Start() {
         shownTutorials.AddRange(TutorialManager.Instance.GetTriggeredTutorials());
         Configure();
@@ -100,12 +113,13 @@ public class TemaryManager : MonoBehaviour
         initialized = true;
     }
 
-    private void CreateCategoryList()
-    {
+    private void CreateCategoryList() {
         int count = Enum.GetValues(typeof(TutorialType)).Length;
+
         categoryButtons = new Button[count - 1];
-        for (int i = 0; i < count; i++)
-        {
+
+        for (int i = 0; i < count; i++) {
+
             TutorialType type = categoriesOrder[i];
             if (type == TutorialType.NONE) continue;
 
@@ -119,11 +133,11 @@ public class TemaryManager : MonoBehaviour
 
             categoryButtons[i - 1] = button;
         }
+
         categoryButton.gameObject.SetActive(false);
     }
 
-    private void ShowCategory(TutorialType type)
-    {
+    private void ShowCategory(TutorialType type) {
         if (!shownTemary.ContainsKey(type)) return;
 
         // Deactivate tutorial category list
@@ -165,8 +179,7 @@ public class TemaryManager : MonoBehaviour
         TraceScreenAccesed();
     }
 
-    private void ShowTutorialsCategoryList()
-    {
+    private void ShowTutorialsCategoryList() {
         // Delete previous content
         foreach (Transform child in contentRect)
             Destroy(child.gameObject);
@@ -184,8 +197,7 @@ public class TemaryManager : MonoBehaviour
         currentType = TutorialType.NONE;
     }
 
-    public void AddTemary(PopUpData data)
-    {
+    public void AddTemary(PopUpData data) {
         string hash = Hash.ToHash(data.title + data.content, "TutorialTrigger");
         if (shownTutorials.Contains(hash)) return;
 
@@ -193,57 +205,48 @@ public class TemaryManager : MonoBehaviour
         Configure();
     }
 
-    private void AddTitle(LocalizedString s)
-    {
+    private void AddTitle(LocalizedString s) {
         LocalizeStringEvent title = Instantiate(titlePrefab, contentRect);
         title.gameObject.SetActive(true);
         title.StringReference = s;
         title.RefreshString();
     }
 
-    private void AddImage(LocalizedSprite s)
-    {
+    private void AddImage(LocalizedSprite s) {
         LocalizeSpriteEvent image = Instantiate(imagePrefab, contentRect);
         image.gameObject.SetActive(true);
         image.AssetReference.SetReference(s.TableReference, s.TableEntryReference);
 
     }
 
-    private void AddParagraph(LocalizedString s)
-    {
+    private void AddParagraph(LocalizedString s) {
         LocalizeStringEvent paragraph = Instantiate(paragraphPrefab, contentRect);
         paragraph.gameObject.SetActive(true);
         paragraph.StringReference = s;
         paragraph.RefreshString();
     }
 
-    public void Load(TutorialSaveData data)
-    {
+    public void Load(TutorialSaveData data) {
         shownTutorials.AddRange(data.tutorials);
         Configure();
     }
 
-    private LocalizedString TypeToString(TutorialType type)
-    {
+    private LocalizedString TypeToString(TutorialType type) {
         return stringReferences[(int)type];
     }
 
-    public void TraceScreenAccesed()
-    {
+    public void TraceScreenAccesed() {
         string nameID = currentType.ToString().ToLower();
 
-        if (nameID.StartsWith("category_"))
-        {
+        if (nameID.StartsWith("category_")) {
             nameID = nameID.Remove(0, 9);
         }
 
         // Si esta en el MainMenu
-        if(backButton == null)
-        {
+        if(backButton == null) {
             TrackerAsset.Instance.setVar("scene", "menu");
         }
-        else
-        {
+        else {
             TrackerAsset.Instance.setVar("scene", "level");
         }
         

@@ -3,71 +3,82 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+/// <summary>
+/// 
+/// </summary>
+public class TutorialManager : MonoBehaviour {
+    private static TutorialManager instance;
+    public static TutorialManager Instance {
+        get { return instance; }
+    }
 
-public class TutorialManager : MonoBehaviour
-{
-    public static TutorialManager Instance;
+    [SerializeField] private bool tutorialsON;
+    public bool TutorialsON {
+        get { return tutorialsON; }
+    }
 
     [SerializeField] private PopUpManager popUpManager;
-    [SerializeField] private bool tutorialsON = true;
+
     private BinaryHeap<TutorialTrigger> priorTriggers = null;
     private List<TutorialTrigger> conditionTriggers = null;
-
     private HashSet<string> triggered = null;   // Stores the hash of all triggered tutorial
     private List<TutorialTrigger> savePending;  // Stores the pending triggers to be saved
-
-    // Hash format
     private HashSet<string> saved = null; // Stores save data, loaded from file or modified on execution
 
     private bool needToBeDestroyed = false;
-
     private float lastWidth;
     private float lastHeight;
 
     private TutorialTrigger lastTutorialTrigger;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
+    private void Awake() {
+        if (!instance) {
+            instance = this;
             DontDestroyOnLoad(gameObject);
-
-            priorTriggers = new BinaryHeap<TutorialTrigger>();
-            conditionTriggers = new List<TutorialTrigger>();
-
-            triggered = new HashSet<string>();
-
-            savePending = new List<TutorialTrigger>();
-            saved = new HashSet<string>();
-
-            return;
+            Init();
         }
-        Instance.tutorialsON = tutorialsON;
-        needToBeDestroyed = true;
-        lastTutorialTrigger = null;
+        else {
+            //Debug.LogWarning("More than 1 Tutorial Manager created");
+            //DestroyImmediate(gameObject);
+            // TODO creo que quitar
+            Instance.tutorialsON = tutorialsON;
+            needToBeDestroyed = true;
+            lastTutorialTrigger = null;
+        }
     }
 
-    private void Start()
-    {
-        if (needToBeDestroyed)
-        {
+    private void Init() {
+        priorTriggers = new BinaryHeap<TutorialTrigger>();
+        conditionTriggers = new List<TutorialTrigger>();
+        triggered = new HashSet<string>();
+        savePending = new List<TutorialTrigger>();
+        saved = new HashSet<string>();
+    }
+
+    private void Start() {
+        //Horrible
+        if (needToBeDestroyed) {
             Instance.Start();
             Destroy(gameObject);
             return;
         }
+        Debug.Log("TutorialManager Manager start");
 
-        //TutorialTrigger[] aux = FindObjectsOfType<TutorialTrigger>();
-        //for (int i = 0; i < aux.Length; i++)
-        //{
-        //    AddTutorialTrigger(aux[i], true);
-        //}
-        //conditionTriggers.Sort();
+        TutorialTrigger[] aux = FindObjectsOfType<TutorialTrigger>();
+        Debug.Log("Found " + aux.Length + " tutorial triggers");
+
+        for (int i = 0; i < aux.Length; i++) {
+            Debug.Log("Try " + i + ", " + aux[i].name + aux[i].GetInstanceID());
+            AddTutorialTrigger(aux[i], true);
+            Debug.Log("Trigger " + i + " added, " + aux[i].gameObject + aux[i].gameObject.GetComponentInParent<Transform>().name);
+        }
+
+        conditionTriggers.Sort();
+        Debug.Log("Sorted");
 
     }
 
-    private void Update()
-    {
+    private void Update() {
         if (!tutorialsON) return;
 
         popUpManager.enabled = true;
@@ -110,8 +121,7 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    private TutorialTrigger TryPopPriorityTriggers()
-    {
+    private TutorialTrigger TryPopPriorityTriggers() {
         if (priorTriggers.Count == 0) return null;
         if (popUpManager == null) return null;
         if (popUpManager.IsShowing()) return null;
@@ -119,8 +129,7 @@ public class TutorialManager : MonoBehaviour
         return priorTriggers.Remove();
     }
 
-    private TutorialTrigger TryPopConditionalTriggers()
-    {
+    private TutorialTrigger TryPopConditionalTriggers() {
         if (conditionTriggers.Count == 0) return null;
         if (popUpManager == null) return null;
         if (popUpManager.IsShowing()) return null;
@@ -131,22 +140,22 @@ public class TutorialManager : MonoBehaviour
         return null;
     }
 
-    private void ShowTutorialInfo(TutorialTrigger t)
-    {
+    private void ShowTutorialInfo(TutorialTrigger t) {
         if (t == null) return;
 
-        if(lastTutorialTrigger != null)
-        {
+        if(lastTutorialTrigger != null) {
             if (lastTutorialTrigger.destroyOnShowed)
                 Destroy(lastTutorialTrigger);
             lastTutorialTrigger = null;
         }
 
         PopUpData info = t.info;
+
         if (t.highlightObject)
             popUpManager.Show(info, t.GetRect());
         else
             popUpManager.Show(info);
+
         if (TemaryManager.Instance != null)
             TemaryManager.Instance.AddTemary(t.info);
 
@@ -169,20 +178,17 @@ public class TutorialManager : MonoBehaviour
 
     }
 
-    public void AddTutorialTrigger(TutorialTrigger t, bool checkTriggered = false)
-    {
+    public void AddTutorialTrigger(TutorialTrigger t, bool checkTriggered = false) {
         if (checkTriggered && triggered.Contains(t.GetHash())) return;
 
-        if (t.condition != null)
-        {
+        if (t.condition != null) {
             if (conditionTriggers.Find((TutorialTrigger other) => other.GetHash() == t.GetHash()) != null) 
                 return;
 
             conditionTriggers.Add(t);
             conditionTriggers.Sort();
         }
-        else
-        {
+        else {
             List<TutorialTrigger> prior = priorTriggers.ToList();
             if (prior.Find((TutorialTrigger other) => other.GetHash() == t.GetHash()) != null) 
                 return;
@@ -195,8 +201,7 @@ public class TutorialManager : MonoBehaviour
         return triggered;
     }
 
-    public void Load(TutorialSaveData data)
-    {
+    public void Load(TutorialSaveData data) {
         for (int i = 0; i < data.tutorials.Length; i++)
         {
             saved.Add(data.tutorials[i]);
@@ -204,8 +209,7 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    public TutorialSaveData Save()
-    {
+    public TutorialSaveData Save() {
         string[] array = new string[saved.Count];
         saved.CopyTo(array);
 
@@ -226,8 +230,7 @@ public class TutorialManager : MonoBehaviour
         savePending.Clear();
     }
 
-    private IEnumerator RecalculateShownTutorial()
-    {
+    private IEnumerator RecalculateShownTutorial() {
         yield return new WaitForEndOfFrame();
 
         if (lastTutorialTrigger.highlightObject)
