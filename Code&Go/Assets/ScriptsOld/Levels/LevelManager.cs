@@ -14,8 +14,7 @@ using UnityEngine.Localization.Components;
 using Input = UnityEngine.Input;
 using Newtonsoft.Json;
 
-public class LevelManager : MonoBehaviour
-{
+public class LevelManager : MonoBehaviour {
     [System.Serializable]
     public struct CategoryTutorialsData
     {

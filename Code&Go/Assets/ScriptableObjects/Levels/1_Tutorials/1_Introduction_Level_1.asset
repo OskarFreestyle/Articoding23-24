@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8b8cb799550274ba252141012086f5, type: 3}
   m_Name: 1_Introduction_Level_1
   m_EditorClassIdentifier: 
-  index: 1
+  index: 0
   categoryData: {fileID: 11400000, guid: e221621eac32ca64ba8deee28b1042a0, type: 2}
   levelNameLocalized:
     m_TableReference:

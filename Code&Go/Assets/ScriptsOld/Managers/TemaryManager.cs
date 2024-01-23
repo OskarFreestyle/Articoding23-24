@@ -56,15 +56,15 @@ public class TemaryManager : MonoBehaviour {
     private TutorialType currentType = TutorialType.NONE;
 
     private void Awake() {
-        if (!instance) {
-            instance = this;
-            DontDestroyOnLoad(this);
+        instance = this;
+        //if (!instance) {
+        //    DontDestroyOnLoad(this);
             Init();
-        }
-        else {
-            Debug.LogWarning("More than 1 Temary Manager created");
-            DestroyImmediate(gameObject);
-        }
+        //}
+        //else {
+        //    Debug.LogWarning("More than 1 Temary Manager created");
+        //    DestroyImmediate(gameObject);
+        //}
     }
 
     private void Init() {

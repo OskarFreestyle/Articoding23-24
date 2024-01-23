@@ -126,11 +126,12 @@ public class ProgressManager : MonoBehaviour {
     //Setters
 
 
-    public void LevelStarted(int categoryIndex, int level)
+    public void LevelStarted(int categoryIndex, int levelIndex)
     {
         if (currentCategoryData == null || (categoryIndex >= 0 && categoryIndex < categoriesData.Length && categoriesData[categoryIndex] != currentCategoryData))
             currentCategoryData = categoriesData[categoryIndex];
-        currentLevel = level;
+        Debug.Log("Level index: " + levelIndex);
+        currentLevel = levelIndex;
 
 
         //if (currentLevel == 0 && !currentCategoryData.completableInitialized)
@@ -422,19 +423,19 @@ public class ProgressManager : MonoBehaviour {
         string path = Application.dataPath;
 
         //Creamos las carpetas pertinentes si no estan creadas
-        if (!Directory.Exists(path + "/Resources/Levels/")) ;
-        Directory.CreateDirectory(path + "/Resources/Levels/");
+        if (!Directory.Exists(path + "/Resources/Levels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/");
         if (!Directory.Exists(path + "/Resources/Levels/Boards/"))
             Directory.CreateDirectory(path + "/Resources/Levels/Boards/");
-        if (!Directory.Exists(path + "/Resources/Levels/Boards/8_CreatedLevels/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/Boards/8_CreatedLevels/");
+        if (!Directory.Exists(path + "/Resources/Levels/Boards/0_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/Boards/0_CreatedLevels/");
         if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/"))
             Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/");
-        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/8_CreatedLevels/");
+        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/0_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/0_CreatedLevels/");
         if (!Directory.Exists(path + "/Resources/Levels/InitialStates/"))
             Directory.CreateDirectory(path + "/Resources/Levels/InitialStates/");
-        if (!Directory.Exists(path + "/Resources/Levels/InitialStates/8_CreatedLevels/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/InitialStates/8_CreatedLevels/");
+        if (!Directory.Exists(path + "/Resources/Levels/InitialStates/0_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Resources/Levels/InitialStates/0_CreatedLevels/");
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8b8cb799550274ba252141012086f5, type: 3}
   m_Name: 6_Conditionals_Level_4
   m_EditorClassIdentifier: 
-  index: 4
+  index: 3
   categoryData: {fileID: 11400000, guid: d8e0fa3ec83da554c8d7cc0e28d9bb4e, type: 2}
   levelNameLocalized:
     m_TableReference:
