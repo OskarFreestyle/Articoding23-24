@@ -24,13 +24,17 @@ public class PopUpManager : MonoBehaviour {
         if (!instance) {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            Init();
-            return;
+            //Init();
+            //return;
         }
         else {
             Debug.LogWarning("More than 1 Pop Up Manager created");
             DestroyImmediate(gameObject);
         }
+    }
+
+    private void Start() {
+        Init();
     }
 
     private void Init() {

@@ -19,6 +19,8 @@ public class ProgressManager : MonoBehaviour {
     public bool AllUnlocked {
         get { return allUnlocked; }
     }
+
+    [SerializeField] private CategoryDataSO[] categoriesDataSO;
     #endregion
 
     // Old
@@ -50,10 +52,12 @@ public class ProgressManager : MonoBehaviour {
     }
 
     private void Init() {
-
-        CategoryDataSO[] categoriesDataSO = GameManager.Instance.GetCategories();
+        Debug.Log("A");
+        //CategoryDataSO[] categoriesDataSO = GameManager.Instance.GetCategories();
+        Debug.Log("B");
         categoriesData = new CategorySaveData[categoriesDataSO.Length];
 
+        Debug.Log("C");
         int i = 0;
         foreach (CategoryDataSO categoryDataSO in categoriesDataSO) {
 
@@ -68,15 +72,18 @@ public class ProgressManager : MonoBehaviour {
             categoriesData[i] = data;
             i++;
         }
+        Debug.Log("D");
 
         // Unlock the first level
         categoriesData[1].levelsData[0] = 0;
+        Debug.Log("E");
 
         // Created Levels
         levelsCreated = new LevelsCreatedSaveData();
         levelsCreated.levelsCreated = new string[0];
         levelsCreatedHash = new List<string>();
         levelsCreatedCategory.levels.Clear();
+        Debug.Log("F");
     }
 
     /// <summary>
@@ -320,7 +327,7 @@ public class ProgressManager : MonoBehaviour {
         data.categoriesInfo = categoriesData;
         data.levelsCreatedData = levelsCreated;
 
-        data.DebugLogCategoriesData(); // Todo quitar
+        //data.DebugLogCategoriesData(); // Todo quitar
         
         return data;
     }
@@ -335,7 +342,7 @@ public class ProgressManager : MonoBehaviour {
 
         //UpdateCategoryCards();
 
-        data.DebugLogCategoriesData();
+        //data.DebugLogCategoriesData();
     }
 
     //private void UpdateCategoryCards() {

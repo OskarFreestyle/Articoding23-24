@@ -4,6 +4,10 @@ using System.IO;
 using uAdventure.Simva;
 using UnityEngine;
 
+
+
+using UnityEngine.UI;
+
 /// <summary>
 /// Manage the save and load data
 /// </summary>
@@ -16,8 +20,10 @@ public class SaveManager : MonoBehaviour {
     }
 
     [SerializeField] private string filename = "gameSave.json";
+    [SerializeField] private string filename2 = "gameSave2.json";
 
     private string Filepath = "";
+    private string Filepath2 = "";
     #endregion
 
     #region Methods
@@ -25,12 +31,22 @@ public class SaveManager : MonoBehaviour {
         if (!instance) {
             instance = this;
             DontDestroyOnLoad(this);
+            test();
             Init();
         }
         else {
             Debug.LogWarning("More than 1 Save Manager created");
             DestroyImmediate(gameObject);
         }
+    }
+
+    public Text text;
+
+    private void test() {
+        string aux = "-";
+        if (ProgressManager.Instance) aux += "Progress-";
+        if (TutorialManager.Instance) aux += "Tutorial-";
+        text.text = aux;
     }
 
     public void Init() {
@@ -40,23 +56,23 @@ public class SaveManager : MonoBehaviour {
 #else
         Application.persistentDataPath;
 #endif
-
         string token = "";
 
         try {
             token = SimvaExtension.Instance.API.AuthorizationInfo.Username;
             token += "_";
         }
-        catch(System.Exception e) {
+        catch (System.Exception e) {
             Debug.LogError("SimvaExtension: " + e.Message);
             token = "";
         }
 
         Filepath = Path.Combine(dataPath, token + filename);
+        Filepath2 = Path.Combine(dataPath, token + filename2);
     }
 
     public void Load() {
-        Debug.Log("Load Save Data");
+        Debug.Log("Save Manager - Load data");
 
         // Si no existe, se crea
         if (!File.Exists(Filepath)) {
@@ -86,10 +102,12 @@ public class SaveManager : MonoBehaviour {
     }
 
     public void Save() {
+        Debug.Log("Save Manager - Save data");
+
         // Save the game data
         GameSaveData gameData = new GameSaveData();
-        gameData.tutorialInfo = TutorialManager.Instance.Save();
-        gameData.progressData = ProgressManager.Instance.Save();
+        if(ProgressManager.Instance) gameData.progressData = ProgressManager.Instance.Save();
+        if(TutorialManager.Instance) gameData.tutorialInfo = TutorialManager.Instance.Save();
         
         // Add the hash to the save data
         SaveData data = new SaveData();
@@ -107,6 +125,20 @@ public class SaveManager : MonoBehaviour {
         StreamWriter writer = new StreamWriter(Filepath);
         writer.Write(finalJson);
         writer.Close();
+
+        // Testing TODO quitar
+        FileStream file2 = new FileStream(Filepath2, FileMode.Create, FileAccess.ReadWrite);
+        file2.Close();
+        StreamWriter writer2 = new StreamWriter(Filepath2);
+
+
+        if (ProgressManager.Instance) writer2.Write("Progress Manager Instance: true");
+        if (TutorialManager.Instance) writer2.Write("Tutorial Manager Instance: true");
+        writer2.Write("Categories lenght:" + data.gameData.progressData.categoriesInfo.Length);
+        writer2.Write("Tutorial lenght:" + data.gameData.tutorialInfo.tutorials.Length);
+
+
+        writer2.Close();
     }
     #endregion
 

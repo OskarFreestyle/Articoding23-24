@@ -19,13 +19,13 @@ public class ProgressSaveData {
     public LevelsCreatedSaveData levelsCreatedData;
     public CategorySaveData[] categoriesInfo;
 
-    public void DebugLogCategoriesData() {
-        int i = 0;
-        foreach (CategorySaveData categorySaveData in categoriesInfo) {
-            Debug.Log("Category " + i + ": " + categorySaveData.DebugLogLevelsData());
-            i++;
-        }
-    }
+    //public void DebugLogCategoriesData() {
+    //    int i = 0;
+    //    foreach (CategorySaveData categorySaveData in categoriesInfo) {
+    //        Debug.Log("Category " + i + ": " + categorySaveData.DebugLogLevelsData());
+    //        i++;
+    //    }
+    //}
 }
 
 [System.Serializable]
