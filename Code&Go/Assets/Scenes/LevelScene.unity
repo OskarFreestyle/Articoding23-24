@@ -5105,7 +5105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 110
-  info: {fileID: 0}
+  info: {fileID: 11400000, guid: 3b720222c95c4bd4fb727307d400bd32, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
   isSaveCheckpoint: 0

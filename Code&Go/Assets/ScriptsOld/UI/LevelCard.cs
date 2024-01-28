@@ -45,9 +45,14 @@ public class LevelCard : MonoBehaviour {
 
     private void SetText() {
         // Set the title
-        titleLocalized.StringReference = levelData.levelNameLocalized;
-        titleLocalized.RefreshString();
-        titleText.text = titleLocalized.StringReference.GetLocalizedStringAsync().Result;
+        try {
+            titleLocalized.StringReference = levelData.levelNameLocalized;
+            titleLocalized.RefreshString();
+            titleText.text = titleLocalized.StringReference.GetLocalizedStringAsync().Result;
+        } catch (System.Exception e) {
+            Debug.Log("Created level so text is ");
+            titleText.text = levelData.levelName;
+        }
     }
 
     private void SetColors() {

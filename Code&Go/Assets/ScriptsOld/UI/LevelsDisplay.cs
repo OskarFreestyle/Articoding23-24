@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Localization.Components;
@@ -28,14 +29,71 @@ public class LevelsDisplay : MonoBehaviour {
         // Set the back button color
         backButton.color = category.secondaryColor;
 
-        // Set the data for all the levels
-        int i = 0;
-        foreach(LevelDataSO levelData in category.levels) {
-            LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
-            currentLevelCard.SetLevelData(levelData);
-            currentLevelCard.SetLevelStars(ProgressManager.Instance.GetLevelStars(category, i));
-            currentLevelCard.transform.localPosition = levelsLocalPositions[i];
-            i++;
+        Debug.Log(category.name); // "0_Levels_Created
+
+        if(category.name != "0_Levels_Created") {
+            // Set the data for all the levels
+            int i = 0;
+            foreach(LevelDataSO levelData in category.levels) {
+                LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
+                currentLevelCard.SetLevelData(levelData);
+                currentLevelCard.SetLevelStars(ProgressManager.Instance.GetLevelStars(category, i));
+                currentLevelCard.transform.localPosition = levelsLocalPositions[i];
+                i++;
+            }
+            Debug.Log("Found " + i + " levels");
+        }
+        // Levels Created
+        else {
+            Debug.Log("Display created levels");
+
+            string[] boardFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/Boards/0_CreatedLevels", "*.json");
+            string[] activeFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/ActiveBlocks/0_CreatedLevels", "*.json");
+            string[] initialFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/InitialStates/0_CreatedLevels", "*.txt");
+
+            Debug.Log("Found Boards: " + boardFilePaths.Length + ", Active: " + activeFilePaths.Length + ", Initial: " + initialFilePaths.Length);
+
+            TextAsset[] boards = new TextAsset[boardFilePaths.Length];
+            TextAsset[] activeBlocks = new TextAsset[activeFilePaths.Length];
+            TextAsset[] initialBlocks = new TextAsset[initialFilePaths.Length];
+
+            Debug.Log("TextAsset Boards: " + boards.Length + ", Active: " + activeBlocks.Length + ", Initial: " + initialBlocks.Length);
+
+            string[] fileNames = new string[boardFilePaths.Length];
+
+            Debug.Log("Filenames" + fileNames.Length);
+
+
+            for (int i = 0; i < boardFilePaths.Length; i++) {
+                boards[i] = new TextAsset(File.ReadAllText(boardFilePaths[i]));
+                activeBlocks[i] = new TextAsset(File.ReadAllText(activeFilePaths[i]));
+                initialBlocks[i] = new TextAsset(File.ReadAllText(initialFilePaths[i]));
+                fileNames[i] = Path.GetFileNameWithoutExtension(boardFilePaths[i]);
+            }
+
+            List<LevelDataSO> levelDataSOs = new List<LevelDataSO>();
+
+            for (int i = 0; i < boards.Length; i++) {
+                int index = i;
+                LevelDataSO levelData = new LevelDataSO();
+                levelData.categoryData = GameManager.Instance.GetCategoryByIndex(0);
+                levelData.levelName = fileNames[i];
+                levelData.activeBlocks = activeBlocks[i];
+                levelData.customInitialState = initialBlocks[i];
+                levelData.levelBoard = boards[i];
+                levelData.levelPreview = backButton.sprite;
+
+                levelDataSOs.Add(levelData);
+            }
+            int x = 0;
+            foreach (LevelDataSO levelData in levelDataSOs) {
+                LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
+                currentLevelCard.SetLevelData(levelData);
+                currentLevelCard.SetLevelStars(3);
+                currentLevelCard.transform.localPosition = levelsLocalPositions[x];
+                x++;
+            }
+            Debug.Log("Found " + x + " levels");
         }
     }
 

@@ -4,10 +4,6 @@ using System.IO;
 using uAdventure.Simva;
 using UnityEngine;
 
-
-
-using UnityEngine.UI;
-
 /// <summary>
 /// Manage the save and load data
 /// </summary>
@@ -20,35 +16,28 @@ public class SaveManager : MonoBehaviour {
     }
 
     [SerializeField] private string filename = "gameSave.json";
-    [SerializeField] private string filename2 = "gameSave2.json";
 
     private string Filepath = "";
-    private string Filepath2 = "";
     #endregion
 
     #region Methods
     public void Awake() {
+        Debug.Log("Save Manager Awake");
         if (!instance) {
             instance = this;
             DontDestroyOnLoad(this);
-            test();
             Init();
         }
         else {
             Debug.LogWarning("More than 1 Save Manager created");
             DestroyImmediate(gameObject);
         }
+        Debug.Log("Save Manager Awake Finished");
     }
 
-    public Text text;
-
-    private void test() {
-        string aux = "-";
-        if (ProgressManager.Instance) aux += "Progress-";
-        if (TutorialManager.Instance) aux += "Tutorial-";
-        text.text = aux;
-    }
-
+    /// <summary>
+    /// Create the Filepath of the save file
+    /// </summary>
     public void Init() {
         string dataPath =
 #if UNITY_EDITOR
@@ -63,12 +52,11 @@ public class SaveManager : MonoBehaviour {
             token += "_";
         }
         catch (System.Exception e) {
-            Debug.LogError("SimvaExtension: " + e.Message);
+            Debug.LogWarning("SimvaExtension: " + e.Message);
             token = "";
         }
 
         Filepath = Path.Combine(dataPath, token + filename);
-        Filepath2 = Path.Combine(dataPath, token + filename2);
     }
 
     public void Load() {
@@ -82,20 +70,25 @@ public class SaveManager : MonoBehaviour {
             Save();
             return;
         }
-        else {
-            Debug.Log("File found");
-        }
-
+        else Debug.Log("File found");
+        
+        // Read the data
         StreamReader reader = new StreamReader(Filepath);
         string readerData = reader.ReadToEnd();
         reader.Close();
+
+        // Create the data from the json
         SaveData data = JsonUtility.FromJson<SaveData>(readerData);
 
         // Check the hash TODO active
-        //if (Hash.ToHash(data.gameData.ToString(), "") == data.hash) {
+        if (Hash.ToHash(data.gameData.ToString(), "") == data.hash) {
+            Debug.Log("Hash coincidente");
             ProgressManager.Instance.Load(data.gameData.progressData);
+            Debug.Log("Progress data loaded");
             TutorialManager.Instance.Load(data.gameData.tutorialInfo);
-        //}
+            Debug.Log("Tutorial data loaded");
+        }
+        else Debug.LogWarning("Hash NO coincidente");
 
         // Se ha modificado el archivo, empiezas de 0
         Save();
@@ -106,8 +99,8 @@ public class SaveManager : MonoBehaviour {
 
         // Save the game data
         GameSaveData gameData = new GameSaveData();
-        if(ProgressManager.Instance) gameData.progressData = ProgressManager.Instance.Save();
-        if(TutorialManager.Instance) gameData.tutorialInfo = TutorialManager.Instance.Save();
+        gameData.progressData = ProgressManager.Instance.Save();
+        gameData.tutorialInfo = TutorialManager.Instance.Save();
         
         // Add the hash to the save data
         SaveData data = new SaveData();
@@ -125,20 +118,6 @@ public class SaveManager : MonoBehaviour {
         StreamWriter writer = new StreamWriter(Filepath);
         writer.Write(finalJson);
         writer.Close();
-
-        // Testing TODO quitar
-        FileStream file2 = new FileStream(Filepath2, FileMode.Create, FileAccess.ReadWrite);
-        file2.Close();
-        StreamWriter writer2 = new StreamWriter(Filepath2);
-
-
-        if (ProgressManager.Instance) writer2.Write("Progress Manager Instance: true");
-        if (TutorialManager.Instance) writer2.Write("Tutorial Manager Instance: true");
-        writer2.Write("Categories lenght:" + data.gameData.progressData.categoriesInfo.Length);
-        writer2.Write("Tutorial lenght:" + data.gameData.tutorialInfo.tutorials.Length);
-
-
-        writer2.Close();
     }
     #endregion
 

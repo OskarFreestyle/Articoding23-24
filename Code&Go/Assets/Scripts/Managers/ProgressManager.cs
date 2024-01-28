@@ -7,6 +7,9 @@ using UnityEngine.Localization;
 using AssetPackage;
 using UnityEditor;
 
+/// <summary>
+/// Manage the progress of the main story 
+/// </summary>
 public class ProgressManager : MonoBehaviour {
 
     #region Properties
@@ -40,6 +43,7 @@ public class ProgressManager : MonoBehaviour {
 
     #region Methods
     private void Awake() {
+        Debug.Log("Progress Manager Awake");
         if (!instance) {
             instance = this;
             DontDestroyOnLoad(this);
@@ -49,15 +53,12 @@ public class ProgressManager : MonoBehaviour {
             Debug.LogWarning("More than 1 Progress Manager created");
             DestroyImmediate(this);
         }
+        Debug.Log("Progress Manager Awake Finished");
     }
 
     private void Init() {
-        Debug.Log("A");
-        //CategoryDataSO[] categoriesDataSO = GameManager.Instance.GetCategories();
-        Debug.Log("B");
         categoriesData = new CategorySaveData[categoriesDataSO.Length];
 
-        Debug.Log("C");
         int i = 0;
         foreach (CategoryDataSO categoryDataSO in categoriesDataSO) {
 
@@ -72,18 +73,15 @@ public class ProgressManager : MonoBehaviour {
             categoriesData[i] = data;
             i++;
         }
-        Debug.Log("D");
 
         // Unlock the first level
         categoriesData[1].levelsData[0] = 0;
-        Debug.Log("E");
 
         // Created Levels
         levelsCreated = new LevelsCreatedSaveData();
         levelsCreated.levelsCreated = new string[0];
         levelsCreatedHash = new List<string>();
         levelsCreatedCategory.levels.Clear();
-        Debug.Log("F");
     }
 
     /// <summary>
@@ -135,8 +133,7 @@ public class ProgressManager : MonoBehaviour {
     //Setters
 
 
-    public void LevelStarted(int categoryIndex, int levelIndex)
-    {
+    public void LevelStarted(int categoryIndex, int levelIndex) {
         if (currentCategoryData == null || (categoryIndex >= 0 && categoryIndex < categoriesData.Length && categoriesData[categoryIndex] != currentCategoryData))
             currentCategoryData = categoriesData[categoryIndex];
 
@@ -230,7 +227,7 @@ public class ProgressManager : MonoBehaviour {
 
         int index = levelsCreatedCategory.levels.Count + 1;
         string path = Application.dataPath;
-        string directory = Path.Combine(path, "Resources/Levels/Boards/0_CreatedLevels/");
+        string directory = Path.Combine(path, "Levels/Boards/0_CreatedLevels/");
 
         CreateDirectories();
 
@@ -243,11 +240,8 @@ public class ProgressManager : MonoBehaviour {
         writer.Write(board);
         writer.Close();
 
-        /**/
-
-        if (!customInitialState.Equals("NaN"))
-        {
-            string directoryInitial = Path.Combine(path, "Resources/Levels/InitialStates/0_CreatedLevels/");
+        if (!customInitialState.Equals("NaN")) {
+            string directoryInitial = Path.Combine(path, "Levels/InitialStates/0_CreatedLevels/");
             string filePathRestrinction = directoryInitial + levelName + ".txt";
             //Creamos el archivo contenedor del estado inicial
             FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
@@ -259,7 +253,7 @@ public class ProgressManager : MonoBehaviour {
 
         if (!customActiveBlocks.Equals("NaN")) { 
 
-            string directoryRestrinction = Path.Combine(path, "Resources/Levels/ActiveBlocks/0_CreatedLevels/");
+            string directoryRestrinction = Path.Combine(path, "Levels/ActiveBlocks/0_CreatedLevels/");
             string filePathRestrinction = directoryRestrinction + levelName + ".json";
             //Creamos el archivo contenedor de las restricciones
             FileStream fileRestriction = new FileStream(filePathRestrinction, FileMode.Create);
@@ -277,39 +271,51 @@ public class ProgressManager : MonoBehaviour {
             AddLevelCreated(board, index, activeBlocks, levelName, levelCategory);
         }
                
-        /**/
         Array.Resize(ref levelsCreated.levelsCreated, levelsCreated.levelsCreated.Length + 1);
         levelsCreated.levelsCreated[levelsCreated.levelsCreated.GetUpperBound(0)] = levelName;
+
+        Debug.Log("Niveles creados: " + levelsCreated.levelsCreated.Length);
+        Debug.Log(levelsCreated.levelsCreated[levelsCreated.levelsCreated.Length-1]);
     }
 
+    /// <summary>
+    /// Load the created levels
+    /// </summary>
     private void LoadLevelsCreated() {
 
         string path =
 #if UNITY_EDITOR
-                   Application.dataPath;
+        Application.dataPath;
 #else
-                   Application.persistentDataPath;
+        Application.persistentDataPath;
 #endif
-        for (int i = 0; i < levelsCreated.levelsCreated.Length; i++)
-        {
-            string levelName = levelsCreated.levelsCreated[i];
-            string filePath = Path.Combine(path, "Boards/LevelsCreated/" + levelName + ".userLevel");
 
-            string directoryRestrinction = Path.Combine(path, "Assets/Levels/LevelsCreated/");
+        for (int i = 0; i < levelsCreated.levelsCreated.Length; i++) {
+            // Get the level name
+            string levelName = levelsCreated.levelsCreated[i];
+            Debug.Log("Creating level " + levelName);
+            string filePath = Path.Combine(path, "Levels/Boards/0_CreatedLevels/" + levelName + ".json");
+            Debug.Log("Looking for " + filePath);
+
+            string directoryRestrinction = Path.Combine(path, "Assets/Levels/Boards/0_CreatedLevels/");
             string filePathRestrinction = directoryRestrinction + levelName + ".json";
             TextAsset activeBlocks = Resources.Load(filePathRestrinction) as TextAsset;
+
+            // Cambiado
             try
             {
                 StreamReader reader = new StreamReader(filePath);
                 string readerData = reader.ReadToEnd();
                 reader.Close();
-                AddLevelCreated(readerData, i + 1, activeBlocks, levelName, 7);
+                AddLevelCreated(readerData, i + 1, activeBlocks, levelName, 0);
             }
             catch
             {
                 Debug.Log("El archivo " + filePath + " no existe");
             }
         }
+
+        Debug.Log("Niveles cargados con exito");
     }
 
     private void AddLevelCreated(string board, int index, TextAsset customActiveBlocks, string levelName, int levelCategory)
@@ -336,6 +342,9 @@ public class ProgressManager : MonoBehaviour {
     public void Load(ProgressSaveData data) {
         categoriesData = data.categoriesInfo;
         levelsCreated = data.levelsCreatedData;
+
+        if(levelsCreated.levelsCreated.Length > 0) 
+            Debug.Log("Levels Created going to load: " + levelsCreated.levelsCreated.Length + " - " + levelsCreated.levelsCreated[0]);
 
         LoadLevelsCreated();
         CheckLevelsData();
@@ -392,24 +401,37 @@ public class ProgressManager : MonoBehaviour {
         }
     }
 
-    private void CreateDirectories()
-    {
+    private void CreateDirectories() {
+        Debug.Log("Create levels directories");
+
         string path = Application.dataPath;
 
-        //Creamos las carpetas pertinentes si no estan creadas
-        if (!Directory.Exists(path + "/Resources/Levels/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/");
-        if (!Directory.Exists(path + "/Resources/Levels/Boards/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/Boards/");
-        if (!Directory.Exists(path + "/Resources/Levels/Boards/0_CreatedLevels/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/Boards/0_CreatedLevels/");
-        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/");
-        if (!Directory.Exists(path + "/Resources/Levels/ActiveBlocks/0_CreatedLevels/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/ActiveBlocks/0_CreatedLevels/");
-        if (!Directory.Exists(path + "/Resources/Levels/InitialStates/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/InitialStates/");
-        if (!Directory.Exists(path + "/Resources/Levels/InitialStates/0_CreatedLevels/"))
-            Directory.CreateDirectory(path + "/Resources/Levels/InitialStates/0_CreatedLevels/");
+        // Create the Levels directory
+        if (!Directory.Exists(path + "/Levels/"))
+            Directory.CreateDirectory(path + "/Levels/");
+
+        // Create the ActiveBlocks directory
+        if (!Directory.Exists(path + "/Levels/ActiveBlocks/"))
+            Directory.CreateDirectory(path + "/Levels/ActiveBlocks/");
+        if (!Directory.Exists(path + "/Levels/ActiveBlocks/0_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Levels/ActiveBlocks/0_CreatedLevels/");
+
+        // Create the Boards directory
+        if (!Directory.Exists(path + "/Levels/Boards/"))
+            Directory.CreateDirectory(path + "/Levels/Boards/");
+        if (!Directory.Exists(path + "/Levels/Boards/0_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Levels/Boards/0_CreatedLevels/");
+
+        // Create the InitialStates directory
+        if (!Directory.Exists(path + "/Levels/InitialStates/"))
+            Directory.CreateDirectory(path + "/Levels/InitialStates/");
+        if (!Directory.Exists(path + "/Levels/InitialStates/0_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Levels/InitialStates/0_CreatedLevels/");
+
+        // Create the LevelPreviewIcons directory
+        if (!Directory.Exists(path + "/Levels/LevelPreviewIcons/"))
+            Directory.CreateDirectory(path + "/Levels/LevelPreviewIcons/");
+        if (!Directory.Exists(path + "/Levels/LevelPreviewIcons/0_CreatedLevels/"))
+            Directory.CreateDirectory(path + "/Levels/LevelPreviewIcons/0_CreatedLevels/");
     }
 }

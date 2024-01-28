@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour {
     /// Create the instance of the singleton, initialize the save manager and destroy the duplicates
     /// </summary>
     private void Awake() {
+        Debug.Log("Game Manager Awake");
+
         if (!instance) {
             instance = this;
             DontDestroyOnLoad(this);
@@ -62,12 +64,15 @@ public class GameManager : MonoBehaviour {
             Debug.LogWarning("More than 1 Game Manager created");
             DestroyImmediate(gameObject);
         }
+
+        Debug.Log("Game Manager Awake Finished");
     }
 
     /// <summary>
     /// Just load the game data
     /// </summary>
     private void Start() {
+        Debug.Log("Game Manager Start");
         LoadGame();
 
         //TrackerAsset.Instance.setVar("language", LocalizationSettings.SelectedLocale.Identifier.Code);
@@ -75,6 +80,7 @@ public class GameManager : MonoBehaviour {
         //TrackerAsset.Instance.setVar("fullscreen", Screen.fullScreen);
         //TrackerAsset.Instance.Completable.Initialized("articoding", CompletableTracker.Completable.Game);
         //TrackerAsset.Instance.Completable.Progressed("articoding", CompletableTracker.Completable.Game, ProgressManager.Instance.GetGameProgress());
+        Debug.Log("Game Manager Start Finished");
     }
 
     /// <summary>
@@ -133,6 +139,8 @@ public class GameManager : MonoBehaviour {
     public void LoadLevelCreator() {
         Debug.Log("Loading level creator");
         blockIDs = new Dictionary<UBlockly.Block, string>();
+        currentCategoryIndex = 0;
+        currentLevelIndex = -1;
 
         if (LoadManager.Instance == null) {
             SceneManager.LoadScene("BoardCreation");

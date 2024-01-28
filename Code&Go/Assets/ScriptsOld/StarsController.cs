@@ -7,8 +7,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class StarsController : Listener
-{
+public class StarsController : Listener {
     public Image minimumStepsStar;
     public Image specialBlockStar;
     public Image noHangingCodeStar;
