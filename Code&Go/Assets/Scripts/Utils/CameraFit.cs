@@ -51,7 +51,7 @@ public class CameraFit : MonoBehaviour
 
     public void FitBoard(int rows, int columns)
     {
-        Camera mainCamera = Camera.main;
+        Camera mainCamera = GetComponent<Camera>();
         if (mainCamera != null)
         {
             float rowsFixed = rows + marginOffset.x;
