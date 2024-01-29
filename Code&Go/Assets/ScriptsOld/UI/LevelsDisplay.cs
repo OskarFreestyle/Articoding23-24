@@ -43,6 +43,9 @@ public class LevelsDisplay : MonoBehaviour {
         }
         // Levels Created category
         else {
+            // Clear the lastest levels data
+            category.levels.Clear();
+
             // Get the paths of all the files
             string[] boardFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/Boards/0_CreatedLevels", "*.json");
             string[] activeFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/ActiveBlocks/0_CreatedLevels", "*.json");
@@ -79,12 +82,15 @@ public class LevelsDisplay : MonoBehaviour {
                 levelData.activeBlocks = activeBlocks[i];
                 levelData.customInitialState = initialBlocks[i];
                 levelData.levelBoard = boards[i];
+                levelData.index = i;
                 try {
                     levelData.levelPreview = levelIconsSprites[i];
                 } catch(System.Exception e) {
                     Debug.Log("Error reading the level preview: " + e);
                 }
+                // Add the data
                 levelDataSOs.Add(levelData);
+                category.levels.Add(levelData);
             }
 
             int x = 0;

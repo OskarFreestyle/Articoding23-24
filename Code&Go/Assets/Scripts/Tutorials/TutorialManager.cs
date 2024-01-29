@@ -84,7 +84,6 @@ public class TutorialManager : MonoBehaviour {
     private void Update() {
         if (!tutorialsON) return;
 
-        Debug.Log("pop up manager" + popUpManager);
         popUpManager.enabled = true;
 
         if (lastWidth != Screen.width || lastHeight != Screen.height)
