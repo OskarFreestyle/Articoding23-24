@@ -221,7 +221,7 @@ public class ProgressManager : MonoBehaviour {
         return categoriesData[categoryIndex].GetCurrentNumStars();
     }
 
-    public void UserCreatedLevel(string board, string customActiveBlocks, string customInitialState, string levelName, int levelCategory) {
+    public void UserCreatedLevel(string board, string customActiveBlocks, string customInitialState, Texture2D levelIconImage, string levelName, int levelCategory) {
         //si el nivel ya existe no se guarda
         if (levelsCreatedHash.Contains(Hash.ToHash(board, ""))) return;
 
@@ -269,6 +269,21 @@ public class ProgressManager : MonoBehaviour {
 
         } else {
             AddLevelCreated(board, index, activeBlocks, levelName, levelCategory);
+        }
+
+        // Si hay un icono de nivel
+        if(levelIconImage) {
+            Debug.Log("E");
+
+            var Bytes = levelIconImage.EncodeToPNG();
+            Destroy(levelIconImage);
+            Debug.Log("F");
+
+            File.WriteAllBytes(Application.dataPath + "/Levels/LevelPreviewIcons/0_CreatedLevels/" + levelName + ".png", Bytes);
+            Debug.Log("Level Icon Saved!!!");
+        }
+        else {
+            Debug.LogWarning("level saved without icon");
         }
                
         Array.Resize(ref levelsCreated.levelsCreated, levelsCreated.levelsCreated.Length + 1);

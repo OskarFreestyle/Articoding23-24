@@ -184,7 +184,7 @@ public class LevelTestManager : MonoBehaviour
     public void SaveLevelLocal()
     {
         confirmSavePanel.SetActive(true);
-        ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson(), initialStateObject, levelName, 7);
+        ProgressManager.Instance.UserCreatedLevel(initialState.ToJson(), restrictionsPanel.GetActiveBlocks().ToJson(), initialStateObject, levelIconImage, levelName, 7);
     }
 
     //Convertirmos los datos que tenemos (nombre, nivel y clase a la que va) a un objeto
@@ -241,40 +241,39 @@ public class LevelTestManager : MonoBehaviour
     private void TakeLevelIcon() {
         Debug.Log("Take Level Icon");
         try {
+            // Disable the creator objects
             creatorObjects.SetActive(false);
 
-            Camera Cam = levelIconCamera;
+            // Take the cam
+            Camera cam = levelIconCamera;
 
             // Adjust the camera
-            Cam.transform.position = new Vector3(board.GetColumns() / 2.0f - 0.5f, 5, board.GetRows() / 2.0f - 0.5f);
-            Cam.transform.rotation = Camera.main.transform.rotation;
-            Cam.transform.localScale = Camera.main.transform.localScale;
-            
+            cam.transform.position = new Vector3(board.GetColumns() / 2.0f - 0.5f, 5, board.GetRows() / 2.0f - 0.5f);
+            cam.transform.rotation = Camera.main.transform.rotation;
+            cam.transform.localScale = Camera.main.transform.localScale;
             int max = Mathf.Max(board.GetColumns(), board.GetRows()) - 2;
-            Cam.orthographicSize = max / 2.0f + 0.5f;
-
-            Debug.Log("Cols: " + board.GetColumns() + ", Rows: " + board.GetRows() + ", Size: " + (max / 2.0f + 0.5f));
+            cam.orthographicSize = max / 2.0f + 0.5f;
 
             RenderTexture currentRT = RenderTexture.active;
-            RenderTexture.active = Cam.targetTexture;
-
-            Cam.Render();
+            RenderTexture.active = cam.targetTexture;
+            cam.Render();
 
             // Save the current level icon image
-            levelIconImage = new Texture2D(Cam.targetTexture.width, Cam.targetTexture.height);
-            levelIconImage.ReadPixels(new Rect(0, 0, Cam.targetTexture.width, Cam.targetTexture.height), 0, 0);
+            levelIconImage = new Texture2D(cam.targetTexture.width, cam.targetTexture.height);
+            levelIconImage.ReadPixels(new Rect(0, 0, cam.targetTexture.width, cam.targetTexture.height), 0, 0);
             levelIconImage.Apply();
             RenderTexture.active = currentRT;
 
-            Debug.Log("E");
+            //Debug.Log("E");
 
-            var Bytes = levelIconImage.EncodeToPNG();
-            Destroy(levelIconImage);
-            Debug.Log("F");
+            //var Bytes = levelIconImage.EncodeToPNG();
+            //Destroy(levelIconImage);
+            //Debug.Log("F");
 
-            File.WriteAllBytes(Application.dataPath + "/AAAAA/" + "Testing.png", Bytes);
-            //File.WriteAllBytes(Application.dataPath + "/Levels/LevelPreviewIcons/0_CreatedLevels/" + "Testing.png", Bytes);
-            Debug.Log("G");
+            //File.WriteAllBytes(Application.dataPath + "/AAAAA/" + "Testing.png", Bytes);
+            ////File.WriteAllBytes(Application.dataPath + "/Levels/LevelPreviewIcons/0_CreatedLevels/" + "Testing.png", Bytes);
+            //Debug.Log("G");
+
             creatorObjects.SetActive(true);
         } 
         

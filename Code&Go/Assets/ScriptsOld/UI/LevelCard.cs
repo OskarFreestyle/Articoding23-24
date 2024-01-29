@@ -43,6 +43,12 @@ public class LevelCard : MonoBehaviour {
         }
     }
 
+    public void DisableStars() {
+        starIcon0.gameObject.SetActive(false);
+        starIcon1.gameObject.SetActive(false);
+        starIcon2.gameObject.SetActive(false);
+    }
+
     private void SetText() {
         // Set the title
         try {
@@ -66,7 +72,7 @@ public class LevelCard : MonoBehaviour {
 
     private void SetIcon() {
         // Set the icon
-        icon.sprite = levelData.levelPreview;
+        if(levelData.levelPreview) icon.sprite = levelData.levelPreview;
     }
 
     public void PlayLevel() {

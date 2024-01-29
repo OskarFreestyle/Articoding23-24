@@ -32,6 +32,8 @@ public class ComunidadLayout : MonoBehaviour
 
     bool alreadyLogged = false;
 
+    private Texture2D levelIconImage;
+
     private void OnEnable()
     {
         if(!GameManager.Instance.GetLogged())
@@ -177,14 +179,14 @@ public class ComunidadLayout : MonoBehaviour
     {
         ServerClasses.Level theLevel = clasesManager.GetCommuintyLevel();
 
-        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.articodingLevel.initialState, theLevel.title, 7);
+        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.articodingLevel.initialState, levelIconImage, theLevel.title, 7);
 
         savePanel.SetActive(true);
     }
 
     public void SavePublicLevel(ServerClasses.Level theLevel)
     {
-        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.articodingLevel.initialState, theLevel.title, 7);
+        ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.articodingLevel.initialState, levelIconImage, theLevel.title, 7);
 
         savePanel.SetActive(true);
     }

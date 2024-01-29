@@ -29,8 +29,7 @@ public class LevelsDisplay : MonoBehaviour {
         // Set the back button color
         backButton.color = category.secondaryColor;
 
-        Debug.Log(category.name); // "0_Levels_Created
-
+        // Normal Categories
         if(category.name != "0_Levels_Created") {
             // Set the data for all the levels
             int i = 0;
@@ -41,34 +40,33 @@ public class LevelsDisplay : MonoBehaviour {
                 currentLevelCard.transform.localPosition = levelsLocalPositions[i];
                 i++;
             }
-            Debug.Log("Found " + i + " levels");
         }
-        // Levels Created
+        // Levels Created category
         else {
-            Debug.Log("Display created levels");
-
+            // Get the paths of all the files
             string[] boardFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/Boards/0_CreatedLevels", "*.json");
             string[] activeFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/ActiveBlocks/0_CreatedLevels", "*.json");
             string[] initialFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/InitialStates/0_CreatedLevels", "*.txt");
-
-            Debug.Log("Found Boards: " + boardFilePaths.Length + ", Active: " + activeFilePaths.Length + ", Initial: " + initialFilePaths.Length);
-
+            string[] levelPreviewPaths = Directory.GetFiles(Application.dataPath + "/Levels/LevelPreviewIcons/0_CreatedLevels", "*.png");
+            string[] fileNames = new string[boardFilePaths.Length];
+            
+            // Create an array for each kind of asset
             TextAsset[] boards = new TextAsset[boardFilePaths.Length];
             TextAsset[] activeBlocks = new TextAsset[activeFilePaths.Length];
             TextAsset[] initialBlocks = new TextAsset[initialFilePaths.Length];
+            Sprite[] levelIconsSprites = new Sprite[levelPreviewPaths.Length];
 
-            Debug.Log("TextAsset Boards: " + boards.Length + ", Active: " + activeBlocks.Length + ", Initial: " + initialBlocks.Length);
-
-            string[] fileNames = new string[boardFilePaths.Length];
-
-            Debug.Log("Filenames" + fileNames.Length);
-
-
+            // Read the textAssets
             for (int i = 0; i < boardFilePaths.Length; i++) {
                 boards[i] = new TextAsset(File.ReadAllText(boardFilePaths[i]));
                 activeBlocks[i] = new TextAsset(File.ReadAllText(activeFilePaths[i]));
                 initialBlocks[i] = new TextAsset(File.ReadAllText(initialFilePaths[i]));
                 fileNames[i] = Path.GetFileNameWithoutExtension(boardFilePaths[i]);
+            }
+
+            // Read the icons
+            for (int i = 0; i < levelPreviewPaths.Length; i++) {
+                levelIconsSprites[i] = TextureReader.LoadNewSprite(levelPreviewPaths[i]);
             }
 
             List<LevelDataSO> levelDataSOs = new List<LevelDataSO>();
@@ -81,21 +79,49 @@ public class LevelsDisplay : MonoBehaviour {
                 levelData.activeBlocks = activeBlocks[i];
                 levelData.customInitialState = initialBlocks[i];
                 levelData.levelBoard = boards[i];
-                levelData.levelPreview = backButton.sprite;
-
+                try {
+                    levelData.levelPreview = levelIconsSprites[i];
+                } catch(System.Exception e) {
+                    Debug.Log("Error reading the level preview: " + e);
+                }
                 levelDataSOs.Add(levelData);
             }
+
             int x = 0;
             foreach (LevelDataSO levelData in levelDataSOs) {
                 LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
                 currentLevelCard.SetLevelData(levelData);
-                currentLevelCard.SetLevelStars(3);
+                currentLevelCard.DisableStars();
                 currentLevelCard.transform.localPosition = levelsLocalPositions[x];
                 x++;
             }
-            Debug.Log("Found " + x + " levels");
         }
     }
+
+    //public Sprite LoadNewSprite(string FilePath, float PixelsPerUnit = 100.0f, SpriteMeshType spriteType = SpriteMeshType.Tight) {
+    //    // Load a PNG or JPG image from disk to a Texture2D, assign this texture to a new sprite and return its reference
+    //    Texture2D SpriteTexture = LoadTexture(FilePath);
+    //    Sprite NewSprite = Sprite.Create(SpriteTexture, new Rect(0, 0, SpriteTexture.width, SpriteTexture.height), new Vector2(0, 0), PixelsPerUnit, 0, spriteType);
+
+    //    return NewSprite;
+    //}
+
+    //public Texture2D LoadTexture(string FilePath) {
+
+    //    // Load a PNG or JPG file from disk to a Texture2D
+    //    // Returns null if load fails
+
+    //    Texture2D Tex2D;
+    //    byte[] FileData;
+
+    //    if (File.Exists(FilePath)) {
+    //        FileData = File.ReadAllBytes(FilePath);
+    //        Tex2D = new Texture2D(2, 2);           // Create new "empty" texture
+    //        if (Tex2D.LoadImage(FileData))           // Load the imagedata into the texture (size is set automatically)
+    //            return Tex2D;                 // If data = readable -> return texture
+    //    }
+    //    return null;                     // Return null if load failed
+    //}
 
     public void ClearDisplay() {
         // Clear all the levelCards
