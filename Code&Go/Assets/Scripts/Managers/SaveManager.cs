@@ -95,12 +95,13 @@ public class SaveManager : MonoBehaviour {
     }
 
     public void Save() {
-        Debug.Log("Save Manager - Save data");
+        Debug.Log("Call a save");
 
         // Save the game data
         GameSaveData gameData = new GameSaveData();
         gameData.progressData = ProgressManager.Instance.Save();
         gameData.tutorialInfo = TutorialManager.Instance.Save();
+        Debug.Log("Total tutoriales saved: " + gameData.tutorialInfo.tutorials.Length);
         
         // Add the hash to the save data
         SaveData data = new SaveData();

@@ -16,7 +16,7 @@ public class NameManager : MonoBehaviour
     {
         //blackPanel.SetActive(false);
         nameMenu.SetActive(false);
-        //userName.text = ProgressManager.Instance.GetName();
+        userName.text = ProgressManager.Instance.Name;
     }
 
     public void SetActiveNamePanel(bool active)
@@ -29,7 +29,7 @@ public class NameManager : MonoBehaviour
         name = inputField.text;
         userName.text = name;
 
-        //ProgressManager.Instance.SetName(name);
+        ProgressManager.Instance.Name = name;
 
         SetActiveNamePanel(false);
     }

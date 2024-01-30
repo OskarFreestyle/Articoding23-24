@@ -16,6 +16,7 @@ public class GameSaveData {
 
 [System.Serializable]
 public class ProgressSaveData {
+    public string name;
     public LevelsCreatedSaveData levelsCreatedData;
     public CategorySaveData[] categoriesInfo;
 

@@ -42,6 +42,7 @@ public class PopUpManager : MonoBehaviour {
         highlightImage.material = imageMaterial;
         mainContent.SetActive(false);
         if (TutorialManager.Instance.TutorialsON) bodyRect.gameObject.SetActive(true);
+        Hide();
     }
 
     public void Show(PopUpData data) {

@@ -24,6 +24,12 @@ public class ProgressManager : MonoBehaviour {
     }
 
     [SerializeField] private CategoryDataSO[] categoriesDataSO;
+
+    private new string name;
+    public string Name {
+        get { return name; }
+        set { name = value; }
+    }
     #endregion
 
     // Old
@@ -347,6 +353,7 @@ public class ProgressManager : MonoBehaviour {
 
         data.categoriesInfo = categoriesData;
         data.levelsCreatedData = levelsCreated;
+        data.name = name;
 
         //data.DebugLogCategoriesData(); // Todo quitar
         
@@ -355,6 +362,7 @@ public class ProgressManager : MonoBehaviour {
 
 
     public void Load(ProgressSaveData data) {
+        name = data.name;
         categoriesData = data.categoriesInfo;
         levelsCreated = data.levelsCreatedData;
 

@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 
 /// <summary>
-/// 
+/// Manage the tutorials pop ups
 /// </summary>
 public class TutorialManager : MonoBehaviour {
     private static TutorialManager instance;
@@ -23,7 +23,7 @@ public class TutorialManager : MonoBehaviour {
     private List<TutorialTrigger> conditionTriggers = null;
     private HashSet<string> triggered = null;   // Stores the hash of all triggered tutorial
     private List<TutorialTrigger> savePending;  // Stores the pending triggers to be saved
-    private HashSet<string> saved = null; // Stores save data, loaded from file or modified on execution
+    private HashSet<string> saved = null;       // Stores save data, loaded from file or modified on execution
 
     private bool needToBeDestroyed = false;
     private float lastWidth;
@@ -40,12 +40,8 @@ public class TutorialManager : MonoBehaviour {
             Init();
         }
         else {
-            //Debug.LogWarning("More than 1 Tutorial Manager created");
-            //DestroyImmediate(gameObject);
-            // TODO creo que quitar
-            Instance.tutorialsON = tutorialsON;
-            needToBeDestroyed = true;
-            lastTutorialTrigger = null;
+            Debug.LogWarning("More than 1 Tutorial Manager created");
+            DestroyImmediate(gameObject);
         }
         Debug.Log("Tutorial Manager Awake Finished");
     }
@@ -58,32 +54,12 @@ public class TutorialManager : MonoBehaviour {
         saved = new HashSet<string>();
     }
 
-    private bool showInfo = false;
-    private void Start() {
-        //Horrible
-        if (needToBeDestroyed) {
-            Instance.Start();
-            Destroy(gameObject);
-            return;
-        }
-
-        TutorialTrigger[] aux = FindObjectsOfType<TutorialTrigger>();
-        if(showInfo) Debug.Log("Found " + aux.Length + " tutorial triggers");
-
-        for (int i = 0; i < aux.Length; i++) {
-            if (showInfo) Debug.Log("Try " + i + ", " + aux[i].name + aux[i].transform.parent);
-            AddTutorialTrigger(aux[i], true);
-            if (showInfo) Debug.Log("Trigger " + i + " added, " + aux[i].gameObject + aux[i].gameObject.GetComponentInParent<Transform>().name);
-        }
-
-        conditionTriggers.Sort();
-        if (showInfo) Debug.Log("Sorted");
-
-    }
-
     private void Update() {
         if (!tutorialsON) return;
 
+        if(!popUpManager) {
+            popUpManager = FindObjectOfType<PopUpManager>();
+        }
         popUpManager.enabled = true;
 
         if (lastWidth != Screen.width || lastHeight != Screen.height)
@@ -179,10 +155,12 @@ public class TutorialManager : MonoBehaviour {
         /*if (t.destroyOnShowed)
             Destroy(t);*/
 
+        // Save the advance
+        SaveManager.Instance.Save();
     }
 
     public void AddTutorialTrigger(TutorialTrigger t, bool checkTriggered = false) {
-        if (checkTriggered && triggered.Contains(t.GetHash())) return;
+        if (t && checkTriggered && triggered.Contains(t.GetHash())) return;
 
         if (t.condition != null) {
             if (conditionTriggers.Find((TutorialTrigger other) => other.GetHash() == t.GetHash()) != null) 
@@ -214,7 +192,6 @@ public class TutorialManager : MonoBehaviour {
     public TutorialSaveData Save() {
         string[] array = new string[saved.Count];
         saved.CopyTo(array);
-
         TutorialSaveData data = new TutorialSaveData();
         data.tutorials = array;
         return data;

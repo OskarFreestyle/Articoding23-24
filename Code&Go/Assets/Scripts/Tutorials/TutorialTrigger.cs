@@ -10,7 +10,7 @@ public class TutorialTrigger : MonoBehaviour, IComparable<TutorialTrigger> {
 
     public bool highlightObject = true;
     public bool destroyOnShowed = false;
-    public bool isSaveCheckpoint = false;
+    public bool isSaveCheckpoint = true;
 
     public UnityEvent OnShowed;
 
@@ -21,6 +21,7 @@ public class TutorialTrigger : MonoBehaviour, IComparable<TutorialTrigger> {
     private bool waitCanvasSync = false;
 
     private void Awake() {
+        isSaveCheckpoint = true;
         if ((mRectTransform = GetComponent<RectTransform>()) != null) { waitCanvasSync = true; return; }
         if ((mRenderer = GetComponent<Renderer>()) != null) return;
         if ((mCollider = GetComponent<Collider>()) != null) { waitColliderSync = true; return; }
@@ -39,6 +40,7 @@ public class TutorialTrigger : MonoBehaviour, IComparable<TutorialTrigger> {
 
         if (TutorialManager.Instance != null)
             TutorialManager.Instance.AddTutorialTrigger(this, true);
+
     }
 
     public IEnumerator AsyncColliderStart() {

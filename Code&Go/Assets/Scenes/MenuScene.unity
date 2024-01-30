@@ -5412,7 +5412,7 @@ MonoBehaviour:
   info: {fileID: 11400000, guid: 8da9ce2e3d30e364f82bc5c34cff2020, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
-  isSaveCheckpoint: 0
+  isSaveCheckpoint: 1
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
@@ -9403,7 +9403,7 @@ MonoBehaviour:
   info: {fileID: 11400000, guid: d1b75eab4eec8c1479349a49e6e751e2, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
-  isSaveCheckpoint: 0
+  isSaveCheckpoint: 1
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
@@ -11875,7 +11875,7 @@ MonoBehaviour:
   info: {fileID: 11400000, guid: 32daed3d74add6f4a9b11ab602afe3c9, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
-  isSaveCheckpoint: 0
+  isSaveCheckpoint: 1
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
@@ -12773,7 +12773,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 808519762}
   m_HandleRect: {fileID: 808519760}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 0.000000047131394
   m_Size: 0.27042255
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -14895,7 +14895,7 @@ MonoBehaviour:
   info: {fileID: 11400000, guid: a211d8400db4b08479465c335223b00f, type: 2}
   highlightObject: 1
   destroyOnShowed: 1
-  isSaveCheckpoint: 0
+  isSaveCheckpoint: 1
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
@@ -18851,7 +18851,7 @@ MonoBehaviour:
   info: {fileID: 11400000, guid: ae3dba98c7ae97d458086bf40dcd742c, type: 2}
   highlightObject: 0
   destroyOnShowed: 1
-  isSaveCheckpoint: 0
+  isSaveCheckpoint: 1
   OnShowed:
     m_PersistentCalls:
       m_Calls: []
