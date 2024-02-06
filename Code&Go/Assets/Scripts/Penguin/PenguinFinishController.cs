@@ -7,7 +7,6 @@ public class PenguinFinishController : MonoBehaviour {
     [SerializeField] private Animator animator;
 
     public void SetFinishAnimation(int numberStars) {
-
         animator.SetInteger("NumberStars", numberStars);
     }
 }

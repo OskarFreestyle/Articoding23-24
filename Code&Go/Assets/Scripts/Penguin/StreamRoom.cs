@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StreamRoom : MonoBehaviour
-{
-    public Animator penguinAnim;
+public class StreamRoom : MonoBehaviour {
+    [SerializeField] private Animator penguinAnim;
 
     private Animator streamRoomAnim;
 
-    private void Start()
+    private void Awake()
     {
         streamRoomAnim = GetComponent<Animator>();
     }

@@ -48,8 +48,6 @@ public class LevelManager : MonoBehaviour {
 
     [SerializeField] private int pasosOffset = 0;
 
-    [SerializeField] private GameObject specialStarPref;
-
     public GameObject endPanel;
     public GameObject transparentRect;
     public GameObject blackRect;
