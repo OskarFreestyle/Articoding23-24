@@ -69,7 +69,6 @@ public class LevelManager : MonoBehaviour {
     //[SerializeField] private LocalizeStringEvent endText;
 
     public StreamRoom streamRoom;
-
     public Button exitButtonLeft;
     public Button exitButtonRight;
     public Button retryButton;

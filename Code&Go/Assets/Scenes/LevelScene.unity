@@ -7841,6 +7841,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7227774479881777925, guid: 19b06a5b4833b304889ca6960cd4f8e6, type: 3}
+      propertyPath: m_Range
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7227774479881777925, guid: 19b06a5b4833b304889ca6960cd4f8e6, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7227774479945545132, guid: 19b06a5b4833b304889ca6960cd4f8e6, type: 3}
       propertyPath: m_Name
       value: Stream Room
@@ -11702,7 +11710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7227774478820239297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.249, y: 4.18, z: -0.44}
+  m_LocalPosition: {x: -2.249, y: 1.02, z: -10.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7227774478884004203}
@@ -11720,8 +11728,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 25
+  m_Intensity: 1.5
+  m_Range: 50
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

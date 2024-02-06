@@ -14,11 +14,14 @@ public class LevelsDisplay : MonoBehaviour {
     [SerializeField] private Image backButton;
 
     [SerializeField] private LevelCard levelCardTemplate;
+    [SerializeField] private LevelCard createLevelCardTemplate;
     [SerializeField] private List<Vector3> levelsLocalPositions;
+
+    [SerializeField] private Transform levelsPage;
 
     public void InstanciateLevelsFromCategory(CategoryDataSO category) {
         // Active the levels page
-        transform.parent.gameObject.SetActive(true);
+        levelsPage.gameObject.SetActive(true);
 
         // Set the title
         titleLocalized.StringReference = category.titleLocalized;
@@ -93,41 +96,29 @@ public class LevelsDisplay : MonoBehaviour {
                 category.levels.Add(levelData);
             }
 
+            // Create the create level card 
             int x = 0;
+            int y = 0;
+            LevelCard createLevelCard = Instantiate(createLevelCardTemplate, transform);
+            createLevelCard.transform.localPosition = levelsLocalPositions[x];
+            x++;
+
+            // Create the others cards
             foreach (LevelDataSO levelData in levelDataSOs) {
+
                 LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
                 currentLevelCard.SetLevelData(levelData);
                 currentLevelCard.DisableStars();
-                currentLevelCard.transform.localPosition = levelsLocalPositions[x];
+                currentLevelCard.transform.localPosition = levelsLocalPositions[x] - new Vector3(0, (y * 385), 0);
+
                 x++;
+                if (x > 4) {
+                    y++;
+                    x = 0;
+                }
             }
         }
     }
-
-    //public Sprite LoadNewSprite(string FilePath, float PixelsPerUnit = 100.0f, SpriteMeshType spriteType = SpriteMeshType.Tight) {
-    //    // Load a PNG or JPG image from disk to a Texture2D, assign this texture to a new sprite and return its reference
-    //    Texture2D SpriteTexture = LoadTexture(FilePath);
-    //    Sprite NewSprite = Sprite.Create(SpriteTexture, new Rect(0, 0, SpriteTexture.width, SpriteTexture.height), new Vector2(0, 0), PixelsPerUnit, 0, spriteType);
-
-    //    return NewSprite;
-    //}
-
-    //public Texture2D LoadTexture(string FilePath) {
-
-    //    // Load a PNG or JPG file from disk to a Texture2D
-    //    // Returns null if load fails
-
-    //    Texture2D Tex2D;
-    //    byte[] FileData;
-
-    //    if (File.Exists(FilePath)) {
-    //        FileData = File.ReadAllBytes(FilePath);
-    //        Tex2D = new Texture2D(2, 2);           // Create new "empty" texture
-    //        if (Tex2D.LoadImage(FileData))           // Load the imagedata into the texture (size is set automatically)
-    //            return Tex2D;                 // If data = readable -> return texture
-    //    }
-    //    return null;                     // Return null if load failed
-    //}
 
     public void ClearDisplay() {
         // Clear all the levelCards
@@ -136,6 +127,6 @@ public class LevelsDisplay : MonoBehaviour {
         }
 
         // Then disable the gameObject
-        transform.parent.gameObject.SetActive(false);
+        levelsPage.gameObject.SetActive(false);
     }
 }
