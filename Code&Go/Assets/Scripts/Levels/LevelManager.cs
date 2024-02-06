@@ -48,6 +48,8 @@ public class LevelManager : MonoBehaviour {
 
     [SerializeField] private int pasosOffset = 0;
 
+    [SerializeField] private GameObject specialStarPref;
+
     public GameObject endPanel;
     public GameObject transparentRect;
     public GameObject blackRect;
@@ -146,6 +148,8 @@ public class LevelManager : MonoBehaviour {
             // Active the stars
             starsController.GiveMinimumStepsStar(boardManager.GetCurrentSteps() - (minimosPasos + pasosOffset));
             starsController.GiveHangingCodeStar(boardManager.GetNumOfTopBlocksUsed());
+
+            Debug.Log("Special block after finish: " + specialBlock);
             starsController.GiveSpecialStar(specialBlock);
 
             // Choose the current penguin reaction
@@ -201,11 +205,11 @@ public class LevelManager : MonoBehaviour {
 
     private void InitializeCommunityLevel()
     {
-        //Restricciones y estado inicial
+        // Restricciones y estado inicial
         ActivateLevelBlocks(GameManager.Instance.GetCommunityLevelActiveBlocks(), false);
         LoadInitialBlocks(GameManager.Instance.GetCommunityInitialState());//UI
 
-        //Tablero
+        // Tablero
         BoardState state = GameManager.Instance.GetCommunityLevelBoard();
         boardManager.LoadBoard(state, buildLimits);
         cameraFit.FitBoard(boardManager.GetRows(), boardManager.GetColumns());
@@ -512,15 +516,25 @@ public class LevelManager : MonoBehaviour {
 
     private void SetSpecialBlockStarActive(bool active)
     {
+        Debug.Log("Set special block star: " + specialBlock);
         GameObject blockPrefab = BlockResMgr.Get().LoadBlockViewPrefab(specialBlock);
 
-        if (blockPrefab != null)
-        {
+        if (blockPrefab != null) {
+            //Debug.Log(blockPrefab.name);
+            ////Debug.Log(blockPrefab.transform);
+            //GameObject starP = Instantiate(specialStarPref, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+            //starP.transform.parent = blockPrefab.transform;
+            ////star.name = "Special Star";
+            ////star.transform.SetParent(blockPrefab.transform);
+
             Transform star = Array.Find(blockPrefab.GetComponentsInChildren<Transform>(),
                 (transform => { return transform.gameObject.name == "Star"; }));
+
             if (star)
                 star.gameObject.GetComponent<Image>().enabled = active;
+            else Debug.Log("Star is null");
         }
+        else Debug.Log("Special block is null");
         
     }
 }

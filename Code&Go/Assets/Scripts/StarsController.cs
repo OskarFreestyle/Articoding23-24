@@ -64,6 +64,7 @@ public class StarsController : Listener {
         string s = Array.Find(blocksUsedInLevel,((string s) => {return s==specialBlock;}));
         if(s == null && specialBlock != "None" )
         {
+            Debug.Log("Special start obtained");
             specialBlockStar.color = deactivatedColor;
         }
     }
