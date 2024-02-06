@@ -1,0 +1,20 @@
+<xml>
+    <variables />
+    <block type="start_start" id="nku0+Ko1ktBK[,ng%$5D" x="140" y="-123">
+        <next>
+            <block type="movement_move" id=",(7b}$vN]h+-D*OGmA7;">
+                <field name="DIRECTION">DOWN</field>
+                <value name="NAME">
+                    <block type="text" id="eqL7Rch,5@LhB!;BP-?o">
+                        <field name="TEXT">Laser_1</field>
+                    </block>
+                </value>
+                <value name="AMOUNT">
+                    <block type="math_number" id="sM]e+`:4XHavjp1eA$Tj">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+            </block>
+        </next>
+    </block>
+</xml>
