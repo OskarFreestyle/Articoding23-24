@@ -36,12 +36,19 @@ public class LevelsDisplay : MonoBehaviour {
         if(category.name != "0_Levels_Created") {
             // Set the data for all the levels
             int i = 0;
-            foreach(LevelDataSO levelData in category.levels) {
+            int x = 0;
+            int y = 0;
+            foreach (LevelDataSO levelData in category.levels) {
                 LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
                 currentLevelCard.SetLevelData(levelData);
                 currentLevelCard.SetLevelStars(ProgressManager.Instance.GetLevelStars(category, i));
-                currentLevelCard.transform.localPosition = levelsLocalPositions[i];
+                currentLevelCard.transform.localPosition = levelsLocalPositions[x] - new Vector3(0, (y * 385), 0);
                 i++;
+                x++;
+                if (x > 4) {
+                    y++;
+                    x = 0;
+                }
             }
         }
         // Levels Created category
