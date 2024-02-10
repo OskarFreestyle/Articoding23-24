@@ -164,6 +164,11 @@ MonoBehaviour:
     - Locale-en
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc03dace7d6a78c4c9ae62a59af260f2
+    m_Address: Assets/Localization/Tables/Community Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: fcd72a3575af0a34e932bbaab802abd7, type: 2}
   m_SchemaSet:

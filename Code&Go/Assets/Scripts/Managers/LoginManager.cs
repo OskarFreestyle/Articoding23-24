@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class LoginManager : MonoBehaviour
-{
+public class LoginManager : MonoBehaviour {
     public GameObject waitPanel;
     public GameObject OKPanel;
     public GameObject KOPanel;
@@ -18,10 +17,8 @@ public class LoginManager : MonoBehaviour
 
     string userName = "";
 
-    public void TryToLogIn(string user, string pass)
-    {
-        if (waitPanel != null)
-        {
+    public void TryToLogIn(string user, string pass) {
+        if (waitPanel != null) {
             waitPanel.SetActive(true);
         }
 
@@ -34,8 +31,7 @@ public class LoginManager : MonoBehaviour
         activated.Post("login", JsonUtility.ToJson(loginJson), OnLoginOK, OnLoginKO);
     }
 
-    public void LogOut()
-    {
+    public void LogOut() {
         if(comunidadLayout != null)
             comunidadLayout.IsNotLoggedAction();
 
@@ -47,8 +43,7 @@ public class LoginManager : MonoBehaviour
         GameManager.Instance.SetLogged(false);
     }
 
-    int OnLoginOK(UnityWebRequest req)
-    {
+    int OnLoginOK(UnityWebRequest req) {
         ServerClasses.LoginResponse responseToken = JsonUtility.FromJson<ServerClasses.LoginResponse>(req.downloadHandler.text);
         Debug.Log("Logeado");
 
@@ -57,15 +52,13 @@ public class LoginManager : MonoBehaviour
         GameManager.Instance.SetUserName(userName);
         GameManager.Instance.SetLogged(true);
 
-        if (waitPanel != null)
-        {
+        if (waitPanel != null) {
             waitPanel.SetActive(false);
             OKPanel.SetActive(true);
             KOPanel.SetActive(false);
         }
 
-        if (logButton != null)
-        {
+        if (logButton != null) {
             logButton.SetActive(false);
             levelTestManager.ActivateExportButtons(responseToken.role != "ROLE_USER");
         }
@@ -81,8 +74,7 @@ public class LoginManager : MonoBehaviour
     int OnLoginKO(UnityWebRequest req)
     {
         Debug.Log("No logeado");
-        if (waitPanel != null)
-        {
+        if (waitPanel != null) {
             waitPanel.SetActive(false);
             KOPanel.SetActive(true);
             OKPanel.SetActive(false);
