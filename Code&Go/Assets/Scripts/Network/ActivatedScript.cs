@@ -75,9 +75,43 @@ public class ActivatedScript : MonoBehaviour {
             }
             else
             {
+                Debug.LogError("req en post: " + req.responseCode);
                 onKO(req);
             }
           }
+    }
+
+    //EN DESARROLLO, PUEDE SER
+    IEnumerator PutCourutine(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
+    {
+        string url = server + ":" + port + "/" + path;
+
+        var req = new UnityWebRequest(url, "PUT");
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
+        req.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
+        req.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        req.SetRequestHeader("Content-Type", "application/json");
+
+        if (GameManager.Instance.GetLogged())
+            req.SetRequestHeader("Authorization", GameManager.Instance.GetToken());
+
+        yield return req.SendWebRequest();
+
+        if (req.result == UnityWebRequest.Result.ConnectionError)
+        {
+            showError("Error en put: " + req.error);
+        }
+        else
+        {
+            if (req.responseCode == 200)
+            {
+                onOK(req);
+            }
+            else
+            {
+                onKO(req);
+            }
+        }
     }
 
     IEnumerator GetCourutine(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
@@ -113,6 +147,11 @@ public class ActivatedScript : MonoBehaviour {
     public void Post(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
     {
         StartCoroutine(PostCourutine(path, json, onOK, onKO));
+    }
+
+    public void Put(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
+    {
+        StartCoroutine(PutCourutine(path, json, onOK, onKO));
     }
 
     public void Get(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)

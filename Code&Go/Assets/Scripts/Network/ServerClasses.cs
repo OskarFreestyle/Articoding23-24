@@ -16,6 +16,13 @@ public class ServerClasses : MonoBehaviour
     }
 
     [System.Serializable]
+    public class CreateAccount
+    {
+        public string username;
+        public string password;
+    }
+
+    [System.Serializable]
     public class LoginResponse
     {
         public string role;

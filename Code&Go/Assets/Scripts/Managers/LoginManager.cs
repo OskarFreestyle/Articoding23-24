@@ -31,6 +31,22 @@ public class LoginManager : MonoBehaviour {
         activated.Post("login", JsonUtility.ToJson(loginJson), OnLoginOK, OnLoginKO);
     }
 
+    public void TryToCreateAccount(string user, string pass)
+    {
+        if (waitPanel != null)
+        {
+            waitPanel.SetActive(true);
+        }
+
+        ServerClasses.CreateAccount createAccountJson = new ServerClasses.CreateAccount();
+        createAccountJson.username = user;
+        createAccountJson.password = pass;
+
+        userName = user;
+
+        activated.Post("users/students", JsonUtility.ToJson(createAccountJson), OnLoginOK, OnLoginKO);
+    }
+
     public void LogOut() {
         if(comunidadLayout != null)
             comunidadLayout.IsNotLoggedAction();

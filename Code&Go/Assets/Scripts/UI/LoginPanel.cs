@@ -59,13 +59,13 @@ public class LoginPanel : MonoBehaviour {
 
     public void TryToLogIn() {
         Debug.Log("Log In user: " + logInUsername.text + ", pass: " + logInPassword.text);
-        //loginManager.TryToLogIn(user, pass);
-        //logInPassword.text = "";
+        loginManager.TryToLogIn(logInUsername.text, logInPassword.text);
+        logInPassword.text = "";
     }
 
     public void TryToCreateAccount() {
         Debug.Log("Create Account user: " + createAccountUsername.text + ", pass: " + createAccountPassword.text);
-        //loginManager.TryToLogIn(user, pass);
-        //createAccountPassword.text = "";
+        loginManager.TryToCreateAccount(createAccountUsername.text, createAccountPassword.text);
+        createAccountPassword.text = "";
     }
 }
