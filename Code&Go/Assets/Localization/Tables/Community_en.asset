@@ -34,5 +34,9 @@ MonoBehaviour:
     m_Localized: Create account
     m_Metadata:
       m_Items: []
+  - m_Id: 636062130765824
+    m_Localized: Log Out
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

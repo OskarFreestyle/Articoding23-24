@@ -33,6 +33,10 @@ MonoBehaviour:
     m_Key: Create account
     m_Metadata:
       m_Items: []
+  - m_Id: 636062130765824
+    m_Key: Log Out Title
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

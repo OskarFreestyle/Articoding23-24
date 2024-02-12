@@ -34,5 +34,9 @@ MonoBehaviour:
     m_Localized: Crear cuenta
     m_Metadata:
       m_Items: []
+  - m_Id: 636062130765824
+    m_Localized: "Cerrar Sesi\xF3n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

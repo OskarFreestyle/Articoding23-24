@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoginPanel : MonoBehaviour {
+public class LogInCard : MonoBehaviour {
 
     [SerializeField] private Button logInPageButton; 
     [SerializeField] private Button createAccountPageButton;
@@ -44,18 +44,6 @@ public class LoginPanel : MonoBehaviour {
         logInPage.gameObject.SetActive(createAccountPageButton.interactable);
         createAccountPage.gameObject.SetActive(logInPageButton.interactable);
     }
-
-
-    //private void Start() {
-    //    // Delegate the Log in button
-    //    logInButton.onClick.AddListener(delegate { TryToLogIn(logInUsername.text, logInPassword.text); });
-
-    //    // Delegate the Create account button
-    //    createAccountButton.onClick.AddListener(delegate { TryToCreateAccount(createAccountUsername.text, createAccountPassword.text); });
-
-    //    // Disable the create account page
-    //    createAccountPage.gameObject.SetActive(false);
-    //}
 
     public void TryToLogIn() {
         Debug.Log("Log In user: " + logInUsername.text + ", pass: " + logInPassword.text);
