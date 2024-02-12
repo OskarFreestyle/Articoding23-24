@@ -395,5 +395,9 @@ MonoBehaviour:
       the content'
     m_Metadata:
       m_Items: []
+  - m_Id: 364170586539950080
+    m_Localized: Medals
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -28,6 +28,5 @@ public class NameManager : MonoBehaviour
         SaveManager.Instance.Save();
 
         SetActiveNamePanel(false);
-
     }
 }

@@ -389,6 +389,10 @@ MonoBehaviour:
     m_Key: youfailed_header
     m_Metadata:
       m_Items: []
+  - m_Id: 364170586539950080
+    m_Key: Medals
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

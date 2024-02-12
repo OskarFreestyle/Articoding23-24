@@ -4560,7 +4560,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
-      m_KeyId: 121802594339913728
+      m_KeyId: 121803009508900864
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -10728,9 +10728,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:dc03dace7d6a78c4c9ae62a59af260f2
+      m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
-      m_KeyId: 307465289728
+      m_KeyId: 364170586539950080
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -14348,7 +14348,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
-      m_KeyId: 121802594339913728
+      m_KeyId: 121803569364598784
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -23434,7 +23434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.060899604, g: 0.9245283, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -24428,7 +24428,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:a894dd1023aa1204dbc04675aada18ae
     m_TableEntryReference:
-      m_KeyId: 121802594339913728
+      m_KeyId: 121803119202533376
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -29147,7 +29147,7 @@ MonoBehaviour:
   blackPanel: {fileID: 1512015273}
   nameMenu: {fileID: 1766057907}
   inputField: {fileID: 1120660957}
-  userName: {fileID: 0}
+  userName: {fileID: 1822548961}
 --- !u!4 &1822258253
 Transform:
   m_ObjectHideFlags: 0
@@ -29174,10 +29174,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b5361068ca8a214fb8aa3e9fe1a48b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starsText: {fileID: 0}
-  levelsText: {fileID: 0}
-  perfectText: {fileID: 0}
-  categoryText: {fileID: 0}
+  medals:
+  - {fileID: 160047788}
+  - {fileID: 730772893}
+  - {fileID: 1797752082}
+  - {fileID: 960032555}
+  - {fileID: 1910674489}
+  - {fileID: 142933711}
+  - {fileID: 791243132}
+  activeMedalColor: {r: 1, g: 1, b: 1, a: 1}
+  disactiveMedalColor: {r: 0.48235294, g: 0.48235294, b: 0.48235294, a: 0.48235294}
+  starsText: {fileID: 153835933}
+  levelsText: {fileID: 1439977039}
+  perfectText: {fileID: 860219257}
+  categoryText: {fileID: 1428400339}
 --- !u!1 &1822548958
 GameObject:
   m_ObjectHideFlags: 0
@@ -29189,7 +29199,6 @@ GameObject:
   - component: {fileID: 1822548959}
   - component: {fileID: 1822548962}
   - component: {fileID: 1822548961}
-  - component: {fileID: 1822548960}
   m_Layer: 5
   m_Name: Name Text
   m_TagString: Untagged
@@ -29216,45 +29225,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: 0}
   m_SizeDelta: {x: 600, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1822548960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822548958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StringReference:
-    m_TableReference:
-      m_TableCollectionName: GUID:dc03dace7d6a78c4c9ae62a59af260f2
-    m_TableEntryReference:
-      m_KeyId: 307465289728
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  m_FormatArguments: []
-  m_UpdateString:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1822548961}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
-        m_MethodName: set_text
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  references:
-    version: 1
 --- !u!114 &1822548961
 MonoBehaviour:
   m_ObjectHideFlags: 0

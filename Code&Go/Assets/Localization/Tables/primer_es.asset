@@ -393,5 +393,9 @@ MonoBehaviour:
     m_Localized: "Inicia sesi\xF3n para ver\nel contenido"
     m_Metadata:
       m_Items: []
+  - m_Id: 364170586539950080
+    m_Localized: Medallas
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
