@@ -13,6 +13,7 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     [SerializeField] private TabGroup tabGroup;
 
     [SerializeField] private Image background;
+
     public Image Background {
         get { return background; }
     }

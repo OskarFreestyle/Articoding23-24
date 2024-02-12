@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class ProfileManager : MonoBehaviour {
 
+    // Name
+    [SerializeField] private GameObject blackPanel;
+    [SerializeField] private GameObject nameMenu;
+    [SerializeField] private Text inputField;
+    [SerializeField] private Text userName;
+
     // Medals
     [SerializeField] private List<Image> medals;
     [SerializeField] private Color activeMedalColor;
@@ -16,16 +22,33 @@ public class ProfileManager : MonoBehaviour {
     [SerializeField] private Text perfectText;
     [SerializeField] private Text categoryText;
 
-    void Start() {
-        Debug.Log("Profile Manager Start");
+    public void UpdateUI() {
         SetPanelsTexts();
         SetMedals();
+        SetName();
+    }
+
+    private void SetName() {
+        nameMenu.SetActive(false);
+        userName.text = ProgressManager.Instance.Name;
+    }
+
+    public void SetActiveNamePanel(bool active) {
+        nameMenu.SetActive(active);
+        blackPanel.SetActive(active);
+    }
+    public void StoreName() {
+        name = inputField.text;
+        userName.text = name;
+
+        ProgressManager.Instance.Name = name;
+        SaveManager.Instance.Save();
+
+        SetActiveNamePanel(false);
     }
 
     private void SetMedals() {
         bool[] perfectCategories = ProgressManager.Instance.GetPerfectFinishedCategories();  // -1 because of the created category
-        Debug.Log(perfectCategories);
-
         int i = 1;
         foreach(Image medal in medals) {
             medal.color = perfectCategories[i] ? activeMedalColor : disactiveMedalColor;
