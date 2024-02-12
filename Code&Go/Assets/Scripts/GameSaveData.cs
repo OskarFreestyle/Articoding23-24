@@ -83,6 +83,16 @@ public class CategorySaveData {
         }
         return isFinished;
     }
+
+    public bool IsCategoryPerfectFinished() {
+        bool isPerfect = true;
+        int index = 0;
+        while (isPerfect && index < levelsData.Length) {
+            isPerfect = levelsData[index] == 3;
+            index++;
+        }
+        return isPerfect;
+    }
 }
 
 [System.Serializable]

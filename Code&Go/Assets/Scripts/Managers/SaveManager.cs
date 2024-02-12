@@ -9,6 +9,9 @@ using UnityEngine;
 /// </summary>
 public class SaveManager : MonoBehaviour {
 
+    // TODO quitar es para debug
+    bool checkHash = false;
+
     #region Properties
     public static SaveManager instance;
     static public SaveManager Instance {
@@ -80,15 +83,18 @@ public class SaveManager : MonoBehaviour {
         // Create the data from the json
         SaveData data = JsonUtility.FromJson<SaveData>(readerData);
 
-        // Check the hash TODO active
-        if (Hash.ToHash(data.gameData.ToString(), "") == data.hash) {
-            Debug.Log("Hash coincidente");
-            ProgressManager.Instance.Load(data.gameData.progressData);
-            Debug.Log("Progress data loaded");
-            TutorialManager.Instance.Load(data.gameData.tutorialInfo);
-            Debug.Log("Tutorial data loaded");
-        }
-        else Debug.LogWarning("Hash NO coincidente");
+        // Delete this if
+        //if (checkHash) {
+        //    // Check the hash TODO active
+        //    if (Hash.ToHash(data.gameData.ToString(), "") == data.hash) {
+                Debug.Log("Hash coincidente");
+                ProgressManager.Instance.Load(data.gameData.progressData);
+                Debug.Log("Progress data loaded");
+                TutorialManager.Instance.Load(data.gameData.tutorialInfo);
+                Debug.Log("Tutorial data loaded");
+        //    }
+        //    else Debug.LogWarning("Hash NO coincidente");
+        //}
 
         // Se ha modificado el archivo, empiezas de 0
         Save();

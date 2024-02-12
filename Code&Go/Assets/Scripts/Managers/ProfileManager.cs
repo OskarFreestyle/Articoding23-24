@@ -23,12 +23,12 @@ public class ProfileManager : MonoBehaviour {
     }
 
     private void SetMedals() {
-        int total = ProgressManager.Instance.GetTotalFinishedCategories() - 1;  // -1 because of the created category
-        Debug.Log("Total categories finished: " + total);
+        bool[] perfectCategories = ProgressManager.Instance.GetPerfectFinishedCategories();  // -1 because of the created category
+        Debug.Log(perfectCategories);
 
-        int i = 0;
+        int i = 1;
         foreach(Image medal in medals) {
-            medal.color = (i < total) ? activeMedalColor : disactiveMedalColor;
+            medal.color = perfectCategories[i] ? activeMedalColor : disactiveMedalColor;
             i++;
         }
     }

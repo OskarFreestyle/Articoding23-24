@@ -212,6 +212,16 @@ public class ProgressManager : MonoBehaviour {
         return totalFinishedCategories;
     }
 
+    public bool[] GetPerfectFinishedCategories() {
+        bool[] perfectCategories = new bool[categoriesData.Length];
+        for (int i = 0; i < perfectCategories.Length; i++) {
+            perfectCategories[i] = categoriesData[i].IsCategoryPerfectFinished();
+        }
+        return perfectCategories;
+    }
+
+
+
     public int GetLevelStars(int categoryIndex, int level)
     {
         if (categoryIndex >= categoriesData.Length || categoryIndex < 0 || level >= categoriesData[categoryIndex].levelsData.Length || level < 0) return 0;
