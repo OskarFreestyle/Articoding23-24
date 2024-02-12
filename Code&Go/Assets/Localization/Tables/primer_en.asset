@@ -399,5 +399,33 @@ MonoBehaviour:
     m_Localized: Medals
     m_Metadata:
       m_Items: []
+  - m_Id: 364194467233398784
+    m_Localized: Get all the stars in the Introduction category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194651732443136
+    m_Localized: Get all the stars in the Variables category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194686868127744
+    m_Localized: Get all the stars in the Data Types category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194704362569728
+    m_Localized: Get all the stars in the Operators category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194718136664064
+    m_Localized: Get all the stars in the Loops category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194742769811456
+    m_Localized: Get all the stars in the Conditions category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194764974456832
+    m_Localized: Get all the stars in the Functions category
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

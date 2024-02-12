@@ -397,5 +397,33 @@ MonoBehaviour:
     m_Localized: Medallas
     m_Metadata:
       m_Items: []
+  - m_Id: 364194467233398784
+    m_Localized: "Consigue todas las estrellas en la categor\xEDa Introducci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194651732443136
+    m_Localized: "Consigue todas las estrellas en la categor\xEDa Variables"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194686868127744
+    m_Localized: "Consigue todas las estrellas en la categor\xEDa Tipos de Datos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194704362569728
+    m_Localized: "Consigue todas las estrellas en la categor\xEDa Operadores"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194718136664064
+    m_Localized: "Consigue todas las estrellas en la categor\xEDa Bucles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194742769811456
+    m_Localized: "Consigue todas las estrellas en la categor\xEDa Condiciones"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194764974456832
+    m_Localized: "Consigue todas las estrellas en la categor\xEDa Funciones"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

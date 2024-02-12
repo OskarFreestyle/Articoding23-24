@@ -393,6 +393,34 @@ MonoBehaviour:
     m_Key: Medals
     m_Metadata:
       m_Items: []
+  - m_Id: 364194467233398784
+    m_Key: Medal_1_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194651732443136
+    m_Key: Medal_2_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194686868127744
+    m_Key: Medal_3_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194704362569728
+    m_Key: Medal_4_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194718136664064
+    m_Key: Medal_5_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194742769811456
+    m_Key: Medal_6_Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364194764974456832
+    m_Key: Medal_7_Description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
