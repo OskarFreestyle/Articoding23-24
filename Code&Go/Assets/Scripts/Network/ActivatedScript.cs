@@ -81,7 +81,6 @@ public class ActivatedScript : MonoBehaviour {
           }
     }
 
-    //EN DESARROLLO, PUEDE SER
     IEnumerator PutCourutine(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
     {
         string url = server + ":" + port + "/" + path;
