@@ -30,14 +30,12 @@ public class LevelsDisplay : MonoBehaviour {
         titleBGImage.color = category.secondaryColor;
 
         // Set the back button color
-        backButton.color = category.secondaryColor;
+        if(backButton) backButton.color = category.secondaryColor;
 
         // Normal Categories
         if(category.name != "0_Levels_Created") {
             // Set the data for all the levels
-            int i = 0;
-            int x = 0;
-            int y = 0;
+            int i = 0, x = 0, y = 0;
             foreach (LevelDataSO levelData in category.levels) {
                 LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
                 currentLevelCard.SetLevelData(levelData);

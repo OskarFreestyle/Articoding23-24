@@ -29,8 +29,9 @@ public class ProfileManager : MonoBehaviour {
     }
 
     private void SetName() {
+        Debug.Log("Name segun progress manager: " + ProgressManager.Instance.Name);
         nameMenu.SetActive(false);
-        userName.text = ProgressManager.Instance.Name;
+        userName.text = ProgressManager.Instance.Name != "" ? "Pengu" : ProgressManager.Instance.Name;
     }
 
     public void SetActiveNamePanel(bool active) {
@@ -38,6 +39,9 @@ public class ProfileManager : MonoBehaviour {
         blackPanel.SetActive(active);
     }
     public void StoreName() {
+        // Non empty names
+        if (inputField.text != "") return;
+
         name = inputField.text;
         userName.text = name;
 
@@ -48,6 +52,7 @@ public class ProfileManager : MonoBehaviour {
     }
 
     private void SetMedals() {
+        // Enable or disable the medals checking the progress manager
         bool[] perfectCategories = ProgressManager.Instance.GetPerfectFinishedCategories();  // -1 because of the created category
         int i = 1;
         foreach(Image medal in medals) {

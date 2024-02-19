@@ -23,7 +23,7 @@ public class CategoriesSwipe : MonoBehaviour {
     private void Start() {
         pos = new float[transform.childCount];
         scroll_pos = initialCategory / pos.Length;
-        ConfigureCategories(0, true);
+        ConfigureCategories(int.MaxValue, true);
     }
 
     private void Update() {

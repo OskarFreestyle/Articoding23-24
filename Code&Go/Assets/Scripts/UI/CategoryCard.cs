@@ -34,6 +34,8 @@ public class CategoryCard : MonoBehaviour {
     [SerializeField] private Image buttonBGImage;
 
     [SerializeField] private LevelsDisplay levelDisplay;
+    [SerializeField] private TabGroup tabGroup;
+    [SerializeField] private TabButton sandboxTabButton;
 
     private const int EXPAND_WIDTH = 640;
     private const int EXPAND_HEIGHT = 700;
@@ -82,7 +84,11 @@ public class CategoryCard : MonoBehaviour {
     }
 
     private void OnSelectedButtonClicked() {
-        levelDisplay.InstanciateLevelsFromCategory(category);
+        if (category.index != 0) {
+            levelDisplay.InstanciateLevelsFromCategory(category);
+        } else {
+            tabGroup.OnTabSelected(sandboxTabButton);
+        }
     }
 
     private void SetIcon() {

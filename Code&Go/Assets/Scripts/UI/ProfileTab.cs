@@ -9,5 +9,6 @@ public class ProfileTab : MonoBehaviour {
     private void Start() {
         Debug.Log("Profile tab start");
         profileManager.UpdateUI();
+        Debug.Log("Profile tab updated");
     }
 }
