@@ -54,6 +54,13 @@ public class LevelsDisplay : MonoBehaviour {
             // Clear the lastest levels data
             category.levels.Clear();
 
+            // Create the create level card 
+            int x = 0;
+            int y = 0;
+            LevelCard createLevelCard = Instantiate(createLevelCardTemplate, transform);
+            createLevelCard.transform.localPosition = levelsLocalPositions[x];
+            x++;
+
             // Get the paths of all the files
             string[] boardFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/Boards/0_CreatedLevels", "*.json");
             string[] activeFilePaths = Directory.GetFiles(Application.dataPath + "/Levels/ActiveBlocks/0_CreatedLevels", "*.json");
@@ -100,13 +107,6 @@ public class LevelsDisplay : MonoBehaviour {
                 levelDataSOs.Add(levelData);
                 category.levels.Add(levelData);
             }
-
-            // Create the create level card 
-            int x = 0;
-            int y = 0;
-            LevelCard createLevelCard = Instantiate(createLevelCardTemplate, transform);
-            createLevelCard.transform.localPosition = levelsLocalPositions[x];
-            x++;
 
             // Create the others cards
             foreach (LevelDataSO levelData in levelDataSOs) {

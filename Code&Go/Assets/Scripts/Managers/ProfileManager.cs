@@ -40,7 +40,7 @@ public class ProfileManager : MonoBehaviour {
     }
     public void StoreName() {
         // Non empty names
-        if (inputField.text != "") return;
+        if (inputField.text == "") return;
 
         name = inputField.text;
         userName.text = name;
