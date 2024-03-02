@@ -7,6 +7,8 @@ public class UploadLevelCard : MonoBehaviour {
 
     [SerializeField] private Text levelName;
     [SerializeField] private Image levelImage;
+    [SerializeField] private RectTransform uploadButton;
+    [SerializeField] private RectTransform uploadedCheck;
 
     private LevelDataSO levelDataSO;
 
@@ -18,6 +20,8 @@ public class UploadLevelCard : MonoBehaviour {
 
     public void UploadLevel() {
         CommunityManager.Instance.UploadLevel(levelDataSO);
-    }
 
+        uploadedCheck.gameObject.SetActive(true);
+        uploadButton.gameObject.SetActive(false);
+    }
 }

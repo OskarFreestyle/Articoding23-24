@@ -13,17 +13,18 @@ public class CommunityLevelExpanded : MonoBehaviour {
     [SerializeField] private Text levelPlays;
     [SerializeField] private Text levelHastags;
 
-
     public void ConfigureLevel(ServerClasses.Level level) {
-        levelName.text = level.name;
-        levelAuthor.text = level.owner.username;
-        levelID.text = level.id.ToString();
+        //levelName.text = level.name;
+        //levelAuthor.text = level.owner.username;
+        //levelID.text = level.id.ToString();
 
-        levelLikes.text = level.likes.ToString();
-        levelPlays.text = level.plays.ToString();
+        //levelLikes.text = level.likes.ToString();
+        //levelPlays.text = level.plays.ToString();
+    }
 
-
-
+    public void LikeLevel(bool state) {
+        if(state) levelLikes.text = (int.Parse(levelLikes.text) + 1).ToString();
+        else levelLikes.text = (int.Parse(levelLikes.text) - 1).ToString();
     }
 
 

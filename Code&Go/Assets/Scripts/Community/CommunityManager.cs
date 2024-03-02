@@ -16,6 +16,8 @@ public class CommunityManager : MonoBehaviour {
 
     [SerializeField] private LevelsDisplay levelsDisplay;
 
+    [SerializeField] private BrowseLevelsDisplay browseLevelsDisplay;
+
     private List<ServerClasses.Level> levelsList;
 
 
@@ -46,9 +48,10 @@ public class CommunityManager : MonoBehaviour {
 
     public void GetBrowseLevels() {
         // Obtain the levels from the server
-        activatedScript.Get("levels?publicLevels=true&size=6", GetBrowseLevelsOK, GetBrowseLevelsKO);
+        //activatedScript.Get("levels?publicLevels=true&size=6", GetBrowseLevelsOK, GetBrowseLevelsKO);
 
         // Load the levels
+        browseLevelsDisplay.Configure();
 
     }
 
