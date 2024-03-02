@@ -99,7 +99,7 @@ public class LevelsDisplay : MonoBehaviour {
                 levelData.levelBoard = boards[i];
                 levelData.index = i;
                 try {
-                    levelData.levelPreview = levelIconsSprites[i];
+                    levelData.levelImage = levelIconsSprites[i];
                 } catch(System.Exception e) {
                     Debug.Log("Error reading the level preview: " + e);
                 }

@@ -10,7 +10,7 @@ public class LevelDataSO : ScriptableObject {
 
     public LocalizedString levelNameLocalized;
 
-    public Sprite levelPreview;
+    public Sprite levelImage;
     
     // Old
     public string levelName;

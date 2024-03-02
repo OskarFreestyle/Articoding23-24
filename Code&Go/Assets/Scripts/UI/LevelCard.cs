@@ -56,7 +56,6 @@ public class LevelCard : MonoBehaviour {
             titleLocalized.RefreshString();
             titleText.text = titleLocalized.StringReference.GetLocalizedStringAsync().Result;
         } catch (System.Exception e) {
-            Debug.Log("Created level so text is ");
             titleText.text = levelData.levelName;
         }
     }
@@ -72,7 +71,7 @@ public class LevelCard : MonoBehaviour {
 
     private void SetIcon() {
         // Set the icon
-        if(levelData.levelPreview) icon.sprite = levelData.levelPreview;
+        if(levelData.levelImage) icon.sprite = levelData.levelImage;
     }
 
     public void PlayLevel() {

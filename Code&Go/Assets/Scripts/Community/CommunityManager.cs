@@ -14,7 +14,10 @@ public class CommunityManager : MonoBehaviour {
 
     [SerializeField] private ActivatedScript activatedScript;
 
+    [SerializeField] private LevelsDisplay levelsDisplay;
+
     private List<ServerClasses.Level> levelsList;
+
 
     private void Awake() {
         Debug.Log("Community Manager Awake");
@@ -33,6 +36,14 @@ public class CommunityManager : MonoBehaviour {
 
 
     #region Button Functions
+    public void UploadLevel(LevelDataSO levelDataSO) {
+        Debug.Log("CommunityManager Upload Level");
+    }
+
+    public void showCreatedLevels() {
+
+    }
+
     public void GetBrowseLevels() {
         // Obtain the levels from the server
         activatedScript.Get("levels?publicLevels=true&size=6", GetBrowseLevelsOK, GetBrowseLevelsKO);
