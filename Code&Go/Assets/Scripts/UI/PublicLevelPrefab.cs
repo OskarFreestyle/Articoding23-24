@@ -10,7 +10,7 @@ public class PublicLevelPrefab : LevelPrefabOld
     public override void SetLevel(ServerClasses.Level level, ClasesManager clas, ComunidadLayout com)
     {
         base.level = level;
-        levelName.text = level.title;
+        levelName.text = level.name;
         clasesManager = clas;
 
         playButton.onClick.AddListener(() =>

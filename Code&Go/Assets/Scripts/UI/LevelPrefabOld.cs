@@ -19,7 +19,7 @@ public class LevelPrefabOld : MonoBehaviour
     public virtual void SetLevel(ServerClasses.Level level, ClasesManager clas, ComunidadLayout com)
     {
         this.level = level;
-        levelName.text = level.title;
+        levelName.text = level.name;
         clasesManager = clas;
 
         playButton.onClick.AddListener(() =>

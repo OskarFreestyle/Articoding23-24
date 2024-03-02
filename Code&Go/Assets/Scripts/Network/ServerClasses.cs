@@ -2,12 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ServerClasses : MonoBehaviour
-{
+public class ServerClasses : MonoBehaviour {
 
-    /// <summary>
-    /// Login classes
-    /// </summary>
     [System.Serializable]
     public class Login
     {
@@ -37,10 +33,6 @@ public class ServerClasses : MonoBehaviour
         public int id;
         public string role;
     }
-
-    /// <summary>
-    /// Clases y levels classes
-    /// </summary>
 
     [System.Serializable]
     public class Clase
@@ -125,16 +117,23 @@ public class ServerClasses : MonoBehaviour
     }
 
     [System.Serializable]
-    public class Level
-    {
-        public User owner;
-        public bool active;
-        public string description;
-        public int classRooms;
-        public ArticodingLevel articodingLevel;
-        public string title;
-        public bool publicLevel;
+    public class Level {
+
+        public string name;
+        public User owner; // Owner or just string author
         public int id;
+
+        public int likes;
+        public int plays;
+
+        public List<int> hastagsIDs;
+
+
+        public ArticodingLevel articodingLevel;
+        
+        public int classRooms;
+        public bool publicLevel;
+        public bool active;
     }
 
     [System.Serializable]
