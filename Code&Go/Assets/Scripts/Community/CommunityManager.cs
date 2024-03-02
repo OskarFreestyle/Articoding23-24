@@ -13,9 +13,6 @@ public class CommunityManager : MonoBehaviour {
     }
 
     [SerializeField] private ActivatedScript activatedScript;
-
-    [SerializeField] private LevelsDisplay levelsDisplay;
-
     [SerializeField] private BrowseLevelsDisplay browseLevelsDisplay;
 
     private List<ServerClasses.Level> levelsList;
@@ -39,7 +36,12 @@ public class CommunityManager : MonoBehaviour {
 
     #region Button Functions
     public void UploadLevel(LevelDataSO levelDataSO) {
+        //ServerClasses.Level newLevel;
+        //newLevel.name = levelDataSO.levelName;
+
         Debug.Log("CommunityManager Upload Level");
+
+        //activatedScript.Post();
     }
 
     public void showCreatedLevels() {

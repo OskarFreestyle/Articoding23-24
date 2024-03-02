@@ -38,5 +38,49 @@ MonoBehaviour:
     m_Localized: "Cerrar Sesi\xF3n"
     m_Metadata:
       m_Items: []
+  - m_Id: 7666561944649728
+    m_Localized: Niveles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7666619729575936
+    m_Localized: Listas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7666707365363712
+    m_Localized: Clases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7667220341325824
+    m_Localized: Buscar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7667263123226624
+    m_Localized: Buscar Niveles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7667347051249664
+    m_Localized: Buscar Listas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7667439728590848
+    m_Localized: Guardados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7667508775223296
+    m_Localized: Niveles Guardados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7667574487384064
+    m_Localized: Listas Guadadas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7667750241304576
+    m_Localized: Subir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7667935931531264
+    m_Localized: Subir Niveles
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
