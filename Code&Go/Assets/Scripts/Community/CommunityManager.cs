@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using static UnityEditor.ShaderData;
+using System;
 
 public class CommunityManager : MonoBehaviour {
 
@@ -38,7 +40,12 @@ public class CommunityManager : MonoBehaviour {
     public void UploadLevel(LevelDataSO levelDataSO) {
         //ServerClasses.Level newLevel;
         //newLevel.name = levelDataSO.levelName;
+        ServerClasses.Level levelJson = new ServerClasses.Level();
 
+        levelJson.name = levelDataSO.name;
+        levelJson.owner = 
+
+        activated.Post("users/students", JsonUtility.ToJson(createAccountJson), OnLoginOK, OnLoginKO);
         Debug.Log("CommunityManager Upload Level");
 
         //activatedScript.Post();
