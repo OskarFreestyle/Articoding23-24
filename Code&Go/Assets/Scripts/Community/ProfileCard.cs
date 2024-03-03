@@ -7,10 +7,17 @@ public class ProfileCard : MonoBehaviour {
 
     [SerializeField] private Button profileIconButton;
 
+    [SerializeField] private Text usernameText;
+    [SerializeField] private Text roleText;
 
     [SerializeField] private Button changeProfileIconPanelButton;
 
     public void ChangeIcon() {
         changeProfileIconPanelButton.gameObject.SetActive(true);
+    }
+
+    public void Configure() {
+        usernameText.text = GameManager.Instance.GetUserName();
+        roleText.text = GameManager.Instance.GetIsAdmin() ? "TEACHER" : "STUDENT";
     }
 }

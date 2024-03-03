@@ -13,6 +13,7 @@ public class LoginManager : MonoBehaviour {
 
     [SerializeField] private RectTransform loginPage;
     [SerializeField] private RectTransform mainPage;
+    [SerializeField] private ProfileCard profileCard;
 
     public GameObject waitPanel;
     public GameObject OKPanel;
@@ -103,6 +104,8 @@ public class LoginManager : MonoBehaviour {
 
         loginPage.gameObject.SetActive(false);
         mainPage.gameObject.SetActive(true);
+
+        profileCard.Configure();
 
         return 0;
     }

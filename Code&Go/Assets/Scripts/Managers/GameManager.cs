@@ -221,7 +221,10 @@ public class GameManager : MonoBehaviour {
     public string GetToken() { return token; }
     public void SetLogged(bool isLogged) { loggedIn = isLogged; }
     public bool GetLogged() { return loggedIn; }
-    public void SetRole(string role) { if (role == "ROLE_USER") isAdmin = false; else isAdmin = true; }
+    public void SetRole(string role) { 
+        if (role == "ROLE_USER") isAdmin = false; 
+        else isAdmin = true; 
+    }
     public void SetAdmin(bool aux) { isAdmin = aux; }
     public bool GetIsAdmin() { return isAdmin; }
     public void SetUserName(string name) { userName = name; }
