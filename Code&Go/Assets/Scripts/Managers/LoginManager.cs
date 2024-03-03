@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class LoginManager : MonoBehaviour {
+
+    private static LoginManager instance;
+    static public LoginManager Instance {
+        get { return instance; }
+    }
+
+    public ServerClasses.User user;
+
     public GameObject waitPanel;
     public GameObject OKPanel;
     public GameObject KOPanel;
@@ -16,6 +24,21 @@ public class LoginManager : MonoBehaviour {
     public LevelTestManager levelTestManager;
 
     string userName = "";
+
+    private void Awake() {
+        Debug.Log("Login Manager Awake");
+
+        if (!instance) {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else {
+            Debug.LogWarning("More than 1 Login Manager created");
+            DestroyImmediate(gameObject);
+        }
+
+        Debug.Log("Login Manager Awake Finished");
+    }
 
     public void TryToLogIn(string user, string pass) {
         if (waitPanel != null) {
@@ -62,6 +85,11 @@ public class LoginManager : MonoBehaviour {
     int OnLoginOK(UnityWebRequest req) {
         ServerClasses.LoginResponse responseToken = JsonUtility.FromJson<ServerClasses.LoginResponse>(req.downloadHandler.text);
         Debug.Log("Logeado");
+
+        user.username = userName;
+        //user.id = userName;
+        user.role = userName;
+        user.username = userName;
 
         GameManager.Instance.SetToken(responseToken.token);
         GameManager.Instance.SetRole(responseToken.role);

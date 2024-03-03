@@ -20,7 +20,6 @@ public class UploadLevelCard : MonoBehaviour {
 
     public void UploadLevel() {
         CommunityManager.Instance.UploadLevel(levelDataSO);
-
         uploadedCheck.gameObject.SetActive(true);
         uploadButton.gameObject.SetActive(false);
     }

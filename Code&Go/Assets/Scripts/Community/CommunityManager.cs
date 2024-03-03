@@ -38,13 +38,24 @@ public class CommunityManager : MonoBehaviour {
 
     #region Button Functions
     public void UploadLevel(LevelDataSO levelDataSO) {
-        //ServerClasses.Level newLevel;
-        //newLevel.name = levelDataSO.levelName;
+
         ServerClasses.Level levelJson = new ServerClasses.Level();
 
         levelJson.name = levelDataSO.name;
-        levelJson.owner = LoginManager.user;
-        
+        //levelJson.owner = LoginManager.user;
+        levelJson.plays = 0;
+        levelJson.likes = 0;
+        levelJson.publicLevel = true;
+
+        levelJson.articodingLevel = new ServerClasses.ArticodingLevel();
+
+        ActiveBlocks thisActiveBlocks = ActiveBlocks.FromJson(levelDataSO.activeBlocks.text);
+        levelJson.articodingLevel.activeblocks = thisActiveBlocks;
+
+        BoardState thisBoardState = BoardState.FromJson(levelDataSO.levelBoard.text);
+        levelJson.articodingLevel.boardstate = thisBoardState;
+
+        levelJson.articodingLevel.initialState = levelDataSO.initialState.ToString();
 
         activated.Post("levels", JsonUtility.ToJson(levelJson), OnUploadOK, OnUploadKO);
         Debug.Log("CommunityManager Upload Level");

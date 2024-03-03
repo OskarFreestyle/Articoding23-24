@@ -128,12 +128,11 @@ public class ServerClasses : MonoBehaviour {
 
         public List<int> hastagsIDs;
 
-
         public ArticodingLevel articodingLevel;
+
+        // Imagen
         
-        public int classRooms;
         public bool publicLevel;
-        public bool active;
     }
 
     [System.Serializable]
