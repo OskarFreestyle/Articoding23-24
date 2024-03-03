@@ -10364,7 +10364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea2421b0510c7cb44bd9743e899b870f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatedScript: {fileID: 1001455954}
+  activated: {fileID: 1001455954}
   browseLevelsDisplay: {fileID: 255872035}
 --- !u!1 &635720709
 GameObject:
@@ -17438,7 +17438,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 808519760}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.2704739
+  m_Size: 0.27053428
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -31099,6 +31099,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79225709b7f8f724a91bc445aa5fb5f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  user:
+    username: 
+    enabled: 0
+    id: 0
+    role: 
   waitPanel: {fileID: 2032499068}
   OKPanel: {fileID: 885940924}
   KOPanel: {fileID: 660190272}
@@ -33000,7 +33005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1981478841
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34514,7 +34519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2058851830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37399,6 +37404,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1981478840}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2058851829}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!224 &4376553938088094102
 RectTransform:

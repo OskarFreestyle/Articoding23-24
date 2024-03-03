@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static ServerClasses;
 
 public class BrowseLevelsDisplay : MonoBehaviour {
 
@@ -8,11 +9,15 @@ public class BrowseLevelsDisplay : MonoBehaviour {
 
 
     public void Configure() {
-        for (int i = 0; i < 15; i++) {
-            Debug.Log("Instanciating level " + i);
+        Debug.Log("Entra Configure");
+        ServerClasses.LevelPage levelPage = CommunityManager.Instance.PublicLevels;
 
+        foreach (ServerClasses.Level level in levelPage.content)
+        {
+            Debug.Log("Instanciating level " + level.name);
             CommunityLevelExpanded currentLevelCard = Instantiate(communityLevelExpandedPrefab, transform);
-            //currentLevelCard.ConfigureLevel();
+            currentLevelCard.ConfigureLevel(level);
         }
+
     }
 }

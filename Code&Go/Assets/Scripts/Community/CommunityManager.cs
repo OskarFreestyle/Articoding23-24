@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using static UnityEditor.ShaderData;
 using System;
+using static ServerClasses;
 
 public class CommunityManager : MonoBehaviour {
 
@@ -18,6 +19,14 @@ public class CommunityManager : MonoBehaviour {
     [SerializeField] private BrowseLevelsDisplay browseLevelsDisplay;
 
     private List<ServerClasses.Level> levelsList;
+    private ServerClasses.LevelPage publicLevels;
+    public ServerClasses.LevelPage PublicLevels
+    {
+        get
+        {
+            return publicLevels;
+        }
+    }
 
 
     private void Awake() {
@@ -39,12 +48,11 @@ public class CommunityManager : MonoBehaviour {
     #region Button Functions
     public void UploadLevel(LevelDataSO levelDataSO) {
 
-        ServerClasses.Level levelJson = new ServerClasses.Level();
+        ServerClasses.PostedLevel levelJson = new ServerClasses.PostedLevel();
 
-        levelJson.name = levelDataSO.name;
-        //levelJson.owner = LoginManager.user;
-        levelJson.plays = 0;
-        levelJson.likes = 0;
+        levelJson.title = levelDataSO.levelName;
+        levelJson.classes = new List<int>();
+        levelJson.hashtagsIDs = new List<int>();
         levelJson.publicLevel = true;
 
         levelJson.articodingLevel = new ServerClasses.ArticodingLevel();
@@ -55,10 +63,10 @@ public class CommunityManager : MonoBehaviour {
         BoardState thisBoardState = BoardState.FromJson(levelDataSO.levelBoard.text);
         levelJson.articodingLevel.boardstate = thisBoardState;
 
-        levelJson.articodingLevel.initialState = levelDataSO.initialState.ToString();
+        levelJson.articodingLevel.initialState = "";//levelDataSO.initialState.ToString();
 
         activated.Post("levels", JsonUtility.ToJson(levelJson), OnUploadOK, OnUploadKO);
-        Debug.Log("CommunityManager Upload Level");
+        Debug.Log("CommunityManager Upload Level" + levelDataSO.levelName);
 
         //activatedScript.Post();
     }
@@ -85,29 +93,37 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void GetBrowseLevels() {
-        // Obtain the levels from the server
-        //activatedScript.Get("levels?publicLevels=true&size=6", GetBrowseLevelsOK, GetBrowseLevelsKO);
+        // Obtain the levels from the server    
 
-        // Load the levels
-        browseLevelsDisplay.Configure();
+        activated.Get("levels?publicLevels=true&size=6", GetBrowseLevelsOK, GetBrowseLevelsKO);
+
+        Debug.Log("askldaldlajdla" + browseLevelsDisplay);
+       
 
     }
 
     int GetBrowseLevelsOK(UnityWebRequest req) {
         string levelsJson = req.downloadHandler.text;
+        Debug.Log("Entra en BrowseLevelsOK");
 
-        try {
-            //levelsList = JsonUtility.FromJson<ServerClasses.Level>(levelsJson);
+        try
+        {
+            publicLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(levelsJson);
+            browseLevelsDisplay.Configure();
         }
-        catch (System.Exception e) {
+        catch (System.Exception e)
+        {
             Debug.Log("Error al leer niveles " + e);
         }
+
+
+        //clasesManager.CreatePublicLevels(publicLevels);
 
         return 0;
     }
 
     int GetBrowseLevelsKO(UnityWebRequest req) {
-        Debug.Log("Error al obtener niveles publicos");
+        Debug.Log("Error al obtener niveles publicos: " + req.responseCode);
         return 0;
     }
 

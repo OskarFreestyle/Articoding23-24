@@ -10,7 +10,7 @@ public class LoginManager : MonoBehaviour {
         get { return instance; }
     }
 
-    public ServerClasses.User user;
+
 
     public GameObject waitPanel;
     public GameObject OKPanel;
@@ -86,10 +86,7 @@ public class LoginManager : MonoBehaviour {
         ServerClasses.LoginResponse responseToken = JsonUtility.FromJson<ServerClasses.LoginResponse>(req.downloadHandler.text);
         Debug.Log("Logeado");
 
-        user.username = userName;
-        //user.id = userName;
-        user.role = userName;
-        user.username = userName;
+
 
         GameManager.Instance.SetToken(responseToken.token);
         GameManager.Instance.SetRole(responseToken.role);

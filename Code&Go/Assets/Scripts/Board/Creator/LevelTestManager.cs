@@ -194,7 +194,6 @@ public class LevelTestManager : MonoBehaviour
 
         levelToPost.title = levelName;
         levelToPost.classes = new List<int>();
-        levelToPost.description = "Nivel creador por " + GameManager.Instance.GetUserName();
         if(isTeacher)
             levelToPost.classes.Add(clases.content[clasesDropdown.value].id);
         levelToPost.publicLevel = !isTeacher;
