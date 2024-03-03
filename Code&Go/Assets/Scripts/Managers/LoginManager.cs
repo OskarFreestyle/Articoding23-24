@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Networking;
 
 public class LoginManager : MonoBehaviour {
@@ -10,7 +11,8 @@ public class LoginManager : MonoBehaviour {
         get { return instance; }
     }
 
-
+    [SerializeField] private RectTransform loginPage;
+    [SerializeField] private RectTransform mainPage;
 
     public GameObject waitPanel;
     public GameObject OKPanel;
@@ -19,9 +21,6 @@ public class LoginManager : MonoBehaviour {
     public GameObject logButton;
 
     public ActivatedScript activated;
-
-    public ComunidadLayout comunidadLayout;
-    public LevelTestManager levelTestManager;
 
     string userName = "";
 
@@ -71,23 +70,24 @@ public class LoginManager : MonoBehaviour {
     }
 
     public void LogOut() {
-        if(comunidadLayout != null)
-            comunidadLayout.IsNotLoggedAction();
-
         Debug.Log("Deslogueado");
 
+        // Conexion variables
         GameManager.Instance.SetToken("");
         GameManager.Instance.SetAdmin(false);
         GameManager.Instance.SetUserName("");
         GameManager.Instance.SetLogged(false);
+
+        loginPage.gameObject.SetActive(true);
+        mainPage.gameObject.SetActive(false);
     }
 
     int OnLoginOK(UnityWebRequest req) {
-        ServerClasses.LoginResponse responseToken = JsonUtility.FromJson<ServerClasses.LoginResponse>(req.downloadHandler.text);
         Debug.Log("Logeado");
 
+        ServerClasses.LoginResponse responseToken = JsonUtility.FromJson<ServerClasses.LoginResponse>(req.downloadHandler.text);
 
-
+        // Conexion variables
         GameManager.Instance.SetToken(responseToken.token);
         GameManager.Instance.SetRole(responseToken.role);
         GameManager.Instance.SetUserName(userName);
@@ -99,15 +99,10 @@ public class LoginManager : MonoBehaviour {
             KOPanel.SetActive(false);
         }
 
-        if (logButton != null) {
-            logButton.SetActive(false);
-            levelTestManager.ActivateExportButtons(responseToken.role != "ROLE_USER");
-        }
-
         loginPanel.SetActive(false);
 
-        if (comunidadLayout != null && comunidadLayout.gameObject.active) 
-            comunidadLayout.IsLoggedAction();
+        loginPage.gameObject.SetActive(false);
+        mainPage.gameObject.SetActive(true);
 
         return 0;
     }
