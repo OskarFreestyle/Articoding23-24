@@ -14,7 +14,7 @@ public class CommunityManager : MonoBehaviour {
         get { return instance; }
     }
 
-    [SerializeField] private ActivatedScript activatedScript;
+    [SerializeField] private ActivatedScript activated;
     [SerializeField] private BrowseLevelsDisplay browseLevelsDisplay;
 
     private List<ServerClasses.Level> levelsList;
@@ -43,12 +43,30 @@ public class CommunityManager : MonoBehaviour {
         ServerClasses.Level levelJson = new ServerClasses.Level();
 
         levelJson.name = levelDataSO.name;
-        levelJson.owner = 
+        levelJson.owner = LoginManager.user;
+        
 
-        activated.Post("users/students", JsonUtility.ToJson(createAccountJson), OnLoginOK, OnLoginKO);
+        activated.Post("levels", JsonUtility.ToJson(levelJson), OnUploadOK, OnUploadKO);
         Debug.Log("CommunityManager Upload Level");
 
         //activatedScript.Post();
+    }
+    int OnUploadOK(UnityWebRequest req) {
+        try
+        {
+            //levelsList = JsonUtility.FromJson<ServerClasses.Level>(levelsJson);
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log("Error al subir nivel " + e);
+        }
+
+        return 0;
+    }
+
+    int OnUploadKO(UnityWebRequest req) {
+        Debug.Log("Error al obtener niveles publicos");
+        return 0;
     }
 
     public void showCreatedLevels() {
