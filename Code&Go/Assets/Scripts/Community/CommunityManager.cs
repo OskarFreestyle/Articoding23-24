@@ -8,15 +8,38 @@ using static UnityEditor.ShaderData;
 using System;
 using static ServerClasses;
 
+
 public class CommunityManager : MonoBehaviour {
+
 
     private static CommunityManager instance;
     static public CommunityManager Instance {
         get { return instance; }
     }
 
-    [SerializeField] private ActivatedScript activated;
+    [SerializeField] private bool isLogIn;
+    [SerializeField] private ActivatedScript activatedScript;
+    
+    [Space][Space]
+
+    [SerializeField] private RectTransform loginPage;
+    [SerializeField] private RectTransform mainPage;
+    [SerializeField] private RectTransform communityLevelsPage;
+    [SerializeField] private RectTransform uploadLevelsPage;
+    [SerializeField] private RectTransform communityPlaylistPage;
+    [SerializeField] private RectTransform createPlaylistPage;
+    [SerializeField] private RectTransform classesPage;
+
+    private RectTransform currentPage;
+
+    [Space][Space]
+
+    [SerializeField] private UploadLevelsDisplay uploadLevelsDisplay;
+
+    [Space][Space]
+
     [SerializeField] private BrowseLevelsDisplay browseLevelsDisplay;
+    [SerializeField] private BrowseLevelsParams browseLevelsParams;
 
     private List<ServerClasses.Level> levelsList;
     private ServerClasses.LevelPage publicLevels;
@@ -27,7 +50,6 @@ public class CommunityManager : MonoBehaviour {
             return publicLevels;
         }
     }
-
 
     private void Awake() {
         Debug.Log("Community Manager Awake");
@@ -44,8 +66,44 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("Community Manager Awake Finished");
     }
 
+    public void Start() {
+        // Make sure of the enable/disable pages
+        currentPage = isLogIn ? mainPage : loginPage;
+        loginPage.gameObject.SetActive(!isLogIn);
+        mainPage.gameObject.SetActive(isLogIn);
+        communityLevelsPage.gameObject.SetActive(false);
+        uploadLevelsPage.gameObject.SetActive(false);
+        //communityPlaylistPage.gameObject.SetActive(false);
+        //createPlaylistPage.gameObject.SetActive(false);
+        //classesPage.gameObject.SetActive(false);
+    }   
+
 
     #region Button Functions
+    public void ChangeEnablePage(RectTransform enablePage) {
+        currentPage.gameObject.SetActive(false);
+        currentPage = enablePage;
+        currentPage.gameObject.SetActive(true);
+    }
+
+    public void GoToUploadLevelsPage() {
+        ChangeEnablePage(uploadLevelsPage);
+
+        // Instance the created levels
+        uploadLevelsDisplay.InstanciateCreatedLevels();
+    }
+
+    public void GoToCommunityLevelsPage() {
+        ChangeEnablePage(communityLevelsPage);
+
+        // Do a basic search
+        GetBrowseLevels();
+    }
+
+    public void GoToMainPage() {
+        ChangeEnablePage(mainPage);
+    }
+
     public void UploadLevel(LevelDataSO levelDataSO) {
 
         ServerClasses.PostedLevel levelJson = new ServerClasses.PostedLevel();
@@ -63,17 +121,15 @@ public class CommunityManager : MonoBehaviour {
         BoardState thisBoardState = BoardState.FromJson(levelDataSO.levelBoard.text);
         levelJson.articodingLevel.boardstate = thisBoardState;
 
-        levelJson.articodingLevel.initialState = "";//levelDataSO.initialState.ToString();
+        levelJson.articodingLevel.initialState = "";
 
-        activated.Post("levels", JsonUtility.ToJson(levelJson), OnUploadOK, OnUploadKO);
-        Debug.Log("CommunityManager Upload Level" + levelDataSO.levelName);
-
-        //activatedScript.Post();
+        activatedScript.Post("levels", JsonUtility.ToJson(levelJson), OnUploadOK, OnUploadKO);
     }
+
     int OnUploadOK(UnityWebRequest req) {
         try
         {
-            //levelsList = JsonUtility.FromJson<ServerClasses.Level>(levelsJson);
+            Debug.Log("Level Upload Correctly");
         }
         catch (System.Exception e)
         {
@@ -88,18 +144,9 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
-    public void showCreatedLevels() {
-
-    }
-
     public void GetBrowseLevels() {
-        // Obtain the levels from the server    
-
-        activated.Get("levels?publicLevels=true&size=6", GetBrowseLevelsOK, GetBrowseLevelsKO);
-
-        Debug.Log("askldaldlajdla" + browseLevelsDisplay);
-       
-
+        Debug.Log("Search: " + browseLevelsParams.GetParams());
+        activatedScript.Get(browseLevelsParams.GetParams(), GetBrowseLevelsOK, GetBrowseLevelsKO); // "levels?publicLevels=true&size=6"
     }
 
     int GetBrowseLevelsOK(UnityWebRequest req) {
@@ -116,9 +163,6 @@ public class CommunityManager : MonoBehaviour {
             Debug.Log("Error al leer niveles " + e);
         }
 
-
-        //clasesManager.CreatePublicLevels(publicLevels);
-
         return 0;
     }
 
@@ -126,7 +170,5 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("Error al obtener niveles publicos: " + req.responseCode);
         return 0;
     }
-
-
     #endregion
 }

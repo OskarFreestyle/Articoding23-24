@@ -82,5 +82,49 @@ MonoBehaviour:
     m_Localized: Subir Niveles
     m_Metadata:
       m_Items: []
+  - m_Id: 8310742027337728
+    m_Localized: Niveles Comunidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8310810637762560
+    m_Localized: Listas Comunidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8311593139699712
+    m_Localized: Crear Lista
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8312447666225152
+    m_Localized: Entrar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8312969617997824
+    m_Localized: "C\xF3digo de Clase"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8314035747160064
+    m_Localized: Encontrar una Clase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8328406380576768
+    m_Localized: Nombre del nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8336259652780032
+    m_Localized: Nombre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8336301306413056
+    m_Localized: Autor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8336347468922880
+    m_Localized: ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8336378221559808
+    m_Localized: Buscar
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

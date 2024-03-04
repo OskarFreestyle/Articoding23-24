@@ -82,5 +82,49 @@ MonoBehaviour:
     m_Localized: Upload Levels
     m_Metadata:
       m_Items: []
+  - m_Id: 8310742027337728
+    m_Localized: Community Levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8310810637762560
+    m_Localized: Community Playlist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8311593139699712
+    m_Localized: Create Playlist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8312447666225152
+    m_Localized: Enter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8312969617997824
+    m_Localized: Class Code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8314035747160064
+    m_Localized: Find a Class
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8328406380576768
+    m_Localized: Level Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8336259652780032
+    m_Localized: Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8336301306413056
+    m_Localized: Author
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8336347468922880
+    m_Localized: ID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8336378221559808
+    m_Localized: Search
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
