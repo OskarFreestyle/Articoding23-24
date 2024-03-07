@@ -123,6 +123,15 @@ public class CommunityManager : MonoBehaviour {
 
         levelJson.articodingLevel.initialState = "";
 
+        // Quitar TODO
+        //UnityEngine.Experimental.Rendering.GraphicsFormat gf = levelDataSO.levelImage.texture.graphicsFormat;
+        //Debug.Log(gf);
+        //Debug.Log(gf.GetType());
+        //Debug.Log(gf.GetTypeCode());
+
+        // Level image
+        levelJson.image = levelDataSO.levelImage.texture.EncodeToPNG();
+
         activatedScript.Post("levels", JsonUtility.ToJson(levelJson), OnUploadOK, OnUploadKO);
     }
 
@@ -156,6 +165,7 @@ public class CommunityManager : MonoBehaviour {
         try
         {
             publicLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(levelsJson);
+
             browseLevelsDisplay.Configure();
         }
         catch (System.Exception e)

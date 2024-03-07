@@ -130,8 +130,8 @@ public class ServerClasses : MonoBehaviour {
 
         public ArticodingLevel articodingLevel;
 
-        // Imagen
-        
+        public byte[] image;
+
         public bool publicLevel;
     }
 
@@ -162,11 +162,11 @@ public class ServerClasses : MonoBehaviour {
     [System.Serializable]
     public class PostedLevel
     {
-
         public string title;
         public List<int> classes;
         public List<int> hashtagsIDs;
         public bool publicLevel;
         public ArticodingLevel articodingLevel;
+        public byte[] image;
     }
 }
