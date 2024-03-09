@@ -32,6 +32,7 @@ public class ServerClasses : MonoBehaviour {
         public bool enabled;
         public int id;
         public string role;
+        public List<int> likedLevels;
     }
 
     [System.Serializable]
@@ -124,7 +125,7 @@ public class ServerClasses : MonoBehaviour {
         public int id;
 
         public int likes;
-        public int plays;
+        public int timesPlayed;
 
         public List<int> hastagsIDs;
 

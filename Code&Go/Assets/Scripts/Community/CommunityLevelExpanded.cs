@@ -22,7 +22,7 @@ public class CommunityLevelExpanded : MonoBehaviour {
         levelAuthor.text = level.owner.username;
         levelID.text = level.id.ToString();
         levelLikes.text = level.likes.ToString();
-        levelPlays.text = level.plays.ToString();
+        levelPlays.text = level.timesPlayed.ToString();
 
         // Set the level image (string to .png)
         byte[] imageBytes = Convert.FromBase64String(levelWithImage.image);
@@ -45,13 +45,12 @@ public class CommunityLevelExpanded : MonoBehaviour {
         else {
             levelLikes.text = (int.Parse(levelLikes.text) - 1).ToString();
         }
-        Debug.Log("LikeLeveles metodo");
+        CommunityManager.Instance.ModifyLikes(levelID.text, state);
     }
 
     public void PlayLevel() {
-        Debug.Log("Play level " + levelName.text);
         levelPlays.text = (int.Parse(levelPlays.text) + 1).ToString();
-        //CommunityManager.Instance.IncreasePlays();
+        CommunityManager.Instance.IncreasePlays(levelID.text);
     }
 
 

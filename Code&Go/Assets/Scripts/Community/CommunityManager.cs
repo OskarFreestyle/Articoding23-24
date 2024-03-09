@@ -49,6 +49,9 @@ public class CommunityManager : MonoBehaviour {
         }
     }
 
+    private List<int> likedLevelIDs = new List<int>();
+
+
     private void Awake() {
         Debug.Log("Community Manager Awake");
 
@@ -167,8 +170,10 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
-    public void IncreasePlays(LevelDataSO levelDataSO) {
-        //activatedScript.Post("levels", JsonUtility.ToJson(levelJson), IncreasePlaysOK, IncreasePlaysKO);
+    public void IncreasePlays(string levelID) {
+        string path = "levels/" + levelID + "/play";
+        ServerClasses.PostedLevel postedLevel = new ServerClasses.PostedLevel();
+        activatedScript.Post(path, JsonUtility.ToJson(postedLevel), IncreasePlaysOK, IncreasePlaysKO);
     }
 
     int IncreasePlaysOK(UnityWebRequest req) {
@@ -178,6 +183,51 @@ public class CommunityManager : MonoBehaviour {
 
     int IncreasePlaysKO(UnityWebRequest req) {
         Debug.Log("LikeLevelKO");
+        return 0;
+    }
+
+    public void ModifyLikes(string levelID, bool liked) {
+
+        if(liked) likedLevelIDs.Add(int.Parse(levelID));
+        else likedLevelIDs.Remove(int.Parse(levelID));
+
+        string path = "levels/" + levelID;
+        if (liked) path += "/increaselikes";
+        else path += "/decreaselikes";
+        ServerClasses.PostedLevel postedLevel = new ServerClasses.PostedLevel();
+        activatedScript.Post(path, JsonUtility.ToJson(postedLevel), ModifyLikesOK, ModifyLikesKO);
+    }
+
+    int ModifyLikesOK(UnityWebRequest req) {
+        Debug.Log("ModifyLikesOK");
+        return 0;
+    }
+
+    int ModifyLikesKO(UnityWebRequest req) {
+        Debug.Log("ModifyLikesKO");
+        return 0;
+    }
+
+    public void GetUserLikedLevels() {
+        string path = "users/getLiked/" + GameManager.Instance.GetUserName();
+        activatedScript.Get(path, GetUserLikedLevelsOK, GetUserLikedLevelsKO);
+    }
+
+    int GetUserLikedLevelsOK(UnityWebRequest req) {
+        Debug.Log("GetUserLikedLevelsOK");
+        try {
+            string levelsLiked = req.downloadHandler.text; // GetUserLikedLevels: {  10, 12, 412, 15};
+            likedLevelIDs = JsonUtility.FromJson<ServerClasses.User>(levelsLiked).likedLevels;
+        }
+        catch (System.Exception e) {
+            Debug.Log("Error in GetBrowseLevelsOK" + e);
+        }
+
+        return 0;
+    }
+
+    int GetUserLikedLevelsKO(UnityWebRequest req) {
+        Debug.Log("GetUserLikedLevelsKO");
         return 0;
     }
 

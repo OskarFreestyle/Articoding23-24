@@ -107,6 +107,8 @@ public class LoginManager : MonoBehaviour {
 
         profileCard.Configure();
 
+        CommunityManager.Instance.GetUserLikedLevels();
+
         return 0;
     }
 

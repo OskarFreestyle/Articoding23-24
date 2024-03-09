@@ -23,6 +23,8 @@ public class BrowseLevelsParams : MonoBehaviour {
         // Update the params
         UpdateParams();
 
+        param += "&liked=true";
+
         return param;
     }
 
@@ -41,9 +43,9 @@ public class BrowseLevelsParams : MonoBehaviour {
         param += "size=";
         param += numLevels;
 
-        // Search by name
+        // Search by title
         if(nameInputField.text != "") {
-            param += "&name=";
+            param += "&title=";
             param += nameInputField.text;
         }
         // Search by author
