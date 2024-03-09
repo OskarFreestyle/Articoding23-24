@@ -42,7 +42,7 @@ public class ClasePrefab : MonoBehaviour
 
     public ServerClasses.Level GetLevelInfo(int index)
     {
-        return levelPage.content[index];
+        return levelPage.content[index].level;
     }
 
     public void SetCreated() { alreadyCreated = true; }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,46 +13,45 @@ public class CommunityLevelExpanded : MonoBehaviour {
     [SerializeField] private Text levelLikes;
     [SerializeField] private Text levelPlays;
     [SerializeField] private Text levelHashtags;
+    public Texture2D textureDelete;
 
-    public void ConfigureLevel(ServerClasses.Level level) {
-        levelName.text = level.name;
+    public void ConfigureLevel(ServerClasses.LevelWithImage levelWithImage) {
+        // Set the level data
+        ServerClasses.Level level = levelWithImage.level;
+        levelName.text = level.title;
         levelAuthor.text = level.owner.username;
         levelID.text = level.id.ToString();
-
         levelLikes.text = level.likes.ToString();
         levelPlays.text = level.plays.ToString();
 
+        // Set the level image (string to .png)
+        byte[] imageBytes = Convert.FromBase64String(levelWithImage.image);
+
         Texture2D tex = new Texture2D(1, 1);
-
-        Debug.Log(level.image.Length);
-
-        // CESAR AQUI SE CARGA LA IMAGEN
-
-        if(ImageConversion.LoadImage(tex, level.image)) {
+        if (ImageConversion.LoadImage(tex, imageBytes)) {
             Debug.Log("tex created correctly");
-        } else Debug.Log("error load image into texture");
+        }
+        else Debug.Log("error load image into texture");
 
-        Rect rect = new Rect(100, 100, 400, 400);
+        Rect rect = new Rect(0, 0, 1000, 1000);
         Vector2 pivot = new Vector2(0.5f, 0.5f);
         levelImage.sprite = Sprite.Create(tex, rect, pivot);
-
-
-        //UnityEngine.Experimental.Rendering.GraphicsFormat gf = (UnityEngine.Experimental.Rendering.GraphicsFormat)88;
-        //var a = ImageConversion.EncodeArrayToPNG(level.image, gf, 1000, 1000);
-
-
-        //byte[] imageBytes = levelDataSO.levelImage.texture.EncodeToPNG();
-        //levelJson.levelImageEncode = imageBytes;
-
-        //Sprite.Create()
-
-        //levelImage.sprite.rect
     }
 
     public void LikeLevel(bool state) {
-        if(state) levelLikes.text = (int.Parse(levelLikes.text) + 1).ToString();
-        else levelLikes.text = (int.Parse(levelLikes.text) - 1).ToString();
+        if (state) {
+            levelLikes.text = (int.Parse(levelLikes.text) + 1).ToString();
+        }
+        else {
+            levelLikes.text = (int.Parse(levelLikes.text) - 1).ToString();
+        }
         Debug.Log("LikeLeveles metodo");
+    }
+
+    public void PlayLevel() {
+        Debug.Log("Play level " + levelName.text);
+        levelPlays.text = (int.Parse(levelPlays.text) + 1).ToString();
+        //CommunityManager.Instance.IncreasePlays();
     }
 
 

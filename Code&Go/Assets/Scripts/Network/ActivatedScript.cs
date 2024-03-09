@@ -75,7 +75,7 @@ public class ActivatedScript : MonoBehaviour {
             }
             else
             {
-                Debug.LogError("req en post: " + req.responseCode);
+                Debug.LogError("error en post: " + req.responseCode);
                 onKO(req);
             }
           }

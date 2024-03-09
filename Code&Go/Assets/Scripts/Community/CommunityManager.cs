@@ -7,16 +7,15 @@ using UnityEngine.SceneManagement;
 using static UnityEditor.ShaderData;
 using System;
 using static ServerClasses;
-
+using System.IO;
+using UnityEditor;
 
 public class CommunityManager : MonoBehaviour {
-
 
     private static CommunityManager instance;
     static public CommunityManager Instance {
         get { return instance; }
     }
-
     [SerializeField] private bool isLogIn;
     [SerializeField] private ActivatedScript activatedScript;
     
@@ -29,7 +28,6 @@ public class CommunityManager : MonoBehaviour {
     [SerializeField] private RectTransform communityPlaylistPage;
     [SerializeField] private RectTransform createPlaylistPage;
     [SerializeField] private RectTransform classesPage;
-
     private RectTransform currentPage;
 
     [Space][Space]
@@ -105,7 +103,6 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void UploadLevel(LevelDataSO levelDataSO) {
-
         ServerClasses.PostedLevel levelJson = new ServerClasses.PostedLevel();
 
         levelJson.title = levelDataSO.levelName;
@@ -121,35 +118,26 @@ public class CommunityManager : MonoBehaviour {
         BoardState thisBoardState = BoardState.FromJson(levelDataSO.levelBoard.text);
         levelJson.articodingLevel.boardstate = thisBoardState;
 
-        levelJson.articodingLevel.initialState = "";
-
-        // Quitar TODO
-        //UnityEngine.Experimental.Rendering.GraphicsFormat gf = levelDataSO.levelImage.texture.graphicsFormat;
-        //Debug.Log(gf);
-        //Debug.Log(gf.GetType());
-        //Debug.Log(gf.GetTypeCode());
+        levelJson.articodingLevel.initialState = "";    // TODO subir el initial state
 
         // Level image
         levelJson.image = levelDataSO.levelImage.texture.EncodeToPNG();
+
+        Debug.Log(levelJson.image);
+
+        //Debug.Log("Subiendo el nivel image lenght: " + levelJson.image.Length);
+        //Debug.Log("Starts with " + levelJson.image[0] + levelJson.image[1] + levelJson.image[2] + levelJson.image[3] + levelJson.image[4] + levelJson.image[5] + levelJson.image[6]+ "...");
 
         activatedScript.Post("levels", JsonUtility.ToJson(levelJson), OnUploadOK, OnUploadKO);
     }
 
     int OnUploadOK(UnityWebRequest req) {
-        try
-        {
-            Debug.Log("Level Upload Correctly");
-        }
-        catch (System.Exception e)
-        {
-            Debug.Log("Error al subir nivel " + e);
-        }
-
+        Debug.Log("OnUploadOK");
         return 0;
     }
 
     int OnUploadKO(UnityWebRequest req) {
-        Debug.Log("Error al obtener niveles publicos");
+        Debug.Log("OnUploadKO");
         return 0;
     }
 
@@ -159,18 +147,16 @@ public class CommunityManager : MonoBehaviour {
     }
 
     int GetBrowseLevelsOK(UnityWebRequest req) {
-        string levelsJson = req.downloadHandler.text;
-        Debug.Log("Entra en BrowseLevelsOK");
-
+        Debug.Log("GetBrowseLevelsOK");
         try
         {
+            string levelsJson = req.downloadHandler.text;
             publicLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(levelsJson);
-
             browseLevelsDisplay.Configure();
         }
         catch (System.Exception e)
         {
-            Debug.Log("Error al leer niveles " + e);
+            Debug.Log("Error in GetBrowseLevelsOK" + e);
         }
 
         return 0;
@@ -180,5 +166,20 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("Error al obtener niveles publicos: " + req.responseCode);
         return 0;
     }
+
+    public void IncreasePlays(LevelDataSO levelDataSO) {
+        //activatedScript.Post("levels", JsonUtility.ToJson(levelJson), IncreasePlaysOK, IncreasePlaysKO);
+    }
+
+    int IncreasePlaysOK(UnityWebRequest req) {
+        Debug.Log("LikeLevelOK");
+        return 0;
+    }
+
+    int IncreasePlaysKO(UnityWebRequest req) {
+        Debug.Log("LikeLevelKO");
+        return 0;
+    }
+
     #endregion
 }

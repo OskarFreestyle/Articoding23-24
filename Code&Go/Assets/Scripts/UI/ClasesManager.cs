@@ -139,9 +139,9 @@ public class ClasesManager : MonoBehaviour
                 for (int i = 0; i < levelPage.content.Count; i++)
                 {
                     var newlevel = Instantiate(levelPrefab, lists[currentClass].transform);
-                    newlevel.GetComponent<LevelPrefabOld>().SetLevel(levelPage.content[i], this, comunidadLayout);
+                    newlevel.GetComponent<LevelPrefabOld>().SetLevel(levelPage.content[i].level, this, comunidadLayout);
                     newlevel.GetComponent<LevelPrefabOld>().SetLevelListId(i);
-                    if (IsLevelAlreadySaved(levelPage.content[i].name)) newlevel.GetComponent<LevelPrefabOld>().DeactivateSave();
+                    if (IsLevelAlreadySaved(levelPage.content[i].level.title)) newlevel.GetComponent<LevelPrefabOld>().DeactivateSave();
                 }
                 clases[currentClass].GetComponent<ClasePrefab>().SetLevelsCreated();
             }
@@ -186,9 +186,9 @@ public class ClasesManager : MonoBehaviour
         for(int i = 0; i < levels.content.Count; i++)
         {
             var newlevel = Instantiate(publicLevelPrefab, publicLevelList.transform);
-            newlevel.GetComponent<PublicLevelPrefab>().SetLevel(levels.content[i], this, comunidadLayout);
-            if (IsLevelAlreadySaved(levels.content[i].name)) newlevel.GetComponent<LevelPrefabOld>().DeactivateSave();
-            publicLevels.Add(levels.content[i]);
+            newlevel.GetComponent<PublicLevelPrefab>().SetLevel(levels.content[i].level, this, comunidadLayout);
+            if (IsLevelAlreadySaved(levels.content[i].level.title)) newlevel.GetComponent<LevelPrefabOld>().DeactivateSave();
+            publicLevels.Add(levels.content[i].level);
         }
     }
 
@@ -283,7 +283,7 @@ public class ClasesManager : MonoBehaviour
         ServerClasses.Level theLevel;
 
         ServerClasses.LevelPage thePage = clases[currentClass].GetComponent<ClasePrefab>().GetLevelPage();
-        theLevel = thePage.content[currentLevel];
+        theLevel = thePage.content[currentLevel].level;
 
         return theLevel;
     }

@@ -119,7 +119,7 @@ public class ServerClasses : MonoBehaviour {
     [System.Serializable]
     public class Level {
 
-        public string name;
+        public string title;
         public User owner; // Owner or just string author
         public int id;
 
@@ -130,15 +130,18 @@ public class ServerClasses : MonoBehaviour {
 
         public ArticodingLevel articodingLevel;
 
-        public byte[] image;
-
         public bool publicLevel;
     }
 
     [System.Serializable]
-    public class LevelPage
-    {
-        public List<Level> content;
+    public class LevelWithImage {
+        public Level level;
+        public string image;
+    }
+
+    [System.Serializable]
+    public class LevelPage {
+        public List<LevelWithImage> content;
         public Pageable pageable;
         public bool last;
         public int totalPages;
