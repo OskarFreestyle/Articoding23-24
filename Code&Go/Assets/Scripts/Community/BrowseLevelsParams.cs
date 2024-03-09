@@ -23,7 +23,7 @@ public class BrowseLevelsParams : MonoBehaviour {
         // Update the params
         UpdateParams();
 
-        param += "&liked=true";
+        //param += "&liked=true";
 
         return param;
     }

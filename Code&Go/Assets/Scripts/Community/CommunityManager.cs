@@ -209,7 +209,7 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void GetUserLikedLevels() {
-        string path = "users/getLiked/" + GameManager.Instance.GetUserName();
+        string path = "users/getliked";
         activatedScript.Get(path, GetUserLikedLevelsOK, GetUserLikedLevelsKO);
     }
 
@@ -217,7 +217,7 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("GetUserLikedLevelsOK");
         try {
             string levelsLiked = req.downloadHandler.text; // GetUserLikedLevels: {  10, 12, 412, 15};
-            likedLevelIDs = JsonUtility.FromJson<ServerClasses.User>(levelsLiked).likedLevels;
+            likedLevelIDs = JsonUtility.FromJson<ServerClasses.User>(levelsLiked).likedLevels; //Aquí ya te debería llegar los liked tranquilamente
         }
         catch (System.Exception e) {
             Debug.Log("Error in GetBrowseLevelsOK" + e);
