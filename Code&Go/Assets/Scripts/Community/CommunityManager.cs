@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
-using static UnityEditor.ShaderData;
 using System;
 using static ServerClasses;
 using System.IO;
