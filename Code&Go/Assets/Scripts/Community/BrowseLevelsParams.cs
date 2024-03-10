@@ -14,6 +14,9 @@ public class BrowseLevelsParams : MonoBehaviour {
     private bool publicLevels = true; // Always true?
     private int numLevels = 10;
 
+    private bool liked = false;
+    private bool orderByLikes = false;
+
     // Finished params
     private string param;
 
@@ -37,11 +40,14 @@ public class BrowseLevelsParams : MonoBehaviour {
         param += "publicLevels=";
         param += publicLevels ? "true" : "false";
 
-        param += "&";
-
         // Num Levels
-        param += "size=";
+        param += "&size=";
         param += numLevels;
+
+        // Filter by liked
+        if (liked) {
+            param += "&liked=true";
+        }
 
         // Search by title
         if(nameInputField.text != "") {
@@ -61,7 +67,22 @@ public class BrowseLevelsParams : MonoBehaviour {
         }
 
         // SearchByTags
+
+
+        // Order by
+        param += "&orderByLikes=";
+        if (orderByLikes) param += "true";
+        else param += "false";
     }
 
+    public void setLikedEnable(bool state) {
+        Debug.Log("setLikedState: " + state);
+        liked = state;
+    }
+
+    public void setOrderByLikes(bool state) {
+        Debug.Log("setOrderByLikes: " + state);
+        orderByLikes = state;
+    }
 
 }

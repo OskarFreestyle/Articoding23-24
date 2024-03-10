@@ -126,5 +126,13 @@ MonoBehaviour:
     m_Localized: Search
     m_Metadata:
       m_Items: []
+  - m_Id: 10426713689030656
+    m_Localized: Likes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10426793871540224
+    m_Localized: Plays
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

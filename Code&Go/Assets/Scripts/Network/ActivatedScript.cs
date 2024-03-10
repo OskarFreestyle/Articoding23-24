@@ -171,36 +171,41 @@ public class ActivatedScript : MonoBehaviour {
     }
 
     public void showError(string msg){
-        InfoImportPanel.SetActive(true);
+        if (InfoImportPanel) {
+            InfoImportPanel.SetActive(true);
 
-        //To find `child2` which is the second index(1)
-        GameObject iconError = InfoImportPanel.transform.GetChild(1).gameObject;
-        iconError.SetActive(true);
-        //To find `child3` which is the third index(2)
-        GameObject iconSuccess = InfoImportPanel.transform.GetChild(2).gameObject;
-        iconSuccess.SetActive(false);
-        Debug.Log(msg);
+            //To find `child2` which is the second index(1)
+            GameObject iconError = InfoImportPanel.transform.GetChild(1).gameObject;
+            iconError.SetActive(true);
+            //To find `child3` which is the third index(2)
+            GameObject iconSuccess = InfoImportPanel.transform.GetChild(2).gameObject;
+            iconSuccess.SetActive(false);
+            Debug.Log(msg);
 
-        _title.text = msg;
-        //TODO AQUI LA IDEA ES QUE SE MUESTRE EN UNA VENTANA EMERGENTE GUAY
+            if(_title) _title.text = msg;
+            //TODO AQUI LA IDEA ES QUE SE MUESTRE EN UNA VENTANA EMERGENTE GUAY
+        }
     }
 
     public void showSuccess(string msg){
-        InfoImportPanel.SetActive(true);
+        if (InfoImportPanel) {
+            InfoImportPanel.SetActive(true);
 
-        //To find `child2` which is the second index(1)
-        GameObject iconError = InfoImportPanel.transform.GetChild(1).gameObject;
-        iconError.SetActive(false);
-        //To find `child3` which is the third index(2)
-        GameObject iconSuccess = InfoImportPanel.transform.GetChild(2).gameObject;
-        iconSuccess.SetActive(true);
-        Debug.Log(msg);
+            //To find `child2` which is the second index(1)
+            GameObject iconError = InfoImportPanel.transform.GetChild(1).gameObject;
+            iconError.SetActive(false);
+            //To find `child3` which is the third index(2)
+            GameObject iconSuccess = InfoImportPanel.transform.GetChild(2).gameObject;
+            iconSuccess.SetActive(true);
+            Debug.Log(msg);
 
-        _title.text = msg;
-        //TODO AQUI LA IDEA ES QUE SE MUESTRE EN UNA VENTANA EMERGENTE GUAY
+            if (_title) _title.text = msg;
+            //TODO AQUI LA IDEA ES QUE SE MUESTRE EN UNA VENTANA EMERGENTE GUAY
+        }
     }
 
     public void closeInfoPanel(){
-        InfoImportPanel.SetActive(false);
+        if (InfoImportPanel)
+            InfoImportPanel.SetActive(false);
     }
 }

@@ -20,12 +20,15 @@ public class BrowseLevelsDisplay : MonoBehaviour {
 
         foreach (ServerClasses.LevelWithImage levelWithImage in levelPage.content)
         {
-            Debug.Log("Instanciating level " + levelWithImage.level.title);
+            //Debug.Log("Instanciating level " + levelWithImage.level.title);
             CommunityLevelExpanded currentLevelCard = Instantiate(communityLevelExpandedPrefab, transform);
 
             levelList.Add(currentLevelCard);
 
             currentLevelCard.ConfigureLevel(levelWithImage);
+
+            // Compare the id with the id liked list
+            currentLevelCard.SetLikeState(CommunityManager.Instance.LikedLevelIDs.Contains(levelWithImage.level.id));
         }
 
     }

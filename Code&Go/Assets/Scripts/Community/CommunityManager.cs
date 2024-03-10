@@ -50,6 +50,11 @@ public class CommunityManager : MonoBehaviour {
     }
 
     private List<int> likedLevelIDs = new List<int>();
+    public List<int> LikedLevelIDs {
+        get {
+            return likedLevelIDs;
+        }
+    }
 
 
     private void Awake() {
@@ -209,6 +214,7 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void GetUserLikedLevels() {
+        Debug.Log("GetUserLikedLevels()");
         string path = "users/getliked";
         activatedScript.Get(path, GetUserLikedLevelsOK, GetUserLikedLevelsKO);
     }

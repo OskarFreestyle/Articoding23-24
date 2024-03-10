@@ -1246,7 +1246,9 @@ MonoBehaviour:
   levelImage: {fileID: 8738203564212826442}
   levelLikes: {fileID: 8738203563934412522}
   levelPlays: {fileID: 5753224168624014624}
-  levelHashtags: {fileID: 0}
+  levelHashtags: {fileID: 8738203564245143515}
+  likedEnableButton: {fileID: 7751203676257876284}
+  likedDisableButton: {fileID: 1855249479985170547}
   textureDelete: {fileID: 0}
 --- !u!1 &8738203565079196209
 GameObject:

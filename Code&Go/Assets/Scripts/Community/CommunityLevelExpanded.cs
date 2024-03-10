@@ -13,7 +13,8 @@ public class CommunityLevelExpanded : MonoBehaviour {
     [SerializeField] private Text levelLikes;
     [SerializeField] private Text levelPlays;
     [SerializeField] private Text levelHashtags;
-    public Texture2D textureDelete;
+    [SerializeField] private Button likedEnableButton;
+    [SerializeField] private Button likedDisableButton;
 
     public void ConfigureLevel(ServerClasses.LevelWithImage levelWithImage) {
         // Set the level data
@@ -29,7 +30,7 @@ public class CommunityLevelExpanded : MonoBehaviour {
 
         Texture2D tex = new Texture2D(1, 1);
         if (ImageConversion.LoadImage(tex, imageBytes)) {
-            Debug.Log("tex created correctly");
+            //Debug.Log("tex created correctly");
         }
         else Debug.Log("error load image into texture");
 
@@ -53,6 +54,8 @@ public class CommunityLevelExpanded : MonoBehaviour {
         CommunityManager.Instance.IncreasePlays(levelID.text);
     }
 
-
-
+    public void SetLikeState(bool state) {
+        likedEnableButton.gameObject.SetActive(!state);
+        likedDisableButton.gameObject.SetActive(state);
+    }
 }
