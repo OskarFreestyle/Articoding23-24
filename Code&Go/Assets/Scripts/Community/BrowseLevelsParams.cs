@@ -56,13 +56,13 @@ public class BrowseLevelsParams : MonoBehaviour {
         }
         // Search by author
         if (authorInputField.text != "") {
-            param += "&author=";
+            param += "&owner=";
             param += authorInputField.text;
         }
 
         // Search by ID
         if (iDInputField.text != "") {
-            param += "&id=";
+            param += "&levelid=";
             param += iDInputField.text;
         }
 
