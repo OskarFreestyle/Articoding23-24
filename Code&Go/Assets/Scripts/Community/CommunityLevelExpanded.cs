@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CommunityLevelExpanded : MonoBehaviour {
 
@@ -16,9 +17,11 @@ public class CommunityLevelExpanded : MonoBehaviour {
     [SerializeField] private Button likedEnableButton;
     [SerializeField] private Button likedDisableButton;
 
+    private ServerClasses.Level level;
+
     public void ConfigureLevel(ServerClasses.LevelWithImage levelWithImage) {
         // Set the level data
-        ServerClasses.Level level = levelWithImage.level;
+        level = levelWithImage.level;
         levelName.text = level.title;
         levelAuthor.text = level.owner.username;
         levelID.text = level.id.ToString();
@@ -52,6 +55,22 @@ public class CommunityLevelExpanded : MonoBehaviour {
     public void PlayLevel() {
         levelPlays.text = (int.Parse(levelPlays.text) + 1).ToString();
         CommunityManager.Instance.IncreasePlays(levelID.text);
+
+        // Set the level data
+        GameManager.Instance.SetCommunityLevelBoard(level.articodingLevel.boardstate);
+        GameManager.Instance.SetCommunityLevelActiveBlocks(level.articodingLevel.activeblocks);
+        GameManager.Instance.SetCommunityInitialState(level.articodingLevel.initialState);
+        GameManager.Instance.LoadCommunityLevel();
+
+        // Change the scene
+        if (LoadManager.Instance == null) {
+            SceneManager.LoadScene("LevelScene");
+            return;
+        }
+
+        LoadManager.Instance.LoadScene("LevelScene");
+
+        Debug.Log("Play level finish");
     }
 
     public void SetLikeState(bool state) {

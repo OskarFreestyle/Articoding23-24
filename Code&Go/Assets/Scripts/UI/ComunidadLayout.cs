@@ -159,7 +159,7 @@ public class ComunidadLayout : MonoBehaviour {
     }
 
     public void SaveCommunityLevel() {
-        ServerClasses.Level theLevel = clasesManager.GetCommuintyLevel();
+        ServerClasses.Level theLevel = clasesManager.GetCommunityLevel();
 
         ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.articodingLevel.initialState, levelIconImage, theLevel.title, 7);
 

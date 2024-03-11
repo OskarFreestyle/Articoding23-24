@@ -264,7 +264,7 @@ public class ClasesManager : MonoBehaviour
 
     public void SetCommunityLevel()
     {
-        ServerClasses.Level theLevel = GetCommuintyLevel();
+        ServerClasses.Level theLevel = GetCommunityLevel();
 
         GameManager.Instance.SetCommunityLevelBoard(theLevel.articodingLevel.boardstate);
         GameManager.Instance.SetCommunityLevelActiveBlocks(theLevel.articodingLevel.activeblocks);
@@ -278,7 +278,7 @@ public class ClasesManager : MonoBehaviour
         GameManager.Instance.SetCommunityInitialState(theLevel.articodingLevel.initialState);
     }
 
-    public ServerClasses.Level GetCommuintyLevel()
+    public ServerClasses.Level GetCommunityLevel()
     {
         ServerClasses.Level theLevel;
 

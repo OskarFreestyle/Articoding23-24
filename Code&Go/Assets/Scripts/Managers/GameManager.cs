@@ -75,11 +75,11 @@ public class GameManager : MonoBehaviour {
         Debug.Log("Game Manager Start");
         LoadGame();
 
-        //TrackerAsset.Instance.setVar("language", LocalizationSettings.SelectedLocale.Identifier.Code);
-        //TrackerAsset.Instance.setVar("resolution", Screen.currentResolution.ToString());
-        //TrackerAsset.Instance.setVar("fullscreen", Screen.fullScreen);
-        //TrackerAsset.Instance.Completable.Initialized("articoding", CompletableTracker.Completable.Game);
-        //TrackerAsset.Instance.Completable.Progressed("articoding", CompletableTracker.Completable.Game, ProgressManager.Instance.GetGameProgress());
+        TrackerAsset.Instance.setVar("language", LocalizationSettings.SelectedLocale.Identifier.Code);
+        TrackerAsset.Instance.setVar("resolution", Screen.currentResolution.ToString());
+        TrackerAsset.Instance.setVar("fullscreen", Screen.fullScreen);
+        TrackerAsset.Instance.Completable.Initialized("articoding", CompletableTracker.Completable.Game);
+        TrackerAsset.Instance.Completable.Progressed("articoding", CompletableTracker.Completable.Game, ProgressManager.Instance.GetGameProgress());
         Debug.Log("Game Manager Start Finished");
     }
 
@@ -187,7 +187,8 @@ public class GameManager : MonoBehaviour {
 
     #region Getters And Setters
     public CategoryDataSO GetCategoryByIndex(int index) {
-        return categories[index];
+        if (index > 0 && index < categories.Length) return categories[index];
+        else return null;
     }
 
     public bool IsCreatedLevel() {

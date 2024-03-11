@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class TutorialTriggerLevelCap : MonoBehaviour {
 
     public TutorialTrigger tt;
     public LevelDataSO level;
 
-    public GameObject gameObject;
+    private GameObject gameObject;
 
     void Awake() {
         GameManager gameManager = GameManager.Instance;
@@ -18,7 +17,7 @@ public class TutorialTriggerLevelCap : MonoBehaviour {
         gameObject = transform.gameObject;
 
         //Para que salte ArgumentOutOfRangeException si esta en el editor de niveles
-        if (levelIndex >= 0 && categoryIndex >= 0) {
+        if (levelIndex >= 0 && categoryIndex >= 0 && !GameManager.Instance.IsPlayingCommunityLevel()) {
             if(gameManager.GetCategories()[gameManager.CurrentCategoryIndex].levels[gameManager.CurrentLevelIndex] == level)
                 tt.enabled = true;
             else

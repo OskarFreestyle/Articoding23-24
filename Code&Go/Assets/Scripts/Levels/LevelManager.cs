@@ -91,11 +91,11 @@ public class LevelManager : MonoBehaviour {
             currentLevelIndex = defaultLevelIndex;
         }
 
-        if (!gameManager.IsPlayingCommunityLevel())
-        {
+        if (!gameManager.IsPlayingCommunityLevel()) {
             currentLevel = currentCategory.levels[currentLevelIndex];
             minimosPasos = currentLevel.minimosPasos;
         }
+        else Debug.Log("Playing community level");
         //endTextLocalized.text = currentLevel.endText;
         
         endPanel.SetActive(false);
@@ -108,6 +108,8 @@ public class LevelManager : MonoBehaviour {
     }
 
     private void Start() {
+
+        Debug.Log("Start LevelManager");
         //Si estamos jugando desde la pestaña de comunidad, inicializamos de otra forma
         if (GameManager.Instance.IsPlayingCommunityLevel()) InitializeCommunityLevel();
         else Initialize();
@@ -180,6 +182,7 @@ public class LevelManager : MonoBehaviour {
     }
 
     private void Initialize() {
+        Debug.Log("Initialize() (Not community level)");
 
         if (currentLevel == null) {
             Debug.LogError("Cannot initialize Level. CurrentLevel is null");
@@ -200,8 +203,8 @@ public class LevelManager : MonoBehaviour {
         BlocklyUI.WorkspaceView.InitIDs();
     }
 
-    private void InitializeCommunityLevel()
-    {
+    private void InitializeCommunityLevel() {
+        Debug.Log("InitializeCommunityLevel()");
         // Restricciones y estado inicial
         ActivateLevelBlocks(GameManager.Instance.GetCommunityLevelActiveBlocks(), false);
         LoadInitialBlocks(GameManager.Instance.GetCommunityInitialState());//UI
