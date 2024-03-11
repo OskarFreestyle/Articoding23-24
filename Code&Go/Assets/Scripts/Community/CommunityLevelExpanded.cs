@@ -49,7 +49,7 @@ public class CommunityLevelExpanded : MonoBehaviour {
         else {
             levelLikes.text = (int.Parse(levelLikes.text) - 1).ToString();
         }
-        CommunityManager.Instance.ModifyLikes(levelID.text, state);
+        CommunityManager.Instance.ModifyLikesLevel(levelID.text, state);
     }
 
     public void PlayLevel() {

@@ -123,7 +123,6 @@ public class ServerClasses : MonoBehaviour {
         public string title;
         public User owner; // Owner or just string author
         public int id;
-
         public int likes;
         public int timesPlayed;
 
@@ -135,6 +134,22 @@ public class ServerClasses : MonoBehaviour {
     }
 
     [System.Serializable]
+    public class Playlist {
+
+        public List<LevelWithImage> levelsWithImage;
+
+        public string title;
+        public User owner;
+        public int id;
+        public int likes;
+        public int timesPlayed;
+
+        public List<int> hastagsIDs;
+
+        public bool publicPlaylist; // or public playlist
+    }
+
+    [System.Serializable]
     public class LevelWithImage {
         public Level level;
         public string image;
@@ -143,6 +158,21 @@ public class ServerClasses : MonoBehaviour {
     [System.Serializable]
     public class LevelPage {
         public List<LevelWithImage> content;
+        public Pageable pageable;
+        public bool last;
+        public int totalPages;
+        public int totalElements;
+        public bool first;
+        public PageableSort sort;
+        public int numberOfElements;
+        public int size;
+        public int number;
+        public bool empty;
+    }
+
+    [System.Serializable]
+    public class PlaylistPage {
+        public List<Playlist> content;
         public Pageable pageable;
         public bool last;
         public int totalPages;
@@ -172,5 +202,13 @@ public class ServerClasses : MonoBehaviour {
         public bool publicLevel;
         public ArticodingLevel articodingLevel;
         public byte[] image;
+    }
+
+    [System.Serializable]
+    public class PostedPlaylist {
+        public string title;
+        public List<int> levelsIDs;
+        public List<int> hashtagsIDs;
+        public bool publicPlaylist;
     }
 }

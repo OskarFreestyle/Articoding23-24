@@ -44,6 +44,26 @@ public class GameManager : MonoBehaviour {
     private string userName = "";
     private bool playingCommunityLevel = false;
 
+    private List<int> likedLevelIDs = new List<int>();
+    public List<int> LikedLevelIDs {
+        get {
+            return likedLevelIDs;
+        }
+        set {
+            likedLevelIDs = value;
+        }
+    }
+
+    private List<int> likedPlaylistIDs = new List<int>();
+    public List<int> LikedPlaylistIDs {
+        get {
+            return likedPlaylistIDs;
+        }
+        set {
+            likedPlaylistIDs = value;
+        }
+    }
+
     BoardState communityBoard = null;
     ActiveBlocks communityActiveBlocks = null;
     string communityInitialState = null;

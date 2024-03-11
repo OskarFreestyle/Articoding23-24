@@ -28,7 +28,7 @@ public class BrowseLevelsDisplay : MonoBehaviour {
             currentLevelCard.ConfigureLevel(levelWithImage);
 
             // Compare the id with the id liked list
-            currentLevelCard.SetLikeState(CommunityManager.Instance.LikedLevelIDs.Contains(levelWithImage.level.id));
+            currentLevelCard.SetLikeState(GameManager.Instance.LikedLevelIDs.Contains(levelWithImage.level.id));
         }
 
     }

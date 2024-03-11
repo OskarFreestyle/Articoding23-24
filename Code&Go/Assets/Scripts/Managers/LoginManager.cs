@@ -102,8 +102,7 @@ public class LoginManager : MonoBehaviour {
 
         loginPanel.SetActive(false);
 
-        loginPage.gameObject.SetActive(false);
-        mainPage.gameObject.SetActive(true);
+        CommunityManager.Instance.ChangeEnablePage(mainPage);
 
         profileCard.Configure();
 
