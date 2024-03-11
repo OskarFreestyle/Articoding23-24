@@ -23,7 +23,7 @@ public class LoadManager : MonoBehaviour {
         set { autoStart = value; }
     }
 
-    [SerializeField] private GameObject content;
+    [SerializeField] private GameObject loadingCanvas;
     [SerializeField] private Text loadingText;
     [SerializeField] private float extraLoadingTime = 1.0f;
 
@@ -53,7 +53,7 @@ public class LoadManager : MonoBehaviour {
     }
 
     void LateUpdate() {
-        if (!content.activeInHierarchy) return;
+        if (!loadingCanvas.activeInHierarchy) return;
 
         Color color = loadingText.color;
         color.a = 1.0f + Mathf.Sin(Time.timeSinceLevelLoad);
@@ -61,7 +61,7 @@ public class LoadManager : MonoBehaviour {
     }
 
     public IEnumerator Unload() {
-        content.SetActive(true);
+        loadingCanvas.SetActive(true);
 
         // Unload current Scene
         if (lastLoadedIndex != -1)
@@ -73,7 +73,9 @@ public class LoadManager : MonoBehaviour {
     }
 
     public void LoadScene(string sceneName) {
-        content.SetActive(true);
+        Debug.Log("Load Scene name: " + sceneName);
+
+        loadingCanvas.SetActive(true);
 
         // Unload current Scene
         if (lastLoadedIndex != -1)
@@ -88,7 +90,9 @@ public class LoadManager : MonoBehaviour {
     }
 
     public void LoadScene(int index) {
-        content.SetActive(true);
+        Debug.Log("Load Scene index: " + index);
+
+        loadingCanvas.SetActive(true);
 
         // Unload current Scene
         if (lastLoadedIndex != -1)
@@ -121,7 +125,7 @@ public class LoadManager : MonoBehaviour {
 
         yield return new WaitForSeconds(extraLoadingTime);
 
-        content.SetActive(false);
+        loadingCanvas.SetActive(false);
 
         if(!loadingText.gameObject.activeSelf)
             loadingText.gameObject.SetActive(true);

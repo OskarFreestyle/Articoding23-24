@@ -30,7 +30,7 @@ public class LoginManager : MonoBehaviour {
 
         if (!instance) {
             instance = this;
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
         else {
             Debug.LogWarning("More than 1 Login Manager created");

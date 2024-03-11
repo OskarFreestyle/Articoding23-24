@@ -61,7 +61,7 @@ public class CommunityManager : MonoBehaviour {
 
         if (!instance) {
             instance = this;
-            DontDestroyOnLoad(this);
+            //DontDestroyOnLoad(this);
         }
         else {
             Debug.LogWarning("More than 1 Community Manager created");
@@ -73,6 +73,7 @@ public class CommunityManager : MonoBehaviour {
 
     public void Start() {
         // Make sure of the enable/disable pages
+        isLogIn = GameManager.Instance.GetLogged();
         currentPage = isLogIn ? mainPage : loginPage;
         loginPage.gameObject.SetActive(!isLogIn);
         mainPage.gameObject.SetActive(isLogIn);

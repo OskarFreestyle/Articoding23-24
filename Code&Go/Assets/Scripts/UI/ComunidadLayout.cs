@@ -36,19 +36,16 @@ public class ComunidadLayout : MonoBehaviour {
 
     private void OnEnable()
     {
-        if(!GameManager.Instance.GetLogged())
-        {
+        if(!GameManager.Instance.GetLogged()) {
             IsNotLoggedAction();
         }
-        else
-        {
+        else {
             IsLoggedAction();
             CreateClasses();
         }
     }
 
-    public void IsLoggedAction()
-    {
+    public void IsLoggedAction() {
         clasesLayout.SetActive(true);
         nivelesLayout.SetActive(false);
         notLoggedLayout.SetActive(false);
@@ -56,8 +53,7 @@ public class ComunidadLayout : MonoBehaviour {
         refreshButton.SetActive(true);
 
         username.text = GameManager.Instance.GetUserName();
-        if (GameManager.Instance.GetIsAdmin())
-        {
+        if (GameManager.Instance.GetIsAdmin()) {
             userRole.text = "Profesor";
             addClassButton.SetActive(true);
         }
@@ -68,8 +64,7 @@ public class ComunidadLayout : MonoBehaviour {
         CreateClasses();
     }
 
-    public void IsNotLoggedAction()
-    {
+    public void IsNotLoggedAction() {
         clasesLayout.SetActive(false);
         nivelesLayout.SetActive(false);
         notLoggedLayout.SetActive(true);
@@ -79,10 +74,8 @@ public class ComunidadLayout : MonoBehaviour {
         userRole.text = "";
     }
 
-    void CreateClasses()
-    {
-        if (!alreadyLogged)
-        {
+    void CreateClasses() {
+        if (!alreadyLogged) {
             clasesManager.ReadCreatedLevels();
             activatedScript.Get("classes", GetClassesOK, GetClassesKO);
             activatedScript.Get("levels?publicLevels=true&size=6", GetPublicLevelsOK, GetPublicLevelsKO);
@@ -90,12 +83,10 @@ public class ComunidadLayout : MonoBehaviour {
         }
     }
 
-    int GetClassesOK(UnityWebRequest req)
-    {
+    int GetClassesOK(UnityWebRequest req) {
         string clasesJson = req.downloadHandler.text;
 
-        try
-        {
+        try {
             clases = JsonUtility.FromJson<ServerClasses.ClaseJSON>(clasesJson);
         }
         catch (System.Exception e)
@@ -121,16 +112,13 @@ public class ComunidadLayout : MonoBehaviour {
         return 0;
     }
 
-    int GetPublicLevelsOK(UnityWebRequest req)
-    {
+    int GetPublicLevelsOK(UnityWebRequest req) {
         string nivelesJson = req.downloadHandler.text;
 
-        try
-        {
+        try {
             publicLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(nivelesJson);
         }
-        catch (System.Exception e)
-        {
+        catch (System.Exception e) {
             Debug.Log("Error al leer niveles " + e);
         }
 
@@ -139,20 +127,17 @@ public class ComunidadLayout : MonoBehaviour {
         return 0;
     }
 
-    int GetPublicLevelsKO(UnityWebRequest req)
-    {
+    int GetPublicLevelsKO(UnityWebRequest req) {
         Debug.Log("Error al obtener niveles publicos");
         return 0;
     }
 
-    public void PlayCommunityLevel()
-    {
+    public void PlayCommunityLevel() {
         GameManager.Instance.LoadCommunityLevel();
 
         clasesManager.SetCommunityLevel();
 
-        if (LoadManager.Instance == null)
-        {
+        if (LoadManager.Instance == null) {
             SceneManager.LoadScene("LevelScene");
             return;
         }
@@ -160,14 +145,12 @@ public class ComunidadLayout : MonoBehaviour {
         LoadManager.Instance.LoadScene("LevelScene");
     }
 
-    public void PlayPublicLevel(ServerClasses.Level level)
-    {
+    public void PlayPublicLevel(ServerClasses.Level level) {
         GameManager.Instance.LoadCommunityLevel();
 
         clasesManager.SetPublicLevel(level);
 
-        if (LoadManager.Instance == null)
-        {
+        if (LoadManager.Instance == null) {
             SceneManager.LoadScene("LevelScene");
             return;
         }
@@ -175,8 +158,7 @@ public class ComunidadLayout : MonoBehaviour {
         LoadManager.Instance.LoadScene("LevelScene");
     }
 
-    public void SaveCommunityLevel()
-    {
+    public void SaveCommunityLevel() {
         ServerClasses.Level theLevel = clasesManager.GetCommuintyLevel();
 
         ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.articodingLevel.initialState, levelIconImage, theLevel.title, 7);
@@ -184,18 +166,15 @@ public class ComunidadLayout : MonoBehaviour {
         savePanel.SetActive(true);
     }
 
-    public void SavePublicLevel(ServerClasses.Level theLevel)
-    {
+    public void SavePublicLevel(ServerClasses.Level theLevel) {
         ProgressManager.Instance.UserCreatedLevel(theLevel.articodingLevel.boardstate.ToJson(), theLevel.articodingLevel.activeblocks.ToJson(), theLevel.articodingLevel.initialState, levelIconImage, theLevel.title, 7);
 
         savePanel.SetActive(true);
     }
 
-    public void RefreshClases()
-    {
+    public void RefreshClases() {
         //Eliminamos todas las clases y las volvemos a llamar
-        for (var i = clasesList.transform.childCount - 1; i >= 1; i--)
-        {
+        for (var i = clasesList.transform.childCount - 1; i >= 1; i--) {
             Destroy(clasesList.transform.GetChild(i).gameObject);
         }
 
@@ -204,18 +183,15 @@ public class ComunidadLayout : MonoBehaviour {
         activatedScript.Get("classes", GetClassesOK, GetClassesKO);
     }
 
-    public ServerClasses.LevelPage GetPublicLevels()
-    {
+    public ServerClasses.LevelPage GetPublicLevels() {
         return publicLevels;
     }
 
-    public void SetPublicLevels(ServerClasses.LevelPage lvls)
-    {
+    public void SetPublicLevels(ServerClasses.LevelPage lvls) {
         publicLevels = lvls;
     }
 
-    void ReadLevelFiles()
-    {
+    void ReadLevelFiles() {
         string path = Application.dataPath;
         //Creamos las carpetas pertinentes si no estan creadas
         if (!Directory.Exists(path + "/Resources/Levels/")) ;

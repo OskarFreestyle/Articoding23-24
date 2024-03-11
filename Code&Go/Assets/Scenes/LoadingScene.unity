@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoStart: 1
-  content: {fileID: 7715883592381250272}
+  loadingCanvas: {fileID: 7715883592381250272}
   loadingText: {fileID: 528102410}
   extraLoadingTime: 0
 --- !u!1 &1768260164
