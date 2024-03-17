@@ -137,6 +137,7 @@ public class ServerClasses : MonoBehaviour {
     public class Playlist {
 
         public List<LevelWithImage> levelsWithImage;
+        //public List<Level> levelsWithImage;
 
         public string title;
         public User owner;
@@ -186,16 +187,14 @@ public class ServerClasses : MonoBehaviour {
     }
 
     [System.Serializable]
-    public class ArticodingLevel
-    {
+    public class ArticodingLevel {
         public ActiveBlocks activeblocks;
         public BoardState boardstate;
         public string initialState;
     }
 
     [System.Serializable]
-    public class PostedLevel
-    {
+    public class PostedLevel {
         public string title;
         public List<int> classes;
         public List<int> hashtagsIDs;
@@ -208,7 +207,6 @@ public class ServerClasses : MonoBehaviour {
     public class PostedPlaylist {
         public string title;
         public List<int> levelsIDs;
-        public List<int> hashtagsIDs;
-        public bool publicPlaylist;
+        public List<int> hashtagsIDs;   // Own of the playlist
     }
 }

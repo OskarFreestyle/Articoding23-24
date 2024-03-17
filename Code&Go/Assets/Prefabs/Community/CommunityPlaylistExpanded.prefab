@@ -1240,15 +1240,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1985cd8af5bd55a42b6414b23708ff90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: {fileID: 8738203564710990308}
-  levelAuthor: {fileID: 8738203564174847089}
-  levelID: {fileID: 8738203565079196210}
-  levelImage: {fileID: 8738203564212826442}
-  levelLikes: {fileID: 8738203563934412522}
-  levelPlays: {fileID: 5753224168624014624}
-  levelHashtags: {fileID: 8738203564245143515}
+  playlistName: {fileID: 8738203564710990308}
+  playlistAuthor: {fileID: 8738203564174847089}
+  playlistID: {fileID: 8738203565079196210}
+  playlistSprites: []
+  currentImage: {fileID: 8738203564212826442}
+  playlistLikes: {fileID: 8738203563934412522}
+  playlistPlays: {fileID: 5753224168624014624}
+  playlistHashtags: {fileID: 8738203564245143515}
   likedEnableButton: {fileID: 7751203676257876284}
   likedDisableButton: {fileID: 1855249479985170547}
+  timeToChangeImage: 4
 --- !u!1 &8738203565079196209
 GameObject:
   m_ObjectHideFlags: 0

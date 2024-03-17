@@ -195,7 +195,9 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("GetBrowsePlaylistsOK");
         try {
             string playlistsJson = req.downloadHandler.text;
+            Debug.Log("A");
             publicPlaylists = JsonUtility.FromJson<ServerClasses.PlaylistPage>(playlistsJson);
+            Debug.Log("B");
             browsePlaylistsDisplay.Configure();
         }
         catch (System.Exception e) {

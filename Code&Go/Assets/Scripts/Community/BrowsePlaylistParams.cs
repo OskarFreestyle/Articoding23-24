@@ -50,7 +50,7 @@ public class BrowsePlaylistParams : MonoBehaviour {
         }
 
         // Search by title
-        if(nameInputField.text != "") {
+        if (nameInputField.text != "") {
             param += "&title=";
             param += nameInputField.text;
         }
