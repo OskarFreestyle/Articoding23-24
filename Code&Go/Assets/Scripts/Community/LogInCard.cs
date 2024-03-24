@@ -14,9 +14,9 @@ public class LogInCard : MonoBehaviour {
     [SerializeField] private Transform createAccountPage;
 
     [SerializeField] private Image logInPageButtonImage;
-    [SerializeField] private Image logInPageBGImage;
+    //[SerializeField] private Image logInPageBGImage;
     [SerializeField] private Image createAccountPageButtonImage;
-    [SerializeField] private Image createAccountPageBGImage;
+    //[SerializeField] private Image createAccountPageBGImage;
 
     [SerializeField] private Color enableColor;
     [SerializeField] private Color disableColor;
@@ -36,9 +36,9 @@ public class LogInCard : MonoBehaviour {
 
         // Change the colors
         logInPageButtonImage.color = logInPageButton.interactable ? disableColor : enableColor;
-        logInPageBGImage.color = logInPageButton.interactable ? disableColor : enableColor;
+        //logInPageBGImage.color = logInPageButton.interactable ? disableColor : enableColor;
         createAccountPageButtonImage.color = createAccountPageButton.interactable ? disableColor : enableColor;
-        createAccountPageBGImage.color = createAccountPageButton.interactable ? disableColor : enableColor;
+        //createAccountPageBGImage.color = createAccountPageButton.interactable ? disableColor : enableColor;
 
         // Change the active page
         logInPage.gameObject.SetActive(createAccountPageButton.interactable);

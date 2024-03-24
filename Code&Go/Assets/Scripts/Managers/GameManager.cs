@@ -207,7 +207,7 @@ public class GameManager : MonoBehaviour {
 
     #region Getters And Setters
     public CategoryDataSO GetCategoryByIndex(int index) {
-        if (index > 0 && index < categories.Length) return categories[index];
+        if (index >= 0 && index < categories.Length) return categories[index];
         else return null;
     }
 

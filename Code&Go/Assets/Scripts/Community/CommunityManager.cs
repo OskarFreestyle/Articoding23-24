@@ -156,11 +156,6 @@ public class CommunityManager : MonoBehaviour {
         // Level image
         levelJson.image = levelDataSO.levelImage.texture.EncodeToPNG();
 
-        Debug.Log(levelJson.image);
-
-        //Debug.Log("Subiendo el nivel image lenght: " + levelJson.image.Length);
-        //Debug.Log("Starts with " + levelJson.image[0] + levelJson.image[1] + levelJson.image[2] + levelJson.image[3] + levelJson.image[4] + levelJson.image[5] + levelJson.image[6]+ "...");
-
         activatedScript.Post("levels", JsonUtility.ToJson(levelJson), OnUploadOK, OnUploadKO);
     }
 
