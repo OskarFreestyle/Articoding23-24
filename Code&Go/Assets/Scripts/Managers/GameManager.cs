@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour {
     private string token;
     private bool isAdmin = false;
     private string userName = "";
+    public int userIconID = 0;
     private bool playingCommunityLevel = false;
 
     private List<int> likedLevelIDs = new List<int>();

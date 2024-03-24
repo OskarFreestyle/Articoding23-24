@@ -130,6 +130,13 @@ public class CommunityManager : MonoBehaviour {
         GetBrowsePlaylists();
     }
 
+    public void BackButtonLevelsDisplay() {
+        if (isPlaylistMode) {
+            GoToCreatePlaylistPage();
+        }
+        else GoToMainPage();
+    }
+
     public void GoToMainPage() {
         isPlaylistMode = false;
         ChangeEnablePage(mainPage);
