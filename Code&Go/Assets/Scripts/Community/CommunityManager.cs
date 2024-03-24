@@ -209,9 +209,7 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("GetBrowsePlaylistsOK");
         try {
             string playlistsJson = req.downloadHandler.text;
-            Debug.Log("A");
             publicPlaylists = JsonUtility.FromJson<ServerClasses.PlaylistPage>(playlistsJson);
-            Debug.Log("B");
             browsePlaylistsDisplay.Configure();
         }
         catch (System.Exception e) {
@@ -315,7 +313,7 @@ public class CommunityManager : MonoBehaviour {
         ServerClasses.PostedPlaylist playlistJson = new ServerClasses.PostedPlaylist();
 
         playlistJson.title = creatingPlaylistName.text;
-        playlistJson.levelsIDs = creatingPlaylistIDs;
+        playlistJson.levels = creatingPlaylistIDs;
 
         activatedScript.Post("playlists", JsonUtility.ToJson(playlistJson), OnCreateOK, OnCreateKO);
     }

@@ -194,7 +194,7 @@ public class ComunidadLayout : MonoBehaviour {
     void ReadLevelFiles() {
         string path = Application.dataPath;
         //Creamos las carpetas pertinentes si no estan creadas
-        if (!Directory.Exists(path + "/Resources/Levels/")) ;
+        if (!Directory.Exists(path + "/Resources/Levels/"));
             Directory.CreateDirectory(path + "/Resources/Levels/");
         if (!Directory.Exists(path + "/Resources/Levels/Boards/"))
             Directory.CreateDirectory(path + "/Resources/Levels/Boards/");

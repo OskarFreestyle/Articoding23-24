@@ -12,7 +12,7 @@ public class BrowseLevelsParams : MonoBehaviour {
     // Always the same
     private string header = "levels";
     private bool publicLevels = true; // Always true?
-    private int numLevels = 10;
+    private int numLevels = 25;
 
     private bool liked = false;
     private bool orderByLikes = false;
@@ -67,7 +67,6 @@ public class BrowseLevelsParams : MonoBehaviour {
         }
 
         // SearchByTags
-
 
         // Order by
         param += "&orderByLikes=";

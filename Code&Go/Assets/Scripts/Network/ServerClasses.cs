@@ -43,6 +43,9 @@ public class ServerClasses : MonoBehaviour {
         public int students;
         public string name;
         public int id;
+
+        // Added
+        public List<int> levelsCompletedIDs;   // For this user
     }
 
     [System.Serializable]
@@ -137,7 +140,7 @@ public class ServerClasses : MonoBehaviour {
     public class Playlist {
 
         public List<LevelWithImage> levelsWithImage;
-        //public List<Level> levelsWithImage;
+        // public List<Level> levelsWithImage;
 
         public string title;
         public User owner;
@@ -206,7 +209,7 @@ public class ServerClasses : MonoBehaviour {
     [System.Serializable]
     public class PostedPlaylist {
         public string title;
-        public List<int> levelsIDs;
+        public List<int> levels;
         public List<int> hashtagsIDs;   // Own of the playlist
     }
 }
