@@ -27,6 +27,7 @@ public class CommunityPlaylistExpanded : MonoBehaviour {
 
     public void ConfigurePlaylist(ServerClasses.Playlist p) {
         Debug.Log($"Configure playulist {p.title}");
+
         // Set the level data
         playlist = p;
         playlistName.text = playlist.title;

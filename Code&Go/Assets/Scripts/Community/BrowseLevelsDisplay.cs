@@ -29,7 +29,9 @@ public class BrowseLevelsDisplay : MonoBehaviour {
 
             // Compare the id with the id liked list
             currentLevelCard.SetLikeState(GameManager.Instance.LikedLevelIDs.Contains(levelWithImage.level.id));
-        }
 
+            // Set the state to play or to create playlsit
+            currentLevelCard.SetPlaylistMode(CommunityManager.Instance.IsPlaylistMode);
+        }
     }
 }

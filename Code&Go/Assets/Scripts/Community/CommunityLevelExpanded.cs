@@ -16,12 +16,16 @@ public class CommunityLevelExpanded : MonoBehaviour {
     [SerializeField] private Text levelHashtags;
     [SerializeField] private Button likedEnableButton;
     [SerializeField] private Button likedDisableButton;
+    [SerializeField] private RectTransform playButtonTransform;
+    [SerializeField] private RectTransform addPlaylistButtonTransform;
 
+    public ServerClasses.LevelWithImage levelWithImage;
     private ServerClasses.Level level;
 
-    public void ConfigureLevel(ServerClasses.LevelWithImage levelWithImage) {
+    public void ConfigureLevel(ServerClasses.LevelWithImage lWI) {
         // Set the level data
-        level = levelWithImage.level;
+        levelWithImage = lWI;
+        level = lWI.level;
         levelName.text = level.title;
         levelAuthor.text = level.owner.username;
         levelID.text = level.id.ToString();
@@ -29,7 +33,7 @@ public class CommunityLevelExpanded : MonoBehaviour {
         levelPlays.text = level.timesPlayed.ToString();
 
         // Set the level image (string to .png)
-        byte[] imageBytes = Convert.FromBase64String(levelWithImage.image);
+        byte[] imageBytes = Convert.FromBase64String(lWI.image);
 
         Texture2D tex = new Texture2D(1, 1);
         if (ImageConversion.LoadImage(tex, imageBytes)) {
@@ -76,5 +80,15 @@ public class CommunityLevelExpanded : MonoBehaviour {
     public void SetLikeState(bool state) {
         likedEnableButton.gameObject.SetActive(!state);
         likedDisableButton.gameObject.SetActive(state);
+    }
+
+    public void SetPlaylistMode(bool state) {
+        addPlaylistButtonTransform.gameObject.SetActive(state);
+        playButtonTransform.gameObject.SetActive(!state);
+    }
+
+    public void AddToPlaylist() {
+        Debug.Log("Add to playlist");
+        CommunityManager.Instance.AddToCreatingPlaylist(levelWithImage);
     }
 }

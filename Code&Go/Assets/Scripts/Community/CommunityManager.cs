@@ -32,6 +32,7 @@ public class CommunityManager : MonoBehaviour {
     [Space][Space]
 
     [SerializeField] private UploadLevelsDisplay uploadLevelsDisplay;
+    [SerializeField] private AddedLevelsPlaylistDisplay addedLevelsPlaylistDisplay;
 
     // Community Levels
     [Space][Space]
@@ -58,6 +59,12 @@ public class CommunityManager : MonoBehaviour {
         }
     }
 
+    private bool isPlaylistMode;
+    public bool IsPlaylistMode { get { return isPlaylistMode; } }
+
+    private List<int> creatingPlaylistIDs = new List<int>();
+    [SerializeField] private InputField creatingPlaylistName;
+
     private void Awake() {
         Debug.Log("Community Manager Awake");
 
@@ -82,7 +89,7 @@ public class CommunityManager : MonoBehaviour {
         communityLevelsPage.gameObject.SetActive(false);
         uploadLevelsPage.gameObject.SetActive(false);
         communityPlaylistPage.gameObject.SetActive(false);
-        //createPlaylistPage.gameObject.SetActive(false);
+        createPlaylistPage.gameObject.SetActive(false);
         //classesPage.gameObject.SetActive(false);
     }   
 
@@ -103,6 +110,12 @@ public class CommunityManager : MonoBehaviour {
         uploadLevelsDisplay.InstanciateCreatedLevels();
     }
 
+    public void GoToCreatePlaylistPage() {
+        isPlaylistMode = true;
+
+        ChangeEnablePage(createPlaylistPage);
+    }
+
     public void GoToCommunityLevelsPage() {
         ChangeEnablePage(communityLevelsPage);
 
@@ -118,6 +131,7 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void GoToMainPage() {
+        isPlaylistMode = false;
         ChangeEnablePage(mainPage);
     }
 
@@ -271,7 +285,6 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
-
     public void GetUserLikedLevels() {
         Debug.Log("GetUserLikedLevels()");
         string path = "users/getliked";
@@ -296,5 +309,48 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
+    public void CreatePlaylist() {
+        Debug.Log("Create playlist");
+
+        ServerClasses.PostedPlaylist playlistJson = new ServerClasses.PostedPlaylist();
+
+        playlistJson.title = creatingPlaylistName.text;
+        playlistJson.levelsIDs = creatingPlaylistIDs;
+
+        activatedScript.Post("playlists", JsonUtility.ToJson(playlistJson), OnCreateOK, OnCreateKO);
+    }
+
+    int OnCreateOK(UnityWebRequest req) {
+        Debug.Log("OnCreateOK");
+        return 0;
+    }
+
+    int OnCreateKO(UnityWebRequest req) {
+        Debug.Log("OnCreateKO");
+        return 0;
+    }
+
+
+    public void AddToCreatingPlaylist(ServerClasses.LevelWithImage lWI) {
+        Debug.Log("AddToCreatingPlaylist");
+
+        // By the moment check to not add the same level two times (ese nivel no tenía que salir en la búsqueda directamente)
+        if (!creatingPlaylistIDs.Contains(lWI.level.id)) {
+
+            // Save the level id
+            creatingPlaylistIDs.Add(lWI.level.id);
+
+            // Create the level target contract
+            addedLevelsPlaylistDisplay.AddLevel(lWI);
+        }
+        else Debug.Log("Nivel ya repetido");
+
+        // Return to create playlist 
+        GoToCreatePlaylistPage();
+    }
+
+    public void RemoveFromPlaylist(int levelID) {
+        creatingPlaylistIDs.Remove(levelID);
+    }
     #endregion
 }

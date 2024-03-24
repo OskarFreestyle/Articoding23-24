@@ -20,7 +20,6 @@ public class BrowsePlaylistsDisplay : MonoBehaviour {
 
         foreach (ServerClasses.Playlist playlist in playlistPage.content) {
             CommunityPlaylistExpanded currentPlaylistCard = Instantiate(communityPlaylistExpandedPrefab, transform);
-
             playlistList.Add(currentPlaylistCard);
 
             currentPlaylistCard.ConfigurePlaylist(playlist);

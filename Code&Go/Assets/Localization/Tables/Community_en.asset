@@ -134,5 +134,17 @@ MonoBehaviour:
     m_Localized: Plays
     m_Metadata:
       m_Items: []
+  - m_Id: 14861588349321216
+    m_Localized: Add Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15556100520411136
+    m_Localized: Add
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15574651167834112
+    m_Localized: Playlist Name
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
