@@ -102,7 +102,6 @@ public class ProgressManager : MonoBehaviour {
         int newStarsAchieved = Mathf.Clamp(starsAchieved - currentCategoryData.levelsData[currentLevelIndex], 0, 3);
         currentCategoryData.levelsData[currentLevelIndex] = currentCategoryData.levelsData[currentLevelIndex] + newStarsAchieved;
 
-
         // Unlock the next level
         int nextLevelIndex = currentLevelIndex + 1;
         int categoryIndex = Array.IndexOf(categoriesData, currentCategoryData);
@@ -120,37 +119,34 @@ public class ProgressManager : MonoBehaviour {
         }
 
         // Tracks
-        //var levelName = GameManager.Instance.GetCurrentLevelName();
-        //TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, true, starsAchieved);
-        //var categoryName = categories[categoryIndex].name_id;
-        //if (currentCategoryData.GetLevelsCompleted() < currentCategoryData.levelsData.Length) {
-        //    TrackerAsset.Instance.Completable.Progressed(categoryName, CompletableTracker.Completable.Completable, (float)currentCategoryData.GetLevelsCompleted() / categories[categoryIndex].levels.Count);
-        //}
-        //else {
-        //    TrackerAsset.Instance.Completable.Completed(categoryName, CompletableTracker.Completable.Completable, true, GetCategoryTotalStars(categoryIndex));
-        //}
-        //if (GetGameProgress() == 1.0f) {
-        //    //TrackerAsset.Instance.Completable.Completed("articoding", CompletableTracker.Completable.Game, true, GetTotalStars());
-        //}
+        var levelName = GameManager.Instance.GetCurrentLevelName();
+        TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, true, starsAchieved);
+        var categoryName = categoriesDataSO[categoryIndex].name_id;
+        if (currentCategoryData.GetLevelsCompleted() < currentCategoryData.levelsData.Length) {
+            TrackerAsset.Instance.Completable.Progressed(categoryName, CompletableTracker.Completable.Completable, (float)currentCategoryData.GetLevelsCompleted() / categoriesDataSO[categoryIndex].levels.Count);
+        }
+        else {
+            TrackerAsset.Instance.Completable.Completed(categoryName, CompletableTracker.Completable.Completable, true, GetCategoryTotalStars(categoryIndex));
+        }
+        if (GetGameProgress() == 1.0f) {
+            TrackerAsset.Instance.Completable.Completed("articoding", CompletableTracker.Completable.Game, true, GetTotalStars());
+        }
     }
     #endregion
 
 
     //Setters
-
-
     public void LevelStarted(int categoryIndex, int levelIndex) {
         if (currentCategoryData == null || (categoryIndex >= 0 && categoryIndex < categoriesData.Length && categoriesData[categoryIndex] != currentCategoryData))
             currentCategoryData = categoriesData[categoryIndex];
 
         Debug.Log("Level index: " + levelIndex);
 
-        //if (currentLevel == 0 && !currentCategoryData.completableInitialized)
-        //{
-        //    var categoryName = categories[categoryIndex].name_id;
-        //    TrackerAsset.Instance.Completable.Initialized(categoryName, CompletableTracker.Completable.Completable);
-        //    currentCategoryData.completableInitialized = true;
-        //}
+        if (levelIndex == 0 && !currentCategoryData.completableInitialized) {
+            var categoryName = categoriesDataSO[categoryIndex].name_id;
+            TrackerAsset.Instance.Completable.Initialized(categoryName, CompletableTracker.Completable.Completable);
+            currentCategoryData.completableInitialized = true;
+        }
 
         var levelName = GameManager.Instance.GetCurrentLevelName();
         TrackerAsset.Instance.Accessible.Accessed(levelName);

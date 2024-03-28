@@ -37,6 +37,7 @@ public class LevelsCreatedSaveData {
 [System.Serializable]
 public class CategorySaveData {
     public int[] levelsData;
+    public bool completableInitialized;
 
     public int GetTotalLevels() {
         int totalLevels = 0;

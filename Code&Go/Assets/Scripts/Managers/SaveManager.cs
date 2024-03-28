@@ -9,9 +9,6 @@ using UnityEngine;
 /// </summary>
 public class SaveManager : MonoBehaviour {
 
-    // TODO quitar es para debug
-    bool checkHash = false;
-
     #region Properties
     public static SaveManager instance;
     static public SaveManager Instance {

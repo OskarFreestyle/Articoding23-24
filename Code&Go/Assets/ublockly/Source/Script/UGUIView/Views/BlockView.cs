@@ -463,7 +463,7 @@ namespace UBlockly.UGUI
                 TrackerAsset.Instance.setVar("block_type", Block.Type);
                 TrackerAsset.Instance.setVar("action", "remove");
                 TrackerAsset.Instance.GameObject.Interacted(GameManager.Instance.GetBlockId(Block));
-                //TrackerAsset.Instance.Accessible.Accessed("", AccessibleTracker.Accessible.Screen);
+                TrackerAsset.Instance.Accessible.Accessed("", AccessibleTracker.Accessible.Screen);
             }
             //articoding
 

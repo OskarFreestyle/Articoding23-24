@@ -20,7 +20,7 @@ public class SettingsManager : MonoBehaviour {
 
 
     private void Start() {
-        //TrackerAsset.Instance.Accessible.Accessed("menu")
+        TrackerAsset.Instance.Accessible.Accessed("menu");
 
         ResetSettingPanels();
     }
@@ -113,7 +113,7 @@ public class SettingsManager : MonoBehaviour {
     public void ExitGame() {
         //GameManager.instance.Quit(); //TODO: GameManager
         bool gameCompleted = ProgressManager.Instance.GetGameProgress() == 1f;
-        //TrackerAsset.Instance.Completable.Completed("articoding", CompletableTracker.Completable.Game, gameCompleted, ProgressManager.Instance.GetTotalStars());
+        TrackerAsset.Instance.Completable.Completed("articoding", CompletableTracker.Completable.Game, gameCompleted, ProgressManager.Instance.GetTotalStars());
 
         SimvaExtension.Instance.Quit();
     }

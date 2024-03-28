@@ -117,9 +117,9 @@ public class LevelManager : MonoBehaviour {
         var dom = UBlockly.Xml.WorkspaceToDom(BlocklyUI.WorkspaceView.Workspace);
         string text = UBlockly.Xml.DomToText(dom);
         text = GameManager.Instance.ChangeCodeIDs(text);
-        
-        //TrackerAsset.Instance.setVar("code", "\r\n" + text);
-        //TrackerAsset.Instance.Completable.Initialized(GameManager.Instance.GetCurrentLevelName().ToLower(), CompletableTracker.Completable.Level);
+
+        TrackerAsset.Instance.setVar("code", "\r\n" + text);
+        TrackerAsset.Instance.Completable.Initialized(GameManager.Instance.GetCurrentLevelName().ToLower(), CompletableTracker.Completable.Level);
 
         if (currentLevel != null) {
             levelName.text = currentLevel.levelName;

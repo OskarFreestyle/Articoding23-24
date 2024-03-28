@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class ComunityCurrentCard : MonoBehaviour
 {
-    public Text name;
+    public Text nameText;
     public Text description;
 
     public void SetName(string n)
     {
-        name.text = n;
+        nameText.text = n;
     }
 
     public void SetDescription(string des)

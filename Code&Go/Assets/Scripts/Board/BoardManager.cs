@@ -1038,7 +1038,6 @@ public class BoardManager : Listener
         if (hintsShown >= hintsParent.childCount /*|| ProgressManager.Instance.GetHintsRemaining() == 0*/)
             DeactivateHintButton();
 
-
         TrackerAsset.Instance.setVar("level", GameManager.Instance.GetCurrentLevelName());
         TrackerAsset.Instance.GameObject.Interacted("hint_button");
     }

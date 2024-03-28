@@ -13585,7 +13585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.16078432, g: 0.30588236, b: 0.56078434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14456,7 +14456,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 753288294}
   m_HandleRect: {fileID: 2117481757}
   m_Direction: 2
-  m_Value: 1.0000024
+  m_Value: 1.0000048
   m_Size: 0.9703638
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -25642,7 +25642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 536739502824436735, guid: bdb6f80e921fdc947aabc71c693350b0, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 246
+      value: 352
       objectReference: {fileID: 0}
     - target: {fileID: 536739502824436735, guid: bdb6f80e921fdc947aabc71c693350b0, type: 3}
       propertyPath: m_SizeDelta.y
@@ -32433,7 +32433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.16078432, g: 0.30588236, b: 0.56078434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
