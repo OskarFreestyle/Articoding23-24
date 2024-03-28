@@ -38,6 +38,7 @@ public class CommunityLevelContract : MonoBehaviour {
 
     public void PlayLevel() {
         // Set the level data
+        GameManager.Instance.LevelName = level.title;
         GameManager.Instance.SetCommunityLevelBoard(level.articodingLevel.boardstate);
         GameManager.Instance.SetCommunityLevelActiveBlocks(level.articodingLevel.activeblocks);
         GameManager.Instance.SetCommunityInitialState(level.articodingLevel.initialState);

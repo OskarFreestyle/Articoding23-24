@@ -131,7 +131,8 @@ public class LevelManager : MonoBehaviour {
         }
         //Si esta a null es nivel de comunidad 
         else
-            levelName.text = "Comunidad";
+            //levelName.text = "Comunidad";
+            levelName.text = GameManager.Instance.LevelName;
     }
 
     private void Update()
@@ -388,14 +389,12 @@ public class LevelManager : MonoBehaviour {
         // Si habia una estrella de antes, la quitamos
         SetSpecialBlockStarActive(false);
         
-        if (!completed)
-        {
+        if (!completed) {
             TrackerAsset.Instance.setVar("code", "\r\n" + text);
             TrackerAsset.Instance.Completable.Completed(levelName, CompletableTracker.Completable.Level, false, -1f);
         }
 
-        if(LoadManager.Instance == null)
-        {
+        if(LoadManager.Instance == null) {
             SceneManager.LoadScene("MenuScene");
             return;
         }
@@ -403,22 +402,19 @@ public class LevelManager : MonoBehaviour {
         LoadManager.Instance.LoadScene("MenuScene");
     }
 
-    public void LoadInitialBlocks(LocalizedAsset<TextAsset> textAsset)
-    {
+    public void LoadInitialBlocks(LocalizedAsset<TextAsset> textAsset) {
         if (textAsset == null) return;
 
         StartCoroutine(AsyncLoadInitialBlocks(textAsset));
     }
 
-    public void LoadInitialBlocks(string textAsset)
-    {
+    public void LoadInitialBlocks(string textAsset) {
         if (textAsset == null) return;
 
         StartCoroutine(AsyncLoadInitialBlocks(textAsset));
     }
 
-    IEnumerator AsyncLoadInitialBlocks(LocalizedAsset<TextAsset> textAsset)
-    {
+    IEnumerator AsyncLoadInitialBlocks(LocalizedAsset<TextAsset> textAsset) {
         var loadingOp = textAsset.LoadAssetAsync();
         if (!loadingOp.IsDone)
             yield return loadingOp;
@@ -436,8 +432,7 @@ public class LevelManager : MonoBehaviour {
         yield return null;
     }
 
-    IEnumerator AsyncLoadInitialBlocks(string textAsset)
-    {
+    IEnumerator AsyncLoadInitialBlocks(string textAsset) {
         BlocklyUI.WorkspaceView.CleanViews();
 
         var dom = UBlockly.Xml.TextToDom(textAsset);
@@ -447,8 +442,7 @@ public class LevelManager : MonoBehaviour {
         yield return null;
     }
 
-    public void ActivateLevelBlocks(TextAsset textAsset, bool allActive)
-    {
+    public void ActivateLevelBlocks(TextAsset textAsset, bool allActive) {
         if (textAsset == null) return;
 
         StartCoroutine(AsyncActivateLevelBlocks(textAsset, allActive));

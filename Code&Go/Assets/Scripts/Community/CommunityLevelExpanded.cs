@@ -57,6 +57,7 @@ public class CommunityLevelExpanded : MonoBehaviour {
     }
 
     public void PlayLevel() {
+        GameManager.Instance.LevelName = level.title;
         levelPlays.text = (int.Parse(levelPlays.text) + 1).ToString();
         CommunityManager.Instance.IncreasePlays(levelID.text);
 

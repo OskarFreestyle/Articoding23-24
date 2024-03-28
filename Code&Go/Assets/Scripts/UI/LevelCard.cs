@@ -81,23 +81,15 @@ public class LevelCard : MonoBehaviour {
     }
 
     public void PlayLevel() {
+        GameManager.Instance.LevelName = levelData.levelName;
         if(levelData) GameManager.Instance.LoadLevel(levelData.categoryData, levelData.index);
         else GameManager.Instance.LoadLevelCreator();
     }
 
     public void EditLevel() {
-        //GameManager.Instance.SetCurrentLevel(currentLevel);
-        //GameManager.Instance.SetCurrentCategory(categories[currentCategory]);
-        //levelCard.button.onClick.Invoke();
-        //EditCreatedLevel();
-
         GameManager.Instance.CurrentLevelIndex = levelData.index;
         GameManager.Instance.CurrentCategoryIndex = levelData.categoryData.index;
-        //PlayLevel();
         EditCreatedLevel();
-
-        //GameManager.Instance.S = levelData.index;
-        //GameManager.Instance.CurrentCategoryIndex = levelData.categoryData.index;
     }
 
     public void EditCreatedLevel() {

@@ -9,15 +9,13 @@ public class LevelCategory : MonoBehaviour
     public Text levelNameText;
     public LevelTestManager levelTestManager;
 
-    private void Start()
-    {
+    private void Start() {
         inputField = GetComponent<InputField>();
 
         inputField.onEndEdit.AddListener(delegate { ChangeLevelName(); });
     }
 
-    private void ChangeLevelName()
-    {
+    private void ChangeLevelName() {
         levelTestManager.ChangeLevelName(levelNameText.text);
     }
 }

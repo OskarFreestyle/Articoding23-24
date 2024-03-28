@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelName : MonoBehaviour
-{
+public class LevelName : MonoBehaviour {
     private InputField inputField;
     public Text levelNameText;
     public LevelTestManager levelTestManager;

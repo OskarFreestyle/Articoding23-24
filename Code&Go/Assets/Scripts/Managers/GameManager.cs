@@ -70,6 +70,11 @@ public class GameManager : MonoBehaviour {
     BoardState communityBoard = null;
     ActiveBlocks communityActiveBlocks = null;
     string communityInitialState = null;
+    private string levelName;
+    public string LevelName {
+        get { return levelName; }
+        set { levelName = value; }
+    }
     #endregion
 
     #region Methods
