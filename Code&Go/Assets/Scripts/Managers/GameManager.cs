@@ -23,11 +23,13 @@ public class GameManager : MonoBehaviour {
     private int currentCategoryIndex;
     public int CurrentCategoryIndex {
         get { return currentCategoryIndex; }
+        set { currentCategoryIndex = value; }
     }
 
     private int currentLevelIndex;
     public int CurrentLevelIndex {
         get { return currentLevelIndex; }
+        set { currentLevelIndex = value; }
     }
 
     private bool isGameLoaded = false;

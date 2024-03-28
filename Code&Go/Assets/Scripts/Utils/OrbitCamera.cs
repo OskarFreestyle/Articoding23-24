@@ -48,24 +48,21 @@ public class OrbitCamera : MonoBehaviour
         private set { _pitch = value; }
     }
 
-    public void Move(float yawDelta, float pitchDelta)
-    {
+    public void Move(float yawDelta, float pitchDelta) {
         _yaw += yawDelta;
         _pitch += pitchDelta;
 
         ApplyConstraints();
     }
 
-    public void Reset()
-    {
+    public void Reset() {
         _yaw = _iniYaw;
         _pitch = _iniPitch;
         _currentRotationPitch %= 360.0f;
         _currentRotationYaw %= 360.0f;
     }
 
-    private void ApplyConstraints()
-    {
+    private void ApplyConstraints() {
         float targetYaw = _target.transform.rotation.eulerAngles.y;
         float targetPitch = _target.transform.rotation.eulerAngles.x;
 
@@ -81,8 +78,7 @@ public class OrbitCamera : MonoBehaviour
         //if (pitchOverflow > 0) { _pitch = Mathf.Lerp(_pitch, targetPitch, pitchOverflow / pitchDifference); }
     }
 
-    void Awake()
-    {
+    void Awake() {
         // initialise our pitch and yaw settings to our current orientation.
         _pitch = transform.rotation.eulerAngles.x;
         _yaw = transform.rotation.eulerAngles.y;
@@ -94,8 +90,7 @@ public class OrbitCamera : MonoBehaviour
         _currentRotationPitch = _pitch;
     }
 
-    void Update()
-    {
+    void Update() {
         // calculate target positions
         _targetRotationPitch = _pitch;
         _targetRotationYaw = _yaw;

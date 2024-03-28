@@ -114,6 +114,7 @@ public class LevelsDisplay : MonoBehaviour {
                 LevelCard currentLevelCard = Instantiate(levelCardTemplate, transform);
                 currentLevelCard.SetLevelData(levelData);
                 currentLevelCard.DisableStars();
+                currentLevelCard.EnableEditButton();
                 currentLevelCard.transform.localPosition = levelsLocalPositions[x] - new Vector3(0, (y * 385), 0);
 
                 x++;

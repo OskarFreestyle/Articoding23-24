@@ -208,7 +208,6 @@ GameObject:
   m_Component:
   - component: {fileID: 56424206}
   - component: {fileID: 56424205}
-  - component: {fileID: 56424204}
   - component: {fileID: 56424208}
   - component: {fileID: 56424207}
   - component: {fileID: 56424209}
@@ -219,14 +218,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &56424204
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56424203}
-  m_Enabled: 1
 --- !u!20 &56424205
 Camera:
   m_ObjectHideFlags: 0
@@ -2472,7 +2463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tt: {fileID: 575093754}
   level: {fileID: 11400000, guid: cfd7655cf0ea5a045874e92f3a99083b, type: 2}
-  gameObject: {fileID: 0}
 --- !u!114 &575093756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2507,7 +2497,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tt: {fileID: 575093756}
   level: {fileID: 11400000, guid: cbfbb1236f3a6d24dba69b89cee5821a, type: 2}
-  gameObject: {fileID: 0}
 --- !u!114 &575093758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2542,7 +2531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tt: {fileID: 575093758}
   level: {fileID: 11400000, guid: 8698cc84718895d459f95101212d5c31, type: 2}
-  gameObject: {fileID: 0}
 --- !u!114 &575093760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2577,7 +2565,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tt: {fileID: 575093760}
   level: {fileID: 11400000, guid: e83e30ddabbc2714499e9ccc8950523f, type: 2}
-  gameObject: {fileID: 0}
 --- !u!1 &610898750
 GameObject:
   m_ObjectHideFlags: 0
@@ -3061,7 +3048,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tt: {fileID: 690624011}
   level: {fileID: 11400000, guid: a67e471a63c69094082cbad2156111e6, type: 2}
-  gameObject: {fileID: 0}
 --- !u!114 &690624011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3262,7 +3248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tt: {fileID: 710475102}
   level: {fileID: 11400000, guid: a67e471a63c69094082cbad2156111e6, type: 2}
-  gameObject: {fileID: 0}
 --- !u!1001 &716498951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7490,7 +7475,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tt: {fileID: 1785181640}
   level: {fileID: 11400000, guid: a67e471a63c69094082cbad2156111e6, type: 2}
-  gameObject: {fileID: 0}
 --- !u!114 &1785181640
 MonoBehaviour:
   m_ObjectHideFlags: 0

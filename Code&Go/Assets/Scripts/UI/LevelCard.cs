@@ -21,6 +21,8 @@ public class LevelCard : MonoBehaviour {
 
     [SerializeField] private Image buttonBGImage;
 
+    [SerializeField] private Button editButton;
+
     private LevelDataSO levelData;
 
     public void SetLevelData(LevelDataSO levelData) {
@@ -47,6 +49,10 @@ public class LevelCard : MonoBehaviour {
         starIcon0.gameObject.SetActive(false);
         starIcon1.gameObject.SetActive(false);
         starIcon2.gameObject.SetActive(false);
+    }
+
+    public void EnableEditButton() {
+        editButton.gameObject.SetActive(true);
     }
 
     private void SetText() {
@@ -77,5 +83,35 @@ public class LevelCard : MonoBehaviour {
     public void PlayLevel() {
         if(levelData) GameManager.Instance.LoadLevel(levelData.categoryData, levelData.index);
         else GameManager.Instance.LoadLevelCreator();
+    }
+
+    public void EditLevel() {
+        //GameManager.Instance.SetCurrentLevel(currentLevel);
+        //GameManager.Instance.SetCurrentCategory(categories[currentCategory]);
+        //levelCard.button.onClick.Invoke();
+        //EditCreatedLevel();
+
+        GameManager.Instance.CurrentLevelIndex = levelData.index;
+        GameManager.Instance.CurrentCategoryIndex = levelData.categoryData.index;
+        //PlayLevel();
+        EditCreatedLevel();
+
+        //GameManager.Instance.S = levelData.index;
+        //GameManager.Instance.CurrentCategoryIndex = levelData.categoryData.index;
+    }
+
+    public void EditCreatedLevel() {
+        LevelDataSO thisleveldata = levelData;
+
+        BoardState thisBoard = JsonUtility.FromJson<BoardState>(thisleveldata.levelBoard.text);
+        ActiveBlocks thisActive = JsonUtility.FromJson<ActiveBlocks>(thisleveldata.activeBlocks.text);
+        string thisInitial = thisleveldata.customInitialState.text;
+
+        GameManager.Instance.SetCommunityLevelBoard(thisBoard);
+        GameManager.Instance.SetCommunityLevelActiveBlocks(thisActive);
+        GameManager.Instance.SetCommunityInitialState(thisInitial);
+        GameManager.Instance.SetPlayingCommunityLevel(true);
+
+        GameManager.Instance.LoadLevelCreator();
     }
 }
