@@ -27,6 +27,7 @@ public class CommunityManager : MonoBehaviour {
     [SerializeField] private RectTransform communityPlaylistPage;
     [SerializeField] private RectTransform createPlaylistPage;
     [SerializeField] private RectTransform classesPage;
+    [SerializeField] private RectTransform classLevelsPage;
     private RectTransform currentPage;
 
     [Space][Space]
@@ -48,6 +49,13 @@ public class CommunityManager : MonoBehaviour {
         }
     }
 
+    private ServerClasses.LevelPage uploadedLevels;
+    public ServerClasses.LevelPage UploadedLevels {
+        get {
+            return uploadedLevels;
+        }
+    }
+
     // Community Playlists
     [Space][Space]
     [SerializeField] private BrowsePlaylistsDisplay browsePlaylistsDisplay;
@@ -59,11 +67,32 @@ public class CommunityManager : MonoBehaviour {
         }
     }
 
+
+
     private bool isPlaylistMode;
     public bool IsPlaylistMode { get { return isPlaylistMode; } }
 
     private List<int> creatingPlaylistIDs = new List<int>();
     [SerializeField] private InputField creatingPlaylistName;
+
+
+    // Classes
+    [Space][Space]
+    [SerializeField] private ClassesDisplay classesDisplay;
+    private ServerClasses.ClaseJSON classes;
+    public ServerClasses.ClaseJSON Classes {
+        get {
+            return classes;
+        }
+    }
+    [SerializeField] private ClassesLevelsDisplay classesLevelsDisplay;
+    private ServerClasses.LevelPage classLevels;
+    public ServerClasses.LevelPage ClassLevels {
+        get {
+            return classLevels;
+        }
+    }
+
 
     private void Awake() {
         Debug.Log("Community Manager Awake");
@@ -90,7 +119,8 @@ public class CommunityManager : MonoBehaviour {
         uploadLevelsPage.gameObject.SetActive(false);
         communityPlaylistPage.gameObject.SetActive(false);
         createPlaylistPage.gameObject.SetActive(false);
-        //classesPage.gameObject.SetActive(false);
+        classesPage.gameObject.SetActive(false);
+        classLevelsPage.gameObject.SetActive(false);
     }   
 
 
@@ -106,8 +136,27 @@ public class CommunityManager : MonoBehaviour {
     public void GoToUploadLevelsPage() {
         ChangeEnablePage(uploadLevelsPage);
 
-        // Instance the created levels
-        uploadLevelsDisplay.InstanciateCreatedLevels();
+        // Get the already uploaded levels
+        activatedScript.Get("levels?size=100&publicLevels=true&owner=" + GameManager.Instance.GetUserName(), GetUserLevelsOK, GetUserLevelsKO);
+    }
+
+    private int GetUserLevelsOK(UnityWebRequest req) {
+        Debug.Log("GetUserLevelsOK");
+        try {
+            string levelsJson = req.downloadHandler.text;
+            uploadedLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(levelsJson);
+            // Instance the created levels
+            uploadLevelsDisplay.InstanciateCreatedLevels();
+        }
+        catch (System.Exception e) {
+            Debug.Log("Error in GetUserLevelsOK" + e);
+        }
+        return 0;
+    }
+
+    private int GetUserLevelsKO(UnityWebRequest req) {
+        Debug.Log("GetUserLevelsKO");
+        return 0;
     }
 
     public void GoToCreatePlaylistPage() {
@@ -128,6 +177,66 @@ public class CommunityManager : MonoBehaviour {
 
         // Do a basic search
         GetBrowsePlaylists();
+    }
+
+    public void GoToClassesPage() {
+        ChangeEnablePage(classesPage);
+
+        // Get the user classes
+        activatedScript.Get("classes", GetClassesOK, GetClassesKO);
+    }
+
+    private int GetClassesOK(UnityWebRequest req) {
+        Debug.Log("GetClassesOK");
+
+        try {
+            string levelsJson = req.downloadHandler.text;
+            classes = JsonUtility.FromJson<ServerClasses.ClaseJSON>(levelsJson);
+            // Instance the created levels
+            classesDisplay.InstanciateClassCards();
+        }
+        catch (System.Exception e) {
+            Debug.Log("Error in GetClassesOK" + e);
+        }
+
+        return 0;
+    }
+
+    private int GetClassesKO(UnityWebRequest req) {
+        Debug.Log("GetClassesKO");
+
+        return 0;
+    }
+
+    public void PlayClass(ServerClasses.Clase clas) {
+        Debug.Log("Play Class " + clas.name);
+
+        // Get the class levels
+        string s = "levels?class=" + clas.id.ToString();
+        activatedScript.Get(s, GetClassLevelsOK, GetClassLevelsKO);
+    }
+
+    public int GetClassLevelsOK(UnityWebRequest req) {
+        Debug.Log("GetClassLevelsOK");
+
+        try {
+            ChangeEnablePage(classLevelsPage);
+            string levelsJson = req.downloadHandler.text;
+            classLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(levelsJson);
+
+            // Instance the created levels
+            classesLevelsDisplay.InstanciateClassLevels();
+        }
+        catch (System.Exception e) {
+            Debug.Log("Error in GetClassesOK" + e);
+        }
+        return 0;
+    }
+
+    public int GetClassLevelsKO(UnityWebRequest req) {
+        Debug.Log("GetClassLevelsKO");
+
+        return 0;
     }
 
     public void BackButtonLevelsDisplay() {

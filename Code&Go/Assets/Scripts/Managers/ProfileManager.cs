@@ -31,7 +31,9 @@ public class ProfileManager : MonoBehaviour {
     private void SetName() {
         Debug.Log("Name segun progress manager: " + ProgressManager.Instance.Name);
         nameMenu.SetActive(false);
-        userName.text = ProgressManager.Instance.Name != "" ? "Pengu" : ProgressManager.Instance.Name;
+        if (ProgressManager.Instance.Name != "") userName.text = ProgressManager.Instance.Name;
+        else userName.text = "Pengu";
+        //userName.text = ProgressManager.Instance.Name != "" ? "Pengu" : ProgressManager.Instance.Name;
     }
 
     public void SetActiveNamePanel(bool active) {

@@ -10,6 +10,8 @@ public class CommunityLevelContract : MonoBehaviour {
 
     [SerializeField] private Text levelName;
     [SerializeField] private Image levelImage;
+    [SerializeField] private RectTransform completeTextTransform;
+    [SerializeField] private RectTransform incompleteTextTransform;
 
     private ServerClasses.Level level;
     private int levelID;
@@ -56,5 +58,10 @@ public class CommunityLevelContract : MonoBehaviour {
         CommunityManager.Instance.RemoveFromPlaylist(levelID);
 
         Destroy(gameObject);
+    }
+
+    public void SetClassLevelState(bool state) {
+        if (completeTextTransform) completeTextTransform.gameObject.SetActive(state);
+        if (incompleteTextTransform) incompleteTextTransform.gameObject.SetActive(!state);
     }
 }

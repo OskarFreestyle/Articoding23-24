@@ -23,4 +23,9 @@ public class UploadLevelCard : MonoBehaviour {
         uploadedCheck.gameObject.SetActive(true);
         uploadButton.gameObject.SetActive(false);
     }
+
+    public void AlreadyUploaded() {
+        uploadedCheck.gameObject.SetActive(true);
+        uploadButton.gameObject.SetActive(false);
+    }
 }

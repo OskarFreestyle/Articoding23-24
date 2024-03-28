@@ -70,6 +70,15 @@ public class UploadLevelsDisplay : MonoBehaviour {
             currentLevelCard.Configure(levelDataSO);
             currentLevelCard.transform.localPosition = levelsLocalPositions[x] - new Vector3(0, (y * 385), 0);
 
+            // Check the names to set uploaded the already uploaded
+            Debug.Log("Count " + CommunityManager.Instance.UploadedLevels.content.Count);
+            for (int i = 0; i < CommunityManager.Instance.UploadedLevels.content.Count; i++) {
+                Debug.Log($"{levelDataSO.levelName} - {CommunityManager.Instance.UploadedLevels.content[i].level.title}");
+                if(levelDataSO.levelName == CommunityManager.Instance.UploadedLevels.content[i].level.title) {
+                    currentLevelCard.AlreadyUploaded();
+                }
+            }
+
             x++;
             if (x > 4) {
                 y++;
