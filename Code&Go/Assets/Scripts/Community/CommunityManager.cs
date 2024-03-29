@@ -97,6 +97,7 @@ public class CommunityManager : MonoBehaviour {
     [SerializeField] private InputField classKey;
 
     [SerializeField] private ReplyMessage replyMessage;
+    [SerializeField] private LoadingCircle loadingCircle;
 
 
     private void Awake() {
@@ -296,12 +297,13 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("Search: " + browseLevelsParams.GetParams());
         activatedScript.Get(browseLevelsParams.GetParams(), GetBrowseLevelsOK, GetBrowseLevelsKO);
         browseLevelsParams.ResetParams();
+        loadingCircle.Show(true);
     }
 
     int GetBrowseLevelsOK(UnityWebRequest req) {
         Debug.Log("GetBrowseLevelsOK");
-        try
-        {
+        loadingCircle.Hide();
+        try {
             string levelsJson = req.downloadHandler.text;
             publicLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(levelsJson);
             browseLevelsDisplay.Configure();
@@ -316,6 +318,7 @@ public class CommunityManager : MonoBehaviour {
 
     int GetBrowseLevelsKO(UnityWebRequest req) {
         Debug.Log("Error al obtener niveles publicos: " + req.responseCode);
+        loadingCircle.Hide();
         return 0;
     }
 
@@ -323,10 +326,12 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("Search playlist: " + browsePlaylistsParams.GetParams());
         activatedScript.Get(browsePlaylistsParams.GetParams(), GetBrowsePlaylistsOK, GetBrowsePlaylistsKO);
         browsePlaylistsParams.ResetParams();
+        loadingCircle.Show(false);
     }
 
     int GetBrowsePlaylistsOK(UnityWebRequest req) {
         Debug.Log("GetBrowsePlaylistsOK");
+        loadingCircle.Hide();
         try {
             string playlistsJson = req.downloadHandler.text;
             publicPlaylists = JsonUtility.FromJson<ServerClasses.PlaylistPage>(playlistsJson);
@@ -341,6 +346,7 @@ public class CommunityManager : MonoBehaviour {
 
     int GetBrowsePlaylistsKO(UnityWebRequest req) {
         Debug.Log("Error al obtener playlist publicos: " + req.responseCode);
+        loadingCircle.Hide();
         return 0;
     }
 
