@@ -14,9 +14,7 @@ public class LogInCard : MonoBehaviour {
     [SerializeField] private Transform createAccountPage;
 
     [SerializeField] private Image logInPageButtonImage;
-    //[SerializeField] private Image logInPageBGImage;
     [SerializeField] private Image createAccountPageButtonImage;
-    //[SerializeField] private Image createAccountPageBGImage;
 
     [SerializeField] private Color enableColor;
     [SerializeField] private Color disableColor;
@@ -25,6 +23,8 @@ public class LogInCard : MonoBehaviour {
     [SerializeField] public InputField logInPassword;    
     [SerializeField] public Text createAccountUsername;
     [SerializeField] public InputField createAccountPassword;
+
+    [SerializeField] public ReplyMessage replyMessage;
 
     public LoginManager loginManager;
 
@@ -36,9 +36,7 @@ public class LogInCard : MonoBehaviour {
 
         // Change the colors
         logInPageButtonImage.color = logInPageButton.interactable ? disableColor : enableColor;
-        //logInPageBGImage.color = logInPageButton.interactable ? disableColor : enableColor;
         createAccountPageButtonImage.color = createAccountPageButton.interactable ? disableColor : enableColor;
-        //createAccountPageBGImage.color = createAccountPageButton.interactable ? disableColor : enableColor;
 
         // Change the active page
         logInPage.gameObject.SetActive(createAccountPageButton.interactable);
@@ -46,13 +44,27 @@ public class LogInCard : MonoBehaviour {
     }
 
     public void TryToLogIn() {
-        Debug.Log("Log In user: " + logInUsername.text + ", pass: " + logInPassword.text);
+        if(logInUsername.text.Length == 0) {
+            replyMessage.Configure(MessageReplyID.FailedUsernameEmpty);
+            return;
+        }
+        if (logInPassword.text.Length == 0) {
+            replyMessage.Configure(MessageReplyID.FailedPasswordEmpty);
+            return;
+        }
         loginManager.TryToLogIn(logInUsername.text, logInPassword.text);
         logInPassword.text = "";
     }
 
     public void TryToCreateAccount() {
-        Debug.Log("Create Account user: " + createAccountUsername.text + ", pass: " + createAccountPassword.text);
+        if (createAccountUsername.text.Length == 0) {
+            replyMessage.Configure(MessageReplyID.FailedUsernameEmpty);
+            return;
+        }
+        if (createAccountPassword.text.Length == 0) {
+            replyMessage.Configure(MessageReplyID.FailedPasswordEmpty);
+            return;
+        }
         loginManager.TryToCreateAccount(createAccountUsername.text, createAccountPassword.text);
         createAccountPassword.text = "";
     }

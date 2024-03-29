@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MessageReply_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: a1a7e593ae15f704dab58b90861164f5, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 16397369344
+    m_Localized: Accept
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52472578048
+    m_Localized: Successful login
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55744135168
+    m_Localized: Failed Login
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58894057472
+    m_Localized: Successful registration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61599383552
+    m_Localized: Existing username, try another
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65722384384
+    m_Localized: The playlist needs a name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67953754112
+    m_Localized: The playlist name cannot exceed 16 characters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69560172544
+    m_Localized: Successfully created playlist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5292789858304
+    m_Localized: Error creating playlist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13290237067264
+    m_Localized: Please enter a username
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13371308769280
+    m_Localized: Please enter a password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14903890673664
+    m_Localized: Level uploaded correctly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15231360958464
+    m_Localized: Error uploading level
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

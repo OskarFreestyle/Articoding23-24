@@ -96,6 +96,8 @@ public class CommunityManager : MonoBehaviour {
     // Join class
     [SerializeField] private InputField classKey;
 
+    [SerializeField] private ReplyMessage replyMessage;
+
 
     private void Awake() {
         Debug.Log("Community Manager Awake");
@@ -280,17 +282,20 @@ public class CommunityManager : MonoBehaviour {
 
     int OnUploadOK(UnityWebRequest req) {
         Debug.Log("OnUploadOK");
+        replyMessage.Configure(MessageReplyID.LevelUploadedCorrectly);
         return 0;
     }
 
     int OnUploadKO(UnityWebRequest req) {
         Debug.Log("OnUploadKO");
+        replyMessage.Configure(MessageReplyID.ErrorUploadingLevel);
         return 0;
     }
 
     public void GetBrowseLevels() {
         Debug.Log("Search: " + browseLevelsParams.GetParams());
-        activatedScript.Get(browseLevelsParams.GetParams(), GetBrowseLevelsOK, GetBrowseLevelsKO); // "levels?publicLevels=true&size=6"
+        activatedScript.Get(browseLevelsParams.GetParams(), GetBrowseLevelsOK, GetBrowseLevelsKO);
+        browseLevelsParams.ResetParams();
     }
 
     int GetBrowseLevelsOK(UnityWebRequest req) {
@@ -316,7 +321,8 @@ public class CommunityManager : MonoBehaviour {
 
     public void GetBrowsePlaylists() {
         Debug.Log("Search playlist: " + browsePlaylistsParams.GetParams());
-        activatedScript.Get(browsePlaylistsParams.GetParams(), GetBrowsePlaylistsOK, GetBrowsePlaylistsKO); // "levels?publicLevels=true&size=6"
+        activatedScript.Get(browsePlaylistsParams.GetParams(), GetBrowsePlaylistsOK, GetBrowsePlaylistsKO);
+        browsePlaylistsParams.ResetParams();
     }
 
     int GetBrowsePlaylistsOK(UnityWebRequest req) {
@@ -437,8 +443,44 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
+    public void GetUserLikedPlaylist() {
+        Debug.Log("GetUserLikedPlaylist()");
+        Debug.LogError("Cesar aqui no se que poner para que me de las playlist con me gustas");
+        //string path = "users/getliked";
+        //activatedScript.Get(path, GetUserLikedPlaylistOK, GetUserLikedPlaylistKO);
+    }
+
+    int GetUserLikedPlaylistOK(UnityWebRequest req) {
+        Debug.Log("GetUserLikedPlaylistOK");
+        try {
+            string playlistLiked = req.downloadHandler.text; // GetUserLikedLevels: {  10, 12, 412, 15};
+            //GameManager.Instance.LikedPlaylistIDs = JsonUtility.FromJson<ServerClasses.User>(playlistLiked).likedPlaylist; //Aquí ya te debería llegar los liked tranquilamente
+        }
+        catch (System.Exception e) {
+            Debug.Log("Error in GetUserLikedPlaylistOK" + e);
+        }
+
+        return 0;
+    }
+
+    int GetUserLikedPlaylistKO(UnityWebRequest req) {
+        Debug.Log("GetUserLikedPlaylistKO");
+        return 0;
+    }
+
     public void CreatePlaylist() {
         Debug.Log("Create playlist");
+        
+        // Check the playlist name
+        if(creatingPlaylistName.text.Length == 0) {
+            replyMessage.Configure(MessageReplyID.ShortPlaylistNameError);
+            return;
+        }
+
+        if (creatingPlaylistName.text.Length > 16) {
+            replyMessage.Configure(MessageReplyID.LongPlaylistNameError);
+            return;
+        }
 
         ServerClasses.PostedPlaylist playlistJson = new ServerClasses.PostedPlaylist();
 
@@ -450,11 +492,13 @@ public class CommunityManager : MonoBehaviour {
 
     int OnCreateOK(UnityWebRequest req) {
         Debug.Log("OnCreateOK");
+        replyMessage.Configure(MessageReplyID.SuccessfulCreatedPlaylist);
         return 0;
     }
 
     int OnCreateKO(UnityWebRequest req) {
         Debug.Log("OnCreateKO");
+        replyMessage.Configure(MessageReplyID.ErrorCreatingPlaylist);
         return 0;
     }
 

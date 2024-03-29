@@ -15,11 +15,7 @@ public class LoginManager : MonoBehaviour {
     [SerializeField] private RectTransform mainPage;
     [SerializeField] private ProfileCard profileCard;
 
-    public GameObject waitPanel;
-    public GameObject OKPanel;
-    public GameObject KOPanel;
-    public GameObject loginPanel;
-    public GameObject logButton;
+    [SerializeField] private ReplyMessage replyMessage;
 
     public ActivatedScript activated;
 
@@ -27,6 +23,8 @@ public class LoginManager : MonoBehaviour {
 
     private string tempName;
     private string tempPass;
+
+    private bool isNewRegister = false;
 
 
     private void Awake() {
@@ -45,13 +43,8 @@ public class LoginManager : MonoBehaviour {
     }
 
     public void TryToLogIn(string user, string pass) {
-
         tempName = user;
         tempPass = pass;
-
-        if (waitPanel != null) {
-            waitPanel.SetActive(true);
-        }
 
         ServerClasses.Login loginJson = new ServerClasses.Login();
         loginJson.username = user;
@@ -63,14 +56,10 @@ public class LoginManager : MonoBehaviour {
     }
 
     public void TryToCreateAccount(string user, string pass) {
+        isNewRegister = true;
 
         tempName = user;
         tempPass = pass;
-
-        if (waitPanel != null)
-        {
-            waitPanel.SetActive(true);
-        }
 
         ServerClasses.CreateAccount createAccountJson = new ServerClasses.CreateAccount();
         createAccountJson.username = user;
@@ -82,20 +71,18 @@ public class LoginManager : MonoBehaviour {
     }
 
     public int OnRegisterOK(UnityWebRequest req) {
-        Debug.Log("OnRegisterOK");
-
+        replyMessage.Configure(MessageReplyID.SuccessfulRegistration);
         TryToLogIn(tempName, tempPass);
-
         return 0;
     }
 
     public int OnRegisterKO(UnityWebRequest req) {
-        Debug.Log("OnRegisterKO");
+        replyMessage.Configure(MessageReplyID.FailedRegistration);
         return 0;
     }
 
     public void LogOut() {
-        Debug.Log("Deslogueado");
+        isNewRegister = false;
 
         // Conexion variables
         GameManager.Instance.SetToken("");
@@ -103,8 +90,7 @@ public class LoginManager : MonoBehaviour {
         GameManager.Instance.SetUserName("");
         GameManager.Instance.SetLogged(false);
 
-        loginPage.gameObject.SetActive(true);
-        mainPage.gameObject.SetActive(false);
+        CommunityManager.Instance.ChangeEnablePage(loginPage);
     }
 
     int OnLoginOK(UnityWebRequest req) {
@@ -119,34 +105,24 @@ public class LoginManager : MonoBehaviour {
         GameManager.Instance.SetUserName(userName);
         GameManager.Instance.SetLogged(true);
 
-        if (waitPanel != null) {
-            waitPanel.SetActive(false);
-            OKPanel.SetActive(true);
-            KOPanel.SetActive(false);
-        }
-
-        loginPanel.SetActive(false);
+        if(!isNewRegister) replyMessage.Configure(MessageReplyID.SuccessfulLogin);
 
         CommunityManager.Instance.ChangeEnablePage(mainPage);
 
         profileCard.Configure();
 
         CommunityManager.Instance.GetUserLikedLevels();
+        CommunityManager.Instance.GetUserLikedPlaylist();
 
+        isNewRegister = false;
         return 0;
     }
 
-    int OnLoginKO(UnityWebRequest req)
-    {
-        Debug.Log("No logeado");
-        if (waitPanel != null) {
-            waitPanel.SetActive(false);
-            KOPanel.SetActive(true);
-            OKPanel.SetActive(false);
-        }
+    int OnLoginKO(UnityWebRequest req) {
+        if (!isNewRegister) replyMessage.Configure(MessageReplyID.FailedLogin);
 
         userName = "";
-
+        isNewRegister = false;
         return 0;
     }
 }

@@ -75,6 +75,12 @@ public class BrowsePlaylistParams : MonoBehaviour {
         else param += "false";
     }
 
+    public void ResetParams() {
+        nameInputField.text = "";
+        authorInputField.text = "";
+        iDInputField.text = "";
+    }
+
     public void setLikedEnable(bool state) {
         Debug.Log("setLikedState: " + state);
         liked = state;
