@@ -78,7 +78,7 @@ public class ComunidadLayout : MonoBehaviour {
         if (!alreadyLogged) {
             clasesManager.ReadCreatedLevels();
             activatedScript.Get("classes", GetClassesOK, GetClassesKO);
-            activatedScript.Get("levels?publicLevels=true&size=6", GetPublicLevelsOK, GetPublicLevelsKO);
+            activatedScript.Get("levels?publicLevels=true&size=10", GetPublicLevelsOK, GetPublicLevelsKO);
             alreadyLogged = true;
         }
     }

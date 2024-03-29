@@ -64,7 +64,6 @@ public class CommunityPlaylistExpanded : MonoBehaviour {
     private void Update() {
         timer += Time.deltaTime;
         if(timer >= timeToChangeImage) {
-            Debug.Log("Cambia imagen playlist");
             timer = 0.0f;
 
             currentSpriteIndex++;
@@ -74,35 +73,19 @@ public class CommunityPlaylistExpanded : MonoBehaviour {
         }
     }
 
-    public void LikeLevel(bool state) {
+    public void LikePlaylist(bool state) {
         if (state) {
             playlistLikes.text = (int.Parse(playlistLikes.text) + 1).ToString();
         }
         else {
             playlistLikes.text = (int.Parse(playlistLikes.text) - 1).ToString();
         }
-        CommunityManager.Instance.ModifyLikesLevel(playlistID.text, state);
+        CommunityManager.Instance.ModifyLikesPlaylist(playlistID.text, state);
     }
 
-    public void PlayLevel() {
-        //levelPlays.text = (int.Parse(levelPlays.text) + 1).ToString();
-        //CommunityManager.Instance.IncreasePlays(levelID.text);
-
-        //// Set the level data
-        //GameManager.Instance.SetCommunityLevelBoard(level.articodingLevel.boardstate);
-        //GameManager.Instance.SetCommunityLevelActiveBlocks(level.articodingLevel.activeblocks);
-        //GameManager.Instance.SetCommunityInitialState(level.articodingLevel.initialState);
-        //GameManager.Instance.LoadCommunityLevel();
-
-        //// Change the scene
-        //if (LoadManager.Instance == null) {
-        //    SceneManager.LoadScene("LevelScene");
-        //    return;
-        //}
-
-        //LoadManager.Instance.LoadScene("LevelScene");
-
-        Debug.Log("Play level de playlist no va asi");
+    public void OpenPlaylist() {
+        Debug.Log("Open playlist");
+        CommunityManager.Instance.OpenPlaylist(playlist);
     }
 
     public void SetLikeState(bool state) {

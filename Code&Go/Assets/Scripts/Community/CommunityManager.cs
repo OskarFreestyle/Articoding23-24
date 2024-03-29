@@ -93,6 +93,9 @@ public class CommunityManager : MonoBehaviour {
         }
     }
 
+    // Join class
+    [SerializeField] private InputField classKey;
+
 
     private void Awake() {
         Debug.Log("Community Manager Awake");
@@ -137,7 +140,7 @@ public class CommunityManager : MonoBehaviour {
         ChangeEnablePage(uploadLevelsPage);
 
         // Get the already uploaded levels
-        activatedScript.Get("levels?size=100&publicLevels=true&owner=" + GameManager.Instance.GetUserName(), GetUserLevelsOK, GetUserLevelsKO);
+        activatedScript.Get("levels?size=10&publicLevels=true&owner=" + GameManager.Instance.GetUserName(), GetUserLevelsOK, GetUserLevelsKO);
     }
 
     private int GetUserLevelsOK(UnityWebRequest req) {
@@ -212,8 +215,8 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("Play Class " + clas.name);
 
         // Get the class levels
-        string s = "levels?class=" + clas.id.ToString();
-        activatedScript.Get(s, GetClassLevelsOK, GetClassLevelsKO);
+        string path = "levels?class=" + clas.id.ToString();
+        activatedScript.Get(path, GetClassLevelsOK, GetClassLevelsKO);
     }
 
     public int GetClassLevelsOK(UnityWebRequest req) {
@@ -351,6 +354,22 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
+    public void IncreasePlaysPlaylist(string playlistID) {
+        string path = "playlists/" + playlistID + "/play";
+        ServerClasses.PostedPlaylist postedPlaylist = new ServerClasses.PostedPlaylist();
+        activatedScript.Post(path, JsonUtility.ToJson(postedPlaylist), IncreasePlaysPlaylistOK, IncreasePlaysPlaylistKO);
+    }
+
+    int IncreasePlaysPlaylistOK(UnityWebRequest req) {
+        Debug.Log("IncreasePlaysPlaylistOK");
+        return 0;
+    }
+
+    int IncreasePlaysPlaylistKO(UnityWebRequest req) {
+        Debug.Log("IncreasePlaysPlaylistKO");
+        return 0;
+    }
+
     public void ModifyLikesLevel(string levelID, bool liked) {
 
         if(liked) GameManager.Instance.LikedLevelIDs.Add(int.Parse(levelID));
@@ -374,14 +393,14 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void ModifyLikesPlaylist(string playlistID, bool liked) {
-        if (liked) GameManager.Instance.LikedLevelIDs.Add(int.Parse(playlistID));
-        else GameManager.Instance.LikedLevelIDs.Remove(int.Parse(playlistID));
+        if (liked) GameManager.Instance.LikedPlaylistIDs.Add(int.Parse(playlistID));
+        else GameManager.Instance.LikedPlaylistIDs.Remove(int.Parse(playlistID));
 
         string path = "playlists/" + playlistID;
         if (liked) path += "/increaselikes";
         else path += "/decreaselikes";
-        ServerClasses.PostedLevel postedLevel = new ServerClasses.PostedLevel();
-        activatedScript.Post(path, JsonUtility.ToJson(postedLevel), ModifyLikesPlaylistOK, ModifyLikesPlaylistKO);
+        ServerClasses.PostedPlaylist postedPlaylist = new ServerClasses.PostedPlaylist();
+        activatedScript.Post(path, JsonUtility.ToJson(postedPlaylist), ModifyLikesPlaylistOK, ModifyLikesPlaylistKO);
     }
 
     int ModifyLikesPlaylistOK(UnityWebRequest req) {
@@ -439,7 +458,6 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
-
     public void AddToCreatingPlaylist(ServerClasses.LevelWithImage lWI) {
         Debug.Log("AddToCreatingPlaylist");
 
@@ -460,6 +478,54 @@ public class CommunityManager : MonoBehaviour {
 
     public void RemoveFromPlaylist(int levelID) {
         creatingPlaylistIDs.Remove(levelID);
+    }
+
+    public void OpenPlaylist(ServerClasses.Playlist p) {
+        // Change the content of the page
+        publicLevels = new ServerClasses.LevelPage();
+        publicLevels.content = p.levelsWithImage;
+
+        // Configure the levels
+        browseLevelsDisplay.Configure();
+
+        IncreasePlaysPlaylist(p.id.ToString());
+
+        // Change the scene
+        ChangeEnablePage(communityLevelsPage);
+    }
+
+    public void ChangeUserProfilePic(int id) {
+        string path = "users/" + GameManager.Instance.GetUserName();
+        ServerClasses.PostedUser postedUser = new ServerClasses.PostedUser();
+        postedUser.imageIndex = id;
+        activatedScript.Post("users/", JsonUtility.ToJson(postedUser), OnChangeUserProfilePicOK, OnChangeUserProfilePicKO);
+    }
+
+    public int OnChangeUserProfilePicOK(UnityWebRequest req) {
+        Debug.Log("OnChangeUserProfilePicOK");
+        return 0;
+    }
+
+    public int OnChangeUserProfilePicKO(UnityWebRequest req) {
+        Debug.Log("OnChangeUserProfilePicKO");
+        return 0;
+    }
+
+    public void JoinClass() {
+        string path = "/enterclass/" + classKey.text;
+        Debug.Log("Aqui llega");
+        activatedScript.Post(path, JsonUtility.ToJson(classKey.text), OnJoinClassOK, OnJoinClassKO);
+        Debug.Log("Aqui llega 2");
+    }
+
+    public int OnJoinClassOK(UnityWebRequest req) {
+        Debug.Log("OnJoinClassOK");
+        return 0;
+    }
+
+    public int OnJoinClassKO(UnityWebRequest req) {
+        Debug.Log("OnJoinClassKO");
+        return 0;
     }
     #endregion
 }

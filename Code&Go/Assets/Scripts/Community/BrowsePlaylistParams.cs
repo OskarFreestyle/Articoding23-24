@@ -12,7 +12,7 @@ public class BrowsePlaylistParams : MonoBehaviour {
     // Always the same
     private string header = "playlists";
     private bool publicLevels = true; // Always true?
-    private int numLevels = 25;
+    private int numPlaylist = 10;
 
     private bool liked = false;
     private bool orderByLikes = false;
@@ -42,7 +42,7 @@ public class BrowsePlaylistParams : MonoBehaviour {
 
         // Num Levels
         param += "&size=";
-        param += numLevels;
+        param += numPlaylist;
 
         // Filter by liked
         if (liked) {

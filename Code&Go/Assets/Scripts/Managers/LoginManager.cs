@@ -25,6 +25,10 @@ public class LoginManager : MonoBehaviour {
 
     string userName = "";
 
+    private string tempName;
+    private string tempPass;
+
+
     private void Awake() {
         Debug.Log("Login Manager Awake");
 
@@ -41,6 +45,10 @@ public class LoginManager : MonoBehaviour {
     }
 
     public void TryToLogIn(string user, string pass) {
+
+        tempName = user;
+        tempPass = pass;
+
         if (waitPanel != null) {
             waitPanel.SetActive(true);
         }
@@ -54,8 +62,11 @@ public class LoginManager : MonoBehaviour {
         activated.Post("login", JsonUtility.ToJson(loginJson), OnLoginOK, OnLoginKO);
     }
 
-    public void TryToCreateAccount(string user, string pass)
-    {
+    public void TryToCreateAccount(string user, string pass) {
+
+        tempName = user;
+        tempPass = pass;
+
         if (waitPanel != null)
         {
             waitPanel.SetActive(true);
@@ -67,7 +78,20 @@ public class LoginManager : MonoBehaviour {
 
         userName = user;
 
-        activated.Post("users/students", JsonUtility.ToJson(createAccountJson), OnLoginOK, OnLoginKO);
+        activated.Post("users/students", JsonUtility.ToJson(createAccountJson), OnRegisterOK, OnRegisterKO);
+    }
+
+    public int OnRegisterOK(UnityWebRequest req) {
+        Debug.Log("OnRegisterOK");
+
+        TryToLogIn(tempName, tempPass);
+
+        return 0;
+    }
+
+    public int OnRegisterKO(UnityWebRequest req) {
+        Debug.Log("OnRegisterKO");
+        return 0;
     }
 
     public void LogOut() {
@@ -89,6 +113,7 @@ public class LoginManager : MonoBehaviour {
         ServerClasses.LoginResponse responseToken = JsonUtility.FromJson<ServerClasses.LoginResponse>(req.downloadHandler.text);
 
         // Conexion variables
+        GameManager.Instance.userIconID = responseToken.imageIndex;
         GameManager.Instance.SetToken(responseToken.token);
         GameManager.Instance.SetRole(responseToken.role);
         GameManager.Instance.SetUserName(userName);

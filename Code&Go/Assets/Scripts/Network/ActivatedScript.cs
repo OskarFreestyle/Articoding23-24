@@ -47,8 +47,7 @@ public class ActivatedScript : MonoBehaviour {
         Debug.Log("Server IP = " + server + " - Port = " + port);
     }
 
-    IEnumerator PostCourutine(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
-    {
+    IEnumerator PostCourutine(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO) {
         string url = server + ":" + port + "/" + path;
 
         var req = new UnityWebRequest(url, "POST");

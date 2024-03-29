@@ -25,6 +25,7 @@ public class ProfileCard : MonoBehaviour {
 
     public void SelectedIcon(int id) {
         GameManager.Instance.userIconID = id;
+        CommunityManager.Instance.ChangeUserProfilePic(id);
         Configure();
     }
 
