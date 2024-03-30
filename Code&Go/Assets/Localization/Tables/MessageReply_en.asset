@@ -70,5 +70,17 @@ MonoBehaviour:
     m_Localized: Error uploading level
     m_Metadata:
       m_Items: []
+  - m_Id: 301909245952000
+    m_Localized: The list must contain some level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323276662112256
+    m_Localized: Added to class successfully
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323561912532992
+    m_Localized: Class not found
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

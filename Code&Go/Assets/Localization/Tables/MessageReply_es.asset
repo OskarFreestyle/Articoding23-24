@@ -70,5 +70,17 @@ MonoBehaviour:
     m_Localized: Error al subir el nivel
     m_Metadata:
       m_Items: []
+  - m_Id: 301909245952000
+    m_Localized: "La lista debe contener alg\xFAn nivel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323276662112256
+    m_Localized: "A\xF1adido a la clase correctamente"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323561912532992
+    m_Localized: Clase no encontrada
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

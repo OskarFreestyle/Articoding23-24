@@ -144,6 +144,8 @@ public class CommunityManager : MonoBehaviour {
 
         // Get the already uploaded levels
         activatedScript.Get("levels?size=10&publicLevels=true&owner=" + GameManager.Instance.GetUserName(), GetUserLevelsOK, GetUserLevelsKO);
+        loadingCircle.Show(true);
+        uploadLevelsDisplay.ClearDisplay();
     }
 
     private int GetUserLevelsOK(UnityWebRequest req) {
@@ -175,6 +177,7 @@ public class CommunityManager : MonoBehaviour {
         ChangeEnablePage(communityLevelsPage);
 
         // Do a basic search
+        browseLevelsDisplay.SetPlaylistState(false);
         GetBrowseLevels();
     }
 
@@ -292,20 +295,22 @@ public class CommunityManager : MonoBehaviour {
         replyMessage.Configure(MessageReplyID.ErrorUploadingLevel);
         return 0;
     }
+    public void HideLoadingCircle() {
+        loadingCircle.Hide();
+    }
 
     public void GetBrowseLevels() {
         Debug.Log("Search: " + browseLevelsParams.GetParams());
         activatedScript.Get(browseLevelsParams.GetParams(), GetBrowseLevelsOK, GetBrowseLevelsKO);
         browseLevelsParams.ResetParams();
+        browseLevelsDisplay.ClearDisplay();
         loadingCircle.Show(true);
     }
 
     int GetBrowseLevelsOK(UnityWebRequest req) {
         Debug.Log("GetBrowseLevelsOK");
-        loadingCircle.Hide();
         try {
-            string levelsJson = req.downloadHandler.text;
-            publicLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(levelsJson);
+            publicLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(req.downloadHandler.text);
             browseLevelsDisplay.Configure();
         }
         catch (System.Exception e)
@@ -326,15 +331,14 @@ public class CommunityManager : MonoBehaviour {
         Debug.Log("Search playlist: " + browsePlaylistsParams.GetParams());
         activatedScript.Get(browsePlaylistsParams.GetParams(), GetBrowsePlaylistsOK, GetBrowsePlaylistsKO);
         browsePlaylistsParams.ResetParams();
+        browsePlaylistsDisplay.ClearDisplay();
         loadingCircle.Show(false);
     }
 
     int GetBrowsePlaylistsOK(UnityWebRequest req) {
         Debug.Log("GetBrowsePlaylistsOK");
-        loadingCircle.Hide();
         try {
-            string playlistsJson = req.downloadHandler.text;
-            publicPlaylists = JsonUtility.FromJson<ServerClasses.PlaylistPage>(playlistsJson);
+            publicPlaylists = JsonUtility.FromJson<ServerClasses.PlaylistPage>(req.downloadHandler.text);
             browsePlaylistsDisplay.Configure();
         }
         catch (System.Exception e) {
@@ -488,6 +492,11 @@ public class CommunityManager : MonoBehaviour {
             return;
         }
 
+        if (creatingPlaylistIDs.Count == 0) {
+            replyMessage.Configure(MessageReplyID.ErrorPlaylistEmpty);
+            return;
+        }
+
         ServerClasses.PostedPlaylist playlistJson = new ServerClasses.PostedPlaylist();
 
         playlistJson.title = creatingPlaylistName.text;
@@ -531,17 +540,19 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void OpenPlaylist(ServerClasses.Playlist p) {
+        // Change the scene
+        ChangeEnablePage(communityLevelsPage);
+
         // Change the content of the page
         publicLevels = new ServerClasses.LevelPage();
         publicLevels.content = p.levelsWithImage;
 
         // Configure the levels
+        browseLevelsDisplay.ClearDisplay();
         browseLevelsDisplay.Configure();
+        browseLevelsDisplay.SetPlaylistState(true, p.title);
 
         IncreasePlaysPlaylist(p.id.ToString());
-
-        // Change the scene
-        ChangeEnablePage(communityLevelsPage);
     }
 
     public void ChangeUserProfilePic(int id) {
@@ -563,18 +574,18 @@ public class CommunityManager : MonoBehaviour {
 
     public void JoinClass() {
         string path = "/enterclass/" + classKey.text;
-        Debug.Log("Aqui llega");
         activatedScript.Post(path, JsonUtility.ToJson(classKey.text), OnJoinClassOK, OnJoinClassKO);
-        Debug.Log("Aqui llega 2");
     }
 
     public int OnJoinClassOK(UnityWebRequest req) {
         Debug.Log("OnJoinClassOK");
+        replyMessage.Configure(MessageReplyID.AddedClassSuccessfully);
         return 0;
     }
 
     public int OnJoinClassKO(UnityWebRequest req) {
         Debug.Log("OnJoinClassKO");
+        replyMessage.Configure(MessageReplyID.ClassNotFound);
         return 0;
     }
     #endregion

@@ -205,7 +205,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 1
-    m_MaxSize: 35
+    m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -527,6 +527,36 @@ MonoBehaviour:
         m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
       m_TableEntryReference:
         m_KeyId: 15231360958464
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - messageReplyID: 12
+    localizeString:
+      m_TableReference:
+        m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
+      m_TableEntryReference:
+        m_KeyId: 301909245952000
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - messageReplyID: 13
+    localizeString:
+      m_TableReference:
+        m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
+      m_TableEntryReference:
+        m_KeyId: 323276662112256
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - messageReplyID: 14
+    localizeString:
+      m_TableReference:
+        m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
+      m_TableEntryReference:
+        m_KeyId: 323561912532992
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0

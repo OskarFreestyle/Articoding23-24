@@ -12,7 +12,7 @@ public class BrowseLevelsParams : MonoBehaviour {
     // Always the same
     private string header = "levels";
     private bool publicLevels = true; // Always true?
-    private int numLevels = 1000;
+    private int numLevels = 20;
 
     private bool liked = false;
     private bool orderByLikes = false;

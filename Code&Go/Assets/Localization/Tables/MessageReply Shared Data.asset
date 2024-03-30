@@ -67,6 +67,18 @@ MonoBehaviour:
     m_Key: ErrorUploadingLevel
     m_Metadata:
       m_Items: []
+  - m_Id: 301909245952000
+    m_Key: ErrorPlaylistEmpty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323276662112256
+    m_Key: AddedClassSuccessfully
+    m_Metadata:
+      m_Items: []
+  - m_Id: 323561912532992
+    m_Key: ClassNotFound
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

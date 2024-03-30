@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 3 Star Reaction
-  m_Speed: 6
+  m_Speed: 4.5
   m_CycleOffset: 1
   m_Transitions:
   - {fileID: -8402432636167542246}
@@ -165,7 +165,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 1 Star Reaction
-  m_Speed: 6
+  m_Speed: 4.5
   m_CycleOffset: 1
   m_Transitions:
   - {fileID: -5479501150236852943}
@@ -217,7 +217,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 2 Star Reaction
-  m_Speed: 6
+  m_Speed: 4.5
   m_CycleOffset: 1
   m_Transitions:
   - {fileID: -3027799217284765069}
@@ -244,7 +244,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lose Reaction
-  m_Speed: 6
+  m_Speed: 4.5
   m_CycleOffset: 1
   m_Transitions:
   - {fileID: 3752019277590283784}

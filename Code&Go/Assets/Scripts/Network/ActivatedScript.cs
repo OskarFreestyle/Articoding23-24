@@ -116,26 +116,21 @@ public class ActivatedScript : MonoBehaviour {
     {
         string url = server + ":" + port + "/" + path;
 
-        using (UnityWebRequest request = UnityWebRequest.Get(url))
-        {
+        using (UnityWebRequest request = UnityWebRequest.Get(url)) {
             if(GameManager.Instance.GetLogged())
                 request.SetRequestHeader("Authorization", GameManager.Instance.GetToken());
 
             yield return request.Send();
 
-            if (request.isNetworkError)
-            {
+            if (request.isNetworkError) {
                 showError("Error en get: " + request.error);
             }
-            else
-            {
+            else {
                 //Todo guay
-                if (request.responseCode == 200)
-                {
+                if (request.responseCode == 200) {
                     onOK(request);
                 }
-                else
-                {
+                else {
                     onKO(request);
                 }
             }

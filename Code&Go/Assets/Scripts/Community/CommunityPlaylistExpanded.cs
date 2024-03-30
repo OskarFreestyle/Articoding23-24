@@ -26,7 +26,7 @@ public class CommunityPlaylistExpanded : MonoBehaviour {
     private int currentSpriteIndex;
 
     public void ConfigurePlaylist(ServerClasses.Playlist p) {
-        Debug.Log($"Configure playulist {p.title}");
+        Debug.Log($"Configure playlist {p.title}");
 
         // Set the level data
         playlist = p;
@@ -40,6 +40,7 @@ public class CommunityPlaylistExpanded : MonoBehaviour {
         playlistSprites = new List<Sprite>();
 
         foreach (ServerClasses.LevelWithImage lwi in playlist.levelsWithImage) {
+            //Debug.Log(lwi.level.id);
             levelsWithImage.Add(lwi);
 
             // Set the level image (string to .png)
@@ -62,14 +63,16 @@ public class CommunityPlaylistExpanded : MonoBehaviour {
     }
 
     private void Update() {
-        timer += Time.deltaTime;
-        if(timer >= timeToChangeImage) {
-            timer = 0.0f;
+        if (gameObject.activeInHierarchy) {
+            timer += Time.deltaTime;
+            if (timer >= timeToChangeImage) {
+                timer = 0.0f;
 
-            currentSpriteIndex++;
-            if (currentSpriteIndex >= playlistSprites.Count) currentSpriteIndex = 0;
+                currentSpriteIndex++;
+                if (currentSpriteIndex >= playlistSprites.Count) currentSpriteIndex = 0;
 
-            currentImage.sprite = playlistSprites[currentSpriteIndex];
+                currentImage.sprite = playlistSprites[currentSpriteIndex];
+            }
         }
     }
 

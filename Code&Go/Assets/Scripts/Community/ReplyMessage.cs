@@ -18,7 +18,10 @@ public enum MessageReplyID {
     FailedUsernameEmpty,
     FailedPasswordEmpty,
     LevelUploadedCorrectly,
-    ErrorUploadingLevel
+    ErrorUploadingLevel,
+    ErrorPlaylistEmpty,
+    AddedClassSuccessfully,
+    ClassNotFound
 }
 
 [System.Serializable]

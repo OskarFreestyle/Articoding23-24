@@ -10,7 +10,10 @@ public class UploadLevelsDisplay : MonoBehaviour {
     [SerializeField] private List<Vector3> levelsLocalPositions;
 
     public void InstanciateCreatedLevels() {
+        StartCoroutine(InstanciateCreatedLevelsCoroutine());
+    }
 
+    IEnumerator InstanciateCreatedLevelsCoroutine() {
         ClearDisplay();
         
         // Get the paths of all the files
@@ -32,6 +35,7 @@ public class UploadLevelsDisplay : MonoBehaviour {
             activeBlocks[i] = new TextAsset(File.ReadAllText(activeFilePaths[i]));
             initialBlocks[i] = new TextAsset(File.ReadAllText(initialFilePaths[i]));
             fileNames[i] = Path.GetFileNameWithoutExtension(boardFilePaths[i]);
+            yield return new WaitForEndOfFrame();
         }
 
         // Read the icons
@@ -58,6 +62,7 @@ public class UploadLevelsDisplay : MonoBehaviour {
             }
             // Add the data
             levelDataSOs.Add(levelData);
+            yield return new WaitForEndOfFrame();
         }
 
         int x = 0;
@@ -69,6 +74,7 @@ public class UploadLevelsDisplay : MonoBehaviour {
             UploadLevelCard currentLevelCard = Instantiate(uploadLevelCardTemplate, transform);
             currentLevelCard.Configure(levelDataSO);
             currentLevelCard.transform.localPosition = levelsLocalPositions[x] - new Vector3(0, (y * 385), 0);
+            currentLevelCard.gameObject.SetActive(false);
 
             // Check the names to set uploaded the already uploaded
             Debug.Log("Count " + CommunityManager.Instance.UploadedLevels.content.Count);
@@ -84,9 +90,19 @@ public class UploadLevelsDisplay : MonoBehaviour {
                 y++;
                 x = 0;
             }
+            yield return new WaitForEndOfFrame();
         }
         Debug.Log("Instaciation Upload Levels Finished");
 
+        Show();
+        CommunityManager.Instance.HideLoadingCircle();
+        yield return null;
+    }
+
+    public void Show() {
+        foreach (Transform child in transform) {
+            child.gameObject.SetActive(true);
+        }
     }
 
     public void ClearDisplay() {
