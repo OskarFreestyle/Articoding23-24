@@ -43,10 +43,15 @@ public class ServerClasses : MonoBehaviour {
         public int id;
 
         // Added
-        public List<int> levelsCompletedIDs;   // For this user
+        //public List<int> levelsCompletedIDs;   // For this userk
     }
 
     [System.Serializable]
+    public class ClassLevelsState {
+        public List<int> levelIds;   // For this userk
+    }
+
+        [System.Serializable]
     public class ClasePost {
         public string name;
         public string description;

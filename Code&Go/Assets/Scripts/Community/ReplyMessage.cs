@@ -28,6 +28,7 @@ public enum MessageReplyID {
 public struct MessageReply {
     public MessageReplyID messageReplyID;
     public LocalizedString localizeString;
+    public bool isError;
 }
 
 public class ReplyMessage : MonoBehaviour {
@@ -35,6 +36,13 @@ public class ReplyMessage : MonoBehaviour {
     [SerializeField] private Text text;
     [SerializeField] private LocalizeStringEvent localizeStringEvent;
     [SerializeField] private List<MessageReply> MessageReplys;
+    [SerializeField] private Image bgImage;
+    [SerializeField] private Image buttonImage;
+
+    [SerializeField] private Color errorColor1;
+    [SerializeField] private Color errorColor2;
+    [SerializeField] private Color infoColor1;
+    [SerializeField] private Color infoColor2;
 
     public void Configure(MessageReplyID id) {
         foreach(MessageReply mr in MessageReplys) {
@@ -42,6 +50,8 @@ public class ReplyMessage : MonoBehaviour {
                 localizeStringEvent.StringReference = mr.localizeString;
                 localizeStringEvent.RefreshString();
                 text.text = localizeStringEvent.StringReference.GetLocalizedStringAsync().Result;
+                bgImage.color = mr.isError ? errorColor1 : infoColor1;
+                buttonImage.color = mr.isError ? errorColor2 : infoColor2;
             }
         }
         gameObject.SetActive(true);

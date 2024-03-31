@@ -37,12 +37,16 @@ public class CommunityLevelContract : MonoBehaviour {
     }
 
     public void PlayLevel() {
+        // Save the data of the level
+        GameManager.Instance.currentLevelID = level.id;
+
         // Set the level data
         GameManager.Instance.LevelName = level.title;
         GameManager.Instance.SetCommunityLevelBoard(level.articodingLevel.boardstate);
         GameManager.Instance.SetCommunityLevelActiveBlocks(level.articodingLevel.activeblocks);
         GameManager.Instance.SetCommunityInitialState(level.articodingLevel.initialState);
         GameManager.Instance.LoadCommunityLevel();
+        GameManager.Instance.isClassLevel = true;
 
         // Change the scene
         if (LoadManager.Instance == null) {

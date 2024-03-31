@@ -22,19 +22,7 @@ public class BrowsePlaylistsDisplay : MonoBehaviour {
             currentPlaylistCard.gameObject.SetActive(false);
             currentPlaylistCard.ConfigurePlaylist(playlist);
             // Compare the id with the id liked list
-            currentPlaylistCard.SetLikeState(GameManager.Instance.LikedLevelIDs.Contains(playlist.id));
-
-
-
-
-            // TODO
-            //currentPlaylistCard.SetLikeState(GameManager.Instance.LikedPlaylistIDs.Contains(playlist.id));
-
-
-
-
-
-
+            currentPlaylistCard.SetLikeState(GameManager.Instance.LikedPlaylistIDs.Contains(playlist.id));
 
             yield return new WaitForEndOfFrame();
         }

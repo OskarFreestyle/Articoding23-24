@@ -12,6 +12,7 @@ using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 using UnityEngine.Localization.Components;
 using Input = UnityEngine.Input;
+using UnityEngine.Networking;
 using Newtonsoft.Json;
 
 public class LevelManager : MonoBehaviour {
@@ -47,6 +48,8 @@ public class LevelManager : MonoBehaviour {
     [SerializeField] private CategoryTutorialsData[] categoriesTutorials;
 
     [SerializeField] private int pasosOffset = 0;
+
+    [SerializeField] private ActivatedScript activatedScript;
 
     public GameObject endPanel;
     public GameObject transparentRect;
@@ -158,6 +161,14 @@ public class LevelManager : MonoBehaviour {
             endPanel.SetActive(true);
             blackRect.SetActive(true);
 
+            // If is a community-class level
+            if (GameManager.Instance.isClassLevel) {
+                Debug.Log("Nivel de la comunidad completado");
+                string path = "classes/" + GameManager.Instance.currentClassID + "/levels_completed/" + GameManager.Instance.currentLevelID;
+                activatedScript.Post(path, JsonUtility.ToJson(""), UpdateClassLevelStateOK, UpdateClassLevelStateKO);
+                GameManager.Instance.isClassLevel = false;  // TODO quitar de aqui, se puede salir del nivel sin pasarselo
+            }
+
             if (!GameManager.Instance.IsCreatedLevel()) {
                 TrackerAsset.Instance.setVar("steps", boardManager.GetCurrentSteps());
                 TrackerAsset.Instance.setVar("special_block", starsController.IsSpecialBlockStarActive());
@@ -180,6 +191,16 @@ public class LevelManager : MonoBehaviour {
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.N))
             LoadNextLevel();
 #endif
+    }
+
+    public int UpdateClassLevelStateOK(UnityWebRequest req) {
+        Debug.Log("UpdateClassLevelStateOK");
+        return 0;
+    }
+
+    public int UpdateClassLevelStateKO(UnityWebRequest req) {
+        Debug.Log("UpdateClassLevelStateKO");
+        return 0;
     }
 
     private void Initialize() {

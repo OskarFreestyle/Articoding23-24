@@ -13,7 +13,9 @@ public class ClassesLevelsDisplay : MonoBehaviour {
 
             CommunityLevelContract newCommunityLevelContract = Instantiate(communityLevelContract, transform);
             newCommunityLevelContract.ConfigureLevel(lWI);
-            newCommunityLevelContract.SetClassLevelState(true);
+
+            // Preguntar estado nivel
+            newCommunityLevelContract.SetClassLevelState(CommunityManager.Instance.ClassLevelsPasses.Contains(lWI.level.id));
 
         }
     }

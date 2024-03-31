@@ -92,6 +92,10 @@ public class CommunityManager : MonoBehaviour {
             return classLevels;
         }
     }
+    private List<int> classLevelsPasses = new List<int>();
+    public List<int> ClassLevelsPasses {
+        get { return classLevelsPasses; }
+    }
 
     // Join class
     [SerializeField] private InputField classKey;
@@ -213,35 +217,6 @@ public class CommunityManager : MonoBehaviour {
 
     private int GetClassesKO(UnityWebRequest req) {
         Debug.Log("GetClassesKO");
-
-        return 0;
-    }
-
-    public void PlayClass(ServerClasses.Clase clas) {
-        // Get the class levels
-        string path = "levels?class=" + clas.id.ToString();
-        activatedScript.Get(path, GetClassLevelsOK, GetClassLevelsKO);
-    }
-
-    public int GetClassLevelsOK(UnityWebRequest req) {
-        Debug.Log("GetClassLevelsOK");
-
-        try {
-            ChangeEnablePage(classLevelsPage);
-            string levelsJson = req.downloadHandler.text;
-            classLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(levelsJson);
-
-            // Instance the created levels
-            classesLevelsDisplay.InstanciateClassLevels();
-        }
-        catch (System.Exception e) {
-            Debug.Log("Error in GetClassesOK" + e);
-        }
-        return 0;
-    }
-
-    public int GetClassLevelsKO(UnityWebRequest req) {
-        Debug.Log("GetClassLevelsKO");
 
         return 0;
     }
@@ -436,10 +411,11 @@ public class CommunityManager : MonoBehaviour {
     int GetUserLikedThingsOK(UnityWebRequest req) {
         Debug.Log("GetUserLikedThingsOK");
         try {
-            string levelsLiked = req.downloadHandler.text; // GetUserLikedLevels: {  10, 12, 412, 15};
-            ServerClasses.User user = JsonUtility.FromJson<ServerClasses.User>(levelsLiked);
+            ServerClasses.User user = JsonUtility.FromJson<ServerClasses.User>(req.downloadHandler.text);
             GameManager.Instance.LikedLevelIDs = user.likedLevels;
             GameManager.Instance.LikedPlaylistIDs = user.likedPlaylists;
+            Debug.Log("Liked levels: " + user.likedLevels.Count);
+            Debug.Log("Liked playlist: " + user.likedPlaylists.Count);
         }
         catch (System.Exception e) {
             Debug.Log("Error in GetBrowseLevelsOK" + e);
@@ -568,5 +544,65 @@ public class CommunityManager : MonoBehaviour {
         replyMessage.Configure(MessageReplyID.ClassNotFound);
         return 0;
     }
+
+    public void PlayClass(ServerClasses.Clase clas) {
+        GameManager.Instance.currentClassID = clas.id;
+
+        string path = "classes/" + clas.id + "/completed_levels"; 
+        activatedScript.Get(path, PlayClassOK, PlayClassKO);
+    }
+
+    public int PlayClassOK(UnityWebRequest req) {
+        Debug.Log("PlayClassOK");
+        try {
+            classLevelsPasses = JsonUtility.FromJson<ServerClasses.ClassLevelsState>(req.downloadHandler.text).levelIds;
+            Debug.Log(classLevelsPasses.Count);
+        }
+        catch (System.Exception e) {
+            Debug.Log("Error in GetClassesOK" + e);
+        }
+        GetClassLevels();
+        return 0;
+    }
+
+    public int PlayClassKO(UnityWebRequest req) {
+        Debug.Log("PlayClassKO");
+
+        return 0;
+    }
+
+    public void GetClassLevels() {
+        // Get the class levels
+        string path = "levels?class=" + GameManager.Instance.currentClassID;
+        activatedScript.Get(path, GetClassLevelsOK, GetClassLevelsKO);
+    }
+
+    public int GetClassLevelsOK(UnityWebRequest req) {
+        Debug.Log("GetClassLevelsOK");
+
+        try {
+            ChangeEnablePage(classLevelsPage);
+            classLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(req.downloadHandler.text);
+
+            // Instance the created levels
+            classesLevelsDisplay.InstanciateClassLevels();
+        }
+        catch (System.Exception e) {
+            Debug.Log("Error in GetClassesOK" + e);
+        }
+        return 0;
+    }
+
+    public int GetClassLevelsKO(UnityWebRequest req) {
+        Debug.Log("GetClassLevelsKO");
+
+        return 0;
+    }
+
+    public void Borrar(ServerClasses.Clase clas) {
+        //string path = "classes/" + classID + "/levels_completed/" + levelID;
+    }
+
+
     #endregion
 }

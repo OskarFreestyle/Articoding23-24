@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour {
     private string userName = "";
     public int userIconID = 0;
     private bool playingCommunityLevel = false;
+    public bool isClassLevel;
+    public int currentClassID;
+    public int currentLevelID;
 
     private List<int> likedLevelIDs = new List<int>();
     public List<int> LikedLevelIDs {
