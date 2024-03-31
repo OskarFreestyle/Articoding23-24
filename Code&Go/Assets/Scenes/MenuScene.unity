@@ -3676,7 +3676,7 @@ RectTransform:
   m_Children:
   - {fileID: 73973404}
   m_Father: {fileID: 1465613649}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -5402,7 +5402,7 @@ GameObject:
   - component: {fileID: 212207129}
   - component: {fileID: 212207128}
   m_Layer: 5
-  m_Name: Enter Class Input Field
+  m_Name: Enter Playlist Input Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7690,6 +7690,125 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &339096395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 339096396}
+  - component: {fileID: 339096399}
+  - component: {fileID: 339096398}
+  - component: {fileID: 339096397}
+  m_Layer: 5
+  m_Name: Profile Card Student Role Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &339096396
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339096395}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1465613649}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 216, y: -560.3125}
+  m_SizeDelta: {x: 400, y: 90}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &339096397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339096395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:dc03dace7d6a78c4c9ae62a59af260f2
+    m_TableEntryReference:
+      m_KeyId: 18082805424324608
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 339096398}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 1
+--- !u!114 &339096398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339096395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c2dbbfb09a388eb4f86647a12812d94a, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 14
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Student
+--- !u!222 &339096399
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339096395}
+  m_CullTransparentMesh: 1
 --- !u!1 &342567475
 GameObject:
   m_ObjectHideFlags: 0
@@ -20942,6 +21061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   communityLevelContractPrefab: {fileID: 9213748906512489901, guid: 9bbc847dd35f7d74e846398cf9e463e9, type: 3}
   addLevelCard: {fileID: 4243649199656904392}
+  nameField: {fileID: 212207128}
 --- !u!1 &1077147612
 GameObject:
   m_ObjectHideFlags: 0
@@ -26728,7 +26848,7 @@ GameObject:
   - component: {fileID: 1448952029}
   - component: {fileID: 1448952028}
   m_Layer: 5
-  m_Name: Profile Card Role Text
+  m_Name: Profile Card Teacher Role Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26769,7 +26889,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:dc03dace7d6a78c4c9ae62a59af260f2
     m_TableEntryReference:
-      m_KeyId: 307465289728
+      m_KeyId: 18082763338678272
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -26825,7 +26945,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ROLE
+  m_Text: Teacher
 --- !u!222 &1448952030
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27100,6 +27220,7 @@ RectTransform:
   - {fileID: 34724224}
   - {fileID: 1249713748}
   - {fileID: 1448952027}
+  - {fileID: 339096396}
   - {fileID: 135668261}
   m_Father: {fileID: 2058851830}
   m_RootOrder: 0
@@ -27124,7 +27245,8 @@ MonoBehaviour:
   profileIconButton: {fileID: 34724228}
   profileIconImage: {fileID: 34724225}
   usernameText: {fileID: 1249713750}
-  roleText: {fileID: 1448952029}
+  teacherRoleText: {fileID: 1448952029}
+  studentRoleText: {fileID: 339096398}
   changeProfileIconPanelButton: {fileID: 33271607}
   profileIconsList:
   - {fileID: -4821329351510199650, guid: 67978f77094e76a46a2b3093f5c534b2, type: 3}

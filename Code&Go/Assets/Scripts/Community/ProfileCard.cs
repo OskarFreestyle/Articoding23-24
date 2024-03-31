@@ -9,7 +9,8 @@ public class ProfileCard : MonoBehaviour {
     [SerializeField] private Image profileIconImage;
 
     [SerializeField] private Text usernameText;
-    [SerializeField] private Text roleText;
+    [SerializeField] private Text teacherRoleText;
+    [SerializeField] private Text studentRoleText;
 
     [SerializeField] private Button changeProfileIconPanelButton;
 
@@ -31,7 +32,11 @@ public class ProfileCard : MonoBehaviour {
 
     public void Configure() {
         usernameText.text = GameManager.Instance.GetUserName();
-        roleText.text = GameManager.Instance.GetIsAdmin() ? "Teacher" : "Student";  // TODO localize text
+
+        teacherRoleText.gameObject.SetActive(GameManager.Instance.GetIsAdmin());
+        studentRoleText.gameObject.SetActive(!GameManager.Instance.GetIsAdmin());
+
+        //roleText.text = GameManager.Instance.GetIsAdmin() ? "Teacher" : "Student";  // TODO localize text
         profileIconImage.sprite = profileIconsList[GameManager.Instance.userIconID];
     }
 }

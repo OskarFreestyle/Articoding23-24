@@ -33,12 +33,10 @@ public class ActivatedScript : MonoBehaviour {
         string contents = "";
 
         //If the path is found, it add everything to "contents" and then parses it and uses this values to define the url.
-        if (System.IO.File.Exists(filePath))
-        {
+        if (System.IO.File.Exists(filePath)) {
             contents = System.IO.File.ReadAllText(filePath);
         }
-        if (!string.IsNullOrEmpty(contents))
-        {
+        if (!string.IsNullOrEmpty(contents)) {
             var serverConf = SimpleJSON.JSON.Parse(contents);
             server = serverConf["serverIP"];
             port = serverConf["serverPort"];
@@ -61,27 +59,22 @@ public class ActivatedScript : MonoBehaviour {
           
         yield return req.SendWebRequest();
           
-        if (req.result == UnityWebRequest.Result.ConnectionError)
-        {
+        if (req.result == UnityWebRequest.Result.ConnectionError) {
             showError("Error en post: " + req.error);
         }
-        else
-        {
+        else {
             //Todo guay
-            if(req.responseCode == 200)
-            {
+            if(req.responseCode == 200) {
                 onOK(req);
             }
-            else
-            {
+            else {
                 Debug.LogError("error en post: " + req.responseCode);
                 onKO(req);
             }
-          }
+        }
     }
 
-    IEnumerator PutCourutine(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
-    {
+    IEnumerator PutCourutine(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO) {
         string url = server + ":" + port + "/" + path;
 
         var req = new UnityWebRequest(url, "PUT");
@@ -95,25 +88,20 @@ public class ActivatedScript : MonoBehaviour {
 
         yield return req.SendWebRequest();
 
-        if (req.result == UnityWebRequest.Result.ConnectionError)
-        {
+        if (req.result == UnityWebRequest.Result.ConnectionError) {
             showError("Error en put: " + req.error);
         }
-        else
-        {
-            if (req.responseCode == 200)
-            {
+        else {
+            if (req.responseCode == 200) {
                 onOK(req);
             }
-            else
-            {
+            else {
                 onKO(req);
             }
         }
     }
 
-    IEnumerator GetCourutine(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
-    {
+    IEnumerator GetCourutine(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO) {
         string url = server + ":" + port + "/" + path;
 
         using (UnityWebRequest request = UnityWebRequest.Get(url)) {
@@ -137,34 +125,29 @@ public class ActivatedScript : MonoBehaviour {
         }
     }
 
-    public void Post(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
-    {
+    public void Post(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO) {
         StartCoroutine(PostCourutine(path, json, onOK, onKO));
     }
 
-    public void Put(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
-    {
+    public void Put(string path, string json, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO) {
         StartCoroutine(PutCourutine(path, json, onOK, onKO));
     }
 
-    public void Get(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO)
-    {
+    public void Get(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO) {
         StartCoroutine(GetCourutine(path, onOK, onKO));
     }
 
-    public void Get(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO, int param)
-    {
-
+    public void Get(string path, Func<UnityWebRequest, int> onOK, Func<UnityWebRequest, int> onKO, int param) {
+        Debug.Log("Get with param");
     }
 
-    public void SetIp(string newip)
-    {
+    public void SetIp(string newip) {
         string[] serverport = newip.Split(':');
         server = serverport[0];
         port = serverport[1];
     }
 
-    public void showError(string msg){
+    public void showError(string msg) {
         if (InfoImportPanel) {
             InfoImportPanel.SetActive(true);
 
@@ -181,7 +164,7 @@ public class ActivatedScript : MonoBehaviour {
         }
     }
 
-    public void showSuccess(string msg){
+    public void showSuccess(string msg) {
         if (InfoImportPanel) {
             InfoImportPanel.SetActive(true);
 
@@ -198,7 +181,7 @@ public class ActivatedScript : MonoBehaviour {
         }
     }
 
-    public void closeInfoPanel(){
+    public void closeInfoPanel() {
         if (InfoImportPanel)
             InfoImportPanel.SetActive(false);
     }

@@ -218,8 +218,6 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void PlayClass(ServerClasses.Clase clas) {
-        Debug.Log("Play Class " + clas.name);
-
         // Get the class levels
         string path = "levels?class=" + clas.id.ToString();
         activatedScript.Get(path, GetClassLevelsOK, GetClassLevelsKO);
@@ -429,17 +427,19 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
-    public void GetUserLikedLevels() {
+    public void GetUserLikedThings() {
         Debug.Log("GetUserLikedLevels()");
         string path = "users/getliked";
-        activatedScript.Get(path, GetUserLikedLevelsOK, GetUserLikedLevelsKO);
+        activatedScript.Get(path, GetUserLikedThingsOK, GetUserLikedThingsKO);
     }
 
-    int GetUserLikedLevelsOK(UnityWebRequest req) {
-        Debug.Log("GetUserLikedLevelsOK");
+    int GetUserLikedThingsOK(UnityWebRequest req) {
+        Debug.Log("GetUserLikedThingsOK");
         try {
             string levelsLiked = req.downloadHandler.text; // GetUserLikedLevels: {  10, 12, 412, 15};
-            GameManager.Instance.LikedLevelIDs = JsonUtility.FromJson<ServerClasses.User>(levelsLiked).likedLevels; //Aquí ya te debería llegar los liked tranquilamente
+            ServerClasses.User user = JsonUtility.FromJson<ServerClasses.User>(levelsLiked);
+            GameManager.Instance.LikedLevelIDs = user.likedLevels;
+            GameManager.Instance.LikedPlaylistIDs = user.likedPlaylists;
         }
         catch (System.Exception e) {
             Debug.Log("Error in GetBrowseLevelsOK" + e);
@@ -448,33 +448,8 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
-    int GetUserLikedLevelsKO(UnityWebRequest req) {
-        Debug.Log("GetUserLikedLevelsKO");
-        return 0;
-    }
-
-    public void GetUserLikedPlaylist() {
-        Debug.Log("GetUserLikedPlaylist()");
-        Debug.LogError("Cesar aqui no se que poner para que me de las playlist con me gustas");
-        //string path = "users/getliked";
-        //activatedScript.Get(path, GetUserLikedPlaylistOK, GetUserLikedPlaylistKO);
-    }
-
-    int GetUserLikedPlaylistOK(UnityWebRequest req) {
-        Debug.Log("GetUserLikedPlaylistOK");
-        try {
-            string playlistLiked = req.downloadHandler.text; // GetUserLikedLevels: {  10, 12, 412, 15};
-            //GameManager.Instance.LikedPlaylistIDs = JsonUtility.FromJson<ServerClasses.User>(playlistLiked).likedPlaylist; //Aquí ya te debería llegar los liked tranquilamente
-        }
-        catch (System.Exception e) {
-            Debug.Log("Error in GetUserLikedPlaylistOK" + e);
-        }
-
-        return 0;
-    }
-
-    int GetUserLikedPlaylistKO(UnityWebRequest req) {
-        Debug.Log("GetUserLikedPlaylistKO");
+    int GetUserLikedThingsKO(UnityWebRequest req) {
+        Debug.Log("GetUserLikedThingsKO");
         return 0;
     }
 
@@ -507,6 +482,11 @@ public class CommunityManager : MonoBehaviour {
 
     int OnCreateOK(UnityWebRequest req) {
         Debug.Log("OnCreateOK");
+
+        addedLevelsPlaylistDisplay.ClearDisplay();
+        creatingPlaylistIDs.Clear();
+        ChangeEnablePage(mainPage);
+
         replyMessage.Configure(MessageReplyID.SuccessfulCreatedPlaylist);
         return 0;
     }
@@ -556,10 +536,10 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void ChangeUserProfilePic(int id) {
-        string path = "users/" + GameManager.Instance.GetUserName();
+        string path = "users/changeimage/" + GameManager.Instance.GetUserName();
         ServerClasses.PostedUser postedUser = new ServerClasses.PostedUser();
         postedUser.imageIndex = id;
-        activatedScript.Post("users/", JsonUtility.ToJson(postedUser), OnChangeUserProfilePicOK, OnChangeUserProfilePicKO);
+        activatedScript.Post(path, JsonUtility.ToJson(postedUser), OnChangeUserProfilePicOK, OnChangeUserProfilePicKO);
     }
 
     public int OnChangeUserProfilePicOK(UnityWebRequest req) {
@@ -573,7 +553,7 @@ public class CommunityManager : MonoBehaviour {
     }
 
     public void JoinClass() {
-        string path = "/enterclass/" + classKey.text;
+        string path = "classes/enterclass/" + classKey.text;
         activatedScript.Post(path, JsonUtility.ToJson(classKey.text), OnJoinClassOK, OnJoinClassKO);
     }
 

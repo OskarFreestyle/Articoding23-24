@@ -11,8 +11,9 @@ public class ClassesLevelsDisplay : MonoBehaviour {
 
         foreach (ServerClasses.LevelWithImage lWI in CommunityManager.Instance.ClassLevels.content) {
 
-            CommunityLevelContract classCard = Instantiate(communityLevelContract, transform);
-            //classCard.Configure(clase);
+            CommunityLevelContract newCommunityLevelContract = Instantiate(communityLevelContract, transform);
+            newCommunityLevelContract.ConfigureLevel(lWI);
+            newCommunityLevelContract.SetClassLevelState(true);
 
         }
     }

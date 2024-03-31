@@ -154,5 +154,13 @@ MonoBehaviour:
     m_Localized: Incomplete
     m_Metadata:
       m_Items: []
+  - m_Id: 18082763338678272
+    m_Localized: Teacher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18082805424324608
+    m_Localized: Student
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

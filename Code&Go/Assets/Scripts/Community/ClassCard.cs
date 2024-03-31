@@ -16,7 +16,6 @@ public class ClassCard : MonoBehaviour {
     }
 
     public void PlayClass() {
-        Debug.Log("Play Class");
         CommunityManager.Instance.PlayClass(clas);
     }
 }

@@ -31,6 +31,7 @@ public class ServerClasses : MonoBehaviour {
         public int imageIndex;
         public string role;
         public List<int> likedLevels;
+        public List<int> likedPlaylists;
     }
 
     [System.Serializable]

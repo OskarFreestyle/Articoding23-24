@@ -99,6 +99,9 @@ public class LoginManager : MonoBehaviour {
         ServerClasses.LoginResponse responseToken = JsonUtility.FromJson<ServerClasses.LoginResponse>(req.downloadHandler.text);
 
         // Conexion variables
+        Debug.Log("name " + responseToken.role);
+        Debug.Log("token " + responseToken.token);
+        Debug.Log("image index " + responseToken.imageIndex);
         GameManager.Instance.userIconID = responseToken.imageIndex;
         GameManager.Instance.SetToken(responseToken.token);
         GameManager.Instance.SetRole(responseToken.role);
@@ -111,8 +114,7 @@ public class LoginManager : MonoBehaviour {
 
         profileCard.Configure();
 
-        CommunityManager.Instance.GetUserLikedLevels();
-        CommunityManager.Instance.GetUserLikedPlaylist();
+        CommunityManager.Instance.GetUserLikedThings();
 
         isNewRegister = false;
         return 0;
