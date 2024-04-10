@@ -162,5 +162,9 @@ MonoBehaviour:
     m_Localized: Student
     m_Metadata:
       m_Items: []
+  - m_Id: 21668489644998656
+    m_Localized: Repit password
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

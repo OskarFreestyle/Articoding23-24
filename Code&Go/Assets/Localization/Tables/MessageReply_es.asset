@@ -82,5 +82,26 @@ MonoBehaviour:
     m_Localized: Clase no encontrada
     m_Metadata:
       m_Items: []
+  - m_Id: 4222036123320320
+    m_Localized: No perteneces a ninguna clase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4222033858396160
+    m_Localized: Listas no encontradas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4222032256172032
+    m_Localized: Niveles no encontrados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4222030272266240
+    m_Localized: "Problemas con la conexi\xF3n. Revise su conexi\xF3n o int\xE9ntelo
+      m\xE1s tarde"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4225524983136256
+    m_Localized: "La contrase\xF1a no coincide"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

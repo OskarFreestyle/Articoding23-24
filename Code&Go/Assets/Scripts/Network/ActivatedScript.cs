@@ -26,6 +26,8 @@ public class ActivatedScript : MonoBehaviour {
 
     [SerializeField] private Text _title;
 
+    [SerializeField] private ReplyMessage replyMessage;
+
     private void Start() {
         //Tries to find the file "communityServer". If found parses its information to connect to the url.
         var FileName = "communityServer.conf";
@@ -66,6 +68,7 @@ public class ActivatedScript : MonoBehaviour {
         yield return req.SendWebRequest();
           
         if (req.result == UnityWebRequest.Result.ConnectionError) {
+            replyMessage.Configure(MessageReplyID.ServerNotFound);
             showError("Error en post: " + req.error);
         }
         else {
@@ -96,6 +99,8 @@ public class ActivatedScript : MonoBehaviour {
 
         if (req.result == UnityWebRequest.Result.ConnectionError) {
             showError("Error en put: " + req.error);
+            replyMessage.Configure(MessageReplyID.ServerNotFound);
+
         }
         else {
             if (req.responseCode == 200) {
@@ -118,6 +123,8 @@ public class ActivatedScript : MonoBehaviour {
 
             if (request.isNetworkError) {
                 showError("Error en get: " + request.error);
+                replyMessage.Configure(MessageReplyID.ServerNotFound);
+
             }
             else {
                 //Todo guay

@@ -82,5 +82,25 @@ MonoBehaviour:
     m_Localized: Class not found
     m_Metadata:
       m_Items: []
+  - m_Id: 4222036123320320
+    m_Localized: Not belong to any class
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4222033858396160
+    m_Localized: Playlist not found
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4222032256172032
+    m_Localized: Levels not found
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4222030272266240
+    m_Localized: Connection problems. Check your connection or try again later
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4225524983136256
+    m_Localized: Password does not match
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

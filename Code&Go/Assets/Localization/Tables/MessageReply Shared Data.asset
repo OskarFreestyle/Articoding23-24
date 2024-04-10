@@ -79,6 +79,26 @@ MonoBehaviour:
     m_Key: ClassNotFound
     m_Metadata:
       m_Items: []
+  - m_Id: 4222030272266240
+    m_Key: ServerNotFound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4222032256172032
+    m_Key: LevelsNotFound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4222033858396160
+    m_Key: PlaylistNotFound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4222036123320320
+    m_Key: NotBelongToAnyClass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4225524983136256
+    m_Key: PasswordDoesNotMatch
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -21,7 +21,12 @@ public enum MessageReplyID {
     ErrorUploadingLevel,
     ErrorPlaylistEmpty,
     AddedClassSuccessfully,
-    ClassNotFound
+    ClassNotFound,
+    ServerNotFound,
+    LevelsNotFound,
+    PlaylistNotFound,
+    NotBelongToAnyClass,
+    PasswordDoesNotMatch
 }
 
 [System.Serializable]

@@ -162,5 +162,9 @@ MonoBehaviour:
     m_Localized: Estudiante
     m_Metadata:
       m_Items: []
+  - m_Id: 21668489644998656
+    m_Localized: "Repite la contrase\xF1a"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

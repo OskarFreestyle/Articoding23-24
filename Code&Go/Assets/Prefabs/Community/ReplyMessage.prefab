@@ -421,6 +421,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 0
   - messageReplyID: 1
     localizeString:
       m_TableReference:
@@ -431,6 +432,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
   - messageReplyID: 2
     localizeString:
       m_TableReference:
@@ -441,6 +443,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 0
   - messageReplyID: 3
     localizeString:
       m_TableReference:
@@ -451,6 +454,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
   - messageReplyID: 4
     localizeString:
       m_TableReference:
@@ -461,6 +465,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
   - messageReplyID: 5
     localizeString:
       m_TableReference:
@@ -471,6 +476,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
   - messageReplyID: 6
     localizeString:
       m_TableReference:
@@ -481,6 +487,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 0
   - messageReplyID: 7
     localizeString:
       m_TableReference:
@@ -491,6 +498,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
   - messageReplyID: 8
     localizeString:
       m_TableReference:
@@ -501,6 +509,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
   - messageReplyID: 9
     localizeString:
       m_TableReference:
@@ -511,6 +520,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
   - messageReplyID: 10
     localizeString:
       m_TableReference:
@@ -521,6 +531,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 0
   - messageReplyID: 11
     localizeString:
       m_TableReference:
@@ -531,6 +542,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
   - messageReplyID: 12
     localizeString:
       m_TableReference:
@@ -541,6 +553,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
   - messageReplyID: 13
     localizeString:
       m_TableReference:
@@ -551,6 +564,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 0
   - messageReplyID: 14
     localizeString:
       m_TableReference:
@@ -561,6 +575,68 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
+    isError: 1
+  - messageReplyID: 15
+    localizeString:
+      m_TableReference:
+        m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
+      m_TableEntryReference:
+        m_KeyId: 4222030272266240
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    isError: 1
+  - messageReplyID: 16
+    localizeString:
+      m_TableReference:
+        m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
+      m_TableEntryReference:
+        m_KeyId: 4222032256172032
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    isError: 1
+  - messageReplyID: 17
+    localizeString:
+      m_TableReference:
+        m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
+      m_TableEntryReference:
+        m_KeyId: 4222033858396160
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    isError: 1
+  - messageReplyID: 18
+    localizeString:
+      m_TableReference:
+        m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
+      m_TableEntryReference:
+        m_KeyId: 4222036123320320
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    isError: 0
+  - messageReplyID: 19
+    localizeString:
+      m_TableReference:
+        m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
+      m_TableEntryReference:
+        m_KeyId: 4225524983136256
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    isError: 1
+  bgImage: {fileID: 8511508163827035022}
+  buttonImage: {fileID: 547195881730860432}
+  errorColor1: {r: 1, g: 0.5764706, b: 0.5529412, a: 1}
+  errorColor2: {r: 1, g: 0.2901961, b: 0.27058825, a: 1}
+  infoColor1: {r: 0.03137255, g: 0.7921569, b: 0.81960785, a: 1}
+  infoColor2: {r: 0, g: 0.65882355, b: 0.7019608, a: 1}
   references:
     version: 1
 --- !u!1 &6557525867527540656

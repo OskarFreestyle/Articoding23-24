@@ -23,6 +23,7 @@ public class LogInCard : MonoBehaviour {
     [SerializeField] public InputField logInPassword;    
     [SerializeField] public Text createAccountUsername;
     [SerializeField] public InputField createAccountPassword;
+    [SerializeField] public InputField createAccountPasswordRepit;
 
     [SerializeField] public ReplyMessage replyMessage;
 
@@ -63,6 +64,14 @@ public class LogInCard : MonoBehaviour {
         }
         if (createAccountPassword.text.Length == 0) {
             replyMessage.Configure(MessageReplyID.FailedPasswordEmpty);
+            return;
+        }
+        if (createAccountPasswordRepit.text.Length == 0) {
+            replyMessage.Configure(MessageReplyID.FailedPasswordEmpty);
+            return;
+        }
+        if (createAccountPassword.text != createAccountPasswordRepit.text) {
+            replyMessage.Configure(MessageReplyID.PasswordDoesNotMatch);
             return;
         }
         loginManager.TryToCreateAccount(createAccountUsername.text, createAccountPassword.text);
