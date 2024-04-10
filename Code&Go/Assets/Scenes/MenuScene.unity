@@ -20283,8 +20283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07e6e1bfd5e9f244b9d53be3c12b5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  server: 
-  port: 
+  communityPageButton: {fileID: 3423825501311427007}
   InfoImportPanel: {fileID: 0}
   _title: {fileID: 0}
 --- !u!4 &1001455955

@@ -17,8 +17,10 @@ public class ActivatedScript : MonoBehaviour {
     //TODO Esto no se muy bien si estaria mejor en campos que configurara el usuario en el momento de la exportación/Importación
 
     //Standard local values
-    [SerializeField] private string server; // = "http://localhost";
-    [SerializeField] private string port;   // = "4200";
+    private bool serverEnable;
+    private string server; // = "http://localhost";
+    private string port;   // = "4200";
+    [SerializeField] private RectTransform communityPageButton;
 
     [SerializeField] private GameObject InfoImportPanel;
 
@@ -38,8 +40,12 @@ public class ActivatedScript : MonoBehaviour {
         }
         if (!string.IsNullOrEmpty(contents)) {
             var serverConf = SimpleJSON.JSON.Parse(contents);
+            serverEnable = bool.Parse(serverConf["serverEnable"]);
             server = serverConf["serverIP"];
             port = serverConf["serverPort"];
+        }
+        if (!serverEnable) {
+            communityPageButton.gameObject.SetActive(false);
         }
         //Si no existe el path utiliza el serve y port por defecto
         Debug.Log("Server IP = " + server + " - Port = " + port);
