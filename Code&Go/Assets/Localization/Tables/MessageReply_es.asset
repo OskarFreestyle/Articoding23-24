@@ -103,5 +103,9 @@ MonoBehaviour:
     m_Localized: "La contrase\xF1a no coincide"
     m_Metadata:
       m_Items: []
+  - m_Id: 4227737814040576
+    m_Localized: "Car\xE1cteres no permitidos"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

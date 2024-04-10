@@ -631,6 +631,17 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     isError: 1
+  - messageReplyID: 20
+    localizeString:
+      m_TableReference:
+        m_TableCollectionName: GUID:a1a7e593ae15f704dab58b90861164f5
+      m_TableEntryReference:
+        m_KeyId: 4227737814040576
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    isError: 1
   bgImage: {fileID: 8511508163827035022}
   buttonImage: {fileID: 547195881730860432}
   errorColor1: {r: 1, g: 0.5764706, b: 0.5529412, a: 1}

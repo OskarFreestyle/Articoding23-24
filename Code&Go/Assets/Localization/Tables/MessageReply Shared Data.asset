@@ -99,6 +99,10 @@ MonoBehaviour:
     m_Key: PasswordDoesNotMatch
     m_Metadata:
       m_Items: []
+  - m_Id: 4227737814040576
+    m_Key: IllegalCharacters
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

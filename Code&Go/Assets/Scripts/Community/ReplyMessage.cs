@@ -26,7 +26,8 @@ public enum MessageReplyID {
     LevelsNotFound,
     PlaylistNotFound,
     NotBelongToAnyClass,
-    PasswordDoesNotMatch
+    PasswordDoesNotMatch,
+    IllegalCharacters
 }
 
 [System.Serializable]

@@ -62,6 +62,12 @@ public class LogInCard : MonoBehaviour {
             replyMessage.Configure(MessageReplyID.FailedUsernameEmpty);
             return;
         }
+        if (createAccountUsername.text.Contains("\\") || createAccountUsername.text.Contains("/") || createAccountUsername.text.Contains(":") ||
+            createAccountUsername.text.Contains("*") || createAccountUsername.text.Contains("?") || createAccountUsername.text.Contains("\"") ||
+            createAccountUsername.text.Contains("<") || createAccountUsername.text.Contains(">") || createAccountUsername.text.Contains("|")) {
+            replyMessage.Configure(MessageReplyID.IllegalCharacters);
+            return;
+        }
         if (createAccountPassword.text.Length == 0) {
             replyMessage.Configure(MessageReplyID.FailedPasswordEmpty);
             return;
@@ -74,6 +80,7 @@ public class LogInCard : MonoBehaviour {
             replyMessage.Configure(MessageReplyID.PasswordDoesNotMatch);
             return;
         }
+
         loginManager.TryToCreateAccount(createAccountUsername.text, createAccountPassword.text);
         createAccountPassword.text = "";
     }
