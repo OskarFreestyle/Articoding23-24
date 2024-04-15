@@ -31,7 +31,7 @@ public class CommunityLevelContract : MonoBehaviour {
         }
         else Debug.Log("error load image into texture");
 
-        Rect rect = new Rect(0, 0, 1000, 1000);
+        Rect rect = new Rect(0, 0, 200, 200);
         Vector2 pivot = new Vector2(0.5f, 0.5f);
         levelImage.sprite = Sprite.Create(tex, rect, pivot);
     }

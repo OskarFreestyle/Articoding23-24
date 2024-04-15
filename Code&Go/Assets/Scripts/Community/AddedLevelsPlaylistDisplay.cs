@@ -9,6 +9,9 @@ public class AddedLevelsPlaylistDisplay : MonoBehaviour {
     [SerializeField] private RectTransform addLevelCard;
     [SerializeField] private InputField nameField;
 
+    private int levelCount = 0;
+    private int maxLevels = 3;
+
     public void AddLevel(ServerClasses.LevelWithImage lWI) {
         addLevelCard.SetParent(null);
 
@@ -18,6 +21,8 @@ public class AddedLevelsPlaylistDisplay : MonoBehaviour {
         cLC.ConfigureLevel(lWI);
 
         addLevelCard.SetParent(transform);
+
+        AddLevelCount(1);
     }
 
     public void ClearDisplay() {
@@ -27,5 +32,18 @@ public class AddedLevelsPlaylistDisplay : MonoBehaviour {
         }
         addLevelCard.SetParent(transform);
         nameField.text = "";
+    }
+
+    public void AddLevelCount(int a) {
+        levelCount += a;
+        CheckLevelsNumber();
+    }
+
+    public void CheckLevelsNumber() {
+        Debug.Log("Checking with " + transform.childCount + " children");
+        if(levelCount >= maxLevels) {
+            addLevelCard.gameObject.SetActive(false);
+        }
+        else addLevelCard.gameObject.SetActive(true);
     }
 }

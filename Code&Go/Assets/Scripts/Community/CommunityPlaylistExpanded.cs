@@ -31,8 +31,8 @@ public class CommunityPlaylistExpanded : MonoBehaviour {
         // Set the level data
         playlist = p;
         playlistName.text = playlist.title;
-        playlistAuthor.text = playlist.owner.username;
-        playlistID.text = playlist.id.ToString();
+        playlistAuthor.text = "Author: " + playlist.owner.username;
+        playlistID.text = "ID: " + playlist.id.ToString();
         playlistLikes.text = playlist.likes.ToString();
         playlistPlays.text = playlist.timesPlayed.ToString();
 
@@ -52,7 +52,7 @@ public class CommunityPlaylistExpanded : MonoBehaviour {
             }
             else Debug.Log("error load image into texture");
 
-            Rect rect = new Rect(0, 0, 1000, 1000);
+            Rect rect = new Rect(0, 0, 200, 200);
             Vector2 pivot = new Vector2(0.5f, 0.5f);
 
             playlistSprites.Add(Sprite.Create(tex, rect, pivot));

@@ -99,7 +99,6 @@ public class CommunityManager : MonoBehaviour {
 
     // Join class
     [SerializeField] private InputField classKey;
-
     [SerializeField] private ReplyMessage replyMessage;
     [SerializeField] private LoadingCircle loadingCircle;
 
@@ -182,14 +181,14 @@ public class CommunityManager : MonoBehaviour {
 
         // Do a basic search
         browseLevelsDisplay.SetPlaylistState(false);
-        GetBrowseLevels();
+        if(publicLevels == null || publicLevels.content.Count == 0) GetBrowseLevels();
     }
 
     public void GoToCommunityPlaylistPage() {
         ChangeEnablePage(communityPlaylistPage);
 
         // Do a basic search
-        GetBrowsePlaylists();
+        if (publicPlaylists == null || publicPlaylists.content.Count == 0) GetBrowsePlaylists();
     }
 
     public void GoToClassesPage() {
@@ -285,6 +284,7 @@ public class CommunityManager : MonoBehaviour {
         try {
             publicLevels = JsonUtility.FromJson<ServerClasses.LevelPage>(req.downloadHandler.text);
             browseLevelsDisplay.Configure();
+            if (publicLevels.content.Count == 0) replyMessage.Configure(MessageReplyID.LevelsNotFound);
         }
         catch (System.Exception e)
         {
@@ -313,6 +313,7 @@ public class CommunityManager : MonoBehaviour {
         try {
             publicPlaylists = JsonUtility.FromJson<ServerClasses.PlaylistPage>(req.downloadHandler.text);
             browsePlaylistsDisplay.Configure();
+            if (publicPlaylists.content.Count == 0) replyMessage.Configure(MessageReplyID.PlaylistNotFound);
         }
         catch (System.Exception e) {
             Debug.Log("Error in GetBrowsePlaylistsOK" + e);
@@ -493,6 +494,7 @@ public class CommunityManager : MonoBehaviour {
 
     public void RemoveFromPlaylist(int levelID) {
         creatingPlaylistIDs.Remove(levelID);
+        addedLevelsPlaylistDisplay.AddLevelCount(-1);
     }
 
     public void OpenPlaylist(ServerClasses.Playlist p) {
