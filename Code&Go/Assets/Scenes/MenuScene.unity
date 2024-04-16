@@ -12730,6 +12730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLogIn: 0
   activatedScript: {fileID: 1001455954}
+  communityButton: {fileID: 1976156111}
   loginPage: {fileID: 1981478841}
   mainPage: {fileID: 2058851830}
   communityLevelsPage: {fileID: 768388930}

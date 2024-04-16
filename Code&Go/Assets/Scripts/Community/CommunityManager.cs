@@ -17,7 +17,8 @@ public class CommunityManager : MonoBehaviour {
     }
     [SerializeField] private bool isLogIn;
     [SerializeField] private ActivatedScript activatedScript;
-    
+    [SerializeField] private TabButton communityButton;
+
     [Space][Space]
 
     [SerializeField] private RectTransform loginPage;

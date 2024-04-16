@@ -98,7 +98,9 @@ public class LevelManager : MonoBehaviour {
             currentLevel = currentCategory.levels[currentLevelIndex];
             minimosPasos = currentLevel.minimosPasos;
         }
-        else Debug.Log("Playing community level");
+        else {
+            Debug.Log("Playing community level");
+        }
         //endTextLocalized.text = currentLevel.endText;
         
         endPanel.SetActive(false);
@@ -384,6 +386,7 @@ public class LevelManager : MonoBehaviour {
         boardManager.Reset();
         string boardJson = currentLevel.levelBoard != null ? currentLevel.levelBoard.text : currentLevel.auxLevelBoard;
         BoardState state = BoardState.FromJson(boardJson);
+        if (GameManager.Instance.IsPlayingCommunityLevel()) state = GameManager.Instance.GetCommunityLevelBoard();
         boardManager.GenerateBoardElements(state);
         debugPanel.SetActive(true);
         cameraFit.FitBoard(boardManager.GetRows(), boardManager.GetColumns());

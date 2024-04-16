@@ -22,6 +22,7 @@ public class CommunityLevelExpanded : MonoBehaviour {
     public ServerClasses.LevelWithImage levelWithImage;
     private ServerClasses.Level level;
 
+
     public void ConfigureLevel(ServerClasses.LevelWithImage lWI) {
         // Set the level data
         levelWithImage = lWI;
@@ -53,7 +54,7 @@ public class CommunityLevelExpanded : MonoBehaviour {
         else {
             levelLikes.text = (int.Parse(levelLikes.text) - 1).ToString();
         }
-        CommunityManager.Instance.ModifyLikesLevel(levelID.text, state);
+        CommunityManager.Instance.ModifyLikesLevel(level.id.ToString(), state);
     }
 
     public void PlayLevel() {

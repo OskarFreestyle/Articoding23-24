@@ -21,7 +21,8 @@ public class TabGroup : MonoBehaviour {
     [SerializeField] private Color tabIdleText;
 
     private void Start() {
-        OnTabSelected(tabButtons[0]);
+        if(GameManager.Instance.IsPlayingCommunityLevel() && tabButtons.Count >=5) OnTabSelected(tabButtons[4]);
+        else OnTabSelected(tabButtons[0]);
     }
 
     public void OnTabEnter(TabButton tabButton) {
