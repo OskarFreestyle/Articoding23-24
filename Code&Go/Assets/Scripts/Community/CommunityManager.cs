@@ -248,7 +248,7 @@ public class CommunityManager : MonoBehaviour {
         BoardState thisBoardState = BoardState.FromJson(levelDataSO.levelBoard.text);
         levelJson.articodingLevel.boardstate = thisBoardState;
 
-        levelJson.articodingLevel.initialState = "";    // TODO subir el initial state
+        levelJson.articodingLevel.initialState = levelDataSO.customInitialState.ToString();
 
         // Level image
         levelJson.image = levelDataSO.levelImage.texture.EncodeToPNG();
