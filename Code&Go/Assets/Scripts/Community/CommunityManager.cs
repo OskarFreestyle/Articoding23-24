@@ -181,14 +181,16 @@ public class CommunityManager : MonoBehaviour {
 
         // Do a basic search
         browseLevelsDisplay.SetPlaylistState(false);
-        if(publicLevels == null || publicLevels.content.Count == 0) GetBrowseLevels();
+        if(publicLevels == null || publicLevels.content.Count == 0 || 
+            (browseLevelsDisplay.transform.childCount >= 1 && !browseLevelsDisplay.transform.GetChild(0).gameObject.activeSelf)) GetBrowseLevels();
     }
 
     public void GoToCommunityPlaylistPage() {
         ChangeEnablePage(communityPlaylistPage);
 
         // Do a basic search
-        if (publicPlaylists == null || publicPlaylists.content.Count == 0) GetBrowsePlaylists();
+        if (publicPlaylists == null || publicPlaylists.content.Count == 0 || 
+            (browsePlaylistsDisplay.transform.childCount >= 1 && !browsePlaylistsDisplay.transform.GetChild(0).gameObject.activeSelf)) GetBrowsePlaylists();
     }
 
     public void GoToClassesPage() {
@@ -229,6 +231,7 @@ public class CommunityManager : MonoBehaviour {
 
     public void GoToMainPage() {
         isPlaylistMode = false;
+        HideLoadingCircle();
         ChangeEnablePage(mainPage);
     }
 

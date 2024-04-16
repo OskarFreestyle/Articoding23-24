@@ -1,0 +1,14 @@
+<xml>
+    <variables />
+    <block type="start_start" id="9:{dOe6xFoc:UUzJ#3Tj" x="141" y="-181">
+        <next>
+            <block type="movement_laser_change_intensity" id="uh#n?*$8m{8Ot{QIPB{T">
+                <value name="AMOUNT">
+                    <block type="math_number" id="mx#JWDKs;=`3AliVHn:*">
+                        <field name="NUM">1</field>
+                    </block>
+                </value>
+            </block>
+        </next>
+    </block>
+</xml>

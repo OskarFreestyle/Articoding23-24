@@ -269,8 +269,7 @@ public class GameManager : MonoBehaviour {
     public ActiveBlocks GetCommunityLevelActiveBlocks() { return communityActiveBlocks; }
     public void SetCommunityInitialState(string state) { communityInitialState = state; }
     public string GetCommunityInitialState() { return communityInitialState; }
-    public void ResetCommunityElements()
-    {
+    public void ResetCommunityElements() {
         communityInitialState = null;
         communityActiveBlocks = null;
         communityBoard = null;
