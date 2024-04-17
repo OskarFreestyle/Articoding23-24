@@ -57,18 +57,6 @@ MonoBehaviour:
     - Locale-es
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 34f11fee2c5eeb04789272c8b5a72803
-    m_Address: CreditsUI_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 88c64c12a144aa34d9dc8346d558ae28
-    m_Address: CreditsUI_es
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a2d16e4d6efebca45b42b8bbd7bd0ce0
     m_Address: GameOverMessages_en
     m_ReadOnly: 1

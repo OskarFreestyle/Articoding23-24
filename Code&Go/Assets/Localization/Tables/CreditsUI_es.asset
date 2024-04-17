@@ -34,5 +34,21 @@ MonoBehaviour:
     m_Localized: "VOLVER AL MEN\xDA"
     m_Metadata:
       m_Items: []
+  - m_Id: 380933403586592768
+    m_Localized: Autores 2020/2021
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380933493109817344
+    m_Localized: Autores 2021/2022
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380933572197613568
+    m_Localized: Autores 2022/2023
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380933652229128192
+    m_Localized: Autores 2023/2024
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

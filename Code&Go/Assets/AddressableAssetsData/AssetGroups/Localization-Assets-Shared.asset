@@ -69,7 +69,7 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cea29a7f33b93df4f92fcabe8eef0c39
     m_Address: CreditsUI Shared Data
-    m_ReadOnly: 0
+    m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a7210f51a0697f647a039bb956365be6
