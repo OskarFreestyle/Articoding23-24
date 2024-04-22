@@ -2658,10 +2658,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07e6e1bfd5e9f244b9d53be3c12b5be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  server: 
-  port: 
+  communityPageButton: {fileID: 0}
   InfoImportPanel: {fileID: 0}
   _title: {fileID: 0}
+  replyMessage: {fileID: 0}
 --- !u!4 &624472067
 Transform:
   m_ObjectHideFlags: 0
@@ -8753,6 +8753,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1688585942}
     m_Modifications:
+    - target: {fileID: 1191777635418586270, guid: 32484a33b43740a41b605cc751032f70, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191777635418586270, guid: 32484a33b43740a41b605cc751032f70, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 1191777635418586270, guid: 32484a33b43740a41b605cc751032f70, type: 3}
+      propertyPath: m_Color.r
+      value: 0.019607844
+      objectReference: {fileID: 0}
     - target: {fileID: 2222639776668376753, guid: 32484a33b43740a41b605cc751032f70, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

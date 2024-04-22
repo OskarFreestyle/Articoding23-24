@@ -12728,7 +12728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea2421b0510c7cb44bd9743e899b870f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLogIn: 0
+  isLogIn: 1
   activatedScript: {fileID: 1001455954}
   communityButton: {fileID: 1976156111}
   loginPage: {fileID: 1981478841}
