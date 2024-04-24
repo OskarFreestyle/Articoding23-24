@@ -9,6 +9,7 @@ public class FollowingTextUI : MonoBehaviour
 
     public void SetText(string text)
     {
+        Debug.Log("Escribiendo " + text);
         objectText.text = text;
     }
 }
