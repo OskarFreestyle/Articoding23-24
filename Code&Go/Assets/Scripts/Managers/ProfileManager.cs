@@ -80,6 +80,6 @@ public class ProfileManager : MonoBehaviour {
         }
 
         // Set the last category text -1 because of the created levels category
-        categoryText.text = (ProgressManager.Instance.GetTotalFinishedCategories() - 1).ToString();
+        categoryText.text = (ProgressManager.Instance.GetTotalFinishedCategories()).ToString();
     }
 }

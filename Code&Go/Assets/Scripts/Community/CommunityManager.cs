@@ -605,10 +605,5 @@ public class CommunityManager : MonoBehaviour {
         return 0;
     }
 
-    public void Borrar(ServerClasses.Clase clas) {
-        //string path = "classes/" + classID + "/levels_completed/" + levelID;
-    }
-
-
     #endregion
 }

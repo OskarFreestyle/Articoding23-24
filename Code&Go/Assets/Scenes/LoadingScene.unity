@@ -706,7 +706,7 @@ MonoBehaviour:
   autoStart: 1
   loadingCanvas: {fileID: 7715883592381250272}
   loadingText: {fileID: 528102410}
-  extraLoadingTime: 73.72
+  extraLoadingTime: 3
 --- !u!1 &1768260164
 GameObject:
   m_ObjectHideFlags: 0

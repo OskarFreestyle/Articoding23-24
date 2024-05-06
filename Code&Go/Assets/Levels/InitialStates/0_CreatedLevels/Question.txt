@@ -1,0 +1,27 @@
+<xml>
+    <variables>
+        <variable type="" id="-4Vcu}xg0vzhs*Y?*NM?">Laser</variable>
+    </variables>
+    <block type="start_start" id="jK|09VZeHw@*t!MM1jKj" x="137" y="-78">
+        <next>
+            <block type="variables_set" id="v-07yvEBIl||um%b{Xiu">
+                <field name="VAR" id="-4Vcu}xg0vzhs*Y?*NM?" variableType="">Laser</field>
+                <value name="VALUE">
+                    <block type="text" id="pa|-Qx)iLNHXSQBQ;35%">
+                        <field name="TEXT">Laser_1</field>
+                    </block>
+                </value>
+                <next>
+                    <block type="movement_move" id="(1ssPXcyKYD#%c([e=Bi">
+                        <field name="DIRECTION">RIGHT</field>
+                        <value name="NAME">
+                            <block type="variables_get" id="}8jR,FJyFo6/Jx[]}A%*">
+                                <field name="VAR" id="-4Vcu}xg0vzhs*Y?*NM?" variableType="">Laser</field>
+                            </block>
+                        </value>
+                    </block>
+                </next>
+            </block>
+        </next>
+    </block>
+</xml>

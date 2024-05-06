@@ -8,9 +8,9 @@ public class AddedLevelsPlaylistDisplay : MonoBehaviour {
     [SerializeField] private CommunityLevelContract communityLevelContractPrefab;
     [SerializeField] private RectTransform addLevelCard;
     [SerializeField] private InputField nameField;
+    [SerializeField] private int maxLevelsPerList = 10;
 
     private int levelCount = 0;
-    private int maxLevels = 3;
 
     public void AddLevel(ServerClasses.LevelWithImage lWI) {
         addLevelCard.SetParent(null);
@@ -41,7 +41,7 @@ public class AddedLevelsPlaylistDisplay : MonoBehaviour {
 
     public void CheckLevelsNumber() {
         Debug.Log("Checking with " + transform.childCount + " children");
-        if(levelCount >= maxLevels) {
+        if(levelCount >= maxLevelsPerList) {
             addLevelCard.gameObject.SetActive(false);
         }
         else addLevelCard.gameObject.SetActive(true);

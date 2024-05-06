@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class FollowingText : MonoBehaviour
-{
+public class FollowingText : MonoBehaviour {
+
     [SerializeField] private FollowingTextUI nameTextPrefab;
     [SerializeField] private Transform textPosition;
     private FollowingTextUI nameText;
 
-    void Update()
-    {
+    void Update() {
         if (nameText == null) return;
         //Hide the name tag if the object is not visible
         nameText.gameObject.SetActive(ObjectVisible());
@@ -18,8 +17,7 @@ public class FollowingText : MonoBehaviour
         nameText.transform.position = namePos;
     }
 
-    public void SetName(string name)
-    {
+    public void SetName(string name) {
         if (nameText == null)
             nameText = Instantiate(nameTextPrefab, GameObject.Find("Canvas").transform);
         nameText.transform.SetAsFirstSibling();
@@ -27,14 +25,13 @@ public class FollowingText : MonoBehaviour
         nameText.SetText(name);
     }
 
-    private void OnDestroy()
-    {
+    private void OnDestroy() {
         if(nameText != null)
             Destroy(nameText.gameObject);
     }
 
-    private bool ObjectVisible()
-    {
+    private bool ObjectVisible() {
+
         Ray ray = Camera.main.ScreenPointToRay(Camera.main.WorldToScreenPoint(textPosition.transform.position));
         RaycastHit hit;
         // Casts the ray and get the first game object hit 
@@ -42,4 +39,5 @@ public class FollowingText : MonoBehaviour
             return hit.collider.gameObject == gameObject || (hit.collider.transform.parent != null && hit.collider.transform.parent.gameObject == gameObject);
         return false;
     }
+
 }

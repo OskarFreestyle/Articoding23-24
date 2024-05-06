@@ -18,7 +18,7 @@ public class ProgressManager : MonoBehaviour {
         get { return instance; }
     }
 
-    [SerializeField] private bool allUnlocked;
+    [SerializeField] private bool allUnlocked;  // Todo fix it
     public bool AllUnlocked {
         get { return allUnlocked; }
     }

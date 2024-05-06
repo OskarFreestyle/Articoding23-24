@@ -21397,6 +21397,7 @@ MonoBehaviour:
   communityLevelContractPrefab: {fileID: 9213748906512489901, guid: 9bbc847dd35f7d74e846398cf9e463e9, type: 3}
   addLevelCard: {fileID: 4243649199656904392}
   nameField: {fileID: 212207128}
+  maxLevelsPerList: 10
 --- !u!1 &1077147612
 GameObject:
   m_ObjectHideFlags: 0

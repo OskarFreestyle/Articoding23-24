@@ -23,7 +23,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  levelPreview: {fileID: 21300000, guid: 5ea4a699bf8074147aa1902bfab2edc0, type: 3}
+  levelImage: {fileID: 21300000, guid: 5ea4a699bf8074147aa1902bfab2edc0, type: 3}
   levelName: procedures_3
   initialState:
     m_TableReference:

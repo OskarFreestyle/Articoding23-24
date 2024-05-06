@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class FollowingTextUI : MonoBehaviour
-{
-    [SerializeField] Text objectText;
+public class FollowingTextUI : MonoBehaviour {
 
-    public void SetText(string text)
-    {
-        Debug.Log("Escribiendo " + text);
+    [SerializeField] private Text objectText;
+
+    public void SetText(string text) {
         objectText.text = text;
     }
+
 }

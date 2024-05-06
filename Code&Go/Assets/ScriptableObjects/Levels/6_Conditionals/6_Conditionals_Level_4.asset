@@ -23,7 +23,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  levelPreview: {fileID: 21300000, guid: ef7868da44471034ebc12fb65a497d52, type: 3}
+  levelImage: {fileID: 21300000, guid: ef7868da44471034ebc12fb65a497d52, type: 3}
   levelName: conditionals_4
   initialState:
     m_TableReference:
