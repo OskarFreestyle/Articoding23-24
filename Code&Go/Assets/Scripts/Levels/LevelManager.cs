@@ -99,9 +99,8 @@ public class LevelManager : MonoBehaviour {
             minimosPasos = currentLevel.minimosPasos;
         }
         else {
-            Debug.Log("Playing community level");
+            Debug.Log("Community Level");
         }
-        //endTextLocalized.text = currentLevel.endText;
         
         endPanel.SetActive(false);
         transparentRect.SetActive(false);
@@ -228,7 +227,6 @@ public class LevelManager : MonoBehaviour {
     }
 
     private void InitializeCommunityLevel() {
-        Debug.Log("InitializeCommunityLevel()");
         // Restricciones y estado inicial
         ActivateLevelBlocks(GameManager.Instance.GetCommunityLevelActiveBlocks(), false);
         LoadInitialBlocks(GameManager.Instance.GetCommunityInitialState());//UI
@@ -268,8 +266,7 @@ public class LevelManager : MonoBehaviour {
         // Si habia una estrella de antes, la quitamos
         SetSpecialBlockStarActive(false);
         
-        if (++currentLevelIndex < levelSize)
-        {
+        if (++currentLevelIndex < levelSize) {
             gMng.LoadLevel(currentCategory, currentLevelIndex);
         }
         else //Intenta pasar a la categoria siguiente
@@ -288,15 +285,18 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
-    public void RestartLevel()
-    {
+    public void RestartLevel() {
         codeZoom.ResetZoom();
-        LoadInitialBlocks(currentLevel.initialState);
-        ActivateLevelBlocks(currentLevel.activeBlocks, currentLevel.allActive);
+        if (GameManager.Instance.IsPlayingCommunityLevel()) {
+            InitializeCommunityLevel();
+        }
+        else { 
+            LoadInitialBlocks(currentLevel.initialState);
+            ActivateLevelBlocks(currentLevel.activeBlocks, currentLevel.allActive);
+        }
     }
 
-    public void RetryLevel()
-    {
+    public void RetryLevel() {
         ResetLevel();
         gameOverPanel.SetActive(false);
         transparentRect.SetActive(false);
@@ -312,8 +312,7 @@ public class LevelManager : MonoBehaviour {
         TrackerAsset.Instance.Completable.Initialized(levelName, CompletableTracker.Completable.Level);
     }
 
-    public void ClickStopButton()
-    {
+    public void ClickStopButton() {
         ResetLevel();
         gameOverPanel.SetActive(false);
         transparentRect.SetActive(false);
@@ -324,8 +323,7 @@ public class LevelManager : MonoBehaviour {
         streamRoom.Retry();
     }
 
-    public void MinimizeEndPanel()
-    {
+    public void MinimizeEndPanel() {
         endPanelMinimized.SetActive(true);
         gameOverPanel.SetActive(false);
         endPanel.SetActive(false);
@@ -335,8 +333,7 @@ public class LevelManager : MonoBehaviour {
         TrackerAsset.Instance.GameObject.Interacted("end_panel_minimized_button");
     }
 
-    public void MinimizeGameOverPanel()
-    {
+    public void MinimizeGameOverPanel() {
         gameOverMinimized.SetActive(true);
         gameOverPanel.SetActive(false);
         //endPanel.SetActive(false);

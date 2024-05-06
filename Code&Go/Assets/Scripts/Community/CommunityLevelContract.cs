@@ -46,6 +46,7 @@ public class CommunityLevelContract : MonoBehaviour {
         GameManager.Instance.SetCommunityLevelActiveBlocks(level.articodingLevel.activeblocks);
         GameManager.Instance.SetCommunityInitialState(level.articodingLevel.initialState);
         GameManager.Instance.LoadCommunityLevel();
+        //GameManager.Instance.CurrentLevel = level.articodingLevel;
         GameManager.Instance.isClassLevel = true;
 
         // Change the scene

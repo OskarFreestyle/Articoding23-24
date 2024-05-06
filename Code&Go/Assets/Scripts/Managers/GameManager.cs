@@ -73,6 +73,11 @@ public class GameManager : MonoBehaviour {
     BoardState communityBoard = null;
     ActiveBlocks communityActiveBlocks = null;
     string communityInitialState = null;
+    private LevelDataSO currentLevel = null;
+    public LevelDataSO CurrentLevel {
+        get { return currentLevel; }
+        set { currentLevel = value; }
+    }
     private string levelName;
     public string LevelName {
         get { return levelName; }
