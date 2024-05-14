@@ -634,7 +634,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Incomplete
+  m_Text: Pending
 --- !u!114 &2069205828196552110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,7 +671,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:dc03dace7d6a78c4c9ae62a59af260f2
     m_TableEntryReference:
-      m_KeyId: 15957974956376064
+      m_KeyId: 33002851208527872
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
